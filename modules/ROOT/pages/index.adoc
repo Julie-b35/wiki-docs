@@ -1,5 +1,5 @@
-= Welcome to Component B!
-:navtitle: Welcome
+= Accueil
+:navtitle: Accueil
 
 Page test
 
