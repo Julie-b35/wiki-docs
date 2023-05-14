@@ -1,0 +1,4 @@
+= Welcome to Component B!
+:navtitle: Welcome
+
+Page test
