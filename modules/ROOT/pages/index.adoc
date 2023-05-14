@@ -2,4 +2,5 @@
 :navtitle: Welcome
 
 Page test
+
 Hello world
