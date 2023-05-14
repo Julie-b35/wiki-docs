@@ -3,3 +3,4 @@ title: Wiki
 version: 1.0
 nav:
 - modules/ROOT/nav.adoc
+- modules/demo-b/nav.adoc
