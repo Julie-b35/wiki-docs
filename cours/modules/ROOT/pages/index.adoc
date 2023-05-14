@@ -12,3 +12,5 @@ Voici une liste de cours que j'ai suivie
 
 
 NOTE: Pour rappel j'ai écris des notes link:/notes[ici] pour simplifier en mieux les cours suivie.
+
+xref:wiki:ROOT:index.adoc[Retour Accueil Wiki]

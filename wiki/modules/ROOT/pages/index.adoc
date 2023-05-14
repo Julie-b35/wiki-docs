@@ -3,4 +3,4 @@
 
 Page test
 
-Hello world
+Url vers xref:cours:ROOT:index.adoc[Mes Cours]
