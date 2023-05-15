@@ -24,6 +24,7 @@ Créer 1 partition sur le nouveau disque avec fdisk :
 [source,bash]
 ----
 #disque détecté grace à la commande ci-dessous
+udevadm info --query=path --name=sda
 echo "- - -" > /sys/class/scsi_host/host2/scan
 #création d'une partition prenant tous le disque pour lvm
 fdisk /dev/sdb
