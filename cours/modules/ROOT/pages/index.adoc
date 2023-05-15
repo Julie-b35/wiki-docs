@@ -1,6 +1,10 @@
-= Liste des cours
+= Liste des leçons étudié
 
-Voici une liste de cours que j'ai suivie
+Voici une liste de leçons que j'ai reçue ces dernier temps
+
+== Cours dispensé par l'école ENI
+
+* xref:eni.adoc[Présentation de l'école ENI]
 
 * xref:eni.adoc[Cours dispensé par l'ENI école informatique]
 ** xref:tssr2023.adoc[Cours pendant la formation à l'ENI]
