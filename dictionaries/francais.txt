@@ -21,6 +21,7 @@ connexions
 correspondant
 Dans
 décommenté
+decouverte
 déduire
 défaut
 Définir
@@ -66,6 +67,7 @@ nameserver
 navtitle
 netinst
 NETINST
+onedrive
 openssh
 paragraphe
 paramètres
@@ -84,6 +86,7 @@ Redémarrer
 Redhat
 relatifs
 Restaurer
+RICHEZ
 RONSAUT
 s'initialise
 serveur

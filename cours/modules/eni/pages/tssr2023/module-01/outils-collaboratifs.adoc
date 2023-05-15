@@ -1,4 +1,0 @@
-= Office 365 - Outils Collaboratifs
-:navtitle: Office 365 - Outils Collaboratifs
-
-contenus test

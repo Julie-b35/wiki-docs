@@ -1,0 +1,32 @@
+= Office 365 - Outils Collaboratifs
+:navtitle: Office 365 - Outils Collaboratifs
+
+Ce module à été fait en 1 semaine du `3 avril 2023` au `7 avril 2023`.
+
+Formateur : Mr Cédric RICHEZ
+
+Notes -> link:/notes/eni-tssr/outils-collaboratifs[Outils collaboratifs Microsoft 365]
+
+== Objectifs
+
+* Expliquer l'utilisation des outils de communication asynchrone (Messagerie électronique...)
+* Expliquer l'utilisation des outils de communication synchrone (Teams, One Drive...)
+* Expliquer l'utilisation d'un outil bureautique collaboratif
+* Rédiger et transmettre des notes, consignes et procédures en tenant compte des besoins du destinataire
+
+== Modules
+
+* Module 1 : xref:decouverte.adoc[Découverte de Microsoft 365]
+* Module 2 : xref:teams-onedrive.adoc[Exploiter Teams & OneDrive dans le cadre d'un contexte collaboratif]
+* Module 3 : xref:word.adoc[Connaissance des notions de base Word]
+* Module 4 : xref:excel.adoc[Connaissance des notions de base Excel]
+* Module 5 : xref:outlook.adoc[Exploiter Outlook et dépanner]
+
+== Sources
+
+[TIP]
+.sources
+====
+* https://fr.wikipedia.org/
+* https://technet.microsoft.com/en-gb/
+====

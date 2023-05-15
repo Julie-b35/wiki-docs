@@ -1,1 +1,17 @@
 = Administration Systèmes Linux
+
+
+== Rappel
+
+* *BIOS* =  **B**asic **I**nput **O**utput **S**ystem
+* *MBR* = Norme crée en 1983
+
+Le *bios* lance une séquence de démarrage à la recherche du secteur de boot sur un disque  MBR/GPT (GRUB1)
+
+Grub1 part à la recherche de la partition d'amorçage identifié par un flag de boot (GRUB2)
+
+Grub2 va charger `Linux Kernel` (Vmlinuz, initrd) va lancer Init=/sbin/init qui est un lien symbolique vers Systemd Root=Périphérique contenante la racine
+
+Systemd lance la cible par défaut (multi-user.target ou graphical.target)
+
+== Gestion de l'espace de stockage
