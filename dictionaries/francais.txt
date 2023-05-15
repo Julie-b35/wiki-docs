@@ -11,6 +11,7 @@ avec
 binaire
 cdrom
 CDROM
+centreon
 chargé
 cible
 cifs
@@ -28,6 +29,9 @@ Démon
 Désactiver
 dpkg
 Editeur
+Elodie
+EPCF
+epellerin
 Exécuter
 fabrice
 Fichier
@@ -37,6 +41,8 @@ francois
 fred
 frederic
 Gestion
+GLPI
+gmauduit
 gparted
 Gparted
 graphique
@@ -47,9 +53,15 @@ idseparator
 iface
 inet
 j'annalyse
+jronsaud
 julie
 lancé
+LEMASSON
+linux
+LOHIER
 lors
+Mauduit
+mlohier
 nameserver
 navtitle
 netinst
@@ -58,6 +70,7 @@ openssh
 paragraphe
 paramètres
 parlé
+PELLERIN
 permettant
 pinguer
 planification
@@ -68,8 +81,10 @@ Quelle
 rechercher
 redémarrage
 Redémarrer
+Redhat
 relatifs
 Restaurer
+RONSAUT
 s'initialise
 serveur
 système
