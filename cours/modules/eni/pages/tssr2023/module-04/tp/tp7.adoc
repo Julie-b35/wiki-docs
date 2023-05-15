@@ -53,9 +53,64 @@ pvs
 # /dev/sdb1         lvm2 ---  <41,00g <41,00g
 ----
 
-.Intégration du volume physique (/dev/sdb1) au groupe : 
-[source, shell]
+.Intégration du volume physique (/dev/sdb1) au groupe : system
+[source,bash]
 ----
 vgs
+# Retour Ligne de commande
+# VG     #PV #LV #SN Attr   VSize   VFree
+# system   1   4   0 wz--n- <40,00g    0
+vgextend system /dev/sdb1
 
+# Retour Ligne de commande
+#  Volume group "system" successfully extended
+
+vgs
+
+# Retour Ligne de commande
+# VG     #PV #LV #SN Attr   VSize  VFree
+# system   2   4   0 wz--n- 80,99g <41,00g
+----
+
+On constate que le groupe de volumes à augmenter de `41 GiB`, et contiens 2 Volume Physique
+
+Créer un volume logique de 20 Go nommé var.
+Agrandir le volume logique home avec le reste de l’espace disponible du groupe de volume.
+
+.Création volume logique 'var'
+[source,bash]
+----
+lvcreate -L 20g -n var system
+# Retour Ligne de commande
+#  Logical volume "var" created.
+
+#recap lvs
+lvs
+
+# Retour Ligne de commande
+#  LV      VG     Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+#  home    system -wi-ao---- <14,81g
+#  racine  system -wi-ao----  18,62g
+#  swap    system -wi-ao----  <1,91g
+#  var     system -wi-a-----  20,00g
+#  windows system -wi-ao----  <4,66g
+----
+
+.extension du volume 'home'
+[source,bash]
+----
+# étendre le volume logique `home`
+lvextend -l +100%FREE /dev/mapper/system-home
+
+# Retour Ligne de commande
+#  Size of logical volume system/home changed from <14,81 GiB (3791 extents) to 35,80 GiB (9166 extents).
+#  Logical volume system/home successfully resized.
+
+resize2fs /dev/mapper/system-home
+
+# Retour Ligne de commande
+#resize2fs 1.46.2 (28-Feb-2021)
+#Filesystem at /dev/mapper/system-home is mounted on /home; on-line resizing required
+#old_desc_blocks = 2, new_desc_blocks = 5
+#The filesystem on /dev/mapper/system-home is now 9385984 (4k) blocks long.
 ----

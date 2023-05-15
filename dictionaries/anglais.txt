@@ -1,2 +1,4 @@
 autofetch
 fdisk
+lvextend
+vgextend
