@@ -1,4 +1,4 @@
-= Module 3 - L'adressage en IPv4
+= Module 03 - L'adressage en IPv4
 :navtitle: Adressage IPv4
 
 * Module précédent -> xref:tssr2023/module-01/base-reseau/uniter-informatique.adoc[Module 02 - Les unités informatique]

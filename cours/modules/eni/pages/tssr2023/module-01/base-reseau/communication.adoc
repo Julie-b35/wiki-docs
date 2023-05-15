@@ -1,0 +1,83 @@
+= Module 04 - La communication
+:navtitle: Communication
+
+* Module précédent -> xref:tssr2023/module-01/base-reseau/adressage-ipv4.adoc[Module 03 - L'adressage en IPv4]
+* Module suivant -> xref:tssr2023/module-01/base-reseau/premiere-commandes.adoc[Module 05 - Les premières commandes]
+
+Notes -> xref:notes:eni-tssr:base-reseau.adoc[Base réseau]
+
+== Objectifs
+
+image::tssr2023/base-reseau/communication/01.png[01.png]
+
+== Le domaine de diffusion
+
+=== Les différents domaines
+
+image::tssr2023/base-reseau/communication/02.png[02.png]
+
+== La théorie
+
+=== Communication entre deux PC
+
+image::tssr2023/base-reseau/communication/03.png[03.png]
+
+=== Communication entre deux PC (Ping)
+
+image::tssr2023/base-reseau/communication/04.png[04.png]
+image::tssr2023/base-reseau/communication/05.png[05.png]
+
+== La pratique
+
+=== Communication entre deux noeuds (Ping)
+
+image::tssr2023/base-reseau/communication/06.png[06.png]
+
+=== Communication entre deux PC
+
+image::tssr2023/base-reseau/communication/07.png[07.png]
+
+=== Communication entre deux noeuds (Ping)
+
+image::tssr2023/base-reseau/communication/08.png[08.png]
+
+=== Communication entre deux PC
+
+image::tssr2023/base-reseau/communication/09.png[09.png]
+image::tssr2023/base-reseau/communication/10.png[10.png]
+
+== Le routage
+
+=== La couche réseau
+
+image::tssr2023/base-reseau/communication/11.png[11.png]
+
+== Le sur-réseau
+
+=== Création de sur-réseaux
+
+image::tssr2023/base-reseau/communication/12.png[12.png]
+
+== Le calcul de sur-réseau
+
+=== le sur-réseau
+
+image::tssr2023/base-reseau/communication/13.png[13.png]
+
+=== Calcul de l'adresse de sur réseau
+
+image::tssr2023/base-reseau/communication/14.png[14.png]
+
+=== Le sur-réseau
+
+image::tssr2023/base-reseau/communication/15.png[15.png]
+
+== Sources
+
+[TIP]
+.sources:
+====
+* slides fournis pendant les cours à l'link:https://www.eni-ecole.fr/[ENI]
+====
+
+
