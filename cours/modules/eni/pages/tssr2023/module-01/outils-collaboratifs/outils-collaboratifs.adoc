@@ -16,11 +16,11 @@ Notes -> link:/notes/eni-tssr/outils-collaboratifs[Outils collaboratifs Microsof
 
 == Modules
 
-* Module 1 : xref:decouverte.adoc[Découverte de Microsoft 365]
-* Module 2 : xref:teams-onedrive.adoc[Exploiter Teams & OneDrive dans le cadre d'un contexte collaboratif]
-* Module 3 : xref:word.adoc[Connaissance des notions de base Word]
-* Module 4 : xref:excel.adoc[Connaissance des notions de base Excel]
-* Module 5 : xref:outlook.adoc[Exploiter Outlook et dépanner]
+* Module 1 : xref:tssr2023/module-01/outils-collaboratifs/decouverte.adoc[Découverte de Microsoft 365]
+* Module 2 : xref:tssr2023/module-01/outils-collaboratifs/teams-onedrive.adoc[Exploiter Teams & OneDrive dans le cadre d'un contexte collaboratif]
+* Module 3 : xref:tssr2023/module-01/outils-collaboratifs/word.adoc[Connaissance des notions de base Word]
+* Module 4 : xref:tssr2023/module-01/outils-collaboratifs/excel.adoc[Connaissance des notions de base Excel]
+* Module 5 : xref:tssr2023/module-01/outils-collaboratifs/outlook.adoc[Exploiter Outlook et dépanner]
 
 == Sources
 
