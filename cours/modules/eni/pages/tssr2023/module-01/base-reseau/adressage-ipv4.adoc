@@ -1,0 +1,128 @@
+= Module 3 - L'adressage en IPv4
+:navtitle: Adressage IPv4
+
+* Module précédent -> xref:tssr2023/module-01/base-reseau/uniter-informatique.adoc[Module 02 - Les unités informatique]
+* Module suivant -> xref:tssr2023/module-01/base-reseau/communication.adoc[Module 04 - La communication]
+
+Notes -> xref:notes:eni-tssr:base-reseau.adoc[Base réseau]
+
+== Objectifs
+
+image::tssr2023/base-reseau/adressage-ipv4/01.png[01.png]
+
+== Présentation de l'adressage IPv4
+
+=== Présentation
+
+image::tssr2023/base-reseau/adressage-ipv4/02.png[02.png]
+
+== Les classes
+
+=== Les classes IPv4 (RFC 790)
+
+image::tssr2023/base-reseau/adressage-ipv4/03.png[03.png]
+image::tssr2023/base-reseau/adressage-ipv4/04.png[04.png]
+image::tssr2023/base-reseau/adressage-ipv4/05.png[05.png]
+
+=== Les classes IPv4 (RFC 990)
+
+image::tssr2023/base-reseau/adressage-ipv4/06.png[06.png]
+
+=== Les classe IPv4 (Résumé)
+
+image::tssr2023/base-reseau/adressage-ipv4/07.png[07.png]
+
+== Calcul des adresses
+
+=== Calcul de l'adresse réseau
+
+image::tssr2023/base-reseau/adressage-ipv4/08.png[08.png]
+image::tssr2023/base-reseau/adressage-ipv4/09.png[09.png]
+
+=== Calcul de l'adresse de diffusion (broadcast)
+
+image::tssr2023/base-reseau/adressage-ipv4/10.png[10.png]
+
+=== Calcul du nombres d'hôtes
+
+image::tssr2023/base-reseau/adressage-ipv4/11.png[11.png]
+
+=== Résumé
+
+image::tssr2023/base-reseau/adressage-ipv4/12.png[12.png]
+
+== La notation CIDR
+
+=== Présentation
+
+image::tssr2023/base-reseau/adressage-ipv4/13.png[13.png]
+
+=== Calcul du préfixe en fonction du masque de sous-réseau
+
+image::tssr2023/base-reseau/adressage-ipv4/14.png[14.png]
+
+=== Calcul du masque de sous-réseau en fonction du préfixe
+
+image::tssr2023/base-reseau/adressage-ipv4/15.png[15.png]
+
+== Les adresses privées
+
+=== RFC 1918
+
+image::tssr2023/base-reseau/adressage-ipv4/16.png[16.png]
+
+=== Classe A
+
+image::tssr2023/base-reseau/adressage-ipv4/17.png[17.png]
+
+=== Classe B
+
+image::tssr2023/base-reseau/adressage-ipv4/18.png[18.png]
+
+=== Classe C
+
+image::tssr2023/base-reseau/adressage-ipv4/19.png[19.png]
+
+=== Résumé
+
+image::tssr2023/base-reseau/adressage-ipv4/20.png[20.png]
+
+== Les addresses APIPA
+
+=== RFC 3927
+
+image::tssr2023/base-reseau/adressage-ipv4/21.png[21.png]
+
+== Les sous-réseaux
+
+=== La création de sous-réseaux (RFC 1878)
+
+image::tssr2023/base-reseau/adressage-ipv4/22.png[22.png]
+
+== Calculs des sous-réseaux
+
+=== Exemple 1 : Calcul du nombre de bits ID_ss-réseau
+
+image::tssr2023/base-reseau/adressage-ipv4/23.png[23.png]
+
+=== Exemple 1 : Calcul des adresses de sous-réseau
+
+image::tssr2023/base-reseau/adressage-ipv4/24.png[24.png]
+
+=== Exemple 2 : Calcul du nombre de bits ID_ss-réseau
+
+image::tssr2023/base-reseau/adressage-ipv4/25.png[25.png]
+
+=== Exemple 2 : Calcul des adresses de sous-réseau
+
+image::tssr2023/base-reseau/adressage-ipv4/26.png[26.png]
+
+== Sources
+
+[TIP]
+.sources:
+====
+* slides fournis pendant les cours à l'link:https://www.eni-ecole.fr/[ENI]
+====
+
+
