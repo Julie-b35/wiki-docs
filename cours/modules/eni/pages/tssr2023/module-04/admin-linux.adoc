@@ -31,3 +31,7 @@ echo "- - -" > /sys/class
  udevadm info --query=path --name=sda
  xxd
 ----
+
+== TP
+
+* xref:tssr2023/module-04/tp/tp7.adoc[TP7 - Gestion des espaces disque]
