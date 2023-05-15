@@ -22,15 +22,15 @@
 
 === Listes des modules
 
-// | Mdoule | Semaine | Cours | Durée
+// | Module | Semaine | Cours | Durée
 
 [cols="^1,^1,^3,"]
 |===
 h| Module h| Semaine  h| Cours h| Durée
-.2+| link:module-01[Module1] | 03/04/2023 au 07/04/2023| link:module-01/outils-collaboratifs[Office 365 - Outils Collaboratifs] | 4 jours + EPCF1
-| 10/04/2023 au 11/04/2023 a| link:module-01/base-reseau[Base des réseaux] | 5 jours
-| link:module-02[Module2] | 17/04/2023 au 28/04/2023 | link:module-02/client-windows[Systèmes clients Microsoft] | 10 jours
-| link:module-03[Module 3] | 01/05/2023 au 05/05/223 | link:module-03/client-linux[Systèmes Clients Linux] | 5 jours
-| link:module-04[Module 4] | 08/05/2023 au 19/05/223 | link:module-04/admin-linux[Administration Systèmes Linux] | 5 jours
+.2+| Module 1 | 03/04/2023 au 07/04/2023| xref:eni-tssr2023-01-outils-collaboratifs.adoc[Office 365 - Outils Collaboratifs] | 4 jours + EPCF1
+| 10/04/2023 au 11/04/2023 a| xref:eni-tssr2023-01-base-reseau.adoc[Base des réseaux] | 5 jours
+| Module 2 | 17/04/2023 au 28/04/2023 | xref:eni-tssr2023-02-client-windows.adoc[Systèmes clients Microsoft] | 10 jours
+| Module 3 | 01/05/2023 au 05/05/223 | xref:eni-tssr2023-03-client-linux.adoc[Systèmes Clients Linux] | 5 jours
+| Module 4 | 08/05/2023 au 19/05/223 | xref:eni-tssr2023-04-admin-linux.adoc[Administration Systèmes Linux] | 5 jours
 
 |===
