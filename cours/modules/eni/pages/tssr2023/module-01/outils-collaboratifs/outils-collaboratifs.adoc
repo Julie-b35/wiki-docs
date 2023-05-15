@@ -5,7 +5,7 @@ Ce module à été fait en 1 semaine du `3 avril 2023` au `7 avril 2023`.
 
 Formateur : Mr Cédric RICHEZ
 
-Notes -> link:notes:eni-tssr:outils-collaboratifs.adoc[Outils collaboratifs Microsoft 365]
+Notes -> xref:notes:eni-tssr:outils-collaboratifs.adoc[Outils collaboratifs Microsoft 365]
 
 == Objectifs
 

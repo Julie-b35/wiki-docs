@@ -3,3 +3,4 @@ title: Notes personnelles
 version: 1.0
 nav:
 - modules/ROOT/nav.adoc
+- modules/eni-tssr/nav.adoc
