@@ -2,16 +2,11 @@
 
 Voici une liste de cours que j'ai suivie
 
-* link:eni[Cours dispensé par l'ENI école informatique]
-** link:eni/tssr2023[Cours pendant la formation à l'ENI]
-*** link:eni/tssr2023/module-01[1er module]
-*** link:eni/tssr2023/module-02[2ème module]
-*** link:eni/tssr2023/module-03[3ème module]
-*** link:eni/tssr2023/module-04[4ème module]
-*** xref:eni/tssr2023/module-04[4ème module]
+* xref:eni.adoc[Cours dispensé par l'ENI école informatique]
+** xref:tssr2023.adoc[Cours pendant la formation à l'ENI]
 
 
-NOTE: Pour rappel j'ai écris des notes link:/notes[ici] pour simplifier en mieux les cours suivie.
+NOTE: Pour rappel j'ai écris des notes xref:notes:ROOT:index.adoc[ici] pour simplifier en mieux les cours suivie.
 
 xref:wiki:ROOT:index.adoc[Retour Accueil Wiki]
 xref:component-b:ROOT:index.adoc[demo-b (accueil)]
