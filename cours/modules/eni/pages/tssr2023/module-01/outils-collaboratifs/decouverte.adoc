@@ -5,4 +5,4 @@
 
 Notes -> xref:notes:eni-tssr:outils-collaboratifs.adoc[Outils collaboratifs Microsoft 365]
 
-image::/images/01.png[01.png]
+image::01.png[01.png]
