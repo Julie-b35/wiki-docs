@@ -1,4 +1,5 @@
 = TP 7 (Gestion des espaces disque)
+:source-highlighter: coderay
 
 == Objectifs
 
@@ -20,7 +21,7 @@ Disque virtuel de 41 Go Crée.
 Créer 1 partition sur le nouveau disque avec fdisk :
 • Partition principale de la totalité du disque pour du LVM
 
-[source, shell]
+[source,bash]
 ----
 #disque détecté grace à la commande ci-dessous
 echo "- - -" > /sys/class/scsi_host/host2/scan
@@ -31,7 +32,8 @@ fdisk /dev/sdb
 
 Intégrer la partition au groupe de volume présent dans votre système.
 
-[source, shell]
+.Ajout d'un volume physique pour LVM
+[source,bash]
 ----
 # Vérification des Volumes Physique
 pvs
@@ -42,7 +44,18 @@ pvs
 
 # Intégration de /dev/sdb1 aux volumes physique gérer par LVM
 pvcreate /dev/sdb1
-# Vérification du groupe de volume actuel : 
+
+# Vérification des Volumes Physique
+pvs
+# Retour Ligne de commande
+# PV         VG     Fmt  Attr PSize   PFree
+# /dev/sda1  system lvm2 a--  <40,00g      0
+# /dev/sdb1         lvm2 ---  <41,00g <41,00g
+----
+
+.Intégration du volume physique (/dev/sdb1) au groupe : 
+[source, shell]
+----
 vgs
 
 ----
