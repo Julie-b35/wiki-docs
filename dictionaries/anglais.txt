@@ -1,1 +1,2 @@
 autofetch
+fdisk

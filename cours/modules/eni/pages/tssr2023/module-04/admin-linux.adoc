@@ -28,6 +28,7 @@ echo "- - -" > /sys/class
 .commandeSpecial
 [source, shell]
 ----
+echo "- - -" > /sys/class/scsi_host/host2/scan
  udevadm info --query=path --name=sda
  xxd
 ----

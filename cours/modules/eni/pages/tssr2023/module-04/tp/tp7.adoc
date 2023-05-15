@@ -1,1 +1,48 @@
 = TP 7 (Gestion des espaces disque)
+
+== Objectifs
+
+Gestion des disques et des systèmes de fichiers
+
+== Principales tâches à réaliser
+
+=== 1. pass:[<u>Gestion des disques</u>] : sur la station avec environnement graphique
+
+Ajouter un nouveau disque de 40 Go.
+Vérifier que le disque est bien présent dans /dev
+
+[NOTE]
+====
+Disque virtuel de 41 Go Crée.
+====
+
+
+Créer 1 partition sur le nouveau disque avec fdisk :
+• Partition principale de la totalité du disque pour du LVM
+
+[source, shell]
+----
+#disque détecté grace à la commande ci-dessous
+echo "- - -" > /sys/class/scsi_host/host2/scan
+#création d'une partition prenant tous le disque pour lvm
+fdisk /dev/sdb
+# -> /dev/sdb1              2048 85983231 85981184    41G 8e LVM Linux
+----
+
+Intégrer la partition au groupe de volume présent dans votre système.
+
+[source, shell]
+----
+# Vérification des Volumes Physique
+pvs
+
+# Retour Ligne de commande
+# PV         VG     Fmt  Attr PSize   PFree
+# /dev/sda1  system lvm2 a--  <40,00g    0
+
+# Intégration de /dev/sdb1 aux volumes physique gérer par LVM
+pvcreate /dev/sdb1
+# Vérification du groupe de volume actuel : 
+vgs
+
+----
