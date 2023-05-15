@@ -1,3 +1,24 @@
 = Base des réseaux
 
-Contenus
+Ce module à été fait en 1 semaine du `10 avril 2023` au `14 avril 2023`.
+
+Formatrice : Mme Élisabeth LEFRANC
+
+Notes -> xref:notes:eni-tssr:base-reseau.adoc[Base réseau]
+
+== Objectifs
+
+* Connaître les couches du modèle OSI
+* Manipuler les unités de mesure informatique
+* Appréhender l’adressage IP
+* Connaître la communication au sein du réseau
+* Découvrir les premières commandes.
+
+== Modules
+
+* Module 1 : xref:tssr2023/module-01/base-reseau/modele-osi.adoc[Le modèle OSI]
+* Module 2 : xref:tssr2023/module-01/base-reseau/uniter-informatique.adoc[Les unités informatique]
+* Module 3 : xref:tssr2023/module-01/base-reseau/adressage-ipv4.adoc[L'adressage en IPv4]
+* Module 4 : xref:tssr2023/module-01/base-reseau/communication.adoc[La communication]
+* Module 5 : xref:tssr2023/module-01/base-reseau/premiere-commandes.adoc[Les premières commandes]
+* Module 6 : xref:tssr2023/module-01/base-reseau/adressage-ipv6.adoc[L'adressage en IPv6]

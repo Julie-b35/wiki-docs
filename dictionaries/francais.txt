@@ -58,12 +58,14 @@ j'annalyse
 jronsaud
 julie
 lancé
+LEFRANC
 LEMASSON
 linux
 LOHIER
 lors
 Mauduit
 mlohier
+modele
 nameserver
 navtitle
 netinst

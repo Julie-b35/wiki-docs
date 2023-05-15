@@ -7,7 +7,12 @@
 **** xref:tssr2023/module-01/outils-collaboratifs/excel.adoc[]
 **** xref:tssr2023/module-01/outils-collaboratifs/outlook.adoc[]
 *** xref:tssr2023/module-01/base-reseau/base-reseau.adoc[]
+**** xref:tssr2023/module-01/base-reseau/modele-osi.adoc[]
+**** xref:tssr2023/module-01/base-reseau/uniter-informatique.adoc[]
+**** xref:tssr2023/module-01/base-reseau/adressage-ipv4.adoc[]
+**** xref:tssr2023/module-01/base-reseau/communication.adoc[]
+**** xref:tssr2023/module-01/base-reseau/premiere-commandes.adoc[]
+**** xref:tssr2023/module-01/base-reseau/adressage-ipv6.adoc[]
 *** xref:tssr2023/module-02/client-windows.adoc[]
 *** xref:tssr2023/module-03/client-linux.adoc[]
 *** xref:tssr2023/module-04/admin-linux.adoc[]
-
