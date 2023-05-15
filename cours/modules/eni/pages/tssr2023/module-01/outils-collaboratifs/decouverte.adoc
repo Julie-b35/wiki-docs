@@ -1,4 +1,4 @@
-= 01 - Découverte de Microsoft 365
+= Module 01 - Découverte de Microsoft 365
 :navtitle: Découverte de Microsoft 365
 
 * Module suivant -> xref:tssr2023/module-01/outils-collaboratifs/teams-onedrive.adoc[Module02 - Exploiter Teams & OneDrive dans le cadre d'un contexte collaboratif]
