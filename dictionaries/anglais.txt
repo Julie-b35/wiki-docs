@@ -3,4 +3,6 @@ fdisk
 inodes
 lvextend
 superblocks
+TRACEROUTE
+TRACERT
 vgextend
