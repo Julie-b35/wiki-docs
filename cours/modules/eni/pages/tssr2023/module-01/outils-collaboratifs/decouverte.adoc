@@ -1,4 +1,6 @@
 = 01 - Découverte de Microsoft 365
 :navtitle: Découverte de Microsoft 365
 
-Contenus
+* Module suivant -> link:../outils-collaboratifs/teams-onedrive[Module 02 - Exploiter Teams & OneDrive dans le cadre d'un contexte collaboratif]
+
+Notes -> xref:/notes/eni-tssr/outils-collaboratifs[Outils collaboratifs Microsoft 365]

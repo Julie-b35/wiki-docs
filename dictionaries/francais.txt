@@ -38,6 +38,7 @@ fabrice
 Fichier
 fichiers
 fonctionnement
+francais
 francois
 fred
 frederic

@@ -14,4 +14,20 @@ Grub2 va charger `Linux Kernel` (Vmlinuz, initrd) va lancer Init=/sbin/init qui 
 
 Systemd lance la cible par défaut (multi-user.target ou graphical.target)
 
-== Gestion de l'espace de stockage
+== LVM
+
+Les système de fichier unix sont segmenté en *blocs de donnée*, chaque bloc vaut *4ko*
+
+Chaque bloc puet avoir différent structure
+
+* *tune2fs* : permet de modifier des options d’un système de fichier type ext. Il permet aussi de
+récupérer les informations du superblock.
+
+echo "- - -" > /sys/class
+
+.commandeSpecial
+[source, shell]
+----
+ udevadm info --query=path --name=sda
+ xxd
+----
