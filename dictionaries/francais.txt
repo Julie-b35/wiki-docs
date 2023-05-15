@@ -28,6 +28,7 @@ Définir
 démarrage
 Démon
 Désactiver
+Désencapsulation
 dpkg
 Editeur
 Elodie

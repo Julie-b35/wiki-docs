@@ -1,9 +1,10 @@
-= Module 1 - Le modèle OSI
+= Module 01 - Le modèle OSI
+:navtitle: Modèle OSI
 
 * Module suivant -> link:../base-reseau/uniter-informatique[Module 02 - Les unités informatique]
 * Module 2 : xref:tssr2023/module-01/base-reseau/uniter-informatique.adoc[Les unités informatique]
 
-Notes -> link:/notes/eni-tssr/base-reaseau[Base réseau]
+Notes -> xref:notes:eni-tssr:base-reseau.adoc[Base réseau]
 
 == Objectifs
 
