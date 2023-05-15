@@ -5,7 +5,7 @@ Voici une liste de leçons que j'ai reçue ces dernier temps
 == Cours dispensé par l'école ENI
 
 * xref:eni:index.adoc[Présentation de l'école ENI]
-** xref:eni:tssr2023.adoc[Cours pendant la formation à l'ENI]
+** xref:eni:tssr2023/tssr2023.adoc[Cours pendant la formation à l'ENI]
 
 
 NOTE: Pour rappel j'ai écris des notes xref:notes:ROOT:index.adoc[ici] pour simplifier en mieux les cours suivie.
