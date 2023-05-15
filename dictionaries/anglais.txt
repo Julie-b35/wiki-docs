@@ -1,4 +1,6 @@
 autofetch
 fdisk
+inodes
 lvextend
+superblocks
 vgextend
