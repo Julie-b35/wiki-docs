@@ -1,5 +1,5 @@
 = Module 06 - Les sécurité NTFS et les ACL (Access Control List)
-
+:navtitle: Sécurité NTFS & ACL (Access Control List)
 
 * Module précédent -> xref:tssr2023/module-02/client-windows/users-groups.adoc[Module 05 - Les utilisateurs et les groupes]
 * Module suivant -> link:../client-windows/network-firewall[Module 07 - La gestion du réseau et du pare-feu]
