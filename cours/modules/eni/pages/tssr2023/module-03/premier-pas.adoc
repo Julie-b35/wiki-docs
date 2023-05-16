@@ -1,0 +1,40 @@
+= Module 02 - Les premiers pas et les premières commandes
+:navtitle: Premier pas & première commandes
+
+== Connexion : 
+
+Pour se connecter à un système UNIX, un utilisateur doit disposer d'un login auquel est associé un mot de passe. Il existe plusieurs façons de se connecter à un poste Linux : 
+
+****
+* Via un terminal texte (généralement sur un serveur)
+* Via une interface graphique (il faudra alors lancer une application pour accéder à un terminal, exemple : terminator)
+* À distance via une connexion SSH (généralement pour configurer un serveur)
+****
+
+Une fois authentifié, un prompt sera mis à disposition de l’utilisateur. 
+
+=== Via un terminal texte
+
+Quand un terminal permet la connexion d'un utilisateur, il propose une invite de type : 
+
+----
+Viperr 10 shub-niggurath tty1 
+
+Shub-niggurath login : 
+----
+
+À cette invite, il faut entrer le login pour provoquer l'affichage de l'invite de saisie du mot de passe : 
+
+----
+Shub-niggurath login: clement 
+password: 
+----
+
+Le système vérifie l'existence du login et la cohérence du mot de passe avant d'afficher le message de bienvenue (stocké dans le fichier */etc/motd*) et l'invite du Shell de connexion : 
+
+----
+Linux shub-niggurath 4.13.15-200.fc26.x86_64 #1 SMP Tue Nov 21 21:10:40 UTC 2017 x86_64 x86_64 x86_64 GNU/Linux 
+Viperr release 10 (Vipera shub-niggurath) 
+Welcome to Viperr 
+clement@shub-niggurath:~$ 
+----

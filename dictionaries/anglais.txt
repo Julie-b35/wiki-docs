@@ -5,9 +5,13 @@ fdisk
 gpedit
 inodes
 lvextend
+niggurath
 noauto
+shub
 superblocks
 Sysrep
 TRACEROUTE
 TRACERT
 vgextend
+Vipera
+Viperr
