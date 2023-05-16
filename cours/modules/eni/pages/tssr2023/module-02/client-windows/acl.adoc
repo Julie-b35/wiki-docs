@@ -2,7 +2,7 @@
 :navtitle: Sécurité NTFS & ACL (Access Control List)
 
 * Module précédent -> xref:tssr2023/module-02/client-windows/users-groups.adoc[Module 05 - Les utilisateurs et les groupes]
-* Module suivant -> link:../client-windows/network-firewall[Module 07 - La gestion du réseau et du pare-feu]
+* Module suivant -> xref:tssr2023/module-02/client-windows/network-firewall.adoc[Module 07 - La gestion du réseau et du pare-feu]
 
 Notes -> xref:notes:eni-tssr:client-windows.adoc[Client Windows]
 
