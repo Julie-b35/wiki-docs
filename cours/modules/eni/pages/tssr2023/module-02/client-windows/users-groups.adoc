@@ -1,0 +1,66 @@
+= Module 05 - Les utilisateurs et les groupes
+
+* Module précédent -> xref:tssr2023/module-02/client-windows/stockage.adoc[Module 04 - Gestion du stockage]
+* Module suivant -> xref:tssr2023/module-02/client-windows/acl.adoc[Module 06 - Les sécurité NTFS et les ACL (Access Control List)]
+
+Notes -> xref:notes:eni-tssr:client-windows.adoc[Client Windows]
+
+== Objectifs
+
+image::tssr2023/module-02/client-windows/users-groups/01.png[01.png]
+
+== Les objets utilisateurs et groupes
+
+image::tssr2023/module-02/client-windows/users-groups/02.png[02.png]
+
+== La notion d'utilisateur
+
+image::tssr2023/module-02/client-windows/users-groups/03.png[03.png]
+image::tssr2023/module-02/client-windows/users-groups/04.png[04.png]
+
+== Gestion des utilisateurs
+
+image::tssr2023/module-02/client-windows/users-groups/05.png[05.png]
+image::tssr2023/module-02/client-windows/users-groups/06.png[06.png]
+image::tssr2023/module-02/client-windows/users-groups/07.png[07.png]
+
+== Les catégories d'utilisateurs
+
+image::tssr2023/module-02/client-windows/users-groups/08.png[08.png]
+
+== La gestion des profils
+
+image::tssr2023/module-02/client-windows/users-groups/09.png[09.png]
+image::tssr2023/module-02/client-windows/users-groups/10.png[10.png]
+image::tssr2023/module-02/client-windows/users-groups/11.png[11.png]
+
+== Gestion des groupes
+
+image::tssr2023/module-02/client-windows/users-groups/12.png[12.png]
+
+== Gestion des utilisateurs et des groupes
+
+image::tssr2023/module-02/client-windows/users-groups/13.png[13.png]
+image::tssr2023/module-02/client-windows/users-groups/14.png[14.png]
+
+== Contrôle de comptes d'utilisateur (UAC)
+
+image::tssr2023/module-02/client-windows/users-groups/15.png[15.png]
+image::tssr2023/module-02/client-windows/users-groups/16.png[16.png]
+image::tssr2023/module-02/client-windows/users-groups/17.png[17.png]
+
+== Récapitulatif
+
+image::tssr2023/module-02/client-windows/users-groups/18.png[18.png]
+
+== Conclusion
+
+image::tssr2023/module-02/client-windows/users-groups/19.png[19.png]
+
+== Sources
+
+[TIP]
+.sources:
+====
+* slides fournis pendant les cours à l'link:https://www.eni-ecole.fr/[ENI]
+====
