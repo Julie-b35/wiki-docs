@@ -2,65 +2,65 @@
 :navtitle: Les systèmes d'exploitation et Microsoft Windows 10
 
 
-* Module suivant -> link:../client-windows/installation[Module 02 - Installation du système d'exploitation Windows 10]
+* Module suivant -> xref:tssr2023/module-01/client-windows/installation[Module 02 - Installation du système d'exploitation Windows 10]
 
 Notes -> xref:notes:eni-tssr:client-windows.adoc[Client Windows]
 
 == Objectifs
 
-image::/images/cours/eni/tssr/client-windows/presentation/01.png[01.png]
+image::tssr2023/module-02/client-windows/presentation/01.png[01.png]
 
 == Les systèmes d'exploitations
 
-image::/images/cours/eni/tssr/client-windows/presentation/02.png[02.png]
+image::tssr2023/module-02/client-windows/presentation/02.png[02.png]
 
 == Comment définir un système d'exploitation
 
-image::/images/cours/eni/tssr/client-windows/presentation/03.png[03.png]
+image::tssr2023/module-02/client-windows/presentation/03.png[03.png]
 
 == Quelles sont ses fonctions principales ?
 
-image::/images/cours/eni/tssr/client-windows/presentation/04.png[04.png]
+image::tssr2023/module-02/client-windows/presentation/04.png[04.png]
 
 == De quoi est-il composé ?
 
-image::/images/cours/eni/tssr/client-windows/presentation/05.png[05.png]
+image::tssr2023/module-02/client-windows/presentation/05.png[05.png]
 
 == Où peut-on les trouver ?
 
-image::/images/cours/eni/tssr/client-windows/presentation/06.png[06.png]
+image::tssr2023/module-02/client-windows/presentation/06.png[06.png]
 
-image::/images/cours/eni/tssr/client-windows/presentation/07.png[07.png]
+image::tssr2023/module-02/client-windows/presentation/07.png[07.png]
 
 == Windows
 
-image::/images/cours/eni/tssr/client-windows/presentation/08.png[08.png]
+image::tssr2023/module-02/client-windows/presentation/08.png[08.png]
 
 == Support des systèmes Windows
 
-image::/images/cours/eni/tssr/client-windows/presentation/09.png[09.png]
+image::tssr2023/module-02/client-windows/presentation/09.png[09.png]
 
 == WaaS - Windows as a Service
 
-image::/images/cours/eni/tssr/client-windows/presentation/10.png[10.png]
+image::tssr2023/module-02/client-windows/presentation/10.png[10.png]
 
 == Canal semi-annuel
 
-image::/images/cours/eni/tssr/client-windows/presentation/11.png[11.png]
+image::tssr2023/module-02/client-windows/presentation/11.png[11.png]
 
 == Windows 10 et ses éditions
 
-image::/images/cours/eni/tssr/client-windows/presentation/12.png[12.png]
+image::tssr2023/module-02/client-windows/presentation/12.png[12.png]
 
 == Windows et ses licences
 
-image::/images/cours/eni/tssr/client-windows/presentation/13.png[13.png]
+image::tssr2023/module-02/client-windows/presentation/13.png[13.png]
 
-image::/images/cours/eni/tssr/client-windows/presentation/14.png[14.png]
+image::tssr2023/module-02/client-windows/presentation/14.png[14.png]
 
 == Conclusion
 
-image::/images/cours/eni/tssr/client-windows/presentation/15.png[15.png]
+image::tssr2023/module-02/client-windows/presentation/15.png[15.png]
 
 == Sources
 
