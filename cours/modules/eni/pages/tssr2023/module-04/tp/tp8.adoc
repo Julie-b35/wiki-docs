@@ -1,5 +1,5 @@
 = TP 8 (Gestion des systèmes de fichiers et montage)
-:source-highlighter: coderay
+:source-highlighter: highlight.js
 
 
 
