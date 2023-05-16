@@ -19,6 +19,7 @@ Conseils de mise en oeuvre :
 
 Procédures:
 
+.Procédure migration
 [source,shell]
 ----
 # s'assurer d'avoir le moins de service lancé qui utilise /var
@@ -32,20 +33,96 @@ lsof | grep /var
 # Monter le volume logique '/dev/mapper/system-var'
 mount /dev/mapper/system-var /mnt
 
-# Passer la r
+# Passer le système de fichier racine contenant /var en mode lecture seul
+mount -o remount,ro /
+
 # Copier tout le contenus de /var dans /mnt (cp -a pour préserver les liens et attributs)
-cp -av /var /mnt
+cp -av /var/* /mnt
 
+# démonter le volume logique  '/dev/mapper/system-var'
+umount /mnt
 
+# monter le volume logique  '/dev/mapper/system-var' dans /var
+mount /dev/mapper/system-var /var
 
+# rebasculer la partition en mode écriture
+mount -o remount,rw /
+
+# relancer la journalisation
+systemctl start systemd-journald.service
+
+#rebasculer en mode graphique
+systemctl isolate graphical.target
 ----
 
-Redémarrer le système en multiuser.target
-Monter le volume logique '/dev/mapper/system-var' dans /mnt
+.Procédure suppression contenus de /var contenus dans le volume logique : /dev/mapper/system-racine
+[source,shell]
+----
+# après s'être assurez du bon fonctionnement du système
+
+#Stopper tout processus utilisant /var
+systemctl isolate rescue.target
+systemctl stop systemd-journald.service
+
+# après s'être assuré que lsof | grep /var ne renvoie rien, démonter /var et supprimer contenus dans /var
+umount /var
+rm -rvf /var/*
+
+# remonter le volume logique '/dev/mapper/system-var' dans /var
+mount /dev/mapper/system-var /var
+
+# Redémarrer les services
+systemctl start systemd-journald.service
+systemctl isolate graphical.target
+----
 
 === II. pass:[<u>Automatisation du montage au démarrage :</u>] sur la station avec environnement graphique
 
 Activer le montage automatique au démarrage du volume logique var vers /var
+
+Contenus actuelle fstab
+
+----
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# systemd generates mount units based on this file, see systemd.mount(5).
+# Please run 'systemctl daemon-reload' after making changes here.
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+/dev/mapper/system-racine /               ext4    errors=remount-ro 0       1
+/dev/mapper/system-home /home           ext4    defaults        0       2
+/dev/mapper/system-windows /windows        vfat    utf8            0       0
+/dev/mapper/system-swap none            swap    sw              0       0
+/dev/sr0        /media/cdrom0   udf,iso9660 user,noauto     0       0
+
+----
+
+Modification fichier fstab
+
+----
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# systemd generates mount units based on this file, see systemd.mount(5).
+# Please run 'systemctl daemon-reload' after making changes here.
+#
+# <file system>              <mount point>   <type>          <options>           <dump>  <pass>
+/dev/mapper/system-racine    /               ext4            errors=remount-ro    0       1
+/dev/mapper/system-home      /home           ext4            defaults             0       2
+/dev/mapper/system-var       /var            ext4            defaults             0       2
+/dev/mapper/system-windows   /windows        vfat            utf8                 0       0
+/dev/mapper/system-swap      none            swap            sw                   0       0
+/dev/sr0                     /media/cdrom0   udf,iso9660     user,noauto          0       0
+
+----
+
 BONUS : Création et montage de fichier ISO
 Créer un fichier ISO à partir du média d'installation de Debian et le monter en lecture seule.
 (vérifier son accessibilité en lecture uniquement)
@@ -53,3 +130,12 @@ Indices :
 
 * L’image ISO pourra être générée avec la commande dd
 * Pour le montage du fichier ISO, faire confiance à la commande mount !
+
+[source,shell]
+----
+dd if=/dev/sr0 of=~julie/cd_install_debian.iso
+mkdir /mnt/media
+
+# étant donné que c'est une iso, il sera d'office en lecture seule.
+mount ~julie/cd_install_debian.iso  /mnt/media
+----

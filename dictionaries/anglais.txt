@@ -1,8 +1,11 @@
 autofetch
+blkid
+debian
 fdisk
 gpedit
 inodes
 lvextend
+noauto
 superblocks
 TRACEROUTE
 TRACERT
