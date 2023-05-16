@@ -20,7 +20,7 @@ Conseils de mise en oeuvre :
 Procédures:
 
 .Procédure migration
-[source,shell]
+[,shell]
 ----
 # s'assurer d'avoir le moins de service lancé qui utilise /var
 systemctl isolate rescue.target
