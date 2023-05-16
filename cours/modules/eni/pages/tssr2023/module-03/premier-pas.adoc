@@ -38,3 +38,12 @@ Viperr release 10 (Vipera shub-niggurath)
 Welcome to Viperr 
 clement@shub-niggurath:~$ 
 ----
+
+Si la connexion ne peut être établie (mot de passe incorrect), et après un certain nombre d'essais, le compte utilisateur pourra être verrouillé. Celui-ci devra alors demander à l'administrateur d'intervenir.
+
+=== Via une connexion graphique
+
+C’est un display manager qui sera en charge de l’authentification (le plus fréquent est actuellement gdm3 ). 
+
+image::tssr2023/module-03/premier-pas/01.png[01.png]
+
