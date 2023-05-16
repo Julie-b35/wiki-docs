@@ -27,7 +27,7 @@ systemctl isolate rescue.target
 # de la interrompre la journalisation de systemd
 systemctl stop systemd-journald.service
 
-REM  bidule
+
 # Vérifier que lsof | grep /var ne renvoie rien
 lsof | grep /var
 
@@ -57,7 +57,7 @@ systemctl isolate graphical.target
 ----
 
 .Procédure suppression contenus de /var contenus dans le volume logique : /dev/mapper/system-racine
-[source,shell]
+[source,bash]
 ----
 # après s'être assurez du bon fonctionnement du système
 REM  bidule
@@ -132,7 +132,7 @@ Indices :
 * L’image ISO pourra être générée avec la commande dd
 * Pour le montage du fichier ISO, faire confiance à la commande mount !
 
-[source,shell]
+[source,bash]
 ----
 dd if=/dev/sr0 of=~julie/cd_install_debian.iso
 mkdir /mnt/media
