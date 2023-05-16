@@ -1,5 +1,5 @@
 = Module 07 - La gestion du réseau et du pare-feu
-:navtitle: Gestion du réseau et du pare-feu
+:navtitle: Gestion réseau & pare-feu
 
 * Module précédent -> xref:tssr2023/module-02/client-windows/acl.adoc[Module 06 - Les sécurité NTFS et les ACL (Access Control List)]
 * Module suivant -> xref:tssr2023/module-02/client-windows/partage-ressource.adoc[Module 08 - Le partage de ressources]

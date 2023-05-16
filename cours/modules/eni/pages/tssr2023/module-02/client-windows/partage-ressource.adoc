@@ -1,5 +1,5 @@
 = Module 08 - Le partage de ressources
-:navtitle: Partage de ressources
+:navtitle: Partage ressources
 
 * Module précédent -> xref:tssr2023/module-02/client-windows/network-firewall.adoc[Module 07 - La gestion du réseau et du pare-feu]
 * Module suivant -> xref:tssr2023/module-02/client-windows/pilotes-imprimantes.adoc[Module 09 - Les pilotes et les imprimantes]

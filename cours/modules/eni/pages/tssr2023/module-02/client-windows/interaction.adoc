@@ -1,5 +1,5 @@
 = Module 03 - Interagir avec Windows 10
-:navtitle: Interagir avec Windows 10
+:navtitle: Interaction Windows 10
 
 
 * Module précédent -> xref:tssr2023/module-02/client-windows/installation.adoc[Module 02 - Installation du système d'exploitation Windows 10]

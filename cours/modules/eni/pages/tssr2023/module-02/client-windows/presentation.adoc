@@ -1,5 +1,5 @@
 = Module 01 - Les systèmes d'exploitation et Microsoft Windows 10
-:navtitle: Les systèmes d'exploitation et Microsoft Windows 10
+:navtitle: Systèmes d'exploitation & Microsoft Windows 10
 
 
 * Module suivant -> xref:tssr2023/module-02/client-windows/installation[Module 02 - Installation du système d'exploitation Windows 10]

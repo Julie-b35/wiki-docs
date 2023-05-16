@@ -1,0 +1,42 @@
+= Module 09 - Les pilotes et les imprimantes
+:navtitle: Pilotes & imprimantes
+
+* Module précédent -> xref:tssr2023/module-02/client-windows/partage-ressource.adoc[Module 08 - Le partage de ressources]
+* Module suivant -> xref:tssr2023/module-02/client-windows/maintenances.adoc[Module 10 - La maintenance du système]
+
+Notes -> xref:notes:eni-tssr:client-windows.adoc[Client Windows]
+
+== Objectifs
+
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/01.png[01.png]
+
+== Drivers
+
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/02.png[02.png]
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/04.png[04.png]
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/05.png[05.png]
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/06.png[06.png]
+
+== Gestionnaires de périphériques
+
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/03.png[03.png]
+
+== Imprimantes
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/07_1.png[07_1.png]
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/08.png[08.png]
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/09.png[09.png]
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/10.png[10.png]
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/11.png[11.png]
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/12.png[12.png]
+
+== Conclusion
+
+image::tssr2023/module-02/client-windows/pilotes-imprimantes/13.png[13.png]
+
+== Sources
+
+[TIP]
+.sources:
+====
+* slides fournis pendant les cours à l'link:https://www.eni-ecole.fr/[ENI]
+====

@@ -1,5 +1,5 @@
 = Module 04 - Gestion du stockage
-:navtitle: Gestion du stockage
+:navtitle: Gestion stockage
 
 * Module précédent -> xref:tssr2023/module-02/client-windows/interaction.adoc[Module 03 - Interagir avec Windows 10]
 * Module suivant -> xref:tssr2023/module-02/client-windows/users-groups.adoc[Module 05 - Les utilisateurs et les groupes]
