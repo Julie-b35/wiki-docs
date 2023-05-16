@@ -36,3 +36,7 @@ echo "- - -" > /sys/class/scsi_host/host2/scan
 == TP
 
 * xref:tssr2023/module-04/tp/tp7.adoc[TP7 - Gestion des espaces disque]
+
+== Montage
+
+* *mount*

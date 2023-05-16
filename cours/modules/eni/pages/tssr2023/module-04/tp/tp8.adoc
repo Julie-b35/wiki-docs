@@ -1,0 +1,55 @@
+= TP 8 (Gestion des systèmes de fichiers et montage)
+:source-highlighter: coderay
+
+
+
+== Objectif
+
+Gestion du montage de disques locaux
+Principales tâches à réaliser
+
+=== I. pass:[<u>Migration du répertoire /var :</u>] sur la station avec environnement graphique
+
+Migrer le répertoire /var vers le volume logique var tout en préservant les données existantes.
+Conseils de mise en oeuvre :
+
+* Vérifier l'utilisation de /var avant de copier les fichiers : prendre toutes les précautions nécessaire pour éviter l’écriture dans l’arborescence de /var afin de pouvoir copier correctement les fichiers
+* Utiliser un montage temporaire pour pouvoir copier les données de l'ancien vers le nouveau volume
+* Copier les données en préservant les permissions
+
+Procédures:
+
+[source,shell]
+----
+# s'assurer d'avoir le moins de service lancé qui utilise /var
+systemctl isolate rescue.target
+# de la interrompre la journalisation de systemd
+systemctl stop systemd-journald.service
+
+# Vérifier que lsof | grep /var ne renvoie rien
+lsof | grep /var
+
+# Monter le volume logique '/dev/mapper/system-var'
+mount /dev/mapper/system-var /mnt
+
+# Passer la r
+# Copier tout le contenus de /var dans /mnt (cp -a pour préserver les liens et attributs)
+cp -av /var /mnt
+
+
+
+----
+
+Redémarrer le système en multiuser.target
+Monter le volume logique '/dev/mapper/system-var' dans /mnt
+
+=== II. pass:[<u>Automatisation du montage au démarrage :</u>] sur la station avec environnement graphique
+
+Activer le montage automatique au démarrage du volume logique var vers /var
+BONUS : Création et montage de fichier ISO
+Créer un fichier ISO à partir du média d'installation de Debian et le monter en lecture seule.
+(vérifier son accessibilité en lecture uniquement)
+Indices :
+
+* L’image ISO pourra être générée avec la commande dd
+* Pour le montage du fichier ISO, faire confiance à la commande mount !

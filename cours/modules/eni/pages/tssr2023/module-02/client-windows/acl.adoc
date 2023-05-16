@@ -1,0 +1,33 @@
+= Module 06 - Les sécurité NTFS et les ACL (Access Control List)
+
+
+* Module précédent -> xref:tssr2023/module-02/client-windows/users-groups.adoc[Module 05 - Les utilisateurs et les groupes]
+* Module suivant -> link:../client-windows/network-firewall[Module 07 - La gestion du réseau et du pare-feu]
+
+Notes -> xref:notes:eni-tssr:client-windows.adoc[Client Windows]
+
+== Objectifs
+
+image::tssr2023/module-02/client-windows/acl/01.png[01.png]
+
+== NTFS et les ACL
+
+image::tssr2023/module-02/client-windows/acl/02.png[02.png]
+image::tssr2023/module-02/client-windows/acl/03.png[03.png]
+image::tssr2023/module-02/client-windows/acl/04.png[04.png]
+image::tssr2023/module-02/client-windows/acl/05.png[05.png]
+image::tssr2023/module-02/client-windows/acl/06.png[06.png]
+image::tssr2023/module-02/client-windows/acl/07.png[07.png]
+image::tssr2023/module-02/client-windows/acl/08.png[08.png]
+image::tssr2023/module-02/client-windows/acl/09.png[09.png]
+image::tssr2023/module-02/client-windows/acl/10.png[10.png]
+
+*TP* -> link:/procedures/eni-tssr/client-windows/gestion-acl[Gestion ACL]
+
+== Sources
+
+[TIP]
+.sources:
+====
+* slides fournis pendant les cours à l'link:https://www.eni-ecole.fr/[ENI]
+====
