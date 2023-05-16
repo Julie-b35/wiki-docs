@@ -7,6 +7,7 @@ inodes
 lvextend
 noauto
 superblocks
+Sysrep
 TRACEROUTE
 TRACERT
 vgextend

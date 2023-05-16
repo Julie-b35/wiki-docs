@@ -1,0 +1,46 @@
+= Module 12 - Introduction à la capture et au déploiement d'image
+:navtitle: Introduction à la capture et au déploiement d'image
+
+* Module précédent ->  xref:tssr2023/module-02/client-windows/powershell.adoc[Module 11 - Plus loin avec PowerShell]
+* Module suivant -> xref:tssr2023/module-02/client-windows/gpedit.adoc[Module bonus - Les stratégie de groupes local]
+
+Notes -> xref:notes:eni-tssr:client-windows.adoc[Client Windows]
+
+== Objectifs
+
+image::tssr2023/module-02/client-windows/wds/01.png[01.png]
+
+== Problématique
+
+image::tssr2023/module-02/client-windows/wds/02.png[02.png]
+
+== Préparation du master
+
+image::tssr2023/module-02/client-windows/wds/03.png[03.png]
+
+== Sysrep
+
+image::tssr2023/module-02/client-windows/wds/04.png[04.png]
+image::tssr2023/module-02/client-windows/wds/05.png[05.png]
+image::tssr2023/module-02/client-windows/wds/06.png[06.png]
+
+== Exploitation du master
+
+image::tssr2023/module-02/client-windows/wds/07.png[07.png]
+
+== Déploiement
+
+image::tssr2023/module-02/client-windows/wds/08.png[08.png]
+image::tssr2023/module-02/client-windows/wds/09.png[09.png]
+
+== Conclusion
+
+image::tssr2023/module-02/client-windows/wds/10.png[10.png]
+
+== Sources
+
+[TIP]
+.sources:
+====
+* slides fournis pendant les cours à l'link:https://www.eni-ecole.fr/[ENI]
+====
