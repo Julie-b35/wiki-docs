@@ -1,3 +1,40 @@
-= Systèmes clients Microsoft
+= Systèmes Client Windows
 
-Contenus
+Formateur : Mickaël BAUDET
+
+Formateur remplaçant : Nicolas Laurent
+
+Notes -> xref:notes:eni-tssr:client-windows.adoc[Client Windows]
+
+== Présentation du cours
+=== Objectifs
+
+* Connaître les principes d'un systèmes d'exploitation et plus particulièrement ceux de Microsoft Windows 10
+* Installer, interagir et configurer Windows 10
+* Gérer les principaux objets du système
+* Sécuriser les accès aux ressources
+* Surveiller et maintenir l'OS
+
+=== Outils à disposition
+
+* Le support des Editions ENI
+** Windows 10 - Installation et Configuration
+* Le support du cours Eni-Ecole
+** Système Clients Microsoft
+* Les ateliers à effectués sur les machines virtuelles.
+
+== Modules
+
+* xref:tssr2023/module-02/client-windows/presentation.adoc[Module 01 - Les systèmes d'exploitation et Microsoft Windows 10]
+* xref:tssr2023/module-02/client-windows/installation.adoc[Module 02 - Installation du système d'exploitation Windows 10]
+* xref:tssr2023/module-02/client-windows/interaction.adoc[Module 03 - Interagir avec Windows 10]
+* xref:tssr2023/module-02/client-windows/stockage.adoc[Module 04 - Gestion du stockage]
+* xref:tssr2023/module-02/client-windows/users-groups.adoc[Module 05 - Les utilisateurs et les groupes]
+* xref:tssr2023/module-02/client-windows/acl.adoc[Module 06 - Les sécurité NTFS et les ACL (Access Control List)]
+* xref:tssr2023/module-02/client-windows/network-firewall.adoc[Module 07 - La gestion du réseau et du pare-feu]
+* xref:tssr2023/module-02/client-windows/partage-ressource.adoc[Module 08 - Le partage de ressources]
+* xref:tssr2023/module-02/client-windows/pilotes-imprimantes.adoc[Module 09 - Les pilotes et les imprimantes]
+* xref:tssr2023/module-02/client-windows/maintenances.adoc[Module 10 - La maintenance du système]
+* xref:tssr2023/module-02/client-windows/powershell.adoc[Module 11 - Plus loin avec PowerShell]
+* xref:tssr2023/module-02/client-windows/wds.adoc[Module 12 - Introduction à la capture et au déploiement d'image]
+* xref:tssr2023/module-02/client-windows/gpedit.adoc[Module bonus - Les stratégie de groupes local]

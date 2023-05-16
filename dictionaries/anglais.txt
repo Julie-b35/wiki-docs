@@ -1,5 +1,6 @@
 autofetch
 fdisk
+gpedit
 inodes
 lvextend
 superblocks
