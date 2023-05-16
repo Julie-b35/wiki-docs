@@ -7,78 +7,78 @@ Notes -> xref:notes:eni-tssr:base-reseau.adoc[Base réseau]
 
 == Objectifs
 
-image::tssr2023/base-reseau/module-01/modele-osi/01.png[01.png]
+image::tssr2023/module-01/base-reseau/modele-osi/01.png[01.png]
 
 == Présentation du modèle OSI
 
 === Définition
 
-image::tssr2023/base-reseau/module-01/modele-osi/02.png[02.png]
-image::tssr2023/base-reseau/module-01/modele-osi/03.png[03.png]
+image::tssr2023/module-01/base-reseau/modele-osi/02.png[02.png]
+image::tssr2023/module-01/base-reseau/modele-osi/03.png[03.png]
 
 === Les couches OSI
 
-image::tssr2023/base-reseau/module-01/modele-osi/04.png[04.png]
+image::tssr2023/module-01/base-reseau/modele-osi/04.png[04.png]
 
 === Communication entre les couches
 
-image::tssr2023/base-reseau/module-01/modele-osi/05.png[05.png]
+image::tssr2023/module-01/base-reseau/modele-osi/05.png[05.png]
 
 === Les ports
 
-image::tssr2023/base-reseau/module-01/modele-osi/06.png[06.png]
+image::tssr2023/module-01/base-reseau/modele-osi/06.png[06.png]
 
 == Encapsulation
 
 === Comment çà marche
 
-image::tssr2023/base-reseau/module-01/modele-osi/07.png[07.png]
+image::tssr2023/module-01/base-reseau/modele-osi/07.png[07.png]
 
 == Désencapsulation
 
 === Comment çà marche
 
-image::tssr2023/base-reseau/module-01/modele-osi/08.png[08.png]
+image::tssr2023/module-01/base-reseau/modele-osi/08.png[08.png]
 
 == Analogie avec la poste
 
 === Scénario
 
-image::tssr2023/base-reseau/module-01/modele-osi/09.png[09.png]
+image::tssr2023/module-01/base-reseau/modele-osi/09.png[09.png]
 
 == Modèle OSI et Communication
 
 === Exemple de communication
 
-image::tssr2023/base-reseau/module-01/modele-osi/10.png[10.png]
-image::tssr2023/base-reseau/module-01/modele-osi/11.png[11.png]
-image::tssr2023/base-reseau/module-01/modele-osi/12.png[12.png]
+image::tssr2023/module-01/base-reseau/modele-osi/10.png[10.png]
+image::tssr2023/module-01/base-reseau/modele-osi/11.png[11.png]
+image::tssr2023/module-01/base-reseau/modele-osi/12.png[12.png]
 
 == Les couches du modèle OSI
 
 === Couche Physique
 
-image::tssr2023/base-reseau/module-01/modele-osi/13.png[13.png]
-image::tssr2023/base-reseau/module-01/modele-osi/14.png[14.png]
-image::tssr2023/base-reseau/module-01/modele-osi/15.png[15.png]
-image::tssr2023/base-reseau/module-01/modele-osi/16.png[16.png]
+image::tssr2023/module-01/base-reseau/modele-osi/13.png[13.png]
+image::tssr2023/module-01/base-reseau/modele-osi/14.png[14.png]
+image::tssr2023/module-01/base-reseau/modele-osi/15.png[15.png]
+image::tssr2023/module-01/base-reseau/modele-osi/16.png[16.png]
 
 === Couche Liaison
 
-image::tssr2023/base-reseau/module-01/modele-osi/17.png[17.png]
-image::tssr2023/base-reseau/module-01/modele-osi/18.png[18.png]
-image::tssr2023/base-reseau/module-01/modele-osi/19.png[19.png]
+image::tssr2023/module-01/base-reseau/modele-osi/17.png[17.png]
+image::tssr2023/module-01/base-reseau/modele-osi/18.png[18.png]
+image::tssr2023/module-01/base-reseau/modele-osi/19.png[19.png]
 
 === Couche Réseau
 
-image::tssr2023/base-reseau/module-01/modele-osi/20.png[20.png]
-image::tssr2023/base-reseau/module-01/modele-osi/21.png[21.png]
+image::tssr2023/module-01/base-reseau/modele-osi/20.png[20.png]
+image::tssr2023/module-01/base-reseau/modele-osi/21.png[21.png]
 
 === Couche Transport
 
-image::tssr2023/base-reseau/module-01/modele-osi/22.png[22.png]
-image::tssr2023/base-reseau/module-01/modele-osi/23.png[23.png]
-image::tssr2023/base-reseau/module-01/modele-osi/24.png[24.png]
+image::tssr2023/module-01/base-reseau/modele-osi/22.png[22.png]
+image::tssr2023/module-01/base-reseau/modele-osi/23.png[23.png]
+image::tssr2023/module-01/base-reseau/modele-osi/24.png[24.png]
 
 == Sources
 
