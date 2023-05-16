@@ -7,51 +7,51 @@ Notes -> xref:notes:eni-tssr:outils-collaboratifs.adoc[Outils collaboratifs Micr
 
 == Objectif
 
-image::tssr2023/outils-collaboratifs/decouverte/01.png[01.png]
+image::tssr2023/outils-collaboratifs/module-01/decouverte/01.png[01.png]
 
 == Qu'est ce qu'une offre SaaS ?
 
-image::tssr2023/outils-collaboratifs/decouverte/02.png[02.png]
+image::tssr2023/outils-collaboratifs/module-01/decouverte/02.png[02.png]
 
 == Microsoft 365 et ses concurrents
 
-image::tssr2023/outils-collaboratifs/decouverte/03.png[03.png]
+image::tssr2023/outils-collaboratifs/module-01/decouverte/03.png[03.png]
 
 == Qu'est ce que Microsoft 365
 
-image::tssr2023/outils-collaboratifs/decouverte/04.png[04.png]
+image::tssr2023/outils-collaboratifs/module-01/decouverte/04.png[04.png]
 
 == Les éléments de base de Microsoft 365
 
-image::tssr2023/outils-collaboratifs/decouverte/05.png[05.png]
+image::tssr2023/outils-collaboratifs/module-01/decouverte/05.png[05.png]
 
 == Plans et licences
 
-image::tssr2023/outils-collaboratifs/decouverte/06.png[06.png]
+image::tssr2023/outils-collaboratifs/module-01/decouverte/06.png[06.png]
 
 == Les services principaux
 
-image::tssr2023/outils-collaboratifs/decouverte/07.png[07.png]
+image::tssr2023/outils-collaboratifs/module-01/decouverte/07.png[07.png]
 
 == Les services additionnels
 
-image::tssr2023/outils-collaboratifs/decouverte/08.png[08.png]
+image::tssr2023/outils-collaboratifs/module-01/decouverte/08.png[08.png]
 
 == Office 365 Pro Plus
 
-image::tssr2023/outils-collaboratifs/decouverte/09.png[09.png]
+image::tssr2023/outils-collaboratifs/module-01/decouverte/09.png[09.png]
 
 == SharePoint Online
 
-image::tssr2023/outils-collaboratifs/decouverte/10.png[10.png]
+image::tssr2023/outils-collaboratifs/module-01/decouverte/10.png[10.png]
 
 == Définition
 
-image::tssr2023/outils-collaboratifs/decouverte/11.png[11.png]
+image::tssr2023/outils-collaboratifs/module-01/decouverte/11.png[11.png]
 
 == Créer un tenant Microsoft 365
 
-image::tssr2023/outils-collaboratifs/decouverte/12.png[12.png]
+image::tssr2023/outils-collaboratifs/module-01/decouverte/12.png[12.png]
 
 == Sources
 

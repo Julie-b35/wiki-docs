@@ -11,98 +11,98 @@ Notes -> xref:notes:eni-tssr:outils-collaboratifs.adoc[Outils collaboratifs Micr
 
 === Qu'est-ce que Teams ?
 
-image::tssr2023/outils-collaboratifs/teams/01.png[01.png]
+image::tssr2023/outils-collaboratifs/module-01/teams/01.png[01.png]
 
 === Présentation de l'interface de Teams
 
-image::tssr2023/outils-collaboratifs/teams/02.png[02.png]
+image::tssr2023/outils-collaboratifs/module-01/teams/02.png[02.png]
 
 === Structure d'une équipe ?
 
-image::tssr2023/outils-collaboratifs/teams/03.png[03.png]
+image::tssr2023/outils-collaboratifs/module-01/teams/03.png[03.png]
 
 === Qu'est-ce qu'une équipe dans Teams ?
 
-image::tssr2023/outils-collaboratifs/teams/04.png[04.png]
+image::tssr2023/outils-collaboratifs/module-01/teams/04.png[04.png]
 
 === Créer une équipe dans Teams
 
-image::tssr2023/outils-collaboratifs/teams/05.png[05.png]
+image::tssr2023/outils-collaboratifs/module-01/teams/05.png[05.png]
 
 === Les paramètres d'une équipe Teams
 
-image::tssr2023/outils-collaboratifs/teams/06.png[06.png]
+image::tssr2023/outils-collaboratifs/module-01/teams/06.png[06.png]
 
 === Qu'est-ce qu'un canal ?
 
-image::tssr2023/outils-collaboratifs/teams/07.png[07.png]
+image::tssr2023/outils-collaboratifs/module-01/teams/07.png[07.png]
 
 === Créer un canal dans Teams ?
 
-image::tssr2023/outils-collaboratifs/teams/08.png[08.png]
+image::tssr2023/outils-collaboratifs/module-01/teams/08.png[08.png]
 
 === Qu'est-ce qu'un onglet ?
 
-image::tssr2023/outils-collaboratifs/teams/09.png[09.png]
+image::tssr2023/outils-collaboratifs/module-01/teams/09.png[09.png]
 
 === La gestion des fichiers Teams
 
-image::tssr2023/outils-collaboratifs/teams/10.png[10.png]
+image::tssr2023/outils-collaboratifs/module-01/teams/10.png[10.png]
 
 === Les messages
 
-image::tssr2023/outils-collaboratifs/teams/11.png[11.png]
+image::tssr2023/outils-collaboratifs/module-01/teams/11.png[11.png]
 
 === Les réunions d'équipe
 
-image::tssr2023/outils-collaboratifs/teams/12.png[12.png]
+image::tssr2023/outils-collaboratifs/module-01/teams/12.png[12.png]
 
 == Exploiter OneDrive
 
 === Qu'est-ce que SharePoint ?
 
-image::tssr2023/outils-collaboratifs/onedrive/01.png[01.png]
+image::tssr2023/outils-collaboratifs/module-01/onedrive/01.png[01.png]
 
 === A quoi sert SharePoint ?
 
-image::tssr2023/outils-collaboratifs/onedrive/02.png[02.png]
+image::tssr2023/outils-collaboratifs/module-01/onedrive/02.png[02.png]
 
 === Qu'est-ce que OneDrive ?
 
-image::tssr2023/outils-collaboratifs/onedrive/03.png[03.png]
+image::tssr2023/outils-collaboratifs/module-01/onedrive/03.png[03.png]
 
 === Comment accéder à son OneDrive ?
 
-image::tssr2023/outils-collaboratifs/onedrive/04.png[04.png]
+image::tssr2023/outils-collaboratifs/module-01/onedrive/04.png[04.png]
 
 === Les icônes OneDrive
 
-image::tssr2023/outils-collaboratifs/onedrive/05.png[05.png]
-image::tssr2023/outils-collaboratifs/onedrive/06.png[06.png]
+image::tssr2023/outils-collaboratifs/module-01/onedrive/05.png[05.png]
+image::tssr2023/outils-collaboratifs/module-01/onedrive/06.png[06.png]
 
 === Partagez dans OneDrive
 
-image::tssr2023/outils-collaboratifs/onedrive/07.png[07.png]
+image::tssr2023/outils-collaboratifs/module-01/onedrive/07.png[07.png]
 
 === La corbeille dans OneDrive
 
-image::tssr2023/outils-collaboratifs/onedrive/08.png[08.png]
+image::tssr2023/outils-collaboratifs/module-01/onedrive/08.png[08.png]
 
 === Restaurer son espace OneDrive
 
-image::tssr2023/outils-collaboratifs/onedrive/09.png[09.png]
+image::tssr2023/outils-collaboratifs/module-01/onedrive/09.png[09.png]
 
 === Le versioning dans OneDrive
 
-image::tssr2023/outils-collaboratifs/onedrive/10.png[10.png]
+image::tssr2023/outils-collaboratifs/module-01/onedrive/10.png[10.png]
 
 === La co-édition (co-authoring) dans OneDrive
 
-image::tssr2023/outils-collaboratifs/onedrive/11.png[11.png]
+image::tssr2023/outils-collaboratifs/module-01/onedrive/11.png[11.png]
 
 === Les paramètres du client OneDrive
 
-image::tssr2023/outils-collaboratifs/onedrive/12.png[12.png]
+image::tssr2023/outils-collaboratifs/module-01/onedrive/12.png[12.png]
 
 == Sources
 
