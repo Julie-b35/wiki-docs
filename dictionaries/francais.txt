@@ -48,6 +48,7 @@ GLPI
 gmauduit
 gparted
 Gparted
+gpietri
 graphique
 GSHADOW
 identifiée
@@ -80,6 +81,7 @@ paramètres
 parlé
 PELLERIN
 permettant
+Pietri
 pinguer
 planification
 précédant

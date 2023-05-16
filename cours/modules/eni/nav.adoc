@@ -28,4 +28,6 @@
 **** xref:tssr2023/module-02/client-windows/wds.adoc[]
 **** xref:tssr2023/module-02/client-windows/gpedit.adoc[]
 *** xref:tssr2023/module-03/client-linux.adoc[]
+**** xref:tssr2023/module-02/historique.adoc[]
+**** xref:tssr2023/module-02/premier-pas.adoc[]
 *** xref:tssr2023/module-04/admin-linux.adoc[]

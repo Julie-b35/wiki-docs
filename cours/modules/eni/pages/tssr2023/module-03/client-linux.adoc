@@ -1,3 +1,18 @@
 = Systèmes Clients Linux
 
-Contenus
+Formateur : Giles Pietri
+
+Mail : gpietri@campus-eni.fr
+
+Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
+
+== Introduction
+
+image::tssr2023/module-03/01.png[01.png]
+
+
+== Modules
+
+* xref:tssr2023/module-02/historique.adoc[Module 01 - Histoire sur Linux]
+* xref:tssr2023/module-02/premier-pas.adoc[Module 02 - Les premier pas et les premières commandes]
+
