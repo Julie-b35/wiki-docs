@@ -1,0 +1,32 @@
+= Module 02 - Installation du système d'exploitation Windows 10
+
+
+* Module précédent -> xref:tssr2023/module-02/client-windows/presentation.adoc[Module 01 - Les systèmes d'exploitation et Microsoft Windows 10]
+* Module suivant -> xref:tssr2023/module-02/client-windows/interaction.adoc[Module 03 - Interagir avec Windows 10]
+
+Notes -> xref:notes:eni-tssr:client-windows.adoc[Client Windows]
+
+
+== Objectifs
+
+image::tssr2023/module-02/client-windows/installation/01.png[01.png]
+
+== Installation
+
+image::tssr2023/module-02/client-windows/installation/02.png[02.png]
+image::tssr2023/module-02/client-windows/installation/03.png[03.png]
+image::tssr2023/module-02/client-windows/installation/04.png[04.png]
+image::tssr2023/module-02/client-windows/installation/05.png[05.png]
+image::tssr2023/module-02/client-windows/installation/06.png[06.png]
+
+== Conclusion
+
+image::tssr2023/module-02/client-windows/installation/07.png[07.png]
+
+== Sources
+
+[TIP]
+.sources:
+====
+* slides fournis pendant les cours à l'link:https://www.eni-ecole.fr/[ENI]
+====
