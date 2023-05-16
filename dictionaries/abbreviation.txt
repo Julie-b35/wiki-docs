@@ -1,3 +1,4 @@
 APIPA
+LGPO
 NTFS
 vfat

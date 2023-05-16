@@ -1,0 +1,34 @@
+= Module bonus - Les stratégie de groupes local
+:navtitle: Stratégie de Groupes local
+
+* Module précédent -> xref:tssr2023/module-02/client-windows/wds.adoc[Module 12 - Introduction à la capture et au déploiement d'image]
+
+Notes -> xref:notes:eni-tssr:client-windows.adoc[Client Windows]
+
+== Objectifs
+
+image::tssr2023/module-02/client-windows/gpedit/01.png[01.png]
+
+== Les stratégie de groupes local
+
+image::tssr2023/module-02/client-windows/gpedit/02.png[02.png]
+image::tssr2023/module-02/client-windows/gpedit/03.png[03.png]
+image::tssr2023/module-02/client-windows/gpedit/04.png[04.png]
+
+== LGPO
+
+image::tssr2023/module-02/client-windows/gpedit/05.png[05.png]
+image::tssr2023/module-02/client-windows/gpedit/06.png[06.png]
+image::tssr2023/module-02/client-windows/gpedit/07.png[07.png]
+
+== Conclusion
+
+image::tssr2023/module-02/client-windows/gpedit/08.png[08.png]
+
+== Sources
+
+[TIP]
+.sources:
+====
+* slides fournis pendant les cours à l'link:https://www.eni-ecole.fr/[ENI]
+====
