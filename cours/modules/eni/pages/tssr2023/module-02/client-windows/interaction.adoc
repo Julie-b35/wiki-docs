@@ -1,0 +1,74 @@
+= Module 03 - Interagir avec Windows 10
+
+
+* Module précédent -> xref:tssr2023/module-02/client-windows/installation.adoc[Module 02 - Installation du système d'exploitation Windows 10]
+* Module suivant -> xref:tssr2023/module-02/client-windows/stockage.adoc[Module 04 - Gestion du stockage]
+
+Notes -> xref:notes:eni-tssr:client-windows.adoc[Client Windows]
+
+== Objectifs
+
+image::tssr2023/module-02/client-windows/interagir/01.png[01.png]
+
+== Tour d'horizon
+
+image::tssr2023/module-02/client-windows/interagir/02.png[02.png]
+
+== Tour d'horizon graphique
+
+image::tssr2023/module-02/client-windows/interagir/03.png[03.png]
+image::tssr2023/module-02/client-windows/interagir/04.png[04.png]
+
+== Tour d'horizon - La CLI
+
+image::tssr2023/module-02/client-windows/interagir/05.png[05.png]
+image::tssr2023/module-02/client-windows/interagir/06.png[06.png]
+image::tssr2023/module-02/client-windows/interagir/07.png[07.png]
+image::tssr2023/module-02/client-windows/interagir/08.png[08.png]
+image::tssr2023/module-02/client-windows/interagir/09.png[09.png]
+
+== La syntaxe de l'aide
+
+image::tssr2023/module-02/client-windows/interagir/10.png[10.png]
+image::tssr2023/module-02/client-windows/interagir/11.png[11.png]
+
+== Présentation de PowerShell
+
+image::tssr2023/module-02/client-windows/interagir/12.png[12.png]
+image::tssr2023/module-02/client-windows/interagir/13.png[13.png]
+image::tssr2023/module-02/client-windows/interagir/14.png[14.png]
+image::tssr2023/module-02/client-windows/interagir/15.png[15.png]
+image::tssr2023/module-02/client-windows/interagir/16.png[16.png]
+image::tssr2023/module-02/client-windows/interagir/17.png[17.png]
+image::tssr2023/module-02/client-windows/interagir/18.png[18.png]
+
+== Aide de PowerShell
+
+image::tssr2023/module-02/client-windows/interagir/19.png[19.png]
+image::tssr2023/module-02/client-windows/interagir/20.png[20.png]
+image::tssr2023/module-02/client-windows/interagir/21.png[21.png]
+image::tssr2023/module-02/client-windows/interagir/22.png[22.png]
+
+== Cmdlets de base et objets
+
+image::tssr2023/module-02/client-windows/interagir/23.png[23.png]
+image::tssr2023/module-02/client-windows/interagir/24.png[24.png]
+image::tssr2023/module-02/client-windows/interagir/25.png[25.png]
+
+== Interagir avec un objet PowerShell
+
+image::tssr2023/module-02/client-windows/interagir/26.png[26.png]
+image::tssr2023/module-02/client-windows/interagir/27.png[27.png]
+
+== Conclusion
+
+image::tssr2023/module-02/client-windows/interagir/28.png[2.png]
+
+== Sources
+
+[TIP]
+.sources:
+====
+* https://docs.microsoft.com/fr-fr/windows-server/administration/windows-commands/windows-commands
+* slides fournis pendant les cours à l'link:https://www.eni-ecole.fr/[ENI]
+====
