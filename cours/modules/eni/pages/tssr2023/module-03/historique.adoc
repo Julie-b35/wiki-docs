@@ -1,7 +1,7 @@
 = Module 01 - Histoire sur Linux
 :navtitle: Histoire sur Linux
 
-* Module suivant -> xref:tssr2023/module-02/premier-pas.adoc[Module 02 - Les premier pas et les premières commandes]
+* Module suivant -> xref:tssr2023/module-03/premier-pas.adoc[Module 02 - Les premier pas et les premières commandes]
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
 
