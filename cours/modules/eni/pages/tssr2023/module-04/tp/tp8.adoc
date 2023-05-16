@@ -27,6 +27,7 @@ systemctl isolate rescue.target
 # de la interrompre la journalisation de systemd
 systemctl stop systemd-journald.service
 
+REM  bidule
 # Vérifier que lsof | grep /var ne renvoie rien
 lsof | grep /var
 
@@ -59,7 +60,7 @@ systemctl isolate graphical.target
 [source,shell]
 ----
 # après s'être assurez du bon fonctionnement du système
-
+REM  bidule
 #Stopper tout processus utilisant /var
 systemctl isolate rescue.target
 systemctl stop systemd-journald.service
