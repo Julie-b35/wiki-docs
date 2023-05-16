@@ -1,0 +1,62 @@
+= Module 06 - L'adressage en IPv6
+:navtitle: Adressage IPv6
+
+* Module précédent -> xref:tssr2023/module-01/base-reseau/premiere-commandes.adoc[Module 05 - Les premières commandes]
+
+Notes -> xref:notes:eni-tssr:base-reseau.adoc[Base réseau]
+
+== Objectifs
+
+image::tssr2023/base-reseau/adressage-ipv6/01.png[01.png]
+
+== La structure d'une adresse IPv6 (RFC 2800)
+
+image::tssr2023/base-reseau/adressage-ipv6/02.png[02.png]
+
+== La simplification d'une adresse IPv6
+
+image::tssr2023/base-reseau/adressage-ipv6/03.png[03.png]
+
+== Les bénéfices de l'adressage IPv6
+
+image::tssr2023/base-reseau/adressage-ipv6/04.png[04.png]
+
+== Les différents types d'adresses IPv6
+
+image::tssr2023/base-reseau/adressage-ipv6/05.png[05.png]
+image::tssr2023/base-reseau/adressage-ipv6/06.png[06.png]
+
+== Adresse de monodiffusion d'auto-configuration de Lien-Local
+
+image::tssr2023/base-reseau/adressage-ipv6/07.png[07.png]
+
+== Adresse de monodiffusion globale unique
+
+image::tssr2023/base-reseau/adressage-ipv6/08.png[08.png]
+image::tssr2023/base-reseau/adressage-ipv6/09.png[09.png]
+
+== Adresses de multidiffusion
+
+image::tssr2023/base-reseau/adressage-ipv6/10.png[10.png]
+
+== Adresses de multidiffusion réservées
+
+image::tssr2023/base-reseau/adressage-ipv6/11.png[11.png]
+
+== Adresses de multidiffusion de noeuds sollicité
+
+image::tssr2023/base-reseau/adressage-ipv6/12.png[12.png]
+
+== Adresses IPv6 d'un hôte
+
+image::tssr2023/base-reseau/adressage-ipv6/13.png[13.png]
+
+== Sources
+
+[TIP]
+.sources:
+====
+* slides fournis pendant les cours à l'link:https://www.eni-ecole.fr/[ENI]
+====
+
+
