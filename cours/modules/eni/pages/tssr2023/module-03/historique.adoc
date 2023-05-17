@@ -112,6 +112,79 @@ Quelques exemples :
 .différente couche d'un OS
 image::tssr2023/module-03/historique/03.png[01.png]
 
+==== Le noyau Unix
+
+Le noyau UNIX est le programme principal du système. Il est généré à l'installation et relié en cas de modification de configuration matérielle. 
+
+Son rôle est de : 
+
+* Gérer les ressources d'un ordinateur à travers la couche logicielle (périphériques, mémoire …)
+* Ordonnancer les différentes tâches (processus)
+* Mettre ces ressources à la disposition des utilisateurs
+
+Dans un sens plus large, on entend souvent par noyau UNIX, le noyau lui-même ainsi que l'ensemble des programmes essentiels au système. 
+
+=== Les Languages SHELL
+
+Une commande est une suite de mots séparés par des espaces. Le premier mot est le nom de la commande, les éventuels mots suivants sont les *arguments*. Sous UNIX, cet ensemble de mots est analysé et interprété par un programme appelé Shell (interpréteur de commandes). 
+
+Attention ! Le Shell différencie les majuscules et les minuscules (sensible à la casse). 
+
+Un Shell peut être assimilé à un langage. Assez complet, il permet la déclaration de structures de contrôles (alternatives et répétitives) et la manipulation de variables. Il est possible d'enregistrer des ensembles de commandes dans des fichiers de commandes appelés scripts Shell. Les commandes ainsi créées disposent des mêmes caractéristiques que les commandes système. 
+
+Un Shell traite les informations entrées ou à restituer sous forme de flux. Par défaut, le Shell lit une commande à partir du flux nommé *stdin* (correspondant au clavier), écrit le résultat sur le flux *stdout* (l'écran) et écrit les éventuelles erreurs sur le flux *stderr* (également l'écran). Ces trois flux peuvent être remplacés par un fichier ordinaire ou un fichier spécial (périphérique) grâce au mécanisme de redirections d'entrée/sortie. 
+
+== Syntaxe des commandes
+
+L'utilisation de la ligne de commande impose le respect de certaines règles, sans lesquelles il n'est pas possible d'utiliser correctement le système. 
+
+La manière habituelle de lancer une commande est de taper le nom de la commande suivie des options, puis des arguments selon les principes suivants :  
+
+* La *commande* doit toujours être située en premier dans l'instruction
+* Les options permettent de modifier le comportement par défaut de la commande
+
+Elles sont généralement précédées du signe moins - ou plus + (ou --)
+
+Elles peuvent être séparées par des espaces ou regroupées ensemble.
+
+* Les arguments sont les éléments utiles à la commande, sinon indispensables. Certaines commandes n'ont pas besoin d'arguments, alors que pour d'autres ils seront obligatoires.
+* La commande, les options et les arguments doivent être séparés par un espace
+
+=== Commande Options Arguments
+
+Quelques exemples:
+
+.Commande simple sans option ni argument
+[source,bash]
+----
+who
+----
+
+.Commande avec un argument
+[source,bash]
+----
+ls /etc
+----
+
+.Commande avec une option et un argument
+[source,bash]
+----
+head -n 5 /etc/nsswitch.conf
+----
+
+.Commande avec deux arguments
+[source,bash]
+----
+cp /tmp/fic1 $HOME
+----
+
+.Commande avec quatre options (sans signe + ou -) et un argument d'option
+[source,bash]
+----
+tar xzvf archive.tar.gz 
+----
+
+CAUTION: les systèmes UNIX respectent la casse, il faudra prendre garde à respecter les minuscules et les majuscules. 
 
 image::tssr2023/module-03/historique/04.png[01.png]
 image::tssr2023/module-03/historique/05.png[01.png]

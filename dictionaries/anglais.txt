@@ -9,6 +9,7 @@ Kernighan
 lvextend
 niggurath
 noauto
+nsswitch
 penthium
 Penthium
 shub
