@@ -6,3 +6,43 @@
 * Module suivant -> xref:tssr2023/module-03/shell.adoc[Module 05 - Le Shell]
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
+
+La structure du système de fichiers (FS) est arborescente (imbrication de répertoires), le chemin d'accès à un fichier permet de spécifier la position exacte de ce fichier dans l'arborescence. 
+
+== Les FHS
+
+Le FHS est maintenu par le *Free Standards Group*. Il a été créé à partir de 1993 pour homogénéiser les arborescences des différents UNIX et Linux. Le FHS définit l'arborescence et le contenu des principaux répertoires des systèmes de fichiers des systèmes d'exploitation GNU/Linux et de la plupart des systèmes UNIX. Elle est actuellement maintenue par la Linux Fondation, la dernière version date de juin 2015 et porte le numéro de version 3.0.
+
+Malheureusement, beaucoup de distributions GNU/Linux ne respectent pas à la lettre le standard, même celles développées par des membres du Free Standards Group. De surcroît, plusieurs versions d’UNIX ont conservé une arborescence complètement différente. 
+
+Malgré cela, il est indéniable que le rapprochement des hiérarchies de systèmes de fichiers permet une approche plus simple entre les différents systèmes UNIX ou GNU/Linux et facilite le travail des administrateurs système. 
+[cols="10,~"]
+|===
+^.^h| Répertoire ^.^h| Description
+| /bin | Commandes de base nécessaires au démarrage et à l’utilisation minimale du système pour tous les utilisateurs (peut être un lien symbolique vers /usr/bin). 
+| /boot | Répertoire pour le chargeur d’amorçage et fichiers nécessaires au lancement du noyau. 
+| /dev | Fichiers de périphériques physiques (disque dur, etc.) ou virtuels (/dev/null /dev/zero …). 
+| /etc | Fichiers de configuration du système. C’est l’abréviation de : editable text configuration. 
+| /home | Répertoire d'accueil des utilisateurs. 
+| /lib | Bibliothèques principales utilisées par les commandes de /bin et /sbin (peut être un lien symbolique vers /usr/lib
+| /lost+found | Fichiers récupérés par la commande fsck (pas forcément présent). 
+| /media | Point de montage des périphériques de stockage amovibles (automatique). 
+| /mnt | Point de montage pour les montages temporaires (manuel). 
+| /opt | Répertoire pour l’installation d’applications tierces. 
+| /proc | Système de fichiers virtuel reflétant l’état du noyau et les différents processus.
+| /sys | Système de fichiers virtuel reflétant l’état du matériel. 
+| /root | Répertoire d'accueil de l'utilisateur root. 
+| /sbin | Exécutables système pour les administrateurs (peut être un lien symbolique vers /usr/sbin). 
+| /srv | Données pour les services hébergés par le système (peu utilisé). 
+| /tmp | Fichiers temporaires (il est généralement vidé après un reboot). 
+| /usr 
+a| Acronyme de : UNIX System Ressources. Il contient certains répertoires présents à la racine, mais qui ne sont pas nécessaires au fonctionnement minimal du système. 
+****
+* /usr/bin  : Binaires non indispensables à un système minimal. 
+* /usr/lib : Bibliothèques. 
+* /usr/sbin : Binaires d’administration. 
+* /usr/share : Fichiers indépendants de la plateforme. Exemples : pages man, fonds d’écran,
+* thèmes d’interface, etc... 
+****
+| /var | Fichiers de taille variable (journaux, base de données etc.). 
+|===
