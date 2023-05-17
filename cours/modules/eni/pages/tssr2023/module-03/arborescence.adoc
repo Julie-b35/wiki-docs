@@ -252,6 +252,7 @@ drwxr-xr-x 4 root root       4096 2009-10-30 13:56 perl
 
 Détails des colonnes
 
+[cols="~,~,~,~,~,~,~"]
 |===
 | -rw-r--r-- | 4 | root | root | 4096 | 2009-10-30 13:56 | perl
 | 1          | 2 | 3    | 4     | 5    | 6                | 7
@@ -260,7 +261,3 @@ Détails des colonnes
 | c5-6-7 6.+| le groupe
 | c8-9-10 6.+| et les autres
 |===
-
-****
-
-****
