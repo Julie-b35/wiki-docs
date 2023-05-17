@@ -78,7 +78,7 @@ La commande de déconnexion (fermeture de session) dépend de l'environnement Sh
 
 
 |===
-^.^| Syntaxe : *tty*
+^.^| Syntaxe : `*tty*`
 |===
 
 .Exemple :
@@ -106,7 +106,7 @@ Il existe deux types de terminaux :
 == Logname : Affiche le login de connexion
 
 |===
-^.^| Syntaxe : *logname*
+^.^| Syntaxe : `*logname*`
 |===
 
 Commande simple, pas de paramètre. 
@@ -121,7 +121,7 @@ Tom
 == ID : Affiche les noms et identificateurs groupes et utilisateurs
 
 |===
-^.^| Syntaxe : *id*
+^.^| Syntaxe : `*id*`
 |===
 
 .Exemple : 
@@ -138,4 +138,17 @@ Les informations fournies sont les suivantes :
 * Mon identifiant unique d'utilisateur est le 1062
 * J'ai pour groupe actif le groupe Tom (identifiant unique de groupe 1063)
 * J'appartiens aussi aux groupes secondaires suivants : comptables (identifiant unique de groupe 1064) et direction (identifiant unique de groupe 1065)
+****
+
+== Who : Information sur les utilisateurs connectés
+
+|===
+^.^| Syntaxe : `*who* [options]`
+|===
+
+****
+* `*-H*` -> Heading, affichage de l’entête de colonnes. 
+* `*-q*` -> Liste abrégée avec les noms et le nombre d'utilisateurs. 
+* `*-T*` -> Indique par + ou – s'il est possible d'écrire sur le terminal. 
+* `*-i*` -> Informations complémentaires sur les différentes connexions. 
 ****
