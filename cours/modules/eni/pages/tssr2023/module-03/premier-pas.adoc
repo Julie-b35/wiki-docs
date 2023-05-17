@@ -73,3 +73,68 @@ La commande de déconnexion (fermeture de session) dépend de l'environnement Sh
 * C Shell      `*n%*`     `*logout*`
 * Korn Shell   `*exit*`              `*^d*` 
 * Bash         `*exit*`   `*logout*` `*^d*` 
+
+== TTY : Affiche le nom du terminal
+
+
+|===
+^.^| Syntaxe : *tty*
+|===
+
+.Exemple :
+[source,bash]
+----
+$ tty
+/dev/pts/1
+----
+
+Cet exemple illustre le résultat de la commande initiée par un utilisateur connecté via un client SSH au poste ou un terminal en session graphique : connexion au *second* pseudo terminal (/dev/pts/1). 
+
+On pourra aussi avoir en retour de la commande le résultat suivant pour une connexion à la console du serveur : 
+
+[source,bash]
+----
+$ tty
+/dev/tty1
+----
+
+Il existe deux types de terminaux : 
+
+* *La console* : un accès à un terminal donnant directement un Shell après login (on peut parler d'accès physique à la machine)
+* *Le pseudo-terminal* : accès à un terminal via une application ou un démon (daemon), par exemple : connexion SSH, terminal graphique, etc.)
+
+== Logname : Affiche le login de connexion
+
+|===
+^.^| Syntaxe : *logname*
+|===
+
+Commande simple, pas de paramètre. 
+
+.Exemple : 
+[source,bash]
+----
+$ logname
+Tom
+----
+
+== ID : Affiche les noms et identificateurs groupes et utilisateurs
+
+|===
+^.^| Syntaxe : *id*
+|===
+
+.Exemple : 
+[source,bash]
+----
+$ id
+id=1062(Tom) gid=1063(Tom) groups=1063(Tom),1064(comptables),1065(direction) 
+----
+
+Les informations fournies sont les suivantes : 
+
+* Je suis connecté en tant que Tom
+* Mon identifiant unique d'utilisateur est le 1062
+* J'ai pour groupe actif le groupe Tom (identifiant unique de groupe 1063)
+* J'appartiens aussi aux groupes secondaires suivants : comptables (identifiant unique de groupe 1064) et direction (identifiant unique de groupe 1065)
+

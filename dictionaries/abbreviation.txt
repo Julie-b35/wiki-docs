@@ -2,6 +2,8 @@ APIPA
 CILL
 icence
 LGPO
+logname
+Logname
 mobaxterm
 NTFS
 ublic
