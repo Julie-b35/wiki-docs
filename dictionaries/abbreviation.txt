@@ -9,6 +9,8 @@ Logname
 MMDD
 mobaxterm
 NTFS
+POSIX
+tcsh
 ublic
 vfat
 xzvf

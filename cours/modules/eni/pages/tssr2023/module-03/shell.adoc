@@ -7,4 +7,80 @@
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
 
-content
+== Le shell : Interpréteur de commande
+
+Le Shell est un programme permettant les échanges entre le système Linux et l'utilisateur : c'est un interpréteur de commandes. 
+
+Son utilisation s'étend à la programmation, grâce à la gestion des variables, des boucles, et des flux Entrée / Sortie. 
+
+Plusieurs Shell sont disponibles sur les systèmes GNU/Linux. 
+
+=== Les principaux interpréteurs de commandes
+
+Le Shell considéré le plus ancien est le Bourne Shell (sh), du nom de son créateur Steve Bourne. 
+
+Bill Joy créa quant à lui le C-Shell (csh), incompatible avec le Bourne shell mais permettant le rappel de commandes, le contrôle des tâches et l'utilisation des alias de commandes. 
+
+Plus tard, David Korn repris le Bourne Shell en y incluant les fonctionnalités du C-shell. Ce nouvel interpréteur prendra lui aussi le nom de son créateur en s'appelant le Korn Shell (ksh). C'est le Shell le plus utilisé des systèmes UNIX commerciaux. 
+
+Le projet GNU développera aussi son alternative aux Shell existants avec le Bourne Again Shell (bash), conforme comme le ksh à la norme POSIX en y ajoutant quelques extensions. C'est l'interpréteur de commande fourni en standard sur les distributions Linux. 
+
+Les principales différences : 
+
+* Historique dans csh et ksh 
+* Éditeur de lignes dans ksh 
+* Les syntaxes des boucles diffèrent entre csh, ksh et sh : 
+* csh : while … end 
+* ksh et sh : while … do … done 
+* Goto n'existe qu'en csh 
+* Le mécanisme de substitution des variables ksh est plus élaboré L'arithmétique entière n'existe qu'en csh et ksh 
+* Le mécanisme d'alias (abréviation de commande) n'existe qu'en csh et ksh 
+
+Particularité sur les systèmes d'exploitation AIX, le Bourne Shell s'appelle bsh. 
+
+=== Quel Shell utiliser dans un programme ?
+
+Le Korn Shell et le Bash ont une compatibilité descendante avec le Bourne Shell, aussi, l'écriture d'un script en Bourne Shell assure la meilleure portabilité possible. Il comporte cependant quelques lacunes et certaines fonctionnalités font défaut, c'est pourquoi il est possible de lui préférer le Korn Shell ou le Bash. 
+
+Nous abordons dans ce cours le sh et le bash. Ne serons pas vus le csh, le tcsh, le ash, le dash, ni même le zsh. 
+
+=== Les variables
+
+Les données d’un système peuvent être stockées sur un disque dur ou en mémoire vive. Un disque dur permet de stocker des données sous forme de fichiers. Le Shell permet l’enregistrement de données en mémoire vive sous forme de variables. 
+
+==== Liste les variables déclarées
+
+Pour afficher la liste des variables et leur contenu, on utilise les commandes suivantes : 
+
+[source,bash]
+----
+$ set
+----
+
+Affiche toutes les variables 
+
+[source,bash]
+----
+$ env
+----
+
+Affiche uniquement la liste des variables d’environnement* 
+
+|===
+^.^| * | Les variables et leur gestion sont abordées de manière détaillée en Scripting Shell. 
+|===
+
+==== Quelques variables d'environnement
+
+Il existe beaucoup de variables d'environnement, certaines sont importantes : 
+
+****
+* `HOME`     ->  Répertoire de connexion 
+* `~`        ->  Répertoire de connexion
+* `PATH`     ->  Chemin de recherche des exécutables (séparés par des "`:`")
+* `LOGNAME`  ->  Nom du user de connexion 
+* `MAIL`     ->  Chemin d'accès au fichier boîte aux lettres 
+* `PS1`      ->  Prompt du Shell 
+* `PS2`      ->  Prompt de continuation 
+* `SHELL`    ->  Shell de connexion 
+****
