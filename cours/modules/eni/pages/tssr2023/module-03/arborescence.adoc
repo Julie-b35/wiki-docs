@@ -219,6 +219,31 @@ drwxr-xr-x 2 Tom Tom 4096 2011-01-19 02:22 Procedures
 
 |===
 ^.^| Syntaxe : `*ls* [options] <répertoire(s) ou fichier(s) ou les deux..> `
-|===
+|=== 
 
+****
+* `-a` -> liste de tous les fichiers, y compris les fichiers dont le nom commence par "." répertoires père et courant inclus. 
+* `-A` -> liste de tous les fichiers, y compris les fichiers dont le nom commence par "." sauf les répertoires père et courant. 
+* `-C` -> présentation en colonnes avec tri vertical. 
+* `-d` -> liste les répertoires eux-mêmes et pas leur contenu. 
+* `-F` -> présentation en colonnes avec tri vertical, certains noms sont suivis d'un caractère indiquant le type : `/` pour un répertoire, `*` pour un fichier exécutable et `@` pour un lien symbolique
+* `-i` -> affiche le numéro d'inode. 
+* `-l` -> affichage au format long : type et permissions, nombre de liens physiques, utilisateur propriétaire, groupe propriétaire, taille (en octets) pour un fichier, date de dernière modification et nom du fichier ou répertoire. 
+* `-m` -> présentation sous forme de liste de noms séparés les uns des autres par ",".
+* `-r` -> affichage des noms avec tri inversé. 
+* `-R` -> liste récursive de tous les sous-répertoires. 
+* `-s` -> affiche la taille en blocs des fichiers (1 bloc = 512 octets). 
+* `-t` -> tri par date de dernière modification. 
+* `-u` -> tri par date de dernier accès. 
+* `-x` -> présentation en colonnes avec tri horizontal. 
+* `répertoire` -> nom du répertoire dont on souhaite visualiser le contenu. 
+* `fichier` ->nom du ou des fichiers concernés par la liste. 
+****
 
+La commande `ls` permet de lister les noms (et caractéristiques) d'un fichier ou d'un ensemble de fichiers. Par défaut, les noms de fichiers sont affichés par ordre alphabétique. 
+Les arguments répertoire et fichier peuvent contenir des métacaractères. Si aucun argument n'est spécifié à la commande `ls`, cette commande liste le contenu du répertoire courant. 
+
+[source, shell]
+----
+
+----
