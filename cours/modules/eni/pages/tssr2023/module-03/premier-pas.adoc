@@ -152,3 +152,24 @@ Les informations fournies sont les suivantes :
 * `*-T*` -> Indique par + ou – s'il est possible d'écrire sur le terminal. 
 * `*-i*` -> Informations complémentaires sur les différentes connexions. 
 ****
+
+Sans option, la commande who affiche le nom d'utilisateur, le terminal, la date et heure de connexion. 
+
+.Exemples : 
+[source,bash]
+----
+$ who
+root    tty1      2011-01-30 19:27
+stag03  pts/0     2011-02-01 08:20 (10.27.100.7) 
+stag31  pts/1     2011-02-01 08:51 (10.27.150.152) 
+
+$ who -uH 
+NAME    LINE     TIME             IDLE           PID COMMENT
+root    tty1     2011-01-30 19:27 20:36         4588
+stag03  pts/0    2011-02-01 08:20   .          20857 (10.27.100.7) 
+stag31  pts/1    2011-02-01 08:51   .          21256 (10.27.150.152) 
+
+$ who -q
+root stag03 stag31
+# users=30
+----
