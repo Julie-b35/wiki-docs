@@ -32,6 +32,7 @@
 **** xref:tssr2023/module-03/premier-pas.adoc[]
 **** xref:tssr2023/module-03/shell.adoc[]
 **** xref:tssr2023/module-03/aide.adoc[]
+**** xref:tssr2023/module-03/arborescence.adoc[]
 **** TP
-***** xref:procedures:tp-eni:tssr2023/client-linux/TP01.adoc[TP : Découverte première commande]
+***** xref:procedures:tp-eni:tssr2023/client-linux/TP01.adoc[]
 *** xref:tssr2023/module-04/admin-linux.adoc[]
