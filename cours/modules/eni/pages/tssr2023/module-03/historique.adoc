@@ -184,18 +184,12 @@ cp /tmp/fic1 $HOME
 tar xzvf archive.tar.gz 
 ----
 
-CAUTION: les systèmes UNIX respectent la casse, il faudra prendre garde à respecter les minuscules et les majuscules. 
-
-image::tssr2023/module-03/historique/04.png[01.png]
-image::tssr2023/module-03/historique/05.png[01.png]
-image::tssr2023/module-03/historique/06.png[01.png]
-image::tssr2023/module-03/historique/07.png[01.png]
-
+IMPORTANT: *ATTENTION* : les systèmes UNIX pass:[<u>respectent la casse</u>], il faudra prendre garde à respecter les minuscules et les majuscules. 
 
 == Sources
 
 .source
 [NOTE]
 ====
-* 1 : https://fr.wikipedia.org/wiki/Laboratoires_Bell
+* slides fournis pendant les cours à l'link:https://www.eni-ecole.fr/[ENI]
 ====
