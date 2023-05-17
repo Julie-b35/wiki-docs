@@ -173,3 +173,56 @@ $ who -q
 root stag03 stag31
 # users=30
 ----
+
+== Who am i : Qui suis-je ?
+
+
+|===
+^.^| Syntaxe : `*who am i*`
+|===
+
+.Exemples : 
+[source,bash]
+----
+$ who am i
+Tom    pts/2    2010-12-24 23:02 (10.18.0.254) 
+----
+
+Si ces deux arguments sont fournis à la commande `*who*`, elle n'affiche que les informations relatives à l'utilisateur qui l'invoque. 
+
+== Passwd : changement du mot de passe
+
+|===
+^.^| Syntaxe : `*passwd* [OPTIONS] [LOGIN]`
+|===
+
+Options disponibles pour l'utilisateur
+
+* `-S` -> Permet d'afficher les informations du mot de passe actuel 
+
+Sans option, la commande `passwd` permet de modifier le mot de passe, si le login n'est pas fourni la commande se base sur l'utilisateur courant.
+
+D'autres options existent, mais ne sont disponibles que pour l'administrateur. Elles seront abordées à l’occasion d’un autre module. 
+
+.Exemples : 
+[source,bash]
+----
+$ passwd
+
+Changing password for Tom. 
+(current) UNIX password: 
+Enter new UNIX password: 
+Retype new UNIX password: 
+You must choose a longer password 
+Enter new UNIX password: 
+Retype new UNIX password: 
+passwd: password updated successfully 
+----
+
+Dans l'exemple ci-dessus, le premier mot de passe renseigné par l'utilisateur ne respectait pas les exigences de complexité du système, empêchant sa validation par le système.
+
+Il faut en effet que le mot de passe respecte les exigences suivantes : comporter au moins 7 caractères, ne pas être trop similaire au précédent mot de passe et ne pas être basé sur des mots du dictionnaire. 
+
+|==
+^.^h| # h| La commande `passwd`` en contexte d’administration 
+2.+| La commande passwd peut être utilisée par l’administrateur afin de changer des mots de passe utilisateurs.  
