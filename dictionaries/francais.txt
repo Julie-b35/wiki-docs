@@ -8,6 +8,7 @@ atteinte
 automatique
 automatiquement
 avec
+benoit
 binaire
 cdrom
 CDROM

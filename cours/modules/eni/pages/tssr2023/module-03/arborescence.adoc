@@ -46,3 +46,179 @@ a| Acronyme de : UNIX System Ressources. Il contient certains répertoires prés
 ****
 | /var | Fichiers de taille variable (journaux, base de données etc.). 
 |===
+
+== Chemin absolu vs chemin relatif
+
+Lorsque le chemin commence par le caractère `/`, il est donné depuis la racine : on parle alors de chemin absolu. 
+
+Sinon, le chemin est fourni par rapport au répertoire courant : on parle dans ce cas de chemin relatif. 
+
+Si le chemin d'accès (absolu ou relatif) d’un fichier est composé d'un ou plusieurs répertoires, le caractère / sépare les différents niveaux. 
+
+== Répertoire parent et répertoire courant
+
+Chaque répertoire, en dehors de la racine, contient au minimum deux sous-répertoires particuliers : 
+
+* `..` Le répertoire parent 
+* `.` Le répertoire courant 
+
+Il peut être judicieux, dans certains cas, de remonter dans l'arborescence plutôt que de descendre. Dans ce cas, le nom de chemin contiendra "`..`" pour se positionner dans le répertoire de niveau immédiatement supérieur à celui dans lequel on est positionné. 
+
+== Les types de fichiers
+
+=== Sous Unix, tout est fichier
+
+L'utilisateur perçoit les fichiers comme rangés dans des répertoires, eux-mêmes classés dans d'autres répertoires, cela nous permet d'avoir une vision hiérarchique de l'organisation des fichiers et d'en faciliter la gestion. 
+
+Le système d'exploitation en a, lui, une tout autre vision. Pour lui, un fichier est un ensemble de données écrites sur le support de stockage, sans aucune notion hiérarchique, mais accessible par un inode qui possède des pointeurs vers ses données. 
+
+Pour UNIX, un écran, la souris ou un disque dur sont représentés par des fichiers, tout comme les processus. 
+
+=== Quatre principaux types de fichiers
+
+==== Fichiers ordinaires
+
+Les fichiers ordinaires sont tous, des fichiers dans le sens usuel du terme, ainsi, les textes, les scripts, les commandes sont des fichiers ordinaires.
+
+==== Répertoires
+
+Le répertoire est pour le système un type de fichier particulier, contenant les références permettant d'accéder à des fichiers. 
+
+==== Fichiers spéciaux
+
+Les fichiers spéciaux désignent les périphériques matériels de la machine. 
+
+Ils sont subdivisés en deux parties : 
+
+* Les fichiers spéciaux en mode bloc qui concernent les périphériques de stockage
+* Les fichiers spéciaux en mode caractère ou raw qui eux représentent les périphériques d'entrées/sorties comme le clavier, la souris ou l'écran.
+
+==== Liens symboliques
+
+Un lien symbolique est un fichier spécial qui permet de pointer vers un nom de fichier. Il permet de simplifier les accès aux fichiers et répertoires et à maintenir la compatibilité entre systèmes UNIX. 
+
+== Qu'est-ce qu'un inode ?
+
+Les *inodes* contiennent des informations concernant les fichiers stockés sur les systèmes de fichiers. Ils sont référencés par des numéros.
+
+Lorsqu'un utilisateur tente d'accéder à un fichier, l'inode du fichier est lu. Si les permissions autorisent l'accès au fichier, les données seront accessibles grâce aux pointeurs. 
+
+L'inode contient des informations telles que : 
+
+* L'identifiant de l'utilisateur propriétaire du fichier ; 
+* L'identifiant du groupe propriétaire du fichier ; 
+* Les permissions d'accès au fichier ; 
+* Les dates de dernière modification, de dernier accès et de dernière modification de l'inode ; La taille du fichier ; 
+* Le nombre de liens du fichier (nous y reviendrons) ; 
+* Le type de fichier (ordinaire, répertoire, lien symbolique etc.) ; 
+* Les pointeurs qui permettent d'accéder physiquement aux données du fichier. 
+
+IMPORTANT: *l'inode ne contient pas le nom du fichier *
+
+== Manipuler les fichiers
+
+La gestion des fichiers implique de respecter des règles dans la désignation des fichiers. 
+
+=== Pas de notion d'extension
+
+Les noyaux des systèmes UNIX ne gèrent pas la notion d'extensions de fichier comme Windows. Ainsi, le fait d'appeler un fichier fic.txt ou programme.exe n'indique en rien au système que nous avons à faire à un fichier texte ou à une application. L'utilisation des extensions sera donc uniquement utile à l'utilisateur, pour reconnaître les types de fichiers. 
+
+=== Caractères interdits
+
+Hormis le slash `/` qui est le séparateur dans l'arborescence, il n'y a pas de caractères interdits pour le nommage des fichiers. Il faudra malgré tout prendre garde aux caractères spéciaux qui peuvent être difficiles à manipuler. 
+
+=== Gestion de la classe
+
+Attention à la casse, `fichier.txt`, `Fichier.txt` et `FICHIER.TXT` sont trois fichiers différents. 
+
+=== Les fichiers cachés
+
+Les fichiers qui commencent par un point "`.`" sont considérés comme "cachés" par certaines commandes et par les gestionnaires de fichiers graphiques. Les fichiers de configuration des environnements utilisateurs contiennent souvent de tels fichiers. 
+
+=== Longueur des nomes de fichiers
+
+Les noms de fichiers peuvent atteindre 255 caractères. 
+
+== Pwd : Affiche le chemin du répertoire courant
+
+|===
+^.^| Syntaxe : `*pwd*`
+|===
+
+La commande `pwd` affiche le répertoire courant, c'est-à-dire le répertoire dans lequel l'utilisateur se trouve au moment de l'exécution de la commande. 
+
+C'est une des rares commandes sans option ni argument. 
+
+.Exemple : 
+[source,shell]
+----
+$ pwd 
+/home/benoit 
+----
+
+== CD : Changement de répertoire
+
+|===
+^.^| Syntaxe : `*cd* <chemin>`
+|===
+
+****
+* `Chemin` ->  Le chemin du répertoire dans lequel on veut se positionner. 
+****
+
+Sans indication du chemin, la commande cd permet de se positionner automatiquement dans le répertoire de connexion. 
+
+.Exemples :
+[source,shell]
+----
+$ pwd 
+/home/Tom 
+
+$ cd /var/log 
+$ pwd 
+/var/log
+
+$ cd ../spool 
+$ pwd 
+/var/spool
+
+$ cd
+$ pwd
+/home/Tom 
+
+$ cd -
+$ pwd
+/var/spool
+----
+
+== Mkdir : Création de répertoire
+
+|===
+^.^| Syntaxe : `*mkdir* [options] <monrep>`
+|===
+
+
+****
+* `-m mode` -> valeur numérique permettant de fixer les permissions du répertoire si nécessaire.
+* `-p`      -> Création des répertoires parents inexistants (si monrep est un chemin). 
+* `monrep`  -> Nom du répertoire ou du chemin à créer. 
+****
+
+.Exemple
+[source,shell]
+----
+$ mkdir ./Rennes/Procedures/ 
+mkdir: cannot create directory './Rennes/Procedures/': No such file or directory 
+
+$ mkdir -p ./Rennes/Procedures/ 
+$ ls -l ./Rennes/ 
+drwxr-xr-x 2 Tom Tom 4096 2011-01-19 02:22 Procedures 
+----
+
+== Ls : Liste de fichiers
+
+|===
+^.^| Syntaxe : `*ls* [options] <répertoire(s) ou fichier(s) ou les deux..> `
+|===
+
+

@@ -1,4 +1,5 @@
 Dhhmm
+drwxr
 fich
 firefox
 groff
@@ -11,3 +12,4 @@ HISTFILESIZE
 HISTSIZE
 HISTTIMEFORMAT
 macropaquets
+monrep
