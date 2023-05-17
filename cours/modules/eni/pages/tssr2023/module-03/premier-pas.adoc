@@ -1,7 +1,9 @@
 = Module 02 - Les premiers pas et les premières commandes
 :navtitle: Premier pas & première commandes
 
-== Connexion : 
+== Connexion
+
+=== Connexion : 
 
 Pour se connecter à un système UNIX, un utilisateur doit disposer d'un login auquel est associé un mot de passe. Il existe plusieurs façons de se connecter à un poste Linux : 
 
@@ -13,7 +15,7 @@ Pour se connecter à un système UNIX, un utilisateur doit disposer d'un login a
 
 Une fois authentifié, un prompt sera mis à disposition de l’utilisateur. 
 
-=== Via un terminal texte
+==== Via un terminal texte
 
 Quand un terminal permet la connexion d'un utilisateur, il propose une invite de type : 
 
@@ -41,9 +43,33 @@ clement@shub-niggurath:~$
 
 Si la connexion ne peut être établie (mot de passe incorrect), et après un certain nombre d'essais, le compte utilisateur pourra être verrouillé. Celui-ci devra alors demander à l'administrateur d'intervenir.
 
-=== Via une connexion graphique
+==== Via une connexion graphique
 
 C’est un display manager qui sera en charge de l’authentification (le plus fréquent est actuellement gdm3 ). 
 
 image::tssr2023/module-03/premier-pas/01.png[01.png]
 
+==== Via une connexion ssh
+
+Le protocole SSH est un des protocoles d’administration distante le plus utilisé. 
+
+===== à partir d'un poste windows 10 ou Linux
+
+Il est possible d’utiliser des clients SSH comme putty, kitty, mRemoteNG, mobaxterm ou la commande SSH incluse dans Windows 10. 
+
+----
+Penthium2@viperr:~$ ssh penthium@proxy-eni.local 
+----
+
+===== Considération générale lié à la sécurité
+
+Il est fortement déconseillé de se connecter à distance en utilisant directement le compte d’administration du système (root). 
+
+=== Déconnexion
+
+La commande de déconnexion (fermeture de session) dépend de l'environnement Shell de l'utilisateur. 
+
+* Bourn Shell `*exit*`               `*^d*` (`*^d*` correspond à la combinaison de touche : `*[ctrl]+[d]*`) 
+* C Shell      `*n%*`     `*logout*`
+* Korn Shell   `*exit*`              `*^d*` 
+* Bash         `*exit*`   `*logout*` `*^d*` 

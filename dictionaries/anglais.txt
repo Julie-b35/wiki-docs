@@ -7,6 +7,8 @@ inodes
 lvextend
 niggurath
 noauto
+penthium
+Penthium
 shub
 superblocks
 Sysrep
@@ -14,4 +16,5 @@ TRACEROUTE
 TRACERT
 vgextend
 Vipera
+viperr
 Viperr
