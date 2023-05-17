@@ -4,6 +4,7 @@ debian
 fdisk
 gpedit
 inodes
+Kernighan
 lvextend
 niggurath
 noauto

@@ -5,7 +5,16 @@
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
 
-== Historique
+== Version D'UNIX - Linux
+
+=== Historique
+
+|===
+| *1969* | link:https://fr.wikipedia.org/wiki/Laboratoires_Bell[*Bell Labs*] se retire du projet link:https://fr.wikipedia.org/wiki/Multics[*MULTICS*]. Cependant, son équipe continue ses expérimentations de création d’un système d’exploitation. Dans cette équipe, on trouve trois grands noms de l'histoire d'UNIX : link:https://fr.wikipedia.org/wiki/Ken_Thompson[Ken Thompson], link:https://fr.wikipedia.org/wiki/Dennis_Ritchie[*Dennis Ritchie*] et link:https://fr.wikipedia.org/wiki/Brian_Kernighan[*Brian Kernighan*]. 
+| *1971* | Première version d'link:https://fr.wikipedia.org/wiki/Unix[*UNIX*] sur link:https://en.wikipedia.org/wiki/PDP-11[PDP 11/20] (Digital Equipment Corporation). Matériel qui dispose de 24 Ko de mémoire, dont 16 Ko occupés par le noyau Unix, 8 Ko restant disponibles pour les utilisateurs. Capacité du disque dur : 512 Ko, taille maximale des fichiers 64 Ko. 
+|  |Le langage C est créé par Dennis Ritchie (reprise du langage B écrit par Ken Thompson) 
+|===
+
 
 image::tssr2023/module-03/historique/01.png[01.png]
 image::tssr2023/module-03/historique/02.png[01.png]
@@ -14,3 +23,12 @@ image::tssr2023/module-03/historique/04.png[01.png]
 image::tssr2023/module-03/historique/05.png[01.png]
 image::tssr2023/module-03/historique/06.png[01.png]
 image::tssr2023/module-03/historique/07.png[01.png]
+
+
+== Sources
+
+.source
+[NOTE]
+====
+* 1 : https://fr.wikipedia.org/wiki/Laboratoires_Bell
+====
