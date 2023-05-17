@@ -38,7 +38,7 @@ journalctl --facility=auth,authpriv --grep="session o" > /adm/session.txt
 + *.warn                          /adm/logs/warnings.log
 ----
 
-Une fois la modification fichier fichier */etc/rsyslog.conf* redémarré le service journald
+Une fois la modification fichier fichier */etc/rsyslog.conf* redémarré le service rsyslog
 
 
 

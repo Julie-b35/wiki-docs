@@ -1,6 +1,11 @@
 = Module 02 - Les premiers pas et les premières commandes
 :navtitle: Premier pas & première commandes
 
+* Module précédent -> xref:tssr2023/module-03/historique.adoc[Module 01 - Histoire sur Linux]
+* Module suivant -> xref:tssr2023/module-03/shell.adoc[Module 03 - Le Shell]
+
+Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
+
 == Connexion
 
 === Connexion : 
@@ -280,3 +285,28 @@ Il est 23h15.
 2.+| La commande date peut être utilisée par l’administrateur afin de modifier la date et l'heure du serveur.  
 |===
 
+== Cal: Génération de calendrier
+
+|===
+^.^| Syntaxe : `*cal* <mois> <année>`
+|===
+
+****
+* `mois`    -> Numéro du mois
+* `année`   -> Numéro de l'année, siècle inclus
+****
+
+Sans argument, la commande génère le calendrier du mois courant. 
+
+[source,bash]
+----
+$ cal 05 2021
+      Mai 2021
+di lu ma me je ve sa
+                   1
+ 2  3  4  5  6  7  8
+ 9 10 11 12 13 14 15
+16 17 18 19 20 21 22
+23 24 25 26 27 28 29
+30 31
+----
