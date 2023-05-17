@@ -331,3 +331,67 @@ drwxr-xr-x 4 root root       4096 2009-10-30 13:56 perl
 Si les systèmes Windows ou Netware s'appuient sur un attribut "archive" pour réaliser des sauvegardes différentielles ou incrémentales, les systèmes UNIX ne possèdent pas d'attribut permettant de savoir si un fichier doit être sauvegardé ou non. 
 
 Pour cela on utilise en général la date de dernière modification du fichier. Lors d'une sauvegarde complète ou incrémentale, il suffit d'utiliser un fichier de référence horodaté à une date voulue, et d'effectuer la sauvegarde des fichiers en fonction de la date de référence. 
+
+La commande `touch` crée un fichier lorsque le fichier mentionné n'existe pas, ce qui est très pratique pour réaliser des exercices sur des fichiers
+
+Nous ne rentrerons pas dans le détail de la commande `touch`, car la principale utilisation que nous en aurons est celle permettant la création de fichiers vides. 
+
+Cette commande change la date de modification du fichier ou crée le fichier (vide) s'il n'existe pas : 
+
+[source,shell]
+----
+$ touch test.fic 
+----
+
+À noter que la date de dernier accès, ainsi que la date de changement de l'inode sont également modifiées lors d'une modification du contenu du fichier. 
+
+Vérifier les changements : 
+
+[source,shell]
+----
+$ ls -l test.fic 
+----
+
+Une autre commande, plus riche, mais pas toujours présente : 
+
+[source,shell]
+----
+$ stat test.fic  
+----
+
+== Cp : Copie de fichiers
+
+|===
+^.^| Syntaxe : `*cp* [options] <fichier_source> <fichier_cible ou répertoire cible>`
+^.^| `*cp* [options] <fichiers_sources> <répertoire_source>… <répertoire_cible> `
+|=== 
+
+Si la commande possède une seule source et qu’il s’agit d’un fichier ordinaire, alors la cible peut être un fichier ou un répertoire. 
+
+Si la commande référence plusieurs sources (fichiers ou répertoire), alors la cible ne peut être qu’un répertoire. 
+
+Les noms de fichiers et répertoires peuvent être des chemins absolus ou relatifs. 
+
+.Exemples : 
+[source,shell]
+----
+$ ls -l 
+-rw-r--r-- 1 Tom Tom 78 2011-05-08 00:26 tel_2005.txt
+
+$ cp tel_2005.txt tel_2010.txt 
+$ ls -l 
+-rw-r--r-- 1 Tom Tom 78 2011-05-08 00:26 tel_2005.txt
+-rw-r--r-- 1 Tom Tom 78 2011-05-08 05:04 tel_2010.txt
+
+$ cp tel_2005.txt tel_2010.txt /data/listings/tel/ 
+$ ls -l /data/listings/tel 
+-rw-r--r-- 1 Tom Tom 78 2011-05-14 00:26 tel_2005.txt
+-rw-r--r-- 1 Tom Tom 78 2011-05-14 05:04 tel_2010.txt
+----
+
+
+== Rm : Suppression de fichiers ou de répertoires
+
+|===
+^.^| Syntaxe : `*ls* [options] <répertoire(s) ou fichier(s) ou les deux..> `
+|=== 
