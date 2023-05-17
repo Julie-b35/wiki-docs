@@ -27,7 +27,7 @@ Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
 | *1983* | Création du link:https://en.wikipedia.org/wiki/GNU_Project[*projet GNU*]
 
 .2+| *1991* | Naissance du link:https://en.wikipedia.org/wiki/Linux_kernel[*noyau Linux (version 0.02)*] et distribution sur les premiers serveurs FTP 
-| Le noyau Linux à été conçue par link:https://en.wikipedia.org/wiki/Linus_Torvalds[_Linus Torvalds_]
+| Le noyau Linux à été conçue par link:https://en.wikipedia.org/wiki/Linus_Torvalds[_Linus Torvalds_].
 
 | *1996* | Sortie de l'environnement de bureau KDE 
 
@@ -51,8 +51,68 @@ Votre formateur mettra à votre disposition une timeline des distributions GNU/L
 .timeline Distribution Linux
 image::{var-imageTimelineDistributionLinux}[timelineDistributionLinux, 63, 240, link={var-imageTimelineDistributionLinux}]
 
+== Les Licences Libres
 
+=== GNU
+
+En 1984, link:https://fr.wikipedia.org/wiki/Richard_Stallman[*Richard Matthew Stallman*] ou *rms*, chercheur au laboratoire d'intelligence artificielle du MIT (Massachusetts Institute of Technology), lance le mouvement pour le développement de logiciels libres de droit. 
+
+Le projet consistait à réécrire complètement un système d'exploitation libre en se basant sur UNIX. Son nom est GNU (GNU's Not UNIX). Un grand nombre d'applications UNIX ont donc été totalement réécrites "from scratch". Le gros problème étant que le développement d'un noyau libre (nommé Hurd) fut bien plus long à mener que les outils système. 
+Il faudra attendre 1991 et l'arrivée du noyau *Linux* créé par link:https://en.wikipedia.org/wiki/Linus_Torvalds[*Linus Torvalds*] pour compléter ce qui deviendra GNU/Linux
+
+=== FSF
+
+En 1985, la link:https://fr.wikipedia.org/wiki/Free_Software_Foundation[*Free Software Foundation*], association à but non lucratif, est fondée par *rms*. Sa mission première était d’assurer le financement des logiciels libres avec notamment le *projet GNU*. Ses objectifs sont maintenant plus généraux avec la promotion des logiciels libres et la défense de leurs utilisateurs. 
+
+Pour Richard Stallman, le mot « *libre* » se rapporte à la liberté et non au prix. Ce qu’il résume souvent par la phrase : « Free as in free speech, not as in free beer ». 
+
+=== Copyleft et GPL
+
+La licence GNU GPL ou *GPL* (**G**eneral **P**ublic **L**icence) permet de protéger les logiciels libres afin d'éviter la mise en place d'un copyright sur le code source d'un logiciel.  
+
+Le terme (et le logo) *Copyleft* ou « gauche d’auteur » est également employé pour définir ce type de licence et les licences respectant les mêmes principes.  
+
+Elle a pour objectif de garantir quatre « libertés » pour les logiciels : 
+
+1. La liberté d'exécuter le logiciel, pour n'importe quel usage ;
+2. La liberté d'étudier le fonctionnement d'un programme et de l'adapter à ses besoins, ce qui passe par l'accès aux codes sources ;
+3. La liberté de redistribuer des copies ;
+4. L'obligation de faire bénéficier à la communauté les versions modifiées.
+
+L'acronyme GPL est parfois défini comme : « Guaranteed Public for Life ». Cette licence est actuellement en version 3. 
+
+=== Et les autres ?
+
+Il existe un très grand nombre de licences acceptées par les distributions respectant les bases de la licence libre : Apache, BSD, CeCILL, Creative Commons, WTFPL, … 
+
+Vous pourrez trouver une liste d'exemples utilisés par la distribution Fedora sur ce site : 
+
+https://fedoraproject.org/wiki/Licensing:Main?rd=Licensing#SoftwareLicenses 
+
+
+== Qu'est-ce qu'un système d'exploitation ?
+
+=== Généralité
+
+Un système d'exploitation est un programme ou un ensemble de programmes qui est chargé de gérer les ressources matérielles (périphériques, mémoires…) d'un ordinateur et de les mettre à disposition des utilisateurs. 
+
+Quelques exemples : 
+
+* Systèmes propriétaires:
+** GCOS (Bull)
+** MPE (HP)
+** OS400 (IBM)
+* Système ouvert mono poste, mono tâche (micro)
+** DOS
+* Système ouvert multi-poste, multi-tâche, multi-plateforme
+** UNIX, GNU/Linux, Windows, OS-X
+
+=== Composantes
+
+.différente couche d'un OS
 image::tssr2023/module-03/historique/03.png[01.png]
+
+
 image::tssr2023/module-03/historique/04.png[01.png]
 image::tssr2023/module-03/historique/05.png[01.png]
 image::tssr2023/module-03/historique/06.png[01.png]

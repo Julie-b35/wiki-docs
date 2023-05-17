@@ -1,5 +1,8 @@
 APIPA
+CILL
+icence
 LGPO
 mobaxterm
 NTFS
+ublic
 vfat

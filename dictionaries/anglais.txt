@@ -1,6 +1,7 @@
 autofetch
 blkid
 debian
+eneral
 fdisk
 gpedit
 inodes
