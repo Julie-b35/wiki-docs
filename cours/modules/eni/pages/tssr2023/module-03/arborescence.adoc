@@ -253,7 +253,7 @@ drwxr-xr-x 4 root root       4096 2009-10-30 13:56 perl
 
 [cols="~,~,~,~,~,~,~"]
 |===
-7.+^.^h| Décortication des colonnes
+7.+^.^h| Décortication retour commande ci-dessus
 ^.^a| 
 [frame=none, grid=none]
 !===
