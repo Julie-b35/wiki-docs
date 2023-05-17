@@ -245,5 +245,9 @@ Les arguments répertoire et fichier peuvent contenir des métacaractères. Si a
 
 [source, shell]
 ----
-
+# ls -l /etc 
+-rw-r--r-- 1 root root       1467 2010-02-25 23:55 passwd 
+drwxr-xr-x 4 root root       4096 2009-10-30 13:56 perl 
 ----
+
+Détails des colonnes
