@@ -37,6 +37,7 @@ Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
 |===
 
 
+image::https://upload.wikimedia.org/wikipedia/commons/7/77/Unix_history-simple.svg[history,640,418]
 
 image::tssr2023/module-03/historique/02.png[link:https://upload.wikimedia.org/wikipedia/commons/7/77/Unix_history-simple.svg]
 image::tssr2023/module-03/historique/03.png[01.png]
