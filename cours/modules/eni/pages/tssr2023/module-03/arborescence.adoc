@@ -250,11 +250,33 @@ Les arguments répertoire et fichier peuvent contenir des métacaractères. Si a
 drwxr-xr-x 4 root root       4096 2009-10-30 13:56 perl 
 ----
 
-Détails des colonnes
+
+[cols="~,~,~,~,~,~,~"]
+|===
+7.+^.^h| Détails des colonnes
+^.^a| 
+[frame=none, grid=none]
+!===
+^.^! -rw-r--r-- 
+^.^a! 
+[frame=none, grid=none, cols="^.^,^.^, ^.^, ^.^"]
+:===
+ - : rw- : rw- : rw-
+ c1(-) : c2(rw-) : c3(rw-) : c4(rw-)
+:===
+!===
+^.^| 4 ^.^| root ^.^| root ^.^| 4096 ^.^| 2009-10-30 13:56 ^.^| perl
+^.^| 1          ^.^| 2 ^.^| 3    ^.^| 4     ^.^| 5    ^.^| 6            ^.^| 7
+|===
+
+
 
 [cols="2,~"]
 |===
-.1+^.^| 1 a| 
+
+2.+^.^h| Détails des colonnes
+
+.2+^.^h| 1 a| 
 [cols="~,~,~,~,~,~,~", frame=none]
 !===
 ^.^! -rw-r--r-- ^.^! 4 ^.^! root ^.^! root ^.^! 4096 ^.^! 2009-10-30 13:56 ^.^! perl
