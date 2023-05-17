@@ -84,3 +84,109 @@ Il existe beaucoup de variables d'environnement, certaines sont importantes :
 * `PS2`      ->  Prompt de continuation 
 * `SHELL`    ->  Shell de connexion 
 ****
+
+== Le rappel de commandes, historique, autocompletion
+
+Les facilités offertes par le rappel des commandes et l'autocomplétion dans un Shell telles que le Bash lui procurent un rendement très intéressant, à tel point qu'il est bien souvent plus efficace de se déplacer et d'exécuter des commandes dans un terminal plutôt que par le biais d'une interface graphique. 
+
+=== Historique et rappel de commandes
+
+****
+* `↑`       -> Rappeler les commandes précédentes, on peut remonter dans tout l'historique des commandes 
+* `↓`       -> Rechercher dans l'ordre inverse 
+* `!!`      -> Rappeler la dernière commande exécutée 
+* `!com`    -> Rappeler la dernière commande exécutée commençant par la chaîne "com"
+* `!?fich`  -> Rappeler la dernière commande exécutée contenant la chaîne "fich" 
+* `history` -> Afficher les commandes mémorisées 
+* `!287`    -> Rappelle la commande numérotée 287 
+****
+
+Avec l’expérience et l’usage répété de la ligne de commandes, on constatera que le rappel de commandes reste disponible pour les utilisateurs et ce même après avoir fermé sa session ou redémarré l'ordinateur. Cela signifie donc que les commandes déjà saisies sont conservées dans un fichier. Quel est-il ? Combien de commandes sont mémorisées ? Quels sont les paramètres passés au rappel de commande ? 
+
+Les réponses se trouvent dans des variables : 
+****
+* `HISTCMD`           -> Contient le dernier numéro de commande utilisée 
+* `HISTFILE`          -> Chemin et nom du fichier de rappel 
+* `HISTFILESIZE`      -> Taille du nombre de rappels possibles 
+* `HISTSIZE`          -> Taille du nombre de commandes en mémoire 
+* `HISTCONTROL`       -> Liste des options au rappel de commandes 
+* `HISTTIMEFORMAT`    -> N'est généralement pas présente par défaut, il permet d'horodater les commandes saisies. 
+****
+
+On pourra par exemple pour le compte root, par mesure de sécurité, ajouter dans le fichier `.bashrc` la déclaration de la variable comme ceci : 
+
+`export HISTTIMEFORMAT="%Y/%m/%d @ %T"`
+
+=== Autocomplétion
+
+Le Bash permet la complétion automatique, c'est-à-dire l'incrémentation automatique des noms lors de la frappe. L'autocomplétion est activée en pressant une ou deux fois la touche `[Tabulation]`. 
+
+L'autocomplétion agit sur plusieurs niveaux : 
+
+==== Les chemins d'accès
+
+L'autocomplétion est très utilisée pour les chemins d'accès. 
+
+.Exemple : 
+[source,shell]
+----
+$ ls /e 
+----
+
+Suivi de la touche `[Tabulation]`, le chemin /etc se verra automatiquement complété : 
+
+[source,shell]
+----
+$ ls /etc
+----
+
+Si l'autocomplétion n'agit pas, c'est que les premiers caractères saisis offrent plusieurs possibilités. En appuyant sur la touche `[Tabulation]` deux fois de suite, cela affichera les différentes options possibles. 
+
+Ainsi, la commande suivante 
+
+[source,shell]
+----
+$ ls /etc/h 
+----
+
+Suivie d'une double frappe sur la touche `[Tabulation]` pourra donner ceci : 
+
+[source,shell]
+----
+hdparm.conf host.conf hostname hosts hosts.allow hosts.deny   
+----
+
+==== Les commandes
+
+Les commandes bénéficient également de l'autocomplétion : 
+
+[source,shell]
+----
+fir 
+----
+
+Suivi de la touche `[Tabulation]` donnera : 
+
+
+[source,shell]
+----
+firefox 
+----
+
+==== Les variables
+
+Même chose pour les variables : 
+
+[source,shell]
+----
+echo $LO 
+----
+
+Ce qui donnera : 
+
+[source,shell]
+----
+echo $LOGNAME 
+----
+
+NOTE: Certains environnements étendent l'autocomplétion encore plus loin, par exemple aux pages de man ou aux options sur certaines commandes. 
