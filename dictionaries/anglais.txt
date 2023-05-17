@@ -1,3 +1,4 @@
+authpriv
 autofetch
 blkid
 debian

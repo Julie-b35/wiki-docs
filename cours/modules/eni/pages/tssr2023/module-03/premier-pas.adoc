@@ -249,18 +249,34 @@ Il faut en effet que le mot de passe respecte les exigences suivantes : comporte
 * `%b`    -> nom du mois abrégé
 * `%B`    -> nom du mois
 * `%d`    -> numéro du jour (01 à 31)
-* `%D`    ->
-* `%j`    ->
-* `%m`    ->
-* `%U`    ->
-* `%w`    ->
-* `%y`    ->
-* `%Y`    ->
-* `%H`    ->
-* `%I`    ->
-* `%M`    ->
-* `%S`    ->
-* `%T`    ->
-* `%n`    ->
-* `%t`    ->
+* `%D`    -> date sous forme mm/dd/yy
+* `%j`    -> numéro du jour dans l'année
+* `%m`    -> numéro du mois
+* `%U`    -> numéro de la semaine
+* `%w`    -> numéro du jour dans la semaine (0 = dimanche)
+* `%y`    -> année sur 2 chiffres
+* `%Y`    -> année sur 4 chiffres (siècles inclus)
+* `%H`    -> heure de 00 à 23
+* `%I`    -> heure de 01 à 12
+* `%M`    -> minutes de 00 à 59
+* `%S`    -> secondes de 00 à 59
+* `%T`    -> heure (24) sous forme HH:MM:SS
+* `%n`    -> insertion nouvelle ligne
+* `%t`    -> insertion tabulation
 ****
+
+Si aucun argument n'est passé à la commande `date`, un simple affichage est effectué. 
+
+[source,bash]
+----
+$ date "+%nBonjour, nous sommes le %A %d %B %Y.%nIl est %Hh%M.%n" 
+
+Bonjour, nous sommes le jeudi 24 décembre 2020. 
+Il est 23h15. 
+----
+
+|===
+^.^h| # h| La commande `date`` en contexte d’administration 
+2.+| La commande date peut être utilisée par l’administrateur afin de modifier la date et l'heure du serveur.  
+|===
+

@@ -14,7 +14,7 @@ Analyser les journaux et configurer le service rsyslog
 [source,bash]
 ----
 mkdir /adm
-journalctl  --grep="login" > /adm/session.txt
+journalctl --facility=auth,authpriv --grep="session o" > /adm/session.txt
 ----
 
 2)	Rechercher dans les journaux des informations sur le disque sda (dont le nombre de secteurs et la taille du disque)
