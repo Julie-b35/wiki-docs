@@ -15,6 +15,7 @@ superblocks
 Sysrep
 TRACEROUTE
 TRACERT
+UUCP
 vgextend
 Vipera
 viperr
