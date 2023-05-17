@@ -41,3 +41,9 @@ echo "- - -" > /sys/class/scsi_host/host2/scan
 == Montage
 
 * *mount*
+
+* *pcd-dss* : https://www.google.com/search?q=pci-dss&rlz=1C1GCEJ_enFR1052FR1052&oq=pci-dss&aqs=chrome..69i57j0i512l7j0i30l2.2887j0j4&sourceid=chrome&ie=UTF-8
+
+== log
+
+emerg, alert, crit, err, warning, notice, info, debug.

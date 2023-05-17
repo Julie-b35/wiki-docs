@@ -1,0 +1,70 @@
+= TP 11 (Gestion de la journalisation )
+:navtitle: Gestion journalisation 
+
+== Objectifs
+
+Analyser les journaux et configurer le service rsyslog 
+
+== Principales tâches à réaliser 
+
+=== I. pass:[<u>Recherche d’informations :</u>] sur le serveur sans environnement graphique
+
+1)	Trouver dans les journaux les différentes ouvertures de sessions Les reporter dans un fichier /adm/sessions.txt
+
+[source,bash]
+----
+mkdir /adm
+journalctl  --grep="login" > /adm/session.txt
+----
+
+2)	Rechercher dans les journaux des informations sur le disque sda (dont le nombre de secteurs et la taille du disque)
+
+
+[source,bash]
+----
+ journalctl  --facility=kern --grep="sda" > /adm/sda.txt
+----
+
+=== II.	pass:[<u>Configuration de rsyslog :</u>] sur le serveur sans environnement graphique
+* 1)	Activer la journalisation pour le service cron
+* 2)	Stocker les informations relatives au démon cron dans le fichier /adm/logs/cron.log
+* 3)	Définir comme fichier contenant tous les évènements d'avertissement /adm/logs/warnings.log
+
+./etc/rsyslog.conf
+[source,diff]
+----
++ # Personnalisation Rsyslog
++ cron.*                          /adm/logs/cron.log
++ *.warn                          /adm/logs/warnings.log
+----
+
+Une fois la modification fichier fichier */etc/rsyslog.conf* redémarré le service journald
+
+
+
+[NOTICE]
+====
+Pour générer des messages de type avertissement : 
+
+* Monter un ISO via le lecteur DVD dans la VM
+* Accéder au contenu de l’ISO monté (s’y positionner, accéder aux fichiers, …)
+* Déconnecter l’ISO via l’interface de gestion du matériel VMware
+* Continuer à accéder à l’ISO dans la VM : des messages devraient apparaître
+====
+
+
+=== BONUS : Rotation des journaux 
+
+Retrouver les fichiers de configuration définissant la rotation des journaux (indice = logrotate). 
+
+Déterminer à quelle fréquence et pendant combien de temps le journal messages et le journal utilisé par la commande last sont archivés. 
+
+
+Pour le journal message : 
+
+* La rotation s'effectue chaque semaine et conserve un maximum de 4 rotation sois 4 semaine.
+
+Pour le journal wtmp :
+
+* La commande Last utilise le journal /var/log/wtmp
+* sa rotation s’effectue chaque mois et concerne 1 seule rotation.

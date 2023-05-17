@@ -5,6 +5,7 @@ eneral
 fdisk
 gpedit
 inodes
+journalctl
 Kernighan
 lvextend
 niggurath
@@ -12,6 +13,7 @@ noauto
 nsswitch
 penthium
 Penthium
+rsyslog
 shub
 superblocks
 Sysrep
@@ -22,3 +24,4 @@ vgextend
 Vipera
 viperr
 Viperr
+wtmp

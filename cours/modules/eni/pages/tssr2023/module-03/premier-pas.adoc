@@ -230,12 +230,37 @@ Il faut en effet que le mot de passe respecte les exigences suivantes : comporte
 
 == Date : Affichage de la date et heure
 
+[grid=none]
 |===
 ^.^| Syntaxe : `*date* [OPTIONS]... <+FORMAT>`
-date [ -u | --utc] [ *MMDDhhmm* [ [ CC] YY ] [ .ss ] ]
+|date [ -u \| --utc] [ *MMDDhhmm* [ [ CC] YY ] [ .ss ] ]
 |===
 
 ****
-`MMDD` -> Numéro du mois et du jour
-`hhmm` -> Heures et minutes
+* `MMDD`    -> Numéro du mois et du jour
+* `hhmm`    -> Heures et minutes
+* `cc yy`   -> Numéro du siècle et de l'année
+* `+format` -> Format de visualisation de la date, composé de texte et de différents paramètres identifiés par le caractère `%`
+****
+
+****
+* `%a`    -> nom du jour abrégé
+* `%A`    -> nom du jour
+* `%b`    -> nom du mois abrégé
+* `%B`    -> nom du mois
+* `%d`    -> numéro du jour (01 à 31)
+* `%D`    ->
+* `%j`    ->
+* `%m`    ->
+* `%U`    ->
+* `%w`    ->
+* `%y`    ->
+* `%Y`    ->
+* `%H`    ->
+* `%I`    ->
+* `%M`    ->
+* `%S`    ->
+* `%T`    ->
+* `%n`    ->
+* `%t`    ->
 ****
