@@ -36,9 +36,21 @@ Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
 2.+| La suite est un enchaînement de nouvelles versions des différents systèmes UNIX et Linux. 
 |===
 
-:var-link-UnixHistory: https://upload.wikimedia.org/wikipedia/commons/7/77/Unix_history-simple.svg
+.Historique Unix
+:var-imageUnixHistory: https://upload.wikimedia.org/wikipedia/commons/7/77/Unix_history-simple.svg
 
-image::{var-link-UnixHistory}[history,640,418, link={var-link-UnixHistory}]
+image::{var-imageUnixHistory}[history,640,418, link={var-imageUnixHistory}]
+
+=== Et Linux dans tout ça ?
+
+Votre formateur mettra à votre disposition une timeline des distributions GNU/Linux. Celle-ci étant trop grande, il est impossible de la placer dans cet ouvrage. En effet il y a plus de 500 distributions GNU/Linux listées. 
+
+
+:var-imageTimelineDistributionLinux: https://upload.wikimedia.org/wikipedia/commons/1/1b/Linux_Distribution_Timeline.svg
+
+.timeline Distribution Linux
+image::{var-imageTimelineDistributionLinux}[timelineDistributionLinux, 63, 240, link={var-imageTimelineDistributionLinux}]
+
 
 image::tssr2023/module-03/historique/03.png[01.png]
 image::tssr2023/module-03/historique/04.png[01.png]
