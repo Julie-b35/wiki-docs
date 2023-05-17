@@ -223,6 +223,19 @@ Dans l'exemple ci-dessus, le premier mot de passe renseigné par l'utilisateur n
 
 Il faut en effet que le mot de passe respecte les exigences suivantes : comporter au moins 7 caractères, ne pas être trop similaire au précédent mot de passe et ne pas être basé sur des mots du dictionnaire. 
 
-|==
+|===
 ^.^h| # h| La commande `passwd`` en contexte d’administration 
 2.+| La commande passwd peut être utilisée par l’administrateur afin de changer des mots de passe utilisateurs.  
+|===
+
+== Date : Affichage de la date et heure
+
+|===
+^.^| Syntaxe : `*date* [OPTIONS]... <+FORMAT>`
+date [ -u | --utc] [ *MMDDhhmm* [ [ CC] YY ] [ .ss ] ]
+|===
+
+****
+`MMDD` -> Numéro du mois et du jour
+`hhmm` -> Heures et minutes
+****

@@ -1,9 +1,12 @@
 APIPA
 CILL
+Dhhmm
+hhmm
 icence
 LGPO
 logname
 Logname
+MMDD
 mobaxterm
 NTFS
 ublic
