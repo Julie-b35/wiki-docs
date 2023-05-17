@@ -250,27 +250,40 @@ Les arguments répertoire et fichier peuvent contenir des métacaractères. Si a
 drwxr-xr-x 4 root root       4096 2009-10-30 13:56 perl 
 ----
 
-
+// Tableau 1
 [cols="~,~,~,~,~,~,~"]
 |===
+//Tab 1 : ligne 1 (fusion d'une cellule sur l'ensemble de la ligne)
 7.+^.^h| Décortication retour commande ci-dessus
+//Tab 1 : ligne 2 chaque cellule centré horizontalement et verticalement
+^.^| 1          ^.^| 2 ^.^| 3    ^.^| 4     ^.^| 5    ^.^| 6            ^.^| 7
+//Tab 1Ligne 3 : colonne 1 (la cellule contient un tableau)
 ^.^a| 
+//Tableau 1.1
 [frame=none, grid=none]
 !===
+//Tab 1.1 : ligne 1
 ^.^! -rw-r--r-- 
+// Tab 1.1 : ligne 2 contient de nouveau un tableau
 ^.^a! 
+// Tableau 1.1.1 (4 colonnes, 2 lignes)
 [frame=none, grid=none, cols="^.^,^.^, ^.^, ^.^"]
 :===
+// Tab 1.1.1 : ligne 1
  - : rw- : rw- : rw-
+// Tab 1.1.1 : ligne 2
  c1(-) : c2(rw-) : c3(rw-) : c4(rw-)
 :===
+// Fin tableau 1.1.1
 !===
+// Fin tableau 1.1
+//Tab 1 : Ligne 3 : colonne 2 à 7
 ^.^| 4 ^.^| root ^.^| root ^.^| 4096 ^.^| 2009-10-30 13:56 ^.^| perl
-^.^| 1          ^.^| 2 ^.^| 3    ^.^| 4     ^.^| 5    ^.^| 6            ^.^| 7
 |===
+// Fin tableau 1
 
 
-
+// Tableau 2
 [cols="^.^2h,~"]
 |===
 2.+^.^h| Détails des colonnes
@@ -301,5 +314,20 @@ drwxr-xr-x 4 root root       4096 2009-10-30 13:56 perl
 * `x`   -> droit d'exécution troisième position 
 ****
 !===
-| 2 |
+| 2 | Nombre de liens physiques pour un fichier, nombre de sous-répertoires (+ 2) pour un répertoire
+| 3 | Nom de l’utilisateur propriétaire 
+| 4 | Nom du groupe propriétaire 
+| 5 | Taille en octets pour un fichier 
+| 6 | Heure et/ou date de dernière modification 
+| 7 | Nom du fichier ou du répertoire 
 |===
+
+== Touch : Créer ou modifier l'horodatage de fichiers
+
+|===
+^.^| Syntaxe : `*touch* [options] <fichier> `
+|=== 
+
+Si les systèmes Windows ou Netware s'appuient sur un attribut "archive" pour réaliser des sauvegardes différentielles ou incrémentales, les systèmes UNIX ne possèdent pas d'attribut permettant de savoir si un fichier doit être sauvegardé ou non. 
+
+Pour cela on utilise en général la date de dernière modification du fichier. Lors d'une sauvegarde complète ou incrémentale, il suffit d'utiliser un fichier de référence horodaté à une date voulue, et d'effectuer la sauvegarde des fichiers en fonction de la date de référence. 

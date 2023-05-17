@@ -9,6 +9,7 @@ inodes
 journalctl
 Kernighan
 lvextend
+Netware
 niggurath
 noauto
 nsswitch
