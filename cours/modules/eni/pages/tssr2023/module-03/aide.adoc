@@ -89,4 +89,4 @@ Il est parfois plus utile de lire les pages du man en anglais. Pour ce faire il 
 
 == TP
 
-Réalisation du TP N° 1 : [Découverte première commande]
+Réalisation du TP N° 1 : xref:procedures:tp-eni:tssr2023/client-linux/TP01.adoc[Découverte première commande]
