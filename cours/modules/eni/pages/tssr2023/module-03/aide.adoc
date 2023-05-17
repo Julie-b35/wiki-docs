@@ -6,3 +6,87 @@
 * Module suivant -> xref:tssr2023/module-03/shell.adoc[Module 05 - Le Shell]
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
+
+Les commandes UNIX peuvent comporter un grand nombre d'options qui ne sont, de plus, pas toujours faciles à comprendre. Il est donc très important sur les systèmes UNIX d'accéder à de la documentation aisément. 
+
+== Localement
+
+La commande `man` est le premier outil utilisé pour obtenir de l'aide. Même les administrateurs les plus chevronnés utilisent souvent cette véritable mine d'or. 
+Les outils en ligne de commande possèdent généralement des options permettant d'afficher une aide rapide. Généralement, c’est l'option `–-help`. 
+
+[source,shell]
+----
+$ passwd --help 
+----
+
+Les outils graphiques quant à eux possèdent en général leur documentation, en passant par le menu Aide ou en appuyant sur la touche `F1`.
+
+== Sur Internet
+
+Les distributions Linux bénéficient de l'activité des nombreuses communautés d'utilisateurs, et la consultation des sites des éditeurs est souvent très riche d'enseignements. Les forums permettent de résoudre nombre de questions techniques et les tutoriels permettent d'en savoir plus sur un sujet donné. 
+
+IMPORTANT: Attention : il est important d'analyser profondément les informations trouvées sur internet. Et de les adapter le cas échéant. Il n'est pas rare que les informations trouvées sur internet contiennent des erreurs ou soient obsolètes. Les documentations officielles voire les pages man sont généralement plus complètes. 
+
+== Man
+
+La commande `man` permet d'accéder rapidement à l'aide en ligne. Il est cependant bien souvent nécessaire de maîtriser la langue de Shakespeare, car les pages de man sont rarement ou imparfaitement traduites. Les distributions GNU/Linux sont en général mieux loties sur ce plan grâce aux nombreuses communautés qui fournissent quotidiennement un effort de traduction. Il faudra cependant toujours prendre garde aux traductions imparfaites qui peuvent altérer le texte original. 
+
+Les pages de man sont scindées en différentes sections. Si aucune section n'est invoquée, `man` recherchera dans les sections selon un ordre prédéterminé, et s'arrêtera dès qu'une occurrence sera trouvée. Si une section est passée en option, la recherche se fera uniquement dans la section trouvée 
+
+Liste des sections : 
+
+* 1 -> Programmes exécutables ou commandes de l'interpréteur de commandes (Shell) 
+* 2 -> Appels système (fonctions fournies par le noyau) 
+* 3 -> Appels de bibliothèque (fonctions fournies par les bibliothèques des programmes) 
+* 4 -> Fichiers spéciaux (situés généralement dans /dev) 
+* 5 -> Formats des fichiers et conventions. Par exemple /etc/passwd 
+* 6 -> Jeux
+* 7 -> Divers (y compris les macropaquets et les conventions), par exemple man(7), groff(7) 
+* 8 -> Commandes de gestion du système (généralement réservées au super utilisateur) 
+* 9 -> Sous-programmes du noyau [hors standard] 
+
+.Obtenir de l'aide sur la commande `passwd` : 
+[source,shell]
+----
+$ man passwd 
+----
+
+.Obtenir de l'aide sur le fichier /etc/passwd (ici sous Linux) : 
+[source,shell]
+----
+ $ man -s 5 passwd 
+----
+
+.Rechercher une expression dans les titres des pages de `man` : 
+[source,shell]
+----
+ $ man -k "mot de passe" 
+----
+
+.Obtenir de l'aide sur les pages de `man` : 
+[source,shell]
+----
+ $ man man 
+----
+
+.Il est possible de rechercher une chaîne de caractères une fois dans les pages de man via : 
+[source,shell]
+----
+ /<chaîne à rechercher> 
+----
+
+Puis, pour se déplacer d’occurrence en occurrence, on utilise les touches : 
+
+* `n` -> (recherche vers le bas) 
+* `N` -> (recherche vers le haut). 
+
+Il est parfois plus utile de lire les pages du man en anglais. Pour ce faire il suffit de lancer la page man voulue via cette commande : 
+
+[source,shell]
+----
+ $ LANG=C man regex 
+----
+
+== TP
+
+Réalisation du TP N° 1 : [Découverte première commande]

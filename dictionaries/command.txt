@@ -1,6 +1,7 @@
 Dhhmm
 fich
 firefox
+groff
 hdparm
 hhmm
 HISTCMD
@@ -9,3 +10,4 @@ HISTFILE
 HISTFILESIZE
 HISTSIZE
 HISTTIMEFORMAT
+macropaquets
