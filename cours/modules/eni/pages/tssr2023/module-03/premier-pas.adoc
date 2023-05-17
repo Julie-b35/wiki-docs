@@ -133,8 +133,9 @@ id=1062(Tom) gid=1063(Tom) groups=1063(Tom),1064(comptables),1065(direction)
 
 Les informations fournies sont les suivantes : 
 
+****
 * Je suis connecté en tant que Tom
 * Mon identifiant unique d'utilisateur est le 1062
 * J'ai pour groupe actif le groupe Tom (identifiant unique de groupe 1063)
 * J'appartiens aussi aux groupes secondaires suivants : comptables (identifiant unique de groupe 1064) et direction (identifiant unique de groupe 1065)
-
+****
