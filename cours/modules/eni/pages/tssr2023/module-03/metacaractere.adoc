@@ -137,12 +137,20 @@ En plus des métacaractères, le Shell interprète de façon particulière certa
 
 Ces caractères sont les suivants : 
 
+[frame=none,grid=none,cols="~,~"]
 |===
 a|* `'    ' `  ->  Simple quote | Banalise tous les caractères situés entre les simples quotes
 | a| 
 [source,shell]
 ----
-
+$ echo 'prix : 15$50' 
+$ prix : 15$50 
 ----
-
+a|* `""    "" `  ->  Double quote | Banalise tous les caractères situés entre les doubles quotes sauf :  `$`    ```    `\`  (dollar, backquote et antislash) 
+| a| 
+[source,shell]
+----
+$ echo "aujourd'hui, vous êtes connecté sur $HOSTNAME" 
+$ aujourd’hui, vous êtes connecté sur SRVFIC-01 
+----
 |===
