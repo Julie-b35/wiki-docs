@@ -74,15 +74,19 @@ Affiche uniquement la liste des variables d’environnement*
 
 Il existe beaucoup de variables d'environnement, certaines sont importantes : 
 
+.variables environnement
 ****
-* `HOME`     ->  Répertoire de connexion 
-* `~`        ->  Répertoire de connexion
-* `PATH`     ->  Chemin de recherche des exécutables (séparés par des "`:`")
-* `LOGNAME`  ->  Nom du user de connexion 
-* `MAIL`     ->  Chemin d'accès au fichier boîte aux lettres 
-* `PS1`      ->  Prompt du Shell 
-* `PS2`      ->  Prompt de continuation 
-* `SHELL`    ->  Shell de connexion 
+[frame=none,grid=none,cols="1,~,~"]
+|===
+a|* `HOME`     | -> |  Répertoire de connexion 
+a|* `~`        | -> |  Répertoire de connexion
+a|* `PATH`     | -> |  Chemin de recherche des exécutables (séparés par des "`:`")
+a|* `LOGNAME`  | -> |  Nom du user de connexion 
+a|* `MAIL`     | -> |  Chemin d'accès au fichier boîte aux lettres 
+a|* `PS1`      | -> |  Prompt du Shell 
+a|* `PS2`      | -> |  Prompt de continuation 
+a|* `SHELL`    | -> |  Shell de connexion 
+|===
 ****
 
 == Le rappel de commandes, historique, autocompletion
@@ -92,25 +96,31 @@ Les facilités offertes par le rappel des commandes et l'autocomplétion dans un
 === Historique et rappel de commandes
 
 ****
-* `↑`       -> Rappeler les commandes précédentes, on peut remonter dans tout l'historique des commandes 
-* `↓`       -> Rechercher dans l'ordre inverse 
-* `!!`      -> Rappeler la dernière commande exécutée 
-* `!com`    -> Rappeler la dernière commande exécutée commençant par la chaîne "com"
-* `!?fich`  -> Rappeler la dernière commande exécutée contenant la chaîne "fich" 
-* `history` -> Afficher les commandes mémorisées 
-* `!287`    -> Rappelle la commande numérotée 287 
+[frame=none,grid=none,cols="1,~,~"]
+|===
+a|* `↑`       | -> | Rappeler les commandes précédentes, on peut remonter dans tout l'historique des commandes 
+a|* `↓`       | -> | Rechercher dans l'ordre inverse 
+a|* `!!`      | -> | Rappeler la dernière commande exécutée 
+a|* `!com`    | -> | Rappeler la dernière commande exécutée commençant par la chaîne "com"
+a|* `!?fich`  | -> | Rappeler la dernière commande exécutée contenant la chaîne "fich" 
+a|* `history` | -> | Afficher les commandes mémorisées 
+a|* `!287`    | -> | Rappelle la commande numérotée 287 
+|===
 ****
 
 Avec l’expérience et l’usage répété de la ligne de commandes, on constatera que le rappel de commandes reste disponible pour les utilisateurs et ce même après avoir fermé sa session ou redémarré l'ordinateur. Cela signifie donc que les commandes déjà saisies sont conservées dans un fichier. Quel est-il ? Combien de commandes sont mémorisées ? Quels sont les paramètres passés au rappel de commande ? 
 
 Les réponses se trouvent dans des variables : 
 ****
-* `HISTCMD`           -> Contient le dernier numéro de commande utilisée 
-* `HISTFILE`          -> Chemin et nom du fichier de rappel 
-* `HISTFILESIZE`      -> Taille du nombre de rappels possibles 
-* `HISTSIZE`          -> Taille du nombre de commandes en mémoire 
-* `HISTCONTROL`       -> Liste des options au rappel de commandes 
-* `HISTTIMEFORMAT`    -> N'est généralement pas présente par défaut, il permet d'horodater les commandes saisies. 
+[frame=none,grid=none,cols="1,~,~"]
+|===
+a|* `HISTCMD`           | -> | Contient le dernier numéro de commande utilisée 
+a|* `HISTFILE`          | -> | Chemin et nom du fichier de rappel 
+a|* `HISTFILESIZE`      | -> | Taille du nombre de rappels possibles 
+a|* `HISTSIZE`          | -> | Taille du nombre de commandes en mémoire 
+a|* `HISTCONTROL`       | -> | Liste des options au rappel de commandes 
+a|* `HISTTIMEFORMAT`    | -> | N'est généralement pas présente par défaut, il permet d'horodater les commandes saisies. 
+|===
 ****
 
 On pourra par exemple pour le compte root, par mesure de sécurité, ajouter dans le fichier `.bashrc` la déclaration de la variable comme ceci : 
