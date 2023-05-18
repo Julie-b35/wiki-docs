@@ -300,9 +300,13 @@ Il est 23h15.
 ^.^| Syntaxe : `*cal* <mois> <année>`
 |===
 
+.options
 ****
-* `mois`    -> Numéro du mois
-* `année`   -> Numéro de l'année, siècle inclus
+[frame=none,grid=none,cols="5,~,~"]
+|===
+a|* `mois`   ^.^| ->  | Numéro du mois
+a|* `année`  ^.^| ->  | Numéro de l'année, siècle inclus
+|===
 ****
 
 Sans argument, la commande génère le calendrier du mois courant. 
