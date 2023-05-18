@@ -154,6 +154,7 @@ Les informations fournies sont les suivantes :
 ^.^| Syntaxe : `*who* [options]`
 |===
 
+.options
 ****
 * `*-H*` -> Heading, affichage de l’entête de colonnes. 
 * `*-q*` -> Liste abrégée avec les noms et le nombre d'utilisateurs. 
@@ -206,7 +207,10 @@ Si ces deux arguments sont fournis à la commande `*who*`, elle n'affiche que le
 
 Options disponibles pour l'utilisateur
 
+.options
+****
 * `-S` -> Permet d'afficher les informations du mot de passe actuel 
+****
 
 Sans option, la commande `passwd` permet de modifier le mot de passe, si le login n'est pas fourni la commande se base sur l'utilisateur courant.
 
