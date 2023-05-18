@@ -136,3 +136,11 @@ $ ls fichier.{txt,odt,doc}
 En plus des métacaractères, le Shell interprète de façon particulière certains caractères appelés caractères spéciaux. 
 
 Ces caractères sont les suivants : 
+
+|==
+a|* `'    ' `  ->  Simple quote | Banalise tous les caractères situés entre les simples quotes
+| a| 
+[source,shell]
+----
+
+----
