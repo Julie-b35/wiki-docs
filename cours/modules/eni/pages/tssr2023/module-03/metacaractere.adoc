@@ -137,7 +137,7 @@ En plus des métacaractères, le Shell interprète de façon particulière certa
 
 Ces caractères sont les suivants : 
 
-[frame=none,grid=none,cols="30,~,~,~"]
+[frame=none,grid=none,cols="5,~,~,~"]
 |===
 a|* `'    ' `  | -> |  Simple quote | Banalise tous les caractères situés entre les simples quotes
  |              |    |              a| 
