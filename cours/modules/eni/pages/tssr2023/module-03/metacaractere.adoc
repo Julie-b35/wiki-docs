@@ -15,23 +15,33 @@ Les métacaractères sont des caractères de substitution utilisés pour défini
 
 Ces caractères sont les suivants : 
 
-* `*`           -> 0 à n caractères
-* `?`           -> 1 caractère quelconque et un seul
-* `[...]`       -> 1 seul caractère parmi ceux de la liste entre `[ ]` (crochets)
-* `[...-...]`   -> 1 seul caractère compris dans l'intervalle de caractères, bornes incluses
-* `^[...]`      -> Négation, 1 seul caractère autre que ceux spécifiés entre `[ ]` ( `!` est aussi valable `[!...]`) 
+****
+[frame=none,grid=none,cols="12,~,~"]
+|===
+a|* `*`           | -> | 0 à n caractères
+a|* `?`           | -> | 1 caractère quelconque et un seul
+a|* `[...]`       | -> | 1 seul caractère parmi ceux de la liste entre `[ ]` (crochets)
+a|* `[...-...]`   | -> | 1 seul caractère compris dans l'intervalle de caractères, bornes incluses
+a|* `^[...]`      | -> | Négation, 1 seul caractère autre que ceux spécifiés entre `[ ]` ( `!` est aussi valable `[!...]`) 
+|===
+****
 
 Pour spécifier un crochet, il faut le placer immédiatement après le crochet ouvrant. 
 
 === Exemples
 
-* `*.c`         -> Tous les noms qui se terminent par " .c " 
-* `ab?h`        -> Tous les noms de quatre caractères qui commencent par "ab" et se terminent par "h", la valeur du troisième caractère est quelconque 
-* `ab[bhmp]15`  -> Tous les noms de cinq caractères qui commencent par "ab" et se terminent par "15", la valeur du troisième caractère est "b" ou "h" ou "m" ou "p" 
-* `ab[a-h1-5]2` -> Tous les noms de quatre caractères qui commencent par "ab" et se terminent par "2", la valeur du troisième caractère doit être comprise entre "a" et "h" ou entre "1" et "5" 
-* `ab[!aei]h`   -> Tous les noms de quatre caractères qui commencent par "ab" et se terminent par "h" dont le troisième caractère n'est pas "a" ou "e" ou "i" 
-* `[A-Z]`       -> 1 caractère parmi les lettres majuscules 
-* `[A-Za-z]`    -> 1 caractère parmi toutes les lettres minuscules et majuscules 
+****
+[frame=none,grid=none,cols="19,~,~"]
+|===
+a|* `*.c`         | -> | Tous les noms qui se terminent par " .c " 
+a|* `ab?h`        | -> | Tous les noms de quatre caractères qui commencent par "ab" et se terminent par "h", la valeur du troisième caractère est quelconque 
+a|* `ab[bhmp]15`  | -> | Tous les noms de cinq caractères qui commencent par "ab" et se terminent par "15", la valeur du troisième caractère est "b" ou "h" ou "m" ou "p" 
+a|* `ab[a-h1-5]2` | -> | Tous les noms de quatre caractères qui commencent par "ab" et se terminent par "2", la valeur du troisième caractère doit être comprise entre "a" et "h" ou entre "1" et "5" 
+a|* `ab[!aei]h`   | -> | Tous les noms de quatre caractères qui commencent par "ab" et se terminent par "h" dont le troisième caractère n'est pas "a" ou "e" ou "i" 
+a|* `[A-Z]`       | -> | 1 caractère parmi les lettres majuscules 
+a|* `[A-Za-z]`    | -> | 1 caractère parmi toutes les lettres minuscules et majuscules 
+|===
+****
 
 [IMPORTANT]
 ====
@@ -55,19 +65,23 @@ aAbBcC...xXyYzZ   et en incluant les caractères accentués (éêè...)
 === Classes de caractères
 
 Il est possible d'utiliser une des classes de caractères suivantes : 
-
-* `[:cntrl:]`   -> Caractère de contrôle 
-* `[:space:]`   -> Espace blanc ou séparateur de ligne ou de paragraphe 
-* `[:blank:]`   -> Espace blanc ou tabulation non séparateur de ligne ou de paragraphe 
-* `[:print:]`   -> Espace simple ou caractère graphique visible 
-* `[:graph:]`   -> Caractère graphique visible 
-* `[:punct:]`   -> Caractère de ponctuation 
-* `[:alnum:]`   -> Caractère alphanumérique 
-* `[:digit:]`   -> Chiffre décimal 
-* `[:xdigit:]`  -> Chiffre hexadécimal 
-* `[:alpha:]`   -> Caractère alphabétique 
-* `[:lower:]`   -> Lettre minuscule 
-* `[:upper:]`   -> Lettre capitale 
+****
+[frame=none,grid=none,cols="12,~,~"]
+|===
+a|* `[:cntrl:]`   | -> | Caractère de contrôle 
+a|* `[:space:]`   | -> | Espace blanc ou séparateur de ligne ou de paragraphe 
+a|* `[:blank:]`   | -> | Espace blanc ou tabulation non séparateur de ligne ou de paragraphe 
+a|* `[:print:]`   | -> | Espace simple ou caractère graphique visible 
+a|* `[:graph:]`   | -> | Caractère graphique visible 
+a|* `[:punct:]`   | -> | Caractère de ponctuation 
+a|* `[:alnum:]`   | -> | Caractère alphanumérique 
+a|* `[:digit:]`   | -> | Chiffre décimal 
+a|* `[:xdigit:]`  | -> | Chiffre hexadécimal 
+a|* `[:alpha:]`   | -> | Caractère alphabétique 
+a|* `[:lower:]`   | -> | Lettre minuscule 
+a|* `[:upper:]`   | -> | Lettre capitale 
+|===
+****
 
 .En utilisant la syntaxe : 
 [source,regex]
@@ -81,12 +95,16 @@ En plus des métacaractères, les environnements `ksh` et `bash` disposent d'exp
 
 ==== Facteurs d'occurrences
 
-
-* `?( … )` ->  0 à 1 fois l'expression entre parenthèses 
-* `*( … )` ->  0 à n fois l'expression entre parenthèses 
-* `+( … )` ->  1 à n fois l'expression entre parenthèses 
-* `@( … )` ->  1 fois l'expression entre parenthèses 
-* `!( … )` ->  L'expression entre parenthèses ne sera pas présente 
+****
+[frame=none,grid=none,cols="13,~,~"]
+|===
+a|* `?( … )` | -> |  0 à 1 fois l'expression entre parenthèses 
+a|* `*( … )` | -> |  0 à n fois l'expression entre parenthèses 
+a|* `+( … )` | -> |  1 à n fois l'expression entre parenthèses 
+a|* `@( … )` | -> |  1 fois l'expression entre parenthèses 
+a|* `!( … )` | -> |  L'expression entre parenthèses ne sera pas présente 
+|===
+****
 
 [NOTE]
 ====
@@ -96,5 +114,10 @@ il faudra s'assurer que l'utilisation des expressions complexes est activée gr�
 [source,shell]
 ----
 $ shopt 
+$ shopt -s extglob 
 ----
 ====
+
+=== Énumération d'une expression
+
+Comme pour les caractères, il est possible d'offrir un choix d'expressions, en utilisant les caractères `{}` (accolades) : 
