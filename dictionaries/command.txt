@@ -20,4 +20,5 @@ metacaractere
 monrep
 punct
 shopt
+SRVFIC
 xdigit
