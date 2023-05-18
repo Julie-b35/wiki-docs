@@ -1,0 +1,10 @@
+= Module 07 - Afficher du texte
+:navtitle: Afficher du texte
+
+
+* Module précédent -> xref:tssr2023/module-03/metacaractere.adoc[Module 06 - Les caractères spéciaux]
+* Module suivant -> xref:tssr2023/module-03/show-texte.adoc[Module 07 - Afficher du texte]
+
+Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
+
+

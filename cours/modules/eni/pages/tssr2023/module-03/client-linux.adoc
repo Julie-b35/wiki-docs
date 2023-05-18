@@ -35,7 +35,9 @@ Les deux types de prompt
 * xref:tssr2023/module-03/aide.adoc[Module 04 - À l'aide]
 * xref:tssr2023/module-03/arborescence.adoc[Module 05 - Arborescence Unix / Linux]
 * xref:tssr2023/module-03/metacaractere.adoc[Module 06 - Les caractères spéciaux]
+* xref:tssr2023/module-03/show-texte.adoc[Module 07 - Afficher du texte]
 
 == Liste TP
 
-* xref:procedures:tp-eni:tssr2023/client-linux/TP01.adoc[Découverte première commande]
+* xref:procedures:tp-eni:tssr2023/client-linux/TP01.adoc[TP 01 - Découverte première commande]
+* xref:procedures:tp-eni:tssr2023/client-linux/TP02.adoc[TP 02 - Manipuler des fichiers]

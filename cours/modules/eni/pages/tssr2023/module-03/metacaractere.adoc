@@ -3,7 +3,7 @@
 
 
 * Module précédent -> xref:tssr2023/module-03/arborescence.adoc[Module 05 - Arborescence Unix / Linux]
-* Module suivant -> xref:tssr2023/module-03/metacaractere.adoc[Module 06 - Les caractères spéciaux]
+* Module suivant -> xref:tssr2023/module-03/show-texte.adoc[Module 07 - Afficher du texte]
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
 
@@ -168,3 +168,9 @@ a|* ` $ ` |  -> |  Dollar | Permet d'afficher le contenu d'une variable
 a|* ` $(...) ` |  -> |  Dollar parenthèse | Permet l'utilisation du résultat d'une commande 
 |              |     |                    a| *Il est préférable d’utiliser `pass:[`…`]` sur les distributions anciennes.*
 |===
+
+
+
+== TP
+
+Réalisation du TP N° 2 : xref:procedures:tp-eni:tssr2023/client-linux/TP02.adoc[Manipuler des fichiers]
