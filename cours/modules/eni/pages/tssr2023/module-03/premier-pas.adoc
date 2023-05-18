@@ -74,10 +74,13 @@ Il est fortement déconseillé de se connecter à distance en utilisant directem
 
 La commande de déconnexion (fermeture de session) dépend de l'environnement Shell de l'utilisateur. 
 
-* Bourn Shell `*exit*`               `*^d*` (`*^d*` correspond à la combinaison de touche : `*[ctrl]+[d]*`) 
-* C Shell      `*n%*`     `*logout*`
-* Korn Shell   `*exit*`              `*^d*` 
-* Bash         `*exit*`   `*logout*` `*^d*` 
+[frame=none,grid=none,cols="~,~,~,~"]
+|===
+a| * Bourn Shell  |   `*exit*`  |                  | `*^d*` (`*^d*` correspond à la combinaison de touche : `*[ctrl]+[d]*`) 
+a| * C Shell      |   `*n%*`    |   `*logout*`     |
+a| * Korn Shell   |   `*exit*`  |                  | `*^d*` 
+a| * Bash         |   `*exit*`  |    `*logout*`   | `*^d*` 
+|===
 
 == TTY : Affiche le nom du terminal
 

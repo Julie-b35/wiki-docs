@@ -3,6 +3,7 @@ autofetch
 blkid
 debian
 eneral
+extglob
 fdisk
 gpedit
 inodes

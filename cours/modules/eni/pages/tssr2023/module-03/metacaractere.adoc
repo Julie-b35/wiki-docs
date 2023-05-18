@@ -81,3 +81,20 @@ En plus des métacaractères, les environnements `ksh` et `bash` disposent d'exp
 
 ==== Facteurs d'occurrences
 
+
+* `?( … )` ->  0 à 1 fois l'expression entre parenthèses 
+* `*( … )` ->  0 à n fois l'expression entre parenthèses 
+* `+( … )` ->  1 à n fois l'expression entre parenthèses 
+* `@( … )` ->  1 fois l'expression entre parenthèses 
+* `!( … )` ->  L'expression entre parenthèses ne sera pas présente 
+
+[NOTE]
+====
+
+il faudra s'assurer que l'utilisation des expressions complexes est activée grâce à l'option *extglob* : 
+
+[source,shell]
+----
+$ shopt 
+----
+====
