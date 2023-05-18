@@ -56,3 +56,47 @@ Eric   Legrand
 Benoit   Empawindoz 
 ----
 
+== More : Visualisation avec pause à chaque page-écran
+
+
+|===
+^.^| Syntaxe : `*more* [options] [-nblig ] <nomFichier>`
+|===
+
+
+.options
+****
+|===
+a| *  `-d`  | ->  |  Affiche un message d’aide en bas de page 
+| |   |  [Hit space to continue, Del to abort] 
+a| *  `-s`  | ->  | Ne conserve qu’une ligne blanche si plusieurs lignes blanches consécutives 
+a| *  `-nblig`  | ->  | Définit le nombre de lignes de la page de visualisation, exemple : `-15` 
+a| *  `nomFichier`  | ->  | Nom du fichier à traiter. Ce nom peut être générique. À défaut de nom, la commande travaille sur le flux d’entrée. 
+|===
+****
+
+[source,shell]
+----
+$ more /etc/passwd 
+stag01:x:1033:1034::/home2/stag01:/bin/sh 
+stag02:x:1034:1035::/home2/stag02:/bin/sh 
+stag03:x:1035:1036::/home2/stag03:/bin/sh 
+stag04:x:1036:1037::/home2/stag04:/bin/sh 
+stag05:x:1037:1038::/home2/stag05:/bin/sh 
+stag06:x:1038:1039::/home2/stag06:/bin/sh 
+stag07:x:1039:1040::/home2/stag07:/bin/sh 
+stag08:x:1040:1041::/home2/stag08:/bin/sh 
+stag09:x:1041:1042::/home2/stag09:/bin/sh 
+stag10:x:1042:1043::/home2/stag10:/bin/sh 
+stag11:x:1043:1044::/home2/stag11:/bin/sh 
+stag12:x:1044:1045::/home2/stag12:/bin/sh 
+--More--(56%) 
+----
+
+À ce stade de l’affichage, il est possible d’exécuter un certain nombre de commandes. 
+
+Les commandes `h` et `?` permettent d’obtenir l’aide en ligne des sous-commandes de `more`. 
+
+La touche `v` permet quant à elle de faire appel à l’éditeur `vi`. 
+
+== Less :  Visualisation avec pause à chaque page-écran

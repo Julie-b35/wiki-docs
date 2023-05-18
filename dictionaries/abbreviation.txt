@@ -6,6 +6,7 @@ logname
 Logname
 MMDD
 mobaxterm
+nblig
 NTFS
 POSIX
 tcsh
