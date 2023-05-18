@@ -3,6 +3,7 @@ bhmp
 cntrl
 Dhhmm
 drwxr
+Empawindoz
 fich
 firefox
 groff
@@ -14,10 +15,12 @@ HISTFILE
 HISTFILESIZE
 HISTSIZE
 HISTTIMEFORMAT
+legende
 libbz
 macropaquets
 metacaractere
 monrep
+PRENOM
 punct
 shopt
 SRVFIC

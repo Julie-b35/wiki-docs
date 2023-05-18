@@ -25,3 +25,34 @@ a| * `-s` | -> | N'affiche pas les lignes vides consécutives
 a| * `fichier` | -> | Nom (éventuellement générique) du ou des fichiers 
 |===
 ****
+
+Si plusieurs fichiers sont concernés par la commande `cat`, le contenu de chacun d'eux sera concaténé. 
+
+Si aucun fichier n'est spécifié, la commande `cat` attend son flux d'entrée via le clavier et ne s'exécutera qu'à la réception de fin de flux d'entrée par les touches `[Ctrl] + [d]` sur une ligne vide. 
+
+[source, shell]
+----
+$ cat /etc/passwd 
+stag01:x:1033:1034::/home2/stag01:/bin/sh 
+stag02:x:1034:1035::/home2/stag02:/bin/sh 
+stag03:x:1035:1036::/home2/stag03:/bin/sh 
+[...] 
+stag30:x:1062:1063::/home2/stag30:/bin/sh 
+
+$ cat > listing_nouveaux_utilisateurs 
+
+>Eric   Legrand 
+>Benoit   Empawindoz 
+[ctrl] + [d] 
+$
+$ cat legende_users 
+PRENOM    NOM
+-----------------------------
+
+$ cat legende_users listing_nouveaux_utilisateurs 
+PRENOM    NOM
+-----------------------------
+Eric   Legrand 
+Benoit   Empawindoz 
+----
+
