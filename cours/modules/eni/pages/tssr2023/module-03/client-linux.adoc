@@ -8,8 +8,24 @@ Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
 
 == Introduction
 
-image::tssr2023/module-03/01.png[01.png]
+Conventions typographiques
 
+La syntaxe des commandes est représentée comme suit : 
+
+|===
+^.^| Syntaxe : `*Commande* [options] <Arguments>`
+|===
+
+Les exemples de commande et leur résultat dans le Shell sont représentés comme suit : 
+[source,shell]
+----
+$ Commande
+----
+
+Les deux types de prompt 
+
+* `$`  -> Un prompt commençant par un $ représente un utilisateur standard 
+* `#`  -> Un prompt commençant par # représente le compte root (l’administrateur du système) 
 
 == Modules
 

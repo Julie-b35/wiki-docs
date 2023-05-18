@@ -6,3 +6,78 @@
 * Module suivant -> xref:tssr2023/module-03/metacaractere.adoc[Module 06 - Les caractères spéciaux]
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
+
+Les commandes de gestion de fichiers autorisent l'utilisation de métacaractères qui peuvent être combinés avec des caractères dits spéciaux
+
+== Métacaractères
+
+Les métacaractères sont des caractères de substitution utilisés pour définir des noms génériques. 
+
+Ces caractères sont les suivants : 
+
+* `*`           -> 0 à n caractères
+* `?`           -> 1 caractère quelconque et un seul
+* `[...]`       -> 1 seul caractère parmi ceux de la liste entre `[ ]` (crochets)
+* `[...-...]`   -> 1 seul caractère compris dans l'intervalle de caractères, bornes incluses
+* `^[...]`      -> Négation, 1 seul caractère autre que ceux spécifiés entre `[ ]` ( `!` est aussi valable `[!...]`) 
+
+Pour spécifier un crochet, il faut le placer immédiatement après le crochet ouvrant. 
+
+=== Exemples
+
+* `*.c`         -> Tous les noms qui se terminent par " .c " 
+* `ab?h`        -> Tous les noms de quatre caractères qui commencent par "ab" et se terminent par "h", la valeur du troisième caractère est quelconque 
+* `ab[bhmp]15`  -> Tous les noms de cinq caractères qui commencent par "ab" et se terminent par "15", la valeur du troisième caractère est "b" ou "h" ou "m" ou "p" 
+* `ab[a-h1-5]2` -> Tous les noms de quatre caractères qui commencent par "ab" et se terminent par "2", la valeur du troisième caractère doit être comprise entre "a" et "h" ou entre "1" et "5" 
+* `ab[!aei]h`   -> Tous les noms de quatre caractères qui commencent par "ab" et se terminent par "h" dont le troisième caractère n'est pas "a" ou "e" ou "i" 
+* `[A-Z]`       -> 1 caractère parmi les lettres majuscules 
+* `[A-Za-z]`    -> 1 caractère parmi toutes les lettres minuscules et majuscules 
+
+[IMPORTANT]
+====
+ATTENTION à l'ordre des caractères des séquences. 
+
+En Bourne Shell, les caractères sont séquencés comme ceci : 
+
+[source,shell]
+----
+abcd....xyzABC....XYZ 
+----
+
+Alors que le Bash les aligne de cette façon : 
+[source,shell]
+----
+aAbBcC...xXyYzZ   et en incluant les caractères accentués (éêè...) 
+----
+
+====
+
+=== Classes de caractères
+
+Il est possible d'utiliser une des classes de caractères suivantes : 
+
+* `[:cntrl:]`   -> Caractère de contrôle 
+* `[:space:]`   -> Espace blanc ou séparateur de ligne ou de paragraphe 
+* `[:blank:]`   -> Espace blanc ou tabulation non séparateur de ligne ou de paragraphe 
+* `[:print:]`   -> Espace simple ou caractère graphique visible 
+* `[:graph:]`   -> Caractère graphique visible 
+* `[:punct:]`   -> Caractère de ponctuation 
+* `[:alnum:]`   -> Caractère alphanumérique 
+* `[:digit:]`   -> Chiffre décimal 
+* `[:xdigit:]`  -> Chiffre hexadécimal 
+* `[:alpha:]`   -> Caractère alphabétique 
+* `[:lower:]`   -> Lettre minuscule 
+* `[:upper:]`   -> Lettre capitale 
+
+.En utilisant la syntaxe : 
+[source,regex]
+----
+[[:classe:]] 
+----
+
+=== Les expressions complexes
+
+En plus des métacaractères, les environnements `ksh` et `bash` disposent d'expressions complexes permettant d'étendre les possibilités de remplacement de caractères. Ces options permettent notamment la prise en charge de facteurs d’occurrences. 
+
+==== Facteurs d'occurrences
+

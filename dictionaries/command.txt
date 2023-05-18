@@ -1,3 +1,6 @@
+alnum
+bhmp
+cntrl
 Dhhmm
 drwxr
 fich
@@ -15,3 +18,5 @@ libbz
 macropaquets
 metacaractere
 monrep
+punct
+xdigit
