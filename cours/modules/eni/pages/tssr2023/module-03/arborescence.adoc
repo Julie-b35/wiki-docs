@@ -361,6 +361,7 @@ $ stat test.fic
 
 == Cp : Copie de fichiers
 
+[grid=none]
 |===
 ^.^| Syntaxe : `*cp* [options] <fichier_source> <fichier_cible ou répertoire cible>`
 ^.^| `*cp* [options] <fichiers_sources> <répertoire_source>… <répertoire_cible> `
@@ -389,9 +390,104 @@ $ ls -l /data/listings/tel
 -rw-r--r-- 1 Tom Tom 78 2011-05-14 05:04 tel_2010.txt
 ----
 
-
 == Rm : Suppression de fichiers ou de répertoires
 
 |===
-^.^| Syntaxe : `*ls* [options] <répertoire(s) ou fichier(s) ou les deux..> `
+^.^| Syntaxe : `*rm* [options] <fichier(s) répertoire(s)> `
 |=== 
+
+.options
+****
+* `-r/R`                       -> Suppression récursive. Appliquée à un répertoire, supprime le répertoire et son contenu, y compris tous les répertoires de niveau inférieur. 
+* `-i`                         -> Demande de message de confirmation de suppression pour chaque fichier 
+* `-f`                         -> Supprime le message de confirmation automatique si l’utilisateur (propriétaire) n'a pas le droit d'écriture sur le fichier 
+* `--`                         -> Fin des options ou aucune option, utilisée si l'on souhaite supprimer un fichier dont le nom est –f ou –r par exemple. 
+* `<fichier(s) répertoire(s)>` -> Nom du fichier ou répertoire à supprimer. Ce nom peut être générique.
+****
+
+.Exemples : 
+[source,shell]
+----
+$ ls -R
+.:
+listing_tel
+
+./listing_tel:
+tel_2005.txt  tel_2010.txt
+
+$ rm listing_tel/tel_2005.txt 
+$ ls ./listing_tel 
+
+$ rm listing_tel 
+rm: cannot remove 'listing_tel': Is a directory 
+
+$ rm -R listing_tel 
+----
+
+== Mv : Déplacer ou renommer un fichier
+
+
+
+|===
+^.^| Syntaxe : `*rm* [options] <source(s)> <cible>  `
+|=== 
+
+Si la commande possède une seule source et de type fichier, alors la cible peut être un fichier ou un répertoire. 
+
+Si la commande référence plusieurs sources (fichiers ou répertoire), alors la cible ne peut être qu’un répertoire. 
+
+Les noms de fichiers et répertoires peuvent être des chemins absolus ou relatifs. 
+
+.Exemples  : 
+
+[source,shell]
+----
+$ ls -lR
+.:
+total 8
+drwxr-xr-x 2 stag23 stag23 4096 2011-02-02 16:29 a_traiter
+drwxr-xr-x 2 stag23 stag23 4096 2011-02-02 16:27 traités
+
+./a_traiter:
+total 0
+-rw-r--r-- 1 stag23 stag23 0 2011-02-02 16:26 t001.txt
+-rw-r--r-- 1 stag23 stag23 0 2011-02-02 16:26 t002.txt
+
+./traités:
+total 0
+
+$ mv ./a_traiter/t001.txt ./traités/ 
+
+$ mv ./a_traiter/t002.txt ./a_traiter/URGENT-t002.txt 
+
+$ ls -lR
+.:
+total 8
+drwxr-xr-x 2 stag23 stag23 4096 2011-02-02 16:31 a_traiter
+drwxr-xr-x 2 stag23 stag23 4096 2011-02-02 16:30 traités
+
+./a_traiter:
+total 0
+-rw-r--r-- 1 stag23 stag23 0 2011-02-02 16:26 URGENT-t002.txt
+
+./traités:
+total 0
+-rw-r--r-- 1 stag23 stag23 0 2011-02-02 16:26 t001.txt
+
+$ mv ./a_traiter/URGENT-t002.txt ./traités/t002.txt 
+
+$ ls -lR
+.:
+total 8
+drwxr-xr-x 2 stag23 stag23 4096 2011-02-02 16:32 a_traiter
+drwxr-xr-x 2 stag23 stag23 4096 2011-02-02 16:32 traités
+
+./a_traiter:
+total 0
+
+./traités:
+total 0
+-rw-r--r-- 1 stag23 stag23 0 2011-02-02 16:26 t001.txt
+-rw-r--r-- 1 stag23 stag23 0 2011-02-02 16:26 t002.txt
+----
+
