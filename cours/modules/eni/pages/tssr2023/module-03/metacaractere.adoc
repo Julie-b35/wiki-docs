@@ -16,7 +16,7 @@ Les métacaractères sont des caractères de substitution utilisés pour défini
 Ces caractères sont les suivants : 
 
 ****
-[frame=none,grid=none,cols="12,~,~"]
+[frame=none,grid=none,cols="18,~,~"]
 |===
 a|* `*`           | -> | 0 à n caractères
 a|* `?`           | -> | 1 caractère quelconque et un seul
@@ -31,7 +31,7 @@ Pour spécifier un crochet, il faut le placer immédiatement après le crochet o
 === Exemples
 
 ****
-[frame=none,grid=none,cols="19,~,~"]
+[frame=none,grid=none,cols="25,~,~"]
 |===
 a|* `*.c`         | -> | Tous les noms qui se terminent par " .c " 
 a|* `ab?h`        | -> | Tous les noms de quatre caractères qui commencent par "ab" et se terminent par "h", la valeur du troisième caractère est quelconque 
