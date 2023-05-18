@@ -7,4 +7,21 @@
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
 
+== Cat : Affichage et concaténation de fichiers
 
+
+|===
+^.^| Syntaxe : `*cat* [options] <fichier> <fichier>`
+|===
+
+
+.options
+****
+[grid=none,frame=none,cols="~,~,~"]
+|===
+a| * `-n` | -> |  Affiche les numéros de lignes (identique à la commande `nl`)
+a| * `-b` | -> | Affiche les numéros de lignes non vides 
+a| * `-s` | -> | N'affiche pas les lignes vides consécutives 
+a| * `fichier` | -> | Nom (éventuellement générique) du ou des fichiers 
+|===
+****
