@@ -155,11 +155,14 @@ $ echo "aujourd'hui, vous êtes connecté sur $HOSTNAME"
 $ aujourd’hui, vous êtes connecté sur SRVFIC-01 
 ----
 
-a|* ` \ ` |  -> |  Antislash | Banalise tous les caractères situés entre les doubles quotes sauf :  `$`    ```    `\`  (dollar, backquote et antislash) 
+a|* ` \ ` |  -> |  Antislash | Banalise le caractère suivant lorsque celui-ci est évalué comme un caractère spécial ou un délimiteur. 
+A contrario, peut donner une signification particulière à un caractère situé après. 
 ||| a| 
 [source,shell]
 ----
-$ echo "aujourd'hui, vous êtes connecté sur $HOSTNAME" 
-$ aujourd’hui, vous êtes connecté sur SRVFIC-01 
+$ echo "prix : 15\$50" 
+$ prix : 15$50 
 ----
+
+
 |===
