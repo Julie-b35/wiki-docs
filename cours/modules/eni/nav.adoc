@@ -33,6 +33,7 @@
 **** xref:tssr2023/module-03/shell.adoc[]
 **** xref:tssr2023/module-03/aide.adoc[]
 **** xref:tssr2023/module-03/arborescence.adoc[]
+**** xref:tssr2023/module-03/metacaractere.adoc[]
 **** TP
 ***** xref:procedures:tp-eni:tssr2023/client-linux/TP01.adoc[]
 *** xref:tssr2023/module-04/admin-linux.adoc[]

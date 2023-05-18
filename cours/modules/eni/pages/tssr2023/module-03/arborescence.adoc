@@ -3,7 +3,7 @@
 
 
 * Module précédent -> xref:tssr2023/module-03/aide.adoc[Module 04 - À l'aide]
-* Module suivant -> xref:tssr2023/module-03/shell.adoc[Module 05 - Le Shell]
+* Module suivant -> xref:tssr2023/module-03/metacaractere.adoc[Module 06 - Les caractères spéciaux]
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
 
@@ -429,7 +429,7 @@ $ rm -R listing_tel
 
 
 |===
-^.^| Syntaxe : `*rm* [options] <source(s)> <cible>  `
+^.^| Syntaxe : `*mv* [options] <source(s)> <cible>  `
 |=== 
 
 Si la commande possède une seule source et de type fichier, alors la cible peut être un fichier ou un répertoire. 
@@ -439,7 +439,6 @@ Si la commande référence plusieurs sources (fichiers ou répertoire), alors la
 Les noms de fichiers et répertoires peuvent être des chemins absolus ou relatifs. 
 
 .Exemples  : 
-
 [source,shell]
 ----
 $ ls -lR
@@ -491,3 +490,61 @@ total 0
 -rw-r--r-- 1 stag23 stag23 0 2011-02-02 16:26 t002.txt
 ----
 
+== File : Détermine le type de fichier
+
+|===
+^.^| Syntaxe : `*file*  <nomFichier> `
+|=== 
+
+****
+* `nomFichier`  -> Nom du fichier. Ce nom peut être générique. 
+****
+
+.Un fichier texte : 
+[source,shell]
+----
+$ file /etc/passwd 
+/etc/passwd: UTF-8 Unicode text 
+----
+
+.Un répertoire :
+[source,shell]
+----
+$ file /etc 
+/etc: directory 
+----
+
+.Un script :
+[source,shell]
+----
+$ file /etc/init.d/cron 
+/etc/init.d/cron: POSIX shell script text executable 
+----
+
+.Un lien symbolique :
+[source,shell]
+----
+$ file /etc/rc2.d/S20cron 
+/etc/rc2.d/S20cron: symbolic link to '../init.d/cron' 
+----
+
+.Une bibliothèque :
+[source,shell]
+----
+$ file /lib/libbz2.so.1.0.4 
+/lib/libbz2.so.1.0.4: ELF 32-bit LSB shared object, Intel 80386, version 1 (SYSV), dynamically linked, stripped 
+----
+
+.Un fichier spécial en mode bloc : 
+[source,shell]
+----
+$ file /dev/sda1 
+/dev/sda1: block special 
+----
+
+.Un fichier spécial en mode caractère : 
+[source,shell]
+----
+$ file /dev/tty0 
+/dev/tty0: character special 
+----

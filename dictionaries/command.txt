@@ -11,5 +11,7 @@ HISTFILE
 HISTFILESIZE
 HISTSIZE
 HISTTIMEFORMAT
+libbz
 macropaquets
+metacaractere
 monrep
