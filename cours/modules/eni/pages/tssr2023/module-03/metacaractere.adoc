@@ -164,5 +164,7 @@ $ echo "prix : 15\$50"
 $ prix : 15$50 
 ----
 
-
+a|* ` $ ` |  -> |  Dollar | Permet d'afficher le contenu d'une variable
+a|* ` $(...) ` |  -> |  Dollar parenthèse | Permet l'utilisation du résultat d'une commande 
+|              |     |                    a| *Il est préférable d’utiliser `pass:[`…`]` sur les distributions anciennes.*
 |===
