@@ -96,7 +96,7 @@ En plus des métacaractères, les environnements `ksh` et `bash` disposent d'exp
 ==== Facteurs d'occurrences
 
 ****
-[frame=none,grid=none,cols="13,~,~"]
+[frame=none,grid=none,cols="20,~,~"]
 |===
 a|* `?( … )` | -> |  0 à 1 fois l'expression entre parenthèses 
 a|* `*( … )` | -> |  0 à n fois l'expression entre parenthèses 
@@ -121,3 +121,18 @@ $ shopt -s extglob
 === Énumération d'une expression
 
 Comme pour les caractères, il est possible d'offrir un choix d'expressions, en utilisant les caractères `{}` (accolades) : 
+
+* `{chaîne1,chaîne2,chaîne3} ` ->  chaîne1 ou chaîne2 ou chaîne3 
+
+Afficher les fichiers ayant l'extension txt, odt ou doc : 
+
+[source,shell]
+----
+$ ls fichier.{txt,odt,doc} 
+----
+
+== Caractères spéciaux
+
+En plus des métacaractères, le Shell interprète de façon particulière certains caractères appelés caractères spéciaux. 
+
+Ces caractères sont les suivants : 
