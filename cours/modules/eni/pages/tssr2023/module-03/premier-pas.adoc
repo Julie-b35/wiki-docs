@@ -248,6 +248,7 @@ Il faut en effet que le mot de passe respecte les exigences suivantes : comporte
 |date [ -u \| --utc] [ *MMDDhhmm* [ [ CC] YY ] [ .ss ] ]
 |===
 
+.options
 ****
 * `MMDD`    -> Numéro du mois et du jour
 * `hhmm`    -> Heures et minutes
@@ -255,6 +256,7 @@ Il faut en effet que le mot de passe respecte les exigences suivantes : comporte
 * `+format` -> Format de visualisation de la date, composé de texte et de différents paramètres identifiés par le caractère `%`
 ****
 
+.format
 ****
 * `%a`    -> nom du jour abrégé
 * `%A`    -> nom du jour
