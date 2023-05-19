@@ -38,6 +38,7 @@ echo "- - -" > /sys/class/scsi_host/host2/scan
 * xref:tssr2023/module-04/tp/tp7.adoc[TP7 - Gestion des espaces disque]
 * xref:tssr2023/module-04/tp/tp8.adoc[TP8 - Gestion des systèmes de fichiers et montage]
 * xref:tssr2023/module-04/tp/tp11.adoc[TP11 - Gestion de la journalisation]
+* xref:tssr2023/module-04/tp/tp12.adoc[TP12 - Utilisation crontab]
 
 == Montage
 

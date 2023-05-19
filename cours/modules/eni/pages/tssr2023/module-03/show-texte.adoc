@@ -223,4 +223,48 @@ stag31:x:1063:1064::/home2/stag31:/bin/sh
 stag32:x:1064:1065::/home2/stag32:/bin/sh 
 ----
 
-== Wc : Compter le nombres de caractères
+== Wc : compte les lignes, mots et caractères de fichiers
+
+|===
+^.^| Syntaxe : `*wc* [options]  <nomFichier>`
+|===
+
+
+.options
+****
+[grid=none,frame=none,cols="~,~,~"]
+|===
+a| *  `-l`              | -> | Affiche le nombre de lignes
+a| *  `-w`              | -> | Affiche le nombre de mots 
+a| *  `-c`              | -> | Affiche le nombre de caractères 
+a| *  `nomFichier`      | -> | Nom du fichier. Ce nom peut être générique 
+|===
+****
+
+Sans option, la commande `wc` affiche les trois informations. 
+
+[source,shell]
+----
+$ wc daemon.log syslog.0 
+  2684  34654 267486 daemon.log 
+  4352  59149 425562 syslog.0 
+  7036  93803 693048 total 
+
+$ wc -l daemon.log 
+2684 daemon.log 
+
+$ wc -c syslog 
+1040 syslog 
+----
+
+
+== Diff : liste des différences entre deux fichiers 
+
+|===
+^.^| Syntaxe : `*diff* [options]  <fichier1 fichier2>`
+|===
+
+.options
+****
+* `fichier1/2`  -> Noms des fichiers à comparer 
+****
