@@ -155,3 +155,72 @@ a| *  `-v`          | -> | Verbeux, affiche en entête le(s) nom(s) du fichier(s
 a| *  `nomFichier`  | -> | Nom du fichier à traiter. Ce nom peut être générique. À défaut de nom, la commande travaille sur le flux d’entrée 
 |===
 ****
+
+.Exemple
+[source,shell]
+----
+$ head /etc/passwd 
+stag01:x:1033:1034::/home2/stag01:/bin/sh 
+stag02:x:1034:1035::/home2/stag02:/bin/sh 
+stag03:x:1035:1036::/home2/stag03:/bin/sh 
+stag04:x:1036:1037::/home2/stag04:/bin/sh 
+stag05:x:1037:1038::/home2/stag05:/bin/sh 
+stag06:x:1038:1039::/home2/stag06:/bin/sh 
+stag07:x:1039:1040::/home2/stag07:/bin/sh 
+stag08:x:1040:1041::/home2/stag08:/bin/sh 
+stag09:x:1041:1042::/home2/stag09:/bin/sh 
+stag10:x:1042:1043::/home2/stag10:/bin/sh
+
+$ head -vc 6 /etc/passwd 
+==> /etc/passwd <== 
+stag01 
+----
+
+== Tail : Affichage des dernières lignes d'un fichier
+
+|===
+^.^| Syntaxe : `*tail* [options]  <fichier> <fichier2> …`
+|===
+
+Par défaut, `tail` affiche les 10 dernières lignes du fichier. 
+
+.options
+****
+[grid=none,frame=none,cols="~,~,~"]
+|===
+a| *  `-n nb`      | -> | Position de début d'affichage, à partir de la fin du fichier 
+a| *  `n +nb `     | -> | Position de début d'affichage, à partir du début du fichier 
+a| *  `-f`         | -> | Affichage en continu du contenu du fichier (`[Ctrl]+[c]` pour arrêter) 
+a| *  `fichier`    | -> | Nom du fichier à traiter. Ce nom peut être générique. 
+|                  |    | À défaut de nom, la commande travaille sur le flux d’entrée 
+|===
+****
+
+Affichage des 8 dernières lignes du fichier /etc/passwd : 
+
+[source,shell]
+----
+$ tail -8 /etc/passwd 
+stag28:x:1060:1061::/home2/stag28:/bin/sh 
+stag29:x:1061:1062::/home2/stag29:/bin/sh 
+stag30:x:1062:1063::/home2/stag30:/bin/sh 
+stag31:x:1063:1064::/home2/stag31:/bin/sh 
+stag32:x:1064:1065::/home2/stag32:/bin/sh 
+----
+
+Puis de la 10ème ligne du fichier jusqu’à la fin : 
+
+[source,shell]
+----
+$ tail -n +10 /etc/passwd 
+stag11:x:1043:1044::/home2/stag11:/bin/sh 
+stag12:x:1044:1045::/home2/stag12:/bin/sh 
+stag13:x:1060:1061::/home2/stag28:/bin/sh 
+[...]
+stag29:x:1061:1062::/home2/stag29:/bin/sh 
+stag30:x:1062:1063::/home2/stag30:/bin/sh 
+stag31:x:1063:1064::/home2/stag31:/bin/sh 
+stag32:x:1064:1065::/home2/stag32:/bin/sh 
+----
+
+== Wc : Compter le nombres de caractères

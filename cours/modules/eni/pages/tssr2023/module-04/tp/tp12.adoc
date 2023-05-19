@@ -1,0 +1,49 @@
+= TP 12 - Utilisation de Crontab
+:navtitle: Utilisation de Crontab
+
+
+== Objectif
+
+Utiliser crontab afin d’automatiser des tâches de suivi du système
+
+== Principales tâches à réaliser
+
+Planification de taches : sur le serveur sans environnement graphique
+
+=== 1) Crontab utilisateur
+
+Créer une tâche crontab utilisateur pour l'utilisateur "François"
+
+* Périodicité : tous les jours ouvrables de la semaine à 9h15
+* Commande : mise à jour de l’archive de son répertoire personnel dans l’arborescence depot de l’atelier 10 avec le nom francois.tar
+
+[source,shell]
+----
+#crontab -e
+15 9 * * 1-5 tar -uf /srv/share/Depot/francois.tar -C ~ .
+----
+
+Créer une tâche crontab utilisateur pour l’utilisateur "François"
+
+* Périodicité : tous les samedis à 10h
+* Commande : compression de l’archive francois.tar en francois.tar.bz2, puis création d’une nouvelle archive francois.tar
+
+[source,shell]
+----
+#crontab -e
+00 10 * * 6 bzip2 -z /srv/share/Depot/francois.tar && tar  tar -cf /srv/share/Depot/francois.tar -C ~ .
+----
+=== 2) Crontab système
+
+Créer une tâche de surveillance des processus système :
+
+* Périodicité : toutes les 30 minutes le mardi
+* Commande : lister l'ensemble des processus de manière détaillée avec notamment les pourcentages d'utilisation mémoire et processeur.
+
+Enregistrer ces informations de façon durable dans le fichier /var/log/procstatus.txt
+
+[source,shell]
+----
+# /etc/cron.d/surveillance_processus
+*/30 * * * 2 root  (date && ps  -eo cmd,%mem,%cpu) >> /var/log/procstatus.txt
+----

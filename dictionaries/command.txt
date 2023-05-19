@@ -21,6 +21,7 @@ macropaquets
 metacaractere
 monrep
 PRENOM
+procstatus
 punct
 shopt
 SRVFIC

@@ -48,3 +48,6 @@ echo "- - -" > /sys/class/scsi_host/host2/scan
 == log
 
 emerg, alert, crit, err, warning, notice, info, debug.
+
+
+Commande pratique : watch, toutes 2 secondes, éxécute une commande.
