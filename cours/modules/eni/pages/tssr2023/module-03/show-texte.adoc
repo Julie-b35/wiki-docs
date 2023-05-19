@@ -66,6 +66,7 @@ Benoit   Empawindoz
 
 .options
 ****
+[grid=none,frame=none,cols="~,~,~"]
 |===
 a| *  `-d`  | ->  |  Affiche un message d’aide en bas de page 
 | |   |  [Hit space to continue, Del to abort] 
@@ -100,3 +101,23 @@ Les commandes `h` et `?` permettent d’obtenir l’aide en ligne des sous-comma
 La touche `v` permet quant à elle de faire appel à l’éditeur `vi`. 
 
 == Less :  Visualisation avec pause à chaque page-écran
+
+Similaire dans son principe à la commande `more`, `less`, commande très utilisée sur les environnements Linux, en améliore le fonctionnement. Cette commande est cependant moins répandue sur d'anciens systèmes UNIX. 
+
+
+|===
+^.^| Syntaxe : `*less* [options]  <fichier1> <fichier2>`
+|===
+
+La commande `less` offre l'avantage de ne pas quitter la lecture du fichier lorsque le curseur arrive à la fin du fichier. D'autre part, la recherche de chaînes de caractères est plus lisible. 
+
+Un très grand nombre d'options est disponible pour cette commande, en voici quelques-unes : 
+
+.options
+****
+[grid=none,frame=none,cols="~,~,~"]
+|===
+a| *  `i` ou `I`  | ->  | Permet d'ignorer la casse dans la recherche d'occurrences
+a| *  `S`         | ->  | Supprime les doublons de lignes vides 
+|===
+****
