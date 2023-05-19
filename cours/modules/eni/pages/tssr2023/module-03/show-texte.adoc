@@ -149,15 +149,9 @@ a| *  `gg`        | ->  | Positionne en début de fichier
 ****
 [grid=none,frame=none,cols="~,~,~"]
 |===
-a| *  `-n nbl`         | -> |
-a| *  `-c nb`         | -> |
-a| *  `-v`         | -> |
-a| *  ``         | -> |
-a| *  ``         | -> |
-a| *  ``         | -> |
-a| *  ``         | -> |
-a| *  ``         | -> |
-a| *  ``         | -> |
-a| *  ``         | -> |
+a| *  `-n nbl`      | -> | Nombre de lignes à afficher (10 par défaut) 
+a| *  `-c nb`       | -> | Nombre de caractères à afficher (tous par défaut) 
+a| *  `-v`          | -> | Verbeux, affiche en entête le(s) nom(s) du fichier(s). 
+a| *  `nomFichier`  | -> | Nom du fichier à traiter. Ce nom peut être générique. À défaut de nom, la commande travaille sur le flux d’entrée 
 |===
 ****
