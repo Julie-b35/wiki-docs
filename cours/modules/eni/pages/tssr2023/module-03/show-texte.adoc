@@ -131,8 +131,8 @@ Quelques commandes à effectuer lors de la lecture :
 a| *  `h`         | ->  | Accéder à l'aide 
 a| *  `q`         | ->  | Quitter le fichier ou l'aide 
 a| *  `/Rigel`    | ->  | Rechercher la chaîne _Rigel_ 
- |                | ->  |  `n`  Pour continuer la recherche vers le bas
- |                | ->  |  `N`  Pour continuer la recherche vers le haut
+ |                |     |  `n`  Pour continuer la recherche vers le bas
+ |                |     |  `N`  Pour continuer la recherche vers le haut
 a| *  `G`         | ->  | Positionne en fin de fichier 
 a| *  `gg`        | ->  | Positionne en début de fichier
 |===
