@@ -45,5 +45,5 @@ Enregistrer ces informations de façon durable dans le fichier /var/log/procstat
 [source,shell]
 ----
 # /etc/cron.d/surveillance_processus
-*/30 * * * 2 root  (date && ps  -eo cmd,%mem,%cpu) >> /var/log/procstatus.txt
+*/30 * * * 2 root  (date && ps  -eo pid,pmem,pcpu,cmd) >> /var/log/procstatus.txt
 ----

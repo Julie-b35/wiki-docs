@@ -3,7 +3,7 @@
 
 
 * Module précédent -> xref:tssr2023/module-03/metacaractere.adoc[Module 06 - Les caractères spéciaux]
-* Module suivant -> xref:tssr2023/module-03/show-texte.adoc[Module 07 - Afficher du texte]
+* Module suivant -> xref:tssr2023/module-03/gestion-lien.adoc[Module 08 - Gestion des liens]
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
 
@@ -268,3 +268,46 @@ $ wc -c syslog
 ****
 * `fichier1/2`  -> Noms des fichiers à comparer 
 ****
+
+Chaque différence sera listée et précédée d’une indication sur les lignes concernées et l’action détectée. 
+
+Avec les actions : `a` pour append, `c` pour change et `d` pour delete 
+
+Par exemple, `3c3` signifie un changement entre la 3e ligne du 1er fichier et la 3e ligne du 2e fichier. 
+
+Les différences repérées dans l'un ou l'autre des deux fichiers sont détaillées, précédées par les caractères `<`  ou `>`  qui indiquent quel fichier est concerné : 
+
+* `<` ->  concerne le premier fichier
+* `>` ->  concerne le second fichier
+
+[source,shell]
+----
+$ cat tel_2012 tel_2015 
+USER         NumInterne
+----         ----------
+Eric         211
+Marie        315
+Pascal       413
+Thierry      314
+
+USER         NumInterne
+----         ----------
+Eric         212
+Marie        315
+Thierry      314
+Frederic     666
+
+$ diff tel_2012 tel_2015
+3c3
+< Eric       211
+---
+> Eric       212
+5d4
+< Pascal       413
+6a6
+> Frederic     666
+----
+
+== TP
+
+Réalisation du TP N° 3 : xref:procedures:tp-eni:tssr2023/client-linux/TP03.adoc[Afficher le contenu des fichiers]

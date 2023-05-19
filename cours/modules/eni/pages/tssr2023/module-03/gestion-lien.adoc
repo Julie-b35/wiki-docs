@@ -1,0 +1,8 @@
+= Module 08 - Gestion des liens
+:navtitle: Gestion des liens
+
+
+* Module précédent -> xref:tssr2023/module-03/show-texte.adoc[Module 07 - Afficher du texte]
+* Module suivant -> xref:tssr2023/module-03/show-texte.adoc[Module 07 - Afficher du texte]
+
+Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
