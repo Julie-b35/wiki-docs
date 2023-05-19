@@ -128,12 +128,36 @@ Quelques commandes à effectuer lors de la lecture :
 ****
 [grid=none,frame=none,cols="~,~,~"]
 |===
-a| *  `h`         | ->  Accéder à l'aide 
-a| *  `q`         | ->  Quitter le fichier ou l'aide 
-a| *  `/Rigel`    | ->  Rechercher la chaîne _Rigel_ 
- |                |  `n`  -> Pour continuer la recherche vers le bas
- |                |  `N`  -> Pour continuer la recherche vers le haut
-a| *  `G`         | ->  Positionne en fin de fichier 
-a| *  `gg`        | ->  Positionne en début de fichier
+a| *  `h`         | ->  | Accéder à l'aide 
+a| *  `q`         | ->  | Quitter le fichier ou l'aide 
+a| *  `/Rigel`    | ->  | Rechercher la chaîne _Rigel_ 
+ |                | ->  |  `n`  Pour continuer la recherche vers le bas
+ |                | ->  |  `N`  Pour continuer la recherche vers le haut
+a| *  `G`         | ->  | Positionne en fin de fichier 
+a| *  `gg`        | ->  | Positionne en début de fichier
+|===
+****
+
+== Head : Affichage des première lignes d'un  fichier
+
+|===
+^.^| Syntaxe : `*head* [options]  <nomFichier(s)>`
+|===
+
+
+.options
+****
+[grid=none,frame=none,cols="~,~,~"]
+|===
+a| *  `-n nbl`         | -> |
+a| *  `-c nb`         | -> |
+a| *  `-v`         | -> |
+a| *  ``         | -> |
+a| *  ``         | -> |
+a| *  ``         | -> |
+a| *  ``         | -> |
+a| *  ``         | -> |
+a| *  ``         | -> |
+a| *  ``         | -> |
 |===
 ****
