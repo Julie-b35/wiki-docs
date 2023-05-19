@@ -121,3 +121,19 @@ a| *  `i` ou `I`  | ->  | Permet d'ignorer la casse dans la recherche d'occurren
 a| *  `S`         | ->  | Supprime les doublons de lignes vides 
 |===
 ****
+
+Quelques commandes à effectuer lors de la lecture : 
+
+.commande
+****
+[grid=none,frame=none,cols="~,~,~"]
+|===
+a| *  `h`         | ->  Accéder à l'aide 
+a| *  `q`         | ->  Quitter le fichier ou l'aide 
+a| *  `/Rigel`    | ->  Rechercher la chaîne _Rigel_ 
+ |                |  `n`  -> Pour continuer la recherche vers le bas
+ |                |  `N`  -> Pour continuer la recherche vers le haut
+a| *  `G`         | ->  Positionne en fin de fichier 
+a| *  `gg`        | ->  Positionne en début de fichier
+|===
+****
