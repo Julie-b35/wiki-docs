@@ -1,0 +1,170 @@
+= TP 13 - Relevé d’informations système et gestion des processus
+
+
+== Objectif
+
+Surveiller l’utilisation de mémoire vive et gérer les processus
+Principales tâches à réaliser
+
+=== I. Relevé d’informations : sur le serveur sans environnement graphique
+
+1) Afficher les informations sur la mémoire
+
+[source,bash]
+----
+$ LANG=C free -h
+               total        used        free      shared  buff/cache   available
+Mem:           1.9Gi       173Mi       1.6Gi       0.0Ki       115Mi       1.6Gi
+Swap:          975Mi          0B       975Mi
+
+----
+
+* Combien de mémoire RAM est utilisée ?
+
+.réponse
+----
+171 Mi utilisé sur la Ram
+----
+
+* Combien de mémoire SWAP est utilisée ?
+
+.réponse
+----
+0MB utilisé
+----
+
+* Combien de mémoire RAM est réellement libre ?
+
+.réponse
+----
+1,61 Gi
+----
+
+2) Afficher les informations détaillées sur le processeur et la mémoire
+
+[source,bash]
+----
+$> lscpu
+Architecture :                          x86_64
+Mode(s) opératoire(s) des processeurs : 32-bit, 64-bit
+Boutisme :                              Little Endian
+Tailles des adresses:                   45 bits physical, 48 bits virtual
+Processeur(s) :                         4
+Liste de processeur(s) en ligne :       0-3
+Thread(s) par cœur :                    1
+Cœur(s) par socket :                    4
+Socket(s) :                             1
+Nœud(s) NUMA :                          1
+Identifiant constructeur :              GenuineIntel
+Famille de processeur :                 6
+Modèle :                                151
+Nom de modèle :                         12th Gen Intel(R) Core(TM) i5-12500
+Révision :                              5
+Vitesse du processeur en MHz :          2995.203
+BogoMIPS :                              5990.40
+Constructeur d\'hyperviseur :            VMware
+Type de virtualisation :                complet
+Cache L1d :                             192 KiB
+Cache L1i :                             128 KiB
+Cache L2 :                              5 MiB
+Cache L3 :                              18 MiB
+Nœud NUMA 0 de processeur(s) :          0-3
+Vulnerability Itlb multihit:            KVM: Mitigation: VMX unsupported
+Vulnerability L1tf:                     Not affected
+Vulnerability Mds:                      Not affected
+Vulnerability Meltdown:                 Not affected
+Vulnerability Mmio stale data:          Not affected
+Vulnerability Retbleed:                 Not affected
+Vulnerability Spec store bypass:        Mitigation; Speculative Store Bypass disabled via prctl and seccomp
+Vulnerability Spectre v1:               Mitigation; usercopy/swapgs barriers and __user pointer sanitization
+Vulnerability Spectre v2:               Mitigation; Enhanced IBRS, IBPB conditional, RSB filling, PBRSB-eIBRS SW sequence
+Vulnerability Srbds:                    Not affected
+Vulnerability Tsx async abort:          Not affected
+Drapeaux :                              fpu vme de pse tsc msr pae mce cx8 apic sep mtrr pge mca cmov pat pse36 clflush mmx fxsr sse sse2 ss ht syscall nx pdpe1gb rdtscp lm constant_tsc arch_perfmon rep_good nop
+                                        l xtopology tsc_reliable nonstop_tsc cpuid pni pclmulqdq ssse3 fma cx16 pcid sse4_1 sse4_2 x2apic movbe popcnt tsc_deadline_timer aes xsave avx f16c rdrand hypervisor lahf
+                                        _lm abm 3dnowprefetch cpuid_fault invpcid_single ssbd ibrs ibpb stibp ibrs_enhanced fsgsbase tsc_adjust bmi1 avx2 smep bmi2 erms invpcid rdseed adx smap clflushopt clwb sh
+                                        a_ni xsaveopt xsavec xgetbv1 xsaves arat umip pku ospke gfni vaes vpclmulqdq rdpid movdiri movdir64b fsrm md_clear flush_l1d arch_capabilities
+
+----
+
+* Quel type de processeur a été détecté ?
+
+.réponse
+----
+Le modèle du processeur est : 12th Gen Intel(R) Core(TM) i5-12500
+----
+
+3) Afficher tous les processus relatifs à des démons (dont le nom finit par un "d")
+
+[source,bash]
+----
+$> ps -e | grep 'd$'
+      1 ?        00:00:00 systemd
+      2 ?        00:00:00 kthreadd
+     12 ?        00:00:01 rcu_sched
+     37 ?        00:00:00 kauditd
+     41 ?        00:00:00 khungtaskd
+     45 ?        00:00:00 ksmd
+     46 ?        00:00:00 khugepaged
+     65 ?        00:00:00 kintegrityd
+     66 ?        00:00:00 kblockd
+     72 ?        00:00:00 kworker/3:1H-kblockd
+     74 ?        00:00:00 kthrotld
+    144 ?        00:00:00 kworker/2:1H-kblockd
+    162 ?        00:00:00 kworker/1:1H-kblockd
+    178 ?        00:00:00 kworker/0:1H-kblockd
+    293 ?        00:00:00 systemd-udevd
+    325 ?        00:00:00 cryptd
+    490 ?        00:00:04 vmtoolsd
+    496 ?        00:00:00 rsyslogd
+    497 ?        00:00:00 systemd-logind
+    627 ?        00:00:00 sshd
+    630 ?        00:00:00 sshd
+    632 ?        00:00:00 sshd
+    635 ?        00:00:00 systemd
+    645 ?        00:00:01 sshd
+    654 ?        00:00:00 sshd
+    703 ?        00:00:00 systemd
+    799 ?        00:00:00 sshd
+    801 ?        00:00:00 sshd
+    806 ?        00:00:36 sshd
+    832 ?        00:00:00 sshd
+    918 ?        00:00:00 kworker/u256:0-events_unbound
+    956 ?        00:00:00 sshd
+    962 ?        00:00:00 sshd
+   1003 ?        00:00:00 kworker/u256:2-events_unbound
+   1081 ?        00:00:00 kworker/u256:1-events_unbound
+
+----
+
+* Afficher uniquement leur PID et leur nom
+
+.réponse
+----
+ps -eo pid,comm | grep  d$
+----
+
+* Afficher leur nombre
+
+.réponse
+----
+ps -eo pid,comm | grep  d$ | wc
+----
+
+
+=== II. Intervention sur les processus : sur le serveur sans environnement graphique
+
+Ouvrez une session SSH avec le login utilisateur (pas le compte root)
+
+1) Lister tous les processus relatifs à votre login de façon détaillée
+
+
+
+2) Lister dans un fichier tous les processus correspondant aux connexions Putty
+
+3) Arrêter un processus lancé
+
+* Lancer une seconde session Putty et ouvrir une session avec votre login utilisateur
+* Repérer le n° de processus (PID) relatif au shell de cette seconde session Putty
+* Depuis votre 1ere session, tenter d'arrêter votre second shell (avec le signal par défaut)
+* Depuis votre 1ere session, arrêter définitivement votre second shell (avec le signal adapté)
