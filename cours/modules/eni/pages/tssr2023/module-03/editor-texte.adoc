@@ -67,3 +67,262 @@ Il comprend le sous-mode *commande ex*, commandes de bas de page précédées de
 Le mode par défaut de `vim` est le mode commande. 
 
 Un appui sur la touche `<Esc>` permet de revenir en mode commande. 
+
+=== Lancement de vi
+
+|===
+^.^| Syntaxe : `*vi* [options]  <fichier ..>`
+|===
+
+.options
+****
+[grid=none,frame=none,cols="15,~,~"]
+|===
+a| * `*-R*`   | -> | Lecture uniquement 
+a| * `*+nb*`  | -> | Positionnement dans le fichier à la ligne nb 
+a| * `*+/chaîne*` | -> | Positionnement dans le fichier sur la première occurrence de chaîne 
+|===
+****
+
+À l'entrée dans `*vim*`, vous êtes automatiquement en mode commande. 
+
+=== Sortie de vie
+
+La première chose à savoir c’est sortir de `*vim*`. 
+
+****
+[grid=none,frame=none,cols="15,~,~"]
+|===
+a| * `*:wq*` | -> | Sauvegarde et sortie de `*vim*`. Affectation systématique de la date de dernière modification 
+a| * `*:q*`  | -> | Sortie sans sauvegarde. 
+a| * `*!*`   | -> | Le `*!*` force l'exécution de la commande qui précède, `*:q!*` permet de quitter `*vim*` sans tenir compte des modifications effectuées.
+|===
+****
+
+=== Commandes de déplacement et positionnement
+
+==== Les déplacement du curseur
+
+****
+[grid=none,frame=none,cols="25,~"]
+|===
+a|* `*[nb]↑*` ou `*[nb]k*` | Se déplace vers le haut 
+a|* `*[nb]↓*` ou `*[nb]j*` | Se déplace vers le bas
+a|* `*[nb]←*` ou `*[nb]h*` | Se déplace vers la gauche 
+a|* `*[nb]→*` ou `*[nb]l*` | Se déplace vers la droite 
+a|* `*[nb]-*`              | Se déplace au 1^er^ caractère des lignes vers le haut 
+a|* `*[nb]+*`              | Se déplace au 1^er^ caractère nb lignes vers le bas 
+a|* `*[nb]$*`              | Dernier caractère de la ligne courante + nb 
+a|* `*0*`  (zéro)          | Premier caractère de la ligne
+a|* `*^*` (Altgr-9)        | Premier caractère du premier mot de la ligne 
+a|* `*[nb]w*`              | Début du nb^ème^ mot suivant ou ponctuation 
+a|* `*[nb]W*`              | Début du nb^ème^ mot suivant, déterminé par un espace, une tabulation ou une nouvelle ligne 
+a|* `*[nb]b*`              | Début du nb^ème^ mot précédent ou ponctuation
+a|* `*[nb]B*`              | Début du nb^ème^ mot précédent, déterminé par un espace, une tabulation ou une nouvelle ligne 
+a|* `*[nb]e*`              | Fin du nb^ème^ mot après le mot courant 
+a|* `*[nb]E*`              | Fin du nb^ème^ mot après le mot courant, déterminé par un espace, une tabulation ou une nouvelle ligne 
+a|* `*:nb*`                | Aller à la ligne nb 
+a|* `*gg*` ou `*:0*`       | Début du fichier 
+a|* `*G*` ou `*:$*`        | Fin de fichier 
+a|* `*%*`                  | Déplacement sur le caractère parenthèse ou accolade correspondant (ouvrant / fermant) 
+|===
+****
+
+==== Positionnement par recherche de chaîne
+
+****
+[grid=none,frame=none,cols="15,~"]
+|===
+a|* `*/<chaîne>*`   | Recherche de l'occurrence suivante de la chaîne spécifiée. Si aucune chaîne n'est donnée, la dernière chaîne est recherchée 
+a|* `*?<chaîne>*`   | Recherche de l'occurrence précédente de la chaîne spécifiée. Si aucune chaîne n'est donnée, la dernière chaîne est recherchée 
+a|* `*n*`           | Répétition de la dernière recherche de chaîne dans le même sens
+a|* `*N*`           | Répétition de la dernière recherche de chaîne dans le sens inverse 
+|===
+****
+
+==== Pose de marque et déplacement sur une marque
+
+****
+[grid=none,frame=none,cols="15,~"]
+|===
+a|* `*m<a-z>*`   | Marque la position courante du curseur avec la lettre donnée. Par exemple, mf positionne la marque f à la position courante 
+a|* `*'<a-z>*`   | (simple quote) Place le curseur au début de la ligne correspondant à la marque indiquée (une lettre) 
+a|* ``*`<a-z>*`` | (quote inverse AltGr-7) Place le curseur sur la marque indiquée (une lettre) 
+|===
+****
+
+=== Commande de modification
+
+==== Passage en mode insertion de texte
+
+****
+[grid=none,frame=none,cols="15,~"]
+|===
+a| * `*a*` | Insertion après le caractère courant 
+a| * `*A*` | Insertion après la fin de la ligne courante 
+a| * `*i*` | Insertion avant le caractère courant 
+a| * `*I*` | Insertion avant le premier caractère significatif de la ligne 
+a| * `*o*` | Ajout d'une ligne vide après la ligne courante et passage en mode insertion sur cette ligne 
+a| * `*O*` | Ajout d'une ligne vide avant la ligne courante et passage en mode insertion sur cette ligne 
+|===
+*Rappel : Un appui sur la touche <Esc> permet de revenir en mode commande et donc de quitter le mode insertion.*
+****
+
+==== Suppression de texte
+
+****
+[grid=none,frame=none,cols="15,~"]
+|===
+a| * `*[nb]x*`     | Suppression de nb caractères suivants à partir du caractère courant 
+a| * `*[nb]X*`     | Suppression de nb caractères précédents à partir du caractère courant 
+a| * `*D*`         | Suppression du reste de la ligne à partir du caractère courant 
+1.2+a| * `*[nb]d(wW)*` | Suppression de nb mots à partir du caractère courant( w et W donneront la définition du mot :  
+a|
+[none]
+* `*w*` séparateur de mot : ponctuations, espace, tabulation
+* `*W*` séparateur de mot : espace ou tabulation 
+* Exemple : `*dw*` ou `*dW*` 
+a| * `*[nb]dd*`    | Suppression de nb lignes à partir de la ligne courante 
+|===
+La dernière suppression est stockée dans un tampon mémoire appelé tampon d'annulation. 
+****
+
+==== Copier/couper/coller
+
+.Copier
+****
+[grid=none,frame=none,cols="15,~"]
+|===
+a| * `*[nb]y(wW)*`     | Copie de nb mots à partir de la position courante. Exemple : `*yw*` ou `*yW*`
+a| * `*[nb]yy*`        | Copie  de nb lignes à partir de la ligne courante 
+|===
+****
+
+.Couper
+****
+[grid=none,frame=none,cols="15,~"]
+|===
+a| * `*[nb]d(wW)*`     | Coupe de nb mots à partir du caractère courant. Exemple dw ou dW
+a| * `*[nb]dd*`        | Coupe de nb lignes à partir de la ligne courante 
+|===
+****
+
+.Coller
+****
+[grid=none,frame=none,cols="15,~"]
+|===
+a| * `*[nb]p*`     | Insertion après la ligne courante de nb fois le contenu du tampon
+a| * `*[nb]P*`     | Insertion avant la ligne courante de nb fois le contenu du tampon 
+|===
+****
+
+.gestion des tampons
+****
+Pour les commandes ci-dessus, le tampon d'annulation est utilisé par défaut sauf si l'on nomme explicitement le tampon avec lequel on souhaite effectuer le transfert, avec `*"<a-z>*` (double quote plus une lettre en minuscule) 
+
+L'utilisation d'une lettre majuscule pour le transfert dans un tampon permet de compléter le contenu d'un tampon existant. 
+
+Tous les tampons sont conservés en cas de changement d'espace de travail dans une même session `*vim*`. 
+****
+
+==== Remplacement, substitution de texte, recherche et remplacement
+
+****
+[grid=none,frame=none,cols="15,~"]
+|===
+a| * `*r<car>*`        | Remplacement du caractère courant par le caractère `<car>` spécifié 
+a| * `*R*`             | Passage en mode remplacement. Sortie de ce mode par appui sur `<Esc>` 
+a| * `*[nb]s*`         | Substitution de caractère. Les nb caractères à partir du caractère courant sont remplacés par les caractères saisis. Le dernier caractère à substituer est signalé par $. Sortie de ce mode par appui sur `<Esc>` 
+a| * `*[nb]S*`         | Substitution de ligne. Les nb lignes à partir de la ligne courante sont effacées et l'on passe en mode insertion. Sortie de ce mode par appui sur `<Esc>` 
+a| * `*[nb]c(wW)*`     | Substitution de mot. Les nb mots à partir du caractère courant seront remplacés par les caractères saisis. Sortie de ce mode par appui sur `<Esc>` 
+
+Exemple : `*cw*` ou `*cW*` 
+|===
+****
+
+=== Le pouvoir de G : Recherche et remplacement
+
+`*vim*` est capable d’effectuer des recherches et de remplacer le cas échéant ce que l’on recherche ou de rechercher des lignes pour les supprimer, les déplacer, etc. 
+
+C’est à l’aide de commandes `*ex*` que `*vim*` effectue ces actions. 
+
+==== Syntaxe générale d'une commande Ex G
+
+|===
+^.^| Syntaxe : `*:<ligne à traiter> g/expression régulière de recherche/<commande ex>*`
+|===
+
+****
+[grid=none,frame=none,cols="25,~"]
+|===
+a| * `*<ligne à traiter>*`  | Déclaration d’une plage de ligne où la commande `*ex*` s’exécutera. La plage est déclarée comme cela : `*nb,nb*` ( ex : `*10,25*` de la ligne 10 à 25 ). Cette déclaration est optionnelle. 
+a| * `*g*`              | Indique à la commande `*ex*` qu’elle s’exécutera sur toutes les occurrences trouvées verticalement. Si cette option n’est pas renseignée, la commande `*ex*` arrêtera ses recherches après avoir traité la première occurrence trouvée verticalement. 
+a| * `*/*`              | Séparateur d’expression régulière. Les recherches effectuées dans `*vim*` et ses commandes `*ex*` sont des expressions régulières. Afin de déclarer le début et la fin d’une expression c’est le symbole `*/*` qui fait office de séparateur. 
+a| * `*/RegEx/*`        | Expression recherchée dans le document. 
+1.2+a| * `*<Commande Ex>*`  | La commande à exécuter lorsque le traitement trouve une occurrence définie par l’expression régulière. Quelques commandes ex utiles :  
+a|
+[grid=none,frame=none,cols="20,~"]
+!===
+a! * `*s/regex/regex/g*`  ! Substitution (voir pages suivantes) 
+a! * `*m <N°ligne>*`      ! Déplacement (déplacement de ligne à une ligne donnée)
+a! * `*d*`                ! Suppression 
+!===
+|===
+****
+
+==== Recherche et remplacement
+
+Syntaxe:
+
+|===
+^.^| Syntaxe : `*:<ld,lf> g/RegEx de R/s/RegEx ES/RegEx S/g*`
+|===
+
+****
+[grid=none,frame=none,cols="18,~"]
+|===
+a| * `:<ld,lf>`      | Ligne de début et ligne de fin de traitement. 
+a| * `g`             | Recherche globale (verticale) dans tout le fichier (sinon la commande `*ex*` s’arrêtera après le traitement de la  première occurrence de recherche) 
+a| * `/`             | Séparateur des expressions 
+a| * `/RegEx de R/`  | Sélectionne uniquement les lignes contenant l’expression `*regex*` 
+a| * `s`             | Substitue
+a| * `/RegEx ES/`    | Chaîne à remplacer définie par l’expression `regex ES`. Si l’expression régulière est non définie alors c’est l’expression de recherche `regex de R` qui sera remplacée. 
+a| * `/RegEx S/`     | Expression régulière définissant par quoi le remplacement sera effectué. 
+a| * `g`             | Pour toutes les occurrences trouvées sur la ligne (sinon uniquement la première occurrence de la ligne
+|===
+****
+
+_pass:[<u>Explications complémentaires par l’exemple</u>]_ 
+
+Rechercher toutes les lignes contenant `*Dieu*`, puis rechercher dans ces lignes le terme `*Anubis*` pour le remplacer par `*Isis*` (même si plusieurs `*Anubis*` sont présents sur les lignes) : 
+
+[source,bash]
+----
+:g/Dieu/s/Anubis/Isis/g 
+----
+
+Idem, mais de la ligne `*11*` jusqu'à la ligne `*20*` uniquement : 
+
+[source,bash]
+----
+:11,20 g/Dieu/s/Anubis/Isis/g 
+----
+
+Dans le cas suivant, la chaîne à remplacer n'est pas définie, c'est la chaîne de recherche qui sera utilisée à la place. En d'autres termes, les occurrences de la chaîne `*Angers*` seront remplacées par la chaîne `*Nantes*`. Mais si sur une ligne il y a plusieurs fois le mot `*Angers*` alors seul le premier sera substitué
+
+[source,bash]
+----
+:g/Angers/s//Nantes/ 
+----
+
+Ici dans toutes les lignes qui contiennent Orléans,  on recherche `*^#*` pour le substituer par rien (et donc on supprime le `*#*` en début de ligne) 
+
+[source,bash]
+----
+:g/Orléans/s/^#// 
+----
+
+=== Commandes diverses
+
+==== Insertion de données et enregistrement sous
+

@@ -1,6 +1,7 @@
 abbbc
 abbc
 alnum
+Altgr
 apic
 arat
 Beos
