@@ -127,3 +127,67 @@ a! `*^.*$*`  ! La totalité de la ligne quel que soit son contenu
 !===
 |===
 ****
+
+==== Classes de caractères
+
+Les classes de caractères sont des regroupements thématiques de caractères. 
+
+****
+[grid=none,frame=none,cols="15,~,~"]
+|===
+a| * `*[:alpha:]*` | -> | Des lettres 
+a| * `*[:upper:]*` | -> | Des majuscules 
+a| * `*[:lower:]*` | -> | Des minuscules 
+a| * `*[:digit:]*` | -> | Des chiffres décimaux 
+a| * `*[:xdigit:]*` | -> | Des chiffres hexadécimaux 
+a| * `*[:alnum:]*` | -> | Alphanumériques 
+a| * `*[:blank:]*` | -> | Espaces ou tabulations
+a| * `*[:space:]*` | -> | Espaces 
+a| * `*[:punct:]*` | -> | Des caractères de ponctuation 
+a| * `*[:graph:]*` | -> | Caractère imprimable (incluant `*[:alnum:]*` et `*[:punct:]*`)
+a| * `*[:print:]*` | -> | Caractère imprimable incluant l’espace 
+a| * `*[:cntrl:]*` | -> | Caractère de contrôle 
+|===
+****
+
+==== Caractères d'échappement
+
+Les caractères d’échappement permettent de simplifier certains critères d’expressions. 
+
+****
+[grid=none,frame=none,cols="15,~,~"]
+|===
+a| * `*\n*` | -> | Nouvelle ligne
+a| * `*\r*` | -> | Retour chariot
+a| * `*\t*` | -> | Tabulation 
+a| * `*\d*` | -> | `*\[[:digit:]]*` Des chiffres 
+a| * `*\s*` | -> | `*\[[:blank:]]*` Des séparateurs 
+a| * `*\w*` | -> | `*[[:alnum:]_]*` Tous les caractères alphanumériques et l’underscore
+a| * `*\D*` | -> | `*[^[:digit:]]*` Tous sauf des chiffres 
+a| * `*\S*` | -> | `*[^[:space:]]*` Tous sauf des séparateurs ( espace et tabulation ) 
+a| * `*\W*` | -> | `*[^[:alnum:]_]*` Tous les caractères sauf les alphanumériques et l’underscore. 
+a| * `*\u*` | -> | Le caractère suivant sera transformé en majuscule 
+a| * `*\U*` | -> | Tous les caractères suivants seront transformés en majuscules jusqu’à `\E`
+a| * `*\l*` | -> | Le caractère suivant sera transformé en minuscule 
+a| * `*\L*` | -> | Tous les caractères suivants seront transformés en minuscules jusqu'à `\E` 
+a| * `*\E*` | -> | Termine les `\L` et `\U` 
+a| * `*\|*` | -> | "ou" en expression régulière.
+1.2+a| * `*\*` 1.2+| -> | L’antislash est le banaliseur d’atome. 
+| Exemple : `\*` correspond au caractère étoile et non au quantificateur étoile (répétition de 0 à n fois le caractère précédent) 
+|===
+****
+
+==== Sous-expressions et références arrières
+
+*Sous-expression* : partie d'une expression régulière encadrée par des parenthèses. Les parenthèses doivent être protégées par des antislashs. 
+
+*Référence arrière* : pour réutiliser des sous-expressions, de 1 à 9. Elles doivent être protégées par des antislashs. Les sous-expressions sont numérotées de 1 à 9 par la parenthèse ouvrante.  
+
+La référence arrière reprend exactement le résultat trouvé dans sa sous-expression de référence. 
+
+****
+`a\([bc]\)d\1` -> correspond à `abdb` ou `acdc`, mais pas `acdb` 
+****
+
+== Grep : Recherche d'expression dans les fichiers
+

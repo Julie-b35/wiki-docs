@@ -8,6 +8,7 @@ atteinte
 automatique
 automatiquement
 avec
+banaliseur
 benoit
 binaire
 cdrom
