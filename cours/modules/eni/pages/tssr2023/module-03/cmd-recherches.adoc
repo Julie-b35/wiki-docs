@@ -71,9 +71,11 @@ a!  `es\{2,\}ai` ! Correspond à : essai, mais aussi à `esssai`, `essssai` …
 //ligne 6
 a| * `car\{n\}` | -> |  Un caractère répété _n_ fois exactement 
 |        |    a|
-[grid=none,frame=none,cols="~,~"]
+[grid=none,frame=none,cols="18,~"]
 !===
 a!  `[A-Z]\{3\}` ! Correspond à une chaîne de caractères composée de 3 majuscules 
 !===
 |===
 ****
+
+==== Atomes
