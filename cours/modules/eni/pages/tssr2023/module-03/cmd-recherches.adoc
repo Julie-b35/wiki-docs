@@ -245,7 +245,8 @@ a! * `*d*` ! Répertoire
 a! * `*l*` ! Lien symbolique
 a! * `*b*` ! Fichier spécial en mode bloc
 a! * `*c*` ! Fichier spécial en mode caractère
-a! * `*-perm [-] <perms>*` 2.+! Recherche en fonction des droits. `perms` peut être exprimé en notation octale ou symbolique. Si la valeur de `perms` est négative, seuls les fichiers dont les droits sont au moins perms seront retenus. Dans le cas d'une valeur positive, les fichiers retenus seront ceux pour lesquels les droits sont strictement égaux à `perms` 
+3.+a! * `*-perm [-] <perms>*` 
+! 2.+! Recherche en fonction des droits. `perms` peut être exprimé en notation octale ou symbolique. Si la valeur de `perms` est négative, seuls les fichiers dont les droits sont au moins perms seront retenus. Dans le cas d'une valeur positive, les fichiers retenus seront ceux pour lesquels les droits sont strictement égaux à `perms` 
 a! * `*-size nb [c]*` 2.+! Recherche en fonction de la taille des fichiers exprimée en blocs (de 512 octets) ou en octets si nb est suivi du caractère c.  Pour une comparaison en blocs, la taille des fichiers est arrondie au bloc supérieur. Une comparaison octets impose que le ou les fichiers recherchés aient exactement le même nombre d'octets que celui spécifié par l'option `-size`. 
 a! * `*-newer <nom>*` 2.+! Recherche les fichiers dont la date de modification est plus récente que la date de modification du fichier nom. 
 a! * `*-atime <nb>*` 2.+! Recherche des fichiers sur la date de dernier accès, nb correspond au nombre de jours (1 pour la veille, 2 pour 2 jours avant, 3 pour 3 jours avant…) 
