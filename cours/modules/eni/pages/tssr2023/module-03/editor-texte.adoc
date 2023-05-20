@@ -6,3 +6,64 @@
 * Module suivant -> xref:tssr2023/module-03/editor-texte.adoc[Module 10 - Éditer du texte]
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
+
+Tous les systèmes d'exploitation basés sur UNIX implémentent *vi*. C’est l'éditeur de texte standard, conçu pour fonctionner sur tout type de terminal et se contenter d'un clavier minimum (sans touches de flèches, pavé numérique, etc.). 
+
+Le Korn Shell traditionnellement utilisé sur les UNIX s'appuie sur *vi* pour exploiter l'historique des commandes. 
+
+Certains utilitaires l'utilisent également par défaut pour l'édition de fichiers texte, comme le planificateur de tâches cron sur les systèmes RedHat. 
+
+En bref, il n'est pas concevable d'envisager l'administration de machines basées sur des systèmes UNIX sans aucune connaissance de l'éditeur *vi*. 
+
+Sous Linux, c'est l'éditeur *vim* qui est utilisé à la place de *vi*. Il y ajoute certaines fonctionnalités, telles que la reconnaissance de certains langages de programmation qui permettent la coloration syntaxique, l'annulation sur plusieurs commandes et un plus grand nombre d'options de l'environnement de travail. 
+
+Il existe d'autres éditeurs de fichiers intéressants, nous en citerons quelques-uns ici : 
+
+|===
+a| * emacs    | Le principal concurrent de *vi* dans la guerre des éditeurs 
+a| * nano     | Issu d'un autre éditeur : *pico* 
+a| * joe      | Acronyme récursif de _Joe's Own Editor_
+a| * jed      | Multi-plateforme : UNIX, Windows, Beos, GNX, etc. 
+a| * jedit    | Écrit en java, particulièrement pratique pour les développeurs de pages web en CSS, XHTML, PHP 
+a| * ne       | Un éditeur simple à utiliser (la touche Échappe permet d'accéder à un menu comme sur un éditeur graphique) 
+|===
+
+== Vi
+
+`*vi*` est l'éditeur de texte standard d'UNIX. Il fonctionne en mode plein écran, ce qui implique que le type de terminal utilisé a beaucoup d'importance. La variable d'environnement TERM permet d'indiquer ce type de terminal. 
+
+`*vi*` n'existe pas sous GNU/Linux, si l'on exécute vi, c'est la commande `*vim*` qui est utilisée. `*vim*` est un éditeur reprenant les principes de `*vi*` et y apportant des améliorations. 
+
+Il y a deux façons d'utiliser `*vim*` : 
+
+****
+* Le mode *compatible* : respecte les standards UNIX, au détriment de certaines fonctionnalités, ce mode 
+permet de travailler d'une façon unifiée avec `*vi*` et `*vim*`
+* Le mode *non-compatible* : ne respecte pas le standard vi, mais autorise un usage amélioré et des fonctionnalités plus nombreuses. 
+****
+
+Généralement il est préférable de lancer `*vim*` en mode non-compatible. Mais si un jour vous utilisez un système de type UNIX alors vous serez obligé de travailler comme dans le mode compatible, car ce ne sera pas `*vim*`, mais `*vi*` que vous aurez entre les mains. 
+
+=== Les modes de travail
+
+Il existe plusieurs modes de fonctionnement dans `*vim*` : 
+
+****
+* Mode *insertion*, la frappe sur le clavier permet la saisie du texte dans le fichier.
+* Mode *commande*, les caractères tapés sont interprétés comme des commandes.
++
+--
+
+Toutes les commandes de ce mode peuvent être précédées d’un nombre permettant de faire la commande un certain nombre de fois. Par exemple : 
+
+[none]
+* `*12j*` : se déplacer de 12 lignes vers le bas.
+* Cette information sera notée comme suit : `[nb]j`  
+
+Il comprend le sous-mode *commande ex*, commandes de bas de page précédées de "`:`" (deux-points). 
+--
+****
+
+Le mode par défaut de `vim` est le mode commande. 
+
+Un appui sur la touche `<Esc>` permet de revenir en mode commande. 

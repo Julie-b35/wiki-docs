@@ -3,6 +3,7 @@ abbc
 alnum
 apic
 arat
+Beos
 bhmp
 Bogo
 clflush
@@ -15,6 +16,7 @@ cryptd
 Dhhmm
 dnowprefetch
 drwxr
+emacs
 Empawindoz
 erms
 fich
@@ -44,6 +46,7 @@ IBRS
 inum
 invpcid
 Itlb
+jedit
 kauditd
 kblockd
 khugepaged
@@ -73,6 +76,7 @@ pcid
 pclmulqdq
 pdpe
 perfmon
+pico
 popcnt
 prctl
 PRENOM
