@@ -1,0 +1,8 @@
+= Module 10 - Éditer du texte
+:navtitle: Éditer du texte
+
+
+* Module précédent -> xref:tssr2023/module-03/cmd-recherches.adoc[Module 09 - Afficher du texte]
+* Module suivant -> xref:tssr2023/module-03/editor-texte.adoc[Module 10 - Éditer du texte]
+
+Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]

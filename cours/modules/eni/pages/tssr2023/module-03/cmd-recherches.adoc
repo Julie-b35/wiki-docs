@@ -3,7 +3,7 @@
 
 
 * Module précédent -> xref:tssr2023/module-03/gestion-lien.adoc[Module 08 - Gestion des liens]
-* Module suivant -> xref:tssr2023/module-03/cmd-recherches.adoc[Module 07 - Afficher du texte]
+* Module suivant -> xref:tssr2023/module-03/editor-texte.adoc[Module 10 - Éditer du texte]
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
 
@@ -288,3 +288,43 @@ Recherche à partir de /home tous les fichiers de type standard finissant par �
 |===
 ****
 
+=== Regroupement et opérateurs dé sélections
+
+Il est possible avec `find` de regrouper des critères de recherche et d’ajouter des opérateurs de sélection. 
+
+Les regroupements seront à encadrer par des parenthèses précédées d’un antislash. 
+
+Les différents opérateurs sont :  
+
+* `*!*`  : Opérateur de négation
+* `*-o*` : Opérateur OU (Or)
+* `*-a*` : Opérateur ET (And)
+
+Exemple : 
+
+Rechercher des fichiers standards se terminant par `.txt` et des répertoires se terminant par `perso` dans les répertoires d’accueil des utilisateurs : 
+
+[source,bash]
+----
+$ find /home \( -type f -name "*.txt" \) -o \( -type d –name "*perso" \) 
+----
+
+=== Exemples
+
+Rechercher dans le répertoire /etc les fichiers réguliers ayant l'inode 24621 : 
+
+[source,bash]
+----
+$ find /etc -type f -inum 24621 
+----
+
+Rechercher dans son répertoire d'accueil les fichiers suffixés en .tmp et les supprimer : 
+
+[source,bash]
+----
+$ find $HOME -type f -name "*.tmp" -exec rm {} \; 
+----
+
+== TP
+
+Réalisation du TP N° 5 : xref:procedures:tp-eni:tssr2023/client-linux/TP05.adoc[Recherche de contenu et de fichiers]

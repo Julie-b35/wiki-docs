@@ -38,6 +38,7 @@ Les deux types de prompt
 * xref:tssr2023/module-03/show-texte.adoc[Module 07 - Afficher du texte]
 * xref:tssr2023/module-03/gestion-lien.adoc[Module 08 - Gestion des liens]
 * xref:tssr2023/module-03/cmd-recherches.adoc[Module 09 - Afficher du texte]
+* xref:tssr2023/module-03/editor-texte.adoc[Module 10 - Éditer du texte]
 
 == Liste TP
 
@@ -45,3 +46,4 @@ Les deux types de prompt
 * xref:procedures:tp-eni:tssr2023/client-linux/TP02.adoc[TP 02 - Manipuler des fichiers]
 * xref:procedures:tp-eni:tssr2023/client-linux/TP03.adoc[TP 03 - Afficher le contenu des fichiers]
 * xref:procedures:tp-eni:tssr2023/client-linux/TP04.adoc[TP 04 - Gestion des liens]
+* xref:procedures:tp-eni:tssr2023/client-linux/TP05.adoc[TP 05 - Recherche de contenu et de fichiers]

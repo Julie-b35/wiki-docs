@@ -37,9 +37,11 @@
 **** xref:tssr2023/module-03/show-texte.adoc[]
 **** xref:tssr2023/module-03/gestion-lien.adoc[]
 **** xref:tssr2023/module-03/cmd-recherches.adoc[]
+**** xref:tssr2023/module-03/editor-texte.adoc[]
 **** TP
 ***** xref:procedures:tp-eni:tssr2023/client-linux/TP01.adoc[]
 ***** xref:procedures:tp-eni:tssr2023/client-linux/TP02.adoc[]
 ***** xref:procedures:tp-eni:tssr2023/client-linux/TP03.adoc[]
 ***** xref:procedures:tp-eni:tssr2023/client-linux/TP04.adoc[]
+***** xref:procedures:tp-eni:tssr2023/client-linux/TP05.adoc[]
 *** xref:tssr2023/module-04/admin-linux.adoc[]
