@@ -268,7 +268,8 @@ $ find /boot –name "*.cfg" –printf “%f”
 Recherche à partir de /boot tous les fichiers finissant par “.cfg” et n’affiche que le nom de chaque fichier trouvé 
 
 a! * `*-print*` ! Affichage des noms de fichiers trouvés au fur et à mesure 
-a! * `*-exec cmd [options] {} \;*` a! 
+2.+a! * `*-exec cmd [options] {} \;*` 
+! a! 
 Pour chaque fichier trouvé, exécution de la commande cmd. Le nom de chaque fichier est symbolisé par `{}` . La commande se  termine obligatoirement par un espace suivi des caractères  `\;` 
 
 Exemple :
@@ -280,7 +281,8 @@ $ find /home –type f –name "*.txt" –exec ls –l {} \;
 
 Recherche à partir de /home tous les fichiers de type standard finissant par “.txt” et exécute un `ls –l` à chaque fichier trouvé 
 
-a! * `*-ok cmd [options] {} \;*` ! Identique à `-exec` avec demande de confirmation pour chaque exécution de cmd 
+2.+a! * `*-ok cmd [options] {} \;*` 
+! ! Identique à `-exec` avec demande de confirmation pour chaque exécution de cmd 
 !===
 |===
 ****
