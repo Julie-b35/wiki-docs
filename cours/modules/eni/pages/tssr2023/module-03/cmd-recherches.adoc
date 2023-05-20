@@ -191,4 +191,68 @@ La référence arrière reprend exactement le résultat trouvé dans sa sous-exp
 
 == Grep : Recherche d'expression dans les fichiers
 
-dezde
+|===
+^.^| Syntaxe : `*grep* [options] 'expression' <fichier>`
+|===
+
+.options
+****
+[grid=none,frame=none,cols="15,~,~"]
+|===
+a| *  `-c`            | -> | Nombre de lignes contenant l'expression 
+a| *  `-h`            | -> | Suppression du nom de fichier lorsque la recherche est faite dans plusieurs fichiers
+a| *  `-i`            | -> | Ignore la distinction minuscule et majuscule 
+a| *  `-l`            | -> | Affiche uniquement le nom des fichiers contenant l'expression 
+a| *  `-n`            | -> | Chaque ligne est précédée de son numéro dans le fichier 
+a| *  `-v`            | -> | Affiche uniquement les lignes qui ne contiennent pas l'expression 
+a| *  `-f <fichexpr>` | -> | Fichier dans lequel se trouve l'expression à rechercher 
+a| *  `-e`            | -> | Option facultative qui précède l'expression à rechercher, il est possible d’indiquer plusieurs `-e` pour rechercher plusieurs expressions dans un fichier  
+a| *  `'Expression'`  | -> | Expression régulière. Il est préférable de la protéger par des simples quotes 
+a| *  `<fichier>`     | -> | Nom du fichier dans lequel la recherche doit être faite. Ce nom peut être générique. S'il n'est pas spécifié, la recherche est faite sur le canal d'entrée 
+|===
+****
+
+Rechercher, sans tenir compte de la casse, les lignes qui commençant par `dupont` dans le fichier Edition : 
+
+[source,bash]
+----
+$ grep -i '^dupont' Edition 
+----
+
+Vu que `grep` utilise les expressions régulières, il est fortement conseillé d'utiliser des simples quotes pour protéger l'expression de recherche. 
+
+== Find : Recherche de fichiers selon des critères
+
+|===
+^.^| Syntaxe : `*find* <chemin> [critères] [action]`
+|===
+
+.options
+****
+[grid=none,frame=none,cols="15,~,~"]
+|===
+a| * `<chemin>` | -> | Nom du ou des répertoires à partir desquels la recherche va être faite. Si non spécifié, `find` commence sa recherche à partir de la position courante. 
+1.2+a| * `[critères]` | -> | Critères de recherche qui permettent une sélection très précise des fichiers. Ces critères sont très nombreux, mais les suivants sont les plus courants : 
+2.1+a|
+[grid=none,frame=none,cols="30,~,~"]
+!===
+a! * `*-name "nomF"*` 2.+! Recherche en fonction du nom. Ce nom peut être générique et dans ce cas, il doit être protégé par des doubles quotes. 
+a! * `*-user nom*` 2.+! Recherche des fichiers dont le user propriétaire est `nom`. 
+a! * `*-group nom*` 2.+! Recherche des fichiers dont le groupe propriétaire est `nom`. 
+1.6+a! * `*-type <t>*` 2.+! Recherche en fonction de la nature des fichiers. <t> peut prendre les valeurs suivantes : 
+a! * `*f*` ! Fichier ordinaire
+a! * `*d*` ! Répertoire 
+a! * `*l*` ! Lien symbolique
+a! * `*b*` ! Fichier spécial en mode bloc
+a! * `*c*` ! Fichier spécial en mode caractère
+a! * `*-perm [-] <perms>*` 2.+! Recherche en fonction des droits. `perms` peut être exprimé en notation octale ou symbolique. Si la valeur de `perms` est négative, seuls les fichiers dont les droits sont au moins perms seront retenus. Dans le cas d'une valeur positive, les fichiers retenus seront ceux pour lesquels les droits sont strictement égaux à `perms` 
+a! * `*-size nb [c]*` 2.+! Recherche en fonction de la taille des fichiers exprimée en blocs (de 512 octets) ou en octets si nb est suivi du caractère c.  Pour une comparaison en blocs, la taille des fichiers est arrondie au bloc supérieur. Une comparaison octets impose que le ou les fichiers recherchés aient exactement le même nombre d'octets que celui spécifié par l'option `-size`. 
+a! * `*-newer <nom>*` 2.+! Recherche les fichiers dont la date de modification est plus récente que la date de modification du fichier nom. 
+a! * `*-atime <nb>*` 2.+! Recherche des fichiers sur la date de dernier accès, nb correspond au nombre de jours (1 pour la veille, 2 pour 2 jours avant, 3 pour 3 jours avant…) 
+a! * `*-ctime <nb>*` 2.+! Recherche des fichiers sur la date de création ou de dernière modification 
+a! * `*-mtime <nb>*` 2.+! Recherche des fichiers sur la date de dernière modification 
+a! * `*-inum <num>*` 2.+! Recherche des fichiers sur le numéro d'inode 
+!===
+|===
+****
+

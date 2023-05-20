@@ -18,6 +18,7 @@ drwxr
 Empawindoz
 erms
 fich
+fichexpr
 firefox
 flien
 fliensym
@@ -40,6 +41,7 @@ ibpb
 IBPB
 ibrs
 IBRS
+inum
 invpcid
 Itlb
 kauditd
