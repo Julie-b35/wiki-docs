@@ -36,8 +36,10 @@
 **** xref:tssr2023/module-03/metacaractere.adoc[]
 **** xref:tssr2023/module-03/show-texte.adoc[]
 **** xref:tssr2023/module-03/gestion-lien.adoc[]
+**** xref:tssr2023/module-03/cmd-recherches.adoc[]
 **** TP
 ***** xref:procedures:tp-eni:tssr2023/client-linux/TP01.adoc[]
 ***** xref:procedures:tp-eni:tssr2023/client-linux/TP02.adoc[]
 ***** xref:procedures:tp-eni:tssr2023/client-linux/TP03.adoc[]
+***** xref:procedures:tp-eni:tssr2023/client-linux/TP04.adoc[]
 *** xref:tssr2023/module-04/admin-linux.adoc[]

@@ -3,6 +3,106 @@
 
 
 * Module précédent -> xref:tssr2023/module-03/show-texte.adoc[Module 07 - Afficher du texte]
-* Module suivant -> xref:tssr2023/module-03/show-texte.adoc[Module 07 - Afficher du texte]
+* Module suivant -> xref:tssr2023/module-03/cmd-recherches.adoc[Module 09 - Afficher du texte]
 
 Notes -> xref:notes:eni-tssr:client-linux.adoc[Client Linux]
+
+== Ln : Gestion des liens sur fichier et répertoire
+
+|===
+^.^| Syntaxe : `*ln* [-s]  <source> <nomLien>`
+|===
+
+.options
+****
+[grid=none,frame=none,cols="~,~,~"]
+|===
+a| * `-s`        | -> | Option de création d'un lien symbolique. Si absent, il s’agit d’un lien physique 
+a| * `source`    | -> | Nom du fichier ciblé 
+a| * `nomLien`   | -> | Nom du lien 
+|===
+****
+
+===  Lien physique
+
+Un lien physique correspond à une autre référence, dans le même répertoire ou non, qui pointe sur l'inode d'un fichier existant. 
+
+Exemple : Il existe un fichier `fsource` (inode `2133`) auquel on souhaite accéder sous le nom de `flien` 
+
+Schéma du résultat de la commande : `ln fsource flien` 
+
+image::tssr2023/module-03/lien/01.png[01.png]
+
+==== Suppression d'un lien physique
+
+On peut supprimer n'importe quelle référence (n'importe quel fichier lié) sans que les autres soient modifiées. 
+
+Ce n'est que lorsque la dernière référence sera supprimée que les données et donc l’inode le seront également. 
+
+==== Contraintes des liens physiques
+
+Toutes les caractéristiques (sauf le nom ou référence) des fichiers liés sont toujours identiques (même propriétaire, mêmes permissions…). 
+
+Toute modification effectuée sur un fichier est systématiquement héritée par tous les fichiers liés physiquement. 
+
+Tous les fichiers liés doivent être situés dans le même système de fichiers. 
+
+Il est impossible de créer un lien physique sur un répertoire. 
+
+==== Avantages des liens physiques
+
+Lors du déplacement (commande `mv`) d'un des fichiers liés (dans le même système de fichiers) tous les liens restent intacts. 
+
+Un lien physique ne provoque pas l'utilisation d'un nouvel inode. 
+
+=== Lien symbolique
+
+image::tssr2023/module-03/lien/02.png[01.png]
+
+Un lien symbolique consiste à créer un tout petit fichier (nouvel inode) d'un type spécial, dont le contenu correspond à la localisation (absolue ou relative) du fichier auquel il est lié. La taille de ce fichier est égale au nombre de caractères du chemin du fichier d'origine. 
+
+Exemple : il existe un fichier `/home/marie/forig` (inode 2147) pour lequel on souhaite créer un lien symbolique dans `/tmp` sous le nom de `fliensym`. 
+
+[source,shell]
+----
+$ ln -s /home/marie/forig /tmp/fliensym 
+----
+
+L'inode du fichier `fliensym` est 151, sa taille 17 octets et le type "`l`". 
+
+Un accès au contenu d'un lien symbolique nécessite pour le système deux accès successifs, un premier pour lire le nom du fichier pointé par le lien, un second pour accéder au fichier pointé et lire les données de ce dernier. 
+
+Une autre façon de faire, nettement plus simple est : 
+
+[source,shell]
+----
+$ cd /chemin/du/futur/lien 
+$ ln -s nom_du_fichier_a_lier 
+----
+
+==== Suppression d'un lien symbolique
+
+La suppression d'un lien symbolique par la commande `rm` provoque la destruction du fichier de lien sans altérer le fichier cible. 
+
+La suppression du fichier pointé provoque la destruction de celui-ci sans altération du fichier de lien symbolique qui après cette opération existe toujours, mais ne pointe plus sur RIEN. 
+
+Le fait de récréer un fichier pointé du même nom que le précédent revalide le lien symbolique. 
+
+==== Contraintes d'un lien symbolique
+
+Un lien symbolique augmente le temps d'accès aux données : le système doit faire deux lectures pour accéder aux données. 
+
+Si le fichier sur lequel pointe le lien symbolique est déplacé ou supprimé, le lien continue d'exister, mais ne pointe plus sur RIEN. 
+
+==== Avantages d'un lien symbolique
+
+Un fichier de lien symbolique peut être créé dans n’importe quel dossier de l'arborescence du système Linux quels que soient les points de montage utilisés par les différents systèmes de fichiers (disque physique ou partition). 
+
+Il est possible de créer des liens symboliques sur des répertoires. 
+
+La commande ls -l permet de lire clairement le nom du fichier pointé par le lien. 
+
+
+== TP
+
+Réalisation du TP N° 4 : xref:procedures:tp-eni:tssr2023/client-linux/TP04.adoc[Gestion des liens]

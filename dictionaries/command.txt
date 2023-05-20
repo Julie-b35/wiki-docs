@@ -17,7 +17,11 @@ Empawindoz
 erms
 fich
 firefox
+flien
+fliensym
+forig
 fsgsbase
+fsource
 fsrm
 fxsr
 gfni

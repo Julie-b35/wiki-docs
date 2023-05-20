@@ -37,9 +37,11 @@ Les deux types de prompt
 * xref:tssr2023/module-03/metacaractere.adoc[Module 06 - Les caractères spéciaux]
 * xref:tssr2023/module-03/show-texte.adoc[Module 07 - Afficher du texte]
 * xref:tssr2023/module-03/gestion-lien.adoc[Module 08 - Gestion des liens]
+* xref:tssr2023/module-03/cmd-recherches.adoc[Module 09 - Afficher du texte]
 
 == Liste TP
 
 * xref:procedures:tp-eni:tssr2023/client-linux/TP01.adoc[TP 01 - Découverte première commande]
 * xref:procedures:tp-eni:tssr2023/client-linux/TP02.adoc[TP 02 - Manipuler des fichiers]
 * xref:procedures:tp-eni:tssr2023/client-linux/TP03.adoc[TP 03 - Afficher le contenu des fichiers]
+* xref:procedures:tp-eni:tssr2023/client-linux/TP04.adoc[TP 04 - Gestion des liens]
