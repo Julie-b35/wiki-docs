@@ -19,6 +19,8 @@ Sous Linux, c'est l'éditeur *vim* qui est utilisé à la place de *vi*. Il y aj
 
 Il existe d'autres éditeurs de fichiers intéressants, nous en citerons quelques-uns ici : 
 
+****
+[frame=none,grid=none,cols="15,~"]
 |===
 a| * emacs    | Le principal concurrent de *vi* dans la guerre des éditeurs 
 a| * nano     | Issu d'un autre éditeur : *pico* 
@@ -27,7 +29,7 @@ a| * jed      | Multi-plateforme : UNIX, Windows, Beos, GNX, etc.
 a| * jedit    | Écrit en java, particulièrement pratique pour les développeurs de pages web en CSS, XHTML, PHP 
 a| * ne       | Un éditeur simple à utiliser (la touche Échappe permet d'accéder à un menu comme sur un éditeur graphique) 
 |===
-
+****
 == Vi
 
 `*vi*` est l'éditeur de texte standard d'UNIX. Il fonctionne en mode plein écran, ce qui implique que le type de terminal utilisé a beaucoup d'importance. La variable d'environnement TERM permet d'indiquer ce type de terminal. 
@@ -143,7 +145,7 @@ a|* `*N*`           | Répétition de la dernière recherche de chaîne dans le 
 ==== Pose de marque et déplacement sur une marque
 
 ****
-[grid=none,frame=none,cols="15,~"]
+[grid=none,frame=none,cols="20,~"]
 |===
 a|* `*m<a-z>*`   | Marque la position courante du curseur avec la lettre donnée. Par exemple, mf positionne la marque f à la position courante 
 a|* `*'<a-z>*`   | (simple quote) Place le curseur au début de la ligne correspondant à la marque indiquée (une lettre) 
@@ -255,7 +257,8 @@ C’est à l’aide de commandes `*ex*` que `*vim*` effectue ces actions.
 ****
 [grid=none,frame=none,cols="25,~"]
 |===
-a| * `*<ligne à traiter>*`  | Déclaration d’une plage de ligne où la commande `*ex*` s’exécutera. La plage est déclarée comme cela : `*nb,nb*` ( ex : `*10,25*` de la ligne 10 à 25 ). Cette déclaration est optionnelle. 
+2.1+a| * `*<ligne à traiter>*`  
+|| Déclaration d’une plage de ligne où la commande `*ex*` s’exécutera. La plage est déclarée comme cela : `*nb,nb*` ( ex : `*10,25*` de la ligne 10 à 25 ). Cette déclaration est optionnelle. 
 a| * `*g*`              | Indique à la commande `*ex*` qu’elle s’exécutera sur toutes les occurrences trouvées verticalement. Si cette option n’est pas renseignée, la commande `*ex*` arrêtera ses recherches après avoir traité la première occurrence trouvée verticalement. 
 a| * `*/*`              | Séparateur d’expression régulière. Les recherches effectuées dans `*vim*` et ses commandes `*ex*` sont des expressions régulières. Afin de déclarer le début et la fin d’une expression c’est le symbole `*/*` qui fait office de séparateur. 
 a| * `*/RegEx/*`        | Expression recherchée dans le document. 
@@ -279,7 +282,7 @@ Syntaxe:
 |===
 
 ****
-[grid=none,frame=none,cols="18,~"]
+[grid=none,frame=none,cols="25,~"]
 |===
 a| * `:<ld,lf>`      | Ligne de début et ligne de fin de traitement. 
 a| * `g`             | Recherche globale (verticale) dans tout le fichier (sinon la commande `*ex*` s’arrêtera après le traitement de la  première occurrence de recherche) 
