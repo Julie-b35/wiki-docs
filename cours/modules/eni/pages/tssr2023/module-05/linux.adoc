@@ -1,4 +1,5 @@
 =  MSP 01 - Système Client (Linux)
+:navtitle: Linux
 
 == Partitionnement
 
@@ -58,6 +59,8 @@ Configuration du réseau ayant pour ip : 176.16.255.254/16
 |mgreene	     | tssr@mg15_2023$	                         | 	Maggie Greene
 |===
 
+
+.Création des groupes
 [source,bash]
 ----
 groupadd direction && \
@@ -66,5 +69,33 @@ groupadd informatique && \
 groupadd logistique && \
 groupadd commercial
 
-useradd 
+
 ----
+
+.Création des utilisateurs
+[source,bash]
+----
+useradd -c "fullname,contactPersonne,telephonetravail,téléphonedomicile,autre"
+useradd -mc "Rick Grimes,,,," -g "direction" -s "/usr/bin/bash" rgrimes && \
+useradd -mc "Eugene Porter,,,," -g "comptabiliter" -s "/usr/bin/bash" eporter && \
+useradd -mc "Carol Peletier (Intérimaire),,,," -g "comptabiliter" -s "/usr/bin/bash" cpeletier && \
+useradd -mc "Nicolas Le Ponner,,,," -g "informatique" -s "/usr/bin/ksh" nleponner && \
+useradd -mc "Rosita Espinosa,,,," -g "logistique" -s "/usr/bin/bash" respinosa && \
+useradd -mc "Morgan Jones,,,," -g "logistique" -s "/usr/bin/bash" mjones && \
+useradd -mc "Daryl Dixon,,,," -g "commercial" -s "/usr/bin/bash" ddixon && \
+useradd -mc "Gabriel Stokes,,,," -g "commercial" -s "/usr/bin/bash" gstockes && \
+useradd -mc "Maggie Greene,,,," -g "commercial" -s "/usr/bin/bash" mgreene
+
+passwd rgrimes
+passwd eporter
+passwd cpeletier
+passwd nleponner
+passwd respinosa
+passwd mjones
+passwd ddixon
+passwd gstockes
+passwd mgreene
+----
+
+/usr/bin/ksh
+

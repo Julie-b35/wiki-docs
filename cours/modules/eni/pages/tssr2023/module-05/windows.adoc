@@ -1,16 +1,21 @@
-== Windows
+=  MSP 01 - Système Client (Windows)
+:navtitle: windows
 
-=== Partitionnement
+== Partitionnement
 
 Le partitionnement système ce fait sur tout le disque
 
-=== réseau
+== Windows update
+
+empêcher l'utilisation de windows update
+
+== réseau
 
 Mise en place du réseau ayant pour ip : 176.16.255.253/16
 
 NOTE: Configuration du réseau en executant la commande `ncpa.cpl`
 
-=== 2.1.4 Création compte utilisateur
+== 2.1.4 Création compte utilisateur
 
 |===
 | pseudo         | mdp                    ^.^| Groupes       | Noms
@@ -78,7 +83,7 @@ Add-LocalGroupMember -Name Logistique -Member mjones
 ----
 
 
-==== 2.1.6 Définir des heure de session pour l'utilisatrice intérimaire.
+=== 2.1.6 Définir des heure de session pour l'utilisatrice intérimaire.
 
 [source,cmd]
 ----
