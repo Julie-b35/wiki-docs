@@ -15,4 +15,12 @@ Linux : 172.168.255.254
 
 === Caractéristique des VM
 
+.windows
 image::tssr2023/msp/info-vm-win10.png[02.png]
+
+.linux
+image::tssr2023/msp/info-vm-deb.png[]
+
+
+=== Schéma adressage IP : 
+image::tssr2023/msp/schema-ip.png[]
