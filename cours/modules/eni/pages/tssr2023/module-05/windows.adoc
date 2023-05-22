@@ -90,3 +90,48 @@ Add-LocalGroupMember -Name Logistique -Member mjones
 net user cpeletier /times:lundi,vendredi,9:00,12:00
 ----
 
+== contrainte supplémentaire
+
+2.1.12 Pour plus de sûreté, vous ajouterez un autre compte d’administrateur du système en ligne de commande « cmd » et lui indiquerez un mot de passe.
+2.1.13 Les membres du service informatique doivent à l’aide de leur compte pouvoir se connecter sur le système et bénéficier des privilèges d’administrateurs.
+
+[source,cmd]
+----
+REM Création compte admin
+New-LocalUser -Name adm -Description "compte admin" -FullName "admin" -PasswordNeverExpires
+net localgroup Administrateurs adm /add
+
+----
+
+
+== Configuration
+
+2.1.14 Le changement de mot de passe du compte utilisateur de votre binôme devra être forcé à sa première connexion.
+
+Fait en mode graphique
+
+== Configuration de l’environnement de travail
+✓ Sur le poste Windows 10
+
+2.2.1 Les restrictions suivantes seront à paramétrer pour tous les utilisateurs non-administrateurs du système :
+2.2.2 Supprimer les fonctions de gravure CD et empêcher tout accès au lecteur CD et DVD
+2.2.3 Empêcher le lancement des outils de modification du registre (comme regedit…)
+2.2.4 Forcer l’utilisation d’une image de votre choix en tant que fond d’écran
+Cette restriction doit être paramétrée pour tous :
+2.2.5 En outre, le pare-feu devra être obligatoirement actif sur le poste Windows, quel que soit l’utilisateur connecté.
+
+
+== Partie 3 - Configuration du stockage et des ressources
+
+3.1.1 Son deuxième disque dur utilisera le format de table de partition « MBR ». Vous créerez via DISKPART sur celui-ci une partition nommée « DATA », accessible par la lettre « D: » d’une taille de 10 Go. Puis l’étendre avec les 5GO supplémentaires.
+
+[source,cmd]
+----
+diskpart
+select disk 1
+create partition primary size=10240
+select partition 1
+format fs=ntfs label=DATA quick
+assign letter=d
+extend size=5120
+----

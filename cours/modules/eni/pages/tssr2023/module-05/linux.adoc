@@ -97,5 +97,74 @@ passwd gstockes
 passwd mgreene
 ----
 
-/usr/bin/ksh
+== Configuration
 
+2.1.14 Le changement de mot de passe du compte utilisateur de votre binôme devra être forcé à sa première connexion.
+
+[source,shell]
+----
+passwd -e nleponner
+passwd: password expiry information changed.
+----
+
+== Configuration de l’environnement de travail
+
+Sur le poste Debian 10
+2.2.6 Avec l’éditeur de texte VIM; En une seule ligne avec :g/ (remplacer) commenter les sources deb-src dans /etc/apt/sources.list.
+2.2.7 N’oubliez pas de commenter la ligne indiquant le DVD.
+2.2.8 Pour améliorer le confort sous Vim, vous mettrez à jour l’application via le package simplement nommé « vim» et activerez automatiquement la coloration syntaxique et la numérotation des lignes.
+
+[source,bash]
+----
+vim +":%s/\(deb-src\)/#\1/g" +":wq" /etc/apt/sources.list
+----
+
+== Partie 3 - Configuration du stockage et des ressources
+
+3.1.2 Trois partitions principales seront créées sur le deuxième disque dur :
+3.1.2.1 La 1re, formatée en ext4, occupera un espace de 15 Go et se nommera « PROFILS »
+3.1.2.2 La 2e, formatée en ext4, fera 15 Go et s’appellera « DATA »
+3.1.2.3 La 3e, formatée en xfs (le système de fichiers n’est pas installé par défaut), occupera tout l’espace restant et se nommera « LOGS »
+
+Partition créer via fdisk
+
+[source,bash]
+----
+mkfs.ext4 -L "PROFILS" /dev/sdb1 && \
+mkfs.ext4 -L "DATA" /dev/sdb2
+mkfs.xfs -L "LOGS" /dev/sdb3
+----
+
+3.2 Occupation des espaces disques
+✓ Sur le poste Debian 10
+N.B : il est fortement conseillé de réaliser un snapshot machine éteinte.
+3.2.1 Répertoires d’accueil
+Finalement, l’espace alloué au dossier contenant les profils utilisateurs « /home » a été sous-estimé. En conséquence, il vous est demandé de remplacer définitivement ce volume par celui nommé « PROFILS », crée précédemment. Une fois les actions terminées, vous testerez que les utilisateurs ont bien accès à leurs données personnelles.
+
+Teston si des fichiers sont en cours de lecture
+[source,bash]
+----
+lsof /home
+
+COMMAND   PID  USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
+pipewire  807 julie  cwd    DIR  254,0     4096   12 /home/julie
+pulseaudi 808 julie  mem    REG  254,0    28672   24 /home/julie/.config/pulse/d7f04b037b1d43d499cd393a872286c8-card-database.tdb
+pulseaudi 808 julie  mem    REG  254,0    12288   22 /home/julie/.config/pulse/d7f04b037b1d43d499cd393a872286c8-device-volumes.tdb
+pulseaudi 808 julie  mem    REG  254,0      696   23 /home/julie/.config/pulse/d7f04b037b1d43d499cd393a872286c8-stream-volumes.tdb
+pulseaudi 808 julie   10u   REG  254,0    12288   22 /home/julie/.config/pulse/d7f04b037b1d43d499cd393a872286c8-device-volumes.tdb
+pulseaudi 808 julie   11u   REG  254,0      696   23 /home/julie/.config/pulse/d7f04b037b1d43d499cd393a872286c8-stream-volumes.tdb
+pulseaudi 808 julie   12u   REG  254,0    28672   24 /home/julie/.config/pulse/d7f04b037b1d43d499cd393a872286c8-card-database.tdb
+dbus-daem 812 julie  cwd    DIR  254,0     4096   12 /home/julie
+pipewire- 816 julie  cwd    DIR  254,0     4096   12 /home/julie
+pipewire- 816 julie    3u   DIR  254,0     4096   39 /home/julie/.config/pipewire-media-session
+gsettings 826 julie  mem    REG  254,0      928   66 /home/julie/.config/dconf/user
+julie@deb-jb:/$
+
+----
+
+Basculons sur la cible multi-user.target
+
+[source,bash]
+----
+systemctl isolate multi-user.target
+----
