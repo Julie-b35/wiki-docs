@@ -60,6 +60,7 @@ kworker
 lahf
 legende
 libbz
+localgroup
 logind
 macropaquets
 metacaractere
@@ -70,6 +71,8 @@ movdir
 movdiri
 mtrr
 multihit
+ncpa
+nmtui
 NUMA
 ospke
 PBRSB
@@ -103,6 +106,7 @@ swapgs
 syscall
 udevd
 umip
+USERACCOUNT
 usercopy
 vaes
 vpclmulqdq

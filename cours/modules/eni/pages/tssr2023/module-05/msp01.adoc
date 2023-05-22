@@ -24,3 +24,137 @@ image::tssr2023/msp/info-vm-deb.png[]
 
 === Schéma adressage IP : 
 image::tssr2023/msp/schema-ip.png[]
+
+
+== Windows
+
+=== Partitionnement
+
+Le partitionnement système ce fait sur tout le disque
+
+=== réseau
+
+Mise en place du réseau ayant pour ip : 176.16.255.253/16
+
+NOTE: Configuration du réseau en executant la commande `ncpa.cpl`
+
+=== Création compte utilisateur
+
+|===
+| pseudo         | mdp                    ^.^| Groupes       | Noms
+4.1+^.^| Via Cmd
+|rgrimes         |	tssr@rg15_2023$	      ^.^| Direction     | Rick Grimes
+|eporter  	     | tssr@ep15_2023$	     .2+^.^|  Comptabilité	| Eugene Porter
+|cpeletier	     | tssr@cp15_2023$		                    | Carol Peletier (Intérimaire)
+4.1+^.^| Via Powershell
+|jbrindejont	 | cldras	            .2+^.^|   Informatique	| Julie Brindejont
+|nleponner	     | tssr@nl15_2023$		                       | Nicolas Le Ponner
+|respinosa	     | tssr@re15_2023$	    .2+^.^| Logistique |	Rosita Espinosa
+|mjones	         | tssr@mj15_2023$		                         | Morgan Jones
+4.1+^.^| Via graphique
+|ddixon	         | tssr@dd15_2023$	   .3+^.^| Commercial    | Daryl Dixon
+|gstockes        |	tssr@gs15_2023$		                     | Gabriel Stokes
+|mgreene	     | tssr@mg15_2023$	                         | 	Maggie Greene
+|===
+
+Groupe ayant accès Commercial, comptabilité
+
+
+.ajout compte via cmd
+[source,cmd]
+----
+REM Ajouter des groupes utilisateurs
+net localgroup Direction /add /comment:"Service Direction" 
+net localgroup Comptabiliter /add /comment:"Service Comptabilité"
+
+REM Création compte utilisateur
+net user rgrimes * /add /fullname:"Rick Grimes" /comment:"Rick Grimes"
+net user eporter * /add /fullname:"Eugene Porter" /comment:"Eugene Porter"
+net user cpeletier * /add /fullname:"Carol Peletier" /comment:"Carol Peletier (Intérimaire)"
+
+REM Ajouts des membres aux groupes
+net localgroup Direction rgrimes /add
+net localgroup Comptabiliter eporter cpeletier /add
+
+REM Définir l'expiration des mot de passe à jamais (source web)
+WMIC USERACCOUNT WHERE Name='rgrimes' SET PasswordExpires=FALSE
+WMIC USERACCOUNT WHERE Name='eporter' SET PasswordExpires=FALSE
+WMIC USERACCOUNT WHERE Name='cpeletier' SET PasswordExpires=FALSE
+
+REM Désactiver certain compte
+net user rgrimes
+----
+
+[source,powershell]
+----
+REM Ajouter des groupes utilisateurs
+New-LocalGroup -Name Informatique -Description "Service Informatique"
+New-LocalGroup -Name Logistique -Description "Service Logistique"
+
+REM Création compte utilisateur
+New-LocalUser -Name nleponner -Description "Nicolas Le Ponner (prestataire)" -FullName "Nicolas Le Ponner" -PasswordNeverExpires
+New-LocalUser -Name respinosa -Description "Rosita Espinosa" -FullName "Rosita Espinosa" -PasswordNeverExpires
+New-LocalUser -Name mjones -Description "Morgan Jones" -FullName "Morgan Jones" -PasswordNeverExpires
+Rename-LocalUser -Name julie -NewName jbrindejont 
+Set-LocalUser -Name jbrindejont -Description "Julie Brindejont" -FullName "Julie Brindejont" -PasswordNeverExpires $true
+
+REM Ajouts des membres aux groupes
+Add-LocalGroupMember -Name Informatique -Member nleponner
+Add-LocalGroupMember -Name Informatique -Member jbrindejont
+Add-LocalGroupMember -Name Logistique -Member respinosa
+Add-LocalGroupMember -Name Logistique -Member mjones
+----
+
+
+==== Définir des heure de session pour l'utilisatrice intérimaire.
+
+[source,cmd]
+----
+net user cpeletier /times:lundi,vendredi,9:00,12:00
+----
+
+
+== Linux
+
+=== Partitionnement
+
+découpage du disque dur `sda` en 2 partie:
+
+* sda1 Partition lvm :  18 176 MB
+* sda2 partition lvm :  le reste
+
+[cols="^.^,^.^,^.^"]
+|===
+3.+| Volume Groupe (lvm)
+| label | Partition  |Site (MB)
+| system | sda1  | *18 176MB*
+| data | sda2  | Le reste
+|===
+
+.Volume logique (system)
+|===
+3.+^.^| Logical Volume
+^.^| label ^.^| Point de montage |Site (MB)
+| racine | / | 17 Go
+| boot | /boot | 512 Mo
+| swap | swap | 256 Mo
+|===
+
+.Volume logique (data)
+|===
+3.+^.^| Logical Volume
+^.^| label ^.^| Point de montage |Site (MB)
+| home | /home | 1 Go
+|===
+
+
+=== réseau
+
+Configuration du réseau ayant pour ip : 176.16.255.254/16
+
+[NOTE]
+====
+* Commande utilisé : `nmtui`
+====
+
+=== Création compte utilisateur
