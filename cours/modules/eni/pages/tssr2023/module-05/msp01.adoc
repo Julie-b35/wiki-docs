@@ -1,6 +1,18 @@
 = MSP - 01 ()
 
-Formateur : 
+Formateur : Hansan KURTULUS
 
 Mail : 
 
+== Partie 1 - Installation des systèmes
+
+=== Découpage réseau
+
+Le découpage réseau je le ferais plus tard.
+
+Windows 10 : 172.16.255.253
+Linux : 172.168.255.254
+
+=== Caractéristique des VM
+
+image::tssr2023/msp/info-vm-win10.png[02.png]

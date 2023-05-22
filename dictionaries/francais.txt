@@ -53,6 +53,7 @@ Gparted
 gpietri
 graphique
 GSHADOW
+Hansan
 identifiée
 idprefix
 idseparator
@@ -61,6 +62,7 @@ inet
 j'annalyse
 jronsaud
 julie
+KURTULUS
 lancé
 LEFRANC
 LEMASSON
