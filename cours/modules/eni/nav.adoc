@@ -46,3 +46,5 @@
 ***** xref:procedures:tp-eni:tssr2023/client-linux/TP05.adoc[]
 *** xref:tssr2023/module-04/admin-linux.adoc[]
 *** xref:tssr2023/module-05/msp01.adoc[]
+**** xref:tssr2023/module-05/linux.adoc[]
+**** xref:tssr2023/module-05/windows.adoc[]

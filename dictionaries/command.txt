@@ -12,6 +12,7 @@ clflushopt
 clwb
 cmov
 cntrl
+comptabiliter
 cpuid
 cryptd
 Dhhmm

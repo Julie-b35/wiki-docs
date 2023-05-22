@@ -1,0 +1,70 @@
+=  MSP 01 - Système Client (Linux)
+
+== Partitionnement
+
+découpage du disque dur `sda` en 2 partie:
+
+* sda1 Partition lvm :  18 176 MB
+* sda2 partition lvm :  le reste
+
+[cols="^.^,^.^,^.^"]
+|===
+3.+| Volume Groupe (lvm)
+| label | Partition  |Site (MB)
+| system | sda1  | *18 176MB*
+| data | sda2  | Le reste
+|===
+
+.Volume logique (system)
+|===
+3.+^.^| Logical Volume
+^.^| label ^.^| Point de montage |Site (MB)
+| racine | / | 17 Go
+| boot | /boot | 512 Mo
+| swap | swap | 256 Mo
+|===
+
+.Volume logique (data)
+|===
+3.+^.^| Logical Volume
+^.^| label ^.^| Point de montage |Site (MB)
+| home | /home | 1 Go
+|===
+
+
+== réseau
+
+Configuration du réseau ayant pour ip : 176.16.255.254/16
+
+[NOTE]
+====
+* Commande utilisé : `nmtui`
+====
+
+== Création compte utilisateur
+
+
+|===
+| pseudo         | mdp                    ^.^| Groupes       | Noms
+|rgrimes         |	tssr@rg15_2023$	      ^.^| Direction     | Rick Grimes
+|eporter  	     | tssr@ep15_2023$	     .2+^.^|  Comptabilité	| Eugene Porter
+|cpeletier	     | tssr@cp15_2023$		                    | Carol Peletier (Intérimaire)
+|jbrindejont	 | cldras	            .2+^.^|   Informatique	| Julie Brindejont
+|nleponner	     | tssr@nl15_2023$		                       | Nicolas Le Ponner
+|respinosa	     | tssr@re15_2023$	    .2+^.^| Logistique |	Rosita Espinosa
+|mjones	         | tssr@mj15_2023$		                         | Morgan Jones
+|ddixon	         | tssr@dd15_2023$	   .3+^.^| Commercial    | Daryl Dixon
+|gstockes        |	tssr@gs15_2023$		                     | Gabriel Stokes
+|mgreene	     | tssr@mg15_2023$	                         | 	Maggie Greene
+|===
+
+[source,bash]
+----
+groupadd direction && \
+groupadd comptabiliter && \
+groupadd informatique && \
+groupadd logistique && \
+groupadd commercial
+
+useradd 
+----
