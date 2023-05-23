@@ -5,6 +5,8 @@
 
 Pendant l'installation de Windows, j'ai laissé toutes les options par défaut
 
+Renommage du PC en `*W10-JB*`
+
 === Partitionnement
 
 Le partitionnement système ce fait sur tout le disque
@@ -30,6 +32,32 @@ a| image::tssr2023/msp/W10-JB-configReseau-eth0.png[] a| image::tssr2023/msp/W10
 
 [source,cmd]
 ----
+REM ping vers deb-jb
+C:\Users\julie>ping 172.16.255.254
+
+Envoi d’une requête 'Ping'  172.16.255.254 avec 32 octets de données :
+Réponse de 172.16.255.254 : octets=32 temps<1ms TTL=64
+Réponse de 172.16.255.254 : octets=32 temps<1ms TTL=64
+Réponse de 172.16.255.254 : octets=32 temps<1ms TTL=64
+Réponse de 172.16.255.254 : octets=32 temps<1ms TTL=64
+
+Statistiques Ping pour 172.16.255.254:
+    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
+Durée approximative des boucles en millisecondes :
+    Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms
+
+REM ping vers W10-JB
+ping 172.16.255.253
+Envoi d’une requête 'Ping'  172.16.255.253 avec 32 octets de données :
+Réponse de 172.16.255.253 : octets=32 temps<1ms TTL=128
+Réponse de 172.16.255.253 : octets=32 temps<1ms TTL=128
+Réponse de 172.16.255.253 : octets=32 temps<1ms TTL=128
+Réponse de 172.16.255.253 : octets=32 temps<1ms TTL=128
+
+Statistiques Ping pour 172.16.255.253:
+    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
+Durée approximative des boucles en millisecondes :
+    Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms
 ----
 
 == réseau
