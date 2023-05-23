@@ -30,7 +30,7 @@ image:tssr2023/msp/presentation-msp.png[Présentation]
 
 ==== Poste Client Windows
 
-pass:[<u>Nom</u>] : *W10-*JB
+pass:[<u>Nom</u>] : **W10-**JB
 
 pass:[<u>Systèmes d'exploitation</u>] :  Windows 10 professionnel
 
@@ -45,6 +45,11 @@ pass:[<u>Prérequis matériels</u>] :
 * 1 disque dur additionnel de 40 Go
 |Réseau : | 1 interface réseau en "host-only"
 |===
+
+* [x] Voici la configuration faite sur `VMware Workstation` : 
+
+image::tssr2023/msp/info-vm-win10.png[Configuration Workstation]
+
 === Découpage réseau
 
 Le découpage réseau je le ferais plus tard.
@@ -55,7 +60,7 @@ Linux : 172.168.255.254
 === Caractéristique des VM
 
 .windows
-image::tssr2023/msp/info-vm-win10.png[02.png]
+
 
 .linux
 image::tssr2023/msp/info-vm-deb.png[]
