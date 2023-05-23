@@ -4,6 +4,7 @@ icence
 LGPO
 logname
 Logname
+lutilisatrice
 MMDD
 mobaxterm
 nblig

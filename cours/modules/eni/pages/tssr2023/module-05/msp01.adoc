@@ -147,21 +147,31 @@ image::tssr2023/msp/tp-02.png[]
 
 * [x] 2.1.5 Ces utilisateurs posséderont tous dans le dossier « Bureau » de leur profil un dossier nommé « Procédures » qui contiendra, en outre, un fichier « Règlement intérieur ».
 
-image::tssr2023/msp/w10-verifCreateDossierProcedures.png[]
+.vérification
+[source,powershell]
+----
+PS C:\Users\Default\Desktop\Procédures> Get-ChildItem *
+
+
+    Répertoire : C:\Users\Default\Desktop\Procédures
+
+
+Mode                 LastWriteTime         Length Name
+----                 -------------         ------ ----
+-a----        21/05/2023     21:28          42104 Réglement intérieur.docx
+----
 
 * [x] 2.1.6 Le poste d’intérimaire comptable est un emploi à mi-temps. La société a décidé de contraindre les heures d’ouverture de session disponibles de ce compte de 9h00 jusque 12h00 tous les jours ouvrés (lundi au vendredi).
 
 [none]
-* -> xref:tssr2023/module-05/windows.adoc#Définir-des-heure-de-session-pour-l'utilisatrice-intérimaire[Définir des heure de session pour l'utilisatrice intérimaire]
+* -> xref:tssr2023/module-05/windows.adoc#définir-des-heure-de-session-pour-lutilisatrice-intérimaire[Définir des heure de session pour l'utilisatrice intérimaire]
 
-[none]
-
-* -> xref:tssr2023/module-05/linux.adoc#Configuration-du-réseau[Procédure : Configuration du réseau (Linux)]
-
-compte utilisateur
 === Sur le poste Debian 10
 
-* [ ] 2.1.7 Tous les utilisateurs de la société sont susceptibles d’utiliser ce poste localement ou en connexion à distance. Par conséquent, sa base de comptes contiendra tous les utilisateurs
+* [x] 2.1.7 Tous les utilisateurs de la société sont susceptibles d’utiliser ce poste localement ou en connexion à distance. Par conséquent, sa base de comptes contiendra tous les utilisateurs
+
+[none]
+* -> xref:tssr2023/module-05/linux.adoc#ajout-comptes-utilisateurs[Procédure : Ajout comptes utilisateurs (Linux)]
 
 ==== Contraintes supplémentaires
 

@@ -116,6 +116,7 @@ rechercher
 redémarrage
 Redémarrer
 Redhat
+Réglement
 relatifs
 respinosa
 Restaurer
