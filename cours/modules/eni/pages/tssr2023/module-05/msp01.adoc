@@ -1,10 +1,26 @@
-= MSP - 01 ()
+= MSP - 01 (Systèmes clients)
 
 Formateur : Hansan KURTULUS
 
 Mail : 
 
+Avant tout chose, j'ai séparé la présentation du tp
+
+Une partie Windows et une partie Linux
+
+
 == Partie 1 - Installation des systèmes
+
+=== 1.1 Présentation
+
+L’objectif de cette mise en situation professionnelle est d’installer et configurer progressivement deux systèmes d’exploitation : Microsoft Windows 10 et Debian 10.
+
+NOTE: Rectification, j'ai installé Microsoft Windows 10 pro version 22h2?, ainsi que debian 11.
+
+TODO: Vérifié la version de windows 10
+
+
+image:tssr2023/msp/presentation-msp.png[Présentation]
 
 === Découpage réseau
 
