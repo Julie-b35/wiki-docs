@@ -21,6 +21,10 @@ image::tssr2023/msp/w10-majInterrompue.png[]
 
 === Configuration du réseau
 
+|===
+| Carte réseau : Ethernet 0 (réseau 176.16.0.0/16) | Carte réseau : Ethernet 1 (réseau Eni)
+a| image::tssr2023/msp/W10-JB-configReseau-eth0.png[] a| image::tssr2023/msp/W10-JB-configReseau-eth1.png[]
+|===
 
 == réseau
 
