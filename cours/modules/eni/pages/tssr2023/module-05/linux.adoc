@@ -124,7 +124,7 @@ passwd gstockes
 passwd mgreene
 ----
 
-=== Expiration mot de passe binôme
+==== Expiration mot de passe binôme
 
 [source,shell]
 ----
@@ -132,7 +132,7 @@ passwd -e nleponner
 passwd: password expiry information changed.
 ----
 
-== 2.2 Configuration de l’environnement de travail
+=== 2.2 Configuration de l’environnement de travail
 
 
 

@@ -168,14 +168,14 @@ Add-LocalGroupMember -Name Logistique -Member mjones
 net user cpeletier /times:lundi,vendredi,9:00,12:00
 ----
 
-=== contrainte supplémentaire
+==== contrainte supplémentaire
 
-==== Configuration Stratégie Global de Sécurité
+===== Configuration Stratégie Global de Sécurité
 
 
 image::tssr2023/msp/w10-jb-scpolMsc.png[]
 
-==== ajout d'un compte admin pour plus de sécurité
+===== ajout d'un compte admin pour plus de sécurité
 
 [source,cmd]
 ----
@@ -184,12 +184,12 @@ New-LocalUser -Name adm -Description "compte admin" -FullName "admin" -PasswordN
 net localgroup Administrateurs adm /add
 ----
 
-==== Expiration mot de passe binôme
+===== Expiration mot de passe binôme
 
 image::tssr2023/msp/w10-jb/expriationPasswordBinome.png[]
 
 
-== 2.2 Configuration de l’environnement de travail
+=== 2.2 Configuration de l’environnement de travail
 
 == Partie 3 - Configuration du stockage et des ressources
 
