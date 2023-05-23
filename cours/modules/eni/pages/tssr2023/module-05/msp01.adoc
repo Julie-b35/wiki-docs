@@ -8,7 +8,7 @@ Mail :
 
 J'ai conçue deux procédures distinct.
 
-L'une pour xref:tssr2023/module-05/windows.adoc[*Windows*], l'autre pour xref:tssr2023/module-05/linux.adoc[*Linux*}.
+L'une pour xref:tssr2023/module-05/windows.adoc[*Windows*], l'autre pour xref:tssr2023/module-05/linux.adoc[*Linux*].
 
 == Partie 1 - Installation des systèmes
 
