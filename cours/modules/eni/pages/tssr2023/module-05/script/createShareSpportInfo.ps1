@@ -1,0 +1,1 @@
+New-SmbShare -Name "Support_Info$" -Path "D:\Support_Info" -FullAccess "DL_Informatique_RW"
