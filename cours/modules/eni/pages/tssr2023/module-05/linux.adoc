@@ -13,6 +13,10 @@ image::tssr2023/msp/deb-jb-partitionnement.png[]
 
 === Configuration du réseau
 
+|===
+| Carte réseau : ens36 (réseau 176.16.0.0/16) | Carte réseau : ens33 (réseau Eni)
+a| image::tssr2023/msp/deb-jb-configReseau-eth1.png[] a| image::tssr2023/msp/deb-jb-configReseau-eth0.png[]
+|===
 
 
 Configuration du réseau ayant pour ip : 176.16.255.254/16

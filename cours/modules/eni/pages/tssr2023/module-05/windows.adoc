@@ -26,6 +26,12 @@ image::tssr2023/msp/w10-majInterrompue.png[]
 a| image::tssr2023/msp/W10-JB-configReseau-eth0.png[] a| image::tssr2023/msp/W10-JB-configReseau-eth1.png[]
 |===
 
+==== Test ping
+
+[source,cmd]
+----
+----
+
 == réseau
 
 Mise en place du réseau ayant pour ip : 176.16.255.253/16
