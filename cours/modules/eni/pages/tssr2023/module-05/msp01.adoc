@@ -150,3 +150,15 @@ image::tssr2023/msp/tp-02.png[]
 === Sur le poste Debian 10
 
 * [ ] 2.1.7 Tous les utilisateurs de la société sont susceptibles d’utiliser ce poste localement ou en connexion à distance. Par conséquent, sa base de comptes contiendra tous les utilisateurs
+
+==== Contraintes supplémentaires
+
+* [ ]Sur le poste Windows 10
+** [ ] 2.1.8 La stratégie globale de sécurité de mots de passe comportera les contraintes suivantes :
+** [ ] 2.1.9 12 caractères au minimum
+** [ ] 2.1.10 Changement obligatoire tous les 25 jours
+** [ ] 2.1.11 Exigences de complexité activées
+** [ ] 2.1.12 Pour plus de sureté, vous ajouterez un autre compte d’administrateur du système en ligne de commande « cmd » et lui indiquerez un mot de passe.
+** [ ] 2.1.13 Les membres du service informatique doivent à l’aide de leur compte pouvoir se connecter sur le système et bénéficier des privilèges d’administrateurs.
+* [ ] Sur les postes Windows 10 & Debian 10
+** [ ] 2.1.14 Le changement de mot de passe du compte utilisateur de votre binôme devra être forcé à sa première connexion.
