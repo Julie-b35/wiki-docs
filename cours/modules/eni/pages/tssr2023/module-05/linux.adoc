@@ -1,11 +1,13 @@
 =  MSP 01 - Procédures pour Linux
 :navtitle: Procédure : Linux
 
-== Installation des systèmes
+== Partie 1 - Installation des systèmes
+
+=== Installation des systèmes
 
 J'ai fais l'installation via le mode texte.
 
-== Partitionnement
+=== Partitionnement
 
 découpage du disque dur `sda` en 2 partie:
 
@@ -131,7 +133,9 @@ passwd -e nleponner
 passwd: password expiry information changed.
 ----
 
-== Configuration de l’environnement de travail
+== 2.2 Configuration de l’environnement de travail
+
+=== 2.1 Création d’utilisateurs et de groupes
 
 Sur le poste Debian 10
 2.2.6 Avec l’éditeur de texte VIM; En une seule ligne avec :g/ (remplacer) commenter les sources deb-src dans /etc/apt/sources.list.

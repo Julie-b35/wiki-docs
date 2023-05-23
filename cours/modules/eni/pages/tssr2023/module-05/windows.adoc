@@ -93,6 +93,8 @@ Durée approximative des boucles en millisecondes :
 
 == Partie 2 – Configuration des utilisateurs et de l’environnement
 
+=== 2.1 Création d’utilisateurs et de groupes
+
 |===
 | pseudo         | mdp                    ^.^| Groupes       | Noms
 4.1+^.^| Via Cmd
@@ -187,7 +189,7 @@ net localgroup Administrateurs adm /add
 image::tssr2023/msp/w10-jb/expriationPasswordBinome.png[]
 
 
-== Configuration de l’environnement de travail
+== 2.2 Configuration de l’environnement de travail
 
 == Partie 3 - Configuration du stockage et des ressources
 
