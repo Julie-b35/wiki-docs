@@ -48,6 +48,13 @@ pass:[<u>Prérequis matériels</u>] :
 
 * [x] Voici la configuration faite sur `VMware Workstation` : 
 
+[IMPORTANT]
+====
+Au cour du TP afin de joindre mon binôme, j'ai mis la première carte réseau en `bridge`.
+
+De plus j'ai ajouté un 2^ème^ interface réseau en `bridge` aussi pour communiquer avec le réseau de l'eni.
+====
+
 image::tssr2023/msp/info-vm-win10.png[Configuration Workstation]
 
 === Découpage réseau
