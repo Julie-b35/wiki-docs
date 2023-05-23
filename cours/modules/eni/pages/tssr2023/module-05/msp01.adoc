@@ -268,3 +268,4 @@ Par exemple, les commerciaux seront les seuls à pouvoir accéder en lecture et 
 ****
 _Pour aller plus loin : faire en sorte que tout nouveau fichier créé dans le répertoire logistique appartienne au groupe logistique._
 ****
+

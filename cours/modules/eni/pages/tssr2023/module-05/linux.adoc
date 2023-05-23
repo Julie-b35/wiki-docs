@@ -285,3 +285,5 @@ lvremove data home
 # redémarrage système
 reboot
 ----
+
+==== Mise en place dossier services
