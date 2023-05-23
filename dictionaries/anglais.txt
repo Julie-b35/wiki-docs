@@ -2,11 +2,15 @@ authpriv
 autofetch
 backquote
 blkid
+daem
+dbus
+dconf
 debian
 eneral
 extglob
 fdisk
 gpedit
+gsettings
 inodes
 journalctl
 Kernighan
@@ -17,6 +21,8 @@ noauto
 nsswitch
 penthium
 Penthium
+pipewire
+pulseaudi
 rsyslog
 shub
 superblocks

@@ -190,6 +190,7 @@ Mode                 LastWriteTime         Length Name
 * [x] Sur les postes Windows 10 & Debian 10
 ** [x] 2.1.14 Le changement de mot de passe du compte utilisateur de votre binôme devra être forcé à sa première connexion.
 
+[none]
 * -> xref:tssr2023/module-05/windows.adoc#expiration-mot-de-passe-binôme[Procédure: Expiration mot de passe binôme (Windows)]
 * -> xref:tssr2023/module-05/linux.adoc#expiration-mot-de-passe-binôme[Procédure: Expiration mot de passe binôme (Linux)]
 
@@ -206,6 +207,7 @@ Cette restriction doit être paramétrée pour tous :
 
 * [x] 2.2.5 En outre, le pare-feu devra être obligatoirement actif sur le poste Windows, quel que soit l’utilisateur connecté.
 
+[none]
 * -> xref:tssr2023/module-05/windows.adoc#2-2-configuration-de-lenvironnement-de-travail[Procédure: Édition stratégie local (Windows)]
 
 ==== Sur le poste Debian 11
@@ -214,6 +216,7 @@ Cette restriction doit être paramétrée pour tous :
 * [x]  2.2.7 N’oubliez pas de commenter la ligne indiquant le DVD.
 * [x]  2.2.8 Pour améliorer le confort sous Vim, vous mettrez à jour l’application via le package simplement nommé « vim» et activerez automatiquement la coloration syntaxique et la numérotation des lignes.
 
+[none]
 * -> xref:tssr2023/module-05/linux.adoc#2-2-configuration-de-lenvironnement-de-travail[Procédure: Configuration des sources apt (Linux)]
 
 
@@ -225,6 +228,7 @@ Cette restriction doit être paramétrée pour tous :
 
 * [x] 3.1.1 Son deuxième disque dur utilisera le format de table de partition « MBR ». Vous créerez via DISKPART sur celui-ci une partition nommée « DATA », accessible par la lettre « D: » d’une taille de 10 Go. Puis l’étendre avec les 5GO supplémentaires.
 
+[none]
 * -> xref:tssr2023/module-05/windows.adoc#3-1-partitionnement-de-disques[Procédure: Partitionnement 2^ème^ (Windows)]
 
 ==== Sur le poste Debian 10
@@ -234,4 +238,21 @@ Cette restriction doit être paramétrée pour tous :
 ** [x] 3.1.2.2 La 2e, formatée en ext4, fera 15 Go et s’appellera « DATA »
 ** [x] 3.1.2.3 La 3e, formatée en xfs (le système de fichiers n’est pas installé par défaut), occupera tout l’espace restant et se nommera « LOGS »
 
+[none]
 * -> xref:tssr2023/module-05/linux.adoc#3-1-partitionnement-de-disques[Procédure: Partitionnement 2^ème^ (Windows)]
+
+=== 3.2 Occupation des espaces disques
+
+==== Sur le poste Debian 10
+
+NOTE: il est fortement conseillé de réaliser un snapshot machine éteinte.
+
+*[ ] 3.2.1 Répertoires d’accueil
+
+****
+Finalement, l’espace alloué au dossier contenant les profils utilisateurs « /home » a été sous-estimé. En conséquence, il vous est demandé de remplacer définitivement ce volume par celui nommé « PROFILS », crée précédemment. Une fois les actions terminées, vous testerez que les utilisateurs ont bien accès à leurs données personnelles.
+
+[none]
+* -> xref:tssr2023/module-05/linux.adoc#[Procédure: déplacement Répertoire home]
+****
+
