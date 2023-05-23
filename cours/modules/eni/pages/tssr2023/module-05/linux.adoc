@@ -163,6 +163,8 @@ deb http://ftp.fr.debian.org/debian/ bullseye-updates main contrib
 
 === 3.1 Partitionnement de disques
 
+image:::tssr2023/msp/linux/partition-sdb.png[]
+
 [source,bash]
 ----
 Disque /dev/sdb : 40 GiB, 42949672960 octets, 83886080 secteurs
@@ -192,6 +194,8 @@ mkfs.xfs -L "LOGS" /dev/sdb3
 === 3.2 Occupation des espaces disques
 
 ==== Déplacement répertoire home
+
+===== 1ère étape mettre fin à tout programme qui écoute /home
 
 [source,bash]
 ----
@@ -228,4 +232,17 @@ kill 808
 [source,bash]
 ----
 lsof | grep /home
+
+#ne revoie rien
 ----
+
+===== 2nd étape - copier le contenu
+
+
+[source,bash]
+----
+# remontage /home en lecture seul
+mount -o remount,ro /home
+# Montage partition
+----
+
