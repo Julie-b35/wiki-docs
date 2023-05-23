@@ -11,7 +11,9 @@ découpage du disque dur `sda` en 2 partie:
 
 image::tssr2023/msp/deb-jb-partitionnement.png[]
 
-== réseau
+=== Configuration du réseau
+
+
 
 Configuration du réseau ayant pour ip : 176.16.255.254/16
 
