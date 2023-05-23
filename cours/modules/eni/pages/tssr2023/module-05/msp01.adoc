@@ -77,9 +77,9 @@ image::tssr2023/msp/info-vm-deb.png[Configuration Workstation pour Linux]
 
 [IMPORTANT]
 ====
-Aussi bien sur `Windows` que sur `Linux` afin de joindre mon binôme, j'ai mis la première carte réseau en `bridge`.
+Aussi bien sur `*Windows*` que sur `*Linux*` afin de joindre mon binôme, j'ai mis la première carte réseau en `bridge`.
 
-De plus j'ai ajouté un 2^ème^ interface réseau en `bridge` aussi pour communiquer avec le réseau de l'eni.
+De plus j'ai ajouté une 2^ème^ interface réseau en `bridge` aussi pour communiquer avec le réseau de l'eni.
 ====
 
 === Tâches à réaliser
@@ -109,7 +109,7 @@ link:https://campuseni-my.sharepoint.com/:x:/g/personal/julie_brindejont2023_cam
 
 * [ ] - 1.3.5 Vous partitionnerez le disque manuellement selon le schéma suivant en prenant garde de pouvoir exploiter ultérieurement l’espace non alloué et vous conserverez le système de fichiers par défaut des différents points de montage :
 
-image::tssr2023/msp/tp01.png[]
+image::tssr2023/msp/tp-01.png[]
 
 TODO: Attention je crois que j'ai mis le reste de la place disponible pour le home.
 
