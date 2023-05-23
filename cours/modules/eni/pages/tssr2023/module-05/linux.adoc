@@ -287,6 +287,8 @@ reboot
 ----
 
 ==== Mise en place dossier services
+
+.Préparation dossier '/services'
 [source,bash]
 ----
 #Création du dossier '/services'
@@ -302,4 +304,18 @@ vim /etc/fstab
 ----
 ...
 UUID=8d8ab924-1a5c-48b4-8e01-87f7a4eed470       /services            ext4   defaults                   0       2
+----
+
+.création des différent dossier contenus dans '/services'
+[source,bash]
+----
+mkdir -p /services/{commercial,comptabilite,direction,informatique,logistique}
+cd /services
+chown :direction direction/ && chmod 770 direction/
+chown :comptabiliter comptabilite/ && chmod 770 comptabilite/
+chown :informatique informatique/ && chmod 770 informatique/
+chown :logistique logistique/ && chmod 770 logistique/
+chown :commercial commercial/ && chmod 770 commercial/
+
+chmod g+s logistique/
 ----

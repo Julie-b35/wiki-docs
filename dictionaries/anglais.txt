@@ -19,6 +19,7 @@ Netware
 niggurath
 noauto
 nsswitch
+PARTUUID
 penthium
 Penthium
 pipewire

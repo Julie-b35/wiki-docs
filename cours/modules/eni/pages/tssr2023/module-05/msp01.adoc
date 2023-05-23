@@ -257,13 +257,13 @@ Finalement, l’espace alloué au dossier contenant les profils utilisateurs « 
 
 ****
 
-* [ ] 3.2.2 Dossiers de service
+* [x] 3.2.2 Dossiers de service
 
 Les données mises en commun entre membres de chaque service seront stockées au sein du volume appelé « DATA ». Ce dernier sera monté automatiquement dans le dossier « /services » et hébergera l’arborescence ci-dessous :
 
 image::tssr2023/msp/tp-03.png[]
 
-* [ ] 3.2.3 Pour éviter tout problème de confidentialité, chaque dossier ne sera accessible en lecture et écriture qu’aux seuls membres de chaque groupe.
+* [x] 3.2.3 Pour éviter tout problème de confidentialité, chaque dossier ne sera accessible en lecture et écriture qu’aux seuls membres de chaque groupe.
 Par exemple, les commerciaux seront les seuls à pouvoir accéder en lecture et modification au dossier « commercial ».
 
 ****
@@ -271,4 +271,13 @@ _Pour aller plus loin : faire en sorte que tout nouveau fichier créé dans le r
 ****
 
 [none]
-* -> xref:tssr2023/module-05/linux.adoc#mise-en-place-dossier-services[Procédure: Mise en place dossier service (Linux)]
+* -> xref:tssr2023/module-05/linux.adoc#mise-en-place-dossier-services[Procédure: Mise en place dossier 'services' (Linux)]
+
+* [ ] 3.2.4 À l’emplacement « D:\données\ », vous créerez un dossier « Commerciaux », dont l’accès sera interdit à toute personne étrangère au service.
+
+* [ ] 3.2.5 De plus, les informaticiens bénéficieront pour leur propre besoin, d’un dossier « D:\Support_Info » leur permettant d’y déposer des fichiers et dossiers. Son accès sera bien évidemment restrictif.
+
+Note: il est fortement conseillé de réaliser un snapshot machine éteinte.
+
+[none]
+* -> xref:tssr2023/module-05/windows.adoc#[Procédure: Préparation Disque 'D' (Windows)]

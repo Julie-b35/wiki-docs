@@ -231,3 +231,6 @@ extend size=5120
 
 .Vérification Partitionnement
 image::tssr2023/msp/w10-jb/partitionSecondDisk.png[]
+
+=== 3.2 Occupation des espaces disques
+
