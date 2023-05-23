@@ -98,11 +98,23 @@ link:https://campuseni-my.sharepoint.com/:x:/g/personal/julie_brindejont2023_cam
 
 ==== Installation des systèmes
 
-* [ ] 1.3.3 Sur le poste Microsoft sera déployé le système d’exploitation Windows 10 édition professionnelle, sur le 1er disque dur qui ne comportera qu’une seule partition utilisant l’intégralité de l’espace. Vous configurerez le système en respectant les critères précédemment évoqués (nommage, adressage IP…). Vous empêcherez en outre, le service Windows Update, de se connecter aux serveurs Microsoft. Vous trouverez l’iso d’installation ici : \Distrib\iso\os\windows\10\XXXXX.iso
-** [ ] - Installation par défaut Windows 10 Professionnel
-** [ ] - Désactivé Windows update
+* [x] 1.3.3 Sur le poste Microsoft sera déployé le système d’exploitation Windows 10 édition professionnelle, sur le 1er disque dur qui ne comportera qu’une seule partition utilisant l’intégralité de l’espace. Vous configurerez le système en respectant les critères précédemment évoqués (nommage, adressage IP…). Vous empêcherez en outre, le service Windows Update, de se connecter aux serveurs Microsoft. Vous trouverez l’iso d’installation ici : \Distrib\iso\os\windows\10\XXXXX.iso
+** [x] - Installation par défaut Windows 10 Professionnel
+** [x] - Désactivé Windows update
 
--> xref:tssr2023/module-05/windows.adoc#Installation-des-systèmes[voir procédure]
+-> xref:tssr2023/module-05/windows.adoc#installation-des-systèmes[voir procédure]
+
+* [ ] 1.3.4 Quant au Client Debian, en plus des informations déjà mentionnées, vous installerez le système depuis l’image ISO « DVD » de la distribution Debian en version 10.x avec un environnement graphique. Vous trouverez l’iso d’installation ici : \\10.0.0.6\Distrib\iso\os\unix-linux\linux\Debian\XXXX.iso (pour l’installation vous mettrez la carte réseau en bridged)
+** [ ] - Positionner l'interface réseau en bridge
+
+* [ ] - 1.3.5 Vous partitionnerez le disque manuellement selon le schéma suivant en prenant garde de pouvoir exploiter ultérieurement l’espace non alloué et vous conserverez le système de fichiers par défaut des différents points de montage :
+
+image::tssr2023/msp/tp01.png[]
+
+TODO: Attention je crois que j'ai mis le reste de la place disponible pour le home.
+
+* [ ] 1.3.6 Vous laisserez cocher les paquets par défaut et sélectionnerez comme source d’installation le premier serveur de dépôt miroir français de la liste.
+
 
 === Découpage réseau
 

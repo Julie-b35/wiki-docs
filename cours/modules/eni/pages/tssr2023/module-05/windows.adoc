@@ -13,6 +13,7 @@ Le partitionnement système ce fait sur tout le disque
 
 empêcher l'utilisation de windows update
 
+TODO: Faire un screen sur la désactivation de windows update
 
 == réseau
 

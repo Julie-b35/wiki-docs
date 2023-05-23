@@ -1,6 +1,10 @@
 =  MSP 01 - Procédures pour Linux
 :navtitle: Procédure : Linux
 
+== Installation des systèmes
+
+J'ai fais l'installation via le mode texte.
+
 == Partitionnement
 
 découpage du disque dur `sda` en 2 partie:
