@@ -287,3 +287,19 @@ reboot
 ----
 
 ==== Mise en place dossier services
+[source,bash]
+----
+#Création du dossier '/services'
+mkdir /services
+#récupération blkid /dev/sdb2 (DATA)
+blkid /dev/sdb2
+/dev/sdb2: LABEL="DATA" UUID="8d8ab924-1a5c-48b4-8e01-87f7a4eed470" BLOCK_SIZE="4096" TYPE="ext4" PARTUUID="5ebee601-02"
+vim /etc/fstab
+----
+
+./etc/fstab
+[source,bash]
+----
+...
+UUID=8d8ab924-1a5c-48b4-8e01-87f7a4eed470       /services            ext4   defaults                   0       2
+----

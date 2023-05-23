@@ -253,7 +253,8 @@ NOTE: il est fortement conseillé de réaliser un snapshot machine éteinte.
 Finalement, l’espace alloué au dossier contenant les profils utilisateurs « /home » a été sous-estimé. En conséquence, il vous est demandé de remplacer définitivement ce volume par celui nommé « PROFILS », crée précédemment. Une fois les actions terminées, vous testerez que les utilisateurs ont bien accès à leurs données personnelles.
 
 [none]
-* -> xref:tssr2023/module-05/linux.adoc#déplacement-répertoire-home[Procédure: déplacement Répertoire home]
+* -> xref:tssr2023/module-05/linux.adoc#déplacement-répertoire-home[Procédure: déplacement Répertoire home (Linux)]
+
 ****
 
 * [ ] 3.2.2 Dossiers de service
@@ -269,3 +270,5 @@ Par exemple, les commerciaux seront les seuls à pouvoir accéder en lecture et 
 _Pour aller plus loin : faire en sorte que tout nouveau fichier créé dans le répertoire logistique appartienne au groupe logistique._
 ****
 
+[none]
+* -> xref:tssr2023/module-05/linux.adoc#mise-en-place-dossier-services[Procédure: Mise en place dossier service (Linux)]
