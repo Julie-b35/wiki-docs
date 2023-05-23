@@ -1,5 +1,5 @@
-=  MSP 01 - Système Client (Linux)
-:navtitle: Linux
+=  MSP 01 - Procédures pour Linux
+:navtitle: Procédure : Linux
 
 == Partitionnement
 

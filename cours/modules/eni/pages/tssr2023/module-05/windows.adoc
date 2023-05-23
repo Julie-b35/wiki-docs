@@ -1,5 +1,5 @@
-=  MSP 01 - Système Client (Windows)
-:navtitle: windows
+=  MSP 01 - Procédure sur Windows
+:navtitle: Procédure : Windows
 
 == Partitionnement
 
