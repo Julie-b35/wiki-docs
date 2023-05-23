@@ -247,12 +247,12 @@ Cette restriction doit être paramétrée pour tous :
 
 NOTE: il est fortement conseillé de réaliser un snapshot machine éteinte.
 
-*[ ] 3.2.1 Répertoires d’accueil
+* [ ] 3.2.1 Répertoires d’accueil
 
 ****
 Finalement, l’espace alloué au dossier contenant les profils utilisateurs « /home » a été sous-estimé. En conséquence, il vous est demandé de remplacer définitivement ce volume par celui nommé « PROFILS », crée précédemment. Une fois les actions terminées, vous testerez que les utilisateurs ont bien accès à leurs données personnelles.
 
 [none]
-* -> xref:tssr2023/module-05/linux.adoc#[Procédure: déplacement Répertoire home]
+* -> xref:tssr2023/module-05/linux.adoc#déplacement-répertoire-home[Procédure: déplacement Répertoire home]
 ****
 

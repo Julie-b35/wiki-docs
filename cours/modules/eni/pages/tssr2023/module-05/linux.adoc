@@ -195,7 +195,7 @@ mkfs.xfs -L "LOGS" /dev/sdb3
 
 [source,bash]
 ----
-lsof /home
+lsof | grep /home
 
 COMMAND   PID  USER   FD   TYPE DEVICE SIZE/OFF NODE NAME
 pipewire  807 julie  cwd    DIR  254,0     4096   12 /home/julie
@@ -205,6 +205,7 @@ pulseaudi 808 julie  mem    REG  254,0      696   23 /home/julie/.config/pulse/d
 pulseaudi 808 julie   10u   REG  254,0    12288   22 /home/julie/.config/pulse/d7f04b037b1d43d499cd393a872286c8-device-volumes.tdb
 pulseaudi 808 julie   11u   REG  254,0      696   23 /home/julie/.config/pulse/d7f04b037b1d43d499cd393a872286c8-stream-volumes.tdb
 pulseaudi 808 julie   12u   REG  254,0    28672   24 /home/julie/.config/pulse/d7f04b037b1d43d499cd393a872286c8-card-database.tdb
+[...]
 dbus-daem 812 julie  cwd    DIR  254,0     4096   12 /home/julie
 pipewire- 816 julie  cwd    DIR  254,0     4096   12 /home/julie
 pipewire- 816 julie    3u   DIR  254,0     4096   39 /home/julie/.config/pipewire-media-session
@@ -213,9 +214,18 @@ julie@deb-jb:/$
 
 ----
 
-Basculons sur la cible multi-user.target
+Basculons sur la cible rescue.target
 
 [source,bash]
 ----
-systemctl isolate multi-user.target
+systemctl isolate rescue.target
+
+# éventuellement tuer ou mettre fin à des service qui utilise /home
+systemctl stop user@1000.service
+kill 808
+----
+
+[source,bash]
+----
+lsof | grep /home
 ----
