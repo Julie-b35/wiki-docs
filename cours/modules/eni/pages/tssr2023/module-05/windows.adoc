@@ -9,11 +9,18 @@ Pendant l'installation de Windows, j'ai laissé toutes les options par défaut
 
 Le partitionnement système ce fait sur tout le disque
 
+image::tssr2023/msp/w10-partitionnement.png[]
+
 === Windows update
 
 empêcher l'utilisation de windows update
 
-TODO: Faire un screen sur la désactivation de windows update
+image::tssr2023/msp/w10-majInterrompue-02.png[]
+
+image::tssr2023/msp/w10-majInterrompue.png[]
+
+
+
 
 == réseau
 
