@@ -134,19 +134,34 @@ passwd: password expiry information changed.
 
 === 2.2 Configuration de l’environnement de travail
 
-
-
-Sur le poste Debian 10
-2.2.6 Avec l’éditeur de texte VIM; En une seule ligne avec :g/ (remplacer) commenter les sources deb-src dans /etc/apt/sources.list.
-2.2.7 N’oubliez pas de commenter la ligne indiquant le DVD.
-2.2.8 Pour améliorer le confort sous Vim, vous mettrez à jour l’application via le package simplement nommé « vim» et activerez automatiquement la coloration syntaxique et la numérotation des lignes.
-
 [source,bash]
 ----
 vim +":%s/\(deb-src\)/#\1/g" +":wq" /etc/apt/sources.list
 ----
 
+.extrait /etc/apt/source.list
+[source,bash]
+----
+# deb cdrom:[Debian GNU/Linux 11.1.0 _Bullseye_ - Official amd64 DVD Binary-1 20211009-10:08]/ bullseye contrib main
+
+#deb cdrom:[Debian GNU/Linux 11.1.0 _Bullseye_ - Official amd64 DVD Binary-1 20211009-10:08]/ bullseye contrib main
+
+deb http://ftp.fr.debian.org/debian/ bullseye main
+#deb-src http://ftp.fr.debian.org/debian/ bullseye main
+
+deb http://security.debian.org/debian-security bullseye-security main contrib
+#deb-src http://security.debian.org/debian-security bullseye-security main contrib
+
+# bullseye-updates, to get updates before a point release is made;
+# see https://www.debian.org/doc/manuals/debian-reference/ch02.en.html#_updates_and_backports
+deb http://ftp.fr.debian.org/debian/ bullseye-updates main contrib
+#deb-src http://ftp.fr.debian.org/debian/ bullseye-updates main contrib
+
+----
+
 == Partie 3 - Configuration du stockage et des ressources
+
+=== Partitionnement de disques
 
 3.1.2 Trois partitions principales seront créées sur le deuxième disque dur :
 3.1.2.1 La 1re, formatée en ext4, occupera un espace de 15 Go et se nommera « PROFILS »

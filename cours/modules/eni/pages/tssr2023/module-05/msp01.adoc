@@ -195,6 +195,8 @@ Mode                 LastWriteTime         Length Name
 
 === 2.2 Configuration de l’environnement de travail
 
+==== Sur le poste Windows
+
 * [x] 2.2.1 Les restrictions suivantes seront à paramétrer pour tous les utilisateurs non-administrateurs du système :
 * [x] 2.2.2 Supprimer les fonctions de gravure CD et empêcher tout accès au lecteur CD et DVD
 * [x] 2.2.3 Empêcher le lancement des outils de modification du registre (comme regedit…)
@@ -204,4 +206,28 @@ Cette restriction doit être paramétrée pour tous :
 
 * [x] 2.2.5 En outre, le pare-feu devra être obligatoirement actif sur le poste Windows, quel que soit l’utilisateur connecté.
 
-* -> xref:tssr2023/module-05/windows.adoc#expiration-mot-de-passe-binôme[Procédure: Édition stratégie local (Windows)]
+* -> xref:tssr2023/module-05/windows.adoc#2-2-configuration-de-lenvironnement-de-travail[Procédure: Édition stratégie local (Windows)]
+
+==== Sur le poste Debian 11
+
+* [x]  2.2.6 Avec l’éditeur de texte VIM; En une seule ligne avec :g/ (remplacer) commenter les sources deb-src dans /etc/apt/sources.list.
+* [x]  2.2.7 N’oubliez pas de commenter la ligne indiquant le DVD.
+* [x]  2.2.8 Pour améliorer le confort sous Vim, vous mettrez à jour l’application via le package simplement nommé « vim» et activerez automatiquement la coloration syntaxique et la numérotation des lignes.
+
+* -> xref:tssr2023/module-05/linux.adoc#2-2-configuration-de-lenvironnement-de-travail[Procédure: Configuration des sources apt (Windows)]
+
+
+== Partie 3 – Configuration du stockage et des ressources
+
+=== 3.1 Partitionnement de disques
+
+==== Sur le poste Windows 10
+
+* [ ] 3.1.1 Son deuxième disque dur utilisera le format de table de partition « MBR ». Vous créerez via DISKPART sur celui-ci une partition nommée « DATA », accessible par la lettre « D: » d’une taille de 10 Go. Puis l’étendre avec les 5GO supplémentaires.
+
+==== Sur le poste Debian 10
+
+* [ ] 3.1.2 Trois partitions principales seront créées sur le deuxième disque dur :
+** [ ] 3.1.2.1 La 1re, formatée en ext4, occupera un espace de 15 Go et se nommera « PROFILS »
+** [ ] 3.1.2.2 La 2e, formatée en ext4, fera 15 Go et s’appellera « DATA »
+** [ ] 3.1.2.3 La 3e, formatée en xfs (le système de fichiers n’est pas installé par défaut), occupera tout l’espace restant et se nommera « LOGS »

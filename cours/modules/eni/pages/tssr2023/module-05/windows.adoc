@@ -213,7 +213,10 @@ image::tssr2023/msp/w10-jb/gpedit-firewall.png[]
 
 == Partie 3 - Configuration du stockage et des ressources
 
-3.1.1 Son deuxième disque dur utilisera le format de table de partition « MBR ». Vous créerez via DISKPART sur celui-ci une partition nommée « DATA », accessible par la lettre « D: » d’une taille de 10 Go. Puis l’étendre avec les 5GO supplémentaires.
+
+=== Partitionnement de disques
+
+Utilisation de l'outils `diskpart` de Windows
 
 [source,cmd]
 ----
