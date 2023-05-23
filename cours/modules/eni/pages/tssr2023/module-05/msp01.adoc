@@ -147,6 +147,8 @@ image::tssr2023/msp/tp-02.png[]
 
 * [x] 2.1.5 Ces utilisateurs posséderont tous dans le dossier « Bureau » de leur profil un dossier nommé « Procédures » qui contiendra, en outre, un fichier « Règlement intérieur ».
 
+image::tssr2023/msp/w10-verifCreateDossierProcedures.png[]
+
 * [x] 2.1.6 Le poste d’intérimaire comptable est un emploi à mi-temps. La société a décidé de contraindre les heures d’ouverture de session disponibles de ce compte de 9h00 jusque 12h00 tous les jours ouvrés (lundi au vendredi).
 
 [none]
