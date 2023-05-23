@@ -89,7 +89,7 @@ De plus j'ai ajouté une 2^ème^ interface réseau en `bridge` aussi pour commun
 * [x] 1.3.1 Votre première tâche sera, en utilisant l’illustration précédemment indiquée, de reproduire le schéma et d’y faire figurer toutes les informations liées à l’adressage IP. Vous vous servirez pour cela de tout moyen à votre convenance (www.draw.io, MS Visio, Word ou Paint…).
 
 .schéma adressage IP
-image::tssr2023/msp/schema-ip.png[]
+image::tssr2023/msp/schema-ip.png[xref=tssr2023/msp/schema-ip.png]
 
 * [x] 1.3.2 Vous produirez également un tableau récapitulant l’ensemble des informations relatives aux configurations des systèmes (login/mots de passe, noms, adresses IP, processeurs, mémoire…).
 
