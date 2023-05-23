@@ -18,6 +18,11 @@ image::tssr2023/msp/deb-jb-partitionnement.png[]
 a| image::tssr2023/msp/deb-jb-configReseau-eth1.png[] a| image::tssr2023/msp/deb-jb-configReseau-eth0.png[]
 |===
 
+[NOTE]
+====
+* Commande utilisé : `nmtui`
+====
+
 ==== Test ping
 
 [source,bash]
@@ -41,11 +46,6 @@ PING 172.16.255.254 (172.16.255.254) 56(84) bytes of data.
 #Ping version VM binôme
 
 ----
-
-[NOTE]
-====
-* Commande utilisé : `nmtui`
-====
 
 == Création compte utilisateur
 

@@ -28,6 +28,8 @@ image::tssr2023/msp/w10-majInterrompue.png[]
 a| image::tssr2023/msp/W10-JB-configReseau-eth0.png[] a| image::tssr2023/msp/W10-JB-configReseau-eth1.png[]
 |===
 
+NOTE: Configuration du réseau en executant la commande `ncpa.cpl`
+
 ==== Test ping
 
 [source,cmd]
@@ -60,11 +62,6 @@ Durée approximative des boucles en millisecondes :
     Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms
 ----
 
-== réseau
-
-Mise en place du réseau ayant pour ip : 176.16.255.253/16
-
-NOTE: Configuration du réseau en executant la commande `ncpa.cpl`
 
 == 2.1.4 Création compte utilisateur
 
