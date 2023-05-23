@@ -190,4 +190,7 @@ Mode                 LastWriteTime         Length Name
 * [x] Sur les postes Windows 10 & Debian 10
 ** [x] 2.1.14 Le changement de mot de passe du compte utilisateur de votre binôme devra être forcé à sa première connexion.
 
-== Conf
+* -> xref:tssr2023/module-05/windows.adoc#expiration-mot-de-passe-binôme[Procédure: Expiration mot de passe binôme (Windows)]
+* -> xref:tssr2023/module-05/linux.adoc#expiration-mot-de-passe-binôme[Procédure: Expiration mot de passe binôme (Linux)]
+
+== Configuration de l’environnement de travail
