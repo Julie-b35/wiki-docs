@@ -161,7 +161,7 @@ Add-LocalGroupMember -Name Logistique -Member mjones
 ----
 
 
-=== Définir des heure de session pour l'utilisatrice intérimaire
+==== Définir des heure de session pour l'utilisatrice intérimaire
 
 [source,cmd]
 ----
