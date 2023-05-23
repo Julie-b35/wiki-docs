@@ -223,15 +223,15 @@ Cette restriction doit être paramétrée pour tous :
 
 ==== Sur le poste Windows 10
 
-* [ ] 3.1.1 Son deuxième disque dur utilisera le format de table de partition « MBR ». Vous créerez via DISKPART sur celui-ci une partition nommée « DATA », accessible par la lettre « D: » d’une taille de 10 Go. Puis l’étendre avec les 5GO supplémentaires.
+* [x] 3.1.1 Son deuxième disque dur utilisera le format de table de partition « MBR ». Vous créerez via DISKPART sur celui-ci une partition nommée « DATA », accessible par la lettre « D: » d’une taille de 10 Go. Puis l’étendre avec les 5GO supplémentaires.
 
-* -> xref:tssr2023/module-05/windows.adoc#[Procédure: Partitionnement 2^ème^ (Windows)]
+* -> xref:tssr2023/module-05/windows.adoc#3-1-partitionnement-de-disques[Procédure: Partitionnement 2^ème^ (Windows)]
 
 ==== Sur le poste Debian 10
 
-* [ ] 3.1.2 Trois partitions principales seront créées sur le deuxième disque dur :
-** [ ] 3.1.2.1 La 1re, formatée en ext4, occupera un espace de 15 Go et se nommera « PROFILS »
-** [ ] 3.1.2.2 La 2e, formatée en ext4, fera 15 Go et s’appellera « DATA »
-** [ ] 3.1.2.3 La 3e, formatée en xfs (le système de fichiers n’est pas installé par défaut), occupera tout l’espace restant et se nommera « LOGS »
+* [x] 3.1.2 Trois partitions principales seront créées sur le deuxième disque dur :
+** [x] 3.1.2.1 La 1re, formatée en ext4, occupera un espace de 15 Go et se nommera « PROFILS »
+** [x] 3.1.2.2 La 2e, formatée en ext4, fera 15 Go et s’appellera « DATA »
+** [x] 3.1.2.3 La 3e, formatée en xfs (le système de fichiers n’est pas installé par défaut), occupera tout l’espace restant et se nommera « LOGS »
 
-* -> xref:tssr2023/module-05/linux.adoc#[Procédure: Partitionnement 2^ème^ (Windows)]
+* -> xref:tssr2023/module-05/linux.adoc#3-1-partitionnement-de-disques[Procédure: Partitionnement 2^ème^ (Windows)]
