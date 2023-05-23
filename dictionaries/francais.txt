@@ -1,3 +1,4 @@
+acces
 adoc
 afin
 allnodes
@@ -37,6 +38,7 @@ démarrage
 Démon
 Désactiver
 Désencapsulation
+DISKPART
 Distrib
 dpkg
 dutilisateurs
@@ -119,6 +121,7 @@ rechercher
 redémarrage
 Redémarrer
 Redhat
+regedit
 Réglement
 relatifs
 respinosa

@@ -191,6 +191,26 @@ image::tssr2023/msp/w10-jb/expriationPasswordBinome.png[]
 
 === 2.2 Configuration de l’environnement de travail
 
+
+* Supprimer les fonctions de gravure CD et empêcher tout accès au lecteur CD et DVD
+
+image::tssr2023/msp/w10-jb/gpedit-refuser-acces-CD.png[]
+
+image::tssr2023/msp/w10-jb/gpedit-suppressionGravure.png[]
+
+* Empêcher le lancement des outils de modification du registre (comme regedit…)
+
+image::tssr2023/msp/w10-jb/gpedit-refuserAccesRegEdit.png[]
+
+* Forcer l’utilisation d’une image de votre choix en tant que fond d’écran
+
+image::tssr2023/msp/w10-jb/gpedit-papier-peint.png[]
+
+* En outre, le pare-feu devra être obligatoirement actif sur le poste Windows, quel que soit l’utilisateur connecté.
+
+image::tssr2023/msp/w10-jb/gpedit-firewall.png[]
+
+
 == Partie 3 - Configuration du stockage et des ressources
 
 3.1.1 Son deuxième disque dur utilisera le format de table de partition « MBR ». Vous créerez via DISKPART sur celui-ci une partition nommée « DATA », accessible par la lettre « D: » d’une taille de 10 Go. Puis l’étendre avec les 5GO supplémentaires.

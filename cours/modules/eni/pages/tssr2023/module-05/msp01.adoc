@@ -194,3 +194,14 @@ Mode                 LastWriteTime         Length Name
 * -> xref:tssr2023/module-05/linux.adoc#expiration-mot-de-passe-binôme[Procédure: Expiration mot de passe binôme (Linux)]
 
 === 2.2 Configuration de l’environnement de travail
+
+* [x] 2.2.1 Les restrictions suivantes seront à paramétrer pour tous les utilisateurs non-administrateurs du système :
+* [x] 2.2.2 Supprimer les fonctions de gravure CD et empêcher tout accès au lecteur CD et DVD
+* [x] 2.2.3 Empêcher le lancement des outils de modification du registre (comme regedit…)
+* [x] 2.2.4 Forcer l’utilisation d’une image de votre choix en tant que fond d’écran
+
+Cette restriction doit être paramétrée pour tous :
+
+* [x] 2.2.5 En outre, le pare-feu devra être obligatoirement actif sur le poste Windows, quel que soit l’utilisateur connecté.
+
+* -> xref:tssr2023/module-05/windows.adoc#expiration-mot-de-passe-binôme[Procédure: Édition stratégie local (Windows)]
