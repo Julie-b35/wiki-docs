@@ -163,7 +163,7 @@ compte utilisateur
 
 ==== Contraintes supplémentaires
 
-* [ ]Sur le poste Windows 10
+* [ ] Sur le poste Windows 10
 ** [ ] 2.1.8 La stratégie globale de sécurité de mots de passe comportera les contraintes suivantes :
 ** [ ] 2.1.9 12 caractères au minimum
 ** [ ] 2.1.10 Changement obligatoire tous les 25 jours
