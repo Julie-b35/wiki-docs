@@ -120,5 +120,6 @@ image::tssr2023/msp/tp-01.png[]
 ** [x] Entre vos systèmes
 ** [x] Avec les machines de votre binôme
 
--> xref:tssr2023/module-05/windows.adoc#Configuration-du-réseau[Procédure : Configuration du réseau (windows)]
--> xref:tssr2023/module-05/linux.adoc#Configuration-du-réseau[Procédure : Configuration du réseau (Linux)]
+[none]
+* -> xref:tssr2023/module-05/windows.adoc#Configuration-du-réseau[Procédure : Configuration du réseau (windows)]
+* -> xref:tssr2023/module-05/linux.adoc#Configuration-du-réseau[Procédure : Configuration du réseau (Linux)]
