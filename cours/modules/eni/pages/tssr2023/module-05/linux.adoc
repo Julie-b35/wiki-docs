@@ -161,19 +161,30 @@ deb http://ftp.fr.debian.org/debian/ bullseye-updates main contrib
 
 == Partie 3 - Configuration du stockage et des ressources
 
-=== Partitionnement de disques
+=== 3.1 Partitionnement de disques
 
 [source,bash]
 ----
+Disque /dev/sdb : 40 GiB, 42949672960 octets, 83886080 secteurs
+Modèle de disque : VMware Virtual S
+Unités : secteur de 1 × 512 = 512 octets
+Taille de secteur (logique / physique) : 512 octets / 512 octets
+taille d'E/S (minimale / optimale) : 512 octets / 512 octets
+Type d'étiquette de disque : dos
+Identifiant de disque : 0x5ebee601
 
+Périphérique Amorçage    Début      Fin Secteurs Taille Id Type
+/dev/sdb1                 2048 31459327 31457280    15G 83 Linux
+/dev/sdb2             31459328 62916607 31457280    15G 83 Linux
+/dev/sdb3             62916608 83886079 20969472    10G 83 Linux
 ----
 
-Partition créer via fdisk
+NOTE: Partition créer via fdisk
 
 [source,bash]
 ----
 mkfs.ext4 -L "PROFILS" /dev/sdb1 && \
-mkfs.ext4 -L "DATA" /dev/sdb2
+mkfs.ext4 -L "DATA" /dev/sdb2 && \
 mkfs.xfs -L "LOGS" /dev/sdb3
 ----
 

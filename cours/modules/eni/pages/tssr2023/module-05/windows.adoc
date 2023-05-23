@@ -214,7 +214,7 @@ image::tssr2023/msp/w10-jb/gpedit-firewall.png[]
 == Partie 3 - Configuration du stockage et des ressources
 
 
-=== Partitionnement de disques
+=== 3.1 Partitionnement de disques
 
 Utilisation de l'outils `diskpart` de Windows
 
