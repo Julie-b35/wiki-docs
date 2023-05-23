@@ -278,3 +278,8 @@ UUID=530615e2-1507-4f63-a9c1-37efa2098cff       /boot            ext4   defaults
 UUID=9854e1ed-14c1-4b79-bbb4-b324d820e188       none             swap   sw                         0       0
 ----
 
+[source,bash]
+----
+# redémarrage système
+reboot
+----
