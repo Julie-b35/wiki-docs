@@ -9,8 +9,7 @@ J'ai fais l'installation via le mode texte.
 
 découpage du disque dur `sda` en 2 partie:
 
-* sda1 Partition lvm :  18 176 MB
-* sda2 partition lvm :  le reste
+image::tssr2023/msp/deb-jb-partitionnement.png[]
 
 [cols="^.^,^.^,^.^"]
 |===
