@@ -261,3 +261,10 @@ Finalement, l’espace alloué au dossier contenant les profils utilisateurs « 
 Les données mises en commun entre membres de chaque service seront stockées au sein du volume appelé « DATA ». Ce dernier sera monté automatiquement dans le dossier « /services » et hébergera l’arborescence ci-dessous :
 
 image::tssr2023/msp/tp-03.png[]
+
+* [ ] 3.2.3 Pour éviter tout problème de confidentialité, chaque dossier ne sera accessible en lecture et écriture qu’aux seuls membres de chaque groupe.
+Par exemple, les commerciaux seront les seuls à pouvoir accéder en lecture et modification au dossier « commercial ».
+
+****
+_Pour aller plus loin : faire en sorte que tout nouveau fichier créé dans le répertoire logistique appartienne au groupe logistique._
+****
