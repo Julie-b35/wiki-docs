@@ -290,6 +290,7 @@ Note: il est fortement conseillé de réaliser un snapshot machine éteinte.
 
 * [x] 3.3.3 Enfin, votre binôme en validera l’accès en écriture en y créant un fichier.
 
+[none]
 * -> xref:tssr2023/module-05/windows.adoc#3-3-création-de-partages-réseau[Procédure: Gestion Partages (Windows)]
 
 === 3.4 Gestion d’imprimantes
@@ -302,3 +303,5 @@ Note: il est fortement conseillé de réaliser un snapshot machine éteinte.
 ** [ ] 3.4.2.3 Le service informatique possède le contrôle total
 * [ ] 3.4.3 Votre binôme s’y connectera et la déclarera comme imprimante par défaut.
 
+[none]
+* -> xref:tssr2023/module-05/windows.adoc#3-4-gestion-dimprimantes[Procédure: Gestion Imprimantes (Windows)]
