@@ -36,6 +36,7 @@ démarrage
 Démon
 Désactiver
 Désencapsulation
+Distrib
 dpkg
 Editeur
 Elodie
@@ -131,3 +132,4 @@ Trouver
 tssr
 utilisateur
 vérouillé
+Visio

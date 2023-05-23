@@ -98,6 +98,12 @@ link:https://campuseni-my.sharepoint.com/:x:/g/personal/julie_brindejont2023_cam
 
 ==== Installation des systèmes
 
+* [ ] 1.3.3 Sur le poste Microsoft sera déployé le système d’exploitation Windows 10 édition professionnelle, sur le 1er disque dur qui ne comportera qu’une seule partition utilisant l’intégralité de l’espace. Vous configurerez le système en respectant les critères précédemment évoqués (nommage, adressage IP…). Vous empêcherez en outre, le service Windows Update, de se connecter aux serveurs Microsoft. Vous trouverez l’iso d’installation ici : \Distrib\iso\os\windows\10\XXXXX.iso
+** [ ] - Installation par défaut Windows 10 Professionnel
+** [ ] - Désactivé Windows update
+
+-> xref:tssr2023/module-05/windows.adoc#Installation-des-systèmes[voir procédure]
+
 === Découpage réseau
 
 Le découpage réseau je le ferais plus tard.

@@ -1,13 +1,18 @@
 =  MSP 01 - Procédure sur Windows
 :navtitle: Procédure : Windows
 
-== Partitionnement
+== Installation des systèmes
+
+Pendant l'installation de Windows, j'ai laissé toutes les options par défaut
+
+=== Partitionnement
 
 Le partitionnement système ce fait sur tout le disque
 
-== Windows update
+=== Windows update
 
 empêcher l'utilisation de windows update
+
 
 == réseau
 
