@@ -294,10 +294,11 @@ Note: il est fortement conseillé de réaliser un snapshot machine éteinte.
 
 === 3.4 Gestion d’imprimantes
 
-* [ ] 3.4.1 Une imprimante HP LaserJet M9050 MFP est à installer sur le système Windows. Elle possède l’adresse IP (fictive) 172.16.XX.YY/ZZ (prenez la première @ip disponible de votre réseau) et doit être partagée sur le réseau afin de la rendre disponible pour d’autres postes. Vous utiliserez les pilotes fournis ici : \\10.0.0.6\Distrib\Drivers\Imprimante\upd-pcl6-x64-7.0.0.24832.exe
+* [ ] 3.4.1 Une imprimante *HP LaserJet M9050 MFP* est à installer sur le système Windows. Elle possède l’adresse IP (fictive) 172.16.XX.YY/ZZ (prenez la première @ip disponible de votre réseau) et doit être partagée sur le réseau afin de la rendre disponible pour d’autres postes. Vous utiliserez les pilotes fournis ici : \\10.0.0.6\Distrib\Drivers\Imprimante\upd-pcl6-x64-7.0.0.24832.exe
 
 * [ ] 3.4.2 Les permissions d’utilisation de cette dernière sont les suivantes :
 ** [ ] 3.4.2.1 Tous les utilisateurs peuvent imprimer
 ** [ ] 3.4.2.2 Le service Comptabilité peut supprimer des impressions bloquées en cas de problèmes
 ** [ ] 3.4.2.3 Le service informatique possède le contrôle total
 * [ ] 3.4.3 Votre binôme s’y connectera et la déclarera comme imprimante par défaut.
+
