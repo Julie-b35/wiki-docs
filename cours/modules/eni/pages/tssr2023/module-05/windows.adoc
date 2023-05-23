@@ -234,3 +234,6 @@ image::tssr2023/msp/w10-jb/partitionSecondDisk.png[]
 
 === 3.2 Occupation des espaces disques
 
+image::tssr2023/msp/w10-jb/acl-commerciaux.png[]
+image::tssr2023/msp/w10-jb/acl-support-info.png[]
+
