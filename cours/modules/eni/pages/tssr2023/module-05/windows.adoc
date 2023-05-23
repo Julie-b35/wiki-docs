@@ -168,37 +168,23 @@ net user cpeletier /times:lundi,vendredi,9:00,12:00
 
 == contrainte supplémentaire
 
-2.1.12 Pour plus de sûreté, vous ajouterez un autre compte d’administrateur du système en ligne de commande « cmd » et lui indiquerez un mot de passe.
-2.1.13 Les membres du service informatique doivent à l’aide de leur compte pouvoir se connecter sur le système et bénéficier des privilèges d’administrateurs.
+=== Configuration Stratégie Global de Sécurité
+
+
+image::tssr2023/msp/w10-jb-scpolMsc.png[]
+
+=== ajout d'un compte admin pour plus de sécurité
 
 [source,cmd]
 ----
 REM Création compte admin
 New-LocalUser -Name adm -Description "compte admin" -FullName "admin" -PasswordNeverExpires
 net localgroup Administrateurs adm /add
-
 ----
 
+=== Expiration mot de passe binôme
 
-== Configuration
-
-2.1.14 Le changement de mot de passe du compte utilisateur de votre binôme devra être forcé à sa première connexion.
-
-Fait en mode graphique
-
-== Configuration Stratégie Global de Sécurité
-
-
-image::tssr2023/msp/w10-jb-scpolMsc.png[]
-
-
-
-
-
-
-
-
-
+image::tssr2023/msp/w10-jb/expriationPasswordBinome.png[]
 
 == Partie 3 - Configuration du stockage et des ressources
 

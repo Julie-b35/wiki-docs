@@ -11,6 +11,7 @@ avec
 banaliseur
 benoit
 binaire
+Binome
 Brindejont
 cdrom
 CDROM
@@ -46,6 +47,7 @@ epellerin
 eporter
 Espinosa
 Exécuter
+expriation
 fabrice
 Fichier
 fichiers

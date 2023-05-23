@@ -10,6 +10,7 @@ mobaxterm
 nblig
 NTFS
 POSIX
+scpol
 tcsh
 ublic
 vfat

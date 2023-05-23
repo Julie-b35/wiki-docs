@@ -121,7 +121,7 @@ passwd gstockes
 passwd mgreene
 ----
 
-== Configuration
+== Expiration mot de passe binôme
 
 2.1.14 Le changement de mot de passe du compte utilisateur de votre binôme devra être forcé à sa première connexion.
 
