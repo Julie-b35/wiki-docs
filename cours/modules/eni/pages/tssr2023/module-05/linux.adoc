@@ -163,10 +163,10 @@ deb http://ftp.fr.debian.org/debian/ bullseye-updates main contrib
 
 === Partitionnement de disques
 
-3.1.2 Trois partitions principales seront créées sur le deuxième disque dur :
-3.1.2.1 La 1re, formatée en ext4, occupera un espace de 15 Go et se nommera « PROFILS »
-3.1.2.2 La 2e, formatée en ext4, fera 15 Go et s’appellera « DATA »
-3.1.2.3 La 3e, formatée en xfs (le système de fichiers n’est pas installé par défaut), occupera tout l’espace restant et se nommera « LOGS »
+[source,bash]
+----
+
+----
 
 Partition créer via fdisk
 
