@@ -186,15 +186,18 @@ net localgroup Administrateurs adm /add
 
 Fait en mode graphique
 
-== Configuration de l’environnement de travail
-✓ Sur le poste Windows 10
+== Configuration Stratégie Global de Sécurité
 
-2.2.1 Les restrictions suivantes seront à paramétrer pour tous les utilisateurs non-administrateurs du système :
-2.2.2 Supprimer les fonctions de gravure CD et empêcher tout accès au lecteur CD et DVD
-2.2.3 Empêcher le lancement des outils de modification du registre (comme regedit…)
-2.2.4 Forcer l’utilisation d’une image de votre choix en tant que fond d’écran
-Cette restriction doit être paramétrée pour tous :
-2.2.5 En outre, le pare-feu devra être obligatoirement actif sur le poste Windows, quel que soit l’utilisateur connecté.
+
+
+
+
+
+
+
+
+
+
 
 
 == Partie 3 - Configuration du stockage et des ressources
