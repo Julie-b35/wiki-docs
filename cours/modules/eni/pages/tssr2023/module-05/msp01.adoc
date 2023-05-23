@@ -134,19 +134,29 @@ image::tssr2023/msp/tp-01.png[]
 
 image::tssr2023/msp/tp-02.png[]
 
-* [ ] 2.1.2 Chaque compte utilisateur sera identifié par la première lettre de son prénom, suivi de son nom. Les mots de passe seront affectés à votre libre convenance, tout en respectant les recommandations de l’ANSSI. ( https://www.ssi.gouv.fr/guide/mot-de-passe/ ) les mots de passe n’expirent jamais.
+* [x] 2.1.2 Chaque compte utilisateur sera identifié par la première lettre de son prénom, suivi de son nom. Les mots de passe seront affectés à votre libre convenance, tout en respectant les recommandations de l’ANSSI. ( https://www.ssi.gouv.fr/guide/mot-de-passe/ ) les mots de passe n’expirent jamais.
 
-* [ ] 2.1.3 Vous adopterez une convention de nommage pour les groupes, que vous conserverez, quel que soit le système d’exploitation.
+* [x] 2.1.3 Vous adopterez une convention de nommage pour les groupes, que vous conserverez, quel que soit le système d’exploitation.
 
 === Sur le poste Windows 10
 
-* [ ] 2.1.4 Le système Windows 10 sera utilisé par les membres des services comptabilité et commerciaux. Vous créerez donc les groupes et comptes nécessaires en précisant dans le champ description leur service d’appartenance. Vous créerez une partie via la commande (la direction, comptabilité), une partie en PowerShell (les groupes informatiques, logistiques), une partie en graphique (les commerciaux).
+* [x] 2.1.4 Le système Windows 10 sera utilisé par les membres des services comptabilité et commerciaux. Vous créerez donc les groupes et comptes nécessaires en précisant dans le champ description leur service d’appartenance. Vous créerez une partie via la commande (la direction, comptabilité), une partie en PowerShell (les groupes informatiques, logistiques), une partie en graphique (les commerciaux).
 
-* [ ] 2.1.5 Ces utilisateurs posséderont tous dans le dossier « Bureau » de leur profil un dossier nommé « Procédures » qui contiendra, en outre, un fichier « Règlement intérieur ».
+[none]
+* -> xref:tssr2023/module-05/windows.adoc#ajout-comptes-utilisateurs[Procédure : Ajout comptes utilisateurs (windows)]
 
-* [ ] 2.1.6 Le poste d’intérimaire comptable est un emploi à mi-temps. La société a décidé de contraindre les heures d’ouverture de session disponibles de ce compte de 9h00 jusque 12h00 tous les jours ouvrés (lundi au vendredi).
+* [x] 2.1.5 Ces utilisateurs posséderont tous dans le dossier « Bureau » de leur profil un dossier nommé « Procédures » qui contiendra, en outre, un fichier « Règlement intérieur ».
 
+* [x] 2.1.6 Le poste d’intérimaire comptable est un emploi à mi-temps. La société a décidé de contraindre les heures d’ouverture de session disponibles de ce compte de 9h00 jusque 12h00 tous les jours ouvrés (lundi au vendredi).
 
+[none]
+* -> xref:tssr2023/module-05/windows.adoc#Définir-des-heure-de-session-pour-l'utilisatrice-intérimaire[Définir des heure de session pour l'utilisatrice intérimaire]
+
+[none]
+
+* -> xref:tssr2023/module-05/linux.adoc#Configuration-du-réseau[Procédure : Configuration du réseau (Linux)]
+
+compte utilisateur
 === Sur le poste Debian 10
 
 * [ ] 2.1.7 Tous les utilisateurs de la société sont susceptibles d’utiliser ce poste localement ou en connexion à distance. Par conséquent, sa base de comptes contiendra tous les utilisateurs

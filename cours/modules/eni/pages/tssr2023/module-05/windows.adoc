@@ -60,10 +60,38 @@ Statistiques Ping pour 172.16.255.253:
     Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
 Durée approximative des boucles en millisecondes :
     Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms
+
+REM Ping vers machine binôme
+REM Ping vers VM Windows
+C:\Users\julie>ping 172.16.0.161
+Envoi d’une requête 'Ping'  172.16.0.161 avec 32 octets de données :
+Réponse de 172.16.0.161 : octets=32 temps=1 ms TTL=128
+Réponse de 172.16.0.161 : octets=32 temps=1 ms TTL=128
+Réponse de 172.16.0.161 : octets=32 temps=1 ms TTL=128
+Réponse de 172.16.0.161 : octets=32 temps=1 ms TTL=128
+
+Statistiques Ping pour 172.16.0.161:
+    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
+Durée approximative des boucles en millisecondes :
+    Minimum = 1ms, Maximum = 1ms, Moyenne = 1ms
+
+REM Ping vers VM Linux
+C:\Users\julie>ping 172.16.0.162
+
+Envoi d’une requête 'Ping'  172.16.0.162 avec 32 octets de données :
+Réponse de 172.16.0.162 : octets=32 temps<1ms TTL=64
+Réponse de 172.16.0.162 : octets=32 temps<1ms TTL=64
+Réponse de 172.16.0.162 : octets=32 temps<1ms TTL=64
+Réponse de 172.16.0.162 : octets=32 temps<1ms TTL=64
+
+Statistiques Ping pour 172.16.0.162:
+    Paquets : envoyés = 4, reçus = 4, perdus = 0 (perte 0%),
+Durée approximative des boucles en millisecondes :
+    Minimum = 0ms, Maximum = 0ms, Moyenne = 0ms
 ----
 
 
-== 2.1.4 Création compte utilisateur
+== ajout comptes utilisateurs
 
 |===
 | pseudo         | mdp                    ^.^| Groupes       | Noms
@@ -82,7 +110,7 @@ Durée approximative des boucles en millisecondes :
 |mgreene	     | tssr@mg15_2023$	                         | 	Maggie Greene
 |===
 
-Groupe ayant accès Commercial, comptabilité
+Les groupe ayant accès à la machine sont : Commercial, comptabilité
 
 
 .ajout compte via cmd
@@ -131,7 +159,7 @@ Add-LocalGroupMember -Name Logistique -Member mjones
 ----
 
 
-=== 2.1.6 Définir des heure de session pour l'utilisatrice intérimaire.
+=== Définir des heure de session pour l'utilisatrice intérimaire
 
 [source,cmd]
 ----
