@@ -195,7 +195,7 @@ mkfs.xfs -L "LOGS" /dev/sdb3
 
 ==== Déplacement répertoire home
 
-===== 1ère étape mettre fin à tout programme qui écoute /home
+===== 1ère étape mettre fin à tout programme qui travail sur /home
 
 [source,bash]
 ----
@@ -280,6 +280,8 @@ UUID=9854e1ed-14c1-4b79-bbb4-b324d820e188       none             swap   sw      
 
 [source,bash]
 ----
+# Suppression du volume logique date/home
+lvremove data home
 # redémarrage système
 reboot
 ----

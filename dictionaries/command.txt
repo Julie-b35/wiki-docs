@@ -64,6 +64,7 @@ legende
 libbz
 localgroup
 logind
+lvremove
 macropaquets
 metacaractere
 Mmio
