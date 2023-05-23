@@ -241,5 +241,6 @@ image::tssr2023/msp/w10-jb/acl-support-info.png[]
 
 [source,powershell]
 ----
-New-SmbShare -Name "Support_Info$" -Path "D:\Support_Info" -FullAccess "DL_Informatique_RW"
+# Le faire sur le compte utilisateur
+New-PSDrive -Name "U" -PSProvider "FileSystem" -Root "\\172.16.0.161\Support_Info" -Persist -Credential jbrindejont
 ----

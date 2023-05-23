@@ -286,11 +286,11 @@ Note: il est fortement conseillé de réaliser un snapshot machine éteinte.
 
 * [x] 3.3.1 En suivant les bonnes pratiques, vous partagerez le dossier « Support_Info ». Il sera invisible aux yeux de tous pour plus de sécurité. En cas de nécessité de déployer un partage similaire sur un autre poste, vous chercherez la commande PowerShell équivalente à vos actions, que vous conserverez dans un fichier PowerShell « .ps1 ». Vous afficherez avec la commande cmd la liste des partages disponible.
 
-* [x] 3.3.2 Afin d’en tester l’accès, votre binôme génèrera un lecteur réseau « U: » qui pointera vers le dossier partagé. Ce lecteur devra apparaître automatiquement à l’ouverture de session. À cette fin, deux méthodes opérationnelles différentes devront être trouvées.
+* [x] 3.3.2 Afin d’en tester l’accès, votre binôme générera un lecteur réseau « U: » qui pointera vers le dossier partagé. Ce lecteur devra apparaître automatiquement à l’ouverture de session. À cette fin, deux méthodes opérationnelles différentes devront être trouvées.
 
 * [x] 3.3.3 Enfin, votre binôme en validera l’accès en écriture en y créant un fichier.
 
-* -> xref:tssr2023/module-05/windows.adoc#3-2-occupation-des-espaces-disques[Procédure: Gestion Partages (Windows)]
+* -> xref:tssr2023/module-05/windows.adoc#3-3-création-de-partages-réseau[Procédure: Gestion Partages (Windows)]
 
 === 3.4 Gestion d’imprimantes
 
