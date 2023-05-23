@@ -11,31 +11,6 @@ découpage du disque dur `sda` en 2 partie:
 
 image::tssr2023/msp/deb-jb-partitionnement.png[]
 
-[cols="^.^,^.^,^.^"]
-|===
-3.+| Volume Groupe (lvm)
-| label | Partition  |Site (MB)
-| system | sda1  | *18 176MB*
-| data | sda2  | Le reste
-|===
-
-.Volume logique (system)
-|===
-3.+^.^| Logical Volume
-^.^| label ^.^| Point de montage |Site (MB)
-| racine | / | 17 Go
-| boot | /boot | 512 Mo
-| swap | swap | 256 Mo
-|===
-
-.Volume logique (data)
-|===
-3.+^.^| Logical Volume
-^.^| label ^.^| Point de montage |Site (MB)
-| home | /home | 1 Go
-|===
-
-
 == réseau
 
 Configuration du réseau ayant pour ip : 176.16.255.254/16

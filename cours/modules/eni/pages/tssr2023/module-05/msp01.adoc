@@ -111,12 +111,13 @@ link:https://campuseni-my.sharepoint.com/:x:/g/personal/julie_brindejont2023_cam
 
 image::tssr2023/msp/tp-01.png[]
 
-* [ ] 1.3.6 Vous laisserez cocher les paquets par défaut et sélectionnerez comme source d’installation le premier serveur de dépôt miroir français de la liste.
+* [x] 1.3.6 Vous laisserez cocher les paquets par défaut et sélectionnerez comme source d’installation le premier serveur de dépôt miroir français de la liste.
+
+==== Tester la connectivité réseau
 
 
-=== Découpage réseau
+* [ ] 1.3.7 Assurez-vous de la connectivité : (changer les cartes réseau en bridged)
+** [ ] Entre vos systèmes
+** [ ] Avec les machines de votre binôme
 
-Le découpage réseau je le ferais plus tard.
-
-Windows 10 : 172.16.255.253
-Linux : 172.168.255.254
+-> xref:tssr2023/module-05/windows.adoc#config[voir procédure]
