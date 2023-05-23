@@ -189,7 +189,7 @@ Fait en mode graphique
 == Configuration Stratégie Global de Sécurité
 
 
-
+image::tssr2023/msp/w10-jb-scpolMsc.png[]
 
 
 
