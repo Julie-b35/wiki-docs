@@ -39,6 +39,7 @@ Désactiver
 Désencapsulation
 Distrib
 dpkg
+dutilisateurs
 Editeur
 Elodie
 EPCF

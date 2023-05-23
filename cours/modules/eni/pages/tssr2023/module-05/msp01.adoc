@@ -121,8 +121,8 @@ image::tssr2023/msp/tp-01.png[]
 ** [x] Avec les machines de votre binôme
 
 [none]
-* -> xref:tssr2023/module-05/windows.adoc#Configuration-du-réseau[Procédure : Configuration du réseau (windows)]
-* -> xref:tssr2023/module-05/linux.adoc#Configuration-du-réseau[Procédure : Configuration du réseau (Linux)]
+* -> xref:tssr2023/module-05/windows.adoc#configuration-du-réseau[Procédure : Configuration du réseau (windows)]
+* -> xref:tssr2023/module-05/linux.adoc#configuration-du-réseau[Procédure : Configuration du réseau (Linux)]
 
 == Partie 2 – Configuration des utilisateurs et de l’environnement
 
@@ -143,7 +143,7 @@ image::tssr2023/msp/tp-02.png[]
 * [x] 2.1.4 Le système Windows 10 sera utilisé par les membres des services comptabilité et commerciaux. Vous créerez donc les groupes et comptes nécessaires en précisant dans le champ description leur service d’appartenance. Vous créerez une partie via la commande (la direction, comptabilité), une partie en PowerShell (les groupes informatiques, logistiques), une partie en graphique (les commerciaux).
 
 [none]
-* -> xref:tssr2023/module-05/windows.adoc#ajout-comptes-utilisateurs[Procédure : Ajout comptes utilisateurs (windows)]
+* -> xref:tssr2023/module-05/windows.adoc#2-1-création-dutilisateurs-et-de-groupes[Procédure : Ajout comptes utilisateurs (windows)]
 
 * [x] 2.1.5 Ces utilisateurs posséderont tous dans le dossier « Bureau » de leur profil un dossier nommé « Procédures » qui contiendra, en outre, un fichier « Règlement intérieur ».
 
@@ -171,7 +171,7 @@ Mode                 LastWriteTime         Length Name
 * [x] 2.1.7 Tous les utilisateurs de la société sont susceptibles d’utiliser ce poste localement ou en connexion à distance. Par conséquent, sa base de comptes contiendra tous les utilisateurs
 
 [none]
-* -> xref:tssr2023/module-05/linux.adoc#ajout-comptes-utilisateurs[Procédure : Ajout comptes utilisateurs (Linux)]
+* -> xref:tssr2023/module-05/linux.adoc#2-1-création-dutilisateurs-et-de-groupes[Procédure : Ajout comptes utilisateurs (Linux)]
 
 ===== Contraintes supplémentaires
 
