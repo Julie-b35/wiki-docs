@@ -22,6 +22,29 @@ TODO: Vérifié la version de windows 10
 
 image:tssr2023/msp/presentation-msp.png[Présentation]
 
+* [ ] 1.1.1 Vous et votre binôme, prendrez les dernières adresses disponibles du dernier sous-réseau en /26.(En classe, vous définirez les X premiers sous réseau. X étant le nombre de binômes dans la classe. Suite à cela vous définirez les sous réseau appartenant à chaque binôme.)
+* [ ] 1.1.2 Vous installerez 2 systèmes clients à l’aide de l’outil de virtualisation VMware Workstation en respectant les caractéristiques spécifiques qui vous seront fournies plus tard.
+* [ ] 1.1.3 Certaines tâches demandées nécessiteront de travailler en binôme.
+
+=== 1.2 Caractéristique matérielle des machines virtuelles
+
+==== Poste Client Windows
+
+pass:[<u>Nom</u>] : *W10-*JB
+
+pass:[<u>Systèmes d'exploitation</u>] :  Windows 10 professionnel
+
+pass:[<u>Prérequis matériels</u>] : 
+
+[frame=none,cols="~,~"]
+|===
+|CPU : 1.2+^.^| *Allouer les ressources en suivant les recommandations Microsoft*
+|Mémoire : 
+|Disque dur : a| 
+* 1 disque dur de 32 Go
+* 1 disque dur additionnel de 40 Go
+|Réseau : | 1 interface réseau en "host-only"
+|===
 === Découpage réseau
 
 Le découpage réseau je le ferais plus tard.
