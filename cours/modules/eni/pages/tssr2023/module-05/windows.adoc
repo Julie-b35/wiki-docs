@@ -278,3 +278,30 @@ image::tssr2023/msp/w10-jb/configPrinterComptabiliter.png[]
 == Partie 4 – Configuration avancée des systèmes
 
 === Configuration avancée système Windows 10
+
+image::tssr2023/msp/w10-jb/configRDP.png[]
+
+.netstat -an
+[source,cmd]
+----
+C:\Users\julie>netstat -an
+
+Connexions actives
+
+  Proto  Adresse locale         Adresse distante       État
+  TCP    0.0.0.0:135            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:445            0.0.0.0:0              LISTENING
+  TCP    0.0.0.0:3389           0.0.0.0:0              LISTENING  (service RDP)
+  [...]
+----
+
+== Partie 5 – Installation d’applications
+
+=== 5.1 Installation d’application sur le Windows 10
+
+Installation silencieuse de 7-zip
+
+[source,cmd]
+----
+"C:\Users\julie\Desktop\7z2300-x64.msi" /q INSTALLDIR="C:\Program Files\7-Zip"
+----

@@ -28,6 +28,7 @@ firefox
 flien
 fliensym
 forig
+freerdp
 fsgsbase
 fsource
 fsrm
@@ -114,7 +115,9 @@ umip
 USERACCOUNT
 usercopy
 vaes
+Vinagre
 vpclmulqdq
+Webmin
 xdigit
 xgetbv
 xsave

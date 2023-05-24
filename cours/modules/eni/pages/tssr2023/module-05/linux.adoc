@@ -400,3 +400,7 @@ UUID=2b73e42b-0043-4f28-8df2-4ea7fde35d09       none             swap   sw      
 ----
 apt update -y && apt upgrade -y
 ----
+
+== Partie 5 – Installation d’applications
+
+=== 5.2 Installation d’application sur le poste Debian 11
