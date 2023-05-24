@@ -107,6 +107,7 @@ ssse
 stibp
 swapgs
 swapoff
+swapon
 syscall
 udevd
 umip

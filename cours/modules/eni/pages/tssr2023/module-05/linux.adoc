@@ -357,9 +357,11 @@ lvs
   swap   system -wi-s-----   1,00g
 
 # étendre à présente la partition swap
-mkswap dev/system/swap
+mkswap /dev/system/swap
 
 #Mise à jour du fichier fstab
+
+swapon /dev/system/swap
 ----
 
 ./etc/fstab
@@ -392,3 +394,9 @@ UUID=8d8ab924-1a5c-48b4-8e01-87f7a4eed470       /services        ext4   defaults
 UUID=2b73e42b-0043-4f28-8df2-4ea7fde35d09       none             swap   sw                         0       0
 ----
 
+==== Mise à jour du système
+
+[source,bash]
+----
+apt update -y && apt upgrade -y
+----

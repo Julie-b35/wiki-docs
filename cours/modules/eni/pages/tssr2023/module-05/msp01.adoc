@@ -324,11 +324,17 @@ Note: il est fortement conseillé de réaliser un snapshot machine éteinte.
 NOTE: il est fortement conseillé de réaliser un snapshot machine éteinte.
 
 * [x] 4.1.1 Afin d’accélérer quelque peu le démarrage du système, l’affichage du menu du chargeur d’amorçage grub ne durera que 2 secondes.
-* [ ] 4.1.2 Finalement, l’espace réservé à la pagination n’est pas suffisant. Il faudrait ainsi utiliser, et ce de façon définitive un swap de 1 Go, pour cela vous vous servirez de l’espace restant sur le premier disque.
-* [ ] 4.1.3 Vous mettrez à jour l’intégralité des paquets de votre système Debian.
+* [x] 4.1.2 Finalement, l’espace réservé à la pagination n’est pas suffisant. Il faudrait ainsi utiliser, et ce de façon définitive un swap de 1 Go, pour cela vous vous servirez de l’espace restant sur le premier disque.
+* [x] 4.1.3 Vous mettrez à jour l’intégralité des paquets de votre système Debian.
+
+[none]
+* -> xref:tssr2023/module-05/linux.adoc#extension-du-swap-de-256mo-à-1go[Procédure: Configuration avancée (Linux)]
 
 === 4.2 Configuration avancée système Windows 10
 
 * [ ] 4.2.1 Pour permettre la reconfiguration du système Windows 10 depuis un système distant, vous activerez la fonctionnalité du bureau à distance avec authentification au niveau du réseau (NLA) et donnerez les autorisations adéquates pour le compte utilisateur de votre binôme.
 * [ ] 4.2.2 Vérifiez le numéro de port de RDP avec la commande netstat -an.
 * [ ] 4.2.3 Vous demanderez à votre binôme de se connecter sur votre poste Windows 10 afin de tester le bon fonctionnement.
+
+[none]
+* -> xref:tssr2023/module-05/windows.adoc#configuration-avancée-système-windows-10[Procédure: Configuration avancée (Windows)]
