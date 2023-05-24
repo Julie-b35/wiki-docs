@@ -434,3 +434,26 @@ image:::tssr2023/msp/linux/webmin.png[]
 == Partie 6 – Sauvegarde et restauration
 
 === 6.1 Sauvegarde sur le poste Debian 10
+
+[source,bash]
+----
+# Création de deux dossier (/srv/backup-{jb,nl},)
+
+#Test création archive du home en root
+tar -uf /srv/backup-jb/backup-home.tar -C /home .
+
+#test création archive de /services en root
+tar -uf /srv/backup-jb/backup-services.tar -C /services .
+
+scp /srv/backup-jb/* jbrindejont@deb-nl:/srv/bkupjb
+----
+
+./etc/cron.d/sauvegarde
+[source,bash]
+----
+30 12 * * * root tar -uf /srv/backup-jb/backup-home.tar -C /home . && tar -uf /srv/backup-jb/backup-services.tar -C /services .
+* * * * * root eval$(ssh-agent -s) && ssh-add && scp /srv/backup-jb/* jbrindejont@deb-nl:/srv/bkupjb
+
+----
+
+Pour le service scp, j'ai mis en place une paire de clef ssh pour éviter de taper un mot de passe.
