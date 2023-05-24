@@ -295,13 +295,40 @@ Note: il est fortement conseillé de réaliser un snapshot machine éteinte.
 
 === 3.4 Gestion d’imprimantes
 
-* [ ] 3.4.1 Une imprimante *HP LaserJet M9050 MFP* est à installer sur le système Windows. Elle possède l’adresse IP (fictive) 172.16.XX.YY/ZZ (prenez la première @ip disponible de votre réseau) et doit être partagée sur le réseau afin de la rendre disponible pour d’autres postes. Vous utiliserez les pilotes fournis ici : \\10.0.0.6\Distrib\Drivers\Imprimante\upd-pcl6-x64-7.0.0.24832.exe
+* [x] 3.4.1 Une imprimante *HP LaserJet M9050 MFP* est à installer sur le système Windows. Elle possède l’adresse IP (fictive) 172.16.XX.YY/ZZ (prenez la première @ip disponible de votre réseau) et doit être partagée sur le réseau afin de la rendre disponible pour d’autres postes. Vous utiliserez les pilotes fournis ici : \\10.0.0.6\Distrib\Drivers\Imprimante\upd-pcl6-x64-7.0.0.24832.exe
 
-* [ ] 3.4.2 Les permissions d’utilisation de cette dernière sont les suivantes :
-** [ ] 3.4.2.1 Tous les utilisateurs peuvent imprimer
-** [ ] 3.4.2.2 Le service Comptabilité peut supprimer des impressions bloquées en cas de problèmes
-** [ ] 3.4.2.3 Le service informatique possède le contrôle total
-* [ ] 3.4.3 Votre binôme s’y connectera et la déclarera comme imprimante par défaut.
+* [x] 3.4.2 Les permissions d’utilisation de cette dernière sont les suivantes :
+** [x] 3.4.2.1 Tous les utilisateurs peuvent imprimer
+** [x] 3.4.2.2 Le service Comptabilité peut supprimer des impressions bloquées en cas de problèmes
+** [x] 3.4.2.3 Le service informatique possède le contrôle total
+* [x] 3.4.3 Votre binôme s’y connectera et la déclarera comme imprimante par défaut.
 
 [none]
 * -> xref:tssr2023/module-05/windows.adoc#3-4-gestion-dimprimantes[Procédure: Gestion Imprimantes (Windows)]
+
+* [ ] 3.4.4 Pour l’édition de documents comptables volumineux (bilan de fin d’exercice, état des provisions…), un pool d’imprimantes devra être mis en oeuvre, autorisant l’impression sur 2 périphériques d’impression physiques Xerox Office Color possédant les adresses IP suivantes : les pilotes sont ici : \\10.0.0.6\Distrib\Drivers\Imprimante\XCC70_5.523.0.0_PrintSetup.exe
+
+✓ 176.16.255.101
+✓ 176.16.255.102
+
+* [x] 3.4.5 Vous tiendrez compte des caractéristiques suivantes
+** [x] 3.4.5.1 Seul le service Comptabilité est habilité à utiliser ces périphériques et uniquement entre 19h00 et 3h00
+** [x] 3.4.5.2 Les administrateurs (service informatique) possèdent le contrôle total.
+* [x] 3.4.6 Crée 2 files d’attente pour la Xerox Office Color. Les directeurs auront la priorité sur les autres groupes.
+* [x] 3.4.7 Déplacer le spool d’impression sur D : (au lieu de C:\windows).
+
+== Partie 4 – Configuration avancée des systèmes
+
+=== 4.1 Configuration avancée système Debian
+
+NOTE: il est fortement conseillé de réaliser un snapshot machine éteinte.
+
+* [ ] 4.1.1 Afin d’accélérer quelque peu le démarrage du système, l’affichage du menu du chargeur d’amorçage grub ne durera que 2 secondes.
+* [ ] 4.1.2 Finalement, l’espace réservé à la pagination n’est pas suffisant. Il faudrait ainsi utiliser, et ce de façon définitive un swap de 1 Go, pour cela vous vous servirez de l’espace restant sur le premier disque.
+* [ ] 4.1.3 Vous mettrez à jour l’intégralité des paquets de votre système Debian.
+
+=== 4.2 Configuration avancée système Windows 10
+
+* [ ] 4.2.1 Pour permettre la reconfiguration du système Windows 10 depuis un système distant, vous activerez la fonctionnalité du bureau à distance avec authentification au niveau du réseau (NLA) et donnerez les autorisations adéquates pour le compte utilisateur de votre binôme.
+* [ ] 4.2.2 Vérifiez le numéro de port de RDP avec la commande netstat -an.
+* [ ] 4.2.3 Vous demanderez à votre binôme de se connecter sur votre poste Windows 10 afin de tester le bon fonctionnement.

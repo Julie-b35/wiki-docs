@@ -286,6 +286,8 @@ lvremove data home
 reboot
 ----
 
+
+
 ==== Mise en place dossier services
 
 .Préparation dossier '/services'
@@ -319,3 +321,7 @@ chown :commercial commercial/ && chmod 770 commercial/
 
 chmod g+s logistique/
 ----
+
+== Partie 4 – Configuration avancée des systèmes
+
+=== Configuration avancée système Debian

@@ -249,6 +249,7 @@ New-PSDrive -Name "U" -PSProvider "FileSystem" -Root "\\172.16.0.161\Support_Inf
 New-SmbMapping -LocalPath "U:" -RemotePath "\\172.16.0.161\Support_Info" -Persistent $true -UserName jbrindejont -Password $password
 
 New-PSDrive -Name "U" -PSProvider "FileSystem" -Root "\\10.130.15.253\Support_Info$" -Persist -Credential jbrindejont
+New-PSDrive -Name "U" -PSProvider "FileSystem" -Root "\\10.130.15.253\Support_Info$" -Persist -Credential nleponner
 ----
 
 === 3.4 Gestion d’imprimantes
@@ -256,3 +257,24 @@ New-PSDrive -Name "U" -PSProvider "FileSystem" -Root "\\10.130.15.253\Support_In
 Adresse Ip imprimante : 176.16.255.100
 
 image::tssr2023/msp/w10-jb/install-printer.png[]
+
+=== Gestion Imprimantes Xerox
+
+* Dans un premier temps j'ajoute 2 imprimantes xerox, l'une à l'adresse `172.16.255.101`, la suivante à l'adresse `172.16.255.102`
+* Dans un second temps je renomme la première imprimante en *Imprimante Xerox Pour Direction*, puis la seconde en *Imprimante Xerox Service Comptabilité*
+* Sur les deux imprimantes j'active le pool d'impression sur les deux IP ci-dessus.
+* Sur l'imprimante  *Imprimante Xerox Pour Direction* :
+** Dans l'onglet Avancer, je met priorité sur 99
+** Pour la partie sécurité, seul la Direction y a accès, les informaticien ont un control total.
+* Sur l'imprimante  *Imprimante Xerox Service Comptabilité*:
+** Dans l'onglet Avancer, définissions de la disponibilité de 19:00 à 03:00
+** Pour la partie sécurité, seul la Comptabilité y a accès, les informaticien ont un control total.
+
+image::tssr2023/msp/w10-jb/configPrinterDirection.png[]
+image::tssr2023/msp/w10-jb/configPrinterComptabiliter.png[]
+
+* Déplacement du spool d'impression dans *D:*
+
+== Partie 4 – Configuration avancée des systèmes
+
+=== Configuration avancée système Windows 10
