@@ -335,7 +335,7 @@ NOTE: il est fortement conseillé de réaliser un snapshot machine éteinte.
 * [x] 4.2.1 Pour permettre la reconfiguration du système Windows 10 depuis un système distant, vous activerez la fonctionnalité du bureau à distance avec authentification au niveau du réseau (NLA) et donnerez les autorisations adéquates pour le compte utilisateur de votre binôme.
 * [x] 4.2.2 Vérifiez le numéro de port de RDP avec la commande netstat -an. (Le port est 3389)
 * [x] 4.2.3 Vous demanderez à votre binôme de se connecter sur votre poste Windows 10 afin de tester le bon fonctionnement.
-n
+
 [none]
 * -> xref:tssr2023/module-05/windows.adoc#configuration-avancée-système-windows-10[Procédure: Configuration avancée (Windows)]
 
@@ -345,6 +345,7 @@ n
 
 * [x] 5.1.1 Vous chercherez et validerez la possibilité d’installer de façon silencieuse le logiciel 7zip. C’est-à-dire, qu’aucune boite de dialogue ou assistant graphique ne doit s’afficher à l’écran au déclenchement de l’installation, hormis bien sûr l’alerte UAC.(regarder dans l’aide et la FAQ du site officiel de 7zip). Vous trouverez le logiciel ici : \\Distrib\logiciels\applications\7zip
 
+[none]
 * -> xref:tssr2023/module-05/windows.adoc#5-2-installation-dapplication-sur-le-poste-debian-11[Procédure: Installation d’applications (Windows)]
 
 === 5.2 Installation d’application sur le poste Debian 11
@@ -352,6 +353,7 @@ n
 * [x] 5.2.1 Sans toucher aux paramétrages actuels du poste Windows, vous vous connecterez à ce dernier à l’aide du protocole RDP. Pour cela, vous rechercherez et installerez une application cliente disponible sur les dépôts officiels sous forme graphique capable entre autres de gérer ce protocole, sachant que Vinagre et freerdp ne permettent pas facilement de gérer l’authentification NLA.
 * [x] 5.2.2 Installez Webmin afin que l’administrateur puis effectuer une partie de son travail via une interface web graphique.
 
+[none]
 * -> xref:tssr2023/module-05/linux.adoc#5-2-installation-dapplication-sur-le-poste-debian-11[Procédure: Installation d’applications (Linux)]
 
 == Partie 6 – Sauvegarde et restauration
@@ -365,9 +367,15 @@ n
 
 NOTE: il se peut que la commande scp ne soit pas présente sur votre système. Vous installerez le cas échéant les paquets nécessaires.
 
+[none]
+* -> xref:tssr2023/module-05/linux.adoc#[Procédure: Sauvegarde et Restauration (linux)]
+
 === 6.2 Sauvegarde sur les postes Windows 10
 
 * [ ] 6.2.1 Vous ajouterez tout d’abord un nouveau disque dur de 60 Go dans le cas où vous manqueriez d’espace de stockage.
 * [ ] 6.2.2 Vous réaliserez une image système permettant en cas de panne importante de restaurer le système d’exploitation en intégralité.
 * [ ] 6.2.3 Ensuite, vous planifierez une sauvegarde journalière des données du service informatique (dossier « support informatique ») à 12h45. Les fichiers résultants seront placés sur le partage « Support_Info » de votre binôme dans un dossier qui sera créé à cette fin.
 * [ ] 6.2.4 Enfin, vous paramétrerez les points de restauration sur le volume « C: » et réserverez à cet usage 8% de la capacité du lecteur.
+
+[none]
+* -> xref:tssr2023/module-05/windows.adoc#[Procédure: Sauvegarde et Restauration (Windows)]
