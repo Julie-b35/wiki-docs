@@ -15,6 +15,7 @@ cntrl
 comptabiliter
 cpuid
 cryptd
+dapplication
 Dhhmm
 diskpart
 dnowprefetch
@@ -62,7 +63,9 @@ kthrotld
 kworker
 lahf
 legende
+libauthen
 libbz
+libio
 localgroup
 logind
 lvremove
@@ -94,6 +97,7 @@ rdpid
 rdrand
 rdseed
 rdtscp
+remmina
 Retbleed
 rsyslogd
 sched
@@ -117,6 +121,7 @@ usercopy
 vaes
 Vinagre
 vpclmulqdq
+webmin
 Webmin
 xdigit
 xgetbv

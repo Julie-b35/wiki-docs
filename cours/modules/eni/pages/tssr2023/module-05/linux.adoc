@@ -404,3 +404,29 @@ apt update -y && apt upgrade -y
 == Partie 5 – Installation d’applications
 
 === 5.2 Installation d’application sur le poste Debian 11
+
+https://fr-wiki.ikoula.com/fr/Linux_capabilities_-_Ping_Operation_not_permitted
+
+[source,bash]
+----
+ apt install remmina
+----
+
+==== Installation de Webmin
+
+Le proxy de l'école bloque la connexion vers Webmin.
+
+Voici ma solution de contournement
+
+[source,bash]
+----
+ #Installation dépendances Webmin
+ apt install -y libauthen-pam-perl libio-pty-perl
+
+ #Depuis l'hôte récupérer paquet Webmin.deb : https://download.webmin.com/download/repository/pool/contrib/w/webmin/webmin_2.021_all.deb
+ # trouver un moyen de l'envoyer sur la vm
+ dpkg -i webmin_2.021_all.deb
+----
+
+.vérification Webmin (ip:10000)
+image:::tssr2023/msp/linux/webmin.png[]
