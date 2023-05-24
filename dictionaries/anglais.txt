@@ -10,6 +10,7 @@ eneral
 extglob
 fdisk
 gpedit
+gruub
 gsettings
 inodes
 journalctl

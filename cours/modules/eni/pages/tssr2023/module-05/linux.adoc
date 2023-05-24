@@ -325,3 +325,70 @@ chmod g+s logistique/
 == Partie 4 – Configuration avancée des systèmes
 
 === Configuration avancée système Debian
+
+==== Modification timeout menu grub
+
+./etc/default/gruub
+[source,bash]
+----
+[...]
+GRUB_TIMEOUT=2
+[...]
+
+#Mettre le menu grub
+update-grub
+----
+
+==== Extension du swap de 256Mo à 1Go
+
+[source,shell]
+----
+#désactivation du swap
+swapoff /dev/dm-1
+
+#étendre le fichier d'échange swap à 1Go
+lvextend -L +780M /dev/system/swap
+
+# vérification avec lvs
+lvs
+  LV     VG     Attr       LSize   Pool Origin Data%  Meta%  Move Log Cpy%Sync Convert
+  boot   system -wi-ao---- 488,00m
+  racine system -wi-ao----  16,21g
+  swap   system -wi-s-----   1,00g
+
+# étendre à présente la partition swap
+mkswap dev/system/swap
+
+#Mise à jour du fichier fstab
+----
+
+./etc/fstab
+[source,shell]
+----
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# systemd generates mount units based on this file, see systemd.mount(5).
+# Please run 'systemctl daemon-reload' after making changes here.
+#
+# <file system>                                 <mount point>   <type>  <options>                  <dump>  <pass>
+
+# /dev/mapper/system-racine (racine)
+UUID=faa1bf7c-43fb-4537-9cf6-71787c63e4e6       /                ext4   errors=remount-ro          0       1
+
+# /dev/sda1 (PROFILS)
+UUID=9c35555e-40b9-4a80-8ccb-aff4d93a6354       /home            ext4   defaults                   0       2
+
+# /dev/mapper/system-boot (boot)
+UUID=d64cb789-3ac6-44b5-b3af-9a8a56d1f66a       /boot            ext4   defaults                   0       2
+
+# /dev/sdb2 (DATA)
+UUID=8d8ab924-1a5c-48b4-8e01-87f7a4eed470       /services        ext4   defaults                   0       2
+
+# /dev/mapper/swap (swap)
+UUID=2b73e42b-0043-4f28-8df2-4ea7fde35d09       none             swap   sw                         0       0
+----
+
