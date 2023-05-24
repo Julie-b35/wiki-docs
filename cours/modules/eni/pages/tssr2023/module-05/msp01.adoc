@@ -353,3 +353,21 @@ n
 * [x] 5.2.2 Installez Webmin afin que l’administrateur puis effectuer une partie de son travail via une interface web graphique.
 
 * -> xref:tssr2023/module-05/linux.adoc#5-2-installation-dapplication-sur-le-poste-debian-11[Procédure: Installation d’applications (Linux)]
+
+== Partie 6 – Sauvegarde et restauration
+
+=== 6.1 Sauvegarde sur le poste Debian 10
+
+* [ ] 6.1.1 Afin d’éviter toute perte de données importantes, vous planifierez la sauvegarde quotidienne à 12h30 sous forme de fichiers « tar » :
+** [ ] 6.1.1.1 Des données personnelles des utilisateurs
+** [ ] 6.1.1.2 Des fichiers de données présents dans les dossiers de service
+* [ ] 6.1.2 Pour vous prémunir d’un arrêt brutal du système, vous configurerez une duplication des fichiers à l’aide de la commande scp en direction d’un dossier qui sera mis à disposition à distance sur le poste Debian de votre binôme.
+
+NOTE: il se peut que la commande scp ne soit pas présente sur votre système. Vous installerez le cas échéant les paquets nécessaires.
+
+=== 6.2 Sauvegarde sur les postes Windows 10
+
+* [ ] 6.2.1 Vous ajouterez tout d’abord un nouveau disque dur de 60 Go dans le cas où vous manqueriez d’espace de stockage.
+* [ ] 6.2.2 Vous réaliserez une image système permettant en cas de panne importante de restaurer le système d’exploitation en intégralité.
+* [ ] 6.2.3 Ensuite, vous planifierez une sauvegarde journalière des données du service informatique (dossier « support informatique ») à 12h45. Les fichiers résultants seront placés sur le partage « Support_Info » de votre binôme dans un dossier qui sera créé à cette fin.
+* [ ] 6.2.4 Enfin, vous paramétrerez les points de restauration sur le volume « C: » et réserverez à cet usage 8% de la capacité du lecteur.

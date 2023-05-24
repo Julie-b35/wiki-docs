@@ -430,3 +430,7 @@ Voici ma solution de contournement
 
 .vérification Webmin (ip:10000)
 image:::tssr2023/msp/linux/webmin.png[]
+
+== Partie 6 – Sauvegarde et restauration
+
+=== 6.1 Sauvegarde sur le poste Debian 10

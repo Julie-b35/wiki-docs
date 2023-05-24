@@ -305,3 +305,7 @@ Installation silencieuse de 7-zip
 ----
 "C:\Users\julie\Desktop\7z2300-x64.msi" /q INSTALLDIR="C:\Program Files\7-Zip"
 ----
+
+== Partie 6 – Sauvegarde et restauration
+
+=== 6.2 Sauvegarde sur les postes Windows 10
