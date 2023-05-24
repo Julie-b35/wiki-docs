@@ -252,3 +252,7 @@ New-PSDrive -Name "U" -PSProvider "FileSystem" -Root "\\10.130.15.253\Support_In
 ----
 
 === 3.4 Gestion d’imprimantes
+
+Adresse Ip imprimante : 176.16.255.100
+
+image::tssr2023/msp/w10-jb/install-printer.png[]
