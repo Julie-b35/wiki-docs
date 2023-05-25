@@ -372,10 +372,27 @@ NOTE: il se peut que la commande scp ne soit pas présente sur votre système. V
 
 === 6.2 Sauvegarde sur les postes Windows 10
 
-* [ ] 6.2.1 Vous ajouterez tout d’abord un nouveau disque dur de 60 Go dans le cas où vous manqueriez d’espace de stockage.
-* [ ] 6.2.2 Vous réaliserez une image système permettant en cas de panne importante de restaurer le système d’exploitation en intégralité.
-* [ ] 6.2.3 Ensuite, vous planifierez une sauvegarde journalière des données du service informatique (dossier « support informatique ») à 12h45. Les fichiers résultants seront placés sur le partage « Support_Info » de votre binôme dans un dossier qui sera créé à cette fin.
-* [ ] 6.2.4 Enfin, vous paramétrerez les points de restauration sur le volume « C: » et réserverez à cet usage 8% de la capacité du lecteur.
+* [x] 6.2.1 Vous ajouterez tout d’abord un nouveau disque dur de 60 Go dans le cas où vous manqueriez d’espace de stockage.
+* [x] 6.2.2 Vous réaliserez une image système permettant en cas de panne importante de restaurer le système d’exploitation en intégralité.
+* [x] 6.2.3 Ensuite, vous planifierez une sauvegarde journalière des données du service informatique (dossier « support informatique ») à 12h45. Les fichiers résultants seront placés sur le partage « Support_Info » de votre binôme dans un dossier qui sera créé à cette fin.
+* [x] 6.2.4 Enfin, vous paramétrerez les points de restauration sur le volume « C: » et réserverez à cet usage 8% de la capacité du lecteur.
 
 [none]
 * -> xref:tssr2023/module-05/windows.adoc#[Procédure: Sauvegarde et Restauration (Windows)]
+
+== Pour aller plus loin – Partitionnement LVM
+
+=== 7.1 Configuration du stockage et des ressources
+
+* [ ] 7.1.1 Sur le poste Debian : La partition nommée « LOGS » sera montée de façon permanente dans le dossier « /var/log » afin de soulager la partition utilisée jusque-là. De nombreux fichiers y sont positionnés et utilisés notamment par le système en quasi-permanence, vous veillerez donc à ne perdre aucune information vitale. Vous vérifierez après coup que l’inscription des évènements fonctionne correctement.
+* [ ] 7.1.2 Depuis le système Debian : vous devez monter le partage « Support_Info » hébergé sur le poste Windows de votre binôme, à l’aide du compte utilisateur adéquat. Attention à la problématique de version de protocole SMB supportée par Windows 10.
+
+=== 7.2 Configuration avancée des systèmes
+
+* [ ] 7.2.1 Sur le poste Windows : Pour économiser l’espace de la partition système, vous déplacerez le fichier de pagination (swap) à la racine du lecteur « D: » en laissant le système gérer la taille du fichier.
+* [ ] 7.2.2 Sur le poste Debian : Plusieurs applications installées depuis les sources vont être installées dans /opt. Pour plus de flexibilité, l’espace disque accessible à cet emplacement sera géré au moyen de LVM.
+** [ ] 7.2.2.1 Vous ajouterez 2 nouveaux disques SCSI de 20Go ; vérifier leur bonne prise en compte par le système.
+Configuration LVM :
+** [ ] 7.2.2.2 Au moyen des commandes appropriées, vous créerez un volume logique LMV de 32Go
+Montage de /opt depuis le volume logique créé précédemment :
+** [ ] 7.2.2.3 Le volume logique créé précédemment est à formater en ext4. Il doit être accessible depuis /opt et ce de façon permanente.
