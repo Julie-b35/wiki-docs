@@ -114,6 +114,7 @@ swapgs
 swapoff
 swapon
 syscall
+udevadm
 udevd
 umip
 USERACCOUNT

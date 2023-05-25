@@ -384,15 +384,17 @@ NOTE: il se peut que la commande scp ne soit pas présente sur votre système. V
 
 === 7.1 Configuration du stockage et des ressources
 
-* [ ] 7.1.1 Sur le poste Debian : La partition nommée « LOGS » sera montée de façon permanente dans le dossier « /var/log » afin de soulager la partition utilisée jusque-là. De nombreux fichiers y sont positionnés et utilisés notamment par le système en quasi-permanence, vous veillerez donc à ne perdre aucune information vitale. Vous vérifierez après coup que l’inscription des évènements fonctionne correctement.
-* [ ] 7.1.2 Depuis le système Debian : vous devez monter le partage « Support_Info » hébergé sur le poste Windows de votre binôme, à l’aide du compte utilisateur adéquat. Attention à la problématique de version de protocole SMB supportée par Windows 10.
+* [x] 7.1.1 Sur le poste Debian : La partition nommée « LOGS » sera montée de façon permanente dans le dossier « /var/log » afin de soulager la partition utilisée jusque-là. De nombreux fichiers y sont positionnés et utilisés notamment par le système en quasi-permanence, vous veillerez donc à ne perdre aucune information vitale. Vous vérifierez après coup que l’inscription des évènements fonctionne correctement.
+* [x] 7.1.2 Depuis le système Debian : vous devez monter le partage « Support_Info » hébergé sur le poste Windows de votre binôme, à l’aide du compte utilisateur adéquat. Attention à la problématique de version de protocole SMB supportée par Windows 10.
 
 === 7.2 Configuration avancée des systèmes
 
-* [ ] 7.2.1 Sur le poste Windows : Pour économiser l’espace de la partition système, vous déplacerez le fichier de pagination (swap) à la racine du lecteur « D: » en laissant le système gérer la taille du fichier.
-* [ ] 7.2.2 Sur le poste Debian : Plusieurs applications installées depuis les sources vont être installées dans /opt. Pour plus de flexibilité, l’espace disque accessible à cet emplacement sera géré au moyen de LVM.
-** [ ] 7.2.2.1 Vous ajouterez 2 nouveaux disques SCSI de 20Go ; vérifier leur bonne prise en compte par le système.
+* [x] 7.2.1 Sur le poste Windows : Pour économiser l’espace de la partition système, vous déplacerez le fichier de pagination (swap) à la racine du lecteur « D: » en laissant le système gérer la taille du fichier.
+* [x] 7.2.2 Sur le poste Debian : Plusieurs applications installées depuis les sources vont être installées dans /opt. Pour plus de flexibilité, l’espace disque accessible à cet emplacement sera géré au moyen de LVM.
+** [x] 7.2.2.1 Vous ajouterez 2 nouveaux disques SCSI de 20Go ; vérifier leur bonne prise en compte par le système.
 Configuration LVM :
-** [ ] 7.2.2.2 Au moyen des commandes appropriées, vous créerez un volume logique LMV de 32Go
+** [x] 7.2.2.2 Au moyen des commandes appropriées, vous créerez un volume logique LMV de 32Go
 Montage de /opt depuis le volume logique créé précédemment :
-** [ ] 7.2.2.3 Le volume logique créé précédemment est à formater en ext4. Il doit être accessible depuis /opt et ce de façon permanente.
+** [x] 7.2.2.3 Le volume logique créé précédemment est à formater en ext4. Il doit être accessible depuis /opt et ce de façon permanente.
+
+* -> xref:tssr2023/module-05/linux.adoc#[Procédure: Configuration avancée des systèmes (linux)]

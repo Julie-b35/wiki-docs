@@ -478,3 +478,107 @@ ssh -i .ssh/id_rsa jbrindejont@deb-nl
 40 12 * * * root scp -i .ssh/id_rsa  /srv/backup-jb/* jbrindejont@deb-nl:/srv/bkupjb
 ----
 
+== Pour aller plus loin – Partitionnement LVM
+
+=== 7.1 Configuration du stockage et des ressources
+
+==== 7.1.1  Mise en place partition LOGS sur /var/log
+
+[source,bash]
+----
+# Redémarrage en rescue
+systemctl isolate rescue.target
+
+# Vérification de l'utilisateur de /var/log
+lsof | grep /var/log
+
+# Arrêt de services
+systemctl stop systemd-journald.service
+
+# Sécurisation Système fichier /var/log
+mount -o remount,ro /
+
+# Montage /dev/sda3 (LOGS)
+mount /dev/sda3 /mnt/
+
+# Copie de fichier
+cp -av /var/log/* /mnt
+
+# Sécurisation Système fichier /var/log
+mount -o remount,rw /
+
+# Suppression contenus /var/log
+
+# démontage /dev/sda3 (LOGS)
+umount /mnt
+#Mise à jour fstab
+----
+
+.extrait /etc/fstab
+[source,bash]
+----
+# /dev/sda3 (LOGS)
+UUID=2c4e0aae-eb42-4900-adf4-0baca403a761       /var/log         xfs    defaults                   0       2
+----
+
+[source,bash]
+----
+reboot
+----
+
+==== 7.1.2  Mise en place partage Support_info windows sur linux
+
+[source,bash]
+----
+# Installation paquet nécessaire pour le montage d'un partage windows
+apt install cifs-utils
+
+# Test d'une connexion
+mount -t cifs -o username=jbrindejont,password=jb //172.16.0.161/Support_Info$ /media/supportInfo
+----
+
+.extrait /etc/fstab
+[source,bash]
+----
+//172.16.0.161/Support_Info$                   /media/supportInfo    cifs  username=jbrindejont,password=jb  0  2
+----
+
+
+=== 7.2 Configuration avancée des systèmes
+
+==== 7.2.2 Mise en place disque pour gérer /opt
+
+[source,bash]
+----
+# détection des 2 nouveau disque installé.
+udevadm info --query=path --name=sda
+echo "- - -" > /sys/class/scsi_host/host2/scan
+
+# Partitionnement avec fdisk des 2 disk (taille total)
+
+# Création des volumes physique
+pvcreate /dev/sdc1 /dev/sdd1
+
+# Extension du groupe de volume 'data'
+vgextend /dev/sdc1 /dev/sdd1
+
+# création d'un volume logique 'logiciels'
+lvcreate -n logiciels -L 32G data 
+
+# Création du système de fichier en ext4
+mkfs.ext4 -L "Logiciels" /dev/data/logiciels
+
+# Edition fichier fstab
+----
+
+.extrait /etc/fstab
+[source,bash]
+----
+# /dev/mapper/date-logiciels (Logiciels)
+UUID=5ec42f4a-bdf4-4dd8-aad3-bce0ab99fac0       /opt         ext4    defaults                   0       2
+----
+
+[source,bash]
+----
+mount /opt
+----
