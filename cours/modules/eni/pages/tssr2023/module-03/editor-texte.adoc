@@ -329,3 +329,6 @@ Ici dans toutes les lignes qui contiennent Orléans,  on recherche `*^#*` pour l
 
 ==== Insertion de données et enregistrement sous
 
+****
+:r nomfich Insertion après la ligne courante du contenu du fichier nomfich :nb r nomfich Insertion après la ligne nb du contenu du fichier nomfich :r !cmd Insertion après la ligne courante du résultat de la commande cmd :w nomfich Enregistrer sous nomfich :w>>nomfich Ajout du contenu de l'espace de travail à la fin du fichier nomfich
+****

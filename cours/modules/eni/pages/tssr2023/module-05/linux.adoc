@@ -448,12 +448,33 @@ tar -uf /srv/backup-jb/backup-services.tar -C /services .
 scp /srv/backup-jb/* jbrindejont@deb-nl:/srv/bkupjb
 ----
 
+****
+Pour le service scp, j'ai mis en place une paire de clef ssh pour éviter de taper un mot de passe.
+nécessaire pour une tache cron
+****
+
+[source,bash]
+----
+#Génération d'une paire de clef
+ssh-keygen -t rsa -C "jbrindejont"
+
+#Création d'un dossier distante pour accueillir la clef public
+ssh jbrindejont@deb-nl mkdir /home/jbrindejont/.ssh
+
+# Envoyer la clef public sur le debian du binôme
+scp ~/.ssh/id_rsa/jbrindejont@deb-nl:/home/jbrindejont/.ssh/authorized_keys
+
+#test connexion ssh
+ssh -i .ssh/id_rsa jbrindejont@deb-nl
+# La connexion c'est faite sans taper de mot de passe.
+
+#Connexion ssh via paire de clef opérationnelle.
+----
+
 ./etc/cron.d/sauvegarde
 [source,bash]
 ----
 30 12 * * * root tar -uf /srv/backup-jb/backup-home.tar -C /home . && tar -uf /srv/backup-jb/backup-services.tar -C /services .
-* * * * * root eval$(ssh-agent -s) && ssh-add && scp /srv/backup-jb/* jbrindejont@deb-nl:/srv/bkupjb
-
+40 12 * * * root scp -i .ssh/id_rsa  /srv/backup-jb/* jbrindejont@deb-nl:/srv/bkupjb
 ----
 
-Pour le service scp, j'ai mis en place une paire de clef ssh pour éviter de taper un mot de passe.

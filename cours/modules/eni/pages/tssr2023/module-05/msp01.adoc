@@ -363,7 +363,7 @@ NOTE: il est fortement conseillé de réaliser un snapshot machine éteinte.
 * [x] 6.1.1 Afin d’éviter toute perte de données importantes, vous planifierez la sauvegarde quotidienne à 12h30 sous forme de fichiers « tar » :
 ** [x] 6.1.1.1 Des données personnelles des utilisateurs
 ** [x] 6.1.1.2 Des fichiers de données présents dans les dossiers de service
-* [ ] 6.1.2 Pour vous prémunir d’un arrêt brutal du système, vous configurerez une duplication des fichiers à l’aide de la commande scp en direction d’un dossier qui sera mis à disposition à distance sur le poste Debian de votre binôme.
+* [x] 6.1.2 Pour vous prémunir d’un arrêt brutal du système, vous configurerez une duplication des fichiers à l’aide de la commande scp en direction d’un dossier qui sera mis à disposition à distance sur le poste Debian de votre binôme.
 
 NOTE: il se peut que la commande scp ne soit pas présente sur votre système. Vous installerez le cas échéant les paquets nécessaires.
 
