@@ -398,3 +398,22 @@ Montage de /opt depuis le volume logique créé précédemment :
 ** [x] 7.2.2.3 Le volume logique créé précédemment est à formater en ext4. Il doit être accessible depuis /opt et ce de façon permanente.
 
 * -> xref:tssr2023/module-05/linux.adoc#[Procédure: Configuration avancée des systèmes (linux)]
+
+=== Tp sur le classeur
+
+* [x] 7.2.3 Vous trouverez un fichier Excel (Résultats_séminaire.xlsx) comprenant les notes des employer aux derniers séminaires. Veuillez l’ouvrir et compléter :
+* [x] 7.2.3.1 La colonne à l’aide d’une formule “Total par élève”
+* [x] 7.2.3.2 La colonne à l’aide d’une formule “Moyenne par élève”
+* [x] 7.2.3.3 La colonne “APPRECIATION” à l’aide d’une condition
+* [x] 7.2.3.4 La ligne “Total par matière” est une somme des notes des employés dans une matière
+* [x] 7.2.3.5 La ligne “Moyenne par matière” est une moyenne des notes des employés dans une matière
+* [x] 7.2.3.6 La ligne “note maximum” indique la meilleure note des employés dans une matière
+* [x] 7.2.3.7 La ligne “note minimum” indique la note la plus faible des employés dans une matière
+* [x] 7.2.3.8 La ligne “nombre d’élèves” indique le nombre d’élèves
+
+==== Pour calculer l'appréciation selon la condition suivante :
+
+* [x] 7.2.3.9 Si la moyenne et l'assiduité >10 afficher Bien
+* [x] 7.2.3.10 Si la moyenne <=10 et l'assiduité >=10 afficher En Progrès
+* [x] 7.2.3.11 Si la moyenne >=10 et l'assiduité <10 afficher Trop d'absences
+* [x] 7.2.3.12 Si la moyenne et l'assiduité <10 afficher En danger !
