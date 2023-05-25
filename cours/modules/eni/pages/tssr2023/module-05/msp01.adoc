@@ -417,3 +417,6 @@ Montage de /opt depuis le volume logique créé précédemment :
 * [x] 7.2.3.10 Si la moyenne <=10 et l'assiduité >=10 afficher En Progrès
 * [x] 7.2.3.11 Si la moyenne >=10 et l'assiduité <10 afficher Trop d'absences
 * [x] 7.2.3.12 Si la moyenne et l'assiduité <10 afficher En danger !
+
+
+* -> link::https://campuseni-my.sharepoint.com/:x:/g/personal/julie_brindejont2023_campus-eni_fr/EVkVVk_LUCpKmxD3QvVD0vcBAsK9RftfoOYoOU3acVt2jg?e=t5M117[classeur : Résultats_séminaire]

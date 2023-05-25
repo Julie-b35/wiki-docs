@@ -74,16 +74,16 @@ PING 172.16.0.162 (172.16.0.162) 56(84) bytes of data.
 
 |===
 | pseudo         | mdp                    ^.^| Groupes       | Noms
-|rgrimes         |	tssr@rg15_2023$	      ^.^| Direction     | Rick Grimes
-|eporter  	     | tssr@ep15_2023$	     .2+^.^|  Comptabilité	| Eugene Porter
-|cpeletier	     | tssr@cp15_2023$		                    | Carol Peletier (Intérimaire)
+|rgrimes         |	rg	      ^.^| Direction     | Rick Grimes
+|eporter  	     | ep	     .2+^.^|  Comptabilité	| Eugene Porter
+|cpeletier	     | cp		                    | Carol Peletier (Intérimaire)
 |jbrindejont	 | cldras	            .2+^.^|   Informatique	| Julie Brindejont
-|nleponner	     | tssr@nl15_2023$		                       | Nicolas Le Ponner
-|respinosa	     | tssr@re15_2023$	    .2+^.^| Logistique |	Rosita Espinosa
-|mjones	         | tssr@mj15_2023$		                         | Morgan Jones
-|ddixon	         | tssr@dd15_2023$	   .3+^.^| Commercial    | Daryl Dixon
-|gstockes        |	tssr@gs15_2023$		                     | Gabriel Stokes
-|mgreene	     | tssr@mg15_2023$	                         | 	Maggie Greene
+|nleponner	     | nl		                       | Nicolas Le Ponner
+|respinosa	     | re	    .2+^.^| Logistique |	Rosita Espinosa
+|mjones	         | mj		                         | Morgan Jones
+|ddixon	         | dd	   .3+^.^| Commercial    | Daryl Dixon
+|gstockes        |	gs		                     | Gabriel Stokes
+|mgreene	     | mg	                         | 	Maggie Greene
 |===
 
 
