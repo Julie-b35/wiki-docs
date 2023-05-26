@@ -1,0 +1,68 @@
+= Synthèse des dernière semaine.
+
+== Définition : 
+* *OSI* : **O**pen **S**ystem **I**
+* *ISO* : **I**nternational
+
+Voici les différents sujets à voir ( il y en a beaucoup beaucoup ! ) :
+thechiefofhappiness
+== Linux :
+
+
+Modèle OSI : 
+1. P = Bits
+2. L = Trame
+3. R = Paquet
+4. T = Segment
+=== FHS linux : arborescence ?
+
+* /boot : Contiens le serveur de démarrage
+* /bin :  Contiens les binaire utilisable pour tout utilisateur
+* /dev : Contiens des périphérique (devices)
+* /etc : Contiens les fichiers de configuration.
+* /home : Endroit où sont stocker les utilisateur
+* /mnt : Dossier où l'on monte des "système de fichier"
+* /media : Répertorie les point de montage automatique comme les clef usb et cdrom
+* /opt : Logiciels optionnel
+* /sys :  
+* /proc : 
+* /srv : Serveur (services)
+* /var/log : Contiens les logs
+* /tmp : 
+
+compter des mots, lignes ? (wc -l)
+gestion utilisateur et mdp (useradd,usermod,passwd)
+gestion des archives avec tar (tar -c, -u, )
+afficher le contenu d'un fichier, y compris le debut ou la fin (cat,head,tail)
+gestion des droits avec chmod : chmod 664 /home/hk1/fic.txt ug+rw,o+r  (x = 1,w = 2, r = 4)
+ 
+vim :
+faire des recherches de mots ?
+recherche et subtitution ?
+afficher les numéros de lignes ?
+
+
+ 
+
+Windows :
+Gestion carte réseau sous workstation pro, nat, bridge, host only...
+licence oem, retail, KMS/MAK, c'est quoi ?
+quel outil pour voir le journal des événement system ?
+dans quel fichier sont stockés les utilisateurs locaux ?
+activer le bureau a distance puis autoriser un utilisateur nommé "hk" a se connecter dessus
+par feu windows : autoriser un ping
+une ip en 169.254, c'est bon signe ?
+une gateway c'est vraiement utile ?
+droit de sécurité sur un repertoire, acl.
+
+0042
+10
+11
+100
+101
+110
+111
+000:000:100:010
+000:111:111:111
+000:111:011:101
+725
