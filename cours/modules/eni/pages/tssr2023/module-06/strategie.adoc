@@ -1,0 +1,2 @@
+= Module 3 : Publications centrales : Stratégie et conception
+:navtitle: Stratégie et conception
