@@ -11,3 +11,14 @@
 ****
 *ITIL* est un référentiel
 ****
+
+== Modules
+
+* xref:tssr2023/module-06/presentation.adoc[Module 1 : Présentation ITIL et Historique]
+* xref:tssr2023/module-06/gestion-services.adoc[Module 2 : Gestion des services]
+* xref:tssr2023/module-06/strategie.adoc[Module 3 : Publications centrales : Stratégie et conception]
+* xref:tssr2023/module-06/transition.adoc[Module 4 : Publications centrales : Transition]
+* xref:tssr2023/module-06/exploitation.adoc[Module 5 : Publications centrales : Exploitation]
+* xref:tssr2023/module-06/savoir.adoc[Module 6 : Savoir, savoir faire, savoir être]
+* xref:tssr2023/module-06/assistance.adoc[Module 7 : Assistance utilisateur sous GLPI]
+* xref:tssr2023/module-06/amelioration.adoc[Module 8 : Publications centrales : Amélioration continue]

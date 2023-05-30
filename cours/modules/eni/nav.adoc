@@ -49,3 +49,13 @@
 **** xref:tssr2023/module-05/linux.adoc[]
 **** xref:tssr2023/module-05/windows.adoc[]
 *** xref:tssr2023/module-06/itil.adoc[]
+**** xref:tssr2023/module-06/presentation.adoc[]
+**** xref:tssr2023/module-06/gestion-services.adoc[]
+**** Publication Centrales
+***** xref:tssr2023/module-06/strategie.adoc[]
+***** xref:tssr2023/module-06/transition.adoc[]
+***** xref:tssr2023/module-06/exploitation.adoc[]
+**** xref:tssr2023/module-06/savoir.adoc[]
+**** xref:tssr2023/module-06/assistance.adoc[]
+**** Publication Centrales
+***** xref:tssr2023/module-06/amelioration.adoc[]

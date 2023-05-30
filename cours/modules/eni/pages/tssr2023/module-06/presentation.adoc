@@ -1,0 +1,39 @@
+
+
+•
+ISO 9001
+•
+Norme, qui s’adresse à tous les secteurs d’activité, qui définit un système de gestion de qualité par
+le processus.
+•
+ISO 20000
+•
+Norme internationale, spécifique à la gestion des systèmes d’information, définie en treize
+processus (ces processus sont définis dans ITIL).
+•
+Cette certification est facilitée si l’on possède ISO 9001 et ITILV2 minimum
+
+
+
+•
+Les différents acteurs
+•
+OGC « O ffice of G overnment C ommerce » : office public britannique du commerce.
+•
+Propriétaire du référentiel initialise et contrôle les publications
+•
+Axelos : Entreprise créée en 2014 par l’OGC pour gérer ITIL
+•
+Organismes de gestion des certifications et des examens
+•
+APM Group, EXIN, ISEB, Loyalist College , Dansk IT, DF Certifiering
+•
+Définissent un langage commun
+•
+ITSMF IT S ervice M anagement F orum)
+•
+Association d’utilisateurs
+•
+Les organismes de formation et les formateurs agréés
+•
+Les experts et les consultants en gestion de service certifiés ITIL
