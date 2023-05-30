@@ -4,3 +4,4 @@ version: 1.0
 nav:
 - modules/ROOT/nav.adoc
 - modules/eni/nav.adoc
+- modules/eni-training/nav.adoc
