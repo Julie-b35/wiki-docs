@@ -7,6 +7,10 @@ Voici une liste de leçons que j'ai reçue ces dernier temps
 * xref:eni:index.adoc[Présentation de l'école ENI]
 ** xref:eni:tssr2023/tssr2023.adoc[Cours pendant la formation à l'ENI]
 
+== Cours trouvé dans la bibliothèque numérique de l'ENI
+
+* xref:eni-training:index.adoc[Liste cours trouvé dans la bibliothèque]
+** xref:eni-training:ITIL/itil.adoc[Cours sur ITIL.]
 
 NOTE: Pour rappel j'ai écris des notes xref:notes:ROOT:index.adoc[ici] pour simplifier en mieux les cours suivie.
 
