@@ -48,3 +48,4 @@
 *** xref:tssr2023/module-05/msp01.adoc[]
 **** xref:tssr2023/module-05/linux.adoc[]
 **** xref:tssr2023/module-05/windows.adoc[]
+**** xref:tssr2023/module-06/itil.adoc[]
