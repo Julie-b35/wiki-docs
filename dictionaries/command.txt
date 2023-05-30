@@ -50,6 +50,7 @@ ibrs
 IBRS
 inum
 invpcid
+itil
 Itlb
 jedit
 kauditd

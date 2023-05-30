@@ -1,6 +1,9 @@
 = Module 1 : Présentation ITIL et Historique
 :navtitle: Présentation ITIL et Historique
 
+* Module suivant -> xref:tssr2023/module-06/gestion-services.adoc[Module 2 : Gestion des services]
+
+Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]
 
 •
 ISO 9001

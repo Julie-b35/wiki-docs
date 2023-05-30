@@ -1,2 +1,6 @@
 = Module 8 : Publications centrales : Amélioration continue
 :navtitle: Amélioration continue
+
+* Module précédent -> xref:tssr2023/module-06/assistance.adoc[Module 7 : Assistance utilisateur sous GLPI]
+
+Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]

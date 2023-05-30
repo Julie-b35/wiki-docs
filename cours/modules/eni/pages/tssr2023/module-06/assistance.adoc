@@ -1,2 +1,7 @@
 = Module 7 : Assistance utilisateur sous GLPI
 :navtitle: Assistance utilisateur sous GLPI
+
+* Module précédent -> xref:tssr2023/module-06/savoir.adoc[Module 6 : Savoir, savoir faire, savoir être]
+* Module suivant -> xref:tssr2023/module-06/amelioration.adoc[Module 8 : Publications centrales : Amélioration continue]
+
+Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]

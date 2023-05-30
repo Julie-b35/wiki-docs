@@ -1,2 +1,7 @@
 = Module 2 : Gestion des services
 :navtitle: Gestion des services
+
+* Module précédent -> xref:tssr2023/module-06/presentation.adoc[Module 1 : Présentation ITIL et Historique]
+* Module suivant -> xref:tssr2023/module-06/strategie.adoc[Module 3 : Publications centrales : Stratégie et conception]
+
+Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]

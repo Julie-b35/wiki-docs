@@ -1,2 +1,7 @@
 = Module 3 : Publications centrales : Stratégie et conception
 :navtitle: Stratégie et conception
+
+* Module précédent -> xref:tssr2023/module-06/gestion-services.adoc[Module 2 : Gestion des services]
+* Module suivant -> xref:tssr2023/module-06/transition.adoc[Module 4 : Publications centrales : Transition]
+
+Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]
