@@ -1,0 +1,13 @@
+= Sensibilisation ITIL et gestion de parc
+
+== Définition
+
+* *ITIL* : **I**nformation **T**echnology **I**nfrastructure **L**ibrary.
+* En français : Bibliothèque pour l’infrastructure des technologies de l’information.
+* *ITIL* définit les bonnes pratiques informatiques afin d’avoir un Système d’Information le plus efficace et efficient que possible.
+
+
+
+****
+*ITIL* est un référentiel
+****

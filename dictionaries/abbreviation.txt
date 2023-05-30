@@ -1,6 +1,9 @@
 APIPA
 CILL
+echnology
+ibrary
 icence
+ITIL
 LGPO
 logname
 Logname
@@ -8,6 +11,8 @@ lutilisatrice
 MMDD
 mobaxterm
 nblig
+nformation
+nfrastructure
 NTFS
 POSIX
 scpol
