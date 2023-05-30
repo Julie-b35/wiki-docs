@@ -1,5 +1,7 @@
 = Sensibilisation ITIL et gestion de parc
 
+
+Formateur : Mr Di
 == Définition
 
 * *ITIL* : **I**nformation **T**echnology **I**nfrastructure **L**ibrary.
@@ -22,3 +24,27 @@
 * xref:tssr2023/module-06/savoir.adoc[Module 6 : Savoir, savoir faire, savoir être]
 * xref:tssr2023/module-06/assistance.adoc[Module 7 : Assistance utilisateur sous GLPI]
 * xref:tssr2023/module-06/amelioration.adoc[Module 8 : Publications centrales : Amélioration continue]
+
+
+
+****
+Itil référentiel international
+
+1ère étape la conceptions
+
+- Disponibilité du système
+****
+
+
+TP : 1
+* : Temps moyen de non-disponibilité
+* : Temps moyen de diagnostiquer
+* : Temps moyen de redémarrage
+* : Détection
+* : Diagnostique
+* : Réparation
+* : Redémarrage
+* : Temps moyen de détection
+* : Temps moyen de réparation (MTTR)
+* : Durée moyenne de disponibilité
+* : temps moyen entre deux incidents
