@@ -94,6 +94,7 @@ prctl
 PRENOM
 procstatus
 punct
+pwsh
 rdpid
 rdrand
 rdseed
