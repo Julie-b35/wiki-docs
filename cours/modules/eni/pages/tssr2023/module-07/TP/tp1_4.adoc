@@ -142,7 +142,7 @@ a|
 Packet Tracer PC Command Line 1.0
 PC> ping 192.168.1.253
 ----
-|Avez-vous réussi ? Expliquez votre réponse.
+|Avez-vous réussi ? Expliquez votre réponse. (*Non car l'ip de S1 n'est pas configuré.*)
 |===
 
 == Partie 3 : Configurer l'interface de gestion des commutateurs
@@ -167,7 +167,7 @@ S1(config-if)#
 S1(config-if)# exit
 S1#
 ----
-|À quoi sert la commande no shutdown ?
+|À quoi sert la commande no shutdown ? (*La commande `shutdown` permet de redémarré l'interface*)
 .2+|b.     |Enregistrez la configuration.
 a|
 [source,bash]
