@@ -39,11 +39,14 @@ Une fois que le réseau a convergé, un point vert devrait apparaître à chaque
 
 [frame=none,grid=none,cols="~,~"]
 |===
-|a.     |Cliquez sur *PC0*.
+.2+|a.     |Cliquez sur *PC0*.
+a| image:tssr2023/modules-07/TP/01_1/07.png[]
 |b.     |Sélectionnez l'onglet *Config*. Remplacez le nom d'affichage de l'ordinateur par *PC-A*. Sélectionnez l'onglet *FastEthernet* à gauche, puis ajoutez l'adresse IP *192.168.1.1* et le masque de sous-réseau *255.255.255.0*. Refermez la fenêtre de configuration du PC-A en cliquant sur le symbole x en haut à droite.
-|c.     |Cliquez sur *PC1*.
+.2+|c.     |Cliquez sur *PC1*.
+a| image:tssr2023/modules-07/TP/01_1/08.png[]
 |d.     |Sélectionnez l'onglet *Config*. Remplacez le nom d'affichage de l'ordinateur par *PC-B*. Sélectionnez l'onglet *FastEthernet* à gauche, puis ajoutez l'adresse IP *192.168.1.2* et le masque de sous-réseau *255.255.255.0*. Fermez la fenêtre de configuration du PC-B.
-|e.     |Cliquez sur *PC2*.
+.2+|e.     |Cliquez sur *PC2*.
+a| image:tssr2023/modules-07/TP/01_1/09.png[]
 |f.     | Sélectionnez l'onglet *Config*. Remplacez le nom d'affichage de l'ordinateur par *PC-C*. Sélectionnez l'onglet *FastEthernet* à gauche, puis ajoutez l'adresse IP *192.168.1.3* et le masque de sous-réseau *255.255.255.0*. Fermez la fenêtre de configuration du PC-C.
 |===
 
