@@ -16,5 +16,9 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 
 == TP
 
-* xref:tssr2023/module-07/TP/tp1.adoc[TP - 1ère série de TP]
+* xref:tssr2023/module-07/TP/tp1_1.adoc[TP 1/5 PacketTracer : Utilisation du logiciel Packet Tracer]
+* xref:tssr2023/module-07/TP/tp1_2.adoc[TP 2/5 PacketTracer : ]
+* xref:tssr2023/module-07/TP/tp1_3.adoc[TP 3/5 PacketTracer : ]
+* xref:tssr2023/module-07/TP/tp1_4.adoc[TP 4/5 PacketTracer : ]
+* xref:tssr2023/module-07/TP/tp1_5.adoc[TP 5/5 PacketTracer : ]
 * xref:tssr2023/module-07/TP/tp2.adoc[TP - 2^ème^ série de TP]
