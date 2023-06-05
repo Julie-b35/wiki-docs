@@ -15,22 +15,26 @@ image:tssr2023/modules-07/TP/00.png[]
 
 ==== Étape 2 :   Établissez une session de terminal avec S1.
 
-image:tssr2023/modules-07/TP/02_0.png[]
-
-==== Étape 3 :   Découvrez l'aide IOS
 image:tssr2023/modules-07/TP/02_1.png[]
 
+==== Étape 3 :   Découvrez l'aide IOS
+image:tssr2023/modules-07/TP/02_0.png[]
+
+* a.     L'IOS peut fournir de l'aide sur les commandes en fonction du niveau auquel l'utilisateur accède. L'invite actuellement affichée est appelée mode d'exécution utilisateur et le périphérique attend une commande. La forme la plus simple de l'aide consiste à entrer un point d'interrogation (?) à l'invite afin d'afficher la liste des commandes.
+
+S1> ?
 * Quelle commande commence par la lettre « C » ? -> `connect`
 
-image:tssr2023/modules-07/TP/02_2.png[]
+image:tssr2023/modules-07/TP/02_1_1.png[]
 
 * Quelles sont les commandes affichées ? -> `telnet`, `terminal`, `traceroute`
 
 
-image:tssr2023/modules-07/TP/02_3.png[]
+image:tssr2023/modules-07/TP/02_2.png[]
 
 * Quelles sont les commandes affichées ? -> `telnet`, `terminal`
 
+image:tssr2023/modules-07/TP/02_3.png[]
 
 === Using the Cisco IOS show Commands.pka
 
