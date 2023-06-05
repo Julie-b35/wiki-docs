@@ -76,3 +76,34 @@ image:tssr2023/modules-07/domaine-diffusion.png[]
 image:tssr2023/modules-07/rappel-comunication.png[]
 image:tssr2023/modules-07/rappel-comunication2.png[]
 
+== Le routage
+
+=== Routage statique
+
+image:tssr2023/modules-07/routage-statique.png[]
+
+=== Principe du routage
+
+****
+* Lorsqu’un hôte souhaite communiquer avec un autre hôte, le protocole IP va déterminer si l’hôte distant se trouve sur le réseau local ou sur un réseau distant (ET logique).
+* S’il s’agit d’un hôte distant, le protocole IP consulte la table de routage pour trouver une route vers l’hôte ou le réseau distant.
+* Si aucune route n’est décrite explicitement, le protocole IP utilise l’adresse de passerelle par défaut pour envoyer le paquet à un routeur.
+* Sur le routeur, la table de routage est consultée pour déterminer l’hôte ou le réseau distant. Si aucune route n’est trouvée, le paquet est envoyé à l’adresse de passerelle par défaut du routeur.
+* Jusqu’à sa livraison à l’hôte de destination, le paquet est envoyé par sauts successifs aux routeurs à chaque nouvelle route identifiée.
+* Son TTL est décrémenté à chaque saut, si le TTL atteint la valeur 0, le paquet n’est pas acheminé. Si aucun itinéraire n’est décrit, l’hôte source reçoit un message d’erreur.
+****
+
+=== Les types de routage
+
+.Routage statique
+****
+* Les routeurs ne partagent pas les informations de routage.
+* Il faut donc construire les tables de routage manuellement.
+****
+
+.Routage dynamique
+****
+* Les routeurs partagent automatiquement les informations de routage.
+* Les tables de routage sont construites dynamiquement.
+* Nécessite un protocole de routage tel que RIP, OSPF, IGRP, EIGRP...
+****

@@ -2,11 +2,13 @@ APIPA
 CILL
 comunication
 echnology
+EIGRP
 ervice
 ethernet
 glpi
 ibrary
 icence
+IGRP
 ITIL
 jlab
 LGPO
@@ -23,6 +25,7 @@ nterconnection
 nternational
 NTFS
 ontrol
+OSPF
 perating
 POSIX
 rganization
