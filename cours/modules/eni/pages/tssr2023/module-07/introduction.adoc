@@ -2,8 +2,7 @@
 :navtitle: Introduction
 
 
-* Module précédent -> xref:tssr2023/module-07/gestion-lien.adoc[Module 08 - Gestion des liens]
-* Module suivant -> xref:tssr2023/module-07/editor-texte.adoc[Module 10 - Éditer du texte]
+* Module suivant -> xref:tssr2023/module-07/reseaux.adoc[Module 02 - Réseaux]
 
 Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur IP]
 
@@ -37,6 +36,12 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 
 image:tssr2023/modules-07/Introduction/tab-couches-osi.png[]
 
+.source
+[NOTE]
+====
+* link:https://www.ionos.fr/digitalguide/serveur/know-how/couche-session/[]
+====
+
 === Les ports
 
 image:tssr2023/modules-07/Introduction/tab-ports-osi.png[]
@@ -47,13 +52,36 @@ image:tssr2023/modules-07/Introduction/tab-ports-osi.png[]
 
 image:tssr2023/modules-07/Introduction/trame-ethernet.png[]
 
+.source
+[NOTE]
+====
+* link:http://arsene.perez-mas.pagesperso-orange.fr/reseaux/ieee802/802_3/trames802.3.htm[]
+====
+
 === Trame Ethernet 802.1Q (VLAN)
 
 image:tssr2023/modules-07/Introduction/trame-ethernet-vlan.png[]
 
+.source
+[NOTE]
+====
+* link:http://igm.univ-mlv.fr/~dr/XPOSE2007/vlanparlegrandquinapascomprislesconsignes/8021QTrame.html[]
+* link:https://forum.huawei.com/enterprise/fr/compr%C3%A9hension-du-vlan-concepts-de-base-du-vlan/thread/762951-100373[]
+* link:https://www.firewall.cx/networking-topics/vlan-networks/221-vlan-8021q-analysis.html[]
+* link:https://fr.wikipedia.org/wiki/IEEE_802.1Q[]
+====
+
 === Le domaine de collision
 
 image:tssr2023/modules-07/Introduction/domaine-collision.png[]
+
+.source
+[NOTE]
+====
+* link:https://reussirsonccna.fr/domaine-de-collision-et-de-diffusion/[]
+* link:https://openclassrooms.com/fr/courses/7192261-simulez-le-schema-de-votre-reseau-avec-cisco-packet-tracer/7444272-identifiez-les-domaines-de-collision-et-de-diffusion[]
+====
+
 
 == Paquet IPv4
 

@@ -11,44 +11,4 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 == Modules
 
 xref:tssr2023/module-07/introduction.adoc[Module 01 - Introduction]
-
-
-Couche Session (Point de contrôle ou de synchronisation)
-link:https://www.ionos.fr/digitalguide/serveur/know-how/couche-session/[]
-
-== Trame Ethernet II (802.3)
-
-link:http://arsene.perez-mas.pagesperso-orange.fr/reseaux/ieee802/802_3/trames802.3.htm[]
-
-== Trame Ethernet 802.1q (Trame VLAN)
-
-link:http://igm.univ-mlv.fr/~dr/XPOSE2007/vlanparlegrandquinapascomprislesconsignes/8021QTrame.html[]
-link:https://forum.huawei.com/enterprise/fr/compr%C3%A9hension-du-vlan-concepts-de-base-du-vlan/thread/762951-100373[]
-link:https://www.firewall.cx/networking-topics/vlan-networks/221-vlan-8021q-analysis.html[]
-link:https://fr.wikipedia.org/wiki/IEEE_802.1Q[]
-
-
-== Domaine de collision / Broadcast
-
-link:https://reussirsonccna.fr/domaine-de-collision-et-de-diffusion/[]
-link:https://openclassrooms.com/fr/courses/7192261-simulez-le-schema-de-votre-reseau-avec-cisco-packet-tracer/7444272-identifiez-les-domaines-de-collision-et-de-diffusion[]
-
-== convertion CIDR
-/24 = 255.255.255.0
-/25 = 255.255.255.128 + 128
-/26 = 255.255.255.192 + 64 = 192
-/27 = 255.255.255.224 + 32 = 224
-/28 = 255.255.255.240 + 16 = 240
-/29 = 255.255.255.248 +  8 = 248
-/30 = 255.255.255.252 +  4 = 252
-/31 = 255.255.255.254 +  2 = 254
-/32 = 255.255.255.255 +  1 = 255
-
-1réseau
-0000 0001 = 1
-0000 0111 = 7
-0000 1000 = 8 /29
-2nd réseau
-0000 1001 = 9 
-0000 1001
-1111 1000
+xref:tssr2023/module-07/reseaux.adoc[Module 02 - Réseaux]
