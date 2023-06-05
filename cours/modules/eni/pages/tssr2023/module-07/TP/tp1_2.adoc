@@ -79,10 +79,16 @@ a|
 S1>t?
 telnet  terminal  traceroute
 ----
-.4+|c.     |À l'invite, saisissez te, suivi d'un point d'interrogation (?).
+.5+|c.     |À l'invite, saisissez te, suivi d'un point d'interrogation (?).
            |S1> te?
            |Quelles sont les commandes affichées ?
-           |Ce type d'aide est appelé aide contextuelle et offre des informations supplémentaires lorsque les commandes sont développées.
+a|
+[source,bash]
+----
+S1>te?
+telnet  terminal
+----
+|Ce type d'aide est appelé aide contextuelle et offre des informations supplémentaires lorsque les commandes sont développées.
 |===
 
 == Étape 4 :   Passez en mode d'exécution privilégié.
