@@ -102,10 +102,13 @@ a| image:tssr2023/modules-07/TP/01_1/28.png[]
 a| image:tssr2023/modules-07/TP/01_1/29.png[]
 .2+|d.   |  Cliquez sur l'outil *Sélectionner* de la barre d'outils verticale située à droite. (il s'agit de la première icône de la barre d'outils).
 a| image:tssr2023/modules-07/TP/01_1/30.png[]
-|e.     |Cliquez sur PC-A, puis sélectionnez l'onglet *Bureau*.
-|f.    |  Sélectionnez *Invite de commandes*, puis saisissez la commande *arp -a* et appuyez sur la touche Entrée pour afficher le tableau ARP en mode ordinateur de bureau. Fermez la fenêtre de configuration du PC-A.
-|h.    | Examinez les tableaux ARP des PC-B et PC-C.
+.2+|e.     |Cliquez sur PC-A, puis sélectionnez l'onglet *Bureau*.
+a| image:tssr2023/modules-07/TP/01_1/34.png[]
+.2+|f.    |  Sélectionnez *Invite de commandes*, puis saisissez la commande *arp -a* et appuyez sur la touche Entrée pour afficher le tableau ARP en mode ordinateur de bureau. Fermez la fenêtre de configuration du PC-A.
+a| image:tssr2023/modules-07/TP/01_1/31.png[]
+.3+|h.    | Examinez les tableaux ARP des PC-B et PC-C.
+a| image:tssr2023/modules-07/TP/01_1/32.png[]
+a| image:tssr2023/modules-07/TP/01_1/33.png[]
 |h.    | Fermez la fenêtre *Invite de commandes.*
 |I.   |   Cliquez sur Vérifier les résultats pour vérifier que la topologie est correcte.
 |===
-image:tssr2023/modules-07/TP/01_1.png[]
