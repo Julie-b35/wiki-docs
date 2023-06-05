@@ -1,4 +1,5 @@
 =  TP 5/5 Packet Tracer : Configuration des paramètres initiaux du routeur
+:navtitle: paramétrages initiaux du routeur
 
 == Objectifs
 
