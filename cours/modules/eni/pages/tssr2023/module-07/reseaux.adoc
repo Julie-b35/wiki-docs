@@ -29,3 +29,17 @@ image:tssr2023/modules-07/Réseaux/navigationEnteDifferentModes.png[]
 === Navigation entre les différents modes IOS (suite)
 
 image:tssr2023/modules-07/Réseaux/navigationEnteDifferentModes2.png[]
+
+== Les structure des commandes
+
+=== Les structures des commandes IOS de base
+
+image:tssr2023/modules-07/Réseaux/StructureCommandesIOS.png[]
+
+=== Fonctionnalités d'aide d'IOS
+
+image:tssr2023/modules-07/Réseaux/FonctionnaliterHelpIOS.png[]
+
+=== Touches d'accès rapide et raccourcis clavier (suite)
+
+image:tssr2023/modules-07/Réseaux/keybind.png[]
