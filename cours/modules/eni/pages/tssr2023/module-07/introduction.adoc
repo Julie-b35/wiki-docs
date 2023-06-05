@@ -1,0 +1,34 @@
+= Module 01 - Introduction
+:navtitle: Introduction
+
+
+* Module précédent -> xref:tssr2023/module-07/gestion-lien.adoc[Module 08 - Gestion des liens]
+* Module suivant -> xref:tssr2023/module-07/editor-texte.adoc[Module 10 - Éditer du texte]
+
+Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur IP]
+
+== Objectifs
+
+* Représenter le modèles OSI
+* Expliquer le principe d'encapsulation
+* Expliquer le fonctionnement des couches du modèles OSI
+* Voir les champs d'une trame
+* Voir les champs d'un paquet
+* Manipulation d'un outils d'analyse réseau
+
+== Présentation d'un modèles OSI (Rappel)
+
+.*Modèle OSI* (**O**perating **S**ystem **I**nterconnection)
+****
+* Présenté en 7 couches indépendantes et communicantes
+* Représente la communication entre systèmes d’information en réseau
+* Proposé par l’organisme de normalisation *ISO* (**I**nternational **O**rganization for **S**tandardization)
+****
+
+.*PDU* (**P**rotocol **D**ata **U**nul / _Unité de données de Protocole_)
+****
+* Unité de mesure des données échangées dans un réseau
+* Constituée de plusieurs éléments distincts :
+** Des informations de contrôle de protocole (*PCI* : **P**rotocol **C**ontrol **I**nformation)
+** Des unités de données de service (*SDU* : **S**ervice **D**ata **U**nit)
+****

@@ -1,6 +1,7 @@
 APIPA
 CILL
 echnology
+ervice
 glpi
 ibrary
 icence
@@ -16,11 +17,18 @@ mobaxterm
 nblig
 nformation
 nfrastructure
+nterconnection
+nternational
 NTFS
+ontrol
+perating
 POSIX
+rganization
+rotocol
 scpol
 servername
 strategie
+tandardization
 tcsh
 ublic
 vfat

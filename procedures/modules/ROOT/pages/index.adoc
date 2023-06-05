@@ -1,4 +1,2 @@
 = Procédures
 
-== Mise en place Serveur VPN
-
