@@ -22,7 +22,7 @@ Placez le curseur sur les catégories pour afficher leur nom dans la case. Pour 
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.2+|a.     | Sélectionnez *End Devices* dans les options proposées en bas à gauche. Faites glisser et déplacez trois ordinateurs génériques dans la zone de conception.
+.3+|a.     | Sélectionnez *End Devices* dans les options proposées en bas à gauche. Faites glisser et déplacez trois ordinateurs génériques dans la zone de conception.
 a| image:tssr2023/modules-07/TP/01_1/02.png[]
 a| image:tssr2023/modules-07/TP/01_1/03.png[]
 | b.     | Sélectionnez *Commutateurs* dans les options proposées en bas à gauche. Ajoutez un commutateur 2960 à votre réseau prototype en le faisant glisser dans la zone de conception.
