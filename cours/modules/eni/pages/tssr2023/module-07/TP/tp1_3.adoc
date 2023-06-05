@@ -1,1 +1,54 @@
-= Using the Cisco IOS show Commands.pka
+=  TP 3/5 Packet Tracer : Utilisation des commandes show de Cisco IOS
+:navtitle: Utiliser commandes show (Cisco IOS)
+
+
+== Objectifs
+
+* Utiliser les commandes show de Cisco IOS
+
+== Contexte/scénario
+
+Les commandes show de Cisco IOS sont très souvent utilisées lorsque vous travaillez avec des équipements Cisco. Au cours de ces travaux pratiques, vous utiliserez les commandes show sur un routeur se trouvant chez un FAI.
+
+== Étape 1 : Connexion au routeur Cisco 1941 du FAI
+
+Lors de cette étape, vous utiliserez le logiciel d'émulation du terminal sur le PC du FAI pour vous connecter au routeur Cisco 1941.
+
+a.     Cliquez sur ISP PC.
+
+b.     Cliquez sur l'onglet Desktop. Sélectionnez Terminal. Vérifiez la configuration du terminal, puis cliquez sur OK pour continuer.
+
+c.     L'invite ISPRouter> indique que vous êtes en mode d'exécution utilisateur. Appuyez sur Entrée si l'invite ne s'affiche pas.
+
+image:tssr2023/modules-07/TP/01_3/01.png[]
+
+== Étape 2 : Découvrez les commandes show.
+
+Utilisez les informations affichées en réponse aux commandes show suivantes pour répondre aux questions.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+.9+| a. |Saisissez show arp à l'invite.
+|Notez les adresses MAC et IP indiquées.
+|Saisissez show flash à l'invite.
+|Notez l'image IOS indiquée :
+|Saisissez show ip route à l'invite.
+|Combien de routes figurent dans la table ?
+|Saisissez show interfaces à l'invite.
+| Quelle interface fonctionne correctement ?
+a|
+!===
+^.^h! Interface             ^.^h! État            ^.^h! Protocole
+! GigabitEthernet 0/0   !Activé           !
+! GigabitEthernet 0/1   !                 !  Hors service
+! Serial0/1/0           !                 !
+! Serial0/1/1           !  Hors service   !
+!===
+.3+|b.     | Saisissez show version à l'invite.
+
+| Quelles sont les versions des composants technologiques activés sur le routeur ?
+
+| Saisissez show ? à l'invite. Citez quelques commandes show supplémentaires parmi celles qui sont disponibles en mode d'exécution utilisateur.
+
+| c.    | Saisissez enable à l'invite pour passer en mode d'exécution privilégié. Citez quelques commandes show supplémentaires disponibles dans ce mode.
+|===
