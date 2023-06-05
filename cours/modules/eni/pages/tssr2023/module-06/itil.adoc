@@ -1,18 +1,22 @@
 = Sensibilisation ITIL et gestion de parc
 
 
-Formateur : Mr Di
-== Définition
+Formateur : Mr Telli DIALLO
 
-* *ITIL* : **I**nformation **T**echnology **I**nfrastructure **L**ibrary.
-* En français : Bibliothèque pour l’infrastructure des technologies de l’information.
-* *ITIL* définit les bonnes pratiques informatiques afin d’avoir un Système d’Information le plus efficace et efficient que possible.
+Mail : tdiallo@campus-eni.fr
 
+Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]
 
+== Présentation du cours
+=== Objectifs  ITIL/GLPI
 
-****
-*ITIL* est un référentiel
-****
+* Se conformer aux règles de bonnes pratiques de la démarche ITIL v3
+* Utiliser un outil de gestion d’incident
+* Traiter un dossier d’incident conformément à un processus
+* Appliquer un script de questionnement ou une méthode d’analyse de résolution d’incident
+* Utiliser et renseigner une base de connaissance
+* Gérer les problèmes
+
 
 == Modules
 
@@ -24,27 +28,3 @@ Formateur : Mr Di
 * xref:tssr2023/module-06/savoir.adoc[Module 6 : Savoir, savoir faire, savoir être]
 * xref:tssr2023/module-06/assistance.adoc[Module 7 : Assistance utilisateur sous GLPI]
 * xref:tssr2023/module-06/amelioration.adoc[Module 8 : Publications centrales : Amélioration continue]
-
-
-
-****
-Itil référentiel international
-
-1ère étape la conceptions
-
-- Disponibilité du système
-****
-
-
-TP : 1
-* : Temps moyen de non-disponibilité
-* : Temps moyen de diagnostiquer
-* : Temps moyen de redémarrage
-* : Détection
-* : Diagnostique
-* : Réparation
-* : Redémarrage
-* : Temps moyen de détection
-* : Temps moyen de réparation (MTTR)
-* : Durée moyenne de disponibilité
-* : temps moyen entre deux incidents

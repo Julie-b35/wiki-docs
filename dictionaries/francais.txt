@@ -143,3 +143,4 @@ utilisateur
 verif
 vérouillé
 Visio
+DIALLO

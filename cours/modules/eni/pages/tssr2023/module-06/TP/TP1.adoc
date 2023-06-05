@@ -1,0 +1,31 @@
+= Création des serveurs
+
+== Configuration des serveur
+
+=== Routeur Pfsense
+
+=== Les interfaces : 
+
+* WAN : (Mon portable) : 172.20.10.4/28
+* LAN : (VMnet 15) : 192.168.0.254/24
+* OPT : (VMnet 0) : 10.130.15.254/16
+
+Password admin : rootsan
+
+=== Srv-debian-glpi
+IP : 192.168.0.
+
+password glpi : rootGlpi
+
+post-only : $rootPO@
+normal : $root@normal
+tech : $root@tech
+glpi : $root@glpi
+
+
+===  SRV-AD
+IP : 192.168.0.15
+Password Admin : $r1
+Password Restauration annuaire : $reb00t@nnuaire!
+
+(&(objectClass=user)(objectCategory=person)(!(userAccountControl:1.2.840.113556.1.4.803:=2)))
