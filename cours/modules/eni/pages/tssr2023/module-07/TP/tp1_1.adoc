@@ -61,7 +61,7 @@ a| image:tssr2023/modules-07/TP/01_1/15.png[]
 [frame=none,grid=none,cols="~,~"]
 |===
 .2+|a.     |Passez en mode *Simulation*, en cliquant sur l'onglet partiellement masqué par l'onglet Temps réel, affiché en bas à droite. Cet onglet est représenté par l'icône d'un chronomètre.
-a| image:tssr2023/modules-07/TP/01_1/15.png[]
+a| image:tssr2023/modules-07/TP/01_1/16.png[]
 |b.    | Cliquez sur *Modifier le filtre* dans la zone de filtre Modifier la liste. Dans les filtres de la liste des événements, cliquez sur *Tous/Aucun* pour désélectionner tous les filtres. Cliquez sur *Modifier le filtre*. Sélectionnez les filtres *ARP* et *ICMP* sous l'onglet IPv4.
 .2+|c.     |Sélectionnez une PDU simple en cliquant sur l'enveloppe fermée dans la barre d'outils verticale, à droite. Déplacez le curseur vers la zone d'affichage de votre écran. Cliquez sur le PC-A pour établir la source. Déplacez le curseur sur le PC-C et cliquez pour définir la destination.
 a|
