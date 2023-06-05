@@ -74,8 +74,10 @@ Deux enveloppes sont maintenant placées sur le PC-A. L'une correspond à ICMP, 
 ====
 .2+|d.     |Sélectionnez *Play* dans la section Contrôles du lancement du panneau de simulation. Une barre horizontale est affichée sous le bouton Auto/Capture, avec un curseur permettant de contrôler la vitesse de la simulation. Faites glisser le curseur vers la droite pour accélérer la simulation et vers la gauche pour la ralentir.
 a| image:tssr2023/modules-07/TP/01_1/19.png[]
-|e.    | Observez le parcours des enveloppes ICMP et ARP. Cliquez sur *Afficher l'évènement précédent* pour continuer lorsque le tampon est plein.
-|f.      |Cliquez sur *Réinitialiser la simulation* dans le panneau de simulation. Notez que l'enveloppe du protocole ARP ne s'affiche plus. La simulation a été réinitialisée, mais les changements de configuration et les entrées de tables dynamiques, telles que les entrées de table ARP, n'ont pas été supprimés. La requête ARP n'est pas nécessaire pour exécuter la commande ping, car le PC-A dispose déjà d'une adresse MAC dans la table ARP.
+.2+|e.    | Observez le parcours des enveloppes ICMP et ARP. Cliquez sur *Afficher l'évènement précédent* pour continuer lorsque le tampon est plein.
+a| image:tssr2023/modules-07/TP/01_1/20.png[]
+.2+|f.      |Cliquez sur *Réinitialiser la simulation* dans le panneau de simulation. Notez que l'enveloppe du protocole ARP ne s'affiche plus. La simulation a été réinitialisée, mais les changements de configuration et les entrées de tables dynamiques, telles que les entrées de table ARP, n'ont pas été supprimés. La requête ARP n'est pas nécessaire pour exécuter la commande ping, car le PC-A dispose déjà d'une adresse MAC dans la table ARP.
+a| image:tssr2023/modules-07/TP/01_1/21.png[]
 |b.     |Cliquez sur *Capture/Transfert*. L'enveloppe du protocole ICMP se déplace de la source au commutateur, puis s'arrête. Le bouton *Capture/Suivant* vous permet d'exécuter la simulation étape par étape. Cliquez de nouveau sur le bouton *Capture/Suivant* jusqu'à la fin du processus.
 |h.     |Cliquez sur le bouton Réinitialiser l'appareil, en bas à gauche, au-dessus des icônes des appareils.
 |i.      |Un message s'affiche pour vous demander de confirmer la réinitialisation. Cliquez sur *Oui*. Les deux enveloppes ICMP et ARP sont de nouveau visibles. La réinitialisation permet d'effacer tous les changements de configuration non enregistrés et d'effacer toutes les entrées de tables dynamiques, telles que les entrées des tables ARP et MAC.
