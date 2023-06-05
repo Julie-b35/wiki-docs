@@ -54,3 +54,25 @@ image:tssr2023/modules-07/Commutateur/tab-presentationVLAN.png[]
 ** Le délai inférieur à 150 ms de la source à la destination
 * L'ensemble du réseau doit être conçu pour prendre en charge la voix.
 ****
+
+== Configuration de VLAN
+
+=== Commandes de création de VLAN
+
+image:tssr2023/modules-07/Commutateur/CommandeCreationVlan.png[]
+
+=== Exemple de création de VLAN
+
+image:tssr2023/modules-07/Commutateur/ExempleCreationVlan.png[]
+
+=== Commandes d'attribution de port à des VLAN
+
+image:tssr2023/modules-07/Commutateur/CmdAttributionPortVlan.png[]
+
+=== Exemple de VLAN de données et de voix
+
+image:tssr2023/modules-07/Commutateur/ExempleVLAN_dateVoice.png[]
+
+=== Vérifier les informations sur les VLAN
+
+image:tssr2023/modules-07/Commutateur/ShowVLAN.png[]
