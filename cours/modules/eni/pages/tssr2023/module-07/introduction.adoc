@@ -32,3 +32,7 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 ** Des informations de contrôle de protocole (*PCI* : **P**rotocol **C**ontrol **I**nformation)
 ** Des unités de données de service (*SDU* : **S**ervice **D**ata **U**nit)
 ****
+
+=== Les couches OSI
+
+image:tssr2023/modules-07/tab-couches-osi.png[]
