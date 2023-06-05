@@ -76,3 +76,28 @@ image:tssr2023/modules-07/Commutateur/ExempleVLAN_dateVoice.png[]
 === Vérifier les informations sur les VLAN
 
 image:tssr2023/modules-07/Commutateur/ShowVLAN.png[]
+
+== Trunk
+
+=== VLAN dans un environnement à plusieurs commutateurs
+
+* Un trunk est une liaison point à point entre deux périphériques réseau.
+* Fonctions du trunk :
+** Autoriser plusieurs VLAN sur un port
+** Étendre le VLAN sur l'ensemble du réseau
+
+image:tssr2023/modules-07/Commutateur/VLAN_inEnvironnementCommutateur.png[]
+
+=== Commandes de configuration de trunk
+
+* Configurez et vérifiez les trunks VLAN. Les trunks sont de couche 2 et transportent le trafic pour tous les VLAN.
+
+image:tssr2023/modules-07/Commutateur/CmdConfigTrunk.png[]
+
+=== Vérifier la configuration du trunk
+
+image:tssr2023/modules-07/Commutateur/VerifierTrunk.png[]
+
+== TP
+
+* xref:tssr2023/module-07/TP/tp2.adoc[TP - 2^ème^ série de TP]

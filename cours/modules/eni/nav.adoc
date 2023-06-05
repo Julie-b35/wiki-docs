@@ -65,3 +65,4 @@
 **** xref:tssr2023/module-07/commutateur.adoc[]
 **** TP
 ***** xref:tssr2023/module-07/TP/tp1.adoc[]
+***** xref:tssr2023/module-07/TP/tp2.adoc[]

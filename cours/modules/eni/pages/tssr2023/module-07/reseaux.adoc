@@ -96,4 +96,4 @@ image:tssr2023/modules-07/Réseaux/ConfigurerAdresseIP.png[]
 
 == TP
 
-* xref:tssr2023/module-07/TP/tp1.adoc[TP - 1ère série de TP]
+* xref:tssr2023/module-07/TP/tp1.adoc[TP - 1^ère^ série de TP]
