@@ -70,9 +70,15 @@ Exec commands:
   terminal    Set terminal line parameters
   traceroute  Trace route to destination
 ----
-.3+|b.     |À l'invite, saisissez t, suivi d'un point d'interrogation (?).
+.4+|b.     |À l'invite, saisissez t, suivi d'un point d'interrogation (?).
            |S1> t?
            |Quelles sont les commandes affichées ?
+a|
+[source,bash]
+----
+S1>t?
+telnet  terminal  traceroute
+----
 .4+|c.     |À l'invite, saisissez te, suivi d'un point d'interrogation (?).
            |S1> te?
            |Quelles sont les commandes affichées ?
