@@ -6,3 +6,26 @@
 
 Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur IP]
 
+== Objectifs
+
+* Manipuler Packet Tracer
+* Utiliser l’IOS
+* Sauvegarder la configuration d’un périphérique réseau
+
+== Navigation sous IOS
+
+=== Principaux modes de commande
+
+image:tssr2023/modules-07/Introduction/principaux-modes-commandes.png[]
+
+=== Modes de configuration et sous-modes de configuration
+
+image:tssr2023/modules-07/Introduction/modes-config-sous_modes-config.png[]
+
+=== Navigation entre les différents modes
+
+image:tssr2023/modules-07/Introduction/navigationEnteDifferentModes.png[]
+
+=== Navigation entre les différents modes IOS (suite)
+
+image:tssr2023/modules-07/Introduction/navigationEnteDifferentModes2.png[]
