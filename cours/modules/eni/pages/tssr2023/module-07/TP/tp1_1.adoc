@@ -64,7 +64,8 @@ a| image:tssr2023/modules-07/TP/01_1/15.png[]
 a| image:tssr2023/modules-07/TP/01_1/16.png[]
 .2+|b.    |Cliquez sur *Show All/None* pour désélectionner tous les filtres. Cliquez sur *Edit Filters*. Sélectionnez les filtres *ARP* et *ICMP* sous l'onglet IPv4.
 a| image:tssr2023/modules-07/TP/01_1/17.png[]
-.2+|c.     |Sélectionnez une PDU simple en cliquant sur l'enveloppe fermée dans la barre d'outils verticale, à droite. Déplacez le curseur vers la zone d'affichage de votre écran. Cliquez sur le PC-A pour établir la source. Déplacez le curseur sur le PC-C et cliquez pour définir la destination.
+.3+|c.     |Sélectionnez une PDU simple en cliquant sur l'enveloppe fermée dans la barre d'outils verticale, à droite. Déplacez le curseur vers la zone d'affichage de votre écran. Cliquez sur le PC-A pour établir la source. Déplacez le curseur sur le PC-C et cliquez pour définir la destination.
+a| image:tssr2023/modules-07/TP/01_1/18.png[]
 a|
 .Remarque
 [NOTE]
