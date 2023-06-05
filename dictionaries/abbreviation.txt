@@ -1,14 +1,17 @@
 APIPA
 CILL
 echnology
+glpi
 ibrary
 icence
 ITIL
+jlab
 LGPO
 logname
 Logname
 lutilisatrice
 MMDD
+Mnet
 mobaxterm
 nblig
 nformation
@@ -23,5 +26,3 @@ ublic
 vfat
 xzvf
 ystem
-glpi
-Mnet

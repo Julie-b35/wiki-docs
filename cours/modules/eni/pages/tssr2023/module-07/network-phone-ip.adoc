@@ -1,1 +1,29 @@
 = Réseaux et téléphonie sur IP
+
+Formateur : 
+
+Mail : 
+
+Rappel du modèle OSI
+
+Couche Session (Point de contrôle ou de synchronisation)
+link:https://www.ionos.fr/digitalguide/serveur/know-how/couche-session/[]
+
+
+
+== Trame Ethernet II (802.3)
+
+link:http://arsene.perez-mas.pagesperso-orange.fr/reseaux/ieee802/802_3/trames802.3.htm[]
+
+== Trame Ethernet 802.1q (Trame VLAN)
+
+link:http://igm.univ-mlv.fr/~dr/XPOSE2007/vlanparlegrandquinapascomprislesconsignes/8021QTrame.html[]
+link:https://forum.huawei.com/enterprise/fr/compr%C3%A9hension-du-vlan-concepts-de-base-du-vlan/thread/762951-100373[]
+link:https://www.firewall.cx/networking-topics/vlan-networks/221-vlan-8021q-analysis.html[]
+link:https://fr.wikipedia.org/wiki/IEEE_802.1Q[]
+
+
+== Domaine de collision / Broadcast
+
+link:https://reussirsonccna.fr/domaine-de-collision-et-de-diffusion/[]
+link:https://openclassrooms.com/fr/courses/7192261-simulez-le-schema-de-votre-reseau-avec-cisco-packet-tracer/7444272-identifiez-les-domaines-de-collision-et-de-diffusion[]
