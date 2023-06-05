@@ -179,11 +179,23 @@ clear  clock  configure  connect  copy
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.3+|a.     |Lorsque vous êtes en mode d'exécution privilégié, configure est l'une des commandes qui commencent par la lettre « C ». Entrez la commande complète, ou suffisamment de caractères pour qu'elle soit identifiée, puis appuyez sur Tab et Entrée pour l'exécuter.
+.4+|a.     |Lorsque vous êtes en mode d'exécution privilégié, configure est l'une des commandes qui commencent par la lettre « C ». Entrez la commande complète, ou suffisamment de caractères pour qu'elle soit identifiée, puis appuyez sur Tab et Entrée pour l'exécuter.
            |S1# configure
-           |Quel est le message affiché ?
-.2+|b.     |Appuyez sur la touche Entrée pour accepter le paramètre par défaut entre parenthèses [terminal].
-           |Quel changement observez-vous sur l'invite ?
+a|
+[source,bash]
+----
+S1#configure 
+Configuring from terminal, memory, or network [terminal]? 
+----
+           |Quel est le message affiché ? (*Configuring from terminal, memory, or network [terminal]*)
+.3+|b.     |Appuyez sur la touche Entrée pour accepter le paramètre par défaut entre crochets [terminal].
+a|
+[source,bash]
+----
+Enter configuration commands, one per line.  End with CNTL/Z.
+S1(config)#
+----
+           |Quel changement observez-vous sur l'invite ? (*Passage en mode configuration globale*)
 .3+|c.     |Il s'agit du mode de configuration globale. Ce mode sera examiné en détail dans les prochains exercices et à l'occasion des travaux pratiques. Pour l'instant, revenez en mode d'exécution privilégié en saisissant end, exit ou en appuyant sur Ctrl+Z.
            |S1(config)# exit
            |S1#
