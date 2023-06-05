@@ -16,6 +16,7 @@ nfrastructure
 NTFS
 POSIX
 scpol
+servername
 strategie
 tcsh
 ublic

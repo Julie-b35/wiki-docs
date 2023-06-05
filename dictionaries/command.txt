@@ -72,6 +72,7 @@ logind
 lvremove
 macropaquets
 metacaractere
+mklink
 Mmio
 monrep
 movbe
@@ -110,6 +111,7 @@ smep
 Srbds
 SRVFIC
 ssbd
+sshs
 ssse
 stibp
 swapgs
