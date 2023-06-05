@@ -1,0 +1,78 @@
+= TP 1/5 Packet Tracer : utilisation du logiciel Packet Tracer
+:navtitle: Utiliser logiciel Packet Tracer
+
+== Objectifs
+
+*  Se familiariser avec les fonctions de base de Packet Tracer.
+*  Créer un réseau Ethernet simple utilisant trois hôtes et un commutateur
+*  Observer le comportement du trafic sur le réseau
+*  Observer le flux de données des diffusions ARP et des commandes ping
+
+== Étape 1 : Créer un diagramme de réseau logique avec 3 ordinateurs et un commutateur.
+
+Afin que les instructions restent visibles pendant l'activité, cochez la case « Top » dans la fenêtre de zone d'instructions.
+
+En bas à gauche de l'écran Packet Tracer, des icônes représentent les catégories ou groupes d'appareils, tels que les routeurs, les commutateurs et les terminaux.
+
+Placez le curseur sur les catégories pour afficher leur nom dans la case. Pour sélectionner un appareil, vous devez d'abord sélectionner la catégorie à laquelle il appartient. Une fois la catégorie sélectionnée, les options disponibles apparaissent dans la zone située en regard de la liste des catégories. Sélectionnez l'option adéquate.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     | Sélectionnez *Terminaux* dans les options proposées en bas à gauche. Faites glisser et déplacez trois ordinateurs génériques dans la zone de conception.
+| b.     | Sélectionnez *Commutateurs* dans les options proposées en bas à gauche. Ajoutez un commutateur 2960 à votre réseau prototype en le faisant glisser dans la zone de conception.
+| c.     | Sélectionnez *Connexions* dans les options proposées en bas à gauche. Choisissez un câble de type Copper Straight-Through (cuivre droit). Cliquez sur le premier hôte (PC0) et attribuez le câble au connecteur *FastEthernet0*. Cliquez sur le commutateur (Switch0), puis sélectionnez une connexion FastEthernet0/1 pour le PC0.
+| d.     | Répétez l'étape C pour les PC1 et PC2. Sélectionnez FastEthernet0/2 sur le commutateur Switch0 pour PC1 et FastEthernet0/3 pour le PC2.
+|===
+
+Une fois que le réseau a convergé, un point vert devrait apparaître à chaque extrémité des câbles de connexion. Si ce n'est pas le cas, vérifiez à nouveau le type de câble sélectionné.
+
+== Étape 2 : Configurer les noms et les adresses IP des hôtes sur les ordinateurs.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     |Cliquez sur *PC0*.
+|b.     |Sélectionnez l'onglet *Config*. Remplacez le nom d'affichage de l'ordinateur par *PC-A*. Sélectionnez l'onglet *FastEthernet* à gauche, puis ajoutez l'adresse IP *192.168.1.1* et le masque de sous-réseau *255.255.255.0*. Refermez la fenêtre de configuration du PC-A en cliquant sur le symbole x en haut à droite.
+|c.     |Cliquez sur *PC1*.
+|d.     |Sélectionnez l'onglet *Config*. Remplacez le nom d'affichage de l'ordinateur par *PC-B*. Sélectionnez l'onglet *FastEthernet* à gauche, puis ajoutez l'adresse IP *192.168.1.2* et le masque de sous-réseau *255.255.255.0*. Fermez la fenêtre de configuration du PC-B.
+|e.     |Cliquez sur *PC2*.
+|f.     | Sélectionnez l'onglet *Config*. Remplacez le nom d'affichage de l'ordinateur par *PC-C*. Sélectionnez l'onglet *FastEthernet* à gauche, puis ajoutez l'adresse IP *192.168.1.3* et le masque de sous-réseau *255.255.255.0*. Fermez la fenêtre de configuration du PC-C.
+|===
+
+== Étape 3 : Analyser le flux de données du PC-A au PC-B en créant un trafic réseau
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     |Passez en mode *Simulation*, en cliquant sur l'onglet partiellement masqué par l'onglet Temps réel, affiché en bas à droite. Cet onglet est représenté par l'icône d'un chronomètre.
+|b.    | Cliquez sur *Modifier le filtre* dans la zone de filtre Modifier la liste. Dans les filtres de la liste des événements, cliquez sur *Tous/Aucun* pour désélectionner tous les filtres. Cliquez sur *Modifier le filtre*. Sélectionnez les filtres *ARP* et *ICMP* sous l'onglet IPv4.
+.2+|c.     |Sélectionnez une PDU simple en cliquant sur l'enveloppe fermée dans la barre d'outils verticale, à droite. Déplacez le curseur vers la zone d'affichage de votre écran. Cliquez sur le PC-A pour établir la source. Déplacez le curseur sur le PC-C et cliquez pour définir la destination.
+a|
+.Remarque
+[NOTE]
+====
+Deux enveloppes sont maintenant placées sur le PC-A. L'une correspond à ICMP, l'autre à ARP. La liste des événements dans le panneau de simulation permet d'identifier exactement quelle enveloppe représente le protocole ICMP et quelle enveloppe représente le protocole ARP.
+====
+|d.     |Sélectionnez *Capture/Lancement auto* dans la section Contrôles du lancement du panneau de simulation. Une barre horizontale est affichée sous le bouton Auto/Capture, avec un curseur permettant de contrôler la vitesse de la simulation. Faites glisser le curseur vers la droite pour accélérer la simulation et vers la gauche pour la ralentir.
+|e.    | Observez le parcours des enveloppes ICMP et ARP. Cliquez sur *Afficher l'évènement précédent* pour continuer lorsque le tampon est plein.
+|f.      |Cliquez sur *Réinitialiser la simulation* dans le panneau de simulation. Notez que l'enveloppe du protocole ARP ne s'affiche plus. La simulation a été réinitialisée, mais les changements de configuration et les entrées de tables dynamiques, telles que les entrées de table ARP, n'ont pas été supprimés. La requête ARP n'est pas nécessaire pour exécuter la commande ping, car le PC-A dispose déjà d'une adresse MAC dans la table ARP.
+|b.     |Cliquez sur *Capture/Transfert*. L'enveloppe du protocole ICMP se déplace de la source au commutateur, puis s'arrête. Le bouton *Capture/Suivant* vous permet d'exécuter la simulation étape par étape. Cliquez de nouveau sur le bouton *Capture/Suivant* jusqu'à la fin du processus.
+|h.     |Cliquez sur le bouton Réinitialiser l'appareil, en bas à gauche, au-dessus des icônes des appareils.
+|i.      |Un message s'affiche pour vous demander de confirmer la réinitialisation. Cliquez sur *Oui*. Les deux enveloppes ICMP et ARP sont de nouveau visibles. La réinitialisation permet d'effacer tous les changements de configuration non enregistrés et d'effacer toutes les entrées de tables dynamiques, telles que les entrées des tables ARP et MAC.
+|j.     | Quittez le mode Simulation et attendez que le réseau converge.
+|k.    |Une fois que le réseau a convergé, passez en mode Simulation.
+|===
+
+== Étape 4 : Afficher les tableaux ARP sur chaque ordinateur.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.    | Cliquez sur *Capture/Lancement auto* pour reconstituer le tableau ARP des ordinateurs. Cliquez sur *Afficher l'évènement précédent* lorsque le tampon est plein.
+|b.    | Sélectionnez la loupe sur la barre d'outils verticale située à droite.
+|C.    | Cliquez sur *PC-A*. Le tableau ARP du PC-A s'affiche. Notez que le PC-A possède une entrée ARP pour le PC-C. Ouvrez également les tables ARP pour le PC-B et le PC-C. Fermez toutes les fenêtres de tableau ARP.
+|d.   |  Cliquez sur l'outil *Sélectionner* de la barre d'outils verticale située à droite. (il s'agit de la première icône de la barre d'outils).
+|e.     |Cliquez sur PC-A, puis sélectionnez l'onglet *Bureau*.
+|f.    |  Sélectionnez *Invite de commandes*, puis saisissez la commande *arp -a* et appuyez sur la touche Entrée pour afficher le tableau ARP en mode ordinateur de bureau. Fermez la fenêtre de configuration du PC-A.
+|h.    | Examinez les tableaux ARP des PC-B et PC-C.
+|h.    | Fermez la fenêtre *Invite de commandes.*
+|I.   |   Cliquez sur Vérifier les résultats pour vérifier que la topologie est correcte.
+|===
+image:tssr2023/modules-07/TP/01_1.png[]

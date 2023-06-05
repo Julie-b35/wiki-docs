@@ -1,0 +1,38 @@
+= Navigating the IOS.pka
+
+
+== Étape 1:   Raccordez PC1 à S1 à l'aide d'un câble de console.
+
+image:tssr2023/modules-07/TP/01/02_1.png[]
+
+== Étape 2 :   Établissez une session de terminal avec S1.
+
+[cols="~,~",frame=none,grid=none]
+|===
+.2+| a | Cliquez sur PC1, puis sélectionnez l'onglet Desktop.
+a| image:tssr2023/modules-07/TP/01/02_2.png[]
+
+|===
+
+
+== Étape 3 :   Découvrez l'aide IOS
+
+* a.     L'IOS peut fournir de l'aide sur les commandes en fonction du niveau auquel l'utilisateur accède. L'invite actuellement affichée est appelée mode d'exécution utilisateur et le périphérique attend une commande. La forme la plus simple de l'aide consiste à entrer un point d'interrogation (?) à l'invite afin d'afficher la liste des commandes.
+
+S1> ?
+
+
+
+
+
+* Quelle commande commence par la lettre « C » ? -> `connect`
+
+
+
+* Quelles sont les commandes affichées ? -> `telnet`, `terminal`, `traceroute`
+
+
+
+
+* Quelles sont les commandes affichées ? -> `telnet`, `terminal`
+

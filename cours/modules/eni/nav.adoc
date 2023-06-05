@@ -64,5 +64,10 @@
 **** xref:tssr2023/module-07/reseaux.adoc[]
 **** xref:tssr2023/module-07/commutateur.adoc[]
 **** TP
-***** xref:tssr2023/module-07/TP/tp1.adoc[]
+***** PacketTracer
+****** xref:tssr2023/module-07/TP/tp1_1.adoc[]
+****** xref:tssr2023/module-07/TP/tp1_2.adoc[]
+****** xref:tssr2023/module-07/TP/tp1_3.adoc[]
+****** xref:tssr2023/module-07/TP/tp1_4.adoc[]
+****** xref:tssr2023/module-07/TP/tp1_5.adoc[]
 ***** xref:tssr2023/module-07/TP/tp2.adoc[]
