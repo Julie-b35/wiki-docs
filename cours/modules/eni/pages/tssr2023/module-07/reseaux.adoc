@@ -94,7 +94,7 @@ image:tssr2023/modules-07/Réseaux/CopieConfiguration.png[]
 
 image:tssr2023/modules-07/Réseaux/ConfigurerAdresseIP.png[]
 
-== TP Packet Tracer
+== TP 
 
 * xref:tssr2023/module-07/TP/tp1_1.adoc[TP 1/5 PacketTracer : Utilisation du logiciel Packet Tracer]
 * xref:tssr2023/module-07/TP/tp1_2.adoc[TP 2/5 PacketTracer : ]
