@@ -28,8 +28,9 @@ a| image:tssr2023/modules-07/TP/01_1/03.png[]
 .2+| b.     | Sélectionnez *Commutateurs* dans les options proposées en bas à gauche. Ajoutez un commutateur 2960 à votre réseau prototype en le faisant glisser dans la zone de conception.
 a| image:tssr2023/modules-07/TP/01_1/04.png[]
 .2+| c.     | Sélectionnez *Connections* dans les options proposées en bas à gauche. Choisissez un câble de type _Copper Straight-Through_ (cuivre droit). Cliquez sur le premier hôte (PC0) et attribuez le câble au connecteur *FastEthernet0*. Cliquez sur le commutateur (Switch0), puis sélectionnez une connexion FastEthernet0/1 pour le PC0.
-a| image:tssr2023/modules-07/TP/01_1/04.png[]
-| d.     | Répétez l'étape C pour les PC1 et PC2. Sélectionnez FastEthernet0/2 sur le commutateur Switch0 pour PC1 et FastEthernet0/3 pour le PC2.
+a| image:tssr2023/modules-07/TP/01_1/05.png[]
+.2+| d.     | Répétez l'étape C pour les PC1 et PC2. Sélectionnez FastEthernet0/2 sur le commutateur Switch0 pour PC1 et FastEthernet0/3 pour le PC2.
+a| image:tssr2023/modules-07/TP/01_1/06.png[]
 |===
 
 Une fois que le réseau a convergé, un point vert devrait apparaître à chaque extrémité des câbles de connexion. Si ce n'est pas le cas, vérifiez à nouveau le type de câble sélectionné.
