@@ -74,7 +74,7 @@ Deux enveloppes sont maintenant placées sur le PC-A. L'une correspond à ICMP, 
 ====
 .2+|d.     |Sélectionnez *Play* dans la section Contrôles du lancement du panneau de simulation. Une barre horizontale est affichée sous le bouton Auto/Capture, avec un curseur permettant de contrôler la vitesse de la simulation. Faites glisser le curseur vers la droite pour accélérer la simulation et vers la gauche pour la ralentir.
 a| image:tssr2023/modules-07/TP/01_1/19.png[]
-.2+|e.    | Observez le parcours des enveloppes ICMP et ARP. Cliquez sur *Afficher l'évènement précédent* pour continuer lorsque le tampon est plein.
+.2+|e.    | Observez le parcours des enveloppes ICMP et ARP. Cliquez sur *View Previous Events* pour continuer lorsque le tampon est plein.
 a| image:tssr2023/modules-07/TP/01_1/20.png[]
 .2+|f.      |Cliquez sur *Reset simulation* dans le panneau de simulation. Notez que l'enveloppe du protocole ARP ne s'affiche plus. La simulation a été réinitialisée, mais les changements de configuration et les entrées de tables dynamiques, telles que les entrées de table ARP, n'ont pas été supprimés. La requête ARP n'est pas nécessaire pour exécuter la commande ping, car le PC-A dispose déjà d'une adresse MAC dans la table ARP.
 a| image:tssr2023/modules-07/TP/01_1/21.png[]
@@ -94,10 +94,14 @@ a| image:tssr2023/modules-07/TP/01_1/26.png[]
 
 [frame=none,grid=none,cols="~,~"]
 |===
-|a.    | Cliquez sur *Capture/Lancement auto* pour reconstituer le tableau ARP des ordinateurs. Cliquez sur *Afficher l'évènement précédent* lorsque le tampon est plein.
-|b.    | Sélectionnez la loupe sur la barre d'outils verticale située à droite.
-|C.    | Cliquez sur *PC-A*. Le tableau ARP du PC-A s'affiche. Notez que le PC-A possède une entrée ARP pour le PC-C. Ouvrez également les tables ARP pour le PC-B et le PC-C. Fermez toutes les fenêtres de tableau ARP.
-|d.   |  Cliquez sur l'outil *Sélectionner* de la barre d'outils verticale située à droite. (il s'agit de la première icône de la barre d'outils).
+.2+|a.    | Cliquez sur *Play* pour reconstituer le tableau ARP des ordinateurs. Cliquez sur *View Previous Events* lorsque le tampon est plein.
+a| image:tssr2023/modules-07/TP/01_1/27.png[]
+.2+|b.    | Sélectionnez la loupe sur la barre d'outils verticale située à droite.
+a| image:tssr2023/modules-07/TP/01_1/28.png[]
+.2+|C.    | Cliquez sur *PC-A*. Le tableau ARP du PC-A s'affiche. Notez que le PC-A possède une entrée ARP pour le PC-C. Ouvrez également les tables ARP pour le PC-B et le PC-C. Fermez toutes les fenêtres de tableau ARP.
+a| image:tssr2023/modules-07/TP/01_1/29.png[]
+.2+|d.   |  Cliquez sur l'outil *Sélectionner* de la barre d'outils verticale située à droite. (il s'agit de la première icône de la barre d'outils).
+a| image:tssr2023/modules-07/TP/01_1/30.png[]
 |e.     |Cliquez sur PC-A, puis sélectionnez l'onglet *Bureau*.
 |f.    |  Sélectionnez *Invite de commandes*, puis saisissez la commande *arp -a* et appuyez sur la touche Entrée pour afficher le tableau ARP en mode ordinateur de bureau. Fermez la fenêtre de configuration du PC-A.
 |h.    | Examinez les tableaux ARP des PC-B et PC-C.
