@@ -10,5 +10,5 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 
 == Modules
 
-xref:tssr2023/module-07/introduction.adoc[Module 01 - Introduction]
-xref:tssr2023/module-07/reseaux.adoc[Module 02 - Réseaux]
+* xref:tssr2023/module-07/introduction.adoc[Module 01 - Introduction]
+* xref:tssr2023/module-07/reseaux.adoc[Module 02 - Réseaux]

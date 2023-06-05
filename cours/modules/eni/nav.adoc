@@ -61,3 +61,4 @@
 ***** xref:tssr2023/module-06/amelioration.adoc[]
 *** xref:tssr2023/module-07/network-phone-ip.adoc[]
 **** xref:tssr2023/module-07/introduction.adoc[]
+**** xref:tssr2023/module-07/reseaux.adoc[]
