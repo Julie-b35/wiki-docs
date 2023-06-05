@@ -87,3 +87,13 @@ image:tssr2023/modules-07/Réseaux/FichierConfiguration.png[]
 === Copier la configuration
 
 image:tssr2023/modules-07/Réseaux/CopieConfiguration.png[]
+
+== Configuration de l'adressage IP
+
+=== configurer une adresse IP et un masque de sous-réseau
+
+image:tssr2023/modules-07/Réseaux/ConfigurerAdresseIP.png[]
+
+== TP
+
+* xref:tssr2023/module-07/TP/tp1.adoc[TP - 1ère série de TP]

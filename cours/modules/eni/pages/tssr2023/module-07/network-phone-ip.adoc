@@ -12,3 +12,7 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 
 * xref:tssr2023/module-07/introduction.adoc[Module 01 - Introduction]
 * xref:tssr2023/module-07/reseaux.adoc[Module 02 - Réseaux]
+
+== TP
+
+* xref:tssr2023/module-07/TP/tp1.adoc[TP - 1ère série de TP]

@@ -142,3 +142,9 @@ image:tssr2023/modules-07/Introduction/routage-statique.png[]
 
 image:tssr2023/modules-07/Introduction/architecture-reseau-design.png[]
 image:tssr2023/modules-07/Introduction/architecture-reseau-design2.png[]
+
+.source
+[NOTE]
+====
+* link:https://cisco.goffinet.org/ccna/ethernet/principes-conception-lan-cisco/#2-mod%C3%A8le-hi%C3%A9rarchique-%C3%A0-trois-couches--3-tier[]
+====
