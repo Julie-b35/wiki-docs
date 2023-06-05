@@ -20,6 +20,7 @@ jlab
 keybind
 l’IOS
 LGPO
+LINEPROTO
 logname
 Logname
 lutilisatrice
@@ -33,6 +34,7 @@ NSSA
 nterconnection
 nternational
 NTFS
+NVRAM
 ontrol
 OSPF
 perating
@@ -50,6 +52,7 @@ tandardization
 tcsh
 ublic
 undebug
+UPDOWN
 vfat
 xzvf
 YQBF

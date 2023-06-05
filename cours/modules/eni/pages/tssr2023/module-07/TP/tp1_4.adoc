@@ -1,1 +1,229 @@
-= Implementing Basic Connectivity.pka
+=  TP 3/5 Packet Tracer : Mise en œuvre de la connectivité de base
+
+image:tssr2023/modules-07/TP/01_4/01.png[]
+
+== Objectifs
+
+[none]
+* Partie 1 : Effectuer la configuration de base des commutateurs S1 et S2
+* Partie 2 : Configurer les ordinateurs
+* Partie 3 : Configurer l'interface de gestion des commutateurs
+
+== Contexte
+
+Au cours de cet exercice, vous allez effectuer des configurations de base sur les commutateurs. Vous mettrez ensuite en œuvre la connectivité de base en configurant l'adressage IP sur les commutateurs et les ordinateurs. Après la configuration de l'adressage IP, vous utiliserez plusieurs commandes *show* pour vérifier les configurations et la commande *ping* pour vérifier la connectivité de base entre les périphériques.
+
+== Partie 1 : Effectuer la configuration de base des commutateurs S1 et S2
+
+=== Étape 1 : Configurez S1 avec un nom d'hôte.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.    |Cliquez sur *S1*, puis sur l'onglet *CLI*.
+.2+|b.   |Passez en mode d'exécution privilégié. Passez ensuite en mode de configuration globale.
+a|
+[source,bash]
+----
+Switch> enable
+Switch# configure terminal
+Enter configuration commands, one per line. End with CNTL/Z.
+----
+.2+|c.     | Attribuez le nom *S1* à l'hôte.
+a|
+[source,bash]
+----
+Switch(config)# hostname S1
+S1(config)#
+----
+|===
+
+=== Étape 2 : Configurez le mot de passe de console ainsi que celui du mode d'exécution privilégié.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+.2+|a.     |Attribuez cisco comme mot de passe de console, puis activez la connexion.
+a|
+[source,bash]
+----
+S1(config)# line console 0
+S1(config-line)# password cisco
+S1(config-line)# login
+S1(config-line)# exit
+----
+.2+|b.     |Utilisez class comme mot de passe pour le mode d'exécution privilégié chiffré.
+a|
+[source,bash]
+----
+S1(config)# enable secret class
+----
+|===
+
+=== Étape 3 : Vérifiez les configurations des mots de passe pour S1.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+.2+|a.     |Pour vérifier la bonne configuration des mots de passe, saisissez end afin de quitter le mode de configuration globale. Saisissez *exit* pour quitter le mode d'exécution privilégié.
+a|
+[source,bash]
+----
+S1(config)# end
+S1#
+%SYS-5-CONFIG_I: Configured from console by console
+S1# exit
+----
+.2+|b.     |Appuyez sur Entrée et vous serez invité à saisir un mot de passe pour accéder au mode d'exécution utilisateur.
+        |Quel mot de passe avez-vous utilisé ?
+.2+|c.     |Saisissez enable pour passer en mode d'exécution privilégié. Saisissez le mot de passe lorsque vous y êtes invité.
+        |Quel mot de passe avez-vous utilisé ?
+|d.     |Saisissez configure terminal pour passer en mode de configuration globale.
+|===
+
+=== Étape 4 : Configurer une bannière MOTD (message of the day, ou message du jour).
+
+Dans cette étape, vous allez configurer une bannière MOTD pour afficher un avertissement d'accès non autorisé. Voici un exemple de texte :
+
+[none]
+* Accès autorisé uniquement. Les contrevenants seront poursuivis avec toute la rigueur de la loi.
+
+Utilisez la commande *banner motd* avec le message exemple. Vous pouvez choisir un autre message.
+
+[source,bash]
+----
+S1(config)# banner motd "Accès autorisé uniquement. Les contrevenants seront poursuivis avec toute la rigueur de la loi."
+----
+
+=== Étape 5 : enregistrez le fichier de configuration dans la mémoire NVRAM.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+.2+|a.     |Quittez le mode d'exécution privilégié.
+a|
+[source,bash]
+----
+S1(config)# exit
+S1#
+%SYS-5-CONFIG_I: Configured from console by console
+S1#
+----
+.2+|b.     |Utilisez la commande *copy running-config startup-config* pour sauvegarder la configuration.
+a|
+[source,bash]
+----
+S1# copy running-config startup-config
+Destination filename [startup-config]?
+Building configuration...
+[OK]
+----
+|===
+
+=== Étape 6 : Répétez les étapes 1 à 5 pour S2.
+
+== Partie 2 : Configurer les ordinateurs
+
+=== Étape 1 : Configurez les deux ordinateurs en leur attribuant des adresses IP.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     |Cliquez sur PC1, puis sélectionnez l'onglet *Desktop*.
+|b.     |Cliquez sur IP Configuration. Dans la *table d'adressage* ci-dessus, vous pouvez constater que l'adresse IP de PC1 est 192.168.1.1 et que le masque de sous-réseau est 255.255.255.0. Entrez ces informations pour PC1 dans la fenêtre *IP Configuration* (Configuration IP).
+|c.     |Répétez les étapes 1a et 1b pour PC2.
+|===
+
+=== Étape 2 : Testez la connectivité avec les commutateurs.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     |Cliquez sur PC1. Fermez la fenêtre IP Configuration (Configuration IP) si elle est toujours ouverte. Dans l'onglet Bureau, cliquez sur Command Prompt (Invite de commandes).
+
+.3+|b.     |Saisissez la commande ping et l'adresse IP de S1, puis appuyez sur Entrée.
+a|
+[source,bash]
+----
+Packet Tracer PC Command Line 1.0
+PC> ping 192.168.1.253
+----
+|Avez-vous réussi ? Expliquez votre réponse.
+|===
+
+== Partie 3 : Configurer l'interface de gestion des commutateurs
+
+=== Étape 1 : configurez l'adresse IP de S1.
+
+Les commutateurs peuvent être utilisés sans configuration. Les commutateurs transmettent les informations d'un port à un autre en fonction des adresses MAC de contrôle d'accès au support. Pourquoi un commutateur a-t-il besoin d'une adresse IP ?
+
+[frame=none,grid=none,cols="~,~"]
+|===
+.3+|a.     |En mode de configuration globale, saisissez les commandes suivantes pour configurer S1 avec une adresse IP dans le réseau local virtuel VLAN 1.
+a|
+[source,bash]
+----
+S1#configure terminal
+Entrez des commandes de configuration, une par ligne. Terminez par CNTL/Z.
+S1(config)# interface vlan 1
+S1(config-if)# ip address 192.168.1.253 255.255.255.0
+S1(config-if)# no shutdown
+%LINEPROTO-5-UPDOWN: Line protocol on Interface Vlan1, changed state to up
+S1(config-if)#
+S1(config-if)# exit
+S1#
+----
+|À quoi sert la commande no shutdown ?
+.2+|b.     |Enregistrez la configuration.
+a|
+[source,bash]
+----
+S1# copy running-config startup-config
+Destination filename [startup-config]?
+Building configuration...
+[OK]
+S1#
+----
+.2+|c.     |Vérifiez la configuration de l'adresse IP sur S1.
+a|
+[source,bash]
+----
+S1# show ip interface brief
+<résultat omis>
+Vlan1 192.168.1.253 YES manual up up
+----
+|===
+
+=== Étape 2 : Configurez S2 avec une adresse IP.
+
+Utilisez Informations de la table d'adressage pour répéter le processus décrit à l'étape 1 pour configurer S2 et lui attribuer une adresse IP. N'oubliez pas de vérifier vos paramètres et de les enregistrer.
+
+=== Étape 3 : Vérifiez la connectivité du réseau.
+
+La commande *ping* permet de vérifier la connectivité réseau. Il est très important de disposer d'une connectivité sur tout le réseau.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     |Cliquez sur *PC1*, puis sélectionnez l'onglet *Desktop*.
+
+.2+|b.     |Ouvrez *Command Prompt* (Invite de commandes).
+a|
+[frame=none,grid=none,cols="~,~"]
+!===
+!1)    !Envoyez une requête ping à l'adresse IP de PC2.
+!2)    !Envoyez une requête ping à l'adresse IP de S1.
+!3)    !Envoyez une requête ping à l'adresse IP de S2.
+!===
+|c.     |Sur PC2, envoyez une requête ping aux autres périphériques du réseau.
+.2+|d.     |Sur S1, envoyez une requête ping aux autres périphériques du réseau. La requête ping envoyée à PC1 est présentée ci-dessous à titre d'exemple.
+a|
+[source,bash]
+----
+S1> ping 192.168.1.1
+Type escape sequence to abort.
+Sending 5, 100-byte ICMP Echos to 192.168.1.1, timeout is 2 seconds:
+!!!!!
+Success rate is 100 percent (5/5), round-trip min/avg/max = 0/0/1 ms
+----
+|e.     |Sur S2, envoyez une requête ping aux autres périphériques du réseau.
+|===
+
+Toutes les requêtes ping doivent aboutir. Si le résultat de votre première requête ping est 80 %, recommencez ; il devrait maintenant être égal à 100 %. Vous apprendrez plus tard pourquoi une requête ping peut échouer la première fois. Si vous ne pouvez envoyer de requête ping à aucun des appareils, vérifiez votre configuration pour vous assurer qu'elle ne comporte pas d'erreurs.
+
+Suggestion de barème de notation
+
+image:tssr2023/modules-07/TP/01_4/02.png[]
