@@ -1,4 +1,5 @@
-=  TP 3/5 Packet Tracer : Mise en œuvre de la connectivité de base
+=  TP 4/5 Packet Tracer : Mise en œuvre de la connectivité de base
+:navtitle: Mise en œuvre connectivité de base
 
 image:tssr2023/modules-07/TP/01_4/01.png[]
 

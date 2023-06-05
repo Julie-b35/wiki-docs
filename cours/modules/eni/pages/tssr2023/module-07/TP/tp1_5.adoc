@@ -1,1 +1,149 @@
-= Configure Initial Router Settings.pka
+=  TP 5/5 Packet Tracer : Configuration des paramètres initiaux du routeur
+
+== Objectifs
+
+[none]
+* Partie 1 : vérifier la configuration par défaut du routeur
+* Partie 2 : configurer et vérifier la configuration initiale du routeur
+* Partie 3 : enregistrer le fichier de configuration en cours
+
+== Le contexte
+
+Au cours de cet exercice, vous allez effectuer des configurations de base sur les routeurs, Vous sécuriserez l'accès au port de console et CLI à l'aide de mots de passe chiffrés. et configurer les messages affichés lors de la connexion des utilisateurs au routeur. Ces bannières avertiront les intrus que l'accès est interdit. Enfin, vous allez vérifier et enregistrer votre configuration en cours.
+
+== Partie 1 : vérifier la configuration par défaut du routeur
+
+=== Étape 1 : Établissez une connexion console avec R1.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     |Choisissez le câble bleu *Console* parmi les connexions disponibles.
+|b.     |Cliquez sur *PCA*, puis sélectionnez *RS 232*.
+|c.     |Faites glisser le câble, cliquez sur *R1*, puis sélectionnez *Console*.
+|d.     |Cliquez sur *PCA* > onglet *Desktop* > *Terminal*.
+|e.     |Cliquez sur *OK*, puis appuyez sur *Entrée*. Vous êtes maintenant en mesure de configurer *R1*.
+|===
+
+=== Étape 2 : Accédez au mode privilégié, puis examinez la configuration actuelle.
+
+Vous pouvez accéder à l'ensemble des commandes du routeur en mode d'exécution privilégié. Toutefois, comme un grand nombre de commandes du mode privilégié permettent de configurer des paramètres système, l'accès privilégié doit être protégé par mot de passe pour empêcher toute utilisation non autorisée.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+.3+|a.     |Accédez au mode d'exécution privilégié en entrant la commande *enable*.
+a|
+[source,bash]
+----
+Router> enable
+Router#
+----
+|Notez que l'invite a changé dans la configuration pour représenter le mode d'exécution privilégié.
+.2+|b.     |Saisissez la commande show running-config :
+a|
+[source,bash]
+----
+Router# show running-config
+----
+.6+|c.     |Répondez aux questions suivantes :
+|Quel est le nom d'hôte du routeur ?
+|Combien d'interfaces Fast Ethernet le routeur possède-t-il ?
+|Combien d'interfaces Gigabit Ethernet le routeur possède-t-il ?
+|Combien d'interfaces série le routeur possède-t-il ?
+|Quelle est la plage de valeurs affichée pour les lignes vty ?
+.3+|d.    | Examinez le contenu actuel de la mémoire vive non volatile (NVRAM).
+a|
+[source,bash]
+----
+Router# show startup-config
+startup-config is not present
+----
+|Pourquoi le routeur répond-il avec le message startup-config is not present ?
+|===
+
+== Partie 2 : configurer et vérifier la configuration initiale du routeur
+
+Pour configurer les paramètres d'un routeur, vous devrez peut-être passer d'un mode de configuration à l'autre. Notez que l'invite change lorsque vous utilisez le routeur.
+
+=== Étape 1 :Configurez les paramètres initiaux du routeur R1.
+
+.Remarque
+[NOTE]
+====
+Si vous avez du mal à vous souvenir des commandes, référez-vous au contenu de cette rubrique. Les commandes sont les mêmes que celles que vous avez configurées sur le commutateur.
+====
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.    | Configurez R1 comme nom d'hôte.
+|b.    | Configurez letmein comme mot de passe console, puis activez la connexion.
+|c.     |Configurez itsasecret comme mot de passe du mode d'exécution privilégié chiffré.
+|d.     |Chiffrez tous les mots de passe en clair.
+|e.    | Configurez une bannière MOTD (message of the day, ou message du jour) pour avertir les utilisateurs en cas d'accès non autorisé. Un exemple de bannière peut afficher le message Unauthorized access is strictly prohibited (Tout accès non autorisé est strictement interdit).
+|===
+
+=== Étape 2 :Vérifiez les paramètres initiaux du routeur R1.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     |Vérifiez les paramètres initiaux en affichant la configuration de R1. Quelle commande utilisez-vous ?
+
+.2+|b.     |Quittez la session actuelle en mode console jusqu'à ce que le message suivant apparaisse :
+a|
+[source,bash]
+----
+R1 con0 is now available
+Press RETURN to get started.
+----
+.4+|c.     |Appuyez sur *Entrée* pour obtenir le message suivant :
+a|
+----
+Unauthorized access is strictly prohibited. (Accès sans autorisation strictement interdit.)
+User Access Verification
+Password:
+----
+|Pourquoi chaque routeur doit-il avoir une bannière de message du jour (MOTD) ?
+|Si vous n'êtes pas invité à entrer un mot de passe, quelle commande de ligne de console avez-vous oublié de configurer ?
+.2+|d.     |Entrez les mots de passe requis pour revenir au mode d'exécution privilégié.
+|Si vous configurez d'autres mots de passe sur le routeur, s'affichent-ils dans le fichier de configuration en texte clair ou chiffrés ? Expliquez votre réponse.*
+|===
+
+== Partie 3 : enregistrer le fichier de configuration en cours
+
+=== Étape 1 : Enregistrez le fichier de configuration dans la mémoire NVRAM.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+.4+|a.     |Vous avez configuré les paramètres initiaux du routeur R1. Sauvegardez le fichier de configuration en cours dans la mémoire vive non volatile pour vous assurer que les modifications apportées seront conservées en cas de redémarrage du système ou de coupure de courant.
+|Quelle commande avez-vous exécutée pour enregistrer la configuration dans la mémoire NVRAM ?
+|Quelle est la version la plus courte et non ambiguë de cette commande ?
+|Quelle commande affiche le contenu de la mémoire NVRAM ?
+|b.     |Vérifiez que tous les paramètres configurés ont été enregistrés. Si ce n'est pas le cas, analysez le résultat et déterminez quelles commandes n'ont pas été exécutées ou ont été saisies incorrectement. Vous pouvez également cliquer sur Check Results (vérifier les résultats) dans la fenêtre d'instructions.
+|===
+
+=== Étape 2 (bonus facultatif) : Enregistrez le fichier de configuration initiale dans la mémoire Flash.
+
+Vous en apprendrez plus sur la gestion du stockage Flash d'un routeur dans les chapitres ultérieurs. Toutefois, sachez qu'en guise de procédure de sauvegarde supplémentaire, vous pouvez enregistrer votre fichier de configuration initiale dans la mémoire Flash. Par défaut, le routeur continue à charger la configuration initiale à partir de la mémoire NVRAM, mais si cette mémoire est endommagée, vous pouvez restaurer la configuration initiale en la copiant à partir de la mémoire Flash.
+
+Procédez comme suit pour enregistrer la configuration initiale dans la mémoire Flash.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+.5+|a.     |Examinez le contenu de la mémoire Flash à l'aide de la commande *show flash* :
+a|
+[source,bash]
+----
+R1# show flash
+----
+|Combien de fichiers sont actuellement stockés dans la mémoire Flash ? 3
+|Selon vous, lequel de ces fichiers est le fichier d'image IOS ?
+|Pourquoi pensez-vous que ce fichier est le fichier d'image IOS ?
+.3+|b.     |Enregistrez le fichier de configuration initiale dans la mémoire Flash à l'aide des commandes suivantes :
+a|
+[source,bash]
+----
+R1# copy startup-config flash
+Destination filename [startup-config]
+----
+|Le routeur vous invite à stocker le fichier dans la mémoire Flash avec le nom entre parenthèses. Si le nom vous convient, appuyez sur *Entrée*, sinon, tapez un nom approprié et appuyez sur *Entrée*.
+|c.     |Utilisez la commande *show flash* pour vérifier que le fichier de configuration initiale est à présent stocké dans la mémoire Flash.
+|===
