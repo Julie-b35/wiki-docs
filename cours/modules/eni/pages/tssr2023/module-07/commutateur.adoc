@@ -101,3 +101,30 @@ image:tssr2023/modules-07/Commutateur/VerifierTrunk.png[]
 == TP
 
 * xref:tssr2023/module-07/TP/tp2.adoc[TP - 2^ème^ série de TP]
+
+== Sécurité des ports
+
+=== Mettre en oeuvre la sécurité des ports
+
+* Il existe plusieurs failles de sécurité sur un commutateur mais cela ne fait pas partie du cours.
+*Cependant, des gestes simples peuvent augmenter rapidement la sécurité de votre commutateur :
+** Mettre un mot de passe sur toutes les lignes d’accès et les modes du commutateur
+** Utiliser le protocole SSH
+** Sortir les ports du commutateur du VLAN 1 natif
+** Désactiver les ports non utilisés du commutateur
+
+NOTE: link:https://www.ssi.gouv.fr/entreprise/guide/recommandations-pour-la-securisation-dun-commutateur-de-desserte/[]
+
+== Accès à distances sécurisé
+
+* Le protocole Telnet 23 étant non chiffré, nous utiliserons le protocole SSH 22
+* Pour plus d’information sur SSH : ANSSI
+
+=== Configurer SSH
+
+* Étape 1 : configurez le domaine IP - IP domain-name domain-name.
+* Étape 2 : générez des paires de clés RSA -crypto key generate RSA.
+* Remarque : pour supprimer- crypto key zeroize rsa.
+* Étape 3 : configurez l'authentification d'utilisateur - username username secret password.
+* Étape 4 : activez le protocole SSH sur les lignes vty à l'aide de la commande de mode de configuration de ligne transport input ssh.
+* Étape 5 : activez SSH version 2 - ip ssh version 2.

@@ -1,9 +1,39 @@
 = TP : 1^er^ TP
 :navtitle: 1^er^ TP
 
-== Sous TP
-* Packet Tracer : Learn To user Packet Tracer.pka
-* Packet Tracer : Navigating the IOS.pka
-* Packet Tracer : Using the Cisco IOS show Commands.pka
-* Packet Tracer : Implementing Basic Connectivity.pka
-* Packet Tracer : Configure Initial Router Settings.pka
+== TP Packet Tracer
+
+=== Learn To user Packet Tracer.pka
+
+image:tssr2023/modules-07/TP/01.png[]
+
+=== Navigating the IOS.pka
+
+==== Étape 1:   Raccordez PC1 à S1 à l'aide d'un câble de console.
+
+image:tssr2023/modules-07/TP/00.png[]
+
+==== Étape 2 :   Établissez une session de terminal avec S1.
+
+image:tssr2023/modules-07/TP/02_0.png[]
+
+==== Étape 3 :   Découvrez l'aide IOS
+image:tssr2023/modules-07/TP/02_1.png[]
+
+* Quelle commande commence par la lettre « C » ? -> `connect`
+
+image:tssr2023/modules-07/TP/02_2.png[]
+
+* Quelles sont les commandes affichées ? -> `telnet`, `terminal`, `traceroute`
+
+
+image:tssr2023/modules-07/TP/02_3.png[]
+
+* Quelles sont les commandes affichées ? -> `telnet`, `terminal`
+
+
+=== Using the Cisco IOS show Commands.pka
+
+=== Implementing Basic Connectivity.pka
+
+=== Configure Initial Router Settings.pka
