@@ -35,29 +35,29 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 
 === Les couches OSI
 
-image:tssr2023/modules-07/tab-couches-osi.png[]
+image:tssr2023/modules-07/Introduction/tab-couches-osi.png[]
 
 === Les ports
 
-image:tssr2023/modules-07/tab-ports-osi.png[]
+image:tssr2023/modules-07/Introduction/tab-ports-osi.png[]
 
 == Trame Ethernet
 
 === Trame Ethernet II (802.3)
 
-image:tssr2023/modules-07/trame-ethernet.png[]
+image:tssr2023/modules-07/Introduction/trame-ethernet.png[]
 
 === Trame Ethernet 802.1Q (VLAN)
 
-image:tssr2023/modules-07/trame-ethernet-vlan.png[]
+image:tssr2023/modules-07/Introduction/trame-ethernet-vlan.png[]
 
 === Le domaine de collision
 
-image:tssr2023/modules-07/domaine-collision.png[]
+image:tssr2023/modules-07/Introduction/domaine-collision.png[]
 
 == Paquet IPv4
 
-image:tssr2023/modules-07/tab-paquet-ipv4.png[]
+image:tssr2023/modules-07/Introduction/tab-paquet-ipv4.png[]
 
 == Démo sur IPV4
 
@@ -65,22 +65,22 @@ image:tssr2023/modules-07/tab-paquet-ipv4.png[]
 
 === La notation CIDR
 
-image:tssr2023/modules-07/notation-cidr.png[]
+image:tssr2023/modules-07/Introduction/notation-cidr.png[]
 
 === Le domaine de diffusion
 
-image:tssr2023/modules-07/domaine-diffusion.png[]
+image:tssr2023/modules-07/Introduction/domaine-diffusion.png[]
 
 === Rappel sur la communication
 
-image:tssr2023/modules-07/rappel-comunication.png[]
-image:tssr2023/modules-07/rappel-comunication2.png[]
+image:tssr2023/modules-07/Introduction/rappel-comunication.png[]
+image:tssr2023/modules-07/Introduction/rappel-comunication2.png[]
 
 == Le routage
 
 === Routage statique
 
-image:tssr2023/modules-07/routage-statique.png[]
+image:tssr2023/modules-07/Introduction/routage-statique.png[]
 
 === Principe du routage
 
@@ -107,3 +107,10 @@ image:tssr2023/modules-07/routage-statique.png[]
 * Les tables de routage sont construites dynamiquement.
 * Nécessite un protocole de routage tel que RIP, OSPF, IGRP, EIGRP...
 ****
+
+== Architecture réseau
+
+=== Design
+
+image:tssr2023/modules-07/Introduction/architecture-reseau-design.png[]
+image:tssr2023/modules-07/Introduction/architecture-reseau-design2.png[]
