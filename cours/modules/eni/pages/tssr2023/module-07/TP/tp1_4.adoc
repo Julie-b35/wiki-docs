@@ -72,9 +72,9 @@ S1#
 S1# exit
 ----
 .2+|b.     |Appuyez sur Entrée et vous serez invité à saisir un mot de passe pour accéder au mode d'exécution utilisateur.
-        |Quel mot de passe avez-vous utilisé ?
+        |Quel mot de passe avez-vous utilisé ? (*cisco*)
 .2+|c.     |Saisissez enable pour passer en mode d'exécution privilégié. Saisissez le mot de passe lorsque vous y êtes invité.
-        |Quel mot de passe avez-vous utilisé ?
+        |Quel mot de passe avez-vous utilisé ? (*class*)
 |d.     |Saisissez configure terminal pour passer en mode de configuration globale.
 |===
 
@@ -89,7 +89,7 @@ Utilisez la commande *banner motd* avec le message exemple. Vous pouvez choisir 
 
 [source,bash]
 ----
-S1(config)# banner motd "Accès autorisé uniquement. Les contrevenants seront poursuivis avec toute la rigueur de la loi."
+S1(config)# banner motd "Acces autoriser uniquement. Les contrevenants seront poursuivis avec toute la rigueur de la loi."
 ----
 
 === Étape 5 : enregistrez le fichier de configuration dans la mémoire NVRAM.
