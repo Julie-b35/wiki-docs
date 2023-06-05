@@ -25,6 +25,8 @@ Au cours de cet exercice, vous allez effectuer des configurations de base sur le
 |e.     |Cliquez sur *OK*, puis appuyez sur *Entrée*. Vous êtes maintenant en mesure de configurer *R1*.
 |===
 
+image:tssr2023/modules-07/TP/01_5/01.png[]
+
 === Étape 2 : Accédez au mode privilégié, puis examinez la configuration actuelle.
 
 Vous pouvez accéder à l'ensemble des commandes du routeur en mode d'exécution privilégié. Toutefois, comme un grand nombre de commandes du mode privilégié permettent de configurer des paramètres système, l'accès privilégié doit être protégé par mot de passe pour empêcher toute utilisation non autorisée.
