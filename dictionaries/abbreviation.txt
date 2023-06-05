@@ -31,9 +31,11 @@ ontrol
 OSPF
 perating
 POSIX
+Privilegier
 rganization
 rotocol
 scpol
+Securiser
 servername
 strategie
 tandardization

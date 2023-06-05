@@ -43,3 +43,33 @@ image:tssr2023/modules-07/Réseaux/FonctionnaliterHelpIOS.png[]
 === Touches d'accès rapide et raccourcis clavier (suite)
 
 image:tssr2023/modules-07/Réseaux/keybind.png[]
+
+== Configuration de base
+
+=== Supprimer le nom
+
+image:tssr2023/modules-07/Réseaux/SupprimerNom.png[]
+
+=== Sécuriser l'accès au mode d'exécution utilisateur
+
+image:tssr2023/modules-07/Réseaux/SecuriserModeUtilisateur.png[]
+
+=== Sécuriser l'accès au mode d'exécution privilégié
+
+image:tssr2023/modules-07/Réseaux/SecuriserModePrivilegier.png[]
+
+=== Sécuriser l'accès à la ligne VTY
+
+image:tssr2023/modules-07/Réseaux/SecuriserVTY.png[]
+
+=== Rappel : recommandation sur la création de mot de passe ANSI
+
+image:tssr2023/modules-07/Réseaux/RappelRecommendationCreationPassword.png[]
+
+=== Chiffrer les mots de passe
+
+image:tssr2023/modules-07/Réseaux/ChiffrerMDP.png[]
+
+=== Communiquer
+
+image:tssr2023/modules-07/Réseaux/Communiquer.png[]
