@@ -8,6 +8,10 @@
 *  Observer le comportement du trafic sur le réseau
 *  Observer le flux de données des diffusions ARP et des commandes ping
 
+=== Interface Packet Tracer
+
+image:tssr2023/modules-07/TP/01_1/01.png[]
+
 == Étape 1 : Créer un diagramme de réseau logique avec 3 ordinateurs et un commutateur.
 
 Afin que les instructions restent visibles pendant l'activité, cochez la case « Top » dans la fenêtre de zone d'instructions.
