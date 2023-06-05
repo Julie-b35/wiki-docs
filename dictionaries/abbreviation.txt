@@ -2,6 +2,7 @@ APIPA
 CILL
 echnology
 ervice
+ethernet
 glpi
 ibrary
 icence

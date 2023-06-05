@@ -36,3 +36,27 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 === Les couches OSI
 
 image:tssr2023/modules-07/tab-couches-osi.png[]
+
+=== Les ports
+
+image:tssr2023/modules-07/tab-ports-osi.png[]
+
+== Trame Ethernet
+
+=== Trame Ethernet II (802.3)
+
+image:tssr2023/modules-07/trame-ethernet.png[]
+
+=== Trame Ethernet 802.1Q (VLAN)
+
+image:tssr2023/modules-07/trame-ethernet-vlan.png[]
+
+=== Le domaine de collision
+
+image:tssr2023/modules-07/domaine-collision.png[]
+
+== Paquet IPv4
+
+image:tssr2023/modules-07/tab-paquet-ipv4.png[]
+
+== Démo sur IPV4
