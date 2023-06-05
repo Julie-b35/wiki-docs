@@ -1,4 +1,4 @@
-= TP 1/5 Packet Tracer : utilisation du logiciel Packet Tracer
+= TP 1/5 Packet Tracer : Utilisation du logiciel Packet Tracer
 :navtitle: Utiliser logiciel Packet Tracer
 
 == Objectifs

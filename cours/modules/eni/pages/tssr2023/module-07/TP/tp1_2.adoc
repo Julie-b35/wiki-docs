@@ -1,4 +1,5 @@
-= Navigating the IOS.pka
+= TP 2/5 Packet Tracer : Utilisation de Cisco IOS
+:navtitle: Utiliser Cisco IOS
 
 
 == Étape 1:   Raccordez PC1 à S1 à l'aide d'un câble de console.
