@@ -21,5 +21,5 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 ** xref:tssr2023/module-07/TP/tp1_2.adoc[TP 2/5 PacketTracer : Utilisation de Cisco IOS]
 ** xref:tssr2023/module-07/TP/tp1_3.adoc[TP 3/5 PacketTracer : Utilisation des commandes show de Cisco IOS]
 ** xref:tssr2023/module-07/TP/tp1_4.adoc[TP 4/5 PacketTracer : Mise en œuvre de la connectivité de base]
-** xref:tssr2023/module-07/TP/tp1_5.adoc[TP 5/5 PacketTracer : ]
+** xref:tssr2023/module-07/TP/tp1_5.adoc[TP 5/5 PacketTracer : Configuration des paramètres initiaux du routeur]
 * xref:tssr2023/module-07/TP/tp2.adoc[TP - 2^ème^ série de TP]
