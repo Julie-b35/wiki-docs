@@ -21,7 +21,7 @@ Au cours de cet exercice, vous allez faire appel à des compétences spécifique
 |===
 
 .PC1 connecté à S1 via câble console.
-a| image:tssr2023/modules-07/TP/01_1/02.png[]
+a| image:tssr2023/modules-07/TP/01_2/02.png[]
 
 == Étape 2 :   Établissez une session de terminal avec S1.
 
