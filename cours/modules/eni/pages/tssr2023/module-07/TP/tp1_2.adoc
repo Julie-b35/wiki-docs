@@ -21,19 +21,28 @@ Au cours de cet exercice, vous allez faire appel à des compétences spécifique
 |===
 
 .PC1 connecté à S1 via câble console.
-a| image:tssr2023/modules-07/TP/01_2/02.png[]
+a| image:tssr2023/modules-07/TP/01_2/01.png[]
 
 == Étape 2 :   Établissez une session de terminal avec S1.
 
 [frame=none,grid=none,cols="~,~"]
 |===
 |a.     |Cliquez sur PC1, puis sélectionnez l'onglet Desktop.
-.2+|b.  |Cliquez sur l'icône de l'application Terminal et vérifiez que les paramètres Port Configuration par défaut sont corrects.
+.4+|b.  |Cliquez sur l'icône de l'application Terminal et vérifiez que les paramètres Port Configuration par défaut sont corrects.
         |Quelle est la valeur du paramètre des bits par seconde ?
+        a| image:tssr2023/modules-07/TP/01_2/02.png[]
+        | La valeur indiqué est 9600 bits par seconde.
 |c.     |Cliquez sur OK.
 |d.     |L'écran qui s'affiche peut contenir plusieurs messages. Appuyez sur Entrée pour continuer.
 
+a| image:tssr2023/modules-07/TP/01_2/03.png[]
+
 Quelle est l'invite affichée à l'écran ?
+
+.Invite en mode d’exécution utilisateur
+----
+S1>
+----
 |===
 
 == Étape 3 :   Découvrez l'aide IOS.
