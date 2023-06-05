@@ -41,13 +41,19 @@ Une fois que le réseau a convergé, un point vert devrait apparaître à chaque
 |===
 .2+|a.     |Cliquez sur *PC0*.
 a| image:tssr2023/modules-07/TP/01_1/07.png[]
-|b.     |Sélectionnez l'onglet *Config*. Remplacez le nom d'affichage de l'ordinateur par *PC-A*. Sélectionnez l'onglet *FastEthernet* à gauche, puis ajoutez l'adresse IP *192.168.1.1* et le masque de sous-réseau *255.255.255.0*. Refermez la fenêtre de configuration du PC-A en cliquant sur le symbole x en haut à droite.
+.3+|b.     |Sélectionnez l'onglet *Config*. Remplacez le nom d'affichage de l'ordinateur par *PC-A*. Sélectionnez l'onglet *FastEthernet* à gauche, puis ajoutez l'adresse IP *192.168.1.1* et le masque de sous-réseau *255.255.255.0*. Refermez la fenêtre de configuration du PC-A en cliquant sur le symbole x en haut à droite.
+a| image:tssr2023/modules-07/TP/01_1/10.png[]
+a| image:tssr2023/modules-07/TP/01_1/11.png[]
 .2+|c.     |Cliquez sur *PC1*.
 a| image:tssr2023/modules-07/TP/01_1/08.png[]
-|d.     |Sélectionnez l'onglet *Config*. Remplacez le nom d'affichage de l'ordinateur par *PC-B*. Sélectionnez l'onglet *FastEthernet* à gauche, puis ajoutez l'adresse IP *192.168.1.2* et le masque de sous-réseau *255.255.255.0*. Fermez la fenêtre de configuration du PC-B.
+.3+|d.     |Sélectionnez l'onglet *Config*. Remplacez le nom d'affichage de l'ordinateur par *PC-B*. Sélectionnez l'onglet *FastEthernet* à gauche, puis ajoutez l'adresse IP *192.168.1.2* et le masque de sous-réseau *255.255.255.0*. Fermez la fenêtre de configuration du PC-B.
+a| image:tssr2023/modules-07/TP/01_1/12.png[]
+a| image:tssr2023/modules-07/TP/01_1/13.png[]
 .2+|e.     |Cliquez sur *PC2*.
 a| image:tssr2023/modules-07/TP/01_1/09.png[]
-|f.     | Sélectionnez l'onglet *Config*. Remplacez le nom d'affichage de l'ordinateur par *PC-C*. Sélectionnez l'onglet *FastEthernet* à gauche, puis ajoutez l'adresse IP *192.168.1.3* et le masque de sous-réseau *255.255.255.0*. Fermez la fenêtre de configuration du PC-C.
+.3+|f.     | Sélectionnez l'onglet *Config*. Remplacez le nom d'affichage de l'ordinateur par *PC-C*. Sélectionnez l'onglet *FastEthernet* à gauche, puis ajoutez l'adresse IP *192.168.1.3* et le masque de sous-réseau *255.255.255.0*. Fermez la fenêtre de configuration du PC-C.
+a| image:tssr2023/modules-07/TP/01_1/14.png[]
+a| image:tssr2023/modules-07/TP/01_1/15.png[]
 |===
 
 == Étape 3 : Analyser le flux de données du PC-A au PC-B en créant un trafic réseau
