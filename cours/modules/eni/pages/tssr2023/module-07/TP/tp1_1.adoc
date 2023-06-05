@@ -76,13 +76,18 @@ Deux enveloppes sont maintenant placées sur le PC-A. L'une correspond à ICMP, 
 a| image:tssr2023/modules-07/TP/01_1/19.png[]
 .2+|e.    | Observez le parcours des enveloppes ICMP et ARP. Cliquez sur *Afficher l'évènement précédent* pour continuer lorsque le tampon est plein.
 a| image:tssr2023/modules-07/TP/01_1/20.png[]
-.2+|f.      |Cliquez sur *Réinitialiser la simulation* dans le panneau de simulation. Notez que l'enveloppe du protocole ARP ne s'affiche plus. La simulation a été réinitialisée, mais les changements de configuration et les entrées de tables dynamiques, telles que les entrées de table ARP, n'ont pas été supprimés. La requête ARP n'est pas nécessaire pour exécuter la commande ping, car le PC-A dispose déjà d'une adresse MAC dans la table ARP.
+.2+|f.      |Cliquez sur *Reset simulation* dans le panneau de simulation. Notez que l'enveloppe du protocole ARP ne s'affiche plus. La simulation a été réinitialisée, mais les changements de configuration et les entrées de tables dynamiques, telles que les entrées de table ARP, n'ont pas été supprimés. La requête ARP n'est pas nécessaire pour exécuter la commande ping, car le PC-A dispose déjà d'une adresse MAC dans la table ARP.
 a| image:tssr2023/modules-07/TP/01_1/21.png[]
-|b.     |Cliquez sur *Capture/Transfert*. L'enveloppe du protocole ICMP se déplace de la source au commutateur, puis s'arrête. Le bouton *Capture/Suivant* vous permet d'exécuter la simulation étape par étape. Cliquez de nouveau sur le bouton *Capture/Suivant* jusqu'à la fin du processus.
-|h.     |Cliquez sur le bouton Réinitialiser l'appareil, en bas à gauche, au-dessus des icônes des appareils.
-|i.      |Un message s'affiche pour vous demander de confirmer la réinitialisation. Cliquez sur *Oui*. Les deux enveloppes ICMP et ARP sont de nouveau visibles. La réinitialisation permet d'effacer tous les changements de configuration non enregistrés et d'effacer toutes les entrées de tables dynamiques, telles que les entrées des tables ARP et MAC.
-|j.     | Quittez le mode Simulation et attendez que le réseau converge.
-|k.    |Une fois que le réseau a convergé, passez en mode Simulation.
+.2+|g.     |Cliquez sur *Capture then forward*. L'enveloppe du protocole ICMP se déplace de la source au commutateur, puis s'arrête. Le bouton *Capture/Suivant* vous permet d'exécuter la simulation étape par étape. Cliquez de nouveau sur le bouton *Capture then forward* jusqu'à la fin du processus.
+a| image:tssr2023/modules-07/TP/01_1/22.png[]
+.2+|h.     |Cliquez sur le bouton Réinitialiser l'appareil, en bas à gauche, au-dessus des icônes des appareils.
+a| image:tssr2023/modules-07/TP/01_1/23.png[]
+.2+|i.      |Un message s'affiche pour vous demander de confirmer la réinitialisation. Cliquez sur *Oui*. Les deux enveloppes ICMP et ARP sont de nouveau visibles. La réinitialisation permet d'effacer tous les changements de configuration non enregistrés et d'effacer toutes les entrées de tables dynamiques, telles que les entrées des tables ARP et MAC.
+a| image:tssr2023/modules-07/TP/01_1/24.png[]
+.2+|j.     | Quittez le mode Simulation et attendez que le réseau converge.
+a| image:tssr2023/modules-07/TP/01_1/25.png[]
+.2+|k.    |Une fois que le réseau a convergé, passez en mode Simulation.
+a| image:tssr2023/modules-07/TP/01_1/26.png[]
 |===
 
 == Étape 4 : Afficher les tableaux ARP sur chaque ordinateur.
