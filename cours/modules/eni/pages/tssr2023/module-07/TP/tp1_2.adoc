@@ -1,39 +1,108 @@
 = TP 2/5 Packet Tracer : Utilisation de Cisco IOS
 :navtitle: Utiliser Cisco IOS
 
+== Objectifs
+
+Établir une session de terminal sur un commutateur via le port de console afin d'explorer les fonctions d'aide et les différents modes d'exécution.
+
+== Contexte
+
+Au cours de cet exercice, vous allez faire appel à des compétences spécifiques pour utiliser Cisco IOS, dont différents modes d'accès utilisateur, divers modes de configuration, ainsi que certaines commandes régulièrement utilisées.
 
 == Étape 1:   Raccordez PC1 à S1 à l'aide d'un câble de console.
 
-image:tssr2023/modules-07/TP/01/02_1.png[]
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     |Cliquez sur l'icône Connexions située dans le coin inférieur gauche de la fenêtre Packet Tracer.
+|b.     |Cliquez sur le câble de console.
+|c.     |Cliquez sur PC1, puis sélectionnez l'option pour la connexion RS-232.
+|d.     |Faites glisser l'autre extrémité de la connexion console vers le commutateur S1, puis cliquez sur le commutateur afin de faire apparaître la liste des connexions.
+|e.     |Sélectionnez le port Console afin d'établir la connexion.
+|===
 
 == Étape 2 :   Établissez une session de terminal avec S1.
 
-[cols="~,~",frame=none,grid=none]
+[frame=none,grid=none,cols="~,~"]
 |===
-.2+| a | Cliquez sur PC1, puis sélectionnez l'onglet Desktop.
-a| image:tssr2023/modules-07/TP/01/02_2.png[]
+|a.     |Cliquez sur PC1, puis sélectionnez l'onglet Desktop.
+.2+|b.  |Cliquez sur l'icône de l'application Terminal et vérifiez que les paramètres Port Configuration par défaut sont corrects.
+        |Quelle est la valeur du paramètre des bits par seconde ?
+|c.     |Cliquez sur OK.
+|d.     |L'écran qui s'affiche peut contenir plusieurs messages. Appuyez sur Entrée pour continuer.
 
+Quelle est l'invite affichée à l'écran ?
 |===
 
+== Étape 3 :   Découvrez l'aide IOS.
 
-== Étape 3 :   Découvrez l'aide IOS
+[frame=none,grid=none,cols="~,~"]
+|===
+.3+|a.     |L'IOS peut fournir de l'aide sur les commandes en fonction du niveau auquel l'utilisateur accède. L'invite actuellement affichée est appelée mode d'exécution utilisateur et le périphérique attend une commande. La forme la plus simple de l'aide consiste à entrer un point d'interrogation (?) à l'invite afin d'afficher la liste des commandes.
+           |S1> ?
+           |Quelle commande commence par la lettre « C » ?
+.3+|b.     |À l'invite, saisissez t, suivi d'un point d'interrogation (?).
+           |S1> t?
+           |Quelles sont les commandes affichées ?
+.4+|c.     |À l'invite, saisissez te, suivi d'un point d'interrogation (?).
+           |S1> te?
+           |Quelles sont les commandes affichées ?
+           |Ce type d'aide est appelé aide contextuelle et offre des informations supplémentaires lorsque les commandes sont développées.
+|===
 
-* a.     L'IOS peut fournir de l'aide sur les commandes en fonction du niveau auquel l'utilisateur accède. L'invite actuellement affichée est appelée mode d'exécution utilisateur et le périphérique attend une commande. La forme la plus simple de l'aide consiste à entrer un point d'interrogation (?) à l'invite afin d'afficher la liste des commandes.
+== Étape 4 :   Passez en mode d'exécution privilégié.
 
-S1> ?
+[frame=none,grid=none,cols="~,~"]
+|===
+.3+|a.    |À l'invite, saisissez un point d'interrogation (?).
+          |S1> ?
+          |Quelle information affichée décrit la commande enable ?
+.5+|b.    |Saisissez en, puis appuyez sur la touche Tab.
+          |S1> en<Tab>
+          |Que voyez-vous apparaître après avoir appuyé sur la touche Tab ?
+          |La touche Tabulation peut être utilisée pour compléter une commande partielle. Lorsque vous ne saisissez qu'une partie d'une commande, la touche Tab peut être utilisée pour compléter cette commande. Si les caractères tapés sont suffisants pour identifier la commande, comme dans le cas de la commande enable, le reste s'affiche.
+          |Que se passerait-il si vous saisissiez <Tab> à l'invite ?
 
+|c.       |Entrez la commande enable, puis appuyez sur Entrée. Quel changement observez-vous sur l'invite ?
 
+.3+|d.    |À l'invite, saisissez le point d'interrogation (?).
+          |S1# ?
+          |Auparavant, en mode d'exécution utilisateur, une commande commençait par la lettre « C ». Quel est le nombre de commandes affichées commençant par la lettre « C » ? (Conseil : pour afficher uniquement les commandes commençant par « C », vous pouvez saisir « c? ».)
+|===
 
+== Étape 5 :   Passez en mode de configuration globale.
 
+[frame=none,grid=none,cols="~,~"]
+|===
+.3+|a.     |Lorsque vous êtes en mode d'exécution privilégié, configure est l'une des commandes qui commencent par la lettre « C ». Entrez la commande complète, ou suffisamment de caractères pour qu'elle soit identifiée, puis appuyez sur Tab et Entrée pour l'exécuter.
+           |S1# configure
+           |Quel est le message affiché ?
+.2+|b.     |Appuyez sur la touche Entrée pour accepter le paramètre par défaut entre parenthèses [terminal].
+           |Quel changement observez-vous sur l'invite ?
+.3+|c.     |Il s'agit du mode de configuration globale. Ce mode sera examiné en détail dans les prochains exercices et à l'occasion des travaux pratiques. Pour l'instant, revenez en mode d'exécution privilégié en saisissant end, exit ou en appuyant sur Ctrl+Z.
+           |S1(config)# exit
+           |S1#
+|===
 
-* Quelle commande commence par la lettre « C » ? -> `connect`
+== Suggestion de barème de notation
 
-
-
-* Quelles sont les commandes affichées ? -> `telnet`, `terminal`, `traceroute`
-
-
-
-
-* Quelles sont les commandes affichées ? -> `telnet`, `terminal`
-
+[cols="~,~,~,~"]
+|===
+^.^h|Section d'exercice ^.^h| Emplacement de la question ^.^h| Nombre maximum de points ^.^h| Points obtenus
+.5+| Partie 1 : Connexions de base, accès à l'interface en ligne de commande et découverte de l'aide
+| Étape 2a | 5 | 
+| Étape 2c | 5 |
+| Étape 3a | 5 |
+| Étape 3b | 5 |
+| Étape 3c | 5 |
+2.+|Total de la Partie 1 | 25 |
+.6+| Partie 2 : Découverte des modes d'exécution
+| Étape 1a | 5 |
+| Étape 1b | 5 |
+| Étape 1c | 5 |
+| Étape 1d | 5 |
+| Étape 2a | 5 |
+| Étape 2b | 5 |
+2.+| Total de la Partie 2 | 30 |
+2.+|Score relatif à Packet Tracer | 20 |
+2.+|Score total | 75 |
+|===
