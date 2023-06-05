@@ -13,7 +13,9 @@ gpedit
 gruub
 gsettings
 inodes
+ipbase
 journalctl
+keepalive
 Kernighan
 lvextend
 Netware
@@ -23,6 +25,7 @@ nsswitch
 PARTUUID
 penthium
 Penthium
+Pfsense
 pipewire
 pulseaudi
 rsyslog
@@ -31,10 +34,10 @@ superblocks
 Sysrep
 TRACEROUTE
 TRACERT
+universalk
 UUCP
 vgextend
 Vipera
 viperr
 Viperr
 wtmp
-Pfsense

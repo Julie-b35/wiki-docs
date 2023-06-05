@@ -28,27 +28,240 @@ Utilisez les informations affichées en réponse aux commandes show suivantes po
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.9+| a. |Saisissez show arp à l'invite.
-|Notez les adresses MAC et IP indiquées.
+.13+| a. |Saisissez show arp à l'invite.
+a|
+[source,bash]
+----
+ISPRouter>show arp 
+Protocol  Address          Age (min)  Hardware Addr   Type   Interface
+Internet  209.165.201.1           -   0060.70B4.A601  ARPA   GigabitEthernet0/0
+----
+|Notez les adresses MAC et IP indiquées. (*IP : 209.165.201.1, MAC :  0060.70B4.A601*)
 |Saisissez show flash à l'invite.
-|Notez l'image IOS indiquée :
+a|
+[source,bash]
+----
+ISPRouter>show flash: 
+
+System flash directory:
+File  Length   Name/status
+  3   33591768 c1900-universalk9-mz.SPA.151-4.M4.bin
+  2   28282    sigdef-category.xml
+  1   227537   sigdef-default.xml
+[33847587 bytes used, 221896413 available, 255744000 total]
+249856K bytes of processor board System flash (Read/Write)
+----
+|Notez l'image IOS indiquée : (*c1900-universalk9-mz.SPA.151-4.M4.bin*)
 |Saisissez show ip route à l'invite.
-|Combien de routes figurent dans la table ?
+a|
+[source,bash]
+----
+ISPRouter>show ip route 
+Codes: L - local, C - connected, S - static, R - RIP, M - mobile, B - BGP
+       D - EIGRP, EX - EIGRP external, O - OSPF, IA - OSPF inter area
+       N1 - OSPF NSSA external type 1, N2 - OSPF NSSA external type 2
+       E1 - OSPF external type 1, E2 - OSPF external type 2, E - EGP
+       i - IS-IS, L1 - IS-IS level-1, L2 - IS-IS level-2, ia - IS-IS inter area
+       * - candidate default, U - per-user static route, o - ODR
+       P - periodic downloaded static route
+
+Gateway of last resort is not set
+
+     209.165.201.0/24 is variably subnetted, 2 subnets, 2 masks
+C       209.165.201.0/27 is directly connected, GigabitEthernet0/0
+L       209.165.201.1/32 is directly connected, GigabitEthernet0/0
+
+----
+|Combien de routes figurent dans la table ? 3? (doute)
 |Saisissez show interfaces à l'invite.
+a|
+[source,bash]
+----
+ISPRouter>show interfaces 
+GigabitEthernet0/0 is up, line protocol is up (connected)
+  Hardware is CN Gigabit Ethernet, address is 0060.70b4.a601 (bia 0060.70b4.a601)
+  Internet address is 209.165.201.1/27
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 100 usec,
+[...]
+GigabitEthernet0/1 is administratively down, line protocol is down (disabled)
+  Hardware is CN Gigabit Ethernet, address is 0060.70b4.a602 (bia 0060.70b4.a602)
+  MTU 1500 bytes, BW 1000000 Kbit, DLY 10 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+[...]
+Serial0/1/0 is down, line protocol is down (disabled)
+  Hardware is HD64570
+  Internet address is 209.165.200.226/27
+  MTU 1500 bytes, BW 1544 Kbit, DLY 20000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+[...]
+Serial0/1/1 is administratively down, line protocol is down (disabled)
+  Hardware is HD64570
+  MTU 1500 bytes, BW 1544 Kbit, DLY 20000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+  Encapsulation HDLC, loopback not set, keepalive set (10 sec)
+[...]
+Vlan1 is administratively down, line protocol is down
+  Hardware is CPU Interface, address is 0004.9a00.63d2 (bia 0004.9a00.63d2)
+  MTU 1500 bytes, BW 100000 Kbit, DLY 1000000 usec,
+     reliability 255/255, txload 1/255, rxload 1/255
+----
 | Quelle interface fonctionne correctement ?
 a|
 !===
 ^.^h! Interface             ^.^h! État            ^.^h! Protocole
-! GigabitEthernet 0/0   !Activé           !
-! GigabitEthernet 0/1   !                 !  Hors service
-! Serial0/1/0           !                 !
-! Serial0/1/1           !  Hors service   !
+! GigabitEthernet 0/0   !Activé           !  Activé
+! GigabitEthernet 0/1   !    Down             !  Hors service
+! Serial0/1/0           !    down             ! down
+! Serial0/1/1           !  Hors service   ! down
 !===
-.3+|b.     | Saisissez show version à l'invite.
+.5+|b.     | Saisissez show version à l'invite.
+a|
+[source,bash]
+----
+ISPRouter>show version 
+Cisco IOS Software, C1900 Software (C1900-UNIVERSALK9-M), Version 15.1(4)M4, RELEASE SOFTWARE (fc2)
+Technical Support: http://www.cisco.com/techsupport
+Copyright (c) 1986-2007 by Cisco Systems, Inc.
+Compiled Wed 23-Feb-11 14:19 by pt_team
 
-| Quelles sont les versions des composants technologiques activés sur le routeur ?
+ROM: System Bootstrap, Version 15.1(4)M4, RELEASE SOFTWARE (fc1)
+cisco1941 uptime is 28 minutes, 30 seconds
+System returned to ROM by power-on
+System image file is "flash0:c1900-universalk9-mz.SPA.151-1.M4.bin"
+Last reload type: Normal Reload
+
+This product contains cryptographic features and is subject to United
+States and local country laws governing import, export, transfer and
+use. Delivery of Cisco cryptographic products does not imply
+third-party authority to import, export, distribute or use encryption.
+Importers, exporters, distributors and users are responsible for
+compliance with U.S. and local country laws. By using this product you
+agree to comply with applicable laws and regulations. If you are unable
+to comply with U.S. and local laws, return this product immediately.
+
+A summary of U.S. laws governing Cisco cryptographic products may be found at:
+http://www.cisco.com/wwl/export/crypto/tool/stqrg.html
+
+If you require further assistance please contact us by sending email to
+export@cisco.com.
+Cisco CISCO1941/K9 (revision 1.0) with 491520K/32768K bytes of memory.
+Processor board ID FTX152400KS
+2 Gigabit Ethernet interfaces
+2 Low-speed serial(sync/async) network interface(s)
+DRAM configuration is 64 bits wide with parity disabled.
+255K bytes of non-volatile configuration memory.
+249856K bytes of ATA System CompactFlash 0 (Read/Write)
+
+License Info:
+
+License UDI:
+
+-------------------------------------------------
+Device#   PID                   SN
+-------------------------------------------------
+*0        CISCO1941/K9          FTX1524YQBF
+
+
+Technology Package License Information for Module:'c1900'
+
+----------------------------------------------------------------
+Technology    Technology-package          Technology-package
+              Current       Type          Next reboot
+-----------------------------------------------------------------
+ipbase        ipbasek9      Permanent     ipbasek9
+security      disable       None          None
+data          disable       None          None
+
+Configuration register is 0x2102
+
+----
+| Quelles sont les versions des composants technologiques activés sur le routeur ? (*15.14*?)
 
 | Saisissez show ? à l'invite. Citez quelques commandes show supplémentaires parmi celles qui sont disponibles en mode d'exécution utilisateur.
-
-| c.    | Saisissez enable à l'invite pour passer en mode d'exécution privilégié. Citez quelques commandes show supplémentaires disponibles dans ce mode.
+a|
+[source,bash]
+----
+ISPRouter>show ?
+  arp            Arp table
+  cdp            CDP information
+  class-map      Show QoS Class Map
+  clock          Display the system clock
+  controllers    Interface controllers status
+  crypto         Encryption module
+  dot11          IEEE 802.11 show information
+  flash:         display information about flash: file system
+  frame-relay    Frame-Relay information
+  history        Display the session command history
+  hosts          IP domain-name, lookup style, nameservers, and host table
+  interfaces     Interface status and configuration
+  ip             IP information
+  ipv6           IPv6 information
+  lldp           LLDP information
+  policy-map     Show QoS Policy Map
+  pppoe          PPPoE information
+  privilege      Show current privilege level
+  protocols      Active network routing protocols
+  queue          Show queue contents
+  queueing       Show queueing configuration
+  sessions       Information about Telnet connections
+----
+1.2+| c.    | Saisissez enable à l'invite pour passer en mode d'exécution privilégié. Citez quelques commandes show supplémentaires disponibles dans ce mode.
+a|
+[source,bash]
+----
+ISPRouter#show ?
+  aaa                Show AAA values
+  access-lists       List access lists
+  arp                Arp table
+  cdp                CDP information
+  class-map          Show QoS Class Map
+  clock              Display the system clock
+  controllers        Interface controllers status
+  crypto             Encryption module
+  debugging          State of each debugging option
+  dhcp               Dynamic Host Configuration Protocol status
+  dot11              IEEE 802.11 show information
+  file               Show filesystem information
+  flash:             display information about flash: file system
+  flow               Flow information
+  frame-relay        Frame-Relay information
+  history            Display the session command history
+  hosts              IP domain-name, lookup style, nameservers, and host table
+  interfaces         Interface status and configuration
+  ip                 IP information
+  ipv6               IPv6 information
+  license            Show license information
+  line               TTY line information
+  lldp               LLDP information
+  logging            Show the contents of logging buffers
+  login              Display Secure Login Configurations and State
+  mac-address-table  MAC forwarding table
+  ntp                Network time protocol
+  parser             Show parser commands
+  policy-map         Show QoS Policy Map
+  pppoe              PPPoE information
+  privilege          Show current privilege level
+  processes          Active process statistics
+  protocols          Active network routing protocols
+  queue              Show queue contents
+  queueing           Show queueing configuration
+  running-config     Current operating configuration
+  secure             Show secure image and configuration archive
+  sessions           Information about Telnet connections
+  snmp               snmp statistics
+  spanning-tree      Spanning tree topology
+  ssh                Status of SSH server connections
+  standby            standby configuration
+  startup-config     Contents of startup configuration
+  storm-control      Show storm control configuration
+  tcp                Status of TCP connections
+  tech-support       Show system information for Tech-Support
+  terminal           Display terminal configuration parameters
+  users              Display information about terminal lines
+  version            System hardware and software status
+  vlan-switch        VTP VLAN status
+  vtp                Configure VLAN database
+  zone               Zone Information
+  zone-pair          Zone pair information
+----
 |===

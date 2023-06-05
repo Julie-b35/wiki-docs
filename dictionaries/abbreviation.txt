@@ -1,5 +1,6 @@
 ANSSI
 APIPA
+ARPA
 CILL
 CNTL
 comunication
@@ -10,6 +11,7 @@ ervice
 ethernet
 Fonctionnaliter
 glpi
+HDLC
 ibrary
 icence
 IGRP
@@ -27,6 +29,7 @@ mobaxterm
 nblig
 nformation
 nfrastructure
+NSSA
 nterconnection
 nternational
 NTFS
@@ -40,11 +43,14 @@ rotocol
 scpol
 Securiser
 servername
+sigdef
 strategie
+subnetted
 tandardization
 tcsh
 ublic
 undebug
 vfat
 xzvf
+YQBF
 ystem

@@ -50,6 +50,7 @@ ibrs
 IBRS
 inum
 invpcid
+ipbasek
 itil
 Itlb
 jedit
@@ -67,6 +68,7 @@ legende
 libauthen
 libbz
 libio
+lldp
 localgroup
 logind
 lvremove
@@ -91,6 +93,7 @@ pdpe
 perfmon
 pico
 popcnt
+pppoe
 prctl
 PRENOM
 procstatus
@@ -103,11 +106,13 @@ rdtscp
 remmina
 Retbleed
 rsyslogd
+rxload
 sched
 seccomp
 shopt
 smap
 smep
+snmp
 Srbds
 SRVFIC
 ssbd
@@ -119,9 +124,11 @@ swapoff
 swapon
 syscall
 traceroute
+txload
 udevadm
 udevd
 umip
+usec
 USERACCOUNT
 usercopy
 vaes
