@@ -60,3 +60,19 @@ image:tssr2023/modules-07/domaine-collision.png[]
 image:tssr2023/modules-07/tab-paquet-ipv4.png[]
 
 == Démo sur IPV4
+
+== Le masque sous-réseau
+
+=== La notation CIDR
+
+image:tssr2023/modules-07/notation-cidr.png[]
+
+=== Le domaine de diffusion
+
+image:tssr2023/modules-07/domaine-diffusion.png[]
+
+=== Rappel sur la communication
+
+image:tssr2023/modules-07/rappel-comunication.png[]
+image:tssr2023/modules-07/rappel-comunication2.png[]
+
