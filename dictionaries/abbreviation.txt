@@ -1,6 +1,7 @@
 APIPA
 CILL
 comunication
+Demarrage
 echnology
 EIGRP
 ervice

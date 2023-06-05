@@ -73,3 +73,17 @@ image:tssr2023/modules-07/Réseaux/ChiffrerMDP.png[]
 === Communiquer
 
 image:tssr2023/modules-07/Réseaux/Communiquer.png[]
+
+== Enregistrement des configurations
+
+=== Routeur / démarrage
+
+image:tssr2023/modules-07/Réseaux/RouteurDemarrage.png[]
+
+=== Fichiers de configuration
+
+image:tssr2023/modules-07/Réseaux/FichierConfiguration.png[]
+
+=== Copier la configuration
+
+image:tssr2023/modules-07/Réseaux/CopieConfiguration.png[]
