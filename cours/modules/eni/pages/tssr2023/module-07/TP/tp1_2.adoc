@@ -48,9 +48,28 @@ S1>
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.3+|a.     |L'IOS peut fournir de l'aide sur les commandes en fonction du niveau auquel l'utilisateur accède. L'invite actuellement affichée est appelée mode d'exécution utilisateur et le périphérique attend une commande. La forme la plus simple de l'aide consiste à entrer un point d'interrogation (?) à l'invite afin d'afficher la liste des commandes.
+.4+|a.     |L'IOS peut fournir de l'aide sur les commandes en fonction du niveau auquel l'utilisateur accède. L'invite actuellement affichée est appelée mode d'exécution utilisateur et le périphérique attend une commande. La forme la plus simple de l'aide consiste à entrer un point d'interrogation (?) à l'invite afin d'afficher la liste des commandes.
            |S1> ?
            |Quelle commande commence par la lettre « C » ?
+a|
+.La commande `connect`
+[source,bash]
+----
+S1>?
+Exec commands:
+  connect     Open a terminal connection
+  disable     Turn off privileged commands
+  disconnect  Disconnect an existing network connection
+  enable      Turn on privileged commands
+  exit        Exit from the EXEC
+  logout      Exit from the EXEC
+  ping        Send echo messages
+  resume      Resume an active network connection
+  show        Show running system information
+  telnet      Open a telnet connection
+  terminal    Set terminal line parameters
+  traceroute  Trace route to destination
+----
 .3+|b.     |À l'invite, saisissez t, suivi d'un point d'interrogation (?).
            |S1> t?
            |Quelles sont les commandes affichées ?
