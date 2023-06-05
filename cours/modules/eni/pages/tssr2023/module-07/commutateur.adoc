@@ -5,3 +5,52 @@
 * Module suivant -> xref:tssr2023/module-07/editor-texte.adoc[Module 10 - Éditer du texte]
 
 Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur IP]
+
+== Objectifs
+
+* Configurer un commutateur
+* Comprendre et configurer des VLAN
+* Utiliser les SVI à des fins d’administration
+* Comprendre et configurer des trunks (aggregation VLAN)
+* Sécuriser l’accès à un commutateur
+
+== Virtual Local area Network
+
+=== Présentation des VLAN
+
+Les VLAN permettent de nous séparer de l’achat obligatoire d’un nouveau commutateur. Les VLAN se font généralement en fonction des services :
+
+****
+* *Les diffusions, les multidiffusions et les monodiffusion sont isolées dans le VLAN individuel*
+* *Chaque VLAN aura sa propre plage d'adressage IP unique*
+* *Domaines de diffusion plus petits*
+****
+
+image:tssr2023/modules-07/Commutateur/presentationVLAN.png[]
+
+image:tssr2023/modules-07/Commutateur/tab-presentationVLAN.png[]
+
+
+=== Types de VLAN
+
+* *VLAN de données*
+** Dédié au trafic généré par l'utilisateur (trafic mail et web).
+* *VLAN natif*
+** Ceci est utilisé uniquement pour les liaisons de trunk.
+** Toutes les trames sont marquées sur une liaison de trunk 802.1Q, à l'exception de celles sur le VLAN natif.
+* *VLAN de gestion*
+** Ceci est utilisé pour le trafic SSH/TelNet VTY et ne doit pas être transporté avec le trafic d'utilisateur final.
+** Généralement, le VLAN qui est le SVI pour le commutateur de couche 2.
+* *VLAN par défaut*
+** Le VLAN dit par « défaut » est le VLAN 1 apparent de base sur tous les ports du commutateur à la sortie-usine. Il est de plus natif.
+* *Impossible de le supprimer ou de le renommer*
+
+.VLAN voix
+****
+* Un VLAN distinct est requis car le trafic de voix nécessite :
+** La bande passante consolidée
+** La priorité de QoS élevée
+** La capacité d'éviter la congestion
+** Le délai inférieur à 150 ms de la source à la destination
+* L'ensemble du réseau doit être conçu pour prendre en charge la voix.
+****
