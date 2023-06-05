@@ -72,7 +72,8 @@ a|
 ====
 Deux enveloppes sont maintenant placées sur le PC-A. L'une correspond à ICMP, l'autre à ARP. La liste des événements dans le panneau de simulation permet d'identifier exactement quelle enveloppe représente le protocole ICMP et quelle enveloppe représente le protocole ARP.
 ====
-|d.     |Sélectionnez *Capture/Lancement auto* dans la section Contrôles du lancement du panneau de simulation. Une barre horizontale est affichée sous le bouton Auto/Capture, avec un curseur permettant de contrôler la vitesse de la simulation. Faites glisser le curseur vers la droite pour accélérer la simulation et vers la gauche pour la ralentir.
+.2+|d.     |Sélectionnez *Play* dans la section Contrôles du lancement du panneau de simulation. Une barre horizontale est affichée sous le bouton Auto/Capture, avec un curseur permettant de contrôler la vitesse de la simulation. Faites glisser le curseur vers la droite pour accélérer la simulation et vers la gauche pour la ralentir.
+a| image:tssr2023/modules-07/TP/01_1/19.png[]
 |e.    | Observez le parcours des enveloppes ICMP et ARP. Cliquez sur *Afficher l'évènement précédent* pour continuer lorsque le tampon est plein.
 |f.      |Cliquez sur *Réinitialiser la simulation* dans le panneau de simulation. Notez que l'enveloppe du protocole ARP ne s'affiche plus. La simulation a été réinitialisée, mais les changements de configuration et les entrées de tables dynamiques, telles que les entrées de table ARP, n'ont pas été supprimés. La requête ARP n'est pas nécessaire pour exécuter la commande ping, car le PC-A dispose déjà d'une adresse MAC dans la table ARP.
 |b.     |Cliquez sur *Capture/Transfert*. L'enveloppe du protocole ICMP se déplace de la source au commutateur, puis s'arrête. Le bouton *Capture/Suivant* vous permet d'exécuter la simulation étape par étape. Cliquez de nouveau sur le bouton *Capture/Suivant* jusqu'à la fin du processus.
