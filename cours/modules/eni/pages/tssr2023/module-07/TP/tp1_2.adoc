@@ -21,7 +21,7 @@ Au cours de cet exercice, vous allez faire appel à des compétences spécifique
 |===
 
 .PC1 connecté à S1 via câble console.
-a| image:tssr2023/modules-07/TP/01_2/01.png[]
+image:tssr2023/modules-07/TP/01_2/01.png[]
 
 == Étape 2 :   Établissez une session de terminal avec S1.
 
@@ -34,12 +34,10 @@ a|
 .La valeur indiqué est 9600 bits par seconde.     
 image:tssr2023/modules-07/TP/01_2/02.png[]
 |c.     |Cliquez sur OK.
-|d.     |L'écran qui s'affiche peut contenir plusieurs messages. Appuyez sur Entrée pour continuer.
-
+.4+|d.     |L'écran qui s'affiche peut contenir plusieurs messages. Appuyez sur Entrée pour continuer.
 a| image:tssr2023/modules-07/TP/01_2/03.png[]
-
-Quelle est l'invite affichée à l'écran ?
-
+|Quelle est l'invite affichée à l'écran ?
+a|
 .Invite en mode d’exécution utilisateur
 ----
 S1>
