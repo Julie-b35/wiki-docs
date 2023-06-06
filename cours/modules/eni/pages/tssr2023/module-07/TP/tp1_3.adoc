@@ -85,11 +85,11 @@ C       209.165.201.0/27 is directly connected, GigabitEthernet0/0
 L       209.165.201.1/32 is directly connected, GigabitEthernet0/0
 
 ----
-|Combien de routes figurent dans la table ? 3? (doute)
+|Combien de routes figurent dans la table ?
 a|
-[TIP,caption=Réponse]
+[CAUTION,caption=Réponse douteuse]
 ====
-Je dirais '*3*' route, mais j'ai un doute.
+Je dirais '*3*' route.
 ====
 |Saisissez show interfaces à l'invite.
 a|
@@ -137,7 +137,7 @@ a|
 ====
 Il n'y a que l'interface *GigabitEthernet 0/0* qui est fonctionnel.
 ====
-.5+|b.     | Saisissez show version à l'invite.
+.6+|b.     | Saisissez show version à l'invite.
 a|
 [source,bash]
 ----
@@ -199,7 +199,12 @@ Configuration register is 0x2102
 
 ----
 | Quelles sont les versions des composants technologiques activés sur le routeur ? (*15.14*?)
-
+a|
+[CAUTION,caption=Réponse douteuse]
+====
+Je ne vois que la version du Router qui est : *15.14*
+Cependant j'hésite avec la technologie activé *ipbase* dont sont nom est *ipbasek9*
+====
 | Saisissez show ? à l'invite. Citez quelques commandes show supplémentaires parmi celles qui sont disponibles en mode d'exécution utilisateur.
 a|
 [source,bash]

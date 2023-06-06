@@ -33,7 +33,7 @@ image:tssr2023/modules-07/TP/01_2/01.png[]
 a|
 [TIP,caption=Réponse]
 ====
-La valeur indiqué est 9600 bits par seconde.
+La valeur indiqué est *9600* bits par seconde.
 ====
 a| 
 image:tssr2023/modules-07/TP/01_2/02.png[]
@@ -79,7 +79,7 @@ Exec commands:
 a|
 [TIP,caption=Réponse]
 ====
-La commande `connect`
+La commande `*connect*`
 ====
 .5+|b.     |À l'invite, saisissez t, suivi d'un point d'interrogation (?).
            |S1> t?
@@ -93,7 +93,7 @@ telnet  terminal  traceroute
 a|
 [TIP,caption=Réponse]
 ====
-Les commandes `telnet`, `terminal` et `traceroute`
+Les commandes `*telnet*`, `*terminal*` et `*traceroute*`
 ====
 .6+|c.     |À l'invite, saisissez te, suivi d'un point d'interrogation (?).
            |S1> te?
@@ -107,7 +107,7 @@ telnet  terminal
 a|
 [TIP,caption=Réponse]
 ====
-Les commandes `telnet` et `terminal`
+Les commandes `*telnet*` et `*terminal*`
 ====
 |Ce type d'aide est appelé aide contextuelle et offre des informations supplémentaires lorsque les commandes sont développées.
 |===
@@ -141,7 +141,7 @@ Exec commands:
 a|
 [TIP,caption=Réponse]
 ====
-L'information qui décris la commande `enable` est : *Turn on privileged commands*
+L'information qui décris la commande `*enable*` est : *Turn on privileged commands*
 ====
 .8+|b.    |Saisissez en, puis appuyez sur la touche Tab.
           |S1> en<Tab>
@@ -154,7 +154,7 @@ S1>enable
 a|
 [TIP,caption=Réponse]
 ====
-La commande `enable` qui est auto-complété
+La commande `*enable*` qui est auto-complété
 ====
           |La touche Tabulation peut être utilisée pour compléter une commande partielle. Lorsque vous ne saisissez qu'une partie d'une commande, la touche Tab peut être utilisée pour compléter cette commande. Si les caractères tapés sont suffisants pour identifier la commande, comme dans le cas de la commande enable, le reste s'affiche.
           |Que se passerait-il si vous saisissiez <Tab> à l'invite ?
@@ -173,7 +173,7 @@ S1#
 a|
 [TIP,caption=Réponse]
 ====
-La ligne de commande passe du mode utilisateur au mode privilégié.
+La ligne de commande passe du *mode utilisateur* au *mode privilégié*.
 ====
 .6+|d.    |À l'invite, saisissez le point d'interrogation (?).
           |S1# ?
