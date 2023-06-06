@@ -35,6 +35,7 @@ Vous pouvez accéder à l'ensemble des commandes du routeur en mode d'exécution
 |===
 .3+|a.     |Accédez au mode d'exécution privilégié en entrant la commande *enable*.
 a|
+.Commande Cmd
 [source,bash]
 ----
 Router> enable
@@ -43,13 +44,13 @@ Router#
 |Notez que l'invite a changé dans la configuration pour représenter le mode d'exécution privilégié.
 .7+|b.     |Saisissez la commande show running-config :
 a|
+.Commande Cmd
 [source,bash]
 ----
 Router# show running-config
 ----
 a|
-[NOTE,caption=Retour CMD]
-====
+.Retour CMD
 ----
 Building configuration...
 
@@ -65,8 +66,8 @@ hostname Router
 ip cef
 no ipv6 cef
 ----
-====
 a|
+.Commande Cmd
 [source,bash]
 ----
 Router#show  ip interface brief
@@ -86,13 +87,13 @@ FastEthernet0/1/3      unassigned      YES unset  up                    down
 Vlan1                  unassigned      YES unset  administratively down down
 ----
 a|
+.Commande Cmd
 [source,bash]
 ----
 Router#show line 
 ----
 a|
-[NOTE,caption=Retour CMD]
-====
+.Retour CMD
 ----
    Tty Line Typ     Tx/Rx    A Roty AccO AccI   Uses   Noise  Overruns   Int
 *    0    0 CTY              -    -    -    -      0       0     0/0       -
@@ -105,7 +106,6 @@ a|
 Line(s) not in async mode -or- with no hardware support:
 3-131
 ----
-====
 
 .11+|c.     |Répondez aux questions suivantes :
 |Quel est le nom d'hôte du routeur ?
