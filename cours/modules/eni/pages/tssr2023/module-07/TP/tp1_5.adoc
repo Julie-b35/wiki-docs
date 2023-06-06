@@ -41,12 +41,13 @@ Router> enable
 Router#
 ----
 |Notez que l'invite a changé dans la configuration pour représenter le mode d'exécution privilégié.
-.2+|b.     |Saisissez la commande show running-config :
+.3+|b.     |Saisissez la commande show running-config :
 a|
 [source,bash]
 ----
 Router# show running-config
 ----
+a|
 [NOTE,caption=Retour]
 ====
 [source,bash]
