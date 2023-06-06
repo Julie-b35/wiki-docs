@@ -5,3 +5,52 @@
 * Module suivant -> 
 
 Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur IP]
+
+== Objectifs
+
+* Configurer un routeur
+* Connaître la distance administrative et la métrique d’un protocole de routage
+* Configurer le routage inter-vlan
+
+== Configuration de base du routeur
+
+=== Configurer les interfaces du routeur
+
+La configuration de base d’un routeur est comme celle d’un switch
+
+* Même ligne : vty, console
+* Même IOS et même mode : utilisateur, privilégié, configuration
+* Même mémoire : rom, flash, ram, nvram
+* Configurer une adresse IP :
+** ip address ip-address subnet-mask
+* Activée : (par défaut les interfaces ne sont pas activées : état = shutdown)
+* No shutdown
+* Description - Les avantages des descriptions d'interface sont rapidement réalisés car elles sont utiles pour le dépannage et pour identifier une connexion et des coordonnées de tiers.
+
+== Routage statique
+
+[image]
+
+=== Principe
+
+* Lorsqu’un hôte souhaite communiquer avec un autre hôte, le protocole IP va déterminer si l’hôte distant se trouve sur le réseau local ou sur un réseau distant (ET logique).
+* S’il s’agit d’un hôte distant, le protocole IP consulte la table de routage pour trouver une route vers l’hôte ou le réseau distant.
+* Si aucune route n’est décrite explicitement, le protocole IP utilise l’adresse de passerelle par défaut pour envoyer le paquet à un routeur.
+* Sur le routeur, la table de routage est consultée pour déterminer l’hôte ou le réseau distant. Si aucune route n’est trouvée, le paquet est envoyé à l’adresse de passerelle par défaut du routeur.
+* Jusqu’à sa livraison à l’hôte de destination, le paquet est envoyé par sauts successifs aux routeurs à chaque nouvelle route identifiée.
+* Son TTL est décrémenté à chaque saut, si le TTL atteint la valeur 0, le paquet n’est pas acheminé. Si aucun itinéraire n’est décrit, l’hôte source reçoit un message d’erreur.
+
+=== Types de routes
+
+.Routage statique :
+****
+* Les routeurs ne partagent pas les informations de routage.
+* Il faut donc construire les tables de routage manuellement.
+****
+
+.Routage dynamique :
+****
+* Les routeurs partagent automatiquement les informations de routage.
+* Les tables de routage sont construites dynamiquement.
+* Nécessite un protocole de routage tel que RIP, OSPF, IGRP, EIGRP…
+****

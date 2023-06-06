@@ -35,6 +35,7 @@ NSSA
 nterconnection
 nternational
 NTFS
+nvram
 NVRAM
 ontrol
 OSPF
