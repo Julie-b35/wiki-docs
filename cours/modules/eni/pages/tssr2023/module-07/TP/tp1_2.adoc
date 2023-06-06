@@ -155,14 +155,14 @@ a|
 [TIP,caption=Réponse]
 ====
 La commande `enable` qui est auto-complété
-====  
+====
           |La touche Tabulation peut être utilisée pour compléter une commande partielle. Lorsque vous ne saisissez qu'une partie d'une commande, la touche Tab peut être utilisée pour compléter cette commande. Si les caractères tapés sont suffisants pour identifier la commande, comme dans le cas de la commande enable, le reste s'affiche.
           |Que se passerait-il si vous saisissiez <Tab> à l'invite ?
 a|
 [TIP,caption=Réponse]
 ====
 Réitère la tentative plus bas.
-====           
+====
 1.3+|c.       |Entrez la commande enable, puis appuyez sur Entrée. Quel changement observez-vous sur l'invite ?
 a|
 [source,bash]
@@ -174,7 +174,7 @@ a|
 [TIP,caption=Réponse]
 ====
 La ligne de commande passe du mode utilisateur au mode privilégié.
-====  
+====
 .6+|d.    |À l'invite, saisissez le point d'interrogation (?).
           |S1# ?
 a|
@@ -222,7 +222,7 @@ a|
 [TIP,caption=Réponse]
 ====
 Il y a '*5*' commandes qui commence par '*C*'
-====  
+====
 
 |===
 
@@ -243,7 +243,7 @@ a|
 [TIP,caption=Réponse]
 ====
 Le message affiché est : *Configuring from terminal, memory, or network [terminal]*
-====    
+====
 .4+|b.     |Appuyez sur la touche Entrée pour accepter le paramètre par défaut entre crochets [terminal].
 a|
 [source,bash]
@@ -256,7 +256,7 @@ a|
 [TIP,caption=Réponse]
 ====
 La ligne de commande passe en mode *configuration globale*
-====  
+====
 .3+|c.     |Il s'agit du mode de configuration globale. Ce mode sera examiné en détail dans les prochains exercices et à l'occasion des travaux pratiques. Pour l'instant, revenez en mode d'exécution privilégié en saisissant end, exit ou en appuyant sur Ctrl+Z.
            |S1(config)# exit
            |S1#

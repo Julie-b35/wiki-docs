@@ -28,7 +28,7 @@ Utilisez les informations affichées en réponse aux commandes show suivantes po
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.13+| a. |Saisissez show arp à l'invite.
+.14+| a. |Saisissez show arp à l'invite.
 a|
 [source,bash]
 ----
@@ -36,7 +36,14 @@ ISPRouter>show arp
 Protocol  Address          Age (min)  Hardware Addr   Type   Interface
 Internet  209.165.201.1           -   0060.70B4.A601  ARPA   GigabitEthernet0/0
 ----
-|Notez les adresses MAC et IP indiquées. (*IP : 209.165.201.1, MAC :  0060.70B4.A601*)
+|Notez les adresses MAC et IP indiquées.
+a|
+[TIP,caption=Réponse]
+====
+Il n'y a q'une interface de configuré (GigabitEthernet0/0)
+L'adresse MAC est : *0060.70B4.A601*
+L'adresse IP est : *209.165.201.1*
+====
 |Saisissez show flash à l'invite.
 a|
 [source,bash]
