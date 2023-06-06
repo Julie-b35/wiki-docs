@@ -230,7 +230,7 @@ Il y a '*5*' commandes qui commence par '*C*'
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.4+|a.     |Lorsque vous êtes en mode d'exécution privilégié, configure est l'une des commandes qui commencent par la lettre « C ». Entrez la commande complète, ou suffisamment de caractères pour qu'elle soit identifiée, puis appuyez sur Tab et Entrée pour l'exécuter.
+.5+|a.     |Lorsque vous êtes en mode d'exécution privilégié, configure est l'une des commandes qui commencent par la lettre « C ». Entrez la commande complète, ou suffisamment de caractères pour qu'elle soit identifiée, puis appuyez sur Tab et Entrée pour l'exécuter.
            |S1# configure
 a|
 [source,bash]
@@ -238,7 +238,12 @@ a|
 S1#configure 
 Configuring from terminal, memory, or network [terminal]? 
 ----
-           |Quel est le message affiché ? (*Configuring from terminal, memory, or network [terminal]*)
+           |Quel est le message affiché ? 
+a|
+[TIP,caption=Réponse]
+====
+Le message est : *Configuring from terminal, memory, or network [terminal]*
+====    
 .3+|b.     |Appuyez sur la touche Entrée pour accepter le paramètre par défaut entre crochets [terminal].
 a|
 [source,bash]
