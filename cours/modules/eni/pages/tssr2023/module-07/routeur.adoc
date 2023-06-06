@@ -86,5 +86,6 @@ Dans la figure, les chiffres identifient les informations suivantes :
 * 6 Horodatage de route : indique la durée écoulée depuis que la route a été découverte.
 * 7 Interface de sortie : elle identifie l'interface de sortie à utiliser pour que les paquets sortants atteignent leur destination finale.
 
-image:tssr2023/modules-07/Routeur/04.png[]
+
+image:tssr2023/modules-07/Routeur/04.png[align="center"]
 ****
