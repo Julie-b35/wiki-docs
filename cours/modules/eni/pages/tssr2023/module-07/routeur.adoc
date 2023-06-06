@@ -124,3 +124,22 @@ image::tssr2023/modules-07/Routeur/07.png[align="center"]
 * xref:tssr2023/module-07/TP/tp3_2.adoc[TP 2/ PacketTracer :]
 * xref:tssr2023/module-07/TP/tp3_3.adoc[TP 3/ PacketTracer :]
 * xref:tssr2023/module-07/TP/tp3_4.adoc[TP 4/ PacketTracer :]
+
+== Fonctionnement du routage inter-VLAN
+
+=== routage inter-VLAN Router-on-a-Stick
+
+Nous pouvons faire du routeur on-a-stick de 2 manières :
+
+* Avec un routeur et des interfaces virtuelles par VLAN
+* Avec un commutateur de niveau 3 et des interfaces virtuelles par VLAN
+
+.Router-on-a-stick Scénario
+****
+Pour permettre aux périphériques de s'envoyer des pings :
+
+* Les commutateurs doivent être configurés avec des VLAN et des trunk.
+* Le routeur doit être configuré pour le routage inter-VLAN.
+
+image::tssr2023/modules-07/Routeur/08.png[align="center"]
+****
