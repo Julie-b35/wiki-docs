@@ -91,6 +91,12 @@ a|
 ====
 Je dirais '*3*' route.
 ====
+
+a|
+[IMPORTANT,caption=Correction]
+====
+Il y a *2* routes.
+====
 |Saisissez show interfaces à l'invite.
 a|
 [source,bash]
