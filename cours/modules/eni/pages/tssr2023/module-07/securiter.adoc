@@ -19,7 +19,7 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 ****
 *L'Agence nationale de la sécurité des systèmes d'information (ANSSI) est un service français créé par décret en juillet 2009. Ce service à compétence nationale est rattaché au secrétaire général de la défense et de la sécurité nationale (SGDSN), autorité chargée d'assister le Premier ministre dans l'exercice de ses responsabilités en matière de défense et de sécurité nationale. L'ANSSI remplace la direction centrale de la sécurité des systèmes d'information, créée par décret en juillet 2001.*
 
-image:tssr2023/modules-07/Routeur/01.png[]
+image:tssr2023/modules-07/Securiter/01.png[]
 ****
 
 === Guide d'hygiène informatique
@@ -35,5 +35,5 @@ image:tssr2023/modules-07/Routeur/01.png[]
 link:https://www.ssi.gouv.fr/guide/guide-dhygiene-informatique/[]
 ====
 
-image:tssr2023/modules-07/Routeur/01.jpg[]
+image:tssr2023/modules-07/Securiter/01.jpg[]
 ****
