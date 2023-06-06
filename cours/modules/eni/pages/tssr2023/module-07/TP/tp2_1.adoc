@@ -1,2 +1,331 @@
-= TP 1/6 Packet Tracer : 
-:navtitle: titre TP 1/6
+= TP 1/6 Packet Tracer : Configuration VLAN
+:navtitle: Configuration VLAN
+
+
+.Table d'adressage
+****
+[cols="~,~,~,~,~"]
+|===
+| Device |Interface | IP Address    | Subnet Mask    | VLAN
+| PC1    | NIC      | 172.17.10.21  | 255.255.255.0  | 10
+| PC2    | NIC      | 172.17.20.22  | 255.255.255.0  | 20
+| PC3    | NIC      | 172.17.30.23  | 255.255.255.0  | 30
+| PC4    | NIC      | 172.17.10.24  | 255.255.255.0  | 10
+| PC5    | NIC      | 172.17.20.25  | 255.255.255.0  | 20
+| PC6    | NIC      | 172.17.30.26  | 255.255.255.0  | 30
+|===
+****
+
+== Objectifs
+
+* Partie 1: Vérifié la configuration par défaut des VLAN
+* Partie 2: Configurer les VLAN's
+* Partie 3: Assigner les VLAN au ports
+
+
+== Contexte
+
+Les VLAN sont utiles dans l'administration des groupes logiques, permettant aux membres d'un groupe d'être facilement déplacés, modifiés ou ajoutés. Cette activité se concentre sur la création et la dénomination des VLAN, ainsi que sur l'attribution de ports d'accès à des VLAN spécifiques.
+
+
+== Partie 1: Vérifié la configuration par défaut des VLAN
+
+=== Étape 1 : Afficher les VLAN actuelles
+
+Sur S1, indiquer la commande qui affiche tous les VLAN configurés. Par défaut, toutes les interfaces sont affectées au VLAN 1.
+
+.Command iOS
+[source,bash]
+----
+S1>show vlan brief
+----
+
+.Retour iOS
+----
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                Fa0/5, Fa0/6, Fa0/7, Fa0/8
+                                                Fa0/9, Fa0/10, Fa0/11, Fa0/12
+                                                Fa0/13, Fa0/14, Fa0/15, Fa0/16
+                                                Fa0/17, Fa0/18, Fa0/19, Fa0/20
+                                                Fa0/21, Fa0/22, Fa0/23, Fa0/24
+                                                Gig0/1, Gig0/2
+1002 fddi-default                     active    
+1003 token-ring-default               active    
+1004 fddinet-default                  active    
+1005 trnet-default                    active   
+----
+
+=== Étape 2 : Vérifier la connectivité entre les PC sur un réseau identique
+
+Noter que chaque PC peut envoyer un ping à l'autre PC qui partage le même sous-réseau.
+
+* PC1 peut ping PC4
+
+[TIP,caption=Réponse]
+====
+PC1 peut pinger PC4 et inversement.
+====
+
+* PC2 peut ping PC5
+
+[TIP,caption=Réponse]
+====
+PC2 peut pinger PC5 et inversement.
+====
+* PC3 peut ping PC6
+
+[TIP,caption=Réponse]
+====
+PC3 peut pinger PC6 et inversement.
+====
+
+Les pings vers les hôtes sur d'autres réseaux échouent.
+
+Question:
+Quels avantages les VLAN peuvent-ils apporter au réseau ?
+
+[TIP,caption=Réponse]
+====
+a réduire le coût des Switch, réduire le domaine de diffusion, optimisé la sécurité,...
+====
+
+== Partie 2: Configurer les VLAN's
+
+=== Étape 1 : Crée et nommer des VLANs sur S1
+
+a. Créez les VLAN suivants. Les noms sont sensibles à la casse et doivent correspondre exactement à l'exigence :
+
+* VLAN 10: Faculty/Staff
+
+Ouvrir la fenêtre de configuration
+
+.command iOS
+[source,bash]
+----
+S1#(config)# vlan 10
+S1#(config-vlan)# name Faculty/Staff
+----
+
+Open configuration window
+
+b. Create the remaining VLANS.
+
+* VLAN 20: Students
+* VLAN 30: Guest(Default)
+* VLAN 99: Management&Native
+* VLAN 150: VOICE
+
+.command iOS
+[source,bash]
+----
+S1#(config-vlan)# vlan 20
+S1#(config-vlan)# name Students
+S1#(config-vlan)# vlan 30
+S1#(config-vlan)# name Guest(Default)
+S1#(config-vlan)# vlan 99
+S1#(config-vlan)# name Management&Native
+S1#(config-vlan)# vlan 150
+S1#(config-vlan)# name VOICE
+----
+
+=== Étape 2 : Vérifier la configuration des Vlan
+
+.Command iOS
+[source,bash]
+----
+S1>show vlan brief
+----
+
+.Retour iOS
+----
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                Fa0/5, Fa0/6, Fa0/7, Fa0/8
+                                                Fa0/9, Fa0/10, Fa0/11, Fa0/12
+                                                Fa0/13, Fa0/14, Fa0/15, Fa0/16
+                                                Fa0/17, Fa0/18, Fa0/19, Fa0/20
+                                                Fa0/21, Fa0/22, Fa0/23, Fa0/24
+                                                Gig0/1, Gig0/2
+10   Faculty/Staff                    active    
+20   Students                         active    
+30   Guest(Default)                   active    
+99   Management&Native                active    
+150  VOICE                            active    
+1002 fddi-default                     active    
+1003 token-ring-default               active    
+1004 fddinet-default                  active    
+1005 trnet-default                    active
+----
+
+
+Question:
+Quelle commande affichera uniquement le nom, l'état et les ports associés du VLAN sur un commutateur ?
+
+.Command iOS
+[source,bash]
+----
+S1>show vlan brief
+----
+
+=== Étape 3 : Créer les VLANs sur S2 et S3.
+
+Utilisez les mêmes commandes de l'étape 1 pour créer et nommer les mêmes VLAN sur S2 et S3.
+
+=== Étape 4 : Vérifier la configuration VLAN
+
+Fermer la fenêtre de configuration
+
+== Partie 3: Assigner les VLAN au ports
+
+=== Étape 1 : Assigner des VLAN aux port actifs sur S2
+
+a.Configure the interfaces as access ports and assign the VLANs as follows:
+
+* VLAN 10: FastEthernet 0/11
+
+Ouvrir la fenêtre de configuration
+
+.Command iOS
+[source,bash]
+----
+S2(config)# interface f0/11
+S2(config-if)# switchport mode access
+S2(config-if)# switchport access vlan 10
+----
+
+
+b. Attribuez les ports restants au VLAN approprié.
+
+* VLAN 20: FastEthernet 0/18
+* VLAN 30: FastEthernet 0/6
+
+.Command iOS
+[source,bash]
+----
+enable
+conf t
+interface f0/11
+switchport mode access
+switchport access vlan 10
+exit
+interface fa0/18
+switchport mode access
+switchport access vlan 20
+exit
+interface fa0/6
+switchport mode access
+switchport access vlan 30
+exit
+----
+
+=== Étape 2 : Assigner des VLAN aux port actifs sur S3
+
+S3 utilise les mêmes attributions de port d'accès VLAN que S2. Configurez les interfaces en tant que ports d'accès et affectez les VLAN comme suit :
+
+* VLAN 10: FastEthernet 0/11
+* VLAN 20: FastEthernet 0/18
+* VLAN 30: FastEthernet 0/6
+
+.Command iOS
+[source,bash]
+----
+enable
+conf t
+interface f0/11
+switchport mode access
+switchport access vlan 10
+exit
+interface fa0/18
+switchport mode access
+switchport access vlan 20
+exit
+interface fa0/6
+switchport mode access
+switchport access vlan 30
+exit
+exit
+
+enable
+conf t
+interface f0/11
+mls qos trust cos
+switchport voice vlan 150
+----
+
+=== Étape 3 : Assigner le VLAN VOICE a l'interface FastEthernet 0/11 sur S3.
+
+Comme indiqué dans la topologie, l'interface S3 FastEthernet 0/11 se connecte à un téléphone IP Cisco et à un PC4. Le téléphone IP contient un commutateur 10/100 à trois ports intégré. Un port du téléphone est étiqueté Switch et se connecte à F0/4. Un autre port du téléphone est étiqueté PC et se connecte à PC4. Le téléphone IP dispose également d'un port interne qui se connecte aux fonctions du téléphone IP.
+
+L'interface S3 F0/11 doit être configurée pour prendre en charge le trafic utilisateur vers PC4 à l'aide du VLAN 10 et le trafic vocal vers le téléphone IP à l'aide du VLAN 150. L'interface doit également activer QoS et approuver les valeurs de classe de service (CoS) attribuées par le téléphone IP. . Le trafic voix IP nécessite un débit minimum pour prendre en charge une qualité de communication vocale acceptable. Cette commande aide le switchport à fournir ce débit minimum.
+
+.Command iOS
+[source,bash]
+----
+S3(config)# interface f0/11
+S3(config-if)# mls qos trust cos
+S3(config-if)# switchport voice vlan 150
+----
+
+==== Étape 4 : Vérifier la perte de connectivité
+
+Auparavant, les PC qui partageaient le même réseau pouvaient se cingler avec succès.
+
+Étudiez la sortie de la commande suivante sur S2 et répondez aux questions suivantes en fonction de votre connaissance de la communication entre les VLAN. Portez une attention particulière à l'affectation du port Gig0/1.
+
+.Command iOS
+[source,bash]
+----
+S2# show vlan brief
+----
+
+.retour iOS
+----
+VLAN Name Status Ports
+---- -------------------------------- --------- -------------------------------
+1 default active Fa0/1, Fa0/2, Fa0/3, Fa0/4
+Fa0/5, Fa0/7, Fa0/8, Fa0/9
+Fa0/10, Fa0/12, Fa0/13, Fa0/14
+Fa0/15, Fa0/16, Fa0/17, Fa0/19
+Fa0/20, Fa0/21, Fa0/22, Fa0/23
+Fa0/24, Gig0/1, Gig0/2
+10 Faculty/Staff active Fa0/11
+20 Students active Fa0/18
+30 Guest(Default) active Fa0/6
+99 Management&Native active
+150 VOICE active
+----
+
+Tester le ping entre PC1 et PC4
+
+
+.Command iOS
+[source,bash]
+----
+S2# show vlan brief
+----
+
+.retour iOS
+----
+C:\>ping 172.17.10.24
+
+Pinging 172.17.10.24 with 32 bytes of data:
+
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 172.17.10.24:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+----
+Questions:
+Although the access ports are assigned to the appropriate VLANs, were the pings successful? Explain.
+
+What could be done to resolve this issue?
+
+Close configuration window
+
+End of document

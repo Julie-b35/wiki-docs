@@ -11,6 +11,8 @@ EIGRP
 ervice
 ethernet
 Ethertype
+fddi
+fddinet
 Fonctionnaliter
 glpi
 HDLC
@@ -57,6 +59,7 @@ subinterface
 subnetted
 tandardization
 tcsh
+trnet
 ublic
 undebug
 UPDOWN
