@@ -1,5 +1,0 @@
-= TP : 2^ème^ TP
-:navtitle: 2^ème^ TP
-
-* Packet Tracer - VLAN Configuration.pka
-* Packet Tracer - Configure Trunks.pka

@@ -70,4 +70,6 @@
 ****** xref:tssr2023/module-07/TP/tp1_3.adoc[]
 ****** xref:tssr2023/module-07/TP/tp1_4.adoc[]
 ****** xref:tssr2023/module-07/TP/tp1_5.adoc[]
-***** xref:tssr2023/module-07/TP/tp2.adoc[]
+***** TP 01 - Commutateur 
+****** xref:tssr2023/module-07/TP/tp2_1.adoc[]
+****** xref:tssr2023/module-07/TP/tp2_2.adoc[]

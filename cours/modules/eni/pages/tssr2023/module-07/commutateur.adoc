@@ -100,7 +100,8 @@ image:tssr2023/modules-07/Commutateur/VerifierTrunk.png[]
 
 == TP
 
-* xref:tssr2023/module-07/TP/tp2.adoc[TP - 2^ème^ série de TP]
+* xref:tssr2023/module-07/TP/tp2_1.adoc[TP 1/2 PacketTracer :]
+* xref:tssr2023/module-07/TP/tp2_2.adoc[TP 2/2 PacketTracer :]
 
 == Sécurité des ports
 
