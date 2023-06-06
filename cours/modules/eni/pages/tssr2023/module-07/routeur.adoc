@@ -29,7 +29,7 @@ La configuration de base d’un routeur est comme celle d’un switch
 
 == Routage statique
 
-[image]
+image:tssr2023/modules-07/Routeur/01.png[]
 
 === Principe
 
