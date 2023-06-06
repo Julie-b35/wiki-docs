@@ -64,6 +64,7 @@ ublic
 undebug
 UPDOWN
 vfat
+VLANS
 xzvf
 YQBF
 ystem

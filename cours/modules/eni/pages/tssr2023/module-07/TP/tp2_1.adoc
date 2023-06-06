@@ -95,23 +95,20 @@ a réduire le coût des Switch, réduire le domaine de diffusion, optimisé la s
 
 === Étape 1 : Crée et nommer des VLANs sur S1
 
-a. Créez les VLAN suivants. Les noms sont sensibles à la casse et doivent correspondre exactement à l'exigence :
-
-* VLAN 10: Faculty/Staff
-
-Ouvrir la fenêtre de configuration
-
+[frame=none,grid=none,cols="~,~"]
+|===
+.4+|a.  | Créez les VLAN suivants. Les noms sont sensibles à la casse et doivent correspondre exactement à l'exigence :
+     |* VLAN 10: Faculty/Staff
+     | Ouvrir la fenêtre de configuration
+a|
 .command iOS
 [source,bash]
 ----
 S1#(config)# vlan 10
 S1#(config-vlan)# name Faculty/Staff
 ----
-
-Open configuration window
-
-b. Create the remaining VLANS.
-
+.2+|b.    | Create the remaining VLANS.
+a|
 * VLAN 20: Students
 * VLAN 30: Guest(Default)
 * VLAN 99: Management&Native
@@ -129,6 +126,7 @@ S1#(config-vlan)# name Management&Native
 S1#(config-vlan)# vlan 150
 S1#(config-vlan)# name VOICE
 ----
+|===
 
 === Étape 2 : Vérifier la configuration des Vlan
 
