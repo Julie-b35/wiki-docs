@@ -83,3 +83,5 @@
 ****** xref:tssr2023/module-07/TP/tp3_2.adoc[]
 ****** xref:tssr2023/module-07/TP/tp3_3.adoc[]
 ****** xref:tssr2023/module-07/TP/tp3_4.adoc[]
+****** xref:tssr2023/module-07/TP/tp3_5.adoc[]
+****** xref:tssr2023/module-07/TP/tp3_6.adoc[]

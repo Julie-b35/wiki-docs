@@ -1,2 +1,2 @@
-= TP 2/ Packet Tracer : 
-:navtitle: titre TP 2/
+= TP 2/6 Packet Tracer : 
+:navtitle: titre TP 2/6

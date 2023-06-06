@@ -118,12 +118,12 @@ image::tssr2023/modules-07/Routeur/06.png[align="center"]
 image::tssr2023/modules-07/Routeur/07.png[align="center"]
 ****
 
-== TP
+== TP - Routages
 
-* xref:tssr2023/module-07/TP/tp3_1.adoc[TP 1/ PacketTracer :]
-* xref:tssr2023/module-07/TP/tp3_2.adoc[TP 2/ PacketTracer :]
-* xref:tssr2023/module-07/TP/tp3_3.adoc[TP 3/ PacketTracer :]
-* xref:tssr2023/module-07/TP/tp3_4.adoc[TP 4/ PacketTracer :]
+* xref:tssr2023/module-07/TP/tp3_1.adoc[TP 1/6 PacketTracer :]
+* xref:tssr2023/module-07/TP/tp3_2.adoc[TP 2/6 PacketTracer :]
+* xref:tssr2023/module-07/TP/tp3_3.adoc[TP 3/6 PacketTracer :]
+* xref:tssr2023/module-07/TP/tp3_4.adoc[TP 4/6 PacketTracer :]
 
 == Fonctionnement du routage inter-VLAN
 
@@ -143,3 +143,64 @@ Pour permettre aux périphériques de s'envoyer des pings :
 
 image::tssr2023/modules-07/Routeur/08.png[align="center"]
 ****
+
+.Configuration de la sous-interface R1
+****
+* La méthode « *Router-on-a-Stick* » impose de créer des sous-interfaces pour chaque VLAN afin qu’ils puissent communiquer entre eux.
+* interface interface_id subinterface_id
+* Chaque sous-interface est ensuite configurée avec les deux commandes suivantes :
+* encapsulation dot1q vlan_id [native] –
+* Dot1q indique le marquage standard 802,1Q de la trame
+* L'option natif indique que le VLAN doit être natif (non marqué)
+* ip address ip-address subnet-mask – pour lui attribuer un @IP
+****
+
+.Vérification de routage inter-VLAN « Router-on-a-Stick »
+****
+* show ip route
+* show ip interface brief
+* show interfaces
+* show interfaces trunk
+****
+
+== TP - Routage Inter-VLAN
+
+* xref:tssr2023/module-07/TP/tp3_5.adoc[TP 5/6 PacketTracer :]
+
+== RIP
+
+=== Carte d'identité de RIP
+
+* Standard ou Propriétaire ? Standard RIPv1/RIPv2/RIPng
+* IGP / EGP ? IGP
+* DV ou LS ? DV : vecteur de distance (lorsqu’on observe le trafic, bien identifier sur quel routeur on est)
+* Distance administrative : AD ? 120
+* Métrique ? Σ hops
+* Lettre qui identifie ce protocole dans sh ip route ? R
+* Ethertype : IPv4 0800 IPv6 86DD
+* Number protocole : UDP 17
+* Type port : UDP
+* Number port : IPv4 520 IPv6 521
+
+=== Fonctionnement / algorithme
+
+.Les annonces
+****
+* « Updates »
+* Envoyées toutes les 30 secondes.
+* Version 1 = envoyées en broadcast.
+* adresse IP destination = 255.255.255.255
+* Version 2 = envoyées en multicast.
+* adresse IP destination = 224.0.0.9
+* Envoyées sur toutes les interfaces où RIP est activé.
+****
+
+=== Routage / table
+
+image::tssr2023/modules-07/Routeur/09.png[align="center"]
+image::tssr2023/modules-07/Routeur/10.png[align="center"]
+
+== TP - RIP
+
+* xref:tssr2023/module-07/TP/tp3_6.adoc[TP 6/6 PacketTracer :]
+

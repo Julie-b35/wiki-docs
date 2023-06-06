@@ -98,7 +98,7 @@ image:tssr2023/modules-07/Commutateur/CmdConfigTrunk.png[]
 
 image:tssr2023/modules-07/Commutateur/VerifierTrunk.png[]
 
-== TP
+== TP - Configuration VLAN
 
 * xref:tssr2023/module-07/TP/tp2_1.adoc[TP 1/6 PacketTracer :]
 * xref:tssr2023/module-07/TP/tp2_2.adoc[TP 2/6 PacketTracer :]
@@ -132,7 +132,7 @@ image:tssr2023/modules-07/Commutateur/fonctionSSH.png[]
 * Étape 4 : activez le protocole SSH sur les lignes vty à l'aide de la commande de mode de configuration de ligne transport input ssh.
 * Étape 5 : activez SSH version 2 - ip ssh version 2.
 
-== TP2
+== TP - Accès SSH
 
 * xref:tssr2023/module-07/TP/tp2_3.adoc[TP 3/6 PacketTracer :]
 * xref:tssr2023/module-07/TP/tp2_4.adoc[TP 4/6 PacketTracer :]

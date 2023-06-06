@@ -31,7 +31,8 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 ** xref:tssr2023/module-07/TP/tp2_5.adoc[TP 5/6 PacketTracer :]
 ** xref:tssr2023/module-07/TP/tp2_6.adoc[TP 6/6 PacketTracer :]
 * TP 03 - Routeur
-** xref:tssr2023/module-07/TP/tp3_1.adoc[TP 1/ PacketTracer :]
-** xref:tssr2023/module-07/TP/tp3_2.adoc[TP 2/ PacketTracer :]
-** xref:tssr2023/module-07/TP/tp3_3.adoc[TP 3/ PacketTracer :]
-** xref:tssr2023/module-07/TP/tp3_4.adoc[TP 4/ PacketTracer :]
+** xref:tssr2023/module-07/TP/tp3_1.adoc[TP 1/6 PacketTracer :]
+** xref:tssr2023/module-07/TP/tp3_2.adoc[TP 2/6 PacketTracer :]
+** xref:tssr2023/module-07/TP/tp3_3.adoc[TP 3/6 PacketTracer :]
+** xref:tssr2023/module-07/TP/tp3_4.adoc[TP 4/6 PacketTracer :]
+** xref:tssr2023/module-07/TP/tp3_5.adoc[TP 5/6 PacketTracer :]

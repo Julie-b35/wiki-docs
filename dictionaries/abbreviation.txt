@@ -10,6 +10,7 @@ echnology
 EIGRP
 ervice
 ethernet
+Ethertype
 Fonctionnaliter
 glpi
 HDLC
@@ -49,6 +50,7 @@ Securiser
 servername
 sigdef
 strategie
+subinterface
 subnetted
 tandardization
 tcsh
