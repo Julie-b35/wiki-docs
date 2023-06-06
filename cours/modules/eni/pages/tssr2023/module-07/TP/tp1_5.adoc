@@ -151,6 +151,7 @@ a|
 [TIP,caption=Réponse]
 ====
 Ce comportement est *Normal*, cas le routeur n'a pas été paramétré.
+
 De plus aucune sauvegarde vers `*startup-config*` n'a été effectué.
 ====
 |===
