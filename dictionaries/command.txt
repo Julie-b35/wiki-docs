@@ -86,6 +86,7 @@ mtrr
 multihit
 ncpa
 nmtui
+nonegotiate
 NUMA
 ospke
 PBRSB
@@ -100,6 +101,7 @@ prctl
 PRENOM
 procstatus
 punct
+pvst
 pwsh
 rdpid
 rdrand
@@ -107,6 +109,7 @@ rdseed
 rdtscp
 remmina
 Retbleed
+Roty
 rsyslogd
 rxload
 sched
@@ -124,6 +127,7 @@ stibp
 swapgs
 swapoff
 swapon
+switchport
 syscall
 traceroute
 txload

@@ -66,7 +66,7 @@ hostname Router
 !
 ip cef
 no ipv6 cef
-
+---------------------------------------------------------------------------------
 Router#show  ip interface brief 
 Interface              IP-Address      OK? Method Status                Protocol 
 GigabitEthernet0/0     unassigned      YES unset  administratively down down 
@@ -78,7 +78,7 @@ FastEthernet0/1/1      unassigned      YES unset  up                    down
 FastEthernet0/1/2      unassigned      YES unset  up                    down 
 FastEthernet0/1/3      unassigned      YES unset  up                    down 
 Vlan1                  unassigned      YES unset  administratively down down
-
+---------------------------------------------------------------------------------
 Router#show line 
    Tty Line Typ     Tx/Rx    A Roty AccO AccI   Uses   Noise  Overruns   Int
 *    0    0 CTY              -    -    -    -      0       0     0/0       -
@@ -121,18 +121,160 @@ Si vous avez du mal à vous souvenir des commandes, référez-vous au contenu de
 
 [frame=none,grid=none,cols="~,~"]
 |===
-|a.    | Configurez R1 comme nom d'hôte.
-|b.    | Configurez letmein comme mot de passe console, puis activez la connexion.
-|c.     |Configurez itsasecret comme mot de passe du mode d'exécution privilégié chiffré.
-|d.     |Chiffrez tous les mots de passe en clair.
-|e.    | Configurez une bannière MOTD (message of the day, ou message du jour) pour avertir les utilisateurs en cas d'accès non autorisé. Un exemple de bannière peut afficher le message Unauthorized access is strictly prohibited (Tout accès non autorisé est strictement interdit).
+.2+|a.    | Configurez R1 comme nom d'hôte.
+a|
+[source,bash]
+----
+Router>
+Router>enable 
+Router#configure terminal 
+Enter configuration commands, one per line.  End with CNTL/Z.
+Router(config)#hostname R1
+R1(config)#
+R1#
+%SYS-5-CONFIG_I: Configured from console by console
+R1#
+----
+.2+|b.    | Configurez letmein comme mot de passe console, puis activez la connexion.
+a|
+[source,bash]
+----
+R1#
+R1#configure terminal 
+R1(config)#line console 0
+R1(config-line)#
+R1(config-line)# password letmein
+R1(config-line)# login
+R1(config-line)# exit
+R1(config)#
+----
+.2+|c.     |Configurez itsasecret comme mot de passe du mode d'exécution privilégié chiffré.
+a|
+[source,bash]
+----
+R1(config)#
+R1(config)#enable secret itsasecret
+----
+.2+|d.     |Chiffrez tous les mots de passe en clair.
+a|
+[source,bash]
+----
+R1(config)#
+R1(config)#service password-encryption 
+R1(config)#end
+#Vérification
+R1#show running-config
+[...]
+line con 0
+ password 7 082D495A041C0C19
+ login
+!
+[...]
+
+----
+.2+|e.    | Configurez une bannière MOTD (message of the day, ou message du jour) pour avertir les utilisateurs en cas d'accès non autorisé. Un exemple de bannière peut afficher le message Unauthorized access is strictly prohibited (Tout accès non autorisé est strictement interdit).
+a|
+[source,bash]
+----
+R1#
+R1#configure terminal 
+R1(config)# banner motd "Unauthorized access is strictly prohibited (Tout acces non autorise est strictement interdit)"
+----
 |===
 
 === Étape 2 :Vérifiez les paramètres initiaux du routeur R1.
 
 [frame=none,grid=none,cols="~,~"]
 |===
-|a.     |Vérifiez les paramètres initiaux en affichant la configuration de R1. Quelle commande utilisez-vous ?
+.2+|a.     |Vérifiez les paramètres initiaux en affichant la configuration de R1. Quelle commande utilisez-vous ?
+a|
+[source,bash]
+----
+#Sauvegarde des paramètre
+R1#copy running-config startup-config
+# Vérification
+R1#show startup-config 
+Using 1279 bytes
+!
+version 15.1
+no service timestamps log datetime msec
+no service timestamps debug datetime msec
+service password-encryption
+[...]
+hostname R1
+[...]
+enable secret 5 $1$mERr$ILwq/b7kc.7X/ejA4Aosn0
+[...]
+ip cef
+no ipv6 cef
+[...]
+license udi pid CISCO1941/K9 sn FTX152459PZ
+[...]
+spanning-tree mode pvst
+[...]
+interface GigabitEthernet0/0
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface GigabitEthernet0/1
+ no ip address
+ duplex auto
+ speed auto
+ shutdown
+!
+interface Serial0/0/0
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface Serial0/0/1
+ no ip address
+ clock rate 2000000
+ shutdown
+!
+interface FastEthernet0/1/0
+ switchport mode access
+ switchport nonegotiate
+!
+interface FastEthernet0/1/1
+ switchport mode access
+ switchport nonegotiate
+!
+interface FastEthernet0/1/2
+ switchport mode access
+ switchport nonegotiate
+!
+interface FastEthernet0/1/3
+ switchport mode access
+ switchport nonegotiate
+!
+interface Vlan1
+ no ip address
+ shutdown
+!
+ip classless
+!
+ip flow-export version 9
+[...]
+no cdp run
+!
+banner motd ^CUnauthorized access is strictly prohibited (Tout acces non autorise est strictement interdit)^C
+[...]
+line con 0
+ password 7 082D495A041C0C19
+ login
+!
+line aux 0
+!
+line vty 0 4
+ login
+line vty 5 15
+ login
+[...]
+end
+----
 
 .2+|b.     |Quittez la session actuelle en mode console jusqu'à ce que le message suivant apparaisse :
 a|
@@ -141,15 +283,21 @@ a|
 R1 con0 is now available
 Press RETURN to get started.
 ----
-.4+|c.     |Appuyez sur *Entrée* pour obtenir le message suivant :
+.5+|c.     |Appuyez sur *Entrée* pour obtenir le message suivant :
 a|
 ----
 Unauthorized access is strictly prohibited. (Accès sans autorisation strictement interdit.)
 User Access Verification
 Password:
 ----
-|Pourquoi chaque routeur doit-il avoir une bannière de message du jour (MOTD) ?
-|Si vous n'êtes pas invité à entrer un mot de passe, quelle commande de ligne de console avez-vous oublié de configurer ?
+|Pourquoi chaque routeur doit-il avoir une bannière de message du jour (MOTD) ? 
+a|
+.Réponse
+[NOTE]
+====
+Permet d’avertir les utilisateurs en cas de violation d'accès.
+====
+|Si vous n'êtes pas invité à entrer un mot de passe, quelle commande de ligne de console avez-vous oublié de configurer ? 
 .2+|d.     |Entrez les mots de passe requis pour revenir au mode d'exécution privilégié.
 |Si vous configurez d'autres mots de passe sur le routeur, s'affichent-ils dans le fichier de configuration en texte clair ou chiffrés ? Expliquez votre réponse.*
 |===
