@@ -2,7 +2,7 @@
 :navtitle: Le commutateur
 
 * Module précédent -> xref:tssr2023/module-07/reseaux.adoc[Module 02 - Réseaux]
-* Module suivant -> xref:tssr2023/module-07/editor-texte.adoc[Module 10 - Éditer du texte]
+* Module suivant -> xref:tssr2023/module-07/routeur.adoc[Module 04 - Le Routeur]
 
 Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur IP]
 
