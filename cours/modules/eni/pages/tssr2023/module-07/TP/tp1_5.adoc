@@ -292,8 +292,7 @@ Password:
 ----
 |Pourquoi chaque routeur doit-il avoir une bannière de message du jour (MOTD) ? 
 a|
-.Réponse
-[NOTE]
+[NOTE,caption=Réponse]
 ====
 Permet d’avertir les utilisateurs en cas de violation d'accès.
 ====
