@@ -28,7 +28,7 @@ Utilisez les informations affichées en réponse aux commandes show suivantes po
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.14+| a. |Saisissez show arp à l'invite.
+.15+| a. |Saisissez show arp à l'invite.
 a|
 [source,bash]
 ----
@@ -58,7 +58,12 @@ File  Length   Name/status
 [33847587 bytes used, 221896413 available, 255744000 total]
 249856K bytes of processor board System flash (Read/Write)
 ----
-|Notez l'image IOS indiquée : (*c1900-universalk9-mz.SPA.151-4.M4.bin*)
+|Notez l'image IOS indiquée :
+a|
+[TIP,caption=Réponse]
+====
+Le nom de l'image installé est : *c1900-universalk9-mz.SPA.151-4.M4.bin*
+====
 |Saisissez show ip route à l'invite.
 a|
 [source,bash]
