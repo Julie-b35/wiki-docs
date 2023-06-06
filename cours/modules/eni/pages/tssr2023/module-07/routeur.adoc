@@ -65,7 +65,7 @@ La syntaxe de commande de base pour une route statique par défaut d'IPv4 est la
 Router(config)# ip route 0.0.0.0 0.0.0.0 {ip-address | exit-intf}
 ----
 
-[NOTE,caption=Vérifier une route statique par défaut]
-====
+.Vérifier une route statique par défaut
+****
 image:tssr2023/modules-07/Routeur/02.png[]
-====
+****
