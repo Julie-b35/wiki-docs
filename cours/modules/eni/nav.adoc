@@ -78,3 +78,8 @@
 ****** xref:tssr2023/module-07/TP/tp2_4.adoc[]
 ****** xref:tssr2023/module-07/TP/tp2_5.adoc[]
 ****** xref:tssr2023/module-07/TP/tp2_6.adoc[]
+***** TP 03 - Routeur 
+****** xref:tssr2023/module-07/TP/tp3_1.adoc[]
+****** xref:tssr2023/module-07/TP/tp3_2.adoc[]
+****** xref:tssr2023/module-07/TP/tp3_3.adoc[]
+****** xref:tssr2023/module-07/TP/tp3_4.adoc[]

@@ -67,7 +67,7 @@ Router(config)# ip route 0.0.0.0 0.0.0.0 {ip-address | exit-intf}
 
 .Vérifier une route statique par défaut
 ****
-image:tssr2023/modules-07/Routeur/02.png[]
+image::tssr2023/modules-07/Routeur/02.png[align="center"]
 ****
 
 image:tssr2023/modules-07/Routeur/03.png[]
@@ -86,6 +86,41 @@ Dans la figure, les chiffres identifient les informations suivantes :
 * 6 Horodatage de route : indique la durée écoulée depuis que la route a été découverte.
 * 7 Interface de sortie : elle identifie l'interface de sortie à utiliser pour que les paquets sortants atteignent leur destination finale.
 
-
 image::tssr2023/modules-07/Routeur/04.png[align="center"]
 ****
+
+.Structures d’une table de routage IPv4
+****
+* route enfant est le sous-réseau d'une adresse par classe (réseau de classe A, B ou C).
+* Les réseaux directement connectés seront toujours (Routes enfants) car l'adresse locale de l'interface est /32.
+* La route enfant inclura la source de route et toutes les informations de transfert telles que l'adresse de saut suivant.
+* L'adresse réseau par classe de ce sous-réseau sera affichée au-dessus de l'entrée de route, la route parentale.
+
+image::tssr2023/modules-07/Routeur/05.png[align="center"]
+****
+
+== Métrique et distance administrative
+
+=== Distance par type de route
+
+image::tssr2023/modules-07/Routeur/06.png[align="center"]
+
+=== Vérifier les réseaux directement connectés
+
+.Commandes de vérification de l’interface
+****
+* `*show ip route*` et `*show ipv6 route*` - Affiche le contenu de la table de routage IPv4/IPV6
+* code '*C*' ( route directement Connecté) et '*L*' (interface Local dans le réseau directement connecté)
+****
+
+.Vérifier les routes
+****
+image::tssr2023/modules-07/Routeur/07.png[align="center"]
+****
+
+== TP
+
+* xref:tssr2023/module-07/TP/tp3_1.adoc[TP 1/ PacketTracer :]
+* xref:tssr2023/module-07/TP/tp3_2.adoc[TP 2/ PacketTracer :]
+* xref:tssr2023/module-07/TP/tp3_3.adoc[TP 3/ PacketTracer :]
+* xref:tssr2023/module-07/TP/tp3_4.adoc[TP 4/ PacketTracer :]
