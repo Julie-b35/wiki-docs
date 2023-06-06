@@ -173,7 +173,7 @@ Cela permet de prendre la main dessus et de le contrôler à distance.
 ====
 [frame=none,grid=none,cols="~,~"]
 |===
-.3+|a.     |En mode de configuration globale, saisissez les commandes suivantes pour configurer S1 avec une adresse IP dans le réseau local virtuel VLAN 1.
+.4+|a.     |En mode de configuration globale, saisissez les commandes suivantes pour configurer S1 avec une adresse IP dans le réseau local virtuel VLAN 1.
 a|
 [source,bash]
 ----
@@ -187,7 +187,12 @@ S1(config-if)#
 S1(config-if)# exit
 S1#
 ----
-|À quoi sert la commande no shutdown ? (*La commande `shutdown` permet de redémarré l'interface*)
+|À quoi sert la commande no shutdown ?
+a|
+[TIP,caption=Réponse]
+====
+La commande `*shutdown*` permet de redémarré l'interface
+====
 .2+|b.     |Enregistrez la configuration.
 a|
 [source,bash]
