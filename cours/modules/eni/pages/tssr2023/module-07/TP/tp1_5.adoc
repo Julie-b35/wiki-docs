@@ -363,6 +363,13 @@ a|
 Permet d’avertir les utilisateurs en cas de violation d'accès.
 ====
 |Si vous n'êtes pas invité à entrer un mot de passe, quelle commande de ligne de console avez-vous oublié de configurer ? 
+a|
+[TIP,caption=Réponse]
+====
+C'est le fait d'avoir oublié 2 commande :
+`*password letmein*` et `*login*`
+
+====
 .2+|d.     |Entrez les mots de passe requis pour revenir au mode d'exécution privilégié.
 |Si vous configurez d'autres mots de passe sur le routeur, s'affichent-ils dans le fichier de configuration en texte clair ou chiffrés ? Expliquez votre réponse.*
 |===
