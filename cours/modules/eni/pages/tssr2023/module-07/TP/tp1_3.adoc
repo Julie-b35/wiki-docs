@@ -28,7 +28,7 @@ Utilisez les informations affichées en réponse aux commandes show suivantes po
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.15+| a. |Saisissez show arp à l'invite.
+.16+| a. |Saisissez show arp à l'invite.
 a|
 [source,bash]
 ----
@@ -86,6 +86,11 @@ L       209.165.201.1/32 is directly connected, GigabitEthernet0/0
 
 ----
 |Combien de routes figurent dans la table ? 3? (doute)
+a|
+[TIP,caption=Réponse]
+====
+Je dirais '*3*' route, mais j'ai un doute.
+====
 |Saisissez show interfaces à l'invite.
 a|
 [source,bash]
