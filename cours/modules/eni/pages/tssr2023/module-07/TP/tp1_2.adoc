@@ -116,9 +116,8 @@ Les commandes `telnet` et `terminal`
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.4+|a.    |À l'invite, saisissez un point d'interrogation (?).
+.5+|a.    |À l'invite, saisissez un point d'interrogation (?).
           |S1> ?
-          |Quelle information affichée décrit la commande enable ?
 a|
 .Description de la commande `enable` *Turn on privileged commands*
 [source,bash]
@@ -138,19 +137,44 @@ Exec commands:
   terminal    Set terminal line parameters
   traceroute  Trace route to destination
 ----
-.5+|b.    |Saisissez en, puis appuyez sur la touche Tab.
-          |S1> en<Tab>
-          |Que voyez-vous apparaître après avoir appuyé sur la touche Tab ? (*Le reste de la commande est auto-complété*).
-          |La touche Tabulation peut être utilisée pour compléter une commande partielle. Lorsque vous ne saisissez qu'une partie d'une commande, la touche Tab peut être utilisée pour compléter cette commande. Si les caractères tapés sont suffisants pour identifier la commande, comme dans le cas de la commande enable, le reste s'affiche.
-          |Que se passerait-il si vous saisissiez <Tab> à l'invite ? (*Pas grand chose*)
-.2+|c.       |Entrez la commande enable, puis appuyez sur Entrée. Quel changement observez-vous sur l'invite ?
+          |Quelle information affichée décrit la commande enable ?
 a|
-.passage du mode utilisateur au mode privilégié.
+[TIP,caption=Réponse]
+====
+L'information qui décris la commande `enable` est : *Turn on privileged commands*
+====
+.8+|b.    |Saisissez en, puis appuyez sur la touche Tab.
+          |S1> en<Tab>
+a|
+[source,bash]
+----
+S1>enable 
+----
+          |Que voyez-vous apparaître après avoir appuyé sur la touche Tab ? 
+a|
+[TIP,caption=Réponse]
+====
+La commande `enable` qui est auto-complété
+====  
+          |La touche Tabulation peut être utilisée pour compléter une commande partielle. Lorsque vous ne saisissez qu'une partie d'une commande, la touche Tab peut être utilisée pour compléter cette commande. Si les caractères tapés sont suffisants pour identifier la commande, comme dans le cas de la commande enable, le reste s'affiche.
+          |Que se passerait-il si vous saisissiez <Tab> à l'invite ?
+a|
+[TIP,caption=Réponse]
+====
+Réitère la tentative plus bas.
+====           
+1.3+|c.       |Entrez la commande enable, puis appuyez sur Entrée. Quel changement observez-vous sur l'invite ?
+a|
 [source,bash]
 ----
 S1>enable 
 S1#
 ----
+a|
+[TIP,caption=Réponse]
+====
+La ligne de commande passe du mode utilisateur au mode privilégié.
+====  
 .5+|d.    |À l'invite, saisissez le point d'interrogation (?).
           |S1# ?
 a|
