@@ -6,3 +6,40 @@
 ----
 route -p add 192.168.35.0 MASK 255.255.255.0 192.168.0.2
 ----
+
+== Test Admonition
+
+=== NOTE
+
+[NOTE]
+====
+Ceci est une note
+====
+
+=== TIP
+
+[TIP]
+====
+Ceci est un tip
+====
+
+=== IMPORTANT
+
+[IMPORTANT]
+====
+Ceci est un message important
+====
+
+=== CAUTION
+
+[CAUTION]
+====
+Ceci est un message caution
+====
+
+=== WARNING
+
+[WARNING]
+====
+Ceci est un message warning
+====
