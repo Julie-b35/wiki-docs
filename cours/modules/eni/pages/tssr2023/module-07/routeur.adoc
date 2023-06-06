@@ -69,3 +69,22 @@ Router(config)# ip route 0.0.0.0 0.0.0.0 {ip-address | exit-intf}
 ****
 image:tssr2023/modules-07/Routeur/02.png[]
 ****
+
+image:tssr2023/modules-07/Routeur/03.png[]
+
+=== Table de routage
+
+.Entrées de la table de routage
+****
+Dans la figure, les chiffres identifient les informations suivantes :
+
+* 1 Source de l'itinéraire (Route source) : indique comment l'itinéraire a été appris.
+* 2 Réseau de destination (préfixe et longueur du préfixe) : identifie l'adresse du réseau distant.
+* 3 Distance administrative : identifie la fiabilité de la source de la route. Des valeurs inférieures indiquent la route source préférée.
+* 4 Métrique : indique de la valeur attribuée pour atteindre le réseau distant. Les valeurs les plus faibles indiquent les routes préférées.
+* 5 Saut suivant : identifie l'adresse IP du prochain routeur vers lequel le paquet sera transféré.
+* 6 Horodatage de route : indique la durée écoulée depuis que la route a été découverte.
+* 7 Interface de sortie : elle identifie l'interface de sortie à utiliser pour que les paquets sortants atteignent leur destination finale.
+
+image:tssr2023/modules-07/Routeur/04.png[]
+****
