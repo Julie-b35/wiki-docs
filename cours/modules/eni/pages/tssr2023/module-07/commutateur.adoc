@@ -100,8 +100,8 @@ image:tssr2023/modules-07/Commutateur/VerifierTrunk.png[]
 
 == TP
 
-* xref:tssr2023/module-07/TP/tp2_1.adoc[TP 1/3 PacketTracer :]
-* xref:tssr2023/module-07/TP/tp2_2.adoc[TP 2/3 PacketTracer :]
+* xref:tssr2023/module-07/TP/tp2_1.adoc[TP 1/6 PacketTracer :]
+* xref:tssr2023/module-07/TP/tp2_2.adoc[TP 2/6 PacketTracer :]
 
 == Sécurité des ports
 
@@ -134,4 +134,7 @@ image:tssr2023/modules-07/Commutateur/fonctionSSH.png[]
 
 == TP2
 
-* xref:tssr2023/module-07/TP/tp2_3.adoc[TP 2/3 PacketTracer :]
+* xref:tssr2023/module-07/TP/tp2_3.adoc[TP 3/6 PacketTracer :]
+* xref:tssr2023/module-07/TP/tp2_4.adoc[TP 4/6 PacketTracer :]
+* xref:tssr2023/module-07/TP/tp2_5.adoc[TP 5/6 PacketTracer :]
+* xref:tssr2023/module-07/TP/tp2_6.adoc[TP 6/6 PacketTracer :]

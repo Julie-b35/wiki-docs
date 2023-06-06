@@ -73,3 +73,7 @@
 ***** TP 02 - Commutateur 
 ****** xref:tssr2023/module-07/TP/tp2_1.adoc[]
 ****** xref:tssr2023/module-07/TP/tp2_2.adoc[]
+****** xref:tssr2023/module-07/TP/tp2_3.adoc[]
+****** xref:tssr2023/module-07/TP/tp2_4.adoc[]
+****** xref:tssr2023/module-07/TP/tp2_5.adoc[]
+****** xref:tssr2023/module-07/TP/tp2_6.adoc[]
