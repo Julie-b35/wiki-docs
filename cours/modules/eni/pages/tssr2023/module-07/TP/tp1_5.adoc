@@ -120,32 +120,38 @@ a|
 ====
 Il possèdes '*4*' interfaces _Fast Ethernet_.
 ====
-|Combien d'interfaces Gigabit Ethernet le routeur possède-t-il ? (*2*)
+|Combien d'interfaces Gigabit Ethernet le routeur possède-t-il ? 
 a|
 [TIP,caption=Réponse]
 ====
 Il possèdes '*2*' interfaces _Gigabit Ethernet_.
 ====
-|Combien d'interfaces série le routeur possède-t-il ?(*2*)
+|Combien d'interfaces série le routeur possède-t-il ?
 a|
 [TIP,caption=Réponse]
 ====
 Il possèdes '*2*' interfaces _série_.
 ====
-|Quelle est la plage de valeurs affichée pour les lignes vty ? (?)
+|Quelle est la plage de valeurs affichée pour les lignes vty ?
 a|
 [CAUTION,caption=Réponse Douteuse]
 ====
 Je dirais que la plage vty est *0-15*.
 ====
-.3+|d.    | Examinez le contenu actuel de la mémoire vive non volatile (NVRAM).
+.4+|d.    | Examinez le contenu actuel de la mémoire vive non volatile (NVRAM).
 a|
 [source,bash]
 ----
 Router# show startup-config
 startup-config is not present
 ----
-|Pourquoi le routeur répond-il avec le message startup-config is not present ? (*Normal, le routeur n'est pas paramétré.*)
+|Pourquoi le routeur répond-il avec le message startup-config is not present ?
+a|
+[TIP,caption=Réponse]
+====
+Ce comportement est *Normal*, cas le routeur n'a pas été paramétré.
+De plus aucune sauvegarde vers `*startup-config*` n'a été effectué.
+====
 |===
 
 == Partie 2 : configurer et vérifier la configuration initiale du routeur
