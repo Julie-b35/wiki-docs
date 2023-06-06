@@ -348,7 +348,7 @@ a|
 R1 con0 is now available
 Press RETURN to get started.
 ----
-.5+|c.     |Appuyez sur *Entrée* pour obtenir le message suivant :
+.6+|c.     |Appuyez sur *Entrée* pour obtenir le message suivant :
 a|
 .Retour iOS
 ----
@@ -367,6 +367,7 @@ a|
 [TIP,caption=Réponse]
 ====
 C'est le fait d'avoir oublié 2 commande :
+
 `*password letmein*` et `*login*`
 
 ====
