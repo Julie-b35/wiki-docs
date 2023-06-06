@@ -61,7 +61,7 @@ Switch(config-if)# switchport access vlan vlan-id
 Switch(config-if)# end
 ----
 
-==== Exemple Création de VLAN de données + Vois
+==== Exemple Création de VLAN de données + Voix
 
 .Command iOS
 [source,bash]
