@@ -369,10 +369,14 @@ a|
 C'est le fait d'avoir oublié 2 commande :
 
 `*password letmein*` et `*login*`
-
 ====
-.2+|d.     |Entrez les mots de passe requis pour revenir au mode d'exécution privilégié.
-|Si vous configurez d'autres mots de passe sur le routeur, s'affichent-ils dans le fichier de configuration en texte clair ou chiffrés ? Expliquez votre réponse.*
+.3+|d.     |Entrez les mots de passe requis pour revenir au mode d'exécution privilégié.
+|Si vous configurez d'autres mots de passe sur le routeur, s'affichent-ils dans le fichier de configuration en texte clair ou chiffrés ? Expliquez votre réponse.
+a|
+[TIP,caption=Réponse]
+====
+Ile serons chiffré
+====
 |===
 
 == Partie 3 : enregistrer le fichier de configuration en cours
@@ -381,12 +385,31 @@ C'est le fait d'avoir oublié 2 commande :
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.4+|a.     |Vous avez configuré les paramètres initiaux du routeur R1. Sauvegardez le fichier de configuration en cours dans la mémoire vive non volatile pour vous assurer que les modifications apportées seront conservées en cas de redémarrage du système ou de coupure de courant.
+.7+|a.     |Vous avez configuré les paramètres initiaux du routeur R1. Sauvegardez le fichier de configuration en cours dans la mémoire vive non volatile pour vous assurer que les modifications apportées seront conservées en cas de redémarrage du système ou de coupure de courant.
 |Quelle commande avez-vous exécutée pour enregistrer la configuration dans la mémoire NVRAM ?
+a|
+[TIP,caption=Réponse]
+====
+J'ai lancé la commande `*copy running-config startup-config*`
+====
 |Quelle est la version la plus courte et non ambiguë de cette commande ?
+a|
+[IMPORTANT,caption=Erreur]
+====
+??
+====
 |Quelle commande affiche le contenu de la mémoire NVRAM ?
+a|
+[IMPORTANT,caption=Erreur]
+====
+??
+====
 |b.     |Vérifiez que tous les paramètres configurés ont été enregistrés. Si ce n'est pas le cas, analysez le résultat et déterminez quelles commandes n'ont pas été exécutées ou ont été saisies incorrectement. Vous pouvez également cliquer sur Check Results (vérifier les résultats) dans la fenêtre d'instructions.
 |===
+[TIP,caption=Réponse]
+====
+Je suis bien à *100%*
+====
 
 === Étape 2 (bonus facultatif) : Enregistrez le fichier de configuration initiale dans la mémoire Flash.
 
@@ -402,6 +425,7 @@ a|
 ----
 R1# show flash
 ----
+
 |Combien de fichiers sont actuellement stockés dans la mémoire Flash ? 3
 |Selon vous, lequel de ces fichiers est le fichier d'image IOS ?
 |Pourquoi pensez-vous que ce fichier est le fichier d'image IOS ?
