@@ -244,6 +244,7 @@ a|
 [TIP,caption=Réponse]
 ====
 J'utilise la commande `*show startup-config*`
+
 Mais d'abord je dois sauvegarder les paramètres. -> `*copy running-config startup-config*`
 ====
 a|
@@ -342,13 +343,14 @@ end
 
 .2+|b.     |Quittez la session actuelle en mode console jusqu'à ce que le message suivant apparaisse :
 a|
-[source,bash]
+.Retour iOS
 ----
 R1 con0 is now available
 Press RETURN to get started.
 ----
 .5+|c.     |Appuyez sur *Entrée* pour obtenir le message suivant :
 a|
+.Retour iOS
 ----
 Unauthorized access is strictly prohibited. (Accès sans autorisation strictement interdit.)
 User Access Verification
