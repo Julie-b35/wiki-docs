@@ -81,24 +81,34 @@ a|
 ====
 La commande `connect`
 ====
-.4+|b.     |À l'invite, saisissez t, suivi d'un point d'interrogation (?).
+.5+|b.     |À l'invite, saisissez t, suivi d'un point d'interrogation (?).
            |S1> t?
-           |Quelles sont les commandes affichées ?
 a|
 [source,bash]
 ----
 S1>t?
 telnet  terminal  traceroute
 ----
-.5+|c.     |À l'invite, saisissez te, suivi d'un point d'interrogation (?).
-           |S1> te?
            |Quelles sont les commandes affichées ?
+a|
+[TIP,caption=Réponse]
+====
+Les commandes `telnet`, `terminal` et `traceroute`
+====
+.6+|c.     |À l'invite, saisissez te, suivi d'un point d'interrogation (?).
+           |S1> te?
 a|
 [source,bash]
 ----
 S1>te?
 telnet  terminal
 ----
+           |Quelles sont les commandes affichées ?
+a|
+[TIP,caption=Réponse]
+====
+Les commandes `telnet` et `terminal`
+====
 |Ce type d'aide est appelé aide contextuelle et offre des informations supplémentaires lorsque les commandes sont développées.
 |===
 
