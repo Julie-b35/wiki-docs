@@ -187,11 +187,11 @@ S1(config-if)#
 S1(config-if)# exit
 S1#
 ----
-|À quoi sert la commande no shutdown ?
+|À quoi sert la commande *no shutdown* ?
 a|
 [TIP,caption=Réponse]
 ====
-La commande `*shutdown*` permet de redémarré l'interface
+La commande `*no shutdown*` permet d'activé l'interface
 ====
 .2+|b.     |Enregistrez la configuration.
 a|
