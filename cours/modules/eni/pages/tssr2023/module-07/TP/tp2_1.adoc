@@ -180,8 +180,10 @@ Fermer la fenêtre de configuration
 
 === Étape 1 : Assigner des VLAN aux port actifs sur S2
 
-a.Configure the interfaces as access ports and assign the VLANs as follows:
-
+[frame=none,grid=none,cols="~,~"]
+|===
+.2+|a.  |Configure the interfaces as access ports and assign the VLANs as follows:
+a|
 * VLAN 10: FastEthernet 0/11
 
 Ouvrir la fenêtre de configuration
@@ -193,10 +195,8 @@ S2(config)# interface f0/11
 S2(config-if)# switchport mode access
 S2(config-if)# switchport access vlan 10
 ----
-
-
-b. Attribuez les ports restants au VLAN approprié.
-
+.2+| b.  |Attribuez les ports restants au VLAN approprié.
+a|
 * VLAN 20: FastEthernet 0/18
 * VLAN 30: FastEthernet 0/6
 
@@ -205,7 +205,7 @@ b. Attribuez les ports restants au VLAN approprié.
 ----
 enable
 conf t
-interface f0/11
+interface fa0/11
 switchport mode access
 switchport access vlan 10
 exit
@@ -218,7 +218,7 @@ switchport mode access
 switchport access vlan 30
 exit
 ----
-
+|===
 === Étape 2 : Assigner des VLAN aux port actifs sur S3
 
 S3 utilise les mêmes attributions de port d'accès VLAN que S2. Configurez les interfaces en tant que ports d'accès et affectez les VLAN comme suit :
