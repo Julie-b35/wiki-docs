@@ -63,6 +63,7 @@
 **** xref:tssr2023/module-07/introduction.adoc[]
 **** xref:tssr2023/module-07/reseaux.adoc[]
 **** xref:tssr2023/module-07/commutateur.adoc[]
+**** xref:tssr2023/module-07/routeur.adoc[]
 **** TP
 ***** TP 01 - Réseaux 
 ****** xref:tssr2023/module-07/TP/tp1_1.adoc[]
