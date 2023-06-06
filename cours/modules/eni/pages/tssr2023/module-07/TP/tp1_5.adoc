@@ -35,7 +35,7 @@ Vous pouvez accéder à l'ensemble des commandes du routeur en mode d'exécution
 |===
 .3+|a.     |Accédez au mode d'exécution privilégié en entrant la commande *enable*.
 a|
-.Commande Cmd
+.Commande iOS
 [source,bash]
 ----
 Router> enable
@@ -44,13 +44,13 @@ Router#
 |Notez que l'invite a changé dans la configuration pour représenter le mode d'exécution privilégié.
 .7+|b.     |Saisissez la commande show running-config :
 a|
-.Commande Cmd
+.Commande iOS
 [source,bash]
 ----
 Router# show running-config
 ----
 a|
-.Retour CMD
+.Retour iOS
 ----
 Building configuration...
 
@@ -67,13 +67,13 @@ ip cef
 no ipv6 cef
 ----
 a|
-.Commande Cmd
+.Commande iOS
 [source,bash]
 ----
 Router#show  ip interface brief
 ----
 a|
-.Retour CMD
+.Retour iOS
 ----
 Interface              IP-Address      OK? Method Status                Protocol 
 GigabitEthernet0/0     unassigned      YES unset  administratively down down 
@@ -87,13 +87,13 @@ FastEthernet0/1/3      unassigned      YES unset  up                    down
 Vlan1                  unassigned      YES unset  administratively down down
 ----
 a|
-.Commande Cmd
+.Commande iOS
 [source,bash]
 ----
 Router#show line 
 ----
 a|
-.Retour CMD
+.Retour iOS
 ----
    Tty Line Typ     Tx/Rx    A Roty AccO AccI   Uses   Noise  Overruns   Int
 *    0    0 CTY              -    -    -    -      0       0     0/0       -
@@ -140,6 +140,7 @@ Je dirais que la plage vty est *0-15*.
 ====
 .4+|d.    | Examinez le contenu actuel de la mémoire vive non volatile (NVRAM).
 a|
+.Commande iOS
 [source,bash]
 ----
 Router# show startup-config
