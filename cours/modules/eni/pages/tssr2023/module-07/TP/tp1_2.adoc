@@ -242,7 +242,7 @@ Configuring from terminal, memory, or network [terminal]?
 a|
 [TIP,caption=Réponse]
 ====
-Le message est : *Configuring from terminal, memory, or network [terminal]*
+Le message affiché est : *Configuring from terminal, memory, or network [terminal]*
 ====    
 .4+|b.     |Appuyez sur la touche Entrée pour accepter le paramètre par défaut entre crochets [terminal].
 a|
@@ -260,28 +260,4 @@ La ligne de commande passe en mode *configuration globale*
 .3+|c.     |Il s'agit du mode de configuration globale. Ce mode sera examiné en détail dans les prochains exercices et à l'occasion des travaux pratiques. Pour l'instant, revenez en mode d'exécution privilégié en saisissant end, exit ou en appuyant sur Ctrl+Z.
            |S1(config)# exit
            |S1#
-|===
-
-== Suggestion de barème de notation
-
-[cols="~,~,~,~"]
-|===
-^.^h|Section d'exercice ^.^h| Emplacement de la question ^.^h| Nombre maximum de points ^.^h| Points obtenus
-.5+| Partie 1 : Connexions de base, accès à l'interface en ligne de commande et découverte de l'aide
-| Étape 2a | 5 | 
-| Étape 2c | 5 |
-| Étape 3a | 5 |
-| Étape 3b | 5 |
-| Étape 3c | 5 |
-2.+|Total de la Partie 1 | 25 |
-.6+| Partie 2 : Découverte des modes d'exécution
-| Étape 1a | 5 |
-| Étape 1b | 5 |
-| Étape 1c | 5 |
-| Étape 1d | 5 |
-| Étape 2a | 5 |
-| Étape 2b | 5 |
-2.+| Total de la Partie 2 | 30 |
-2.+|Score relatif à Packet Tracer | 20 |
-2.+|Score total | 75 |
 |===
