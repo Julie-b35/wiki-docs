@@ -198,7 +198,7 @@ data          disable       None          None
 Configuration register is 0x2102
 
 ----
-| Quelles sont les versions des composants technologiques activés sur le routeur ? (*15.14*?)
+| Quelles sont les versions des composants technologiques activés sur le routeur ?
 a|
 [CAUTION,caption=Réponse douteuse]
 ====
