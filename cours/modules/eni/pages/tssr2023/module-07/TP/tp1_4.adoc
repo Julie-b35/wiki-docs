@@ -224,7 +224,6 @@ La commande *ping* permet de vérifier la connectivité réseau. Il est très im
 [frame=none,grid=none,cols="~,~"]
 |===
 |a.     |Cliquez sur *PC1*, puis sélectionnez l'onglet *Desktop*.
-
 .2+|b.     |Ouvrez *Command Prompt* (Invite de commandes).
 a|
 [frame=none,grid=none,cols="~,~"]
@@ -248,7 +247,3 @@ Success rate is 100 percent (5/5), round-trip min/avg/max = 0/0/1 ms
 |===
 
 Toutes les requêtes ping doivent aboutir. Si le résultat de votre première requête ping est 80 %, recommencez ; il devrait maintenant être égal à 100 %. Vous apprendrez plus tard pourquoi une requête ping peut échouer la première fois. Si vous ne pouvez envoyer de requête ping à aucun des appareils, vérifiez votre configuration pour vous assurer qu'elle ne comporte pas d'erreurs.
-
-Suggestion de barème de notation
-
-image:tssr2023/modules-07/TP/01_4/02.png[]
