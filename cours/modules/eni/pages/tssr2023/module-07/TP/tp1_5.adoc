@@ -46,6 +46,11 @@ a|
 [source,bash]
 ----
 Router# show running-config
+----
+[NOTE,caption=Retour]
+====
+[source,bash]
+----
 Building configuration...
 
 Current configuration : 1072 bytes
@@ -56,14 +61,7 @@ no service timestamps debug datetime msec
 no service password-encryption
 !
 hostname Router
-!
-!
-!
-!
-!
-!
-!
-!
+[...]
 ip cef
 no ipv6 cef
 ---------------------------------------------------------------------------------
@@ -91,6 +89,8 @@ Router#show line
 Line(s) not in async mode -or- with no hardware support:
 3-131
 ----
+====
+
 .6+|c.     |Répondez aux questions suivantes :
 |Quel est le nom d'hôte du routeur ?  (*Son nom est Router*)
 |Combien d'interfaces Fast Ethernet le routeur possède-t-il ? (*4*)
