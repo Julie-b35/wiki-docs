@@ -203,6 +203,7 @@ a|
 [CAUTION,caption=Réponse douteuse]
 ====
 Je ne vois que la version du Router qui est : *15.14*
+
 Cependant j'hésite avec la technologie activé *ipbase* dont sont nom est *ipbasek9*
 ====
 | Saisissez show ? à l'invite. Citez quelques commandes show supplémentaires parmi celles qui sont disponibles en mode d'exécution utilisateur.
