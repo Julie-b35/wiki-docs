@@ -149,3 +149,4 @@ xsavec
 xsaveopt
 xsaves
 xtopology
+zeroize
