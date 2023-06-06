@@ -40,9 +40,10 @@ Internet  209.165.201.1           -   0060.70B4.A601  ARPA   GigabitEthernet0/0
 a|
 [TIP,caption=Réponse]
 ====
-Il n'y a q'une interface de configuré (GigabitEthernet0/0)
-L'adresse MAC est : *0060.70B4.A601*
-L'adresse IP est : *209.165.201.1*
+[none]
+* Il n'y a q'une interface de configuré (GigabitEthernet0/0)
+* L'adresse MAC est : *0060.70B4.A601*
+* L'adresse IP est : *209.165.201.1*
 ====
 |Saisissez show flash à l'invite.
 a|
