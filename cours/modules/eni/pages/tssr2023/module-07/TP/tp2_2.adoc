@@ -1,2 +1,123 @@
-= TP 2/6 Packet Tracer : 
-:navtitle: titre TP 2/6
+= TP 2/6 Packet Tracer : Configurer Trunk
+:navtitle: Configurer Trunk
+
+.Table d'adressage
+****
+[cols="~,~,~,~,~"]
+|===
+| Device |Interface | IP Address    | Subnet Mask    | VLAN
+| PC1    | NIC      | 172.17.10.21  | 255.255.255.0  | 10
+| PC2    | NIC      | 172.17.20.22  | 255.255.255.0  | 20
+| PC3    | NIC      | 172.17.30.23  | 255.255.255.0  | 30
+| PC4    | NIC      | 172.17.10.24  | 255.255.255.0  | 10
+| PC5    | NIC      | 172.17.20.25  | 255.255.255.0  | 20
+| PC6    | NIC      | 172.17.30.26  | 255.255.255.0  | 30
+|===
+****
+
+== Objectifs
+
+*Partie 1: Vérifié les VLAN
+*Partie 2: Configurer Trunks
+
+== Contexte
+
+Les liaisons sont nécessaires pour transmettre les informations VLAN entre les commutateurs. Un port sur un commutateur est soit un port d'accès, soit un port de jonction. Les ports d'accès transportent le trafic d'un VLAN spécifique attribué au port. Un port de jonction par défaut est membre de tous les VLAN. Par conséquent, il transporte le trafic pour tous les VLAN. Cette activité se concentre sur la création de ports de jonction et leur affectation à un VLAN natif autre que celui par défaut.
+
+== Instructions
+
+=== Partie 1: Vérifier les VLANs
+
+==== Étape 1: Afficher les VLANs actuel.
+
+Ouvrir la fenêtre de configuration
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     | Sur S1, émettez la commande qui affichera tous les VLAN configurés. Il devrait y avoir dix VLAN au total. Notez que les 26 ports d'accès du commutateur sont affectés au VLAN 1.
+|b.     |Sur S2 et S3, affichez et vérifiez que tous les VLAN sont configurés et attribués aux ports de commutateur corrects conformément à la table d'adressage.
+|===
+
+Fermer la fenêtre de configuration
+
+==== Étape 2: Vérifiez la perte de connectivité entre les PC sur le même réseau.
+
+Ping entre les hôtes sur le même VLAN sur les différents commutateurs. Bien que PC1 et PC4 soient sur le même réseau, ils ne peuvent pas se cingler l'un l'autre. En effet, les ports connectant les commutateurs sont affectés au VLAN 1 par défaut. Afin de fournir une connectivité entre les PC sur le même réseau et VLAN, les troncs doivent être configurés.
+
+=== Partie 2: Configurer Trunk
+
+==== Étape 1: Configurez la jonction sur S1 et utilisez le VLAN 99 comme VLAN natif.
+
+Ouvrir la fenêtre de configuration
+
+[frame=none,grid=none,cols="~,~"]
+|===
+.2+| a.    | Configure G0/1 and G0/2 interfaces on S1 for trunking.
+a|
+.command iOS
+[source,bash]
+----
+S1(config)# interface range g0/1 - 2
+S1(config-if)# switchport mode trunk
+----
+.2+|b.     |Configure VLAN 99 as the native VLAN for G0/1 and G0/2 interfaces on S1.
+a|
+.command iOS
+[source,bash]
+----
+S1(config-if)# switchport trunk native vlan 99
+----
+
+Le port de jonction prend environ un court laps de temps pour devenir actif en raison du protocole Spanning Tree. Cliquez sur Fast Forward Time pour accélérer le processus. Une fois les ports devenus actifs, vous recevrez périodiquement les messages syslog suivants :
+
+`%CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/2 (99), with S3 GigabitEthernet0/2 (1).`
+
+`%CDP-4-NATIVE_VLAN_MISMATCH: Native VLAN mismatch discovered on GigabitEthernet0/1 (99), with S2 GigabitEthernet0/1 (1).`
+
+Vous avez configuré le VLAN 99 comme VLAN natif sur S1. Cependant, S2 et S3 utilisent le VLAN 1 comme VLAN natif par défaut, comme indiqué par le message syslog.
+
+Bien que vous ayez une incompatibilité de VLAN natif, les pings entre les PC sur le même VLAN réussissent maintenant. Expliquer.
+[TIP,caption=Réponse]
+====
+
+====
+|===
+
+==== Étape 2: Vérifiez que la jonction est activée sur S2 et S3.
+
+Sur S2 et S3, émettez la commande show interface trunk pour confirmer que DTP a réussi à négocier la jonction avec S1 sur S2 et S3. La sortie affiche également des informations sur les interfaces de jonction sur S2 et S3. Vous en apprendrez plus sur la PAO plus tard dans le cours.
+
+
+Quels VLAN actifs sont autorisés à traverser le tronc ?
+
+[TIP,caption=Réponse]
+====
+
+====
+
+==== Étape 3: Corrigez l'incompatibilité de VLAN natif sur S2 et S3.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.    | Configurez le VLAN 99 en tant que VLAN natif pour les interfaces appropriées sur S2 et S3.
+
+|b.    | Exécutez la commande show interface trunk pour vérifier la configuration VLAN native correcte.
+|===
+
+==== Étape 4: Vérifiez les configurations sur S2 et S3.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     |Exécutez la commande show interface interface switchport pour vérifier que le VLAN natif est maintenant 99.
+
+|b.    a| Utilisez la commande show vlan pour afficher les informations concernant les VLAN configurés.
+
+Pourquoi le port G0/1 sur S2 n'est-il plus affecté au VLAN 1 ?
+
+[TIP,caption=Réponse]
+====
+
+====
+
+|===
+
