@@ -72,8 +72,7 @@ a|
 Router#show  ip interface brief
 ----
 a|
-[NOTE,caption=Retour CMD]
-====
+.Retour CMD
 ----
 Interface              IP-Address      OK? Method Status                Protocol 
 GigabitEthernet0/0     unassigned      YES unset  administratively down down 
@@ -86,7 +85,6 @@ FastEthernet0/1/2      unassigned      YES unset  up                    down
 FastEthernet0/1/3      unassigned      YES unset  up                    down 
 Vlan1                  unassigned      YES unset  administratively down down
 ----
-====
 a|
 [source,bash]
 ----
@@ -109,9 +107,19 @@ Line(s) not in async mode -or- with no hardware support:
 ----
 ====
 
-.6+|c.     |Répondez aux questions suivantes :
+.7+|c.     |Répondez aux questions suivantes :
 |Quel est le nom d'hôte du routeur ?  (*Son nom est Router*)
+a|
+[TIP,caption=Réponse]
+====
+Son nom est : *Router*
+====
 |Combien d'interfaces Fast Ethernet le routeur possède-t-il ? (*4*)
+a|
+[TIP,caption=Réponse]
+====
+Il possèdes '*4*' interfaces _Fast Ethernet_.
+====
 |Combien d'interfaces Gigabit Ethernet le routeur possède-t-il ? (*2*)
 |Combien d'interfaces série le routeur possède-t-il ?(*2*)
 |Quelle est la plage de valeurs affichée pour les lignes vty ? (?)
