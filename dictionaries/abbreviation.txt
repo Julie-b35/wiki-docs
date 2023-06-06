@@ -48,6 +48,7 @@ rotocol
 scpol
 Securiser
 servername
+SGDSN
 sigdef
 strategie
 subinterface

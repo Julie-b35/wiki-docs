@@ -42,7 +42,7 @@ Router> enable
 Router#
 ----
 |Notez que l'invite a changé dans la configuration pour représenter le mode d'exécution privilégié.
-.7+|b.     |Saisissez la commande show running-config :
+.5+|b.     |Saisissez la commande show running-config :
 a|
 .Commande iOS
 [source,bash]
@@ -86,27 +86,6 @@ FastEthernet0/1/2      unassigned      YES unset  up                    down
 FastEthernet0/1/3      unassigned      YES unset  up                    down 
 Vlan1                  unassigned      YES unset  administratively down down
 ----
-a|
-.Commande iOS
-[source,bash]
-----
-Router#show line 
-----
-a|
-.Retour iOS
-----
-   Tty Line Typ     Tx/Rx    A Roty AccO AccI   Uses   Noise  Overruns   Int
-*    0    0 CTY              -    -    -    -      0       0     0/0       -
-     1    1 AUX   9600/9600  -    -    -    -      0       0     0/0       -
-   132  132 VTY              -    -    -    -      0       0     0/0       -
-   133  133 VTY              -    -    -    -      0       0     0/0       -
-   134  134 VTY              -    -    -    -      0       0     0/0       -
-   135  135 VTY              -    -    -    -      0       0     0/0       -
-   136  136 VTY              -    -    -    -      0       0     0/0       -
-Line(s) not in async mode -or- with no hardware support:
-3-131
-----
-
 .11+|c.     |Répondez aux questions suivantes :
 |Quel est le nom d'hôte du routeur ?
 a|
@@ -134,9 +113,9 @@ Il possèdes '*2*' interfaces _série_.
 ====
 |Quelle est la plage de valeurs affichée pour les lignes vty ?
 a|
-[CAUTION,caption=Réponse Douteuse]
+[TIP,caption=Réponse]
 ====
-Je dirais que la plage vty est *0-15*.
+Je dirais que la plage vty est *0-4*. (5 console virtuelle)
 ====
 .4+|d.    | Examinez le contenu actuel de la mémoire vive non volatile (NVRAM).
 a|
@@ -243,18 +222,14 @@ R1(config)# banner motd "Unauthorized access is strictly prohibited (Tout acces 
 a|
 [TIP,caption=Réponse]
 ====
-J'utilise la commande `*show startup-config*`
-
-Mais d'abord je dois sauvegarder les paramètres. -> `*copy running-config startup-config*`
+J'utilise la commande `*show running-config*`
 ====
 a|
 .Commande iOS
 [source,bash]
 ----
-#Sauvegarde des paramètre
-R1#copy running-config startup-config
-# Vérification
-R1#show startup-config 
+#Vérification paramètre initialisé
+R1#show running-config
 ----
 
 .Retour iOS
@@ -361,6 +336,7 @@ a|
 [TIP,caption=Réponse]
 ====
 Permet d’avertir les utilisateurs en cas de violation d'accès.
+Permet de mettre en place des règles.
 ====
 |Si vous n'êtes pas invité à entrer un mot de passe, quelle commande de ligne de console avez-vous oublié de configurer ? 
 a|
@@ -369,6 +345,7 @@ a|
 C'est le fait d'avoir oublié 2 commande :
 
 `*password letmein*` et `*login*`
+C'est un oublie de mise en place de 
 ====
 .3+|d.     |Entrez les mots de passe requis pour revenir au mode d'exécution privilégié.
 |Si vous configurez d'autres mots de passe sur le routeur, s'affichent-ils dans le fichier de configuration en texte clair ou chiffrés ? Expliquez votre réponse.
@@ -381,11 +358,18 @@ Ile seront chiffrés du fait de l’exécution de la commande : `*service passwo
 
 == Partie 3 : enregistrer le fichier de configuration en cours
 
-=== Étape 1 : Enregistrez le fichier de configuration dans la mémoire NVRAM.
+=== Étape 1 : Enregistrez le fichier de configuration dans la mémoire NVRAM (startup-config).
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.7+|a.     |Vous avez configuré les paramètres initiaux du routeur R1. Sauvegardez le fichier de configuration en cours dans la mémoire vive non volatile pour vous assurer que les modifications apportées seront conservées en cas de redémarrage du système ou de coupure de courant.
+.8+|a.     |Vous avez configuré les paramètres initiaux du routeur R1. Sauvegardez le fichier de configuration en cours dans la mémoire vive non volatile pour vous assurer que les modifications apportées seront conservées en cas de redémarrage du système ou de coupure de courant.
+.Commande iOS
+[source,bash]
+----
+#Vérification paramètre initialisé
+R1#copy running-config startup-config
+----
+
 |Quelle commande avez-vous exécutée pour enregistrer la configuration dans la mémoire NVRAM ?
 a|
 [TIP,caption=Réponse]
@@ -394,15 +378,15 @@ J'ai lancé la commande `*copy running-config startup-config*`
 ====
 |Quelle est la version la plus courte et non ambiguë de cette commande ?
 a|
-[IMPORTANT,caption=Erreur]
+[TIP,caption=Réponse]
 ====
-??
+La commande `*cop r st*`
 ====
 |Quelle commande affiche le contenu de la mémoire NVRAM ?
 a|
-[IMPORTANT,caption=Erreur]
+[TIP,caption=Réponse]
 ====
-??
+La commande `*sh star*`
 ====
 |b.     |Vérifiez que tous les paramètres configurés ont été enregistrés. Si ce n'est pas le cas, analysez le résultat et déterminez quelles commandes n'ont pas été exécutées ou ont été saisies incorrectement. Vous pouvez également cliquer sur Check Results (vérifier les résultats) dans la fenêtre d'instructions.
 |===
