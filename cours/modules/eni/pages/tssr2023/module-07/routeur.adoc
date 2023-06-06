@@ -2,7 +2,7 @@
 :navtitle: Le routeur
 
 * Module précédent -> xref:tssr2023/module-07/commutateur.adoc[Module 03 - Le commutateur]
-* Module suivant -> 
+* Module suivant -> xref:tssr2023/module-07/securiter.adoc[Module 05 - La Sécurité]
 
 Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur IP]
 

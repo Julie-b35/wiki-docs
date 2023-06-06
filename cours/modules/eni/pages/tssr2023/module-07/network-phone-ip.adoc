@@ -14,6 +14,8 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 * xref:tssr2023/module-07/reseaux.adoc[Module 02 - Réseaux]
 * xref:tssr2023/module-07/commutateur.adoc[Module 03 - Le commutateur]
 * xref:tssr2023/module-07/routeur.adoc[Module 04 - Le Routeur]
+* xref:tssr2023/module-07/securiter.adoc[Module 05 - La Sécurité]
+
 
 == TP
 

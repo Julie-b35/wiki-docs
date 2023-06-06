@@ -115,6 +115,7 @@ rsyslogd
 rxload
 sched
 seccomp
+securiter
 shopt
 smap
 smep
