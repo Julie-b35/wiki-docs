@@ -107,22 +107,37 @@ Line(s) not in async mode -or- with no hardware support:
 ----
 ====
 
-.7+|c.     |Répondez aux questions suivantes :
-|Quel est le nom d'hôte du routeur ?  (*Son nom est Router*)
+.11+|c.     |Répondez aux questions suivantes :
+|Quel est le nom d'hôte du routeur ?
 a|
 [TIP,caption=Réponse]
 ====
 Son nom est : *Router*
 ====
-|Combien d'interfaces Fast Ethernet le routeur possède-t-il ? (*4*)
+|Combien d'interfaces Fast Ethernet le routeur possède-t-il ? 
 a|
 [TIP,caption=Réponse]
 ====
 Il possèdes '*4*' interfaces _Fast Ethernet_.
 ====
 |Combien d'interfaces Gigabit Ethernet le routeur possède-t-il ? (*2*)
+a|
+[TIP,caption=Réponse]
+====
+Il possèdes '*2*' interfaces _Gigabit Ethernet_.
+====
 |Combien d'interfaces série le routeur possède-t-il ?(*2*)
+a|
+[TIP,caption=Réponse]
+====
+Il possèdes '*2*' interfaces _série_.
+====
 |Quelle est la plage de valeurs affichée pour les lignes vty ? (?)
+a|
+[CAUTION,caption=Réponse Douteuse]
+====
+Je dirais que la plage vty est *0-15*.
+====
 .3+|d.    | Examinez le contenu actuel de la mémoire vive non volatile (NVRAM).
 a|
 [source,bash]
