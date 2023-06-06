@@ -17,6 +17,7 @@ HDLC
 ibrary
 icence
 IGRP
+irtual
 ITIL
 jlab
 keybind
@@ -34,6 +35,7 @@ nformation
 nfrastructure
 NSSA
 nterconnection
+nterface
 nternational
 NTFS
 nvram

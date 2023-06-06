@@ -10,3 +10,110 @@
 /30 = 255.255.255.252 +  4 = 252
 /31 = 255.255.255.254 +  2 = 254
 /32 = 255.255.255.255 +  1 = 255
+
+== Définition
+
+* *SVI* : **S**witched **V**irtual **I**nterface 
+
+== Gestion VLAN
+=== Commande Création VLAN
+
+.Command iOS
+[source,bash]
+----
+#Passez en mode de configuration globale.
+Switch# configure terminal
+# Créez un VLAN avec un numéro d'identité valide.
+Switch(config)# vlan vlan-id
+# Indiquez un nom unique pour identifier le VLAN.
+Switch(config-vlan)# name vlan-name
+# Repassez en mode d'exécution privilégié.
+Switch(config-vlan) # end
+# Passez en mode de configuration globale.
+Switch# configure terminal
+----
+
+==== Exemple
+
+.Command iOS
+[source,bash]
+----
+S1# configure terminal
+S1(config)# vlan 20
+S1(config-vlan)# name Administration
+S1(config-vlan) # end
+----
+
+=== Affecter un port à un VLAN
+
+.Command iOS
+[source,bash]
+----
+# Passez en mode de configuration globale.
+Switch# configure terminal
+# Passez en mode de configuration d'interface.
+Switch(config)# interface interface-id
+# Définissez le port en mode d'accès.
+Switch(config-if)# switchport mode access
+# Affectez le port à un réseau local virtuel.
+Switch(config-if)# switchport access vlan vlan-id
+# Repassez en mode d'exécution privilégié.
+Switch(config-if)# end
+----
+
+==== Exemple Création de VLAN de données + Vois
+
+.Command iOS
+[source,bash]
+----
+S1(config)# vlan 20
+S1(config-vlan)# name student
+S1(config-vlan)# vlan 150
+S1(config-vlan)# name VOICE
+S1(config-vlan)# exit
+S1(config)# interface fa0/18
+S1(config-if)# switchport mode access
+S1(config-if)# switchport access vlan 20
+# mls qos (Qualité of Service) cos (Class of Service)
+S1(config-if)# mls qos trust cos
+S1(config-if)# switchport voice vlan 150
+S1(config-if)# end
+----
+
+=== Vérifier les informations sur les VLAN
+
+.Command iOS
+[source,bash]
+----
+#☺ show vlan [brief | id vlan-id | name vlan-name | summary]
+# brief - Afficher une ligne pour chaque VLAN comportant le nom du VLAN, son état et ses ports.
+# id vlan-id - Afficher des informations sur un VLAN identifié par un ID de VLAN.
+# name vlan-name - Afficher des informations sur un VLAN identifié par un nom de VLAN. Le nom de VLAN est une chaîne ASCII de 1 à 32 caractères de long.
+# summary - Afficher les informations récapitulatives sur le VLAN.
+
+
+S1# show vlan summary
+
+S1# show interface vlan 20
+----
+
+=== Configurer les trunks VLAN
+
+.Command iOS
+[source,bash]
+----
+#Passez en mode de configuration globale.
+Switch# configure terminal
+#Passez en mode de configuration d'interface.
+Switch(config)# interface interface-id
+#Réglez le port en mode de liaison permanent.
+Switch(config-if)# switchport mode trunk
+#Choisissez un VLAN natif.
+Switch(config-if)# switchport trunk native vlan
+vlan-id
+#Autoriser les VLAN sur la liaison trunk.
+Switch(config-if)# switchport trunk allowed
+vlan vlan-list
+#Repassez en mode d'exécution privilégié.
+Switch(config-if)# end
+----
