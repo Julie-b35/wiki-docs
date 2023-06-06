@@ -195,7 +195,7 @@ image::tssr2023/modules-07/Routeur/08.png[align="center"]
 * Envoyées sur toutes les interfaces où RIP est activé.
 ****
 
-=== Routage / table
+=== Routage / RIP
 
 image::tssr2023/modules-07/Routeur/09.png[align="center"]
 image::tssr2023/modules-07/Routeur/10.png[align="center"]
