@@ -38,6 +38,7 @@ démarrage
 Démon
 Désactiver
 Désencapsulation
+DIALLO
 DISKPART
 Distrib
 dpkg
@@ -86,6 +87,7 @@ lancé
 LEFRANC
 LEMASSON
 lenvironnement
+liason
 linux
 LOHIER
 lors
@@ -143,4 +145,3 @@ utilisateur
 verif
 vérouillé
 Visio
-DIALLO

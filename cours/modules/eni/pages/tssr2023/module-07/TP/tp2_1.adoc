@@ -319,11 +319,17 @@ Request timed out.
 Ping statistics for 172.17.10.24:
     Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
 ----
-Questions:
-Although the access ports are assigned to the appropriate VLANs, were the pings successful? Explain.
 
-What could be done to resolve this issue?
+Bien que les ports d'accès soient affectés aux VLAN appropriés, les pings ne fonctionnent pas? Expliquer.
 
-Close configuration window
+[TIP,caption=Réponse]
+====
+Les requête Icmp ne fonctionnent pas car il n'y a pas de liaison trunk Point à point définis entre S1, S2 et S1, S2.
+====
 
-End of document
+Que pourrait-on faire pour résoudre ce problème ?
+
+[TIP,caption=Réponse]
+====
+Mettre en place une liason trunk sur S1.
+====
