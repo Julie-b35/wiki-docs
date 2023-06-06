@@ -206,11 +206,9 @@ Configuration register is 0x2102
 ----
 | Quelles sont les versions des composants technologiques activés sur le routeur ?
 a|
-[CAUTION,caption=Réponse douteuse]
+[TIP,caption=Réponse]
 ====
 Je ne vois que la version du Router qui est : *15.14*
-
-Cependant j'hésite avec la technologie activé *ipbase* dont sont nom est *ipbasek9*
 ====
 | Saisissez show ? à l'invite. Citez quelques commandes show supplémentaires parmi celles qui sont disponibles en mode d'exécution utilisateur.
 a|
