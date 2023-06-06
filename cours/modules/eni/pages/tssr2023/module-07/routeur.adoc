@@ -87,5 +87,5 @@ Dans la figure, les chiffres identifient les informations suivantes :
 * 7 Interface de sortie : elle identifie l'interface de sortie à utiliser pour que les paquets sortants atteignent leur destination finale.
 
 
-image:tssr2023/modules-07/Routeur/04.png[align="center"]
+image::tssr2023/modules-07/Routeur/04.png[align="center"]
 ****
