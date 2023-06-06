@@ -419,23 +419,68 @@ Procédez comme suit pour enregistrer la configuration initiale dans la mémoire
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.5+|a.     |Examinez le contenu de la mémoire Flash à l'aide de la commande *show flash* :
+.8+|a.     |Examinez le contenu de la mémoire Flash à l'aide de la commande *show flash* :
 a|
+.Commande iOS
 [source,bash]
 ----
 R1# show flash
 ----
 
-|Combien de fichiers sont actuellement stockés dans la mémoire Flash ? 3
+.Retour iOS
+----
+System flash directory:
+File  Length   Name/status
+  3   33591768 c1900-universalk9-mz.SPA.151-4.M4.bin
+  2   28282    sigdef-category.xml
+  1   227537   sigdef-default.xml
+[33847587 bytes used, 221896413 available, 255744000 total]
+249856K bytes of processor board System flash (Read/Write)
+----
+
+|Combien de fichiers sont actuellement stockés dans la mémoire Flash ?
+a|
+[TIP,caption=Réponse]
+====
+Il y a actuellement '*3*' fichiers.
+====
 |Selon vous, lequel de ces fichiers est le fichier d'image IOS ?
+a|
+[TIP,caption=Réponse]
+====
+c'est le fichier : *c1900-universalk9-mz.SPA.151-4.M4.bin*
+====
 |Pourquoi pensez-vous que ce fichier est le fichier d'image IOS ?
+a|
+[TIP,caption=Réponse]
+====
+Car son fichier termine par l’extension *.bin*
+====
 .3+|b.     |Enregistrez le fichier de configuration initiale dans la mémoire Flash à l'aide des commandes suivantes :
 a|
+.Commande iOS
 [source,bash]
 ----
 R1# copy startup-config flash
 Destination filename [startup-config]
 ----
 |Le routeur vous invite à stocker le fichier dans la mémoire Flash avec le nom entre parenthèses. Si le nom vous convient, appuyez sur *Entrée*, sinon, tapez un nom approprié et appuyez sur *Entrée*.
-|c.     |Utilisez la commande *show flash* pour vérifier que le fichier de configuration initiale est à présent stocké dans la mémoire Flash.
+.2+|c.     |Utilisez la commande *show flash* pour vérifier que le fichier de configuration initiale est à présent stocké dans la mémoire Flash.
+.Commande iOS
+[source,bash]
+----
+R1# show flash
+----
+
+.Retour iOS
+----
+System flash directory:
+File  Length   Name/status
+  3   33591768 c1900-universalk9-mz.SPA.151-4.M4.bin
+  2   28282    sigdef-category.xml
+  1   227537   sigdef-default.xml
+  4   1279     startup-config
+[33848866 bytes used, 221895134 available, 255744000 total]
+249856K bytes of processor board System flash (Read/Write)
+----
 |===
