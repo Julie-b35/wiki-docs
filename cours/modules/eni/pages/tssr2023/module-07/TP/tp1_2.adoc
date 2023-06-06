@@ -42,10 +42,13 @@ image:tssr2023/modules-07/TP/01_2/02.png[]
 a| image:tssr2023/modules-07/TP/01_2/03.png[]
 |Quelle est l'invite affichée à l'écran ?
 a|
+[TIP,caption=Réponse]
+====
 .Invite en mode d’exécution utilisateur
 ----
 S1>
 ----
+====
 |===
 
 == Étape 3 :   Découvrez l'aide IOS.
