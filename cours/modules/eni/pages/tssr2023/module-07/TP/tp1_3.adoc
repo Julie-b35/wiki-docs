@@ -28,7 +28,7 @@ Utilisez les informations affichées en réponse aux commandes show suivantes po
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.17+| a. |Saisissez show arp à l'invite.
+.18+| a. |Saisissez show arp à l'invite.
 a|
 [source,bash]
 ----
