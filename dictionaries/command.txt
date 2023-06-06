@@ -48,6 +48,7 @@ ibpb
 IBPB
 ibrs
 IBRS
+intf
 inum
 invpcid
 ipbasek

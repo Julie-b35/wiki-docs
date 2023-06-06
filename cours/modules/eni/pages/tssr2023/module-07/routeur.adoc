@@ -54,3 +54,18 @@ image:tssr2023/modules-07/Routeur/01.png[]
 * Les tables de routage sont construites dynamiquement.
 * Nécessite un protocole de routage tel que RIP, OSPF, IGRP, EIGRP…
 ****
+
+=== Configurer les routes statique par défaut
+
+La syntaxe de commande de base pour une route statique par défaut d'IPv4 est la suivante :
+
+.Commande iOS
+[source,cmd]
+----
+Router(config)# ip route 0.0.0.0 0.0.0.0 {ip-address | exit-intf}
+----
+
+[NOTE,caption=Vérifier une route statique par défaut]
+====
+image:tssr2023/modules-07/Routeur/02.png[]
+====
