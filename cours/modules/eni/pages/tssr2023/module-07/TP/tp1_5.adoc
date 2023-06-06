@@ -466,6 +466,7 @@ Destination filename [startup-config]
 ----
 |Le routeur vous invite à stocker le fichier dans la mémoire Flash avec le nom entre parenthèses. Si le nom vous convient, appuyez sur *Entrée*, sinon, tapez un nom approprié et appuyez sur *Entrée*.
 .2+|c.     |Utilisez la commande *show flash* pour vérifier que le fichier de configuration initiale est à présent stocké dans la mémoire Flash.
+a|
 .Commande iOS
 [source,bash]
 ----
