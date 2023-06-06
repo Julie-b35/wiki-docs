@@ -28,7 +28,7 @@ Utilisez les informations affichées en réponse aux commandes show suivantes po
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.16+| a. |Saisissez show arp à l'invite.
+.17+| a. |Saisissez show arp à l'invite.
 a|
 [source,bash]
 ----
@@ -41,7 +41,7 @@ a|
 [TIP,caption=Réponse]
 ====
 [none]
-* Il n'y a q'une interface de configuré (GigabitEthernet0/0)
+* Il n'y a q'une interface de configuré (*GigabitEthernet0/0*)
 * L'adresse MAC est : *0060.70B4.A601*
 * L'adresse IP est : *209.165.201.1*
 ====
@@ -132,6 +132,11 @@ a|
 ! Serial0/1/0           !    down             ! down
 ! Serial0/1/1           !  Hors service   ! down
 !===
+a|
+[TIP,caption=Réponse]
+====
+Il n'y a que l'interface *GigabitEthernet 0/0* qui est fonctionnel.
+====
 .5+|b.     | Saisissez show version à l'invite.
 a|
 [source,bash]
