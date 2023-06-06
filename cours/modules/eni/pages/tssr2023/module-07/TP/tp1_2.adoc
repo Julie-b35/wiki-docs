@@ -175,7 +175,7 @@ a|
 ====
 La ligne de commande passe du mode utilisateur au mode privilégié.
 ====  
-.5+|d.    |À l'invite, saisissez le point d'interrogation (?).
+.6+|d.    |À l'invite, saisissez le point d'interrogation (?).
           |S1# ?
 a|
 [source,bash]
@@ -218,6 +218,12 @@ a|
 S1#c?
 clear  clock  configure  connect  copy
 ----
+a|
+[TIP,caption=Réponse]
+====
+Il y a '*5*' commandes qui commence par '*C*'
+====  
+
 |===
 
 == Étape 5 :   Passez en mode de configuration globale.
