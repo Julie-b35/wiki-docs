@@ -162,8 +162,7 @@ Pour configurer les paramètres d'un routeur, vous devrez peut-être passer d'un
 
 === Étape 1 :Configurez les paramètres initiaux du routeur R1.
 
-.Remarque
-[NOTE]
+[NOTE,caption=Remarque]
 ====
 Si vous avez du mal à vous souvenir des commandes, référez-vous au contenu de cette rubrique. Les commandes sont les mêmes que celles que vous avez configurées sur le commutateur.
 ====
@@ -172,6 +171,7 @@ Si vous avez du mal à vous souvenir des commandes, référez-vous au contenu de
 |===
 .2+|a.    | Configurez R1 comme nom d'hôte.
 a|
+.Commande iOS
 [source,bash]
 ----
 Router>
@@ -186,6 +186,7 @@ R1#
 ----
 .2+|b.    | Configurez letmein comme mot de passe console, puis activez la connexion.
 a|
+.Commande iOS
 [source,bash]
 ----
 R1#
@@ -199,6 +200,7 @@ R1(config)#
 ----
 .2+|c.     |Configurez itsasecret comme mot de passe du mode d'exécution privilégié chiffré.
 a|
+.Commande iOS
 [source,bash]
 ----
 R1(config)#
@@ -206,6 +208,7 @@ R1(config)#enable secret itsasecret
 ----
 .2+|d.     |Chiffrez tous les mots de passe en clair.
 a|
+.Commande iOS
 [source,bash]
 ----
 R1(config)#
@@ -223,6 +226,7 @@ line con 0
 ----
 .2+|e.    | Configurez une bannière MOTD (message of the day, ou message du jour) pour avertir les utilisateurs en cas d'accès non autorisé. Un exemple de bannière peut afficher le message Unauthorized access is strictly prohibited (Tout accès non autorisé est strictement interdit).
 a|
+.Commande iOS
 [source,bash]
 ----
 R1#
@@ -235,14 +239,25 @@ R1(config)# banner motd "Unauthorized access is strictly prohibited (Tout acces 
 
 [frame=none,grid=none,cols="~,~"]
 |===
-.2+|a.     |Vérifiez les paramètres initiaux en affichant la configuration de R1. Quelle commande utilisez-vous ?
+.3+|a.     |Vérifiez les paramètres initiaux en affichant la configuration de R1. Quelle commande utilisez-vous ?
 a|
+[TIP,caption=Réponse]
+====
+J'utilise la commande `*show startup-config*`
+Mais d'abord je dois sauvegarder les paramètres. -> `*copy running-config startup-config*`
+====
+a|
+.Commande iOS
 [source,bash]
 ----
 #Sauvegarde des paramètre
 R1#copy running-config startup-config
 # Vérification
 R1#show startup-config 
+----
+
+.Retour iOS
+----
 Using 1279 bytes
 !
 version 15.1
