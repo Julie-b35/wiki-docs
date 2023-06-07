@@ -24,67 +24,104 @@ Ouvrir l'invite de commande
 |===
 |a.     a|Configurer l'adressage IP sur PCA conformément au tableau d'adressage.
 
-Fermer l'invite de commande
+image::tssr2023/modules-07/TP/02_3/01.png[aligne"center"]
 
-Ouvrir la fenêtre de configuration IP
+|b.     a| Console dans RTA à partir du terminal sur PCA.
 
 image::tssr2023/modules-07/TP/02_3/01.png[aligne"center"]
 
-|b.     | Console into RTA from the Terminal on PCA.
+|c.     a|Configurez le nom d'hôte comme RTA.
 
-|c.     a|Configure the hostname as RTA.
-
+.command iOS
+[source,cmd]
 ----
-RTA(config-if)#hostname RTA
+Router>enable
+Router#conf t
+Router(config)#hostname RTA
 ----
 
+|d.     a|Configurez l'adressage IP sur RTA et activez l'interface.
 
-|d.     a|Configure IP addressing on RTA and enable the interface.
-
+.command iOS
+[source,cmd]
 ----
+RTA(config)#interface g0/0
 RTA(config-if)#ip address 172.16.1.1 255.255.255.0 
 RTA(config-if)#no shutdown 
+RTA(config-if)#exit
 ----
 
-|e.     a|Encrypt all plaintext passwords.
 
+
+|e.     a|Chiffrer tous les mots de passe en clair.
+
+.command iOS
+[source,cmd]
 ----
 RTA(config)#service password-encryption
 ----
 
+|f.      a|Fixez la longueur minimale du mot de passe à 10.
 
-|f.      a|Set the minimum password length to 10.
-
-RTA(config)# security password min-length 5
-
-|g.     a|Set a strong secret password of your choosing. Note: Choose a password that you will remember, or you will need to reset the activity if you are locked out of the device.
-
-
+.command iOS
+[source,cmd]
 ----
-Mdp login : users
-Mdp root : rootsan
+RTA(config)# security password min-length 10
 ----
 
-|h.     a|Disable DNS lookup.
 
+
+|g.     a|Définissez un mot de passe secret fort de votre choix. 
+
+[NOTE,caption=Remarque]
+====
+Choisissez un mot de passe dont vous vous souviendrez, sinon vous devrez réinitialiser l'activité si vous êtes bloqué hors de l'appareil.
+====
+
+.command iOS
+[source,cmd]
+----
+RTA(config)#line console 0
+RTA(config-line)#password LoginUsers
+RTA(config-line)#login
+RTA(config-line)#exit
+RTA(config)#enable secret LoginRootSan
+----
+
+|h.     a|Désactiver la recherche DNS.
+
+.command iOS
+[source,cmd]
+----
 RTA(config)# no ip domain-lookup
+----
 
-|i.      a|Set the domain name to CCNA.com (case-sensitive for scoring in PT).
+|i.      a|Définissez le nom de domaine à CCNA.com (sensible à la casse pour la notation dans PT).
 
+.command iOS
+[source,cmd]
+----
 RTA(config)# ip domain-name CCNA.com
-
-|j.      a|Create a user of your choosing with a strong encrypted password.
-
-RTA(config)# username any_user secret any_password
-----
-julie : bidule
 ----
 
-|k.     a|Generate 1024-bit RSA keys.
+|j.      a|Créez un utilisateur de votre choix avec un mot de passe crypté fort.
 
-Note: In Packet Tracer, enter the crypto key generate rsa command and press Enter to continue.
+.command iOS
+[source,cmd]
+----
+RTA(config)#username julie secret LoginBidule
+----
 
+
+|k.     a|Générer des clés RSA de 1024 bits.
+
+NOTE: Dans Packet Tracer, entrez la commande `*crypto key generate rsa*` et appuyez sur Enter pour continuer.
+
+.command iOS
+[source,cmd]
+----
 RTA(config)# crypto key generate rsa
+----
 
 The name for the keys will be: RTA.CCNA.com
 
@@ -93,7 +130,10 @@ Choose the size of the key modulus in the range of 360 to 2048 for your
 General Purpose Keys. Choosing a key modulus greater than 512 may take
 
 a few minutes.
-
+----
+Mdp login : LoginUsers
+Mdp root : LoginRootSan
+----
  
 
 How many bits in the modulus [512]: 1024
