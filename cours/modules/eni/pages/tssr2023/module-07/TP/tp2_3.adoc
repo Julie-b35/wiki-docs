@@ -123,111 +123,145 @@ NOTE: Dans Packet Tracer, entrez la commande `*crypto key generate rsa*` et appu
 RTA(config)# crypto key generate rsa
 ----
 
+----
 The name for the keys will be: RTA.CCNA.com
-
 Choose the size of the key modulus in the range of 360 to 2048 for your
-
 General Purpose Keys. Choosing a key modulus greater than 512 may take
-
 a few minutes.
+How many bits in the modulus [512]: *1024*
 ----
-Mdp login : LoginUsers
-Mdp root : LoginRootSan
+
+| l.      a|Bloquer pendant trois minutes toute personne qui ne parvient pas à se connecter après quatre tentatives dans un délai de deux minutes.
+
+.command iOS
+[source,cmd]
 ----
- 
-
-How many bits in the modulus [512]: 1024
-
-| l.      a|Block anyone for three minutes who fails to log in after four attempts within a two-minute period.
-
 RTA(config)# login block-for 180 attempts 4 within 120
+----
 
-|m.   a|Configure all VTY lines for SSH access and use the local user profiles for authentication.
+|m.   a|Configurez toutes les lignes VTY pour l'accès SSH et utilisez les profils d'utilisateur locaux pour l'authentification.
 
+.command iOS
+[source,cmd]
+----
 RTA(config)# line vty 0 4
-
 RTA(config-line)# transport input ssh
-
 RTA(config-line)# login local
+----
 
-|n.     a|Set the EXEC mode timeout to 6 minutes on the VTY lines.
+|n.     a|Réglez le délai d'attente du mode EXEC à 6 minutes sur les lignes VTY.
 
+.command iOS
+[source,cmd]
+----
 RTA(config-line)# exec-timeout 6
+----
 
-|o.     a|Save the configuration to NVRAM.
+|o.     a|Sauvegarder la configuration dans la NVRAM.
 
-Close configuration window
+.command iOS
+[source,cmd]
+----
+RTA(config-line)# end
+RTA#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+----
 
-|p.     a|Access the command prompt on the desktop of PCA to establish an SSH connection to RTA.
+|p.     a|Accédez à l'invite de commande sur le bureau de l'PCA pour établir une connexion SSH avec RTA.
 
-Open a command prompt
+Ouvrir la ligne de commande
 
+.command Cmd
+[source,cmd]
+----
 C:\> ssh /?
 
 Packet Tracer PC SSH
 
 Usage: SSH -l username target
 
-C:\>
+C:\>ssh -l julie 172.16.1.1
+password: LoginBidule
+RTA>
+----
+
 |===
 
-Close a command prompt
 
-Step 2: Configure Basic Security on the Switch
-Configure switch SW1 with corresponding security measures. Refer to the configuration steps on the router if you need additional assistance.
 
-a.     Click on SW1 and select the CLI tab.
+== Étape 2: Configuration de la sécurité de base sur le commutateur
 
-Open a configuration window
+Configurez le commutateur SW1 avec les mesures de sécurité correspondantes. Reportez-vous aux étapes de configuration du routeur si vous avez besoin d'aide supplémentaire.
 
-b.     Configure the hostname as SW1.
+[cols="~,~",frame=none,grid=none]
+|===
+|a.     a|Cliquez sur SW1 et sélectionnez l'onglet CLI.
 
-c.     Configure IP addressing on SW1 VLAN1 and enable the interface.
+|b.    a|Configurez le nom d'hôte comme SW1.
 
-d.     Configure the default gateway address.
+|c.    a| Configurez l'adressage IP sur SW1 VLAN1 et activez l'interface.
 
-e.     Disable all unused switch ports.
+|d.    a| Configurez l'adresse de la passerelle par défaut.
 
-Note: On a switch it is a good security practice to disable unused ports. One method of doing this is to simply shut down each port with the ‘shutdown’ command. This would require accessing each port individually. There is a shortcut method for making modifications to several ports at once by using the interface range command. On SW1 all ports except FastEthernet0/1 and GigabitEthernet0/1 can be shutdown with the following command:
+|e.    a| Désactiver tous les ports de commutation inutilisés.
 
+
+[NOTE]
+====
+Sur un commutateur, une bonne pratique de sécurité consiste à désactiver les ports inutilisés. 
+
+Pour ce faire, il suffit de fermer chaque port à l'aide de la commande "shutdown".
+
+Pour ce faire, il faut accéder à chaque port individuellement. 
+
+Il existe une méthode plus rapide pour apporter des modifications à plusieurs ports à la fois en utilisant la commande interface range. 
+Sur SW1, tous les ports à l'exception de FastEthernet0/1 et GigabitEthernet0/1 peuvent être arrêtés à l'aide de la commande suivante :
+
+.command iOS
+[source,cmd]
+----
 SW1(config)# interface range F0/2-24, G0/2
-
 SW1(config-if-range)# shutdown
+----
 
+.retour iOS
+----
 %LINK-5-CHANGED: Interface FastEthernet0/2, changed state to administratively down
-
- 
-
 %LINK-5-CHANGED: Interface FastEthernet0/3, changed state to administratively down
-
 <Output omitted>
-
 %LINK-5-CHANGED: Interface FastEthernet0/24, changed state to administratively down
-
- 
-
 %LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to administratively down
+----
+====
+
+
+
 
 The command used the port range of 2-24 for the FastEthernet ports and then a single port range of GigabitEthernet0/2.
 
-f.      Encrypt all plaintext passwords.
+|f.   a|   Encrypt all plaintext passwords.
 
-g.     Set a strong secret password of your choosing.
+|g.   a|  Set a strong secret password of your choosing.
 
-h.     Disable DNS lookup.
+|h.    a| Disable DNS lookup.
 
-i.      Set the domain name to CCNA.com (case-sensitive for scoring in PT).
+|i.    a|  Set the domain name to CCNA.com (case-sensitive for scoring in PT).
 
-j.      Create a user of your choosing with a strong encrypted password.
+|j.    a|  Create a user of your choosing with a strong encrypted password.
 
-k.     Generate 1024-bit RSA keys.
+|k.    a| Generate 1024-bit RSA keys.
 
-l.      Configure all VTY lines for SSH access and use the local user profiles for authentication.
+|l.   a|   Configure all VTY lines for SSH access and use the local user profiles for authentication.
 
-m.   Set the EXEC mode timeout to 6 minutes on all VTY lines.
+|m.  a| Set the EXEC mode timeout to 6 minutes on all VTY lines.
 
-n.     Save the configuration to NVRAM.
+|n.   a|  Save the configuration to NVRAM.
+|===
 
-Close a configuration window
-
-End of document
+----
+Mdp login : LoginUsers
+Mdp root : LoginRootSan
+SSH : Login : julie ,MDP : LoginBidule
+----
