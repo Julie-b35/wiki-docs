@@ -22,7 +22,7 @@ Ouvrir l'invite de commande
 
 [cols="~,~",frame=none,grid=none]
 |===
-|a.     |Configurer l'adressage IP sur PCA conformément au tableau d'adressage.
+|a.     a|Configurer l'adressage IP sur PCA conformément au tableau d'adressage.
 
 Fermer l'invite de commande
 
