@@ -30,7 +30,7 @@ Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur 
 ** xref:tssr2023/module-07/TP/tp2_2.adoc[TP 2/6 PacketTracer : Configurer Trunk]
 ** xref:tssr2023/module-07/TP/tp2_3.adoc[TP 3/6 PacketTracer : Mise en œuvre de VLAN et de trunk (optionnel)]
 ** xref:tssr2023/module-07/TP/tp2_4.adoc[TP 4/6 PacketTracer : Configuration des mots de passe sécurisés et de SSH]
-** xref:tssr2023/module-07/TP/tp2_4.adoc[TP 4/6 PacketTracer :]
+** xref:tssr2023/module-07/TP/tp2_5.adoc[TP 5/6 PacketTracer : Mise en œuvre de la sécurité des ports]
 ** xref:tssr2023/module-07/TP/tp2_5.adoc[TP 5/6 PacketTracer :]
 ** xref:tssr2023/module-07/TP/tp2_6.adoc[TP 6/6 PacketTracer :]
 * TP 03 - Routeur

@@ -1,4 +1,4 @@
-= TP 3/6 Packet Tracer : Configuration des mots de passe sécurisés et de SSH
+= TP 4/6 Packet Tracer : Configuration des mots de passe sécurisés et de SSH
 :navtitle: Config Mot de passe et SSH
 
 .Table d'adressage

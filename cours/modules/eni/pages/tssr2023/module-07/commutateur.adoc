@@ -136,6 +136,6 @@ image:tssr2023/modules-07/Commutateur/fonctionSSH.png[]
 == TP - Accès SSH
 
 * xref:tssr2023/module-07/TP/tp2_4.adoc[TP 4/6 PacketTracer : Configuration des mots de passe sécurisés et de SSH]
-* xref:tssr2023/module-07/TP/tp2_4.adoc[TP 4/6 PacketTracer :]
+* xref:tssr2023/module-07/TP/tp2_5.adoc[TP 5/6 PacketTracer : Mise en œuvre de la sécurité des ports]
 * xref:tssr2023/module-07/TP/tp2_5.adoc[TP 5/6 PacketTracer :]
 * xref:tssr2023/module-07/TP/tp2_6.adoc[TP 6/6 PacketTracer :]
