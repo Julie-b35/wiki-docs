@@ -28,7 +28,7 @@ image::tssr2023/modules-07/TP/02_3/01.png[aligne"center"]
 
 |b.     a| Console dans RTA à partir du terminal sur PCA.
 
-image::tssr2023/modules-07/TP/02_3/01.png[aligne"center"]
+image::tssr2023/modules-07/TP/02_3/02.png[aligne"center"]
 
 |c.     a|Configurez le nom d'hôte comme RTA.
 
@@ -199,11 +199,32 @@ Configurez le commutateur SW1 avec les mesures de sécurité correspondantes. Re
 |===
 |a.     a|Cliquez sur SW1 et sélectionnez l'onglet CLI.
 
+image::tssr2023/modules-07/TP/02_3/03.png[aligne"center"]
+
 |b.    a|Configurez le nom d'hôte comme SW1.
+
+.command Cmd
+[source,cmd]
+----
+Switch(config)#hostname SW1
+----
 
 |c.    a| Configurez l'adressage IP sur SW1 VLAN1 et activez l'interface.
 
+.command Cmd
+[source,cmd]
+----
+SW1(config-if)#ip address 172.16.1.2 255.255.255.0
+SW1(config-if)#no shutdown 
+----
+
 |d.    a| Configurez l'adresse de la passerelle par défaut.
+
+.command Cmd
+[source,cmd]
+----
+SW1(config)#ip default-gateway 172.16.1.1
+----
 
 |e.    a| Désactiver tous les ports de commutation inutilisés.
 
@@ -234,30 +255,98 @@ SW1(config-if-range)# shutdown
 %LINK-5-CHANGED: Interface FastEthernet0/24, changed state to administratively down
 %LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to administratively down
 ----
+
+La commande utilise la plage de ports 2-24 pour les ports FastEthernet, puis une plage de ports unique GigabitEthernet0/2.
 ====
 
+.command iOS
+[source,cmd]
+----
+SW1(config)# interface range F0/2-24, G0/2
+SW1(config-if-range)# shutdown
+----
 
+|f.   a|   Chiffrer tous les mots de passe en clair.
 
+.command Cmd
+[source,cmd]
+----
+SW1(config)#service password-encryption
+----
 
-The command used the port range of 2-24 for the FastEthernet ports and then a single port range of GigabitEthernet0/2.
+|g.   a|  Définissez un mot de passe secret fort de votre choix.
 
-|f.   a|   Encrypt all plaintext passwords.
+.command Cmd
+[source,cmd]
+----
+SW1(config)#line console 0
+SW1(config-line)#password LoginUsers
+SW1(config-line)#login
+SW1(config-line)#exit
+SW1(config)#enable secret LoginRootSan
+----
 
-|g.   a|  Set a strong secret password of your choosing.
+|h.   a| Désactiver la recherche DNS.
 
-|h.    a| Disable DNS lookup.
+.command Cmd
+[source,cmd]
+----
+SW1(config)#no ip domain-lookup
+----
 
-|i.    a|  Set the domain name to CCNA.com (case-sensitive for scoring in PT).
+|i.   a|  Définissez le nom de domaine à CCNA.com (sensible à la casse pour la notation dans PT).
 
-|j.    a|  Create a user of your choosing with a strong encrypted password.
+.command Cmd
+[source,cmd]
+----
+SW1(config)#ip domain-name CCNA.com
+----
 
-|k.    a| Generate 1024-bit RSA keys.
+|j.   a|  Créez un utilisateur de votre choix avec un mot de passe crypté fort.
 
-|l.   a|   Configure all VTY lines for SSH access and use the local user profiles for authentication.
+.command Cmd
+[source,cmd]
+----
+SW1(config)#username julie secret LoginBidule
+----
 
-|m.  a| Set the EXEC mode timeout to 6 minutes on all VTY lines.
+|k.   a| Générer des clés RSA de 1024 bits.
 
-|n.   a|  Save the configuration to NVRAM.
+.command Cmd
+[source,cmd]
+----
+SW1(config)#crypto key generate rsa 
+----
+
+|l.   a|  Configurez toutes les lignes VTY pour l'accès SSH et utilisez les profils d'utilisateur locaux pour l'authentification.
+
+.command Cmd
+[source,cmd]
+----
+
+SW1(config-line)#transport input ssh 
+SW1(config-line)#login local 
+----
+
+|m.   a| Réglez le délai d'attente du mode EXEC à 6 minutes sur toutes les lignes VTY.
+
+.command Cmd
+[source,cmd]
+----
+SW1(config-line)#exec-timeout 6
+----
+
+|n.   a|  Sauvegarder la configuration dans la NVRAM.
+
+.command Cmd
+[source,cmd]
+----
+SW1#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+----
+
 |===
 
 ----
