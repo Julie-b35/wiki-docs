@@ -14,6 +14,7 @@
 == Définition
 
 * *SVI* : **S**witched **V**irtual **I**nterface 
+* *vty* : terminal de type virtuel (console ssh, telnet, svi, etc)
 
 == Gestion VLAN
 === Commande Création VLAN
