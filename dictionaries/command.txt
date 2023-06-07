@@ -7,6 +7,7 @@ arat
 Beos
 bhmp
 Bogo
+BPDU
 clflush
 clflushopt
 clwb

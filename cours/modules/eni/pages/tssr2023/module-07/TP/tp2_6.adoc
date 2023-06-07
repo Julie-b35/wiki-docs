@@ -1,2 +1,95 @@
-= TP 6/6 Packet Tracer : 
-:navtitle: titre TP 6/6
+= TP 6/6 Packet Tracer : Configuration de la sécurité du commutateur
+:navtitle: Switch - config sécurité
+
+
+.Table VLAN
+****
+[cols="~,~,~,~,~"]
+|===
+|Switch    | VLAN Number | VLAN Name  | Port Membership | Network
+.5+| SW-1  |  10         | Admin      | F0/1, F0/2      | 192.168.10.0/24
+           |  20         | Sales      | F0/10           | 192.168.20.0/24
+           |  99         | Management | F0/24           | 192.168.99.0/24
+           | 100         | Native     | G0/1, G0/2      | None
+           | 999         | BlackHole  | All unused      | None
+.5+| SW-2  | 10          | Admin      | F0/1, F0/22     | 192.168.10.0/24
+           | 20          | Sales      | F0/10           | 192.168.20.0/24
+           | 99          | Management | F0/24           | 192.168.99.0/24
+           | 100         | Native     | None            | None
+           | 999         | BlackHole  | All unused      | None
+|===
+****
+
+
+== Objectifs
+
+* Partie 1 : Crée une liason PtP sécurisé (Trunk)
+* Partie 2 : Sécurisé les ports de switch non utilisé
+* Partie 3 : Implémenter la sécurité des ports
+* Partie 4 : configurer Rapid PVST PortFast et BPDU Guard
+* Partie 5 : Configurer PortFast, et BPDU Guard.
+
+== Contexte
+
+Vous améliorez la sécurité de deux commutateurs d'accès dans un réseau partiellement configuré. Vous mettrez en œuvre l'ensemble des mesures de sécurité abordées dans ce module conformément aux exigences ci-dessous. Notez que le routage a été configuré sur ce réseau, de sorte que la connectivité entre les hôtes de différents VLAN devrait fonctionner une fois l'opération terminée.
+
+
+== Partie 1 : Crée une liason PtP sécurisé (Trunk)
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.    a|Connectez les ports G0/2 des deux commutateurs de la couche d'accès.
+|b.    a|Configurez les ports G0/1 et G0/2 en tant que liaisons statiques sur les deux commutateurs.
+|c.    a|Désactiver la négociation DTP des deux côtés de la liaison.
+|d.    a|Créez le VLAN 100 et donnez-lui le nom Native sur les deux commutateurs.
+|e.    a|Configurer tous les ports trunk sur les deux commutateurs pour utiliser le VLAN 100 comme VLAN natif.
+|===
+
+== Partie 2 : Sécurisé les ports de switch non utilisé
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     a|Fermez tous les ports de commutation inutilisés sur SW-1.
+
+|b.     a|Sur SW-1, créez un VLAN 999 et nommez-le BlackHole. Le nom configuré doit correspondre exactement à l'exigence.
+
+|c.     a|Déplacer tous les ports de commutation inutilisés vers le VLAN BlackHole.
+|===
+
+
+== Partie 3 : Implémenter la sécurité des ports
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     a|Activer la sécurité des ports sur tous les ports d'accès actifs du commutateur SW-1.
+
+|b.     a|Configurez les ports actifs pour permettre l'apprentissage d'un maximum de 4 adresses MAC sur les ports.
+
+|c.     a|Pour les ports F0/1 sur SW-1, configurez statiquement l'adresse MAC du PC en utilisant la sécurité du port.
+
+|d.     a|Configurez chaque port d'accès actif de manière à ce qu'il ajoute automatiquement les adresses MAC apprises sur le port à la configuration en cours.
+
+|e.     a|Configurez le mode de violation de la sécurité des ports afin d'éliminer les paquets provenant d'adresses MAC qui dépassent le maximum, de générer une entrée Syslog, mais de ne pas désactiver les ports.
+|===
+
+== Partie 4 : configurer Rapid PVST PortFast and BPDU Guard
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     a|Configurer les ports trunk sur SW-1 en tant que ports de confiance.
+|b.     a|Limiter les ports non approuvés de SW-1 à cinq paquets DHCP par seconde.
+|c.     a|Sur SW-2, activez le snooping DHCP globalement et pour les VLAN 10, 20 et 99.
+
+NOTE: La configuration du snooping DHCP peut ne pas être correctement enregistrée dans Packet Tracer.
+|===
+
+== Partie 5: Configure PortFast, and BPDU Guard.
+
+[frame=none,grid=none,cols="~,~"]
+|===
+|a.     a|Activer PortFast sur tous les ports d'accès utilisés sur SW-1.
+
+|b.     a|Activer BPDU Guard sur tous les ports d'accès utilisés sur SW-1.
+
+|c.     a|Configurez SW-2 pour que tous les ports d'accès utilisent PortFast par défaut.
+|===
