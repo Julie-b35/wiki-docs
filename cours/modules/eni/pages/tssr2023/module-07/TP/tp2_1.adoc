@@ -322,9 +322,11 @@ Ping statistics for 172.17.10.24:
 
 Bien que les ports d'accès soient affectés aux VLAN appropriés, les pings ne fonctionnent pas? Expliquer.
 
-[TIP,caption=Réponse]
+[IMPORTANT,caption=Correction]
 ====
-Les requête Icmp ne fonctionnent pas car il n'y a pas de liaison trunk Point à point définis entre S1, S2 et S1, S2.
+Ping entre les hôtes sur le même VLAN sur les différents commutateurs : bien que PC1 et PC4 qui sont sur le même réseau, ils ne peuvent pas s'envoyer mutuellement des requêtes PING.
+
+Cela s'explique par le fait que les ports connectant les switch sont attribués au VLAN 1 natif. Pour pallier cela et assurer la connectivité entre les 2 PC d'un même VLAN, il faudra configurer des trunks
 ====
 
 Que pourrait-on faire pour résoudre ce problème ?

@@ -171,9 +171,10 @@ Le port de jonction prend environ un court laps de temps pour devenir actif en r
 Vous avez configuré le VLAN 99 comme VLAN natif sur S1. Cependant, S2 et S3 utilisent le VLAN 1 comme VLAN natif par défaut, comme indiqué par le message syslog.
 
 Bien que vous ayez une incompatibilité de VLAN natif, les pings entre les PC sur le même VLAN réussissent maintenant. Expliquer.
-[TIP,caption=Réponse]
+[IMPORTANT,caption=Correction]
 ====
-
+A partir du moment où on a configuré sur S1, le protocole DTP prend le relai et configure automatiquement S2 et S3
+DTP = Dynamic Trunk
 ====
 |===
 
@@ -186,31 +187,119 @@ Quels VLAN actifs sont autorisés à traverser le tronc ?
 
 [TIP,caption=Réponse]
 ====
-
+Les VLAN 1,10,20,30,88,99
 ====
 
 ==== Étape 3: Corrigez l'incompatibilité de VLAN natif sur S2 et S3.
 
 [frame=none,grid=none,cols="~,~"]
 |===
-|a.    | Configurez le VLAN 99 en tant que VLAN natif pour les interfaces appropriées sur S2 et S3.
+|a.    a| Configurez le VLAN 99 en tant que VLAN natif pour les interfaces appropriées sur S2 et S3.
+.command iOS
+[source,bash]
+----
+S2(config)# interface g0/1
+S2(config-if)# switchport mode trunk
+S2(config-if)# switchport trunk native vlan 99
+----
 
-|b.    | Exécutez la commande show interface trunk pour vérifier la configuration VLAN native correcte.
+|b.    a| Exécutez la commande show interface trunk pour vérifier la configuration VLAN native correcte.
+
+Rapport S2
+
+.command iOS
+[source,bash]
+----
+S2>show interfaces trunk
+----
+
+
+
+.report iOS
+----
+Port        Mode         Encapsulation  Status        Native vlan
+Gig0/1      on           802.1q         trunking      99
+
+Port        Vlans allowed on trunk
+Gig0/1      1-1005
+
+Port        Vlans allowed and active in management domain
+Gig0/1      1,10,20,30,88,99
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gig0/1      1,10,20,30,88,99
+----
+
+Rapport S3
+
+.command iOS
+[source,bash]
+----
+S3>show interfaces trunk
+----
+
+.report iOS
+----
+Port        Mode         Encapsulation  Status        Native vlan
+Gig0/2      on           802.1q         trunking      99
+
+Port        Vlans allowed on trunk
+Gig0/2      1-1005
+
+Port        Vlans allowed and active in management domain
+Gig0/2      1,10,20,30,88,99
+
+Port        Vlans in spanning tree forwarding state and not pruned
+Gig0/2      1,10,20,30,88,99
+----
 |===
 
 ==== Étape 4: Vérifiez les configurations sur S2 et S3.
 
 [frame=none,grid=none,cols="~,~"]
 |===
-|a.     |Exécutez la commande show interface interface switchport pour vérifier que le VLAN natif est maintenant 99.
+|a.     a|Exécutez la commande show interface interface switchport pour vérifier que le VLAN natif est maintenant 99.
+.command iOS
+[source,bash]
+----
+S3#show interfaces switchport
+----
 
+.report iOS
+----
+Name: Gig0/2
+Switchport: Enabled
+Administrative Mode: trunk
+Operational Mode: trunk
+Administrative Trunking Encapsulation: dot1q
+Operational Trunking Encapsulation: dot1q
+Negotiation of Trunking: On
+Access Mode VLAN: 1 (default)
+Trunking Native Mode VLAN: 99 (Native)
+Voice VLAN: none
+Administrative private-vlan host-association: none
+Administrative private-vlan mapping: none
+Administrative private-vlan trunk native VLAN: none
+Administrative private-vlan trunk encapsulation: dot1q
+Administrative private-vlan trunk normal VLANs: none
+Administrative private-vlan trunk private VLANs: none
+Operational private-vlan: none
+Trunking VLANs Enabled: All
+Pruning VLANs Enabled: 2-1001
+Capture Mode Disabled
+Capture VLANs Allowed: ALL
+Protected: false
+Unknown unicast blocked: disabled
+Unknown multicast blocked: disabled
+Appliance trust: none
+----
 |b.    a| Utilisez la commande show vlan pour afficher les informations concernant les VLAN configurés.
 
 Pourquoi le port G0/1 sur S2 n'est-il plus affecté au VLAN 1 ?
 
 [TIP,caption=Réponse]
 ====
-
+Car il est affecté a trunk
 ====
 
 |===
