@@ -17,8 +17,8 @@
 
 == Objectifs
 
-*Partie 1: Vérifié les VLAN
-*Partie 2: Configurer Trunks
+* Partie 1: Vérifié les VLAN
+* Partie 2: Configurer Trunks
 
 == Contexte
 
@@ -34,8 +34,95 @@ Ouvrir la fenêtre de configuration
 
 [frame=none,grid=none,cols="~,~"]
 |===
-|a.     | Sur S1, émettez la commande qui affichera tous les VLAN configurés. Il devrait y avoir dix VLAN au total. Notez que les 26 ports d'accès du commutateur sont affectés au VLAN 1.
-|b.     |Sur S2 et S3, affichez et vérifiez que tous les VLAN sont configurés et attribués aux ports de commutateur corrects conformément à la table d'adressage.
+|a.     a| Sur S1, émettez la commande qui affichera tous les VLAN configurés. Il devrait y avoir dix VLAN au total. Notez que les 26 ports d'accès du commutateur sont affectés au VLAN 1.
+
+.command iOS
+[source,bash]
+----
+S1>show vlan brief 
+----
+
+.retour iOS
+----
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                Fa0/5, Fa0/6, Fa0/7, Fa0/8
+                                                Fa0/9, Fa0/10, Fa0/11, Fa0/12
+                                                Fa0/13, Fa0/14, Fa0/15, Fa0/16
+                                                Fa0/17, Fa0/18, Fa0/19, Fa0/20
+                                                Fa0/21, Fa0/22, Fa0/23, Fa0/24
+                                                Gig0/1, Gig0/2
+10   Faculty/Staff                    active    
+20   Students                         active    
+30   Guest(Default)                   active    
+88   Management                       active    
+99   Native                           active    
+1002 fddi-default                     active    
+1003 token-ring-default               active    
+1004 fddinet-default                  active    
+1005 trnet-default                    active 
+----
+|b.     a|Sur S2 et S3, affichez et vérifiez que tous les VLAN sont configurés et attribués aux ports de commutateur corrects conformément à la table d'adressage.
+
+Sur S2
+
+.command iOS
+[source,bash]
+----
+S2>show vlan brief 
+----
+
+.retour iOS
+----
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                Fa0/5, Fa0/7, Fa0/8, Fa0/9
+                                                Fa0/10, Fa0/12, Fa0/13, Fa0/14
+                                                Fa0/15, Fa0/16, Fa0/17, Fa0/19
+                                                Fa0/20, Fa0/21, Fa0/22, Fa0/23
+                                                Fa0/24, Gig0/1, Gig0/2
+10   Faculty/Staff                    active    Fa0/11
+20   Students                         active    Fa0/18
+30   Guest(Default)                   active    Fa0/6
+88   Management                       active    
+99   Native                           active    
+1002 fddi-default                     active    
+1003 token-ring-default               active    
+1004 fddinet-default                  active    
+1005 trnet-default                    active
+----
+
+Sur S3
+
+.command iOS
+[source,bash]
+----
+S3>show vlan brief 
+----
+
+.retour iOS
+----
+VLAN Name                             Status    Ports
+---- -------------------------------- --------- -------------------------------
+1    default                          active    Fa0/1, Fa0/2, Fa0/3, Fa0/4
+                                                Fa0/5, Fa0/7, Fa0/8, Fa0/9
+                                                Fa0/10, Fa0/12, Fa0/13, Fa0/14
+                                                Fa0/15, Fa0/16, Fa0/17, Fa0/19
+                                                Fa0/20, Fa0/21, Fa0/22, Fa0/23
+                                                Fa0/24, Gig0/1, Gig0/2
+10   Faculty/Staff                    active    Fa0/11
+20   Students                         active    Fa0/18
+30   Guest(Default)                   active    Fa0/6
+88   Management                       active    
+99   Native                           active    
+1002 fddi-default                     active    
+1003 token-ring-default               active    
+1004 fddinet-default                  active    
+1005 trnet-default                    active
+----
+
 |===
 
 Fermer la fenêtre de configuration
@@ -43,6 +130,13 @@ Fermer la fenêtre de configuration
 ==== Étape 2: Vérifiez la perte de connectivité entre les PC sur le même réseau.
 
 Ping entre les hôtes sur le même VLAN sur les différents commutateurs. Bien que PC1 et PC4 soient sur le même réseau, ils ne peuvent pas se cingler l'un l'autre. En effet, les ports connectant les commutateurs sont affectés au VLAN 1 par défaut. Afin de fournir une connectivité entre les PC sur le même réseau et VLAN, les troncs doivent être configurés.
+
+.Test Pint
+****
+* *PC1* -> *PC4* = 'Request timed out'
+* *PC2* -> *PC5* = 'Request timed out'
+* *PC3* -> *PC6* = 'Request timed out'
+****
 
 === Partie 2: Configurer Trunk
 
