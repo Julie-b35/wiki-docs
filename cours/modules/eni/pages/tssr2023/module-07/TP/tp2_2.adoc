@@ -129,7 +129,7 @@ Fermer la fenêtre de configuration
 
 ==== Étape 2: Vérifiez la perte de connectivité entre les PC sur le même réseau.
 
-Ping entre les hôtes sur le même VLAN sur les différents commutateurs. Bien que PC1 et PC4 soient sur le même réseau, ils ne peuvent pas se cingler l'un l'autre. En effet, les ports connectant les commutateurs sont affectés au VLAN 1 par défaut. Afin de fournir une connectivité entre les PC sur le même réseau et VLAN, les troncs doivent être configurés.
+Test ping entre les hôtes sur le même VLAN sur les différents commutateurs. Bien que PC1 et PC4 soient sur le même réseau, ils ne peuvent pas se pinger l'un l'autre. En effet, les ports connectant les commutateurs sont affectés au VLAN 1 par défaut. Afin de fournir une connectivité entre les PC sur le même réseau et VLAN, les troncs doivent être configurés.
 
 .Test Pint
 ****

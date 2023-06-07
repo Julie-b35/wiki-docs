@@ -1,0 +1,356 @@
+= TP 3/6 Packet Tracer : Configuration des mots de passe sécurisés et de SSH
+:navtitle: Config Mot de passe et SSH
+
+.Table d'adressage
+****
+[cols="~,~,~,~,~,~"]
+|===
+| Device | Interface | IP Address   | Subnet Mask   | Default Gateway
+| RTA    | G0/0      | 172.16.1.1   | 255.255.255.0 | N/A
+| PCA    | NIC       | 172.16.1.10  | 255.255.255.0 | 172.16.1.1
+| SW1    | VLAN 1    | 172.16.1.2   | 255.255.255.0 | 172.16.1.1
+|===
+****
+== Objectif
+
+L'administrateur réseau vous a demandé de préparer RTA et SW1 en vue de leur déploiement. Avant de les connecter au réseau, les mesures de sécurité doivent être activées.
+
+
+== Étape 1: Configuration de la sécurité de base sur le routeur
+
+Ouvrir l'invite de commande
+
+[cols="~,~",frame=none,grid=none]
+|===
+|a.     a|Configurer l'adressage IP sur PCA conformément au tableau d'adressage.
+
+image::tssr2023/modules-07/TP/02_3/01.png[aligne"center"]
+
+|b.     a| Console dans RTA à partir du terminal sur PCA.
+
+image::tssr2023/modules-07/TP/02_3/02.png[aligne"center"]
+
+|c.     a|Configurez le nom d'hôte comme RTA.
+
+.command iOS
+[source,cmd]
+----
+Router>enable
+Router#conf t
+Router(config)#hostname RTA
+----
+
+|d.     a|Configurez l'adressage IP sur RTA et activez l'interface.
+
+.command iOS
+[source,cmd]
+----
+RTA(config)#interface g0/0
+RTA(config-if)#ip address 172.16.1.1 255.255.255.0 
+RTA(config-if)#no shutdown 
+RTA(config-if)#exit
+----
+
+
+
+|e.     a|Chiffrer tous les mots de passe en clair.
+
+.command iOS
+[source,cmd]
+----
+RTA(config)#service password-encryption
+----
+
+|f.      a|Fixez la longueur minimale du mot de passe à 10.
+
+.command iOS
+[source,cmd]
+----
+RTA(config)# security password min-length 10
+----
+
+
+
+|g.     a|Définissez un mot de passe secret fort de votre choix. 
+
+[NOTE,caption=Remarque]
+====
+Choisissez un mot de passe dont vous vous souviendrez, sinon vous devrez réinitialiser l'activité si vous êtes bloqué hors de l'appareil.
+====
+
+.command iOS
+[source,cmd]
+----
+RTA(config)#line console 0
+RTA(config-line)#password LoginUsers
+RTA(config-line)#login
+RTA(config-line)#exit
+RTA(config)#enable secret LoginRootSan
+----
+
+|h.     a|Désactiver la recherche DNS.
+
+.command iOS
+[source,cmd]
+----
+RTA(config)# no ip domain-lookup
+----
+
+|i.      a|Définissez le nom de domaine à CCNA.com (sensible à la casse pour la notation dans PT).
+
+.command iOS
+[source,cmd]
+----
+RTA(config)# ip domain-name CCNA.com
+----
+
+|j.      a|Créez un utilisateur de votre choix avec un mot de passe crypté fort.
+
+.command iOS
+[source,cmd]
+----
+RTA(config)#username julie secret LoginBidule
+----
+
+
+|k.     a|Générer des clés RSA de 1024 bits.
+
+NOTE: Dans Packet Tracer, entrez la commande `*crypto key generate rsa*` et appuyez sur Enter pour continuer.
+
+.command iOS
+[source,cmd]
+----
+RTA(config)# crypto key generate rsa
+----
+
+----
+The name for the keys will be: RTA.CCNA.com
+Choose the size of the key modulus in the range of 360 to 2048 for your
+General Purpose Keys. Choosing a key modulus greater than 512 may take
+a few minutes.
+How many bits in the modulus [512]: *1024*
+----
+
+| l.      a|Bloquer pendant trois minutes toute personne qui ne parvient pas à se connecter après quatre tentatives dans un délai de deux minutes.
+
+.command iOS
+[source,cmd]
+----
+RTA(config)# login block-for 180 attempts 4 within 120
+----
+
+|m.   a|Configurez toutes les lignes VTY pour l'accès SSH et utilisez les profils d'utilisateur locaux pour l'authentification.
+
+.command iOS
+[source,cmd]
+----
+RTA(config)# line vty 0 4
+RTA(config-line)# transport input ssh
+RTA(config-line)# login local
+----
+
+|n.     a|Réglez le délai d'attente du mode EXEC à 6 minutes sur les lignes VTY.
+
+.command iOS
+[source,cmd]
+----
+RTA(config-line)# exec-timeout 6
+----
+
+|o.     a|Sauvegarder la configuration dans la NVRAM.
+
+.command iOS
+[source,cmd]
+----
+RTA(config-line)# end
+RTA#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+----
+
+|p.     a|Accédez à l'invite de commande sur le bureau de l'PCA pour établir une connexion SSH avec RTA.
+
+Ouvrir la ligne de commande
+
+.command Cmd
+[source,cmd]
+----
+C:\> ssh /?
+
+Packet Tracer PC SSH
+
+Usage: SSH -l username target
+
+C:\>ssh -l julie 172.16.1.1
+password: LoginBidule
+RTA>
+----
+
+|===
+
+
+
+== Étape 2: Configuration de la sécurité de base sur le commutateur
+
+Configurez le commutateur SW1 avec les mesures de sécurité correspondantes. Reportez-vous aux étapes de configuration du routeur si vous avez besoin d'aide supplémentaire.
+
+[cols="~,~",frame=none,grid=none]
+|===
+|a.     a|Cliquez sur SW1 et sélectionnez l'onglet CLI.
+
+image::tssr2023/modules-07/TP/02_3/03.png[aligne"center"]
+
+|b.    a|Configurez le nom d'hôte comme SW1.
+
+.command Cmd
+[source,cmd]
+----
+Switch(config)#hostname SW1
+----
+
+|c.    a| Configurez l'adressage IP sur SW1 VLAN1 et activez l'interface.
+
+.command Cmd
+[source,cmd]
+----
+SW1(config-if)#ip address 172.16.1.2 255.255.255.0
+SW1(config-if)#no shutdown 
+----
+
+|d.    a| Configurez l'adresse de la passerelle par défaut.
+
+.command Cmd
+[source,cmd]
+----
+SW1(config)#ip default-gateway 172.16.1.1
+----
+
+|e.    a| Désactiver tous les ports de commutation inutilisés.
+
+
+[NOTE]
+====
+Sur un commutateur, une bonne pratique de sécurité consiste à désactiver les ports inutilisés. 
+
+Pour ce faire, il suffit de fermer chaque port à l'aide de la commande "shutdown".
+
+Pour ce faire, il faut accéder à chaque port individuellement. 
+
+Il existe une méthode plus rapide pour apporter des modifications à plusieurs ports à la fois en utilisant la commande interface range. 
+Sur SW1, tous les ports à l'exception de FastEthernet0/1 et GigabitEthernet0/1 peuvent être arrêtés à l'aide de la commande suivante :
+
+.command iOS
+[source,cmd]
+----
+SW1(config)# interface range F0/2-24, G0/2
+SW1(config-if-range)# shutdown
+----
+
+.retour iOS
+----
+%LINK-5-CHANGED: Interface FastEthernet0/2, changed state to administratively down
+%LINK-5-CHANGED: Interface FastEthernet0/3, changed state to administratively down
+<Output omitted>
+%LINK-5-CHANGED: Interface FastEthernet0/24, changed state to administratively down
+%LINK-5-CHANGED: Interface GigabitEthernet0/2, changed state to administratively down
+----
+
+La commande utilise la plage de ports 2-24 pour les ports FastEthernet, puis une plage de ports unique GigabitEthernet0/2.
+====
+
+.command iOS
+[source,cmd]
+----
+SW1(config)# interface range F0/2-24, G0/2
+SW1(config-if-range)# shutdown
+----
+
+|f.   a|   Chiffrer tous les mots de passe en clair.
+
+.command Cmd
+[source,cmd]
+----
+SW1(config)#service password-encryption
+----
+
+|g.   a|  Définissez un mot de passe secret fort de votre choix.
+
+.command Cmd
+[source,cmd]
+----
+SW1(config)#line console 0
+SW1(config-line)#password LoginUsers
+SW1(config-line)#login
+SW1(config-line)#exit
+SW1(config)#enable secret LoginRootSan
+----
+
+|h.   a| Désactiver la recherche DNS.
+
+.command Cmd
+[source,cmd]
+----
+SW1(config)#no ip domain-lookup
+----
+
+|i.   a|  Définissez le nom de domaine à CCNA.com (sensible à la casse pour la notation dans PT).
+
+.command Cmd
+[source,cmd]
+----
+SW1(config)#ip domain-name CCNA.com
+----
+
+|j.   a|  Créez un utilisateur de votre choix avec un mot de passe crypté fort.
+
+.command Cmd
+[source,cmd]
+----
+SW1(config)#username julie secret LoginBidule
+----
+
+|k.   a| Générer des clés RSA de 1024 bits.
+
+.command Cmd
+[source,cmd]
+----
+SW1(config)#crypto key generate rsa 
+----
+
+|l.   a|  Configurez toutes les lignes VTY pour l'accès SSH et utilisez les profils d'utilisateur locaux pour l'authentification.
+
+.command Cmd
+[source,cmd]
+----
+
+SW1(config-line)#transport input ssh 
+SW1(config-line)#login local 
+----
+
+|m.   a| Réglez le délai d'attente du mode EXEC à 6 minutes sur toutes les lignes VTY.
+
+.command Cmd
+[source,cmd]
+----
+SW1(config-line)#exec-timeout 6
+----
+
+|n.   a|  Sauvegarder la configuration dans la NVRAM.
+
+.command Cmd
+[source,cmd]
+----
+SW1#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+----
+
+|===
+
+----
+Mdp login : LoginUsers
+Mdp root : LoginRootSan
+SSH : Login : julie ,MDP : LoginBidule
+----
