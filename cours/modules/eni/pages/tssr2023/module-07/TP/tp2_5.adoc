@@ -1,2 +1,289 @@
-= TP 5/8 Packet Tracer : 
-:navtitle: TP 5/8
+= TP 5/8 Packet Tracer : Configuration Switch Sécurité des ports
+:navtitle: Config Switch Sécurité Port
+
+
+Addressing Table
+
+Device
+
+Interface
+
+IP Address
+
+Subnet Mask
+
+S1
+
+VLAN 1
+
+10.10.10.2
+
+255.255.255.0
+
+PC1
+
+NIC
+
+10.10.10.10
+
+255.255.255.0
+
+PC2
+
+NIC
+
+10.10.10.11
+
+255.255.255.0
+
+Rogue Laptop
+
+NIC
+
+10.10.10.12
+
+255.255.255.0
+
+Objective
+
+Part 1: Configure Port Security
+
+Part 2: Verify Port Security
+
+Background
+
+In this activity, you will configure and verify port security on a switch. Port security allows you to restrict a port’s ingress traffic by limiting the MAC addresses that are allowed to send traffic into the port.
+
+Part 1:     Configure Port Security
+
+[cols="~,~",frame=none,grid=none]
+|===
+|a.     a|Accédez à la ligne de commande de S1 et activez la sécurité des ports sur les ports Fast Ethernet 0/1 et 0/2.
+
+.command iOS
+[source,cmd]
+----
+S1(config)# interface range f0/1 - 2
+S1(config-if-range)# switchport port-security
+----
+
+|b.    a|Définissez le maximum pour qu'un seul appareil puisse accéder aux ports Fast Ethernet 0/1 et 0/2.
+
+.command iOS
+[source,cmd]
+----
+S1(config-if-range)# switchport port-security maximum 1
+----
+
+|c.    a|Sécuriser les ports de manière à ce que l'adresse MAC d'un appareil soit apprise dynamiquement et ajoutée à la configuration en cours.
+
+.command iOS
+[source,cmd]
+----
+S1(config-if-range)# switchport port-security mac-address sticky
+----
+
+|d.    a|Définissez la violation de manière à ce que les ports Fast Ethernet 0/1 et 0/2 ne soient pas désactivés lorsqu'une violation se produit, mais que les paquets sont abandonnés à partir d'une source inconnue.
+
+.command iOS
+[source,cmd]
+----
+S1(config-if-range)# switchport port-security violation restrict
+----
+
+
+|e.     a|Désactiver tous les ports inutilisés restants. Conseil : utilisez le mot-clé range pour appliquer cette configuration à tous les ports simultanément.
+
+.command iOS
+[source,cmd]
+----
+S1(config-if-range)# interface range f0/3 - 24 , g0/1 - 2
+S1(config-if-range)# shutdown
+----
+|===
+
+Part 2:     Verify Port Security
+
+[cols="~,~",frame=none,grid=none]
+|===
+|a.     a|Depuis PC1, pinger PC2
+
+.command Cmd
+[source,cmd]
+----
+C:\>ping 10.10.10.11
+----
+
+.retour CMD
+----
+Pinging 10.10.10.11 with 32 bytes of data:
+
+Reply from 10.10.10.11: bytes=32 time<1ms TTL=128
+Reply from 10.10.10.11: bytes=32 time<1ms TTL=128
+Reply from 10.10.10.11: bytes=32 time<1ms TTL=128
+Reply from 10.10.10.11: bytes=32 time<1ms TTL=128
+
+Ping statistics for 10.10.10.11:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+----
+
+|b.    a|Vérifiez que la sécurité des ports est activée et que les adresses MAC de PC1 et PC2 ont été ajoutées à la configuration en cours d'exécution.
+
+.command iOS
+[source,cmd]
+----
+S1# show run \| begin interface
+----
+
+.retour iOS
+----
+interface FastEthernet0/1
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+ switchport port-security violation restrict 
+ switchport port-security mac-address sticky 00E0.B027.2245
+!
+interface FastEthernet0/2
+ switchport mode access
+ switchport port-security
+ switchport port-security mac-address sticky 
+ switchport port-security violation restrict 
+ switchport port-security mac-address sticky 0001.647C.697E
+----
+
+|c.   a|Branchez l'ordinateur portable Rogue sur un port de commutateur inutilisé et remarquez que les voyants de liaison sont rouges.
+
+image::tssr2023/modules-07/TP/02_5/01.png[aligne"center"]
+
+|d.    a|Activez le port et vérifiez que l'ordinateur portable inconnu peut envoyer un ping à PC1 et PC2. Après vérification, fermez le port connecté à l'ordinateur portable malveillant.
+
+Tentative de ping vers PC1
+
+.command iOS
+[source,cmd]
+----
+C:\> ping 10.10.10.2
+----
+
+.retour iOS
+----
+Pinging 10.10.10.2 with 32 bytes of data:
+
+Reply from 10.10.10.2: bytes=32 time<1ms TTL=255
+Reply from 10.10.10.2: bytes=32 time<1ms TTL=255
+Reply from 10.10.10.2: bytes=32 time<1ms TTL=255
+Reply from 10.10.10.2: bytes=32 time<1ms TTL=255
+
+Ping statistics for 10.10.10.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+----
+
+Tentative de ping vers PC2
+
+.command iOS
+[source,cmd]
+----
+C:\> ping 10.10.10.11
+----
+
+.retour iOS
+----
+Pinging 10.10.10.11 with 32 bytes of data:
+
+Reply from 10.10.10.11: bytes=32 time<1ms TTL=128
+Reply from 10.10.10.11: bytes=32 time<1ms TTL=128
+Reply from 10.10.10.11: bytes=32 time<1ms TTL=128
+Reply from 10.10.10.11: bytes=32 time=10ms TTL=128
+
+Ping statistics for 10.10.10.11:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 10ms, Average = 2ms
+----
+
+| e.    a|Déconnectez le PC2 et connectez l'ordinateur portable malveillant au port du PC2. Vérifiez que l'ordinateur portable malveillant n'est pas en mesure d'envoyer un signal ping à l'ordinateur PC1.
+
+image::tssr2023/modules-07/TP/02_5/02.png[aligne"center"]
+
+Tentative de ping vers PC1
+
+.command iOS
+[source,cmd]
+----
+C:\> ping 10.10.10.2
+----
+
+.retour iOS
+----
+Pinging 10.10.10.2 with 32 bytes of data:
+
+Request timed out.
+Request timed out.
+Request timed out.
+Request timed out.
+
+Ping statistics for 10.10.10.2:
+    Packets: Sent = 4, Received = 0, Lost = 4 (100% loss),
+----
+
+|f.   a|Affiche les violations de la sécurité du port auquel l'ordinateur portable Rogue est connecté.
+
+.command iOS
+[source,cmd]
+----
+S1#show port-security interface f0/2
+----
+
+.retour iOS
+----
+Port Security              : Enabled
+Port Status                : Secure-up
+Violation Mode             : Restrict
+Aging Time                 : 0 mins
+Aging Type                 : Absolute
+SecureStatic Address Aging : Disabled
+Maximum MAC Addresses      : 1
+Total MAC Addresses        : 1
+Configured MAC Addresses   : 0
+Sticky MAC Addresses       : 1
+Last Source Address:Vlan   : 0002.4A42.C51C:1
+Security Violation Count   : 8
+----
+
+|g.    a|Disconnect Rouge Laptop and reconnect PC2. Verify PC2 can ping PC1.
+
+.command iOS
+[source,cmd]
+----
+C:\> ping 10.10.10.2
+----
+
+.retour iOS
+----
+Pinging 10.10.10.2 with 32 bytes of data:
+
+Reply from 10.10.10.2: bytes=32 time<1ms TTL=255
+Reply from 10.10.10.2: bytes=32 time<1ms TTL=255
+Reply from 10.10.10.2: bytes=32 time<1ms TTL=255
+Reply from 10.10.10.2: bytes=32 time<1ms TTL=255
+
+Ping statistics for 10.10.10.2:
+    Packets: Sent = 4, Received = 4, Lost = 0 (0% loss),
+Approximate round trip times in milli-seconds:
+    Minimum = 0ms, Maximum = 0ms, Average = 0ms
+----
+
+
+|h.    a|Pourquoi le PC2 est-il en mesure d'envoyer un ping au PC1, alors que le portable Rouge ne l'est pas ?
+
+[TIP,caption=Réponse]
+====
+Il y a eu une mise en place de filtrage MAC sur les port, seul 1 adresse MAC pouvais utilisé le port f0/2 du switch S1
+Étant donnée que la configuration initial du Switch PC2 communiquais avec PC1, le switch à récupéré leur adresse MAC.
+De ce fait le PC 'rogue' ne peut pinger sur le réseau.
+====
