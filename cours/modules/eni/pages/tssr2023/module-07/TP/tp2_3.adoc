@@ -1,4 +1,4 @@
-= TP 3/6 Packet Tracer : Mise en œuvre de VLAN et de trunk
+= TP 3/8 Packet Tracer : Mise en œuvre de VLAN et de trunk
 :navtitle: VLAN / trunk
 
 .Table d'adressage

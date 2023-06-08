@@ -1,4 +1,4 @@
-= TP 1/6 Packet Tracer : Configuration VLAN
+= TP 1/8 Packet Tracer : Configuration VLAN
 :navtitle: Configuration VLAN
 
 
