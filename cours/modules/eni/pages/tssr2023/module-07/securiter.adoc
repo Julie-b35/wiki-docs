@@ -173,6 +173,7 @@ image::tssr2023/modules-07/Securiter/08.png[align="center"]
 .Listes de contrôle d’accès numérotées
 ****
 * Les ACL numérotées 1-99 ou 1300-1999 sont des ACL standard, tandis que les ACL numérotées 100-199 ou 2000-2699 sont des ACL étendues.
+
 image::tssr2023/modules-07/Securiter/09.png[align="center"]
 ****
 
@@ -180,6 +181,7 @@ image::tssr2023/modules-07/Securiter/09.png[align="center"]
 ****
 * Les ACL nommées sont la méthode préférée à utiliser lors de la configuration des ACL
 * Cela permet d’indiquer leur but
+
 image::tssr2023/modules-07/Securiter/10.png[align="center"]
 ****
 
@@ -200,6 +202,7 @@ Lors de la configuration d'une ACL complexe, il est suggéré :
 .Syntaxe des listes de contrôle d'accès IPv4 standard numérotées
 ****
 Pour créer une liste ACL standard numérotée, utilisez la commande access-list.
+
 image::tssr2023/modules-07/Securiter/11.png[align="center"]
 
 [NOTE,caption=info]
