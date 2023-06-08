@@ -2,6 +2,7 @@ authpriv
 autofetch
 backquote
 blkid
+cyberedu
 daem
 dbus
 dconf

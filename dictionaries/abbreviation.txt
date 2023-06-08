@@ -1,6 +1,7 @@
 ANSSI
 Aosn
 APIPA
+appollo
 ARPA
 CCNA
 CILL
@@ -48,8 +49,11 @@ OSPF
 perating
 POSIX
 Privilegier
+PSSI
 rganization
+RGPD
 rotocol
+RSSI
 scpol
 Securiser
 servername

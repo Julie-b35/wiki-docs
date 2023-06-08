@@ -37,3 +37,97 @@ link:https://www.ssi.gouv.fr/guide/guide-dhygiene-informatique/[]
 
 image:tssr2023/modules-07/Securiter/01.jpg[]
 ****
+
+// Slide 65
+=== Sécurité avec l'ANSSI et CyberEDU
+
+[NOTE,caption=Source]
+====
+Nous allons parcourir ensemble les ressources suivantes :
+
+* link:https://www.ssi.gouv.fr/uploads/2016/05/cyberedu_module_1_notions_de_base_02_2017.pdf[Cyber sécurité - Module 01 - Notion de base.pptx]
+* link:https://www.ssi.gouv.fr/uploads/2016/05/cyberedu_module_2_hygiene_informatique_02_2017.pdf[Cyber sécurité - Module 02 - Hygiène Informatique]
+
+Ces documents PPT sont sous licence Creative Commons Attribution 3.0 France.
+
+Il peuvent être trouvé sur link:https://www.ssi.gouv.fr/administration/formations/cyberedu/contenu-pedagogique-cyberedu/[ssi.gouv.fr]
+====
+
+// Slide 104
+=== Politique de sécurité
+
+* La sécurité se dessine dans une entreprise par une Politique de Sécurité du Système Informatique (PSSI).
+* Généralement écrite par la DSI (Directeur du Service Informatique) et surtout par le RSSI (Responsable de la Sécurité du Service Informatique).
+* La PSSI reflète la vision stratégique de la direction de l’organisme en matière de sécurité des systèmes d’information.
+* En découle : la sécurité de l’organisme au niveau informatique, la charte informatique, le respect des lois liées à l’informatique (RGPD, Articles 323-1 à 323-7, etc.).
+* La PSSI entraîne donc la rédaction de plusieurs documents liés à la sécurité d’un point de vue politique (décisions et gestion SI) et technique (application des décisions).
+* Notamment la définition d’une politique de filtrage réseau d’un pare-feu
+* Ordre du contenu :
+** Section n°1 - Règles d’autorisation des flux à destination du pare-feu
+** Section n°2 - Règles d’autorisation des flux émis par le pare-feu
+** Section n°3 - Règle de protection du pare-feu
+** Section n°4 - Règles d’autorisation des flux métiers
+** Section n°5 - Règles « antiparasites » = les flux non autorisés dont la trace n’est volontairement pas conservée
+** Section n°6 - Règle d’interdiction finale = (tout ce qui n’est pas explicitement autorisé est implicitement interdit)
+
+image:tssr2023/modules-07/Securiter/02.png[]
+
+=== Convention de nommage
+
+* Plusieurs orientations sont possibles pour définir une convention de nommage, voici deux exemples :
+** Convention de nommage fonctionnelle : les objets sont nommés en fonction de leur rôle
+*** exemple : srv_dns-interne, tcp_appli1.
+** Convention de nommage technique : les objets sont nommés en fonction d’une caractéristique
+*** technique qui leur est propre (adresse IP, nom d’hôte, port), par exemple : srv_appollo, tcp_21000
+
+=== Liste de ports
+
+image:tssr2023/modules-07/Securiter/03.png[]
+
+== Objectif des listes de contrôle d'accès (ACL)
+
+=== Qu'est-ce qu'une liste de contrôle d'accès
+
+
+.LES ACL (Access Control List) sont composées d’ACE (Access Control Entry). Leur but est de :
+****
+* Limiter le trafic du réseau pour en augmenter les performances
+* Contrôler le flux de trafic
+* Fournir un niveau de sécurité de base pour l'accès réseau
+* Filtrer le trafic en fonction de son type
+* Contrôler les hôtes pour autoriser ou refuser l'accès aux services de réseau
+* Donner la priorité à certaines classes de trafic réseau
+****
+
+=== Filtrage des paquets
+
+.2 types d’ACL
+****
+* ACL standard - Les ACL filtrent au niveau de la couche 3 à l'aide de l'adresse IPv4 source.
+* ACL étendues - Filtre ACL à la couche 3 à l'aide de l'adresse IPv4 source et/ou destination.
+* Elles filtrent au niveau de la couche 4 en utilisant les ports TCP et UDP.
+
+image::tssr2023/modules-07/Securiter/04.png[align="center"]
+****
+
+=== Le fonctionnement des listes de contrôle d'accès
+
+* Il est important de bien identifier le flux lorsqu’on écrit des ACL car elles sont appliquées sur des interfaces en entrée ou en sortie.
+* Ici, le flux traverse le flux de gauche à droite.
+
+image:tssr2023/modules-07/Securiter/05.png[]
+
+[NOTE,caption=Info]
+====
+Les ACL ne gèrent pas les paquets provenant du routeur lui-même.
+====
+
+1. Le routeur extrait l'adresse IPv4 source de l'en-tête du paquet.
+2. Le routeur commence en haut de l'ACL et compare l'adresse IPv4 source à chaque ACE dans un ordre séquentiel.
+3. Lorsqu'une correspondance est établie, le routeur exécute l'instruction, soit en autorisant soit en refusant le paquet, et les ACE restantes ne sont pas analysées.
+4. Si l'adresse IPv4 source ne correspond à aucun ACE de l'ACL, le paquet est ignoré car une ACE de refus implicite est automatiquement appliqué à toutes les ACL.
+
+[TIP]
+====
+Tout ce qui n’est pas explicitement autorisé est implicitement refusé !
+====
