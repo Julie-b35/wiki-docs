@@ -131,3 +131,79 @@ Les ACL ne gèrent pas les paquets provenant du routeur lui-même.
 ====
 Tout ce qui n’est pas explicitement autorisé est implicitement refusé !
 ====
+
+== Masque génériques dans les listes de contrôle d'accès
+
+=== Wildcard Mask
+
+image:tssr2023/modules-07/Securiter/06.png[]
+
+=== Types de masques génériques
+
+.Masque générique pour correspondre à une plage d'adresses IPv4
+****
+* ACL 10 a besoin d'un ACE qui autorise tous les hôtes des réseaux 192.168.16.0/24, 192.168.17.0/24,..., 192.168.31.0/24.
+* Lorsqu'il est traité, le masque générique 0.0.15.255 autorise tous les hôtes des réseaux 192.168.16.0/24 à 192.168.31.0/24. L'ACE résultant dans l'ACL 10 serait access-list 10 permit 192.168.16.0 0.0.15.255.
+
+image::tssr2023/modules-07/Securiter/07.png[align="center"]
+****
+
+=== Les mots-clés des masques génériques
+
+.Deux mots-clés pour identifier les utilisations les plus courantes du masquage générique :
+****
+* *host* - remplace le masque 0.0.0.0 - il indique que tous les bits d'adresse IPv4 doivent correspondre pour pouvoir filtrer juste une adresse d'hôte.
+* *any* - remplace le masque 255.255.255.255 - il indique qu'il convient d'ignorer l'intégralité de l'adresse IPv4 ou d'accepter n'importe quelle adresse.
+****
+
+=== Directives sur la création des listes de contrôle d'accès
+
+image::tssr2023/modules-07/Securiter/08.png[align="center"]
+
+=== Types de listes de contrôle d'accès IPv4
+
+.Types de listes de contrôle d'accès IPv4
+****
+* *ACL standard* - Ces listes autorisent ou refusent les paquets basés uniquement sur l'adresse IPv4 source.
+** Les listes de contrôle d'accès standard doivent être placées le plus près possible de la destination.
+* *ACL étendues* - Ces listes autorisent ou refusent les paquets basés sur l'adresse IPv4 source et l'adresse IPv4 de destination, le type de protocole, les ports TCP ou UDP source et destination et plus encore.
+** Les listes de contrôle d'accès étendues doivent être placées le plus près possible de la source du trafic à filtrer.
+****
+
+.Listes de contrôle d’accès numérotées
+****
+* Les ACL numérotées 1-99 ou 1300-1999 sont des ACL standard, tandis que les ACL numérotées 100-199 ou 2000-2699 sont des ACL étendues.
+image::tssr2023/modules-07/Securiter/09.png[align="center"]
+****
+
+.Listes de contrôle d'accès nommées
+****
+* Les ACL nommées sont la méthode préférée à utiliser lors de la configuration des ACL
+* Cela permet d’indiquer leur but
+image::tssr2023/modules-07/Securiter/10.png[align="center"]
+****
+
+=== Configurer les listes de contrôle d'accès IPv4 standard
+
+.Créer une ACL
+****
+Lors de la configuration d'une ACL complexe, il est suggéré :
+
+* D’utiliser un éditeur de texte et écrire les spécificités de la stratégie à mettre en oeuvre.
+* D’inclure des remarques pour documenter l'ACL.
+* De copier et coller les commandes.
+* De tester toujours soigneusement une liste ACL.
+****
+
+=== Syntaxe des listes de contrôle d'accès IOv4 standard numérotées
+
+.Syntaxe des listes de contrôle d'accès IPv4 standard numérotées
+****
+Pour créer une liste ACL standard numérotée, utilisez la commande access-list.
+image::tssr2023/modules-07/Securiter/11.png[align="center"]
+
+[NOTE,caption=info]
+====
+Utilisez la commande de configuration globale no access-list access-list-number pour supprimer une ACL standard numérotée.
+====
+****
