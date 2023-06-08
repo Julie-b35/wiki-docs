@@ -207,6 +207,16 @@ image::tssr2023/modules-07/Securiter/11.png[align="center"]
 
 [NOTE,caption=info]
 ====
-Utilisez la commande de configuration globale no access-list access-list-number pour supprimer une ACL standard numérotée.
+Utilisez la commande de configuration globale *no access-list access-list-number* pour supprimer une ACL standard numérotée.
 ====
 ****
+
+=== Configurer les listes de contrôle d'accès IPv4 standard
+
+.Syntaxe des listes de contrôle d'accès IPv4 standard nommées
+****
+ip access-list standard
+* Les noms des listes de contrôle d'accès doivent contenir uniquement des caractères alphanumériques, sont sensibles à la casse et doivent être uniques.
+* Vous n’êtes pas obligé de mettre des majuscules aux noms des listes de contrôle d’accès. En revanche, si vous le faites, vous les verrez bien mieux en affichant la sortie de la commande running-config.
+****
+
