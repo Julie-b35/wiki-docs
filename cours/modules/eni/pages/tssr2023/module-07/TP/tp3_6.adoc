@@ -1,2 +1,165 @@
 = TP 6/6 Packet Tracer : 
 :navtitle: titre TP 6/6
+
+Packet Tracer : configuration du protocole RIPv2
+
+Objectifs
+
+Partie 1 : configuration du protocole RIPv2
+
+Partie 2 : vérification des configurations
+
+Contexte
+
+Bien que le protocole RIP soit rarement utilisé dans les réseaux modernes, il est utile en ce sens qu'il permet de comprendre les principes de base du routage de réseau. Dans cet exercice, vous allez configurer une route par défaut, protocole RIP version 2, avec des instructions réseau appropriées et des interfaces passives, et vérifier l'intégralité de la connectivité.
+
+Partie 1 :     configuration du protocole RIPv2
+
+Étape 1 :     configurez RIPv2 sur R1.
+
+a.     Utilisez la commande appropriée pour créer une route par défaut sur R1 pour tout le trafic Internet afin de quitter le réseau via S0/0/1.
+
+.command iOS
+[source,bash]
+----
+R1(config)#ip route 0.0.0.0  0.0.0.0 209.165.200.224
+#ou
+R1(config)#ip route 0.0.0.0  0.0.0.0 serial0/0/1
+----
+
+b.    Passez en mode de configuration du protocole RIP.
+
+.command iOS
+[source,bash]
+----
+R1(config)#router rip
+----
+
+c.     Utilisez la version 2 du protocole RIP et désactivez la récapitulation des réseaux.
+
+.command iOS
+[source,bash]
+----
+R1(config-router)#version 2
+#Désactivation de la récapitulations des réseaux
+# intérêt de la commande auto-summary 
+# Si 
+R1(config-router)#no auto-summary 
+----
+
+****
+Pour désactiver la récapitulation automatique, saisissez la commande *no auto-summary* dans le mode de configuration *router rip*.
+****
+
+
+d.    Configurez le protocole RIP pour les réseaux qui se connectent à R1.
+
+.command iOS
+[source,bash]
+----
+R1(config-router)#version 2
+#Désactivation de la récapitulations des réseaux
+R1(config-router)#no auto-summary 
+R1(config-router)#network 192.168.1.0
+R1(config-router)#network 192.168.2.0
+----
+
+e.     Configurez le port LAN qui ne contient aucun routeur afin qu'il n'envoie pas d'informations de routage.
+
+
+.command iOS
+[source,bash]
+----
+R1(config-router)#passive-interface g0/0
+----
+
+
+f.     Annoncez la route par défaut configurée à l'étape 1a avec d'autres routeurs de protocole RIP.
+
+
+.command iOS
+[source,bash]
+----
+R1(config-router)#default-information originate
+----
+
+g.    Enregistrez la configuration.
+
+
+
+Étape 2 :     configurez RIPv2 sur R2.
+
+a.     Passez en mode de configuration du protocole RIP.
+
+b.    Utilisez la version 2 du protocole RIP et désactivez la récapitulation des réseaux.
+
+c.     Configurez RIP pour les réseaux connectés directement à R2.
+
+d.    Configurez l'interface qui ne contient aucun routeur afin qu'elle n'envoie pas d'informations de routage.
+
+e.     Enregistrez la configuration.
+
+
+.command iOS
+[source,bash]
+----
+R2(config)#router rip
+R2(config-router)#ver
+R2(config-router)#version 2
+R2(config-router)#no auto-summary 
+R2(config-router)#network 192.168.2.0
+R2(config-router)#network 192.168.4.0
+R2(config-router)#network 192.168.3.0
+R2(config-router)#pas
+R2(config-router)#passive-interface g0/0
+R2(config-router)#end
+R2#
+%SYS-5-CONFIG_I: Configured from console by console
+
+R2#cop
+R2#copy ru
+R2#copy running-config sta
+R2#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+
+----
+
+Étape 3 :     configurez RIPv2 sur R3.
+
+Répétez l'étape 2 sur R3.
+
+.command iOS
+[source,bash]
+----
+R3>enable 
+R3#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R3(config)#router rip
+R3(config-router)#version 2
+R3(config-router)#no auto-summary 
+R3(config-router)#passive-interface g0/0
+R3(config-router)#network 192.168.5.0
+R3(config-router)#network 192.168.4.0
+R3(config-router)#end
+R3#
+%SYS-5-CONFIG_I: Configured from console by console
+R3#copy running-config sta
+R3#copy running-config startup-config 
+Destination filename [startup-config]? 
+Building configuration...
+[OK]
+R3#
+----
+Partie 2 :     vérification des configurations
+
+Étape 1 :     Affichez les tables de routage de R1, R2 et R3.
+
+a.     Utilisez la commande appropriée pour afficher la table de routage de R1. Le protocole RIP (R) apparaît désormais avec les routes locales (L) et connectées (C) dans la table de routage. Tous les réseaux ont une entrée. Vous voyez également une route par défaut indiquée.
+
+b.    Affichez les tables de routage pour R2 et R3. Notez que chaque routeur comprend une liste complète de tous les réseaux 192.168.x.0 et une route par défaut.
+
+Étape 2 :     vérifiez la connectivité vers toutes les destinations.
+
+Chaque périphérique doit maintenant pouvoir envoyer une requête ping à tout autre périphérique à l'intérieur du réseau. En outre, tous les périphériques doivent pouvoir envoyer une requête ping au Web Server.

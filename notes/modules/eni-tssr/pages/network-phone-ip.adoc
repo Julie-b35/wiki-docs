@@ -118,3 +118,13 @@ vlan vlan-list
 #Repassez en mode d'exécution privilégié.
 Switch(config-if)# end
 ----
+
+
+== RIP
+
+****
+si `auto-summary` est actif alors, le protocole RIP dira que chaque réseau correspond à sa Classe 
+Ex: `*192.168.0.0*` correspond à la Classe *C* sour un */24*
+****
+
+https://www.it-connect.fr/cisco-configuration-du-routage-rip/

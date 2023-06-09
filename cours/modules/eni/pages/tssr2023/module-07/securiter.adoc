@@ -84,6 +84,7 @@ image:tssr2023/modules-07/Securiter/02.png[]
 
 image:tssr2023/modules-07/Securiter/03.png[]
 
+//SLide 106
 == Objectif des listes de contrôle d'accès (ACL)
 
 === Qu'est-ce qu'une liste de contrôle d'accès
@@ -132,6 +133,7 @@ Les ACL ne gèrent pas les paquets provenant du routeur lui-même.
 Tout ce qui n’est pas explicitement autorisé est implicitement refusé !
 ====
 
+//Slide 109
 == Masque génériques dans les listes de contrôle d'accès
 
 === Wildcard Mask
@@ -218,5 +220,47 @@ Utilisez la commande de configuration globale *no access-list access-list-number
 ip access-list standard
 * Les noms des listes de contrôle d'accès doivent contenir uniquement des caractères alphanumériques, sont sensibles à la casse et doivent être uniques.
 * Vous n’êtes pas obligé de mettre des majuscules aux noms des listes de contrôle d’accès. En revanche, si vous le faites, vous les verrez bien mieux en affichant la sortie de la commande running-config.
+
+image::tssr2023/modules-07/Securiter/12.png[align="center"]
 ****
 
+//Slide 114
+== Sécuriser les ports VTY à l'aide d'une liste de contrôle d'accès IPv4 standard
+
+=== La commande `access-class`
+
+* Créez une liste ACL pour identifier les hôtes administratifs qui doivent être autorisés à accéder à distance.
+* Appliquez l'ACL au trafic entrant sur les lignes vty.
+
+image::tssr2023/modules-07/Securiter/13.png[align="center"]
+
+=== Exemple d'accès sécurisé aux VTY
+
+* Tout d'abord, une entrée de base de données locale pour un utilisateur ADMIN et mot de passe class.
+* Les lignes vty sur R1 sont configurées pour autoriser le trafic SSH et utiliser l'ACL ADMIN-HOST pour restreindre le trafic.
+
+image::tssr2023/modules-07/Securiter/14.png[align="center"]
+
+=== Vérifier la sécurité du port VTY
+
+*Pour vérifier les statistiques ACL, exécutez la commande show access-lists.*
+
+* La correspondance dans la ligne d'autorisation de la sortie est le résultat d'une connexion SSH réussie par l'hôte avec l'adresse IP 192.168.10.10.
+* La correspondance à l'instruction « deny » est due à l'échec de la tentative de créer une connexion SSH à partir d'un appareil sur un autre réseau.
+
+image::tssr2023/modules-07/Securiter/15.png[align="center"]
+
+== TP - Sécurisé Port VTY
+
+* xref:tssr2023/module-07/TP/tp4_1.adoc[TP 1/3 PacketTracer : configure-numbered-standard-ipv4-acls]
+* xref:tssr2023/module-07/TP/tp4_1.adoc[TP 2/3 PacketTracer : configure-named-standard-ipv4-acls]
+* xref:tssr2023/module-07/TP/tp4_1.adoc[TP 3/3 PacketTracer : configure-extended-ipv4-acls-scenario-1]
+
+== Caractéristiques de la NAT
+
+=== Qu'est-ce que la NAT
+
+* L'utilisation principale de NAT consiste à limiter la consommation des adresses IPv4 publiques.
+* La NAT permet aux réseaux d'utiliser des adresses IPv4 privées en interne, et traduit ces adresses en une adresse publique lorsque nécessaire.
+
+image::tssr2023/modules-07/Securiter/16.png[align="center"]
