@@ -43,6 +43,7 @@ image:tssr2023/modules-07/ToIP/03.png[]
 * Centrex dans le cloud
 * Trunk SIP vers les opérateurs
 * Convergence avec la téléphonie mobile (ou passage à une flotte mobile)
+
 image::tssr2023/modules-07/ToIP/04.png[align="center"]
 ****
 
@@ -161,3 +162,15 @@ https://boutiquepro.orange.fr/telephone-fixe-ligne-fixe-pro-intense.html
 
 image:tssr2023/modules-07/ToIP/05.png[]
 ****
+
+//Slide 132
+== Matériel et infrastructure
+
+* Il sert principalement à relier le réseau téléphonique interne avec le réseau téléphonique public en RTC.
+* Les différents services fournis sont :
+* Appels internes/externes
+* Appels internes sans passer par le réseau public
+* Gérer des droits d’accès au réseau public par téléphone
+* Conférences, transferts d’appel, renvois, messagerie unifiée, appel par nom, rappel sur poste occupé, double appel, renvoi d’appel, guide vocal…
+* Gérer une ouverture de porte d’immeuble par un interphone
+* Gérer les SDA (Sélection Directe à l’Arrivée)
