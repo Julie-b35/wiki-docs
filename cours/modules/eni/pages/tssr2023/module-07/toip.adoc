@@ -5,3 +5,159 @@
 * Module suivant -> 
 
 Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur IP]
+
+== Objectifs
+
+* Apprendre le vocabulaire lié à la Telephony Over IP (ToIP)
+* Comprendre et faire un audit téléphonique
+* Connaître le Return Of Investment (ROI) de la ToIP
+* Savoir faire un dimensionnement pour la ToIP
+* Connaître des acteurs et offres du marché
+* Connaître le matériel et les lignes internet
+* Connaître les protocoles liés à la ToIP
+* Connaître les principaux problèmes de la ToIP
+* Comprendre et créer un circuit d’appel
+* Connaître les serveurs de ToIP du marché
+* Configurer un serveur de ToIP
+
+== RTC la fin
+
+image:tssr2023/modules-07/ToIP/01.png[]
+
+=== Historique et téléphonique classique
+
+image:tssr2023/modules-07/ToIP/02.png[]
+
+* La France a prévu de fermer son réseau de téléphonie de type RTC pour le remplacer par un réseau IP et ADSL, ainsi que par de la téléphonie sur IP (VoIP).
+* Orange (ex France Télécom) a mis en place un plan de fermeture du RTC. Il n’est plus possible de commander de lignes analogiques depuis novembre 2018 et de lignes Numéris (RNIS) depuis fin 2019.
+* L’ensemble des services Numéris et analogiques seront progressivement décommissionnés à compter de 2022. Ce plan reste à préciser, notamment pour certains services spécifiques comme les lignes d’alarme, d’ascenseur, etc.
+
+image:tssr2023/modules-07/ToIP/03.png[]
+
+=== Matériel et infrastructure
+
+.Fin du RTC, le remplacer par quoi?
+****
+* IP-PBX interne
+* Centrex IP
+* Centrex dans le cloud
+* Trunk SIP vers les opérateurs
+* Convergence avec la téléphonie mobile (ou passage à une flotte mobile)
+image::tssr2023/modules-07/ToIP/04.png[align="center"]
+****
+
+== Définition
+
+=== Les différent protocoles
+
+.Définitions VoIP / ToIP
+****
+* VoIP – (Voice over IP)
+* Concept de transport de la voix qui s'appuie sur le réseau IP
+* Exemple : réseau d’interconnexion privé de site ou par internet avec Skype
+* ToIP – (Telephony over IP)
+* Basé sur l’utilisation d’un réseau IP
+* Il peut reposer sur la technologie VoIP de bout en bout (du réseau de desserte jusqu’au poste de travail)
+****
+
+=== Appels
+
+* *Appels entrants* : ce sont les appels qui proviennent du monde extérieur ; par exemple, un appel provenant d’une ligne analogique, d’une ligne Numéris, d’une ligne GSM, d’une ligne Freebox...
+* *Appels sortants* : ce sont tous les appels à destination du monde extérieur donc du réseau public commuté.
+* *Appels internes* : ce sont les appels de l’entreprise vers l’entreprise.
+
+=== Définition
+
+* *SLA* : le *Service Level Agreement* est un document qui définit la qualité de service, prestation prescrite entre un fournisseur de service et un client.
+* *GTR* : la *garantie de temps de rétablissement* est le délai contractuel dans lequel un service accidentellement interrompu doit être rétabli. Comprend aussi la GTI (garantie de temps d’intervention).
+* La *garantie de temps d'intervention (GTI)* est le délai contractuel dans lequel un service accidentellement interrompu doit avoir occasionné un début d'intervention de la société prestataire, en vue du rétablissement fonctionnel du service.
+
+== Audit
+
+=== Implémenter la VoIP
+
+.Décider d’implémenter de la VoIP au sein d’une entreprise nécessite de poser les bonnes questions :
+****
+* Quelle est l’architecture télécom, système et réseau existante ?
+* Quels sont les services qui seront disponibles pour les utilisateurs finaux ?
+* Quel est le plan de déploiement à mettre en oeuvre ?
+* Quel est le périmètre budgétaire ?
+* Quel est le retour sur investissement (ROI) escompté ? Est-il qualifiable et quantifiable ?
+****
+
+.Se poser les questions au début du projet :
+****
+* « Pourquoi migrer vers de la voix sur IP ? »
+* « Est-ce que je vais économiser de l’argent ? »
+* « Est-ce que je vais apporter de nouveaux services ? »
+****
+
+== ROI et motivation
+
+=== Les différents protocoles
+
+.Intérêts de mise en oeuvre de la ToIP
+****
+* Un seul réseau à mettre en oeuvre et à maintenir
+* Réduction des coûts opérateur (aucun coût pour les communications internes)
+* Une seule équipe chargée de la gestion du parc informatique et télécom
+* Possibilité d’externalisation de la téléphonie pour le SI (TaaS
+– Telephony as a Service)
+* L’utilisateur peut déplacer son téléphone sans reconfiguration
+****
+
+=== Audit
+
+.Apport de nouveaux services
+****
+* Messagerie unifiée
+* Fax vers BAL en PDF
+* Accès aux services de conference-call
+* Serveur Vocal Interactif (programmé avec plan de numérotation)
+* Apport de contenu interactif riche directement sur les téléphones SIP par programmation (message de la Direction, publicité, information, etc.)
+* Call center et gestion de files d’attente
+* Annuaire commun (click to dial)
+****
+
+.Certains résultats seront difficilement quantifiables même s’ils seront présents :
+****
+* Dire que l’équipe réseau passe moins de temps avec la hotline d’un prestataire à expliquer plusieurs fois le même problème mais à des interlocuteurs différents.
+* Dire que l’entreprise a repris le contrôle de sa téléphonie interne et par la même occasion d’une partie de son système d’information (cet aspect fondamental n’a pas de prix !).
+* Donner de nouvelles compétences aux équipes techniques et donc apporter une plus grande motivation, une plus grande cohésion d’équipe.
+****
+
+//Slide 131
+== Dimensionnement
+
+=== Règles de dimensionnement
+
+* Il faudra prendre en compte le codec utilisé et le nombre de canaux nécessaires.
+
+IMPORTANT:  La règle c'est 100kbps * nb_canaux (pour plus de sûreté)
+
+* La gestion du flux :
+** Une ligne SDSL de secours
+** Une ligne Fibre to the Office (FttO)
+** Mise en place de la QoS
+* Il faut maintenant savoir combien consomme un codec pour un appel afin de savoir combien d’appels vous pouvez passer avec votre lien internet.
+* Par exemple, si le lien internet est un SDLS avec 2Mb/s en débit montant et descendant et que nous utilisons le codec G711 à 64 kb/s.
+* Combien de communications puis-je mettre dessus ?
+* (2048/64= 32)
+
+//SLide 131
+== Acteurs et offres
+
+=== Matériel et infrastructure
+
+
+.Les différents acteurs
+****
+Il existe une multitude d’acteurs sur le marché de la ToIP/VoIP : opérateur, datacenter, centrex, etc.
+
+[TIP,caption=Source]
+====
+https://boutiquepro.orange.fr/telephone-fixe-ligne-fixe-pro-intense.html
+====
+
+image:tssr2023/modules-07/ToIP/05.png[]
+****

@@ -24,6 +24,7 @@ IGRP
 irtual
 ITIL
 jlab
+kbps
 keybind
 l’IOS
 LGPO
@@ -52,9 +53,12 @@ Privilegier
 PSSI
 rganization
 RGPD
+RNIS
 rotocol
 RSSI
 scpol
+SDLS
+SDSL
 Securiser
 servername
 SGDSN

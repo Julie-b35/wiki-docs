@@ -2,6 +2,7 @@ authpriv
 autofetch
 backquote
 blkid
+Centrex
 cyberedu
 daem
 dbus
