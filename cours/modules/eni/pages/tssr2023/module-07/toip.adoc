@@ -1020,3 +1020,13 @@ a|* T – AbsoluteTimeout | exten => T,1,Hangup()
 
 * Concaténation : écrire l'un à côté de l'autre : 555${EXTEN} ajoute le préfixe 555 au numéro composé
 ****
+
+=== Syntaxe EXTEN Variable
+
+* ${CONTEXT} : le contexte actuel
+* ${EXTEN} : l’extension actuelle
+* ${EXTEN:x} : l’extension actuelle sans les x 1ers caractères
+* ${PRIORITY} : la priorité actuelle
+* ${CALLERID} : l’ID courant de l’appelant (nom et numéro)
+* ${CALLERID(NUM)} : le numéro de l’appelant
+* ${CALLERID(NAME)} : le nom de l’appelant
