@@ -2,7 +2,7 @@
 :navtitle: La Sécurité
 
 * Module précédent -> xref:tssr2023/module-07/routeur.adoc[Module 04 - Le Routeur]
-* Module suivant -> 
+* Module suivant -> xref:tssr2023/module-07/toip.adoc[Module 06 - ToIP]
 
 Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur IP]
 
@@ -32,7 +32,7 @@ image:tssr2023/modules-07/Securiter/01.png[]
 
 [NOTE,caption=URL]
 ====
-link:https://www.ssi.gouv.fr/guide/guide-dhygiene-informatique/[]
+link:https://www.ssi.gouv.fr/uploads/2017/01/guide_hygiene_informatique_anssi.pdf[ssi.gouv.fr - guide hygiène_anssi]
 ====
 
 image:tssr2023/modules-07/Securiter/01.jpg[]
