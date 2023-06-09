@@ -5,6 +5,7 @@
 
 Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]
 
+//Slide 4
 == Présentation d'ITIL
 
 * *ITIL* **I**nformation **T**echnology **I**nfrastructure **L**ibrary
@@ -13,6 +14,7 @@ l’information.
 * *ITIL* définit les bonnes pratiques informatiques afin d’avoir un Système
 d’Information le plus efficace et efficient que possible.
 
+//Slide 4
 == Les normes
 
 * *ISO 9001*
@@ -23,6 +25,7 @@ le processus.
 processus (ces processus sont définis dans ITIL).
 ** Cette certification est facilitée si l’on possède ISO 9001 et ITILV2 minimum
 
+//Slide 5
 == Historique
 
 * Fin des années 80
@@ -46,6 +49,8 @@ des informations.
 
 image:tssr2023/module-06/Historique/01.png[]
 
+
+//Slide 6
 == Présentation d'ITIL v3
 
 * *ITIL* repose sur l’évolution de l’informatique dans une gestion de projets
@@ -69,6 +74,7 @@ vers une gestion de service
 * Les experts et les consultants en gestion de service certifiés ITIL
 ****
 
+//Slide 7
 == Apport d'ITIL 4
 
 * *ITIL 4* n’est pas une nouvelle version, mais représente la 4 e génération

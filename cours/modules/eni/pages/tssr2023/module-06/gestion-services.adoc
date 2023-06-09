@@ -6,6 +6,8 @@
 
 Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]
 
+
+//Slide 8
 ==  Projet VS Service
 
 * *ITIL v3* propose une évolution de la gestion de projet vers la gestion de
@@ -21,6 +23,8 @@ service qui est plus orientée client
 *** Améliorer la qualité des services informatiques
 *** Maîtriser les coûts de fourniture
 
+
+//Slide 9
 == Définition
 
 * Un *service* est l’ensemble des moyens mis en oeuvre pour apporter à un client de la valeur
@@ -40,6 +44,7 @@ sans qu’il n’en supporte ni les coûts ni les risques
 *Un service doit fournir de la valeur.*
 ====
 
+//Slide 9
 == Les 2 conditions requises pour créer de la valeur
 
 * *Utilité* (dimension de la prestation)
@@ -56,10 +61,12 @@ contractualisé (condition, résultats, lieu, délais et moment)
 *** La continuité de service
 *** La sécurité
 
+// Slide 10
 == Création de valeur
 
 image:tssr2023/module-06/Services/01.png[]
 
+// slide 10
 == Les 5 acteurs de services
 
 .Le fournisseur de services informatiques (IT Service Provider)
@@ -119,6 +126,7 @@ l'entreprise (y compris elle même).
 ****
 
 
+//Slide 13
 == Les 2 dispositions spécialisées au coeur d’ITIL
 
 * La gestion de service intègre :
@@ -130,6 +138,7 @@ l'entreprise (y compris elle même).
 
 image:tssr2023/module-06/Services/02.png[]
 
+//Slide 13
 == La notion de processus
 
 * *Un processus* est une suite d’activités structurées et logiques poursuivant un objectif défini
@@ -145,6 +154,7 @@ image:tssr2023/module-06/Services/02.png[]
 ** Il doit être documenté
 ** Il doit être contrôlé
 
+// Slide 14
 == Les mesures d’un processus
 
 * Les mesures (ses résultats, ses activités, ses livrables …) permettent d’améliorer
@@ -160,14 +170,34 @@ service ou à une activité a été suffisante et bien utilisée (coût d’arge
 
 image:tssr2023/module-06/Services/03.png[]
 
+// Slide 15
 == La notion de fonction
+
 * *Une fonction* est un groupe de personnes fonctionnelles ( équipe) disposant d’outils
 et de ressources spécifiques pour exécuter un certain type de travaux et sera responsable
 des résultats spécifiques
 * Il assure une ou plusieurs activités par rapport à un ou plusieurs processus
 * Il est responsable des outils (définition et utilisation)
 * ITIL définit quatre fonctions
-* Le centre de services
-* La gestion des opérations
-* La gestion technique
-* La gestion des applications
+** Le centre de services
+** La gestion des opérations
+** La gestion technique
+** La gestion des applications
+
+== Fonctions et processus
+
+image:tssr2023/module-06/Services/04.png[]
+
+// Slide 16
+== La notion de Rôle
+
+image:tssr2023/module-06/Services/05.png[]
+
+== Le modèle R.A.C.I
+
+image:tssr2023/module-06/Services/06.png[]
+
+== Le cycle de vie des services
+
+image:tssr2023/module-06/Services/07.png[]
+
