@@ -17,6 +17,8 @@ Elastix
 ervice
 ethernet
 Ethertype
+exten
+EXTEN
 fddi
 fddinet
 Fonctionnaliter
@@ -25,6 +27,7 @@ HDLC
 ibrary
 icence
 IGRP
+IPBX
 irtual
 Issabel
 ITIL
@@ -71,6 +74,7 @@ RTCP
 scpol
 SDLS
 SDSL
+secretaire
 Securiser
 Serv
 servername

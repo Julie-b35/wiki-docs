@@ -842,3 +842,181 @@ image:tssr2023/modules-07/ToIP/64.png[]
 image:tssr2023/modules-07/ToIP/65.png[]
 image:tssr2023/modules-07/ToIP/66.png[]
 image:tssr2023/modules-07/ToIP/67.png[]
+
+== XiVO Configuration xivo client
+
+=== XiVO Client
+
+image:tssr2023/modules-07/ToIP/68.png[]
+image:tssr2023/modules-07/ToIP/69.png[]
+
+//Slide 184
+== XiVO Musique d'attente
+
+=== Musique d'attente
+
+image:tssr2023/modules-07/ToIP/70.png[]
+image:tssr2023/modules-07/ToIP/71.png[]
+
+== TP
+
+* Installation XIVO et configuration utilisateurs
+* Analyse de trames
+
+== Configuration interne
+
+=== Xivo Création de groupes d'appels
+
+==== Groupe d'appels
+
+* Création groupes : la création de groupe d’appel permet de faire sonner plusieurs lignes via un numéro. Nous pouvons le configurer avec plusieurs paramètres :
+** La stratégie de sonnerie
+** Le délai d’attente avant de passer aux prochains numéros du groupe
+** Le temps de sonnerie du groupe
+* Services -> Configuration IPBX -> Contextes
+* Sur default -> modifier
+** Dans Groupes, renseigner l’intervalle de numéros (afin que nos groupes d’appels puissent avoir des numéros à attribuer)
+
+image:tssr2023/modules-07/ToIP/72.png[]
+
+image:tssr2023/modules-07/ToIP/73.png[]
+
+.Les différentes répartitions d’appel dans le groupe d’appels sont :
+****
+* Stratégie de sonnerie : l’appelant fera sonner en premier l’agent qui a reçu le moins d’appels dans la journée
+* Tous : faites sonner toutes les chaînes disponibles jusqu'à ce vous obteniez une réponse (par défaut)
+* Moins récent : interface en anneau qui a été la moins récemment appelée par cette file d'attente
+* Moins d'appels : faites sonner celui avec le moins d'appels terminés dans cette file d'attente
+* Cyclique : appelez le membre « suivant » après celui qui a répondu en dernier
+* Ordre de définition : pour chaque appel, dans le même ordre, à partir du même membre
+* Aléatoire : appel membre au hasard
+* Aléatoire pondéré : appel membre au hasard, mais utilise la pénalité de l'agent comme poids
+****
+
+==== Groupe d’appels Les temps et les délais
+
+image:tssr2023/modules-07/ToIP/74.png[]
+
+=== XiVO Chambre de conférence
+
+==== Chambre de conférences
+
+Une chambre de conférence est comme une salle de réunion où les utilisateurs peuvent se rejoindre pour communiquer tous ensemble :
+* Services -> Configuration IPBX -> Contextes
+* Sur default -> modifier
+* Dans Chambre de conférence, renseigner l’intervalle de numéros
+
+image:tssr2023/modules-07/ToIP/75.png[]
+
+* Services -> Paramètres IPBX -> Chambre de conférence
+* Créer une chambre
+* Renseigner nom, numéro (suivant plage créée auparavant)
+
+image:tssr2023/modules-07/ToIP/76.png[]
+
+=== XiVO Filtrage patron secrétaire
+
+==== Filtrage secrétaire
+
+* Le filtre parton secretaire permet de définir un rôle de secrétaire ou de patron à un utilisateur. Des filtres peuvent ensuite être créés pour filtrer les appels dirigés vers un patron en utilisant différentes stratégies.
+* Pour pouvoir utiliser le filtre de secrétaire du patron, vous devez :
+** Sélectionner un rôle de patron pour l'un des utilisateurs
+** Sélectionner un rôle de secrétaire pour l'un des utilisateurs
+** Créer un filtre pour définir une stratégie pour ce filtre de secrétaire de chef
+** Ajouter une touche de fonction pour le patron utilisateur et la secrétaire utilisateur
+* Sur la ligne SIP d’un utilisateur dans l’onglet Services
+
+image:tssr2023/modules-07/ToIP/77.png[]
+
+image:tssr2023/modules-07/ToIP/78.png[]
+
+Le filtre permet d'associer un patron à une ou plusieurs secrétaires et de définir une stratégie de sonnerie. Le filtre d'appels est ajouté dans la page Services ‣ IPBX
+
+* Gestion des appels ‣ Filtres d'appels.
+
+
+image:tssr2023/modules-07/ToIP/79.png[]
+
+.Différents modes peuvent être appliqués :
+****
+* Patron puis secrétaire en série : le patron sonne d'abord puis toutes les secrétaires une par une
+* Patron puis secrétaire en simultané : le patron sonne d'abord puis les secrétaires sonnent toutes simultanément
+* Secrétaire en série : les secrétaires sonnent un par un
+* Secrétaire en simultané : les secrétaires sonnent toutes simultanément
+* Patron et secrétaire en simultané : le patron et les secrétaires sonnent simultanément
+****
+
+* La fonction de filtrage des appels peut être activée et désactivée par le patron ou la secrétaire à l'aide du poste 37.
+* L'extension est définie dans Services IPBX> Extensions.
+
+image:tssr2023/modules-07/ToIP/80.png[]
+
+* Le filtrage sera alors créé ainsi que son numéro d’activation ici *372 
+
+image:tssr2023/modules-07/ToIP/81.png[]
+
+== TP - Configuration interne 
+
+* Configuration de XiVO
+
+//Slide 196
+== Extension.conf et IVR
+
+=== Les fichiers de conf
+
+.Extension.conf
+****
+Le fichier extension.conf est utilisé pour router les appels vers un utilisateur ou vers sa messagerie. Par exemple, les appels provenant de comptes SIP dont le contexte est « local » seront traités dans l’extension
+« local » du fichier extension.conf
+
+image::tssr2023/modules-07/ToIP/82.png[align="center"]
+****
+
+=== Syntaxe EXTEN
+
+* Le plan de numérotation est défini dans extensions.conf
+* Il est composé de sections définissant les contextes (entre crochets [local] ou [default])
+
+
+* Les contextes sont faits de règles :
+** exten => n°_appelé,priorité, commande
+* Les numéros appelés sont soit explicites soit des modèles (pattern) définissant des directions
+
+=== Syntaxe EXTEN Numérotation
+
+* Les numéros doivent commencer par un underscore : _
+* X : digit entre 0 et 9 ( pas * et # )
+* Z : digit entre 1 et 9
+* N : digit entre 2 et 9
+* [15-7] : 1 des digits entre les crochets => ici 1, 5 à 7 => 1, 5, 6, 7.
+* 3[1-4] représente 31, 32, 33 et 34
+* 3[12] représente 31 ou 32
+* [35-7] représente 3 ou 5 ou 6 ou 7
+* . : wildcard, à mettre en fin de pattern il désigne 1 ou plusieurs caractères
+* ! = aucun ou plusieurs caractère
+
+=== Exemple
+
+( _XXX. oblige à taper au minimum 3 digits ) [Default]
+exten => 555,1,Dial(SIP/Johnny)
+* Le contexte [Default] est une zone dans laquelle sont limitées nos actions.
+* La ligne contenant exten nous montre comment enregistrer une extension.
+* 555 est le numéro que nous souhaitons associer à SIP/Johnny => pour appeler Johnny il faut faire le 555.
+* 1 est le numéro de séquence. Nous pouvons en effet ordonner plusieurs actions pour une même extension.
+* Dial(SIP/Johnny) est l’action à effectuer. Ici la fonction Dial(), déclenche l’appel, avec pour argument SIP/Johnny pour appeler le compte SIP Johnny.
+
+=== Syntaxe EXTEN spécial ID
+
+.Des exemples de commandes :
+****
+[frame=none,grid=none,cols="~,~"]
+|===
+| * i – Invalid | exten => i,1,Playback(${sounds_path}erreur-saisie)
+| * s – Start, pas d'analyse, mais traitement direct | exten => s,1,Answer()
+| * h – Hangup | exten => h,4,exten()
+| * t – Timeout (déclaré dans le contexte) | exten => t,1,Hangup()
+|* T – AbsoluteTimeout | exten => T,1,Hangup()
+|===
+
+* Concaténation : écrire l'un à côté de l'autre : 555${EXTEN} ajoute le préfixe 555 au numéro composé
+****

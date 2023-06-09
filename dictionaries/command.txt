@@ -147,6 +147,7 @@ webmin
 Webmin
 xdigit
 xgetbv
+xivo
 xsave
 xsavec
 xsaveopt
