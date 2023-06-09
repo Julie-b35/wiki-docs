@@ -8,6 +8,7 @@ daem
 dbus
 dconf
 debian
+Diffserv
 eneral
 extglob
 fdisk
@@ -33,6 +34,7 @@ pipewire
 pulseaudi
 rsyslog
 shub
+Softphone
 superblocks
 Sysrep
 toip

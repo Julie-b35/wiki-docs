@@ -128,3 +128,16 @@ Ex: `*192.168.0.0*` correspond à la Classe *C* sour un */24*
 ****
 
 https://www.it-connect.fr/cisco-configuration-du-routage-rip/
+
+== Sécruiter
+
+=== Exemple impact fiancier
+
+* attaque au niveau d'une banque : vol coordonnée bancaire = perte financier
+
+
+[TIP,cation=Source]
+====
+link:https://itsocial.fr/enjeux-it/enjeux-infrastructure/datacenter/quest-systeme-dinformation-5-meilleurs-articles-systeme-dinformation/[]
+
+====

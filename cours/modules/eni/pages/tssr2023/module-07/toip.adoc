@@ -160,17 +160,685 @@ Il existe une multitude d’acteurs sur le marché de la ToIP/VoIP : opérateur,
 https://boutiquepro.orange.fr/telephone-fixe-ligne-fixe-pro-intense.html
 ====
 
-image:tssr2023/modules-07/ToIP/05.png[]
+image::tssr2023/modules-07/ToIP/05.png[align="center"]
 ****
 
 //Slide 132
 == Matériel et infrastructure
 
+=== PABX (Private Automatic Branch Exchange)
+
 * Il sert principalement à relier le réseau téléphonique interne avec le réseau téléphonique public en RTC.
 * Les différents services fournis sont :
-* Appels internes/externes
-* Appels internes sans passer par le réseau public
-* Gérer des droits d’accès au réseau public par téléphone
-* Conférences, transferts d’appel, renvois, messagerie unifiée, appel par nom, rappel sur poste occupé, double appel, renvoi d’appel, guide vocal…
-* Gérer une ouverture de porte d’immeuble par un interphone
-* Gérer les SDA (Sélection Directe à l’Arrivée)
+** Appels internes/externes
+** Appels internes sans passer par le réseau public
+** Gérer des droits d’accès au réseau public par téléphone
+** Conférences, transferts d’appel, renvois, messagerie unifiée, appel par nom, rappel sur poste occupé, double appel, renvoi d’appel, guide vocal…
+** Gérer une ouverture de porte d’immeuble par un interphone
+** Gérer les SDA (Sélection Directe à l’Arrivée)
+
+image:tssr2023/modules-07/ToIP/06.png[]
+
+=== IP-PBX
+
+* *Il permet de gérer les communications internes et faire transiter les appels externes sur le WAN grâce aux technologies de VoIP.*
+* Les différents services :
+** Les mêmes que ceux proposés par un PABX
+** Fonction centre d’appel
+** CTI (Couplage Téléphonie Informatique)
+** Fonctions hôtelières et hospitalières
+** Possibilités d’intégration avec le SI et les applications métiers
+
+image:tssr2023/modules-07/ToIP/07.png[]
+
+=== serveur de taxation
+
+* Il est nécessaire d'avoir un *serveur de taxation* pour identifier :
+** Le numéro appelant
+** Le numéro appelé
+** La durée de l’appel
+** La date de l’appel
+** L’heure de l’appel
+* Plus d’autres fonctionnalités : analyse (parsing), présentation des statistiques, autorisation d’appel, contrôle du temps passé entre agent-client
+
+=== Le Media Gateway (routeur)
+
+Le Media Gateway gère l’interconnexion avec d’autres types de réseaux (RTC, 4G, WIFI, etc.).
+
+image:tssr2023/modules-07/ToIP/08.png[]
+
+=== Petite passerelle
+
+.Petite passerelle
+****
+* Il y a plusieurs moyens d’interconnecter un autocom avec le réseau commuté : cartes internes à l’autocom, gateway Cisco, modem-routeurs, les passerelles VoIP.
+* Les boîtiers Patton sont les plus répandus mais les prix sont dissuasifs dès lors qu’il s’agit de lien T2 ; aussi, ils sont intéressants pour de petites configurations jusqu’à 2 T0.
+
+image::tssr2023/modules-07/ToIP/09.png[align="center"]
+****
+
+=== Les terminaux
+
+image:tssr2023/modules-07/ToIP/10.png[]
+
+=== POE auto alimentation
+
+* Alimentation classique
+
+image:tssr2023/modules-07/ToIP/11.png[]
+
+* Auto-alimentation
+
+image:tssr2023/modules-07/ToIP/12.png[]
+
+=== Switch POE Power Over Ethernet
+
+* L’avantage est la diminution du nombre de prises électriques nécessaires ainsi qu’une meilleure gestion de la consommation électrique des terminaux.
+* POE IEEE 802.3 af
+** L’alimentation du téléphone est fournie par un switch POE via le câble Ethernet avec une puissance maximum de 12,9 W avec une tension de 48 V.
+* POE+ IEEE 802.3 at
+** L’alimentation du téléphone est fournie par un switch POE via le câble Ethernet avec une puissance comprise entre 24 W et 30 W avec la même tension de 48 V.
+
+image:tssr2023/modules-07/ToIP/13.png[]
+
+//Slide 136
+== Support de ligne
+****
+ADSL
+* Asymmetric Digital Subscriber Line
+* Plutôt pour les TPE
+* Les débits ne sont pas garantis
+* Il existe beaucoup d’offres différentes sur ces lignes qui disparaissent au profit de ligne fibre
+
+image::tssr2023/modules-07/ToIP/14.png[align="center"]
+****
+
+=== SDSL
+
+* Symmetric Digital Subscriber Line
+* Plutôt pour les moyennes et grandes entreprises
+* Les débits sont garantis
+* Contrairement à l’ADSL, le débit en réception est égal au débit en émission
+* Souvent assortis d’une Garantie de Temps de Rétablissement (SLA GTR) nécessaire pour le service téléphonie jugé le plus critique du SI
+
+image:tssr2023/modules-07/ToIP/15.png[]
+
+=== Liaison louée
+
+* Une ligne spécialisée et un lien internet supporté par des
+protocoles de niveaux 2 tels MPLS ou ATM.EV17
+* Souvent sur un lien xDSL est à négocier avec votre opérateur professionnel pour avoir une ligne « dédiée » entre vos agences.
+
+=== Fibre
+
+* *FTTH* Fibre To The Home
+* *FTTO* Fibre To The Office
+* De 1 à 100 Go
+* Exemple :
+
+[TIP,caption=Source]
+====
+https://www.aeratelecom.fr/fibre-noire/
+https://boutiquepro.orange.fr/internet
+====
+
+//SLide 140
+== Protocoles
+
+=== Les différents protocoles
+
+image:tssr2023/modules-07/ToIP/16.png[]
+
+=== SIP Session Initiation Protocol
+
+* Objectifs
+** Établir, mettre en relation et terminer des sessions multimédias
+* Encodage
+** Basé sur un code texte ASCII, il ressemble beaucoup à HTTP (même code retour)
+* Port
+** Principalement UDP 5060 et en sécurisé SIPS (SIP TLS) sur le 5061
+* Transport
+** Il utilise aussi RTP / RTCP pour le transport de données
+
+=== SIP dans le modèle OSI
+
+image:tssr2023/modules-07/ToIP/17.png[]
+
+=== SIP les différents acteurs
+
+* Les User Agent
+** Les agents que l’on trouve dans les terminaux
+* Le Registrar
+** Enregistrement des clients et traduction d’un URI pass:[<u>sip:utilisateur@domaine.com</u>] / adresse IP stockée dans une base de données
+* Le Proxy SIP
+** Sert d’intermédiaire entre 2 users agent afin de connaître leurs adresses IP respectives
+
+=== Les différentes tâches de SIP
+
+* Localisation d’un terminal
+* Analyse du profil de la source et de ses ressources (disponibilité)
+* Négociation du type de média (voix ou vidéo, codecs…)
+* Mise à jour du statut d’un user agent
+* Mise en relation et suivi de l’appel
+* Gestion du chiffrement, des erreurs…
+
+=== Le protocole SIP
+
+image:tssr2023/modules-07/ToIP/18.png[]
+
+=== Le format des message SI
+
+image:tssr2023/modules-07/ToIP/19.png[]
+
+=== Adressage SIP
+
+* sip: 7114@192.168.1.12
+* sip: lou@sip-serveur.societe.com
+* sip: 7114@sip-serveur.societe.com
+
+=== Exemple SIP
+
+image:tssr2023/modules-07/ToIP/20.png[]
+
+=== Le format des messages SiP
+
+image:tssr2023/modules-07/ToIP/21.png[]
+
+=== Le Registrar SIP
+
+image:tssr2023/modules-07/ToIP/22.png[]
+
+=== Le proxy SIP
+
+image:tssr2023/modules-07/ToIP/23.png[]
+
+=== Le trunk SIP
+
+image:tssr2023/modules-07/ToIP/24.png[]
+
+image:tssr2023/modules-07/ToIP/25.png[]
+
+=== RTP/RTCP Real-Time Transport Protocol (RFC 1889)
+
+* Objectifs
+** Transporter les données (flux média audio ou vidéo) en temps réel
+* Port
+** Principalement 5004 en UDP
+* Le protocole ajoute un en-tête spécifique aux paquets UDP pour :
+** Le codec utilisé
+** La numérotation des paquets
+** L’horodatage des paquets
+** L’identification des participants
+** La surveillance de l’état de la connexion
+* RTCP
+** Statistiques sur la QoS
+** Synchronisation voix / images
+** Métadonnées (nom, numéro, etc.)
+** Contrôle de la session
+
+=== MGCP
+
+* Les téléphones MGCP ne peuvent pas s’appeler entre eux mais doivent passer obligatoirement par un contrôleur central : la gateway.
+* MGCP est utilisé en protocole de secours lorsque les serveurs d’appel sont down. Les passerelles Gateway prennent alors le relais avec MGCP (bien entendu avec une perte de fonctionnalité, c’est un mode dégradé).
+
+=== IAX
+
+* Le protocole Inter-Asterisk eXchange permet à plusieurs serveurs Asterisk de communiquer entre eux. IAX est un protocole peer-to-peer de signalisation et de transport de la voix.
+* IAX2 utilise un port UDP unique (port 4569) pour la signalisation (flux de contrôle) et les données (flux RTP) (alors que IAX1 utilisait le port 5036).
+* Il permet d’économiser de la bande passante en agrégeant plusieurs sessions dans un seul flux de données.
+* Fonctionne parfaitement derrière du NAT.
+
+=== Codecs
+
+
+* Objectif :
+** Obtenir une bonne qualité de voix (MOS) dans un délai le plus court possible.
+* Les codecs sont des chipsets qui servent d’encodeur / décodeur.
+* La fonction de codec est souvent réalisée par un DSP (Digital Signal Processor).
+* Le MOS (Mean Opinion Score) est l'échelle de graduation qui permet l’évaluation de la qualité de la voix
+** Score 5 – excellent
+** Score 4 – bonne
+** Score 3 – correcte
+** Score 2 – pauvre
+** Score 1 – insuffisante
+
+image:tssr2023/modules-07/ToIP/26.png[]
+
+//Slide 150
+== Le réseau aujourd'hui 2021
+
+=== Tendances des réseaux
+
+.Tendances récentes
+****
+* Le rôle du réseau doit être de régler le débit en permanence pour pouvoir être en mesure de suivre les communications des nouvelles technologies.
+* Les nouveaux type de consommations en ligne :
+* BYOD
+* Collaboration en ligne
+* Communications vidéo
+* Cloud computing
+****
+
+.Apportez votre propre appareil
+****
+Bring Your Own Device est une tendance globale majeure qui permet aux utilisateurs d'utiliser leurs propres appareils, ce qui leur donne plus de possibilités et une plus grande flexibilité.
+
+* Ordinateurs portables
+* Netbooks
+* Tablettes
+* Smartphones
+* Liseuses
+****
+
+.Collaboration en ligne
+****
+* Collaborer et travailler avec d'autres personnes au sein du réseau sur des projets communs.
+* La collaboration est une très grande priorité pour les entreprises et de l'éducation.
+** Envoyer des messages instantanés
+** Publier une image
+** Publier des vidéos et des liens
+****
+
+.Communication vidéo
+****
+* Les appels vidéo sont faits à n'importe qui, quel que soit l'endroit où ils se trouvent.
+* La vidéo conférence est un outil puissant pour communiquer avec d'autres utilisateurs à distance, tant au niveau régional qu'au niveau international.
+* La vidéo devient une exigence essentielle pour une collaboration efficace.
+****
+
+.Cloud computing
+****
+* Le cloud computing est une tendance globale qui nous permet de stocker des fichiers personnels ou la sauvegarde de nos données sur des serveurs sur Internet.
+* Le cloud computing fonctionne grâce aux datacenter.
+* Clouds publics
+** Applications et les services sont mis à disposition du grand public.
+* Clouds privés
+** Destinés à une organisation ou une entité spécifique telle que le gouvernement.
+* Clouds hybrides
+** Composés de deux ou plusieurs types de Cloud.
+** Chaque partie reste un objet distinct, mais toutes deux sont reliées par la même architecture.
+* Clouds personnalisés
+** Clouds créés pour répondre aux besoins d'un secteur particulier.
+** Ils peuvent être privés ou publics.
+****
+
+.Tendances technologiques à la maison
+****
+* *IoT* : Internet Of Things concerne tous les objets connectés qui peuvent faire de la télémétrie
+* *Domotique* : les maisons intelligentes fonctionnent avec des profils utilisateurs
+****
+
+=== Connexions Internet
+
+.Le réseau convergent
+****
+* Notre consommation des données évolue rapidement et notre mode de vie autour de cette consommation aussi. Les réseaux maintenant sont convergents et transportent :
+* Données
+* Voix
+* Vidéo
+
+image::tssr2023/modules-07/ToIP/27.png[align="center"]
+
+* De ce fait, il faut savoir l’identifier et le prioriser en fonction de ses besoins
+****
+
+=== Caractéristiques du traffic
+
+.Voix
+****
+* Le trafic vocal doit être fluide, il est très sensible aux délais et aux paquets abandonnés.
+** Les paquets vocaux doivent bénéficier d'une priorité plus élevée que le reste du trafic.
+* La voix peut tolérer de la latence, la gigue et la perte sans effets notables.
+* La latence ne peut pas dépasser 150 ms.
+** La gigue ne doit pas dépasser 30 ms ; et la perte de paquets ne doit pas dépasser 1%.
+** Le trafic voix nécessite au moins 30 kbit/s de bande passante.
+
+image::tssr2023/modules-07/ToIP/28.png[align="center"]
+****
+
+.Vidéo
+****
+* Le trafic est imprévisible.
+* Le nombre et la taille des paquets vidéo varient toutes les 33 ms selon le contenu.
+* Les ports UDP, par exemple le port 554 utilisé pour le Real-Time Streaming Protocol (RSTP), doivent être prioritaires par rapport au trafic réseau moins soumis à des contraintes temporelles.
+* La latence ne doit pas dépasser 400 ms. La gigue ne doit pas dépasser 50 ms ; la perte de paquets vidéo ne doit pas dépasser 1%. Le trafic vidéo nécessite au moins 384 kbit/s de bande passante.
+
+image::tssr2023/modules-07/ToIP/29.png[align="center"]
+****
+
+.Données
+****
+Les applications de données qui ne tolèrent pas la perte de données utilisent le protocole TCP.
+* Le trafic de données peut être fluide ou en salve.
+* Le trafic du réseau est généralement fluide et prévisible.
+
+image::tssr2023/modules-07/ToIP/30.png[align="center"]
+
+* Comment faire le tri ?
+* Une réponse : faire le tri via la QoS
+
+image::tssr2023/modules-07/ToIP/31.png[align="center"]
+****
+
+//Slide 157
+== La QoS
+
+=== Mise en oeuvre
+
+* Le « Best Effort » (au mieux) est insuffisant pour assurer la qualité d’un service aussi critique et sensible que la voix ou la vidéo. La QoS se révèle donc être indispensable.
+* En tant que service, elle ne résoudra pas les problèmes réseau existants (équipements saturés, liaisons sous-dimensionnées, etc.), il est donc essentiel de bien connaître son réseau et les flux qui y transitent.
+* La QoS doit également être mise en oeuvre de bout en bout (sur tous les routeurs), sinon elle est inutile.
+
+=== Caractéristique
+
+.Offre le moyen de contrôler 4 caractéristiques du trafic réseau :
+****
+* La bande passante : vitesse ou capacité d’un lien réseau
+* Le délai : temps de transit d’un paquet depuis sa source jusqu’à sa destination
+* La gigue : variation des délais entre les paquets transmis à une même destination
+* La perte de paquets : différentiel entre le nombre de paquets envoyés et le nombre
+de paquets effectivement reçus
+
+image::tssr2023/modules-07/ToIP/32.png[align="center"]
+****
+
+=== Principes généraux
+
+.Les principes généraux de la QoS sont les suivants :
+****
+* Classification et Marquage : identifier et étiqueter le trafic en entrée
+* Prévention de la congestion : prévenir la perte de paquets, dans le cadre de connexions TCP, en supprimant préventivement des paquets
+* Gestion de la congestion : soumettre aux files d’attente les paquets classifiés
+
+image::tssr2023/modules-07/ToIP/33.png[align="center"]
+****
+
+=== Techniques de mise en oeuvre de la QoS
+
+.Elle peut être mise en oeuvre à différents niveaux du modèle OSI :
+****
+* Au niveau de la couche 2, via la norme 802.1p, intégrée à 802.1Q
+* Au niveau de la couche 3, via le champ DSCP du paquet IP
+* Au niveau des couches 4-5, via les protocoles de transport et protocoles applicatifs (FTP, RTP…)
+
+image::tssr2023/modules-07/ToIP/34.png[align="center"]
+****
+
+.Classification et marquage
+****
+Le marquage appliqué au trafic dépend de la technologie. La décision de marquer le trafic au niveau de la couche 2 ou 3 (ou des deux) n'est pas anodine. Voici quelques points à prendre en compte avant de choisir :
+* Le marquage des trames au niveau de la couche 2 peut être effectué pour le trafic non IP.
+* Le marquage des trames au niveau de la couche 2 est la seule option QoS disponible pour les commutateurs qui ne prennent pas en charge le trafic IP.
+* Le marquage de la couche 3 porte les informations QoS de bout en bout.
+
+image::tssr2023/modules-07/ToIP/35.png[align="center"]
+****
+
+=== QOS couche 2 Trame Ethernet 802.1Q
+
+image:tssr2023/modules-07/ToIP/36.png[]
+
+=== La QoS CoS de couche 2 : 802.1Q/p
+
+image:tssr2023/modules-07/ToIP/37.png[]
+
+=== QOS Couche 3 : paquet IPv4
+
+image:tssr2023/modules-07/ToIP/38.png[]
+
+=== Couche 3 : paquet IPv6
+
+image:tssr2023/modules-07/ToIP/39.png[]
+
+=== QoS couche 3 : Diffserv (DSCP : Differentiated Services Code Point)
+
+image:tssr2023/modules-07/ToIP/40.png[]
+
+=== DSCP - ECN
+
+image:tssr2023/modules-07/ToIP/41.png[]
+
+=== Sélecteur de classe CS
+
+image:tssr2023/modules-07/ToIP/42.png[]
+
+=== La QoS de couche 3 : DiffServ
+
+image:tssr2023/modules-07/ToIP/43.png[]
+
+=== QoS Values Calculator v3
+
+image:tssr2023/modules-07/ToIP/44.png[]
+
+=== Les problèmes classiques
+
+image:tssr2023/modules-07/ToIP/45.png[]
+
+// Slide 165
+== Les problèmes classiques
+
+=== Les problèmes de transmission
+
+* L’atténuation d’une ligne
+* Les perturbateurs électromagnétiques
+* La perte de paquet
+* Des délais de latence
+* Un mauvais ordonnancement de paquets
+* Des variations de gigue
+* L’écho
+
+image:tssr2023/modules-07/ToIP/46.png[]
+
+=== La perte de paquets
+
+* Le taux de perte d’un équipement correspond au pourcentage de paquets perdu faute de capacité
+* Avec UDP, il n’y a aucune garantie que les paquets arrivent au destinataire
+* Il dépend :
+** De la qualité des lignes utilisées
+** Du dimensionnement réseau
+** De la mémoire tampon des commutateurs
+* La téléphonie nécessite un taux de perte
+** Inférieur à 20% pour garder une qualité de communication acceptable
+image:tssr2023/modules-07/ToIP/47.png[]
+
+=== Le délai de latence
+
+* C’est le temps de transit des paquets
+* Se mesure en quelques dizaines de millisecondes
+* Généralement dû à :
+** Un encombrement du support physique
+** Aux équipements surchargés
+** Aux différents temps de traitement
+* Nécessite :
+** Une augmentation des débits
+** Remplacement des équipements réseau
+** Segmentation et priorisation des flux
+
+IMPORTANT: Dans une solution de ToIP, tous les
+éléments doivent être pris en compte.
+
+=== La gigue (Jitter)
+
+C’est la différence de délai de transmission de bout en bout entre des paquets choisis dans un même flux de paquets, sans prendre en compte les paquets éventuellement perdus
+
+image:tssr2023/modules-07/ToIP/48.png[]
+
+[NOTE,caption=INFO]
+====
+Nous devrions utiliser les termes « variation du délai de transmission » (Packet delay variation) à cause de la confusion possible avec la gigue en électronique
+====
+
+image:tssr2023/modules-07/ToIP/49.png[]
+
+=== Seuils optimums
+
+image:tssr2023/modules-07/ToIP/50.png[]
+
+=== Le phénomène d'écho
+
+.Comme pour la téléphonie classique, il existe deux types d’écho :
+****
+* L’écho électrique ou chambre d’écho
+** C’est un dispositif électromécanique ou électronique qui ajoute au signal électrique une ou plusieurs copies de ce signal avec un retard, se répétant de manière décroissante
+** Il est lié aux technologies de transport et s’accroît avec les temps de propagation (ex. : généré par le passage d’une paire à deux paires de cuivre)
+** Il devient perceptible à environ 40 ms
+* L’écho acoustique
+** Il est issu de la captation du son du haut-parleur par le microphone
+** Les passerelles intègrent des mécanismes anti-écho
+** EC – Echo Cancellation
+
+image::tssr2023/modules-07/ToIP/51.png[align="center"]
+****
+
+== Circuit d'appels
+
+=== Xivo et circuit d'appels
+
+.La téléphonie en entreprise
+****
+* Les entreprises sont sous le format « multisite »
+* Les communications unifiées (Téléphonie et Messagerie) doivent être configurées avec attention
+* Plusieurs sens de flux d’appel sont à identifier :
+* Appel interne vers l’interne
+* Appel interne vers externe
+* Appel externe vers interne
+* Comment relier la communication intersite ?
+* Quelles technologies utiliser ?
+
+image::tssr2023/modules-07/ToIP/52.png[align="center"]
+****
+
+image:tssr2023/modules-07/ToIP/53.png[]
+
+.Création d’un processus d’appel
+****
+* Déterminer le flux d’entrée des appels :
+** Répartition par agence ?
+** Entrée au siège et gestion des débordements ?
+** Au-delà de 3 lignes en attente, le standard bascule-t-il sur un autre site ?
+
+[NOTE,caption=INFO]
+====
+Les Entrée au siège doivent faire la gestion des débordements
+====
+
+* Déterminer les différents services et les points d’entrée :
+** Par site géographique ?
+** Par service ?
+
+[NOTE,caption=INFO]
+====
+Selon le service, nous choisirons une répartition par site géographique ou un traitement par site
+====
+
+* Que faire si une personne est indisponible :
+** Retour à l’accueil ?
+** Mise en attente ?
+** Boîte vocale ?
+** Redirection vers un autre collaborateur ?
+
+[NOTE,caption=INFO]
+====
+Selon les services, on choisira la mise en place de groupes d’appel ou un retour à l’accueil.
+====
+
+* Définir le processus pour les points d’entrée vers un service :
+** Doit-on transférer l’appel directement au collaborateur ?
+*** Si oui : à tous ? À certains ? Au hasard ?
+** Doit-on transférer vers les responsables ?
+*** Doit-on prendre les messages ?
+
+[NOTE,caption=INFO]
+====
+Nous désignerons une personne ou un groupe d’appel par service.
+Les responsables ne souhaitant pas être dérangés, le standard prendra les messages.
+====
+
+* Cette dernière étape est critique et peut, souvent, être négligée ou oubliée.
+* Le risque est :
+** De transférer l’appel vers un mauvais interlocuteur
+** De perdre l’appel
+** D’envoyer le client dans une file d’attente sans fin
+* Les conséquences :
+** Insatisfaction du client
+** Perte de temps d’un collaborateur
+* Les solutions :
+** Chaque branche doit avoir une réelle porte de sortie
+** Créer une boucle vers l’accueil
+** Mettre en place un répondeur vocal
+*** Le rendre accessible via la messagerie ?
+****
+
+image:tssr2023/modules-07/ToIP/54.png[]
+
+//Slide 172
+== Acteur du marché serveur
+
+=== Serveur
+
+[cols="~,~"]
+|===
+^.^h| Libre    ^.^h| Propriétaire
+| Asterisk | Nokia
+| XiVO     | Cisco
+| FreePBX  | 3CX (partie payante)
+| Tribox   .4+|
+| Wazo
+| Issabel
+| Elastix
+|===
+
+=== Softphone
+
+* Jitsi
+* Zoiper
+* Xlite => Bria
+* Linphone
+* Skype
+* Ventrillo
+* Cisco
+* 3CX
+
+//Slide 174
+== XiVO
+
+=== Présentation de XiVO
+
+* XiVO est une solution de communication unifiée IP sous licence GPLv3 basée sur Debian et ASTERISK
+* Actuellement, XiVO est la première solution open source française de communication unifiée
+* Il intègre les fonctionnalités basiques :
+** IP-PBX classique
+** Gestion d’un processus de centres d’appels
+** Communication unifiée avec réception de messages vocaux et de fax dans la messagerie électronique
+
+=== Onglet Services
+
+image:tssr2023/modules-07/ToIP/55.png[]
+
+=== Onglet Configuration
+
+image:tssr2023/modules-07/ToIP/56.png[]
+
+=== Client XiVO
+
+image:tssr2023/modules-07/ToIP/57.png[]
+
+//Slide 176
+
+== XiVO Configuration et ajout utilisateur
+
+=== Installation et configuration de XiVO
+
+image:tssr2023/modules-07/ToIP/58.png[]
+image:tssr2023/modules-07/ToIP/59.png[]
+image:tssr2023/modules-07/ToIP/60.png[]
+image:tssr2023/modules-07/ToIP/61.png[]
+
+=== Ajouter un utilisateur
+
+image:tssr2023/modules-07/ToIP/62.png[]
+image:tssr2023/modules-07/ToIP/63.png[]
+image:tssr2023/modules-07/ToIP/64.png[]
+image:tssr2023/modules-07/ToIP/65.png[]
+image:tssr2023/modules-07/ToIP/66.png[]
+image:tssr2023/modules-07/ToIP/67.png[]
