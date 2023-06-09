@@ -1030,3 +1030,25 @@ a|* T – AbsoluteTimeout | exten => T,1,Hangup()
 * ${CALLERID} : l’ID courant de l’appelant (nom et numéro)
 * ${CALLERID(NUM)} : le numéro de l’appelant
 * ${CALLERID(NAME)} : le nom de l’appelant
+
+=== Syntaxe EXTEN Actions
+
+* Answer : accepte un appel. Beaucoup d’applications nécessitent que l’on réponde à l’appel pour que le fonctionnement soit correct
+* Hangup : raccroche
+* Playback(nom_de_fichier) : cette commande joue un fichier au format .wav ou .gsm. Answer doit être exécuté avant de pouvoir jouer le fichier
+* Background(nom_de_fichier) : comme Playback, excepté qu’il se base sur une entrée de l’utilisateur. Answer doit avoir été exécuté avant de pouvoir jouer le fichier
+* Goto(context,extension,priorité) : renvoie vers un contexte, extension et priorité
+* Queue(nom_file_attente|options) : met l’appel dans une file d’attente (définie dans queues.conf)
+* Voicemail(extension) : transfère l’appel vers la messagerie vocale
+
+=== Actions
+
+* VoicemailMain : permet à l’utilisateur de notamment lire ses messages, d’enregistrer son message d’accueil
+* Echo : test d’écho
+* Directory : annuaire automatique basé sur voicemail.conf
+* MusicOnHold : musique d’attente
+
+== TP - Extension.conf
+
+* Circuit d'appels
+* IVR
