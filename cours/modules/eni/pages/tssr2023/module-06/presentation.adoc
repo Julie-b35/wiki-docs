@@ -5,77 +5,75 @@
 
 Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]
 
-•
-ISO 9001
-•
-Norme, qui s’adresse à tous les secteurs d’activité, qui définit un système de gestion de qualité par
+== Présentation d'ITIL
+
+* *ITIL* **I**nformation **T**echnology **I**nfrastructure **L**ibrary
+* En français : Bibliothèque pour l’infrastructure des technologies de
+l’information.
+* *ITIL* définit les bonnes pratiques informatiques afin d’avoir un Système
+d’Information le plus efficace et efficient que possible.
+
+== Les normes
+
+* *ISO 9001*
+** Norme, qui s’adresse à tous les secteurs d’activité, qui définit un système de gestion de qualité par
 le processus.
-•
-ISO 20000
-•
-Norme internationale, spécifique à la gestion des systèmes d’information, définie en treize
+* *ISO 20000*
+** Norme internationale, spécifique à la gestion des systèmes d’information, définie en treize
 processus (ces processus sont définis dans ITIL).
-•
-Cette certification est facilitée si l’on possède ISO 9001 et ITILV2 minimum
+** Cette certification est facilitée si l’on possède ISO 9001 et ITILV2 minimum
 
+== Historique
 
+* Fin des années 80
+** Le gouvernement britannique lance une étude nationale pour connaître les pratiques utilisées dans la gestion des
+informations au niveau de l’administration et afin de garder les meilleures. Le but est d’homogénéiser le traitement
+des informations.
+** Création d’une bibliothèque de 42 livres baptisée « ITIL »
+** Le système d’information est un fournisseur de moyens
+* 1991
+** Création d’un forum permettant aux utilisateurs d’ITIL d’échanger les idées et leurs expériences. Il deviendra l’ITSMF.
+* 2004
+** Évolution vers ITIL v2 qui repose sur 9 livres centraux
+** Apparition de processus orientés sécurité et des SLAs
+** Le système d’information est un fournisseur de services
+* 2007
+** ITIL v3 qui repose sur 5 livres centraux
+** Ajout de la notion de « cycle de vie des services »
+* Janvier 2020
+** ITIL 4 n’est pas une version, mais un dépoussiérage de la version 3 en gardant les principes fondamentaux
+* Référentiel international de gestion des services informatiques
 
-•
-Les différents acteurs
-•
-OGC « O ffice of G overnment C ommerce » : office public britannique du commerce.
-•
-Propriétaire du référentiel initialise et contrôle les publications
-•
-Axelos : Entreprise créée en 2014 par l’OGC pour gérer ITIL
-•
-Organismes de gestion des certifications et des examens
-•
-APM Group, EXIN, ISEB, Loyalist College , Dansk IT, DF Certifiering
-•
-Définissent un langage commun
-•
-ITSMF IT S ervice M anagement F orum)
-•
-Association d’utilisateurs
-•
-Les organismes de formation et les formateurs agréés
-•
-Les experts et les consultants en gestion de service certifiés ITIL
+image:tssr2023/module-06/Historique/01.png[]
 
-== Définition
+== Présentation d'ITIL v3
 
-* *ITIL* : **I**nformation **T**echnology **I**nfrastructure **L**ibrary.
-* En français : Bibliothèque pour l’infrastructure des technologies de l’information.
-* *ITIL* définit les bonnes pratiques informatiques afin d’avoir un Système d’Information le plus efficace et efficient que possible.
+* *ITIL* repose sur l’évolution de l’informatique dans une gestion de projets
+vers une gestion de service
+* Contenu :
+* Les bonnes pratiques de la gestion des services informatiques
+* Définition d’un langage commun
+* Définition d’un cadre de travail
 
-
-
+.Les différents acteurs
 ****
-*ITIL* est un référentiel
+* *OGC* « **O**ffice of **G**overnment **C** ommerce » : office public britannique du commerce.
+** Propriétaire du référentiel initialise et contrôle les publications.
+* *Axelos* : Entreprise créée en 2014 par l’OGC pour gérer ITIL
+* Organismes de gestion des certifications et des examens
+** APM Group, EXIN, ISEB, Loyalist College , Dansk IT, DF Certifiering
+** Définissent un langage commun
+* *ITSMF* (*IT* **S**ervice **M**anagement **F**orum)
+* Association d’utilisateurs
+* Les organismes de formation et les formateurs agréés
+* Les experts et les consultants en gestion de service certifiés ITIL
 ****
 
+== Apport d'ITIL 4
 
-****
-Itil référentiel international
-
-1ère étape la conceptions
-
-- Disponibilité du système
-****
-
-
-TP : 1
-* : Temps moyen de non-disponibilité
-* : Temps moyen de diagnostiquer
-* : Temps moyen de redémarrage
-* : Détection
-* : Diagnostique
-* : Réparation
-* : Redémarrage
-* : Temps moyen de détection
-* : Temps moyen de réparation (MTTR)
-* : Durée moyenne de disponibilité
-* : temps moyen entre deux incidents
-
-asset center software collècte les informations
+* *ITIL 4* n’est pas une nouvelle version, mais représente la 4 e génération
+industrielle.
+* Nouveautés :
+** Gestion de projet Agile
+** Le Lean
+** Le cloud

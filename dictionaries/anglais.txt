@@ -1,5 +1,6 @@
 authpriv
 autofetch
+Axelos
 backquote
 blkid
 Centrex
@@ -15,6 +16,7 @@ fdisk
 gpedit
 gruub
 gsettings
+helpdesk
 inodes
 ipbase
 journalctl
