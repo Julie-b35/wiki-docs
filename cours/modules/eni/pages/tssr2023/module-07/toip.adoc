@@ -1011,11 +1011,11 @@ exten => 555,1,Dial(SIP/Johnny)
 ****
 [frame=none,grid=none,cols="~,~"]
 |===
-| * i – Invalid | exten => i,1,Playback(${sounds_path}erreur-saisie)
-| * s – Start, pas d'analyse, mais traitement direct | exten => s,1,Answer()
-| * h – Hangup | exten => h,4,exten()
-| * t – Timeout (déclaré dans le contexte) | exten => t,1,Hangup()
-|* T – AbsoluteTimeout | exten => T,1,Hangup()
+a| * i – Invalid | exten => i,1,Playback(${sounds_path}erreur-saisie)
+a| * s – Start, pas d'analyse, mais traitement direct | exten => s,1,Answer()
+a| * h – Hangup | exten => h,4,exten()
+a| * t – Timeout (déclaré dans le contexte) | exten => t,1,Hangup()
+a|* T – AbsoluteTimeout | exten => T,1,Hangup()
 |===
 
 * Concaténation : écrire l'un à côté de l'autre : 555${EXTEN} ajoute le préfixe 555 au numéro composé
