@@ -2,7 +2,6 @@
 :navtitle: ToIP
 
 * Module précédent -> xref:tssr2023/module-07/securiter.adoc[Module 05 - La Sécurité]
-* Module suivant -> 
 
 Notes -> xref:notes:eni-tssr:network-phone-ip.adoc[Réseaux et téléphonie sur IP]
 
@@ -243,8 +242,9 @@ image:tssr2023/modules-07/ToIP/13.png[]
 
 //Slide 136
 == Support de ligne
+
+.ADSL
 ****
-ADSL
 * Asymmetric Digital Subscriber Line
 * Plutôt pour les TPE
 * Les débits ne sont pas garantis
@@ -253,15 +253,16 @@ ADSL
 image::tssr2023/modules-07/ToIP/14.png[align="center"]
 ****
 
-=== SDSL
-
+.SDSL
+****
 * Symmetric Digital Subscriber Line
 * Plutôt pour les moyennes et grandes entreprises
 * Les débits sont garantis
 * Contrairement à l’ADSL, le débit en réception est égal au débit en émission
 * Souvent assortis d’une Garantie de Temps de Rétablissement (SLA GTR) nécessaire pour le service téléphonie jugé le plus critique du SI
 
-image:tssr2023/modules-07/ToIP/15.png[]
+image::tssr2023/modules-07/ToIP/15.png[align="center"]
+****
 
 === Liaison louée
 
