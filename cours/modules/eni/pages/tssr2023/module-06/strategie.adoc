@@ -132,11 +132,11 @@ et/ou matérielles)
 *** *BCM*( **B**usiness **C**apacity **M**anagement) - Gestion de la capacité orientée Métier futurs besoins
 *** *SCM* (**S**ervice **C**apacity **M**anagement ) - Gestion de la capacité orientée service Performances actuelles
 *** *CCM* (**C**omponent **C**apacity **M**anagement) - Gestion de la capacité des Composants Ressources disponibles
-* xref:tssr2023/module-06/strategie.adoc#[*La gestion de la continuité*]
+* xref:tssr2023/module-06/strategie.adoc#la-gestion-de-la-continuité-terminologie[*La gestion de la continuité*]
 ** S’assure de la poursuite de la livraison des services dans le respect des SLA dans un environnement dégradé (côté
 DSI et/ou client)
 ** Nécessite de tester régulièrement et adapter les PCA
-* *La gestion de la sécurité*
+* xref:tssr2023/module-06/strategie.adoc#[*La gestion de la sécurité*]
 ** S’assure de la sécurité des données du système d’information
 ** Disponibilité, Confidentialité, Intégrité, Authenticité, non répudiation
 ** Nécessite de définir la politique d’utilisation du système d’information
@@ -195,12 +195,15 @@ image:tssr2023/module-06/strategie/05.png[]
 
 == La gestion de la continuité : Terminologie
 
-• Business Continuity Plan (Plan de Continuité d’Activité en Français) : orienté
-métier, quelles sont les activités opérationnelles et leurs ressources que vaisje
-maintenir ?
-• Business Continuity Managment : analyse et gestion, quels sont les risques
-et leurs impacts ?
-• Business Impact Analysis : méthode d’analyse de l’impact business qui
-permet d’évaluer les pertes potentielles.
-• Disaster Recovery Plan (Plan de Reprise d’Activité en Français) : plan de
-rétablissement et reprise informatique.
+* **B**usiness **C**ontinuity **P**lan (**P**lan de **C**ontinuité d’**A**ctivité en Français) : orienté métier, quelles sont les activités opérationnelles et leurs ressources que vais-je maintenir ?
+* **B**usiness **C**ontinuity **M**anagement : analyse et gestion, quels sont les risques et leurs impacts ?
+* **B**usiness **I**mpact **A**nalysis : méthode d’analyse de l’impact business qui permet d’évaluer les pertes potentielles.
+* **D**isaster **R**ecovery **P**lan (**P**lan de **R**eprise d’**A**ctivité en Français) : plan de rétablissement et reprise informatique.
+
+== La gestion de la sécurité : Terminologie
+
+* *La disponibilité des données* : c’est donner à l’utilisateur qui le demande l’information dont il a besoin.
+* *La confidentialité* : c’est rendre accessible l’information à ceux qui en ont l’autorisation et à eux seuls.
+* *L’authenticité* : c’est rendre fiables les échanges par une signature électronique.
+* *L’intégrité* : c’est s’assurer que l’information est complète et qu’elle n’a pas été altérée de manière frauduleuse.
+* *La non répudiation* : c’est assumer le fait d’avoir effectué

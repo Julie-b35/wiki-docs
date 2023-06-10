@@ -15,12 +15,15 @@ Certifiering
 CILL
 CNTL
 comunication
+ctivité
 Dansk
 Demarrage
 DSCP
 echnology
+ecovery
 EIGRP
 Elastix
+eprise
 equirement
 ervice
 ethernet
@@ -44,6 +47,7 @@ IGRP
 iness
 IPBX
 irtual
+isaster
 ISEB
 Issabel
 ITIL
@@ -65,8 +69,10 @@ MGCP
 MMDD
 Mnet
 mobaxterm
+mpact
 MPLS
 mprovement
+nalysis
 nblig
 nderpinning
 nformation
@@ -82,6 +88,8 @@ nvram
 NVRAM
 ommerce
 omponent
+ontinuité
+ontinuity
 ontract
 ontrol
 orum
