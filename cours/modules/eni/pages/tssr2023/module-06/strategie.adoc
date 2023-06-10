@@ -117,12 +117,12 @@ image:tssr2023/module-06/strategie/02.png[]
 
 * *La coordination de la conception*
 ** Met en relation les différents processus pour la création des services
-* xref:tssr2023/module-06/strategie.adoc#[*La gestion du catalogue des services*]
+* *La gestion du catalogue des services*
 ** Pour gérer et garder à jour les informations des services et leur disponibilité
-* **La gestion des niveaux de services (SLA)* **
+* xref:tssr2023/module-06/strategie.adoc#la-gestion-des-niveau-de-services[**La gestion des niveaux de services (SLA)* **]
 ** Dans la matrice RACI, elle est « accountable »
 ** Permet d’identifier les exigences, les besoins et les moyens nécessaires à la fourniture des services
-* *La gestion de la disponibilité*
+* xref:tssr2023/module-06/strategie.adoc#[*La gestion de la disponibilité*]
 ** S’assure que les niveaux de disponibilité d’un service sont conformes aux SLA
 ** Permet aussi de supprimer les SPOF (Single Point Of Failure)
 * *La gestion de la capacité*
@@ -148,3 +148,19 @@ NOTE: Processus détaillé dans les diapositives suivantes
 
 //Slide 24
 == La gestion des niveau de services
+
+image:tssr2023/module-06/strategie/03.png[]
+
+* *Le contenu d’un OLA*
+** Un contrat de services OLA est un contrat pour réaliser un SLA
+** Le document a la même structure que le SLA
+** L’OLA est un contrat interne, les conditions de pénalités sont souvent inexistantes ou non
+applicables
+* *Le contenu d’un UC*
+** Un contrat de service UC est un contrat avec un prestataire externe pour réaliser un SLA
+** Le document a la même structure que le SLA
+** Des clauses juridiques sont à ajouter pour traiter la relation entre les deux organisations
+
+== La gestion de la disponibilité : FMD
+
+image:tssr2023/module-06/strategie/04.png[]
