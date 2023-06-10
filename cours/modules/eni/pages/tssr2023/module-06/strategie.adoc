@@ -136,11 +136,11 @@ et/ou matérielles)
 ** S’assure de la poursuite de la livraison des services dans le respect des SLA dans un environnement dégradé (côté
 DSI et/ou client)
 ** Nécessite de tester régulièrement et adapter les PCA
-* xref:tssr2023/module-06/strategie.adoc#[*La gestion de la sécurité*]
+* xref:tssr2023/module-06/strategie.adoc#la-gestion-de-la-sécurité-terminologie[*La gestion de la sécurité*]
 ** S’assure de la sécurité des données du système d’information
 ** Disponibilité, Confidentialité, Intégrité, Authenticité, non répudiation
 ** Nécessite de définir la politique d’utilisation du système d’information
-* *La gestion des fournisseurs*
+* xref:tssr2023/module-06/strategie.adoc#[*La gestion des fournisseurs*]
 ** Codifie la relation avec les fournisseurs (recrutement, contrat, niveau et qualité de service, litiges, ruptures de contrat)
 
 [caption="Info"]
@@ -207,3 +207,14 @@ image:tssr2023/module-06/strategie/05.png[]
 * *L’authenticité* : c’est rendre fiables les échanges par une signature électronique.
 * *L’intégrité* : c’est s’assurer que l’information est complète et qu’elle n’a pas été altérée de manière frauduleuse.
 * *La non répudiation* : c’est assumer le fait d’avoir effectué
+
+== La gestion des fournisseurs
+
+* Organisation externe à l’entreprise qui va intervenir dans la fourniture d’un
+service sous contrat de sous traitance ( *UC* , **U**nderpinning **C**ontract)
+* Plusieurs relations possibles :
+** Sous traitance : Organisation externe qui s’engage pour la conception, le développement, l’exploitation et la maintenance d’un service.
+** Co-traitance : Organisation externe qui s’engage à participer à des activités du cycle de vie du
+service.
+** Partenariat : Engagement à long terme pour de nouvelles opportunités.
+** **A**pplication **S**ervice **P**rovision (*ASP*) : Fourniture partielle ou totale d’un service à partir de son propre SI et de son réseau.
