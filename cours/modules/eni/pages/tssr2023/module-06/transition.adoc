@@ -5,3 +5,175 @@
 * Module suivant -> xref:tssr2023/module-06/exploitation.adoc[Module 5 : Publications centrales : Exploitation]
 
 Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]
+
+== La transition des services
+
+* *Objectif*
+* Mise en production des services (nouveaux ou améliorés)
+* *Son rôle*
+** Mettre en production en respectant les livrables produits par la conception des services ainsi que
+les coûts
+** Réalisation, Construction, Test, Validation et Déploiement des services
+** Prévoir et gérer les ressources nécessaires
+** Produire la documentation
+** Surveiller et améliorer les services
+** Respecter les critères de qualité, de sécurité et les délais dans la délivrance des services
+** Prendre en compte et améliorer la perception client
+* Dans la phase de transition, tout commence par le processus de gestion des changements avec une *RFC* **R**equest **F**or **C**hange
+
+image:tssr2023/module-06/transition/01.png[]
+
+
+== La gestion des changements
+
+* *Ses objectifs*
+** S’assurer que les procédures et les méthodes pour traiter les changements sont efficaces, voire
+efficientes
+** S’assurer que les modifications des *CI* (**C**onfiguration **I**tem) sont bien enregistrées dans le *CMS* (**C**ontent **M**anagement **S**ystem)
+** Répondre aux évolutions exprimées par les clients en minimisant les risques d’interruption de service et en maximisant la valeur fournie
+* *Définition d’un changement*
+** Modification, ajout ou retrait d’un ou plusieurs *CI* du système d’information ou d’un ou plusieurs
+services fournis par ce système d’information
+* *Les origines d’un changement*
+** Les correctifs (événement, incident, problème…)
+** La législation
+** L’organisation
+** Des directives ou des standards
+** Des évolutions des services existants
+** Des nouveaux services
+** Un nouveau modèle de sourcing
+** Une innovation technologique…
+* *La demande de changement*
+** Tous les clients sont habilités à émettre une demande de changement, mais cela ne veut pas dire qu’elle sera acceptée.
+** Toute demande de changement doit être formalisée par une RFC.
+** RFC ( Request For Change) est une formalisation d’une modification d’un ou plusieurs éléments de configuration (CI).
+** Une RFC doit contenir :
+** Un identifiant unique
+** Une date de demande
+** Le nom du demandeur
+** Une proposition de priorité de changement ( priorité = impact x urgence )
+** Une description du changement
+** Les risques durant l’implémentation du changement
+** Les dates de mise en place du changement
+** Une estimation des ressources nécessaires (humaine, matériels…)
+* La gestion de la priorité d’une demande de changement
+
+image:tssr2023/module-06/transition/02.png[]
+
+== Les types de changement
+
+* Le changement *normal*
+** Il nécessite une évaluation complète et une autorisation avant sa réalisation par le CAB
+* Le changement *standard*
+** Actions connues, documentées, déjà réalisées et testées
+** Les risques sont faibles et bien maîtrisés
+** Changement pré-approuvé, maîtrisé et associé à des procédures établies
+** Référencé dans un mini catalogue de changements pré-autorisés
+* Le changement *urgent*
+** L’urgence est exceptionnelle et devra être validée et autorisée par l’ECAB
+** Court circuitage des procédures (réalisation, mise en oeuvre, documentation et tests)
+
+image:tssr2023/module-06/transition/03.png[]
+
+== La gestion des changements
+
+image:tssr2023/module-06/transition/04.png[]
+
+=== Terminologie
+
+* *CI* **C**onfiguration **I**tem : composant du système d’information qui va contribuer à la fourniture d’un ou plusieurs services
+* *CMS* **C**ontent **M**anagement **S**ystem : logiciel de gestion des CI , de la base
+* *CAB* **C**hange **A**dvisory **B**oard : Comité consultatif qui évalue et donne un avis sur la mise en oeuvre des changements dits normaux
+* *ECAB* **E**mergency **C**hange **A**dvisory **B**oard : Comité qui donne l’autorisation de traiter le changement en urgence
+* *PIR* **P**ost **I**mplementation **R**eview : Comité qui analyse les résultats des mises en production des changements
+
+== La gestion des actifs de services et des configurations
+
+* *Son objectif*
+** Identifier, contrôler et enregistrer les actifs de services et les éléments de configuration *CI* (**C**onfiguration **I**tem, les « baselines »)
+** Éditer des rapports sur l’état des actifs de services et des éléments de configuration
+** Auditer et vérifier les actifs de services et les éléments de configuration
+** Protéger l’intégrité des actifs de services et des éléments de configuration
+** Gérer un système de gestion de configuration ( *CMS* ou **C**onfiguration **M**anagement **S**ystem)
+* *Élément de configuration*
+** Un élément de configuration, dénommé *CI* , est un composant du système d’information qui va contribuer à la fourniture d’un ou plusieurs services
+** Identifiable par un type et un ensemble d’attributs pour le décrire
+** Relation possible avec d’autre *CI* : situation, physique et fonctionnelle
+
+image:tssr2023/module-06/transition/05.png[]
+
+* *Activités : Planification initiale*
+** Définir le périmètre, la stratégie, la politique de gestion des éléments de configuration
+** Connaître les outils et les données des différents composants existants (véracité et mise à jour) : Analyse de l’existant
+** Sélection, configuration et modélisation du CMS/CMDB (type de CI, attributs, relations)
+** Chargement initial
+** Nomination du propriétaire, des acteurs clés avec leurs rôles et responsabilités
+** Formation des collaborateurs
+* *Activités : Planification itérative*
+** Chargement des CMDB
+** Ajustement des procédures, rôles et responsabilités
+
+image:tssr2023/module-06/transition/06.png[]
+
+* Les outils : La *CMBD*
+** **C**onfiguration **M**anagement **D**atabase
+** BDD de l’outil de gestion associé
+** Contient des enregistrements CI
+* Les outils : Le *CMS*
+** **C**onfiguration **M**anagement **S**ystem
+** Ensemble d’outils pour gérer les données de configuration
+** Prend les données de plusieurs CMDB pour constituer une CMDB fédérée
+* Les outils : La DML
+** **D**efinitive **M**edia **L**ibrary : lieu de stockage sécurisé des CI logiciels
+** Référence pour tous les logiciels : contient les médias, documentations et clés de licence associées
+
+== Les processus de la transition des services
+
+** *La gestion des mises en production et des déploiements*
+** Valide, organise et planifie le déploiement des services (nouveaux ou mis à jour) de façon « industrielle », en garantissant la valeur apportée, dans le respect des SLA.
+** Crée et fournit le document à l’exploitation des services
+** S’assure que les utilisateurs ont reçu les informations et sont formés pour utiliser les nouveaux services
+** Gestion des versions, convention de nommage, le R.A.C.I, les délais…
+
+image:tssr2023/module-06/transition/07.png[]
+
+* *La gestion des mises en production et des déploiements*
+** Les différents modes de déploiement
+
+image:tssr2023/module-06/transition/08.png[]
+
+* *La gestion de l’évaluation des changements*
+** Mesure l’impact des changements, en évaluant les effets, les impacts et les risques
+** Crée la revue de post implémentation (PIR)
+** Indépendante de la gestion des changements
+* *La validation et les tests*
+** Garant du bon fonctionnement des services (nouveaux et maj) après et de la gestion des erreurs découvertes pendant les phases d’intégration, de préproduction et de post mise en production
+** Création de procès verbaux de recette (fonctionnelle, performance, d’exploitabilité, de service régulier)
+* *La gestion de la planification et le support à la transition*
+** Organise le ou les changements de services (nouveaux ou mise à jour) et gère les ressources nécessaires (humaines et matérielles)
+
+La gestion de la connaissance
+
+* *Ses objectifs*
+** Donner de l’information à un collaborateur avec la granularité dont il a besoin
+** Fournir une information compréhensible et fiable
+** Permettre une prise de décision à tous les instants du cycle de vie
+** Permettre d’optimiser et de fiabiliser les prises de décision (efficience)
+** Permettre d’enregistrer les situations déjà connues
+** Mettre en place et faire vivre un système de gestion de la connaissance
+** Gérer l’information
+** S’assurer de la bonne utilisation de la base de connaissances
+** *SKMS* **S**ervice **K**nowledge **M**anagement **S**ystem
+* *Gestion de l’information*
+** Identifier les exigences, les contraintes, les spécifications des données traitées
+** Définir une architecture permettant de supporter ces données
+** Définir des outillages appropriés pour mettre en oeuvre cette architecture
+** Écrire les procédures qui vont faire vivre ces données
+** Effectuer une analyse précise de l’état des lieux en matière de gestion de la connaissance
+** Appréhender cette spécificité pour mieux bâtir une solution adaptée
+** Évaluer la performance des bases de connaissances et être force de propositions pour l’amélioration des bases
+* *Bonne utilisation de la base*
+** Savoir si ce que l’on a mis en place sert à quelque chose ou si des collaborateurs l’utilisent
+** Comprendre qui partage la connaissance, qui capitalise la connaissance de l’entreprise
+** L’important n’est pas une base de connaissances contenant beaucoup d’informations, mais une base de connaissances qui est utilisée
+** Gérer la promotion, l’information, la formation sur les bases de connaissances

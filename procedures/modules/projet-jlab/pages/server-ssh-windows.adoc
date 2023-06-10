@@ -100,3 +100,10 @@ Redémarrage du service
 $session = New-PSSession -HostName UbuntuVM1 -UserName TestUser
 Enter-PSSession $session
 ----
+
+== (Optionnel) - Mettre à jour Powershell
+
+[source,powershell]
+----
+iex "& { $(irm https://aka.ms/install-powershell.ps1) } -UseMSI"
+----

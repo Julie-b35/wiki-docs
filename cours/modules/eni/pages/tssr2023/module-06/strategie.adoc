@@ -140,7 +140,7 @@ DSI et/ou client)
 ** S’assure de la sécurité des données du système d’information
 ** Disponibilité, Confidentialité, Intégrité, Authenticité, non répudiation
 ** Nécessite de définir la politique d’utilisation du système d’information
-* xref:tssr2023/module-06/strategie.adoc#[*La gestion des fournisseurs*]
+* xref:tssr2023/module-06/strategie.adoc#la-gestion-des-fournisseurs[*La gestion des fournisseurs*]
 ** Codifie la relation avec les fournisseurs (recrutement, contrat, niveau et qualité de service, litiges, ruptures de contrat)
 
 [caption="Info"]
