@@ -217,7 +217,8 @@ Utilisez la commande de configuration globale *no access-list access-list-number
 
 .Syntaxe des listes de contrôle d'accès IPv4 standard nommées
 ****
-ip access-list standard
+`*ip access-list standard*`
+
 * Les noms des listes de contrôle d'accès doivent contenir uniquement des caractères alphanumériques, sont sensibles à la casse et doivent être uniques.
 * Vous n’êtes pas obligé de mettre des majuscules aux noms des listes de contrôle d’accès. En revanche, si vous le faites, vous les verrez bien mieux en affichant la sortie de la commande running-config.
 
