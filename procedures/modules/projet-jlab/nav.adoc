@@ -1,2 +1,4 @@
 * xref:index.adoc[]
 * xref:server-ssh-windows.adoc[]
+* xref:install-Postifx.adoc[]
+* xref:Install-GLPI[]

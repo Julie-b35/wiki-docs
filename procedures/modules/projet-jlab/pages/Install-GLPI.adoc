@@ -1,0 +1,65 @@
+= Installation de GLPI
+
+== Télécharger GLPI
+
+Télécharger la dernière version de GLPI sur le site de link:https://glpi-project.org/fr/telecharger-glpi/[glpi-project.org]
+
+[source,bash]
+----
+wget https://github.com/glpi-project/glpi/releases/download/10.0.7/glpi-10.0.7.tgz
+# dézippé dans le dossier /srv
+tar -xzvf glpi-10.0.7.tgz
+----
+
+== Configuration d'un VirtualHost
+
+.fichier 'glpi.got.local'
+----
+<VirtualHost *:80>
+    ServerName glpi.got.local
+
+    DocumentRoot /srv/www/glpi/public
+
+    # If you want to place GLPI in a subfolder of your site (e.g. your virtual host is serving multiple applications),
+    # you can use an Alias directive:
+    # Alias "/glpi" "/var/www/glpi/public"
+
+    <Directory /srv/www/glpi/public>
+        Require all granted
+
+        RewriteEngine On
+
+        # Redirect all requests to GLPI router, unless file exists.
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^(.*)$ index.php [QSA,L]
+    </Directory>
+</VirtualHost>
+----
+
+== Installation de Php et de ces extension
+
+
+[caption=Source]
+TIP: link:https://www.it-connect.fr/installation-de-php-8-1-sur-debian-11-pour-son-serveur-web/[]
+
+----
+php8.2-mysqli php8.2-xml php8.2-curl php8.2-gd php8.2-mbstring php8.2-bz2 php8.2-zip php8.2-ldap
+----
+
+== Installation base de donnée
+
+Mon choix c'est porté sur MariaDB
+
+[caption=Source]
+TIP: link:https://www.digitalocean.com/community/tutorials/how-to-install-mariadb-on-debian-11[]
+
+
+----
+openssl req -x509 -nodes -days 365 -newkey rsa:2048 -sha256 -out /etc/apache2/certificats/glpi.crt -keyout /etc/apache2/certificats/glpi.key
+----
+
+
+https://gist.github.com/solusipse/7ed8e1da104baaee3f05
+https://docs.phpmyadmin.net/fr/latest/setup.html
+https://docs.phpmyadmin.net/en/latest/setup.html#installing-from-git
+https://www.digitalocean.com/community/tutorials/how-to-reset-your-mysql-or-mariadb-root-password

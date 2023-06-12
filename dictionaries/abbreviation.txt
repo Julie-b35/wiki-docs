@@ -89,6 +89,7 @@ nblig
 nderpinning
 nformation
 nfrastructure
+noet
 nowledge
 NSSA
 nterconnection
@@ -140,6 +141,7 @@ servername
 SGDSN
 sigdef
 SKMS
+snakeoil
 societe
 SPOF
 strategie

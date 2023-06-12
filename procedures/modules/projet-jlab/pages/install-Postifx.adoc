@@ -1,0 +1,138 @@
+= Installation de Postfix
+
+== Préparation du système
+
+=== Mise à jour du système
+[source,bash]
+----
+apt-get update
+apt-get upgrade
+----
+
+=== Ajoute de l'utilisateur vmail
+
+[source,bash]
+----
+groupadd -g 5000 vmail
+useradd -u 5000 -g vmail -s /usr/sbin/nologin -d /var/vmail -m vmail
+----
+
+== Parti 1 - Installation et configuration de la base de donnée
+
+[source,bash]
+----
+apt install -y mariadb-server mariadb-client
+
+#Configuration de Mariadb
+mysql_secure_installation
+Enter current password for root (enter for none):
+Switch to unix_socket authentication [Y/n] n
+Change the root password? [Y/n] n
+Remove anonymous users? [Y/n] y
+Disallow root login remotely? [Y/n] y
+Remove test database and access to it? [Y/n] y
+Reload privilege tables now? [Y/n] y
+
+
+#Création d'un compte administrateur
+mariadb -u root
+CREATE USER 'username'@'localhost' IDENTIFIED BY 'password';
+GRANT ALL PRIVILEGES ON *.* to 'username'@'localhost';
+FLUSH PRIVILEGES;
+EXIT;
+
+# Mise en place de Phpmyadmin
+apt install -y git
+cd /srv/www && git clone https://github.com/phpmyadmin/phpmyadmin.git mysql
+----
+
+
+.fichier `/etc/apache2/sites-available/mysql.got.local`
+----
+<IfModule mod_ssl.c>
+    <VirtualHost _default_:443>
+        ServerName mysql.got.local
+
+        ServerAdmin webmaster@localhost
+
+        DocumentRoot /srv/www/mysql
+        ErrorLog ${APACHE_LOG_DIR}/error-mysql.log
+        CustomLog ${APACHE_LOG_DIR}/access-mysql.log combined
+
+        SSLEngine on
+        SSLCertificateFile      /etc/ssl/certs/ssl-cert-snakeoil.pem
+        SSLCertificateKeyFile /etc/ssl/private/ssl-cert-snakeoil.key
+
+        SSLProtocol -ALL +TLSv1 +TLSv1.1 +TLSv1.2
+        SSLHonorCipherOrder On
+        SSLCipherSuite ECDHE-RSA-AES128-SHA256:AES128-GCM-SHA256:HIGH:!MD5:!aNULL:!EDH:!RC4
+        SSLCompression off
+        <Directory  /srv/www/mysql>
+            Require all granted
+        </Directory>
+    </VirtualHost>
+
+    <VirtualHost *:80>
+        ServerName mysql.got.local
+
+        DocumentRoot /srv/www/mysql
+
+        ErrorLog ${APACHE_LOG_DIR}/error-mysql.log
+        CustomLog ${APACHE_LOG_DIR}/access-mysql.log combined
+
+        <Directory /srv/www/mysql>
+            Require all granted
+        </Directory>
+
+        Redirect permanent / https://mysql.got.local/
+	</VirtualHost>     
+</IfModule>
+
+# vim: syntax=apache ts=4 sw=4 sts=4 sr noet
+
+----
+
+=== Installation des paquets
+----
+apt install -y mariadb-server mariadb-client
+apt install -y postfix postfix-mysql postfixadmin   dovecot-core dovecot-imapd dovecot-managesieved
+
+apt-get install  dovecot-core dovecot-imapd dovecot-lmtpd dovecot-pgsql 
+php8.2-fpm php8.2-imap php8.2-pgsql php8.2-mcrypt php8.2-intl
+----
+
+
+<IfModule mod_ssl.c>
+	<VirtualHost _default_:443>
+		SSLEngine on
+
+        SSLCertificateFile	/etc/apache2/certificats/mysql.crt
+		SSLCertificateKeyFile /etc/apache2/certificats/mysql.key
+
+     
+        ServerName mysql.got.local
+
+        DocumentRoot /srv/phpMyAdmin
+
+        ErrorLog ${APACHE_LOG_DIR}/error-mysql.log
+        CustomLog ${APACHE_LOG_DIR}/access-mysql.log combined
+
+        <Directory /srv/phpMyAdmin>
+            Require all granted
+        </Directory>
+	</VirtualHost>
+    <VirtualHost *:80>
+        ServerName mysql.got.local
+
+        DocumentRoot /srv/phpMyAdmin
+
+        ErrorLog ${APACHE_LOG_DIR}/error-mysql.log
+        CustomLog ${APACHE_LOG_DIR}/access-mysql.log combined
+
+        <Directory /srv/phpMyAdmin>
+            Require all granted
+        </Directory>
+
+        Redirect permanent / https://mysql.got.local/
+	</VirtualHost>
+</IfModule>

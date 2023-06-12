@@ -49,6 +49,7 @@ ibpb
 IBPB
 ibrs
 IBRS
+imapd
 intf
 inum
 invpcid
@@ -77,6 +78,9 @@ localgroup
 logind
 lvremove
 macropaquets
+managesieved
+mariadb
+mcrypt
 metacaractere
 mklink
 Mmio
@@ -88,6 +92,7 @@ mtrr
 multihit
 ncpa
 nmtui
+nologin
 nonegotiate
 NUMA
 ospke
@@ -96,8 +101,10 @@ pcid
 pclmulqdq
 pdpe
 perfmon
+pgsql
 pico
 popcnt
+postfixadmin
 pppoe
 prctl
 PRENOM
@@ -142,6 +149,7 @@ USERACCOUNT
 usercopy
 vaes
 Vinagre
+vmail
 vpclmulqdq
 webmin
 Webmin
