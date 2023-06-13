@@ -116,6 +116,7 @@ PABX
 perating
 pérationnel
 POSIX
+Postifx
 pplication
 pplicative
 Privilegier

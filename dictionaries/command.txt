@@ -17,6 +17,7 @@ comptabiliter
 cpuid
 cryptd
 dapplication
+Developpement
 Dhhmm
 diskpart
 dnowprefetch
@@ -102,6 +103,7 @@ pclmulqdq
 pdpe
 perfmon
 pgsql
+phpmayadmin
 pico
 popcnt
 postfixadmin

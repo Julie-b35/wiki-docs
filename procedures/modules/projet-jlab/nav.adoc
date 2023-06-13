@@ -1,4 +1,6 @@
 * xref:index.adoc[]
+* Serveurs
+** xref:Serveurs/ServeurMail_GLPI.adoc[]
+
 * xref:server-ssh-windows.adoc[]
-* xref:install-Postifx.adoc[]
-* xref:Install-GLPI.adoc[]
+
