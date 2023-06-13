@@ -53,11 +53,11 @@ image::tssr2023/modules-07/ToIP/04.png[align="center"]
 .Définitions VoIP / ToIP
 ****
 * VoIP – (Voice over IP)
-* Concept de transport de la voix qui s'appuie sur le réseau IP
-* Exemple : réseau d’interconnexion privé de site ou par internet avec Skype
+** Concept de transport de la voix qui s'appuie sur le réseau IP
+** Exemple : réseau d’interconnexion privé de site ou par internet avec Skype
 * ToIP – (Telephony over IP)
-* Basé sur l’utilisation d’un réseau IP
-* Il peut reposer sur la technologie VoIP de bout en bout (du réseau de desserte jusqu’au poste de travail)
+** Basé sur l’utilisation d’un réseau IP
+** Il peut reposer sur la technologie VoIP de bout en bout (du réseau de desserte jusqu’au poste de travail)
 ****
 
 === Appels
