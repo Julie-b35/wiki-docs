@@ -10,22 +10,33 @@ J'ai choisi d'installer xivo sur une *debian 10* car le `nexus de l'eni` ne semb
 == Préparation des VM
 
 
-.VM - `sl-debian-xivo` (Serveur Xivo)
+.VM Serveur Xivo - (`sl-debian-xivo`)
 |===
 | Number of Cores per processor | 4
 | Memory                        | 6 144 MB
 | Hard Disk                     | 100 GB
-| Network Adapter (eth0)        | *Bridge* (C'est par ici que passera le traffic internet durant le processus d'install et de mise à jour.)
+| Network Adapter (eth0)        | *Bridge* +
+C'est par ici que passera le traffic internet durant le processus d'install et de mise à jour.
+| Network Adapter 2 (eth1)      | *Segment LAN "VOICE"* (pour communiquer avec la VM Client)
 |===
 
-Voici ma config de *sl-debian-xivo*
+.VM Client Xivo - (`pw-xivo`)
+|===
+| Memory                        | 4 096 MB
+| Network Adapter (eth0)        | *Bridge* +
+C'est par ici que passera le traffic internet durant le processus d'install et de mise à jour.
+| Network Adapter 2 (eth1)      | *Segment LAN "VOICE"* (pour communiquer avec la VM Serveur)
+|===
 
-== Plan A - Install Via ISO `xivo-2021.07.04-amd64.iso`
 
-Après avoir soigneusement récupéré l'iso depuis le partage *Distrib de l'eni*
+== Plan A - Install Via ISO `xivo-2021.07.04-amd64.iso` (méthode auto)
 
-.Choix de la méthode
-****
-Deux Méthode S'offre à nous pour installer le serveur *Xivo version 2021.07-latest* pour `debian 10`
-****
+Après avoir soigneusement récupéré l'iso depuis le partage *Distrib de l'eni* et reconfiguré la vm (*sl-debian-xivo*) afin de prendre en charge l'iso...
 
+Il reste plus qu'à lancé l'install automatique.
+
+Après...un...certain...moment.
+
+Il devrai avoir ce résultat à la fin de l'installation.
+
+image::tssr2023/module-07/01.png[]
