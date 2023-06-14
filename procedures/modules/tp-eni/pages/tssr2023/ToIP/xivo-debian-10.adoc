@@ -6,7 +6,26 @@
 J'ai choisi d'installer xivo sur une *debian 10* car le `nexus de l'eni` ne semble pas disposer de la de *debian 11*.
 ****
 
+
+== Préparation des VM
+
+
+.VM - `sl-debian-xivo` (Serveur Xivo)
+|===
+| Number of Cores per processor | 4
+| Memory                        | 6 144 MB
+| Hard Disk                     | 100 GB
+| Network Adapter (eth0)        | *Bridge* (C'est par ici que passera le traffic internet durant le processus d'install et de mise à jour.)
+|===
+
+Voici ma config de *sl-debian-xivo*
+
+== Plan A - Install Via ISO `xivo-2021.07.04-amd64.iso`
+
+Après avoir soigneusement récupéré l'iso depuis le partage *Distrib de l'eni*
+
 .Choix de la méthode
 ****
-Deux Méthode S'offre à nous pour installer le serveur *Xivo version 2021.07-latest* `pour debian 10`
+Deux Méthode S'offre à nous pour installer le serveur *Xivo version 2021.07-latest* pour `debian 10`
 ****
+
