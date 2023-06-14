@@ -61,13 +61,25 @@ image::tssr2023/module-07/03.png[]
 
 [NOTE,caption=Remarque]
 ====
-
-
 * Dans le fichier `/etc/sysctl.conf` : Ajouter la valeur suivant : `vm.swappiness = 20`
+* Cette commande `dpkg-reconfigure locales` permet de reconfigurer les locales et les mettre en en_US.UTF-8
+* Pour renommer les interfaces en eth# : 
 
+[source,bash]
+----
+#Modification fichier grub
+vim /etc/default/grub +':%s/\(GRUB_CMDLINE_LINUX="\)/\1net.ifnames=0 biosdevname=0/' +':wq'
+#Appliquer les modification
+grub-mkconfig -o /boot/grub/grub.cfg
+----
 ====
 ****
 
+[NOTE,caption=Source]
+====
+* *ens33 to eth0* -> https://www.itzgeek.com/how-tos/linux/debian/change-default-network-name-ens33-to-old-eth0-on-debian-9.html[Renomer adaptateur network]
+* *swappiness* -> https://askubuntu.com/questions/103915/how-do-i-configure-swappiness[]
+====
 
 [source,bash]
 ----

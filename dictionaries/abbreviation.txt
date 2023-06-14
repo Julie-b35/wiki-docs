@@ -16,6 +16,7 @@ Certifiering
 CILL
 CMBD
 CMDB
+CMDLINE
 CNTL
 comunication
 ctivité
@@ -77,6 +78,7 @@ Logname
 lutilisatrice
 mergency
 MGCP
+mkconfig
 MMDD
 Mnet
 mobaxterm

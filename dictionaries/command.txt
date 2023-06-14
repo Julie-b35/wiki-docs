@@ -6,6 +6,7 @@ apic
 arat
 Beos
 bhmp
+biosdevname
 Bogo
 BPDU
 clflush
@@ -50,6 +51,7 @@ ibpb
 IBPB
 ibrs
 IBRS
+ifnames
 imapd
 intf
 inum
