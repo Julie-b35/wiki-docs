@@ -56,12 +56,12 @@ Après un reboot procéder à l'installation de xivo
 .Nécessaire si installation depuis iso debian.
 ****
 
-image::tssr2023/module-07/02.png[]
+image::tssr2023/module-07/03.png[]
 
 
 [NOTE,caption=Remarque]
 ====
-Si vous êtes partie depuis une install toute fraiche certain paramétrage sont à faire.
+
 
 * Dans le fichier `/etc/sysctl.conf` : Ajouter la valeur suivant : `vm.swappiness = 20`
 
