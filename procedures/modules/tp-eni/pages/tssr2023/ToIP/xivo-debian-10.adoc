@@ -3,7 +3,7 @@
 
 .Intro
 ****
-J'ai choisi d'installer xivo sur une debian 10 car le nexus de l'eni ne semble pas disposer de la 11 de debian
+J'ai choisi d'installer xivo sur une *debian 10* car le `nexus de l'eni` ne semble pas disposer de la de *debian 11*.
 ****
 
 .Choix de la méthode
