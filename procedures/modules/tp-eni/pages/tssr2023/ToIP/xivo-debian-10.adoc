@@ -37,6 +37,12 @@ Il reste plus qu'à lancé l'install automatique.
 
 Après...un...certain...moment.
 
-Il devrai avoir ce résultat à la fin de l'installation.
+Il devrai avoir ce résultat à la fin de l'installation, si c'est le cas passer à l'*étape configuration Réseau*
 
 image::tssr2023/module-07/01.png[]
+
+sinon il ce peut que l'install ce bloquer à 40% à cause du proxy entre autre.
+
+image::tssr2023/module-07/02.png[]
+
+NOTE: Maintenant que le proxy de l'eni à été désactivé, il ne devrais pas avoir ce problème.
