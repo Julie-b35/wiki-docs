@@ -59,20 +59,40 @@ Après un reboot procéder à l'installation de xivo
 image::tssr2023/module-07/03.png[]
 
 
-[NOTE,caption=Remarque]
-====
+
 * Dans le fichier `/etc/sysctl.conf` : Ajouter la valeur suivant : `vm.swappiness = 20`
 * Cette commande `dpkg-reconfigure locales` permet de reconfigurer les locales et les mettre en en_US.UTF-8
 * Pour renommer les interfaces en eth# : 
 
 [source,bash]
 ----
-#Modification fichier grub
+# Modification fichier grub
 vim /etc/default/grub +':%s/\(GRUB_CMDLINE_LINUX="\)/\1net.ifnames=0 biosdevname=0/' +':wq'
-#Appliquer les modification
+# Appliquer les modification
 grub-mkconfig -o /boot/grub/grub.cfg
+# Redémarrage du serveur
+reboot
 ----
-====
+
+.Fichier : `/etc/network/interface`
+----
+# This file describes the network interfaces available on your system
+# and how to activate them. For more information, see interfaces(5).
+
+source /etc/network/interfaces.d/*
+
+# The loopback network interface
+auto lo
+iface lo inet loopback
+
+# Remplacement des instruction suivante
+#auto ens33
+#iface ens33 inet dhcp
+
+# par celle-ci.
+auto eth0
+iface eth0 inet dhcp
+----
 ****
 
 [NOTE,caption=Source]
@@ -81,6 +101,19 @@ grub-mkconfig -o /boot/grub/grub.cfg
 * *swappiness* -> https://askubuntu.com/questions/103915/how-do-i-configure-swappiness[]
 ====
 
+
+[CAUTION,caption=Moyen contournement]
+====
+.Fichier /etc/hosts
+----
+143.204.231.123 download.docker.com
+212.27.32.66  ftp.fr.debian.org
+151.101.130.132 security.debian.org
+----
+*nécessaire si le dns menteur de l'ENI emmerde l'installation.*
+====
+
+=== Installation de xivo.
 [source,bash]
 ----
 #Télécharger le script d'installation de xivo
