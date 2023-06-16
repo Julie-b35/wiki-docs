@@ -996,6 +996,8 @@ image::tssr2023/modules-07/ToIP/82.png[align="center"]
 * . : wildcard, à mettre en fin de pattern il désigne 1 ou plusieurs caractères
 * ! = aucun ou plusieurs caractère
 
+_[15]
+
 === Exemple
 
 ( _XXX. oblige à taper au minimum 3 digits ) [Default]
@@ -1017,7 +1019,7 @@ a| * i – Invalid | exten => i,1,Playback(${sounds_path}erreur-saisie)
 a| * s – Start, pas d'analyse, mais traitement direct | exten => s,1,Answer()
 a| * h – Hangup | exten => h,4,exten()
 a| * t – Timeout (déclaré dans le contexte) | exten => t,1,Hangup()
-a|* T – AbsoluteTimeout | exten => T,1,Hangup()
+a| * T – AbsoluteTimeout | exten => T,1,Hangup()
 |===
 
 * Concaténation : écrire l'un à côté de l'autre : 555${EXTEN} ajoute le préfixe 555 au numéro composé
