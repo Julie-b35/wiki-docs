@@ -1000,6 +1000,7 @@ image::tssr2023/modules-07/ToIP/82.png[align="center"]
 
 ( _XXX. oblige à taper au minimum 3 digits ) [Default]
 exten => 555,1,Dial(SIP/Johnny)
+
 * Le contexte [Default] est une zone dans laquelle sont limitées nos actions.
 * La ligne contenant exten nous montre comment enregistrer une extension.
 * 555 est le numéro que nous souhaitons associer à SIP/Johnny => pour appeler Johnny il faut faire le 555.
