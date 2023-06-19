@@ -1,0 +1,80 @@
+= COnfigue Serveur SRV-DC01
+
+== Script Config AD
+
+[source,powershell]
+----
+
+Install-WindowsFeature AD-Domain-Services -IncludeAllSubFeature -IncludeManagementTools
+#
+# Script Windows PowerShell pour le déploiement d’AD DS
+#
+
+Import-Module ADDSDeployment
+Install-ADDSForest `
+-CreateDnsDelegation:$false `
+-DatabasePath "C:\AD\NTDS" `
+-DomainMode "WinThreshold" `
+-DomainName "jlab.ovh" `
+-DomainNetbiosName "Labo-Julie" `
+-ForestMode "WinThreshold" `
+-InstallDns:$true `
+-LogPath "C:\AD\NTDS" `
+-NoRebootOnCompletion:$false `
+-SysvolPath "C:\AD\SYSVOL" `
+-Force:$true
+----
+
+The method 'enumerate' does not exist for the RPC service 'Exec'.
+
+OMV\HttpErrorException: The method 'enumerate' does not exist for the RPC service 'Exec'. in /usr/share/php/openmediavault/rpc/rpc.inc:91
+Stack trace:
+#0 /usr/sbin/omv-engined(537): OMV\Rpc\Rpc::call('Exec', 'enumerate', NULL, Array, 1)
+#1 {main}
+
+ [sssd] [main] (0x0070): Misconfiguration found for the nss responder.
+The nss responder has been configured to be socket-activated but it's still mentioned in the services' line in /etc/sssd/sss>
+Please, consider either adjusting your services' line in /etc/sssd/sssd.conf or disabling the nss's socket by calling:
+ "systemctl disable sssd-nss.socket"
+ sssd-nss.socket: Control process exited, code=exited, status=17/n/a
+
+ ldapsearch -H ldap://sw-dc-jlab.jlab.ovh/ -Y GSSAPI -N -b "dc=jlab,dc=ovh" "(&(objectClass=user)(sAMAccountName=adm))"
+
+----
+[sssd]
+domains = jlab.ovh
+default_domain_suffix = jlab.ovh
+config_file_version = 2
+services = nss, pam
+ 
+[domain/jlab.ovh]
+ad_domain = jlab.ovh
+krb5_realm = JLAB.ovh
+ad_site=ORDI
+realmd_tags = manages-system joined-with-adcli
+cache_credentials = True
+id_provider = ad
+krb5_store_password_if_offline = True
+default_shell = /bin/bash
+ldap_id_mapping = False
+fallback_homedir = /home/%u@%d
+access_provider = ad
+----
+
+[sssd]
+domains = jlab.ovh
+config_file_version = 2
+services = nss, pam
+
+[domain/jlab.ovh]
+default_shell = /bin/bash
+krb5_store_password_if_offline = True
+cache_credentials = True
+krb5_realm = JLAB.OVH
+realmd_tags = manages-system joined-with-adcli
+id_provider = ad
+fallback_homedir = /home/%u@%d
+ad_domain = jlab.ovh
+#use_fully_qualified_names = True
+ldap_id_mapping = True
+access_provider = ad

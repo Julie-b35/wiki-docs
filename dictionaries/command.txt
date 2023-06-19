@@ -39,6 +39,7 @@ fsrm
 fxsr
 gfni
 groff
+GSSAPI
 hdparm
 hhmm
 HISTCMD
@@ -71,6 +72,7 @@ kthreadd
 kthrotld
 kworker
 lahf
+ldapsearch
 legende
 letmein
 libauthen
