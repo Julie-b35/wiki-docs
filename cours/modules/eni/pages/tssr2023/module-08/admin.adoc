@@ -5,4 +5,21 @@
 
 Notes -> xref:notes:eni-tssr:services-reseau-microsof.adoc[Services Réseau Microsof]
 
-Contenus
+
+== Objectifs
+
+.Services Réseau Windows
+****
+* Connaître Microsoft Server et son biotope
+* Gérer le stockage du serveur et le RAID
+****
+
+== Version des systèmes d'exploitation Microsoft
+
+=== Les deux familles
+
+image:tssr2023/module-08/admin/01.png[]
+
+=== Les différentes éditions Windows Server
+
+image:tssr2023/module-08/admin/02.png[]
