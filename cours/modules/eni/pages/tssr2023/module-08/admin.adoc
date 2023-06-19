@@ -23,3 +23,35 @@ image:tssr2023/module-08/admin/01.png[]
 === Les différentes éditions Windows Server
 
 image:tssr2023/module-08/admin/02.png[]
+
+=== Quelque rappels sur les licences
+
+image:tssr2023/module-08/admin/03.png[]
+
+****
+* *L'ajout d'un* serveur dans un contexte *d'entreprise* permet de fournir des services spécifiques.
+* Un ensemble de services est nativement pris en charge *d'exploitation* par les systèmes Windows Server. Ceux-ci seront présentés ci-après.
+* Bien *d'autres* solutions, outils, applications, non présentés ici, peuvent être mis en *oeuvre* sur les systèmes *d'exploitation* serveur (serveur de messagerie Exchange, serveur de bases de données Microsoft SQL).
+****
+
+=== Les services de domaine prise en charge
+
+image:tssr2023/module-08/admin/04.png[]
+
+=== Les autres services prise en charge
+
+image:tssr2023/module-08/admin/05.png[]
+
+== Installation du système et composants
+
+=== Les modes d'installation
+
+****
+* Installation minimale / Server Core :
+** Sans environnement graphique
+** Depuis Windows Server 2008
+** Mode d'installation par défaut
+** Les commandes PowerShell peuvent être utilisées pour gérer un serveur Core 
+* Installation graphique
+** Avec environnement graphique (GUI : Graphic User Interface)
+****
