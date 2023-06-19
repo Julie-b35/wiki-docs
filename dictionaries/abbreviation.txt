@@ -89,11 +89,13 @@ mprovement
 nalysis
 nblig
 nderpinning
+Netbios
 nformation
 nfrastructure
 noet
 nowledge
 NSSA
+NTDS
 nterconnection
 nterface
 nternational
@@ -150,6 +152,7 @@ SPOF
 strategie
 subinterface
 subnetted
+Sysvol
 tandardization
 tcsh
 Tribox
