@@ -87,6 +87,7 @@ managesieved
 mariadb
 mcrypt
 metacaractere
+microsof
 mklink
 Mmio
 monrep
