@@ -1,1 +1,17 @@
 = TP 02
+Init disk complete
+
+
+Graçe au Raid 5, malgré le retrait La montage fonction quand même
+
+
+[Source,ps1]
+----
+#Récupère la liste des disque
+Get-Disk
+$PhysicalDisks = (Get-PhysicalDisk -CanPool $True)
+New-StoragePool -FriendlyName StoragePool -StorageSubSystemFriendlyName "Windows Storage*" -PhysicalDisks $PhysicalDisks
+Get-StoragePool -FriendlyName StoragePool |  New-Volume -FriendlyName 'Données' -AccessPath "D:" -Size 6GB -ResiliencySettingName Parity -FileSystem NTFS
+Get-StoragePool -FriendlyName StoragePool |  New-Volume -FriendlyName 'Info-Tools' -AccessPath "C:\Info-Tools" -Size 4GB -ResiliencySettingName Mirror -FileSystem NTFS
+Get-StoragePool -FriendlyName StoragePool |  New-Volume -FriendlyName 'Database' -AccessPath "E:" -UseMaximumSize -ResiliencySettingName Simple -FileSystem NTFS
+----
