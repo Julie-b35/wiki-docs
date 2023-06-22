@@ -94,3 +94,18 @@ Les fonctionnalités : correspond généralement à un outil/composant *utile su
 ****
 image::tssr2023/module-08/admin/06.png[align=center]
 ****
+
+== Les format de tables de partition
+
+=== Les tables de partitionnement
+
+****
+* Détermine les caractéristiques des partitions créées sur un disque
+
+* MBR (historique)
+** Cette table faisait partie des informations stockées sur le premier secteur adressable du disque
+** Le BIOS recherche un secteur d'amorçage
+GPT
+Les SSD sont préconfigurés de cette manière
+Meilleure performance avec les cartes mères UEFI
+****
