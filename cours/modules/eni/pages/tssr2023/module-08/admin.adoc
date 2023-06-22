@@ -55,3 +55,42 @@ image:tssr2023/module-08/admin/05.png[]
 * Installation graphique
 ** Avec environnement graphique (GUI : Graphic User Interface)
 ****
+
+=== Les rôles et fonctionnalités
+
+****
+* Des composants peuvent être ajoutés par :
+** Le gestionnaire de serveur
+** Des commandes PowerShell
+
+
+* Deux types de composants :
+** Les rôles : correspond généralement à un *service que l'on fournit à des clients*
+Les fonctionnalités : correspond généralement à un outil/composant *utile sur l'élément sur lequel on l'ajoute.*
+****
+
+=== Les outils de gestion de Windows Server
+
+.Les différents outils sont:
+****
+* Le gestionnaire de serveur :
+** Élément central d'administration du ou des serveurs
+
+
+* Les consoles de gestion des services :
+** Disponibles suite à l'ajout d'un rôle sur un serveur
+** Peuvent être ajoutées sur un poste d'administration ne disposant pas du rôle à gérer
+
+* Ligne de commande (CMD)
+
+* La console PowerShell
+****
+
+== TP 01 - Installation et configuration initiale
+
+== Gestion du stockage
+
+.Ce que nous allons voir
+****
+image::tssr2023/module-08/admin/06.png[align=center]
+****
