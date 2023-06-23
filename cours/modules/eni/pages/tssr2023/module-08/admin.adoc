@@ -130,6 +130,8 @@ image::tssr2023/module-08/admin/06.png[align=center]
 image::tssr2023/module-08/admin/07.png[align=center]
 ****
 
+== Les type de configuration dees disques
+
 === Les configurations de disques
 
 .2 type de configuration
@@ -150,9 +152,11 @@ image::tssr2023/module-08/admin/07.png[align=center]
 image::tssr2023/module-08/admin/08.png[align=center]
 ****
 
-image::tssr2023/module-08/admin/09.png[align=center]
+== Partitionnement et RAID
 
 === Partitionnement d'un disque de base
+
+image::tssr2023/module-08/admin/09.png[align=center]
 
 ****
 * *Sur un disque de base, on peut créer au maximum soit :*
@@ -175,7 +179,7 @@ image::tssr2023/module-08/admin/09.png[align=center]
 ** *Volume agrégé par bandes* : RAID 0
 ** *Volume en miroir* : RAID 1
 ** *Volume agrégé par bandes avec parité* RAID 5
-*RAID (Redundancy Array of Inexpensive Disk)*
+* *RAID (Redundancy Array of Inexpensive Disk)*
 ****
 
 === Le volume simple
@@ -183,7 +187,7 @@ image::tssr2023/module-08/admin/09.png[align=center]
 ****
 On parlera d'espace disque
 
-* C'est le sul type de volume qui utilise un seul disque physique
+* C'est le seul type de volume qui utilise un seul disque physique
 
 image::tssr2023/module-08/admin/10.png[align=center]
 
@@ -192,7 +196,7 @@ image::tssr2023/module-08/admin/10.png[align=center]
 image::tssr2023/module-08/admin/11.png[align=center]
 ****
 
-=== Le volume fractionné
+==== Le volume fractionné
 
 ****
 Un volume fractionné utilise plusieurs espaces sur plusieurs disques physiques.
@@ -206,7 +210,7 @@ image::tssr2023/module-08/admin/12.png[align=center]
 image::tssr2023/module-08/admin/13.png[align=center]
 ****
 
-=== Le volume agrégé par bandes
+==== Le volume agrégé par bandes
 
 ****
 Le *RAID-0* ou *volume agrégé par bandes* est un type:
@@ -223,4 +227,67 @@ a|
 * Tout l'espace disque alloué est utilisable
 a| image::tssr2023/module-08/admin/15.png[align=center]
 |===
+****
+
+=== Le volume en miroir
+
+****
+* Le *RAID-1* ou *volume miroir* en est un type :
+
+image::tssr2023/module-08/admin/16.png[align=center]
+[cols="~,~",grid=none,frame=none]
+|===
+a| 
+* Réparti sur 2 disques
+* L'espace alloué sur les 2 disques doit être identique
+* Les mêmes données sont écrites simultanément sur les 2 disques.
+* *Tolérances aux pannes accrues*, un des disques peut être perdu sans impact sur les données
+* La moitié de l'espace disque alloué n'est pas directement utilisable.
+a| image::tssr2023/module-08/admin/17.png[align=center]
+|===
+****
+
+=== Le volume agrégé par bandes avec parité
+
+****
+* Le *RAID-5* ou *volume agrégé par bandes avec parité* en est un type :
+
+image::tssr2023/module-08/admin/18.png[align=center]
+****
+
+== Formatage et outils
+
+=== formatage 
+
+[cols="~,~",grid=none,frame=none]
+|===
+a| 
+* Les partitions principales, lecteurs logiques et volumes doivent être formatés avant d'être utilisable/
+
+*Le formatage est l'installation d'un système de fichier (hébergement des données).
+
+*Les systèmes de fichiers disponibles sont :
+
+image::tssr2023/module-08/admin/20.png[align=center]
+
+a| image::tssr2023/module-08/admin/19.png[align=center]
+|===
+
+=== Les outils
+
+****
+* La console de *Gestion des disques (diskmgmt.msc)*
+* La commande *diskpart*
+* Les commandes *PowerShell*
+
+image::tssr2023/module-08/admin/21.png[align=center]
+****
+
+== TP 02 - Gestion du stockage
+
+== Conclusion
+
+****
+* Vous connaissez Microsoft Serveur et son biotype.
+* Vous savez gérer le stockage du serveur et le RAID
 ****
