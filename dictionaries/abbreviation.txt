@@ -159,6 +159,7 @@ tcsh
 Tribox
 trnet
 ublic
+UEFI
 undebug
 UPDOWN
 usiness

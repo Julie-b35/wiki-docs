@@ -99,13 +99,82 @@ image::tssr2023/module-08/admin/06.png[align=center]
 
 === Les tables de partitionnement
 
+.Détermine les caractéristiques des partitions créées sur un disque
 ****
-* Détermine les caractéristiques des partitions créées sur un disque
-
-* MBR (historique)
+* *MBR (historique)*
 ** Cette table faisait partie des informations stockées sur le premier secteur adressable du disque
 ** Le BIOS recherche un secteur d'amorçage
-GPT
-Les SSD sont préconfigurés de cette manière
-Meilleure performance avec les cartes mères UEFI
+
+* *GPT*
+** À ce jour, la majorité des machines disposent d'un UEFI
+** Les SSD sont préconfigurés de cette manière.
+** Meilleure performance avec les cartes mères UEFI
+** Optimiser pour les systèmes d'exploitation 64 bits
 ****
+
+=== Caractéristiques de format de partitionnement
+
+.2 type de partitionnement
+****
+* *Le partitionnement MBR*
+** Plus faible tolérance aux pannes
+** Nom donnée au premier secteur physique d'un disque
+
+* *Le partitionnement GPT*
+** Meilleure tolérance aux pannes
+** Les données sont dupliquées sur plusieurs secteurs
+*** Possibilité de reconstruction.
+
+* *Possibilité de conversion*
+
+image::tssr2023/module-08/admin/07.png[align=center]
+****
+
+=== Les configurations de disques
+
+.2 type de configuration
+****
+* *configuration de base*
+** Simplifie la gestion du disque
+** Toutes les données sont inscrites dans des partitions
+** Sur un seul disque physique
+
+* *Configuration dynamique*
+** La gestion se fait par ensemble de disques
+** Les données sont inscrites dans des volumes
+** Nécessaire pour le RAID logiciel
+****
+
+.Conversion
+****
+image::tssr2023/module-08/admin/08.png[align=center]
+****
+
+image::tssr2023/module-08/admin/09.png[align=center]
+
+=== Partitionnement d'un disque de base
+
+****
+* *Sur un disque de base, on peut créer au maximum soit :*
+** 4 partitions principales
+** 3 partitions principales et 1 partition étendue dans laquelle on crée des lecteurs logiques
+*** Les lecteurs logiques seront formatés.
+
+* *Les partitions peuvent être étendues ou réduites sur l'espace contiguë du même disque.*
+
+* *Le lancement d'un OS à partir d'un lecteur logique n'est pas possible*
+** Une partition de base est contiguë
+****
+
+=== Partitionnement d'un disque dynamique
+
+****
+* *Il est composé de volumes qui peuvent être de plusieurs types :*
+** *Volume simple* : Un espace de stockage utilisé par un disque à a fois.
+** *Volume fractionné* : Si un volume est à cheval sur 2 disque
+** *Volume agrégé par bandes* : RAID 0
+** *Volume en miroir* : RAID 1
+** *Volume agrégé par bandes avec parité* RAID 5
+*RAID (Redundancy Array of Inexpensive Disk)*
+****
+
