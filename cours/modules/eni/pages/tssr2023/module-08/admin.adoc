@@ -178,3 +178,49 @@ image::tssr2023/module-08/admin/09.png[align=center]
 *RAID (Redundancy Array of Inexpensive Disk)*
 ****
 
+=== Le volume simple
+
+****
+On parlera d'espace disque
+
+* C'est le sul type de volume qui utilise un seul disque physique
+
+image::tssr2023/module-08/admin/10.png[align=center]
+
+* Il peut être étendu au sein du même disque
+
+image::tssr2023/module-08/admin/11.png[align=center]
+****
+
+=== Le volume fractionné
+
+****
+Un volume fractionné utilise plusieurs espaces sur plusieurs disques physiques.
+
+* Situation initiale
+
+image::tssr2023/module-08/admin/12.png[align=center]
+
+* *Extension du pass:[<span style=color:green>volume simple 2</span>] sur le pass:[<span style=color:gray>disque dynamique 2</span>]*
+
+image::tssr2023/module-08/admin/13.png[align=center]
+****
+
+=== Le volume agrégé par bandes
+
+****
+Le *RAID-0* ou *volume agrégé par bandes* est un type:
+
+image::tssr2023/module-08/admin/14.png[align=center]
+
+[cols="~,~",grid=none,frame=none]
+|===
+a| 
+* La taille des bandes doit être identique sur chaque disque
+* Réparti sur 2 à x disques
+* *Rapidité* de lecture/écriture accrue
+* Aucune *tolérance de panne*
+* Tout l'espace disque alloué est utilisable
+a| image::tssr2023/module-08/admin/15.png[align=center]
+|===
+****
