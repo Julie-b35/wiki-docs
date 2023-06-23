@@ -15,3 +15,10 @@ Get-StoragePool -FriendlyName StoragePool |  New-Volume -FriendlyName 'Données'
 Get-StoragePool -FriendlyName StoragePool |  New-Volume -FriendlyName 'Info-Tools' -AccessPath "C:\Info-Tools" -Size 4GB -ResiliencySettingName Mirror -FileSystem NTFS
 Get-StoragePool -FriendlyName StoragePool |  New-Volume -FriendlyName 'Database' -AccessPath "E:" -UseMaximumSize -ResiliencySettingName Simple -FileSystem NTFS
 ----
+
+
+netdom computername WIN-8OU6DH4BV10.julie.lcl /add:DC01.julie.lcl
+netdom computername WIN-8OU6DH4BV10.julie.lcl /makeprimary:DC01.julie.lcl
+netdom computername DC01.julie.lcl /remove:WIN-8OU6DH4BV10.julie.lcl
+
+Transfère FSMO : https://rdr-it.com/les-roles-fsmo/

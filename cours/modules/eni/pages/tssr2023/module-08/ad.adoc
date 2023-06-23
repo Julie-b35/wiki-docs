@@ -83,6 +83,25 @@ PS C:\Windows\System32> Uninstall-AddsDomainController
 
 image::tssr2023/module-08/ad/06.png[align=center]
 
+== TP 03  - Mise en place d'un domaine Active Directory
+
+== Les bases de gestion d'un domaine
+
+=== Objet de l'annuaire et outils de gestion
+
+****
+* Dans un contexte de domaine AD, les tâches courantes de gestion sont liées à l'administration des *principaux objet de l'annuaire*
+
+image::tssr2023/module-08/ad/07.png[align=center]
+
+* La gestion de ces objets peut se faire :
+** Depuis la console Utilisateurs et ordinateurs Active Directory
+** Depuis le Centre d'administration Active Directory
+**En PowerShell
+****
+
+=== Les caractéristique
+
 == L'accès aux ressources
 
 === Les ressources
@@ -206,4 +225,3 @@ image::tssr2023/module-08/ad/92.png[align=center]
 
 == TP 05 - Gestion de ressources en contexte de domaine AD
 == Notes 
-
