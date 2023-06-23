@@ -6,8 +6,128 @@
 
 Notes -> xref:notes:eni-tssr:services-reseau-microsof.adoc[Services Réseau Microsof]
 
-Contenus
 
+== L'accès aux ressources
 
+=== Les ressources
 
+****
+* Le *partage* de ressource est un service nécessaire aux utilisateurs.
+* Sa mise en oeuvre et sa gestion incombent à l'administrateur système quit doit respecter les exigences de *disponibilités* et de *sécurité*. 
+* Nous parlerons d'*espace disque partagé*
+****
+
+=== Utilité des autorisations NTFS
+
+.Sur un espace disque formaté NTFS ou ReFS:
+****
+* Les autorisations NTFS permettent de définir quels sont les *privilèges d'accès*
+* *Tous les dossiers et fichiers* d'un volume formaté y sont soumis
+
+image::tssr2023/module-08/ad/99.png[align=center]
+
+* Elles sont visualisables et/ou modifiables depuis l’onglet *Sécurité* des éléments
+****
+
+=== Les caractéristique des autorisation NTFS
+
+****
+* Deux niveaux de gestions sont disponibles:
+** Les autorisations *de base*
+** Les autorisations *avancés*
+
+* La gestion des permissions est basée sur des règles *explicites*. 
+* Plusieurs règles d'accès peuvent s'appliquer à un même utilisateur.
+* Chaque règle peut accorder des privilèges ou les ôter.
+* Les mécanisme d'*héritage* s'applique aux autorisations positionnées sur des dossiers et s'appliquent aux objets enfant.
+* Une règle de *refus* peut être explicite ou implicite.
+****
+
+=== Les autorisations NTFS de base et avancées
+
+image::tssr2023/module-08/ad/98.png[align=center]
+
+=== Cumul d'autorisation
+****
+* Chaque autorisation s'applique à un objet *utilisateur* ou *groupe de sécurité*. Il est cependant préférable de n'appliquer des autorisation qu'aux *groupes*.
+* Pour chaque entrée de contrôle d'accès, l'autorisation peut être appliquée :
+** *Autoriser* afin d'*accorder le privilège* correspondant.
+** *Refuser* afin d'*ôter le privilège* correspondant.
+* À défaut de règle d'autorisation (explicite) le concernant, l'utilisateur est soumis à un *refus implicite*. 
+* Les autorisations sont *cumulatives*, la résultante des autorisations affectant un utilisateur correspond au cumul des autorisations le concernant.
+* En cas de conflit, *le refuse l'emporte*.
+****
+
+=== L'héritage des autorisation NTFS
+****
+* L'héritage s'applique par défaut aux autorisation NTFS positionnées sur des dossiers.
+* Il est conseillée d'affecter ces autorisation *en partant de la racine* d'une arborescence afin de bénéficier de l'héritage.
+* L'héritage peut être rompu sur un point d'arborescence ou repropagé à partir d'un élément.
+
+Il y a néanmoins des contraintes :
+
+image::tssr2023/module-08/ad/97.png[align=center]
+****
+
+=== Le partage de fichiers
+
+****
+* Le partage vient en *complément* des autorisations NTFS.
+Un poste disposant de partages joue le rôle de serveur de fichiers.
+
+image::tssr2023/module-08/ad/96.png[align=center]
+****
+
+=== Les autorisations de partage
+****
+* Les autorisations permettent de définir :
+** Quels seront les privilèges
+** S'ils autoriseront ou interdiront
+** Pour qui
+
+* Les trois types de privilèges de partage sont les suivants :
+
+image::tssr2023/module-08/ad/95.png[align=center]
+
+* Pour chaque niveau, les privilèges correspondants pourront être :
+
+image::tssr2023/module-08/ad/94.png[align=center]
+
+* Chaque règle cible une ou plusieurs entités.
+* Les règles de contrôles d'accès sont cumulatives et les *refus prioritaires*.
+****
+
+=== Autorisation résultantes
+
+****
+Quand l'utilisateur accès depuis son poste de travail à une ressource partagée:
+* Il est d'abord soumis aux autorisations de partage
+* Puis aux autorisations NTFS
+
+image::tssr2023/module-08/ad/93.png[align=center]
+
+* Les privilèges les plus restrictifent prévalent.
+****
+
+=== Les publication de partage
+
+****
+* Une fois créé, il est possible de le *publier* dans l'AD.
+* L'objet *Partage* est soit lié à :
+** *L'objet ordinateur* auquel il est associé.
+** *Indépendant* et peut être déplacé dans un UO dédié.
+* La publication de partage facilite la recherche pour les utilisateurs depuis leur poste client avec la fonction *Rechercher dans Active Directory*
+****
+
+=== Stratégie d'imbrication des groupes
+
+****
+Afin de gérer efficacement l'accès aux ressources, Microsoft préconise l'imbrication ges *Groupes Globaux* et de *Domaines Locaux*.
+* Voir Slide sur les groupes et les domaines Locaux
+
+image::tssr2023/module-08/ad/92.png[align=center]
+****
+
+== TP 05 - Gestion de ressources en contexte de domaine AD
 == Notes 
+
