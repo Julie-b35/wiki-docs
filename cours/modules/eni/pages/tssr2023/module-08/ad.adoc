@@ -6,6 +6,82 @@
 
 Notes -> xref:notes:eni-tssr:services-reseau-microsof.adoc[Services Réseau Microsof]
 
+== Objectifs:
+
+****
+* Appréhender le rôle Active Directory
+* Gérer les ressources partagées avec AGDLP
+* Connaître la gestion des imprimantes
+****
+
+== Les services d'annuaire : Présentation et installation
+
+=== Domaine Active Directory
+
+.Pour quoi Faire ?
+****
+* Centraliser la gestion de l'authentification
+* Centraliser les informations relatives aux utilisateurs et ressources.
+* Centraliser la gestion des paramètres utilisateurs et ordinateurs.
+* Fournir une base de fonctionnement aux services et outils Microsoft.
+****
+
+.Utilisation de protocoles standardisés : `DNS` / `LDAP` / `Kerberos`
+****
+* *DNS* : Résolution des noms de machines et localisation de services.
+* *LDAP* : Norme pour les systèmes d'annuaires avec une structure de base de données arborescente.
+* *Kerberos* : Protocole d'authentification reposant sur un mécanisme de clés secrètes et l'utilisation de tickets.
+****
+
+=== La forêt Active Directory
+
+image::tssr2023/module-08/ad/01.png[align=center]
+
+=== Les composantes de domaine : le domaine
+
+image::tssr2023/module-08/ad/02.png[align=center]
+
+=== Les composantes de domaine : les site
+
+image::tssr2023/module-08/ad/03.png[align=center]
+
+=== Prérequis pour un contexte de domaine
+
+image::tssr2023/module-08/ad/04.png[align=center]
+
+=== Versions Active Directory
+
+****
+* Pour une forêt ou un domaine ciblé, les *niveaux fonctionnels* déterminent les *fonctionnalités* fournies au sein de la forêt et du domaine.
+** Par exemple depuis W2008 R2 : Corbeille AD
+
+* Le choix des niveaux est *contraint* par les versions des *contrôleurs* présents au sein du domaine et de la forêt.
+
+image::tssr2023/module-08/ad/05.png[align=center]
+****
+
+=== rétrograder / Promouvoir un CD
+
+****
+* L'ajout et la suppression d'un contrôleur de domaine sont des actions qui impactent tous les contrôleurs de domaine de la forêt.
+
+* Avant de rétrograder un contrôleur de domaine, on s'assurera qu'il ne dispose plus de de rôles FSMO.
+** Notions abordées dans la slide suivante.
+
+* Sous Windows 2016 et ultérieur, afin de rétrograder un CD, utiliser la commande
+suivante :
+
+.Cmd Powershell
+[source,ps1]
+----
+Active Directory
+PS C:\Windows\System32> Uninstall-AddsDomainController
+----
+****
+
+=== Les composants de domaine : les 5 rôles FSMO
+
+image::tssr2023/module-08/ad/06.png[align=center]
 
 == L'accès aux ressources
 

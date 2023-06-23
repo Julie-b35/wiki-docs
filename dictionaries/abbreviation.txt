@@ -1,3 +1,4 @@
+AGDLP
 aintenance
 anagement
 anager
@@ -47,6 +48,7 @@ fddi
 fddinet
 ffice
 Fonctionnaliter
+FSMO
 glpi
 greement
 hange
