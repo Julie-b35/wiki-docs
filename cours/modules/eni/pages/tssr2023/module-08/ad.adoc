@@ -97,10 +97,61 @@ image::tssr2023/module-08/ad/07.png[align=center]
 * La gestion de ces objets peut se faire :
 ** Depuis la console Utilisateurs et ordinateurs Active Directory
 ** Depuis le Centre d'administration Active Directory
-**En PowerShell
+** En PowerShell
 ****
 
-=== Les caractéristique
+=== Les caractéristique de l'objet utilisateur
+
+image::tssr2023/module-08/ad/08.png[align=center]
+
+=== Les modèles utilisateur
+
+image::tssr2023/module-08/ad/09.png[align=center]
+
+=== Les profils utilisateurs
+
+image::tssr2023/module-08/ad/10.png[align=center]
+
+=== Les profils itinérants
+
+image::tssr2023/module-08/ad/11.png[align=center]
+
+=== Les ordinateurs
+
+image::tssr2023/module-08/ad/12.png[align=center]
+
+=== Les caractéristique de l'objet ordinateur
+
+image::tssr2023/module-08/ad/13.png[align=center]
+
+=== Les groupes
+
+image::tssr2023/module-08/ad/14.png[align=center]
+
+=== Les groupes globaux
+
+image::tssr2023/module-08/ad/15.png[align=center]
+
+=== Les groupes de domaines locaux
+
+image::tssr2023/module-08/ad/16.png[align=center]
+
+=== Les groupes locaux
+
+image::tssr2023/module-08/ad/17.png[align=center]
+
+=== Les conteneurs système
+
+image::tssr2023/module-08/ad/18.png[align=center]
+
+=== Les unités d'organisation
+
+image::tssr2023/module-08/ad/19.png[align=center]
+image::tssr2023/module-08/ad/20.png[align=center]
+
+=== Importation et exportation de comptes
+
+image::tssr2023/module-08/ad/21.png[align=center]
 
 == L'accès aux ressources
 
