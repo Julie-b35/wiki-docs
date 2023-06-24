@@ -15,11 +15,13 @@ clwb
 cmov
 cntrl
 comptabiliter
+computername
 cpuid
 cryptd
 dapplication
 Developpement
 Dhhmm
+diskmgmt
 diskpart
 dnowprefetch
 drwxr
@@ -83,10 +85,12 @@ localgroup
 logind
 lvremove
 macropaquets
+makeprimary
 managesieved
 mariadb
 mcrypt
 metacaractere
+microsof
 mklink
 Mmio
 monrep
@@ -96,6 +100,7 @@ movdiri
 mtrr
 multihit
 ncpa
+netdom
 nmtui
 nologin
 nonegotiate

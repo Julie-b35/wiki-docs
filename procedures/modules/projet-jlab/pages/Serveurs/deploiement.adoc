@@ -1,0 +1,5 @@
+
+
+https://learn.microsoft.com/fr-fr/previous-versions/windows/it-pro/windows-8.1-and-8/hh825682(v=win.10)
+
+Code clavier FR : 040c:0000040c

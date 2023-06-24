@@ -1056,3 +1056,16 @@ a| * T – AbsoluteTimeout | exten => T,1,Hangup()
 
 * Circuit d'appels
 * IVR
+
+
+Le champ Vlan ID dans une trame 802.1Q est codé sur *8bits*
+
+[NOTE,caption=Ressource]
+====
+* https://www.paessler.com/mos-monitoring?gad=1&gclid=CjwKCAjwkLCkBhA9EiwAka9QRk68iVMtW3dZ2PnLPMv-W6Q__lbTkzT52TrGSkjWgaGaDpaOUwRDoBoCWugQAvD_BwE
+* QoS
+** https://www.cisco.com/c/en/us/td/docs/ios-xml/ios/qos_classn/configuration/xe-16-6/qos-classn-xe-16-6-book/qos-classn-mrkg-mpls-exp.html
+** https://www.cisco.com/c/en/us/support/docs/quality-of-service-qos/qos-packet-marking/10103-dscpvalues.html
+* https://fr.wikipedia.org/wiki/Q.931#:~:text=931-,Q.,la%20lib%C3%A9ration%20des%20connexions%20r%C3%A9seau.
+* https://www.ssi.gouv.fr/particulier/principales-menaces/espionnage/attaque-par-hameconnage-cible-spearfishing/
+====

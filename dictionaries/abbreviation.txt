@@ -1,3 +1,4 @@
+AGDLP
 aintenance
 anagement
 anager
@@ -11,6 +12,7 @@ atabase
 Bria
 BYOD
 CALLERID
+CALLERIDNUM
 CCNA
 Certifiering
 CILL
@@ -46,6 +48,7 @@ fddi
 fddinet
 ffice
 Fonctionnaliter
+FSMO
 glpi
 greement
 hange
@@ -158,6 +161,7 @@ tcsh
 Tribox
 trnet
 ublic
+UEFI
 undebug
 UPDOWN
 usiness

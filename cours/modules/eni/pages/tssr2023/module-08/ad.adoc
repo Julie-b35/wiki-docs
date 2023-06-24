@@ -1,0 +1,227 @@
+= Module 02 - Active Directory
+:navtitle: Active Directory
+
+* Module précédent -> xref:tssr2023/module-08/admin.adoc[Module 01 - Administration Windows]
+* Module suivant -> xref:tssr2023/module-08/gpo.adoc[Module 03 - Les Stratégies de Groupe]
+
+Notes -> xref:notes:eni-tssr:services-reseau-microsof.adoc[Services Réseau Microsof]
+
+== Objectifs:
+
+****
+* Appréhender le rôle Active Directory
+* Gérer les ressources partagées avec AGDLP
+* Connaître la gestion des imprimantes
+****
+
+== Les services d'annuaire : Présentation et installation
+
+=== Domaine Active Directory
+
+.Pour quoi Faire ?
+****
+* Centraliser la gestion de l'authentification
+* Centraliser les informations relatives aux utilisateurs et ressources.
+* Centraliser la gestion des paramètres utilisateurs et ordinateurs.
+* Fournir une base de fonctionnement aux services et outils Microsoft.
+****
+
+.Utilisation de protocoles standardisés : `DNS` / `LDAP` / `Kerberos`
+****
+* *DNS* : Résolution des noms de machines et localisation de services.
+* *LDAP* : Norme pour les systèmes d'annuaires avec une structure de base de données arborescente.
+* *Kerberos* : Protocole d'authentification reposant sur un mécanisme de clés secrètes et l'utilisation de tickets.
+****
+
+=== La forêt Active Directory
+
+image::tssr2023/module-08/ad/01.png[align=center]
+
+=== Les composantes de domaine : le domaine
+
+image::tssr2023/module-08/ad/02.png[align=center]
+
+=== Les composantes de domaine : les site
+
+image::tssr2023/module-08/ad/03.png[align=center]
+
+=== Prérequis pour un contexte de domaine
+
+image::tssr2023/module-08/ad/04.png[align=center]
+
+=== Versions Active Directory
+
+****
+* Pour une forêt ou un domaine ciblé, les *niveaux fonctionnels* déterminent les *fonctionnalités* fournies au sein de la forêt et du domaine.
+** Par exemple depuis W2008 R2 : Corbeille AD
+
+* Le choix des niveaux est *contraint* par les versions des *contrôleurs* présents au sein du domaine et de la forêt.
+
+image::tssr2023/module-08/ad/05.png[align=center]
+****
+
+=== rétrograder / Promouvoir un CD
+
+****
+* L'ajout et la suppression d'un contrôleur de domaine sont des actions qui impactent tous les contrôleurs de domaine de la forêt.
+
+* Avant de rétrograder un contrôleur de domaine, on s'assurera qu'il ne dispose plus de de rôles FSMO.
+** Notions abordées dans la slide suivante.
+
+* Sous Windows 2016 et ultérieur, afin de rétrograder un CD, utiliser la commande
+suivante :
+
+.Cmd Powershell
+[source,ps1]
+----
+Active Directory
+PS C:\Windows\System32> Uninstall-AddsDomainController
+----
+****
+
+=== Les composants de domaine : les 5 rôles FSMO
+
+image::tssr2023/module-08/ad/06.png[align=center]
+
+== TP 03  - Mise en place d'un domaine Active Directory
+
+== Les bases de gestion d'un domaine
+
+=== Objet de l'annuaire et outils de gestion
+
+****
+* Dans un contexte de domaine AD, les tâches courantes de gestion sont liées à l'administration des *principaux objet de l'annuaire*
+
+image::tssr2023/module-08/ad/07.png[align=center]
+
+* La gestion de ces objets peut se faire :
+** Depuis la console Utilisateurs et ordinateurs Active Directory
+** Depuis le Centre d'administration Active Directory
+**En PowerShell
+****
+
+=== Les caractéristique
+
+== L'accès aux ressources
+
+=== Les ressources
+
+****
+* Le *partage* de ressource est un service nécessaire aux utilisateurs.
+* Sa mise en oeuvre et sa gestion incombent à l'administrateur système quit doit respecter les exigences de *disponibilités* et de *sécurité*. 
+* Nous parlerons d'*espace disque partagé*
+****
+
+=== Utilité des autorisations NTFS
+
+.Sur un espace disque formaté NTFS ou ReFS:
+****
+* Les autorisations NTFS permettent de définir quels sont les *privilèges d'accès*
+* *Tous les dossiers et fichiers* d'un volume formaté y sont soumis
+
+image::tssr2023/module-08/ad/99.png[align=center]
+
+* Elles sont visualisables et/ou modifiables depuis l’onglet *Sécurité* des éléments
+****
+
+=== Les caractéristique des autorisation NTFS
+
+****
+* Deux niveaux de gestions sont disponibles:
+** Les autorisations *de base*
+** Les autorisations *avancés*
+
+* La gestion des permissions est basée sur des règles *explicites*. 
+* Plusieurs règles d'accès peuvent s'appliquer à un même utilisateur.
+* Chaque règle peut accorder des privilèges ou les ôter.
+* Les mécanisme d'*héritage* s'applique aux autorisations positionnées sur des dossiers et s'appliquent aux objets enfant.
+* Une règle de *refus* peut être explicite ou implicite.
+****
+
+=== Les autorisations NTFS de base et avancées
+
+image::tssr2023/module-08/ad/98.png[align=center]
+
+=== Cumul d'autorisation
+****
+* Chaque autorisation s'applique à un objet *utilisateur* ou *groupe de sécurité*. Il est cependant préférable de n'appliquer des autorisation qu'aux *groupes*.
+* Pour chaque entrée de contrôle d'accès, l'autorisation peut être appliquée :
+** *Autoriser* afin d'*accorder le privilège* correspondant.
+** *Refuser* afin d'*ôter le privilège* correspondant.
+* À défaut de règle d'autorisation (explicite) le concernant, l'utilisateur est soumis à un *refus implicite*. 
+* Les autorisations sont *cumulatives*, la résultante des autorisations affectant un utilisateur correspond au cumul des autorisations le concernant.
+* En cas de conflit, *le refuse l'emporte*.
+****
+
+=== L'héritage des autorisation NTFS
+****
+* L'héritage s'applique par défaut aux autorisation NTFS positionnées sur des dossiers.
+* Il est conseillée d'affecter ces autorisation *en partant de la racine* d'une arborescence afin de bénéficier de l'héritage.
+* L'héritage peut être rompu sur un point d'arborescence ou repropagé à partir d'un élément.
+
+Il y a néanmoins des contraintes :
+
+image::tssr2023/module-08/ad/97.png[align=center]
+****
+
+=== Le partage de fichiers
+
+****
+* Le partage vient en *complément* des autorisations NTFS.
+Un poste disposant de partages joue le rôle de serveur de fichiers.
+
+image::tssr2023/module-08/ad/96.png[align=center]
+****
+
+=== Les autorisations de partage
+****
+* Les autorisations permettent de définir :
+** Quels seront les privilèges
+** S'ils autoriseront ou interdiront
+** Pour qui
+
+* Les trois types de privilèges de partage sont les suivants :
+
+image::tssr2023/module-08/ad/95.png[align=center]
+
+* Pour chaque niveau, les privilèges correspondants pourront être :
+
+image::tssr2023/module-08/ad/94.png[align=center]
+
+* Chaque règle cible une ou plusieurs entités.
+* Les règles de contrôles d'accès sont cumulatives et les *refus prioritaires*.
+****
+
+=== Autorisation résultantes
+
+****
+Quand l'utilisateur accès depuis son poste de travail à une ressource partagée:
+* Il est d'abord soumis aux autorisations de partage
+* Puis aux autorisations NTFS
+
+image::tssr2023/module-08/ad/93.png[align=center]
+
+* Les privilèges les plus restrictifent prévalent.
+****
+
+=== Les publication de partage
+
+****
+* Une fois créé, il est possible de le *publier* dans l'AD.
+* L'objet *Partage* est soit lié à :
+** *L'objet ordinateur* auquel il est associé.
+** *Indépendant* et peut être déplacé dans un UO dédié.
+* La publication de partage facilite la recherche pour les utilisateurs depuis leur poste client avec la fonction *Rechercher dans Active Directory*
+****
+
+=== Stratégie d'imbrication des groupes
+
+****
+Afin de gérer efficacement l'accès aux ressources, Microsoft préconise l'imbrication ges *Groupes Globaux* et de *Domaines Locaux*.
+* Voir Slide sur les groupes et les domaines Locaux
+
+image::tssr2023/module-08/ad/92.png[align=center]
+****
+
+== TP 05 - Gestion de ressources en contexte de domaine AD
+== Notes 

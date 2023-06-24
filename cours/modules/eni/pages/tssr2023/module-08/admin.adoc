@@ -1,0 +1,293 @@
+= Module 02 - Administration Windows
+:navtitle: Administration Windows
+
+* Module suivant -> xref:tssr2023/module-08/ad.adoc[Module 02 - Active Directory]
+
+Notes -> xref:notes:eni-tssr:services-reseau-microsof.adoc[Services Réseau Microsof]
+
+
+== Objectifs
+
+.Services Réseau Windows
+****
+* Connaître Microsoft Server et son biotope
+* Gérer le stockage du serveur et le RAID
+****
+
+== Version des systèmes d'exploitation Microsoft
+
+=== Les deux familles
+
+image:tssr2023/module-08/admin/01.png[]
+
+=== Les différentes éditions Windows Server
+
+image:tssr2023/module-08/admin/02.png[]
+
+=== Quelque rappels sur les licences
+
+image:tssr2023/module-08/admin/03.png[]
+
+****
+* *L'ajout d'un* serveur dans un contexte *d'entreprise* permet de fournir des services spécifiques.
+* Un ensemble de services est nativement pris en charge *d'exploitation* par les systèmes Windows Server. Ceux-ci seront présentés ci-après.
+* Bien *d'autres* solutions, outils, applications, non présentés ici, peuvent être mis en *oeuvre* sur les systèmes *d'exploitation* serveur (serveur de messagerie Exchange, serveur de bases de données Microsoft SQL).
+****
+
+=== Les services de domaine prise en charge
+
+image:tssr2023/module-08/admin/04.png[]
+
+=== Les autres services prise en charge
+
+image:tssr2023/module-08/admin/05.png[]
+
+== Installation du système et composants
+
+=== Les modes d'installation
+
+****
+* Installation minimale / Server Core :
+** Sans environnement graphique
+** Depuis Windows Server 2008
+** Mode d'installation par défaut
+** Les commandes PowerShell peuvent être utilisées pour gérer un serveur Core 
+* Installation graphique
+** Avec environnement graphique (GUI : Graphic User Interface)
+****
+
+=== Les rôles et fonctionnalités
+
+****
+* Des composants peuvent être ajoutés par :
+** Le gestionnaire de serveur
+** Des commandes PowerShell
+
+
+* Deux types de composants :
+** Les rôles : correspond généralement à un *service que l'on fournit à des clients*
+Les fonctionnalités : correspond généralement à un outil/composant *utile sur l'élément sur lequel on l'ajoute.*
+****
+
+=== Les outils de gestion de Windows Server
+
+.Les différents outils sont:
+****
+* Le gestionnaire de serveur :
+** Élément central d'administration du ou des serveurs
+
+
+* Les consoles de gestion des services :
+** Disponibles suite à l'ajout d'un rôle sur un serveur
+** Peuvent être ajoutées sur un poste d'administration ne disposant pas du rôle à gérer
+
+* Ligne de commande (CMD)
+
+* La console PowerShell
+****
+
+== TP 01 - Installation et configuration initiale
+
+== Gestion du stockage
+
+.Ce que nous allons voir
+****
+image::tssr2023/module-08/admin/06.png[align=center]
+****
+
+== Les format de tables de partition
+
+=== Les tables de partitionnement
+
+.Détermine les caractéristiques des partitions créées sur un disque
+****
+* *MBR (historique)*
+** Cette table faisait partie des informations stockées sur le premier secteur adressable du disque
+** Le BIOS recherche un secteur d'amorçage
+
+* *GPT*
+** À ce jour, la majorité des machines disposent d'un UEFI
+** Les SSD sont préconfigurés de cette manière.
+** Meilleure performance avec les cartes mères UEFI
+** Optimiser pour les systèmes d'exploitation 64 bits
+****
+
+=== Caractéristiques de format de partitionnement
+
+.2 type de partitionnement
+****
+* *Le partitionnement MBR*
+** Plus faible tolérance aux pannes
+** Nom donnée au premier secteur physique d'un disque
+
+* *Le partitionnement GPT*
+** Meilleure tolérance aux pannes
+** Les données sont dupliquées sur plusieurs secteurs
+*** Possibilité de reconstruction.
+
+* *Possibilité de conversion*
+
+image::tssr2023/module-08/admin/07.png[align=center]
+****
+
+== Les type de configuration dees disques
+
+=== Les configurations de disques
+
+.2 type de configuration
+****
+* *configuration de base*
+** Simplifie la gestion du disque
+** Toutes les données sont inscrites dans des partitions
+** Sur un seul disque physique
+
+* *Configuration dynamique*
+** La gestion se fait par ensemble de disques
+** Les données sont inscrites dans des volumes
+** Nécessaire pour le RAID logiciel
+****
+
+.Conversion
+****
+image::tssr2023/module-08/admin/08.png[align=center]
+****
+
+== Partitionnement et RAID
+
+=== Partitionnement d'un disque de base
+
+image::tssr2023/module-08/admin/09.png[align=center]
+
+****
+* *Sur un disque de base, on peut créer au maximum soit :*
+** 4 partitions principales
+** 3 partitions principales et 1 partition étendue dans laquelle on crée des lecteurs logiques
+*** Les lecteurs logiques seront formatés.
+
+* *Les partitions peuvent être étendues ou réduites sur l'espace contiguë du même disque.*
+
+* *Le lancement d'un OS à partir d'un lecteur logique n'est pas possible*
+** Une partition de base est contiguë
+****
+
+=== Partitionnement d'un disque dynamique
+
+****
+* *Il est composé de volumes qui peuvent être de plusieurs types :*
+** *Volume simple* : Un espace de stockage utilisé par un disque à a fois.
+** *Volume fractionné* : Si un volume est à cheval sur 2 disque
+** *Volume agrégé par bandes* : RAID 0
+** *Volume en miroir* : RAID 1
+** *Volume agrégé par bandes avec parité* RAID 5
+* *RAID (Redundancy Array of Inexpensive Disk)*
+****
+
+=== Le volume simple
+
+****
+On parlera d'espace disque
+
+* C'est le seul type de volume qui utilise un seul disque physique
+
+image::tssr2023/module-08/admin/10.png[align=center]
+
+* Il peut être étendu au sein du même disque
+
+image::tssr2023/module-08/admin/11.png[align=center]
+****
+
+==== Le volume fractionné
+
+****
+Un volume fractionné utilise plusieurs espaces sur plusieurs disques physiques.
+
+* Situation initiale
+
+image::tssr2023/module-08/admin/12.png[align=center]
+
+* *Extension du pass:[<span style=color:green>volume simple 2</span>] sur le pass:[<span style=color:gray>disque dynamique 2</span>]*
+
+image::tssr2023/module-08/admin/13.png[align=center]
+****
+
+==== Le volume agrégé par bandes
+
+****
+Le *RAID-0* ou *volume agrégé par bandes* est un type:
+
+image::tssr2023/module-08/admin/14.png[align=center]
+
+[cols="~,~",grid=none,frame=none]
+|===
+a| 
+* La taille des bandes doit être identique sur chaque disque
+* Réparti sur 2 à x disques
+* *Rapidité* de lecture/écriture accrue
+* Aucune *tolérance de panne*
+* Tout l'espace disque alloué est utilisable
+a| image::tssr2023/module-08/admin/15.png[align=center]
+|===
+****
+
+=== Le volume en miroir
+
+****
+* Le *RAID-1* ou *volume miroir* en est un type :
+
+image::tssr2023/module-08/admin/16.png[align=center]
+[cols="~,~",grid=none,frame=none]
+|===
+a| 
+* Réparti sur 2 disques
+* L'espace alloué sur les 2 disques doit être identique
+* Les mêmes données sont écrites simultanément sur les 2 disques.
+* *Tolérances aux pannes accrues*, un des disques peut être perdu sans impact sur les données
+* La moitié de l'espace disque alloué n'est pas directement utilisable.
+a| image::tssr2023/module-08/admin/17.png[align=center]
+|===
+****
+
+=== Le volume agrégé par bandes avec parité
+
+****
+* Le *RAID-5* ou *volume agrégé par bandes avec parité* en est un type :
+
+image::tssr2023/module-08/admin/18.png[align=center]
+****
+
+== Formatage et outils
+
+=== formatage 
+
+[cols="~,~",grid=none,frame=none]
+|===
+a| 
+* Les partitions principales, lecteurs logiques et volumes doivent être formatés avant d'être utilisable/
+
+*Le formatage est l'installation d'un système de fichier (hébergement des données).
+
+*Les systèmes de fichiers disponibles sont :
+
+image::tssr2023/module-08/admin/20.png[align=center]
+
+a| image::tssr2023/module-08/admin/19.png[align=center]
+|===
+
+=== Les outils
+
+****
+* La console de *Gestion des disques (diskmgmt.msc)*
+* La commande *diskpart*
+* Les commandes *PowerShell*
+
+image::tssr2023/module-08/admin/21.png[align=center]
+****
+
+== TP 02 - Gestion du stockage
+
+== Conclusion
+
+****
+* Vous connaissez Microsoft Serveur et son biotype.
+* Vous savez gérer le stockage du serveur et le RAID
+****

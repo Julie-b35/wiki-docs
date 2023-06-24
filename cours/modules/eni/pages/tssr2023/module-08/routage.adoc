@@ -1,0 +1,9 @@
+= Module 04 - Le routage
+:navtitle: Routage
+
+* Module précédent -> xref:tssr2023/module-08/gpo.adoc[Module 03 - Les Stratégies de Groupe]
+* Module suivant -> xref:tssr2023/module-08/dhcp.adoc[Module 05 - Les Service DHCP]
+
+Notes -> xref:notes:eni-tssr:services-reseau-microsof.adoc[Services Réseau Microsof]
+
+Contenus

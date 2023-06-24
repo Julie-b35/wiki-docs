@@ -1,0 +1,20 @@
+= Services Réseau Microsoft
+
+Formateur : 
+
+Mail : 
+
+Notes -> xref:notes:eni-tssr:services-reseau-microsof.adoc[Services Réseau Microsof]
+
+== Modules
+
+* xref:tssr2023/module-08/admin.adoc[Module 01 - Administration Windows]
+* xref:tssr2023/module-08/ad.adoc[Module 02 - Active Directory]
+* xref:tssr2023/module-08/gpo.adoc[Module 03 - Les Stratégies de Groupe]
+* xref:tssr2023/module-08/routage.adoc[Module 04 - Le routage]
+* xref:tssr2023/module-08/dhcp.adoc[Module 05 - Les Service DHCP]
+* xref:tssr2023/module-08/dns.adoc[Module 06 - Le Services DNS]
+
+== TP
+
+* xref:procedures:tp-eni:tssr2023/ServiceNetworkMicrosoft/TP-01.adoc[TP 01 - Installation et configuration init4]
