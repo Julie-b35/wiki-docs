@@ -1,4 +1,4 @@
-= Module 05 - Le Services DHCP
+= Module 05 - Le Services DHCP (Dynamic Host Configuration Protocol)
 :navtitle: Services DHCP
 
 * Module précédent -> xref:tssr2023/module-08/routage.adoc[Module 04 - Le routage]
@@ -6,4 +6,86 @@
 
 Notes -> xref:notes:eni-tssr:services-reseau-microsof.adoc[Services Réseau Microsof]
 
-Contenus
+== Objectifs
+
+****
+* Comprendre et configurer le rôle *DHCP*
+****
+
+== Définition du service DHCP
+
+image::tssr2023/module-08/dhcp/01.png[align=center]
+
+== La notion de bail
+
+image::tssr2023/module-08/dhcp/02.png[align=center]
+
+=== L'obtention d'un bail - DORA
+
+image::tssr2023/module-08/dhcp/03.png[align=center]
+
+=== Le renouvellement du bail
+
+image::tssr2023/module-08/dhcp/04.png[align=center]
+
+=== La résiliation du bail
+
+image::tssr2023/module-08/dhcp/05.png[align=center]
+
+== Les conteneurs
+
+=== Les conteneurs de gestion du serveur DHCP
+
+==== À la base : l'étendue
+
+image::tssr2023/module-08/dhcp/06.png[align=center]
+
+==== Le plus ciblé : la réservation
+
+image::tssr2023/module-08/dhcp/07.png[align=center]
+
+== La gestion des options
+
+=== Les options de configuration
+
+image::tssr2023/module-08/dhcp/08.png[align=center]
+
+=== Le positionnement des option DHCP
+
+image::tssr2023/module-08/dhcp/09.png[align=center]
+
+== TP 01 - Le service DHCP
+
+== Le DHCP et les réseaux
+
+=== Un serveur DHCP pour plusieurs réseaux
+
+image::tssr2023/module-08/dhcp/10.png[align=center]
+
+== TP - Le service DHCP et les réseaux
+
+== La gestion du DHCP
+
+=== DHCP dans un contexte de domaine
+
+image::tssr2023/module-08/dhcp/11.png[align=center]
+
+=== Les opérations de gestion de la base DHCP
+
+image::tssr2023/module-08/dhcp/12.png[align=center]
+
+=== Le fractionnement d'étendue
+
+image::tssr2023/module-08/dhcp/13.png[align=center]
+
+=== Pour aller plus loin
+
+image::tssr2023/module-08/dhcp/14.png[align=center]
+
+== TP 02 - Disponibilité du service DHCP
+
+== Conclusion
+
+****
+* Vous comprenez et savez configurer le rôle DHCP
+****
