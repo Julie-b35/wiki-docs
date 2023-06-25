@@ -267,15 +267,18 @@ image::tssr2023/module-08/ad/29.png[align=center]
 ** *L'objet ordinateur* auquel il est associé.
 ** *Indépendant* et peut être déplacé dans un UO dédié.
 * La publication de partage facilite la recherche pour les utilisateurs depuis leur poste client avec la fonction *Rechercher dans Active Directory*
+
+image::tssr2023/module-08/ad/30.png[align=center]
 ****
 
 === Stratégie d'imbrication des groupes
 
 ****
 Afin de gérer efficacement l'accès aux ressources, Microsoft préconise l'imbrication ges *Groupes Globaux* et de *Domaines Locaux*.
+
 * Voir Slide sur les groupes et les domaines Locaux
 
-image::tssr2023/module-08/ad/30.png[align=center]
+image::tssr2023/module-08/ad/31.png[align=center]
 ****
 
 == TP 05 - Gestion de ressources en contexte de domaine AD
