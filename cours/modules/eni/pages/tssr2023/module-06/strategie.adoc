@@ -195,6 +195,8 @@ image:tssr2023/module-06/strategie/05.png[]
 
 == La gestion de la continuité : Terminologie
 
+NOTE: Document issue de l'atelier 4.
+
 * **B**usiness **C**ontinuity **P**lan (**P**lan de **C**ontinuité d’**A**ctivité en Français) : orienté métier, quelles sont les activités opérationnelles et leurs ressources que vais-je maintenir ?
 * **B**usiness **C**ontinuity **M**anagement : analyse et gestion, quels sont les risques et leurs impacts ?
 * **B**usiness **I**mpact **A**nalysis : méthode d’analyse de l’impact business qui permet d’évaluer les pertes potentielles.
