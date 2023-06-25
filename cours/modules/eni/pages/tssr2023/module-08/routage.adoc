@@ -6,4 +6,49 @@
 
 Notes -> xref:notes:eni-tssr:services-reseau-microsof.adoc[Services Réseau Microsof]
 
-Contenus
+== Objectifs
+
+****
+* Comprendre et configurer le routage
+****
+
+== Concept du routage
+
+=== Le mécanisme du routage
+
+image::tssr2023/module-08/routage/01.png[align=center]
+
+=== Communication au sein d'un même réseau logique
+
+image::tssr2023/module-08/routage/02.png[align=center]
+image::tssr2023/module-08/routage/03.png[align=center]
+
+=== Communication au sein de réseau logiques différents
+
+image::tssr2023/module-08/routage/04.png[align=center]
+image::tssr2023/module-08/routage/05.png[align=center]
+image::tssr2023/module-08/routage/06.png[align=center]
+
+=== Principe de fonctionnement du routage
+
+image::tssr2023/module-08/routage/07.png[align=center]
+
+== Concept de la traduction d'adresse
+
+=== La traduction d'adresse : sans NAT
+
+image::tssr2023/module-08/routage/08.png[align=center]
+
+=== La traduction d'adresse : avec NAT
+
+image::tssr2023/module-08/routage/09.png[align=center]
+
+== TP 01 - Le routeur et la traduction d'adresses
+
+== TP 02 - Le réseau global
+
+== Conclusion
+
+****
+* Vous comprenez et savez configurer le routage
+****
