@@ -282,4 +282,39 @@ image::tssr2023/module-08/ad/31.png[align=center]
 ****
 
 == TP 05 - Gestion de ressources en contexte de domaine AD
-== Notes 
+
+image::tssr2023/module-08/ad/32.png[align=center]
+
+== La gestion des impressions
+
+=== Le service d'impression
+
+image::tssr2023/module-08/ad/33.png[align=center]
+
+=== Point de vocabulaire
+
+image::tssr2023/module-08/ad/34.png[align=center]
+
+===  Les tâches de gestion et outils
+
+image::tssr2023/module-08/ad/35.png[align=center]
+
+=== La gestion des périphériques
+
+image::tssr2023/module-08/ad/36.png[align=center]
+
+=== La gestion du déploiement
+
+image::tssr2023/module-08/ad/37.png[align=center]
+
+== TP 06 - Gestion des imprimantes
+
+image::tssr2023/module-08/ad/38.png[align=center]
+
+== Conclusion
+
+****
+* Vous connaissez le rôle Active Directory
+* Vous saves gérer les ressources partagés avec AGDLP
+* Vous connaissez la gestion des imprimantes
+****
