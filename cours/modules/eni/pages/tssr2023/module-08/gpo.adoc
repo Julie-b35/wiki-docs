@@ -6,4 +6,83 @@
 
 Notes -> xref:notes:eni-tssr:services-reseau-microsof.adoc[Services Réseau Microsof]
 
-Contenus
+== Objectifs
+
+****
+* Appréhender les stratégies de groupe (GPO)
+****
+
+== Le fonctionnement des GPO
+
+=== Descriptif
+
+image::tssr2023/module-08/gpo/01.png[align=center]
+
+=== Les types de stratégie
+
+image::tssr2023/module-08/gpo/02.png[align=center]
+
+=== Du registre aux stratégie
+
+image::tssr2023/module-08/gpo/03.png[align=center]
+
+=== Application des stratégie
+
+image::tssr2023/module-08/gpo/04.png[align=center]
+
+=== Les stratégie par défaut
+
+image::tssr2023/module-08/gpo/05.png[align=center]
+
+== Le ciblage des stratégies
+
+image::tssr2023/module-08/gpo/06.png[align=center]
+
+=== La console de gestion
+
+image::tssr2023/module-08/gpo/07.png[align=center]
+
+=== Ordre de traitement
+
+image::tssr2023/module-08/gpo/08.png[align=center]
+image::tssr2023/module-08/gpo/09.png[align=center]
+
+=== Les possibilités de restrictions de liaison
+
+image::tssr2023/module-08/gpo/10.png[align=center]
+
+== La mise en oeuvre des stratégies
+
+=== Les domaines impactés
+
+image::tssr2023/module-08/gpo/11.png[align=center]
+
+=== Les paramètres de stratégie de groupe
+
+image::tssr2023/module-08/gpo/12.png[align=center]
+
+=== Les modèles d'administration
+
+image::tssr2023/module-08/gpo/13.png[align=center]
+
+== La redirection des dossiers
+
+=== Principe de redirection
+
+image::tssr2023/module-08/gpo/14.png[align=center]
+
+=== Stratégie de redirection des dossiers
+
+image::tssr2023/module-08/gpo/15.png[align=center]
+
+== Le déploiement d'imprimantes par GPO
+
+image::tssr2023/module-08/gpo/16.png[align=center]
+
+== TP
+
+== Conclusion
+
+****
+* Vous connaissez les stratégies de groupes (GPO)
+****
