@@ -55,10 +55,9 @@
 ***** xref:tssr2023/module-06/strategie.adoc[]
 ***** xref:tssr2023/module-06/transition.adoc[]
 ***** xref:tssr2023/module-06/exploitation.adoc[]
-**** xref:tssr2023/module-06/savoir.adoc[]
-**** xref:tssr2023/module-06/assistance.adoc[]
-**** Publication Centrales
 ***** xref:tssr2023/module-06/amelioration.adoc[]
+**** xref:tssr2023/module-06/assistance.adoc[]
+**** xref:tssr2023/module-06/savoir.adoc[]
 *** xref:tssr2023/module-07/network-phone-ip.adoc[]
 **** xref:tssr2023/module-07/introduction.adoc[]
 **** xref:tssr2023/module-07/reseaux.adoc[]

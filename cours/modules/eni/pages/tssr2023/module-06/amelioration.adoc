@@ -1,6 +1,34 @@
-= Module 8 : Publications centrales : Amélioration continue
+= Module 6 : Publications centrales : Amélioration continue
 :navtitle: Amélioration continue
 
-* Module précédent -> xref:tssr2023/module-06/assistance.adoc[Module 7 : Assistance utilisateur sous GLPI]
+* Module précédent -> xref:tssr2023/module-06/exploitation.adoc[Module 5 : Publications centrales : Exploitation]
+* Module suivant -> xref:tssr2023/module-06/assistance.adoc[Module 7 : Assistance utilisateur sous GLPI]
 
 Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]
+
+== L'amélioration continue des services
+
+* *Objectifs*
+** Analyser les résultats des différents contrats (SLA, OLA, UC)
+** Identifier et mettre en oeuvre toutes les actions conduisant à l’amélioration des services
+** Améliorer la rentabilité sans diminuer la qualité : l’efficience
+** Améliorer la relation client
+** S’assurer que les méthodes de gestion sont efficaces
+* *Missions*
+** Analyser les évolutions et les tendances
+** Conduire les enquêtes de satisfaction et les audits internes
+** Émettre des préconisations d’amélioration
+** Conduire les revues de l’amélioration continue des services
+** Les indicateurs
+** Les **K**ey **P**erformance **I**ndicators
+** Les **C**ritical **S**uccess **F**actor
+** Les bases de références
+** La mesure des services
+*** Métriques techniques (ne pas communiquer au client)
+*** Métriques de processus
+*** Métriques de services (à communiquer au client)
+* La roue de DEMING
+
+image:tssr2023/module-06/amelioration/01.png[]
+
+== TP 02 - Gestion des incidents

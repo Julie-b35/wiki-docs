@@ -149,6 +149,7 @@ serveur
 système
 sysv
 tâches
+tdiallo
 télécom
 Télécom
 totalement

@@ -35,6 +35,7 @@ EIGRP
 Elastix
 eprise
 equirement
+erformance
 ervice
 ethernet
 Ethertype
@@ -94,6 +95,7 @@ mprovement
 nalysis
 nblig
 nderpinning
+ndicators
 Netbios
 nformation
 nfrastructure
@@ -133,6 +135,7 @@ PSSI
 RACI
 rganization
 RGPD
+ritical
 RNIS
 rocess
 roduction
@@ -161,9 +164,11 @@ subnetted
 Sysvol
 tandardization
 tcsh
+Telli
 Tribox
 trnet
 ublic
+uccess
 UEFI
 undebug
 UPDOWN
