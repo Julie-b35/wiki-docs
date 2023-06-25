@@ -153,6 +153,10 @@ image::tssr2023/module-08/ad/20.png[align=center]
 
 image::tssr2023/module-08/ad/21.png[align=center]
 
+== TP 04 - Gestion des utilisateur et groupes dans un contexte de domaine AD
+
+image::tssr2023/module-08/ad/22.png[align=center]
+
 == L'accès aux ressources
 
 === Les ressources
@@ -170,7 +174,7 @@ image::tssr2023/module-08/ad/21.png[align=center]
 * Les autorisations NTFS permettent de définir quels sont les *privilèges d'accès*
 * *Tous les dossiers et fichiers* d'un volume formaté y sont soumis
 
-image::tssr2023/module-08/ad/99.png[align=center]
+image::tssr2023/module-08/ad/23.png[align=center]
 
 * Elles sont visualisables et/ou modifiables depuis l’onglet *Sécurité* des éléments
 ****
@@ -191,7 +195,7 @@ image::tssr2023/module-08/ad/99.png[align=center]
 
 === Les autorisations NTFS de base et avancées
 
-image::tssr2023/module-08/ad/98.png[align=center]
+image::tssr2023/module-08/ad/24.png[align=center]
 
 === Cumul d'autorisation
 ****
@@ -212,7 +216,7 @@ image::tssr2023/module-08/ad/98.png[align=center]
 
 Il y a néanmoins des contraintes :
 
-image::tssr2023/module-08/ad/97.png[align=center]
+image::tssr2023/module-08/ad/25.png[align=center]
 ****
 
 === Le partage de fichiers
@@ -221,7 +225,7 @@ image::tssr2023/module-08/ad/97.png[align=center]
 * Le partage vient en *complément* des autorisations NTFS.
 Un poste disposant de partages joue le rôle de serveur de fichiers.
 
-image::tssr2023/module-08/ad/96.png[align=center]
+image::tssr2023/module-08/ad/26.png[align=center]
 ****
 
 === Les autorisations de partage
@@ -233,11 +237,11 @@ image::tssr2023/module-08/ad/96.png[align=center]
 
 * Les trois types de privilèges de partage sont les suivants :
 
-image::tssr2023/module-08/ad/95.png[align=center]
+image::tssr2023/module-08/ad/27.png[align=center]
 
 * Pour chaque niveau, les privilèges correspondants pourront être :
 
-image::tssr2023/module-08/ad/94.png[align=center]
+image::tssr2023/module-08/ad/28.png[align=center]
 
 * Chaque règle cible une ou plusieurs entités.
 * Les règles de contrôles d'accès sont cumulatives et les *refus prioritaires*.
@@ -250,7 +254,7 @@ Quand l'utilisateur accès depuis son poste de travail à une ressource partagé
 * Il est d'abord soumis aux autorisations de partage
 * Puis aux autorisations NTFS
 
-image::tssr2023/module-08/ad/93.png[align=center]
+image::tssr2023/module-08/ad/29.png[align=center]
 
 * Les privilèges les plus restrictifent prévalent.
 ****
@@ -271,7 +275,7 @@ image::tssr2023/module-08/ad/93.png[align=center]
 Afin de gérer efficacement l'accès aux ressources, Microsoft préconise l'imbrication ges *Groupes Globaux* et de *Domaines Locaux*.
 * Voir Slide sur les groupes et les domaines Locaux
 
-image::tssr2023/module-08/ad/92.png[align=center]
+image::tssr2023/module-08/ad/30.png[align=center]
 ****
 
 == TP 05 - Gestion de ressources en contexte de domaine AD
