@@ -70,6 +70,7 @@ ITSMF
 Jitsi
 jlab
 kbps
+KEDB
 keybind
 l’ECAB
 l’IOS
