@@ -5,3 +5,116 @@
 * Module suivant -> xref:tssr2023/module-06/savoir.adoc[Module 8 : Savoir, savoir faire, savoir être]
 
 Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]
+
+== GLPI : Présentation et notions
+
+=== Présentation
+
+image:tssr2023/module-06/glpi/01.png[]
+
+=== Fonctionnalité et gestion de parc
+
+image:tssr2023/module-06/glpi/02.png[]
+
+=== Recherche rapide
+
+image:tssr2023/module-06/glpi/03.png[]
+
+
+=== Les interfaces
+
+image:tssr2023/module-06/glpi/04.png[]
+
+== GLPI : Gestion de Parc
+
+=== Menu parc
+
+image:tssr2023/module-06/glpi/05.png[]
+
+=== Recherche basique multicritères
+
+image:tssr2023/module-06/glpi/06.png[]
+
+=== Recherche avancée
+
+image:tssr2023/module-06/glpi/07.png[]
+
+=== Recherche sauvegardé
+
+image:tssr2023/module-06/glpi/08.png[]
+
+=== Modification Massive
+
+image:tssr2023/module-06/glpi/09.png[]
+
+=== Fiche élément
+
+image:tssr2023/module-06/glpi/10.png[]
+
+== Assistance avec GLPI
+
+=== Le ticket
+
+image:tssr2023/module-06/glpi/11.png[]
+
+=== L'assistance sous GLPI
+
+image:tssr2023/module-06/glpi/12.png[]
+
+=== Flux d'entrée
+
+image:tssr2023/module-06/glpi/13.png[]
+
+=== Traitement d'un ticker : Aperçu
+
+image:tssr2023/module-06/glpi/14.png[]
+
+=== Traitement d'un ticker : Attribution
+
+image:tssr2023/module-06/glpi/15.png[]
+
+=== Traitement d'un ticker : Observateurs
+
+image:tssr2023/module-06/glpi/16.png[]
+
+=== Traitement d'un ticker : SLA
+
+image:tssr2023/module-06/glpi/17.png[]
+
+=== Traitement d'un ticker : Validation
+
+image:tssr2023/module-06/glpi/18.png[]
+image:tssr2023/module-06/glpi/19.png[]
+image:tssr2023/module-06/glpi/20.png[]
+
+=== Traitement d'un ticker : Traitement
+
+image:tssr2023/module-06/glpi/21.png[]
+
+=== Traitement d'un ticker : Clôture
+
+image:tssr2023/module-06/glpi/22.png[]
+
+=== Cycle de vie d'un ticket
+
+image:tssr2023/module-06/glpi/23.png[]
+
+===  Ticket : Éléments liés
+
+image:tssr2023/module-06/glpi/24.png[]
+
+=== Base de connaissance publique
+
+image:tssr2023/module-06/glpi/25.png[]
+
+=== Base de connaissance : Article
+
+image:tssr2023/module-06/glpi/26.png[]
+
+=== Base de connaissance : Création
+
+image:tssr2023/module-06/glpi/27.png[]
+
+=== Base de connaissance : Cibles
+
+image:tssr2023/module-06/glpi/28.png[]
