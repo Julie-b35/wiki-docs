@@ -177,3 +177,5 @@ La gestion de la connaissance
 ** Comprendre qui partage la connaissance, qui capitalise la connaissance de l’entreprise
 ** L’important n’est pas une base de connaissances contenant beaucoup d’informations, mais une base de connaissances qui est utilisée
 ** Gérer la promotion, l’information, la formation sur les bases de connaissances
+
+== TP 01 - Découverte GLPI - Gestion de Parc
