@@ -81,19 +81,44 @@ a|
 a|
 [none]
 * Entre ce que je pense,
-* e que je veux dire,
-* e que je crois dire,
-* e que je dis réellement,
-* e que vous voulez entendre,
-* e que vous entendez, a|
+* Ce que je veux dire,
+* Ce que je crois dire,
+* Ce que je dis réellement,
+* Ce que vous voulez entendre,
+* Ce que vous entendez, a|
 [none]
-* e que vous croyez comprendre,
-* t ce que vous comprenez réellement,
-* l y a au moins 10 possibilités
-* e ne pas se comprendre
-* ais essayons quand même
+* Ce que vous croyez comprendre,
+* Et ce que vous comprenez réellement,
+* Il y a au moins 10 possibilités
+* De ne pas se comprendre
+* Mais essayons quand même
 »
 |===
 
 Nouvelle encyclopédie du savoir relatif et absolu
 , Bernard WERBER
+
+* La communication externe tente de répondre à l’un des objectifs suivants
+** Faire passer une information, une connaissance ou une émotion
+** Créer un langage commun pour faciliter la compréhension (ITIL)
+** Créer une relation pour être connu et ainsi fidélisé
+** Créer une influence pour inciter l’autre
+* La communication interne permet
+** Implication
+** Adaptation au changement
+** Bonne ambiance
+** Disparition des rumeurs
+* Le verbal
+** L’émission des signaux ne signifie pas forcément leur bonne réception par le(s) récepteur(s)
+** Une bonne communication nécessite la réception et la compréhension de l’information par le(s) destinataire(s)
+** Vous êtes tour à tour émetteur et récepteur
+*** Émetteur : soyez clair, précis et compréhensible
+*** Récepteur : soyez disponible et sachez écouter (donc, vous taire)
+
+* Le non verbal
+** *Gestes naturels* : Mouvements d’instinct ou réflexes (haussement d’épaules)
+** *Gestes sociaux* : Mouvements volontaires, liés à la culture, à l’origine sociale
+** *Regard* : Sa direction est une indication du degré d’intérêt porté à l’autre
+** *Expression du visage* : Disponibilité d’esprit, degré de sympathie
+** *Posture et mouvement* : Degré d’assurance, de disponibilité
+** *Vêtements* : Statut social, style de vie, mais aussi mise en valeur de l’autre…
