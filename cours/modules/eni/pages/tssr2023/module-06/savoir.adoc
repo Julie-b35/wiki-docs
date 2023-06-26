@@ -37,6 +37,7 @@ Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]
 * Connaissances système
 * Connaissances réseau
 * Connaissances de l’ERP et du métier du client (workflow)
+
 [grid=none,cols="~,~",frame=none]
 |===
 a|
@@ -74,6 +75,7 @@ a|
 
 * La compétence désigne la mobilisation d’un ensemble de ressources en vue de résoudre une situation complexe
 * La communication
+
 [grid=none,cols="~,~",frame=none]
 |===
 a|
