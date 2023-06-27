@@ -1,6 +1,7 @@
 * xref:index.adoc[]
 * Serveurs
 ** xref:Serveurs/ServeurMail_GLPI.adoc[]
+** xref:Serveurs/SL-PXE.adoc[]
 
 * xref:server-ssh-windows.adoc[]
 
