@@ -5,5 +5,120 @@
 
 Notes -> xref:notes:eni-tssr:itil.adoc[Sensibilisation ITIL et gestion de parc]
 
+== Objectifs
+
+* Savoir - connaissances
+* Savoir-faire - compétences
+* Savoir-être - aptitudes
+
 == Quel est le rôle du technicien support ?
 
+* Régler les incidents et les problèmes rencontrés par les utilisateurs
+* Diagnostiquer un incident
+* Effectuer une réparation matérielle
+* Proposer une solution de contournement
+* Commander et changer des matériels défectueux
+* Installer du nouveau matériel (intégrer et gérer un réseau)
+* Surveiller la sécurité
+* Former les utilisateurs
+
+== Quelles sont les compétences requises ? 
+
+* Le savoir - connaissance
+** Définition : faculté mentale produisant une assimilation par l’esprit d’un contenu objectif préalablement traduit en signes et en idées.
+* Le savoir faire  - compétence
+** Définition : compétence acquise par l’expérience dans les problèmes pratiques, dans l’exercice d’un métier.
+* Le savoir-être  - aptitude
+** Définition : correspond à la capacité de produire des actions et des réactions adaptées à l'environnement humain et écologique
+
+== Compétences et profils
+
+* Compétences professionnelles
+* Connaissances système
+* Connaissances réseau
+* Connaissances de l’ERP et du métier du client (workflow)
+
+[grid=none,cols="~,~",frame=none]
+|===
+a|
+* Sens de l’écoute
+* Calme
+* Qualités relationnelles a|
+* Efficacité
+* Organisation
+* Veille technologique
+|===
+
+== Savoir - connaissances
+
+* Vous êtes vous déjà dit ?
+** «J’ai déjà eu ce problème, mais je ne sais plus comment j’ai fait pour le régler. »
+* Il faut une bonne base de connaissance
+** Wiki
+** Logiciel interne
+** Site intranet
+** Logiciel de gestion de parc (GLPI)
+* Il faut une bonne veille technologique
+* Documentez les bonnes pratiques
+* Partagez les solutions pour les incidents communs
+* Permettez aux utilisateurs finaux de résoudre par eux mêmes leurs incidents
+* Facilitez les recherches en rendant visible les articles qu’aux personnes nécessaires
+* Partagez vos idées, vos expériences, votre veille technologique
+* Avantages
+** Solutions pour les utilisateurs finaux 24/7 par un navigateur web
+** Réduit la charge de travail du service helpdesk
+** Améliore la productivité générale et donc l’efficience
+** Facilité d’utilisation et de partage
+** Réduction des temps de résolution qui permet de respecter les SLA
+
+== Savoir-faire - compétences
+
+* La compétence désigne la mobilisation d’un ensemble de ressources en vue de résoudre une situation complexe
+* La communication
+
+[grid=none,cols="~,~",frame=none]
+|===
+a|
+[none]
+* Entre ce que je pense,
+* Ce que je veux dire,
+* Ce que je crois dire,
+* Ce que je dis réellement,
+* Ce que vous voulez entendre,
+* Ce que vous entendez, a|
+[none]
+* Ce que vous croyez comprendre,
+* Et ce que vous comprenez réellement,
+* Il y a au moins 10 possibilités
+* De ne pas se comprendre
+* Mais essayons quand même
+»
+|===
+
+Nouvelle encyclopédie du savoir relatif et absolu
+, Bernard WERBER
+
+* La communication externe tente de répondre à l’un des objectifs suivants
+** Faire passer une information, une connaissance ou une émotion
+** Créer un langage commun pour faciliter la compréhension (ITIL)
+** Créer une relation pour être connu et ainsi fidélisé
+** Créer une influence pour inciter l’autre
+* La communication interne permet
+** Implication
+** Adaptation au changement
+** Bonne ambiance
+** Disparition des rumeurs
+* Le verbal
+** L’émission des signaux ne signifie pas forcément leur bonne réception par le(s) récepteur(s)
+** Une bonne communication nécessite la réception et la compréhension de l’information par le(s) destinataire(s)
+** Vous êtes tour à tour émetteur et récepteur
+*** Émetteur : soyez clair, précis et compréhensible
+*** Récepteur : soyez disponible et sachez écouter (donc, vous taire)
+
+* Le non verbal
+** *Gestes naturels* : Mouvements d’instinct ou réflexes (haussement d’épaules)
+** *Gestes sociaux* : Mouvements volontaires, liés à la culture, à l’origine sociale
+** *Regard* : Sa direction est une indication du degré d’intérêt porté à l’autre
+** *Expression du visage* : Disponibilité d’esprit, degré de sympathie
+** *Posture et mouvement* : Degré d’assurance, de disponibilité
+** *Vêtements* : Statut social, style de vie, mais aussi mise en valeur de l’autre…

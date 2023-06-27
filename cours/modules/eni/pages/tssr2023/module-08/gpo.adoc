@@ -18,6 +18,11 @@ Notes -> xref:notes:eni-tssr:services-reseau-microsof.adoc[Services Réseau Micr
 
 image::tssr2023/module-08/gpo/01.png[align=center]
 
+[NOTE]
+====
+Pour les mobile professionnel, il y a la gestion de flotte *MDM* -> link:https://www.google.com/search?q=Mdm&rlz=1C1GCEJ_enFR1052FR1052&oq=Mdm&aqs=chrome..69i57j69i64j0i512l4j0i10i512j0i512.1479j0j4&sourceid=chrome&ie=UTF-8[Gestion MDM]
+====
+
 === Les types de stratégie
 
 image::tssr2023/module-08/gpo/02.png[align=center]
