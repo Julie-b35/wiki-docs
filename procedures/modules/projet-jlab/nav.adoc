@@ -1,4 +1,6 @@
 * xref:index.adoc[]
+* Services
+** xref:Services/ipxe.adoc[]
 * Serveurs
 ** xref:Serveurs/ServeurMail_GLPI.adoc[]
 ** xref:Serveurs/SL-PXE.adoc[]

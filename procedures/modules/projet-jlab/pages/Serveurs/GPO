@@ -1,0 +1,7 @@
+= GPO
+
+==  Désactivé périphérique Amovible
+
+----
+Gestion de l'ordinateur -> Stratégie -> Modèle d'administration -> Système -> Accès au stockage Amovible -> Toutes les classes de stockage amovible : refuser l'accès
+----

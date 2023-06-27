@@ -23,6 +23,13 @@ image::tssr2023/module-08/routage/01.png[align=center]
 image::tssr2023/module-08/routage/02.png[align=center]
 image::tssr2023/module-08/routage/03.png[align=center]
 
+[NOTE,caption=RAPPEL]
+====
+* Adresse MAC : Composé de 48 bits, sois 6 octet
+
+
+====
+
 === Communication au sein de réseau logiques différents
 
 image::tssr2023/module-08/routage/04.png[align=center]
