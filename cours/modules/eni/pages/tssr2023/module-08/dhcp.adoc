@@ -48,6 +48,10 @@ image::tssr2023/module-08/dhcp/05.png[align=center]
 
 image::tssr2023/module-08/dhcp/06.png[align=center]
 
+[NOTE,caption=Source]
+====
+Pensez à exclure les plage ip des ip statique
+====
 ==== Le plus ciblé : la réservation
 
 image::tssr2023/module-08/dhcp/07.png[align=center]
