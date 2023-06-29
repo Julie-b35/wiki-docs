@@ -182,6 +182,7 @@ Sysvol
 tandardization
 tcsh
 Telli
+tftpd
 tmout
 Tribox
 trnet

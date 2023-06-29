@@ -94,8 +94,6 @@ image::tssr2023/module-08/dhcp/13.png[align=center]
 
 image::tssr2023/module-08/dhcp/14.png[align=center]
 
-== TP 02 - Disponibilité du service DHCP
-
 == Conclusion
 
 ****

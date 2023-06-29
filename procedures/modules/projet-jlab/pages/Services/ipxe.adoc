@@ -69,24 +69,27 @@ EOD;
 ----
 
 ----
+
+
+
         $dhcpdconf .= <<<EOF
         ping-check = 1;
         next-server 172.15.255.250;
         if option arch = 00:07 or option arch = 00:09 {
             if exists user-class and option user-class = "iPXE" {
-                    filename "http://172.15.255.250/install.ipxe";
+                    filename "http://172.15.255.250/boot.php";
             } else {
-                    filename "ipxe/ipxe.efi";
+                    filename "ipxe.efi";
             }
     } else if option arch = 00:06 {
             if exists user-class and option user-class = "iPXE" {
-                    filename "http://172.15.255.250/install.ipxe";
+                    filename "http://172.15.255.250/boot.php";
             } else {
-                    filename "ipxe/ipxe32.efi";
+                    filename "ipxe32.efi";
             }
     } else {
          if exists user-class and option user-class = "iPXE" {
-                    filename "http://172.15.255.250/install.ipxe";
+                    filename "http://172.15.255.250/boot.php";
             } else {
                     filename "undionly.kpxe";
             }
@@ -95,3 +98,66 @@ EOF;
 ----
 ====
 ****
+
+== Configuration Serveur Ipxe
+
+=== Installation du serveur tftp
+
+****
+* Mon serveur tournera sour Debian 11 x64
+* Programme à install `tftp-hpa`
+
+****
+
+[source,bash]
+====
+apt update -y && apt upgrade -y
+apt install -y tftpd-hpa git gcc binutils liblzma-dev make
+====
+
+.Extrait Fichier configuration `/etc/default/tftpd-hpa`
+----
+# /etc/default/tftpd-hpa
+
+TFTP_USERNAME="tftp"
+TFTP_DIRECTORY="/srv/tftp"
+TFTP_ADDRESS=":69"
+TFTP_OPTIONS="--secure -v"
+----
+
+=== Construction des image Boot Ipxe
+
+.Fichier `/tmp/ipxe/src/chain.ipxe`
+----
+#!ipxe
+
+dhcp
+chain http://172.16.255.250/boot.php
+----
+
+[source,bash]
+====
+cd /tmp
+#Clonage dépot IPXE
+git clone https://github.com/ipxe/ipxe.git
+cd ipxe/src
+
+#Fichier Point de départ chargement IPXE.
+vim chain.ipxe
+make bin-x86_64-efi/ipxe.efi EMBED=chain.ipxe && \
+make bin-i386-efi/ipxe.efi EMBED=chain.ipxe && \
+make bin/undionly.kpxe EMBED=chain.ipxe
+cp bin-x86_64-efi/ipxe.efi /srv/tftp/ && \
+cp bin/undionly.kpxe /srv/tftp/ && \
+cp bin-i386-efi/ipxe.efi /srv/tftp/ipxe32.efi
+====
+
+=== Installation et configuration des services Web
+
+[source,bash]
+====
+
+#installation Serveur Web (basique)
+apt install apache2 php libapache2-mod-php php-mysql php-curl php-gd php-intl php-json php-mbstring php-xml php-zip
+ln -s /srv/tftp /var/www/html/tftp
+====
