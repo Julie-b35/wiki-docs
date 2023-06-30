@@ -62,9 +62,13 @@ image::tssr2023/module-08/dns/10.png[align=center]
 
 image::tssr2023/module-08/dns/11.png[align=center]
 
+NOTE: Interrogation d'un serveur DNS les un après l'autre
+
 === Les requêtes itératives
 
 image::tssr2023/module-08/dns/12.png[align=center]
+
+NOTE: Le serveur DNS tentes de résoudre l'ip en fonction de plusieurs serveurs
 
 == Les redirections
 
@@ -145,3 +149,13 @@ image::tssr2023/module-08/dns/29.png[align=center]
 ****
 * Vous comprenez et saver configurer le rôle DNS
 ****
+
+[NOTE]
+====
+Lorsque je crée une zone de recherche directe avec Windows, j'utilise l'assistant graphique
+
+1. Je crée l'enregistrement A correspondant au nom et à l'adresse ip du serveur DNS principal
+2. Je renseigne le suffixe DNS de l'enregistrement SOA
+3. Je renseigne le suffixe DNS de l'enregistrement NS
+GreenIT
+====
