@@ -20,6 +20,7 @@ cdrom
 CDROM
 centreon
 centrex
+CEST
 chargé
 cible
 cifs

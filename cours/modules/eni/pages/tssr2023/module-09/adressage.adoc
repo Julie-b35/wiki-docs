@@ -26,3 +26,90 @@ La configuration réseau d’un poste se traduit par la mise en oeuvre d’un ou
 * La configuration d’une passerelle par défaut ;
 * La définition d’un nom d’hôte ;
 * La configuration cliente DNS.
+
+=== 2.1.2. Nommage des cartes réseau
+
+Le mécanisme de gestion des services systemd a introduit un schéma de nommage particulier pour les cartes réseau, il s’adapte selon les matériels détectés pour éviter les erreurs d’interprétation.
+
+Dans le cas des machines virtuelles déployées avec VMware Workstation, il se présente la forme `ens[1-n]`.
+
+[NOTE,caption=Info]
+====
+Cette évolution est apparue avec Debian 9 et Red Hat / CentOS 7.
+
+Sur des systèmes plus anciens le nommage des cartes réseau Ethernet est sous la forme `eth[0-n]`.
+====
+
+La carte de boucle locale (loopback) est identifiée avec la forme spécifique `lo`.
+
+== 2.2. Outils et méthodes de configuration du réseau
+
+=== 2.2.1. Configuration depuis le service Network Manager
+
+Si le service _Network Manager_ est installé, il est préférable de l’utiliser pour gérer la configuration réseau du poste.
+
+[source,bash]
+----
+# systemctl status NetworkManager
+● NetworkManager.service - Network Manager
+    Loaded: loaded (/lib/systemd/system/NetworkManager.service; enabled; vendor p>
+    Active: active (running) since Thu 2022-06-23 07:57:22 CEST; 1 weeks 1 days a>
+----
+
+Les actions réalisées via _Network Manager_ sont prises en compte immédiatement et durablement.
+
+Le service _Network Manager_ peut être configuré :
+
+* Au moyen de lignes de commandes : via la commande `nmcli` (Command Line Interface) ; 
+** cette méthode est particulièrement adaptée à l’application de modification via des scripts.
+* Au moyen d’une interface textuelle de configuration : via la commande `nmtui`. 
+** Plus conviviale que les commandes `nmcli`, c’est une méthode qui requiert l’interaction utilisateur.
+* Au moyen d’un *composant graphique* interagissant avec _Network Manager_ ; 
+** cela requiert la présence d’un environnement graphique sur la machine cible. *C’est la méthode privilégiée sur les stations de travail sous GNU/Linux*.
+
+=== 2.2.2. Configuration avec la commande ip
+
+La commande `ip` permet de gérer la configuration réseau. Le résultat d’exécution de cette commande est pris en compte immédiatement. Cependant, sans configuration complémentaire, les modifications apportées dynamiquement par cette commande ne sont *pas conservées après redémarrage du service réseau* ou de la machine.
+
+[source,bash]
+----
+Usage: ip [ OPTIONS ] OBJECT { COMMAND | help }
+       ip [ -force ] -batch filename
+where  OBJECT := { link | address | addrlabel | route | rule | neigh | ntable |
+                   tunnel | tuntap | maddress | mroute | mrule | monitor | xfrm |
+                   netns | l2tp | fou | macsec | tcp_metrics | token | netconf | ila |
+                   vrf | sr | nexthop | mptcp }
+       OPTIONS := { -V[ersion] | -s[tatistics] | -d[etails] | -r[esolve] |
+                    -h[uman-readable] | -iec | -j[son] | -p[retty] |
+                    -f[amily] { inet | inet6 | mpls | bridge | link } |
+                    -4 | -6 | -I | -D | -M | -B | -0 |
+                    -l[oops] { maximum-addr-flush-attempts } | -br[ief] |
+                    -o[neline] | -t[imestamp] | -ts[hort] | -b[atch] [filename] |
+                    -rc[vbuf] [size] | -n[etns] name | -N[umeric] | -a[ll] |
+                    -c[olor]}
+----
+
+Pour utiliser cette commande, on indique le type d’objet à manipuler suivi de la commande `[ + arguments ]` à lui appliquer.
+
+Les commandes disponibles dépendent des objets concernés. Des sections d’aide propres aux différents objets sont utiles pour lister les commandes disponibles pour le contexte concerné.
+
+[source,bash]
+----
+$ man ip
+$ man ip-address
+----
+
+=== 2.2.3. Configuration durable dans le fichier interfaces
+
+[CAUTION,caption=Important]
+====
+Seules les cartes réseau *non configurées via Network Manager* sont à configurer dans le fichier de configuration des interfaces présenté ci-dessous.
+====
+
+Sur un serveur ne disposant pas d’interface graphique, la configuration du réseau passera par la modification du fichier `/etc/network/*interfaces*`. Après toute modification de ce fichier, il est nécessaire de redémarrer le service `networking` pour leur prise en compte.
+
+[source,bash]
+----
+# systemctl stop networking
+# systemctl start networking
+----
