@@ -18,6 +18,7 @@ clflushopt
 clwb
 cmov
 cntrl
+coderay
 comptabiliter
 computername
 cpuid
