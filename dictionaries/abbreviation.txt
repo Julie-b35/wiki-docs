@@ -41,6 +41,7 @@ efinitive
 EIGRP
 Elastix
 encap
+eniconf
 eprise
 equirement
 erformance
@@ -156,6 +157,7 @@ pxeext
 qdisc
 qlen
 RACI
+randomart
 rganization
 RGPD
 ritical

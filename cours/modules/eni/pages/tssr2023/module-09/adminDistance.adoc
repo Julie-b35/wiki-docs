@@ -6,4 +6,271 @@
 
 Notes -> xref:notes:eni-tssr:services-reseau-linux.adoc[Services Réseau Linux]
 
-Contenus
+== 4.1. Les outils d’administration à distance
+
+=== 4.1.1. Protocole SSH et accès au Shell via le réseau
+
+Pour administrer le serveur il est possible de s’y connecter (ouverture d’un Shell) localement ou via le réseau.
+
+Pour la prise en main distante, les cibles suivantes doivent être définies:
+
+* Protocole utilisé
+* Logiciel client utilisé
+* Logiciel / service utilisé sur le serveur
+
+image::tssr2023/module-09/adminDistance/01.jpg[align=center]
+
+*Le protocole* généralement utilisé pour l’établissement de connexions sécurisées via le réseau est le protocole *Secure SHell* (SSH). Il est normalisé et sécurisé, les échanges d’informations circulant sur le réseau étant chiffrés.
+
+*Le logiciel client* est l’application qui se connecte au serveur SSH. Le logiciel client est à exécuter depuis le poste sur lequel se trouve l’utilisateur qui souhaite prendre la main sur la machine distante. Les applications présentées ci-dessous sont couramment utilisées à ces fins.
+
+[cols="~,~,~"]
+|===
+^.^h| Application ^.^h|Environnement ^.^h| Principales caractéristiques
+.2+^.^a| 
+*OpenSSH-Client*
+
+image::tssr2023/module-09/adminDistance/02.jpg[align=center]
+
+^.^| Distributions GNU/Linux 
+^.^| 
+Généralement implémentée nativement sur les principales distributions GNU/Linux. Fourni la commande `ssh`.
+
+^.^| Windows
+^.^| 
+Fonctionnalité facultative depuis Windows 10 (1803) et Windows 2019. Fourni la commande `ssh`.
+
+Il est possible d’en obtenir une autre version dans link:https://gitforwindows.org/[git for windows].
+^.^a| 
+*Putty*
+
+image::tssr2023/module-09/adminDistance/03.jpg[align=center]
+^.^| Windows
+^.^| 
+Logiciel libre disponible à l’origine uniquement pour Windows, porté depuis sous d’autres environnements.
+|===
+
+D’autres applications clientes sont abordées au point 4.3 de ce chapitre.
+
+*Le logiciel serveur SSH*
+
+Pour répondre aux requêtes de connexion du client, un service doit être implémenté sur la machine sur laquelle l’on souhaite travailler à distance un serveur SSH. C’est généralement openssh-server qui est utilisé.
+
+=== 4.1.2. Protocole SSH et transfert de fichiers sécurisé
+
+Le protocole SSH peut aussi être utilisé pour sécuriser le transfert de fichiers entre différentes machines.
+
+[cols="~,~,~,~,~",grid=none]
+|===
+^.^h|SSH
+^.^h|+
+^.^h|CP
+^.^h|= 
+^.^h|SCP
+|===
+
+.Exemple 2. Exemple d’utilisation de la commande scp
+====
+image::tssr2023/module-09/adminDistance/04.jpg[align=center]
+
+Commande passée sur le poste « client SSH » ci-dessus :
+
+[source,shell]
+----
+$ scp identifiant@IP_du_serveur:/etc/eniconf.cfg /tmp
+----
+
+Cette commande permet de récupérer sur le poste « client SSH » le fichier `/etc/eniconf.cfg` du « serveur SSH ».
+====
+
+Les outils nécessaires à la copie de fichier via SCP peuvent soit être intégrés au logiciel client SSH précédemment cité. Il est possible d’installer un logiciel supplémentaire :
+
+[cols="~,~,~"]
+|===
+^.^h| Application ^.^h|Environnement ^.^h| Principales caractéristiques
+^.^a| 
+*WinSCP*
+
+image::tssr2023/module-09/adminDistance/05.jpg[align=center]
+^.^| Windows
+^.^| 
+Application dédiée au transfert de fichier via le protocole SSH.
+|===
+
+== 4.2. Sécurisation de la connexion SSH
+
+La connexion à un serveur SSH nécessite de s’authentifier en précisant le mot de passe à chaque connexion. Il est possible d’utiliser à la place un échange de clé cryptographique. Cela sécurise la connexion manuelle et permet les usages automatisés via les scripts.
+
+Il en existe plusieurs types de clés : RSA, DSA, ECDSA … Dans la cadre du support, nous utiliserons les paramétrages par défaut avec un échange de clé RSA.
+
+=== 4.2.1. Génération des clés côté client
+
+Une paire de clé doit être générée côté client pour l’utilisateur devant se connecter en SSH. On utilise pour cela la commande ssh-keygen fournie avec le paquet OpenSSH-Client.
+
+.Création de la paire de clés :
+----
+fred@cli-debian:~$ ssh-keygen ①
+Generating public/private rsa key pair.
+Enter file in which to save the key (/home/fred/.ssh/id_rsa):
+Enter passphrase (empty for no passphrase): ②
+Enter same passphrase again:
+Your identification has been saved in /home/fred/.ssh/id_rsa. ③
+Your public key has been saved in /home/fred/.ssh/id_rsa.pub. ③
+The key fingerprint is:
+SHA256:HZrJ3cZaWa4nrmvHqve4oLVVUgfxcPauRZyBbAA8ip8 fred@cli-debian
+The key's randomart image is:
++---[RSA 2048]----+
+| ... .*.+. |
+| o X o o|
+| . . o o +.+|
+| o o.o o |
+| o + o o o o |
+| . o+ * B o |
++----[SHA256]-----+
+----
+
+[none]
+* ① Le type, le nom et la taille de la clé peuvent être précisés avec les options de `ssh-keygen`.
+* ② Pour simplifier la mise en oeuvre, on utilise ici les paramètres par défaut, sans indiquer de _passphrase_.
+* ③ 2 clés sont générées dans le répertoire `.ssh` dans l’espace personnel de l’utilisateur :
+** `id_rsa` : la clé *privée* de l’utilisateur
+** `id_rsa.pub` : la clé *publique* de l’utilisateur, qui sera copiée sur le serveur SSH
+
+[IMPORTANT]
+====
+Il est vivement conseillé, dans un contexte de production, d’indiquer une *_passphrase_*.
+
+Cette passphrase devra ensuite être fournie à chaque connexion. Elle peut être gérée et mise en cache côté client avec le composant `ssh-agent`.
+====
+
+=== 4.2.2. Copie de la clé publique sur le serveur distant
+
+Le serveur distant SSH doit disposer de la clé publique de l’utilisateur pour initier et valider la connexion. On utilise pour cela la commande `ssh-copy-id` fournie avec le paquet OpenSSHClient.
+
+[NOTE,caption=Info]
+====
+`ssh-copy-id` étant un script bash, il n’est pas disponible directement sous windows. Il est possible de l’utiliser grâce à l’OpenSSH fourni avec link:https://gitforwindows.org/[git for windows] ou en utilisant un Linux avec WSL.
+====
+
+Dans un premier temps, la clé publique sera copiée dans l’espace personnel d’un utilisateur standard. Une fois récupérée sur le serveur distant, elle pourra être associée au compte root.
+
+Par défaut la configuration du démon sshd sur le serveur SSH empêche la connexion de root avec un mot de passe mais permet la connexion avec les clés.
+
+Copie de la clé publique vers le serveur SSH :
+
+----
+fred@cli-debian:~$ ssh-copy-id admin@192.168.6.66
+/usr/bin/ssh-copy-id: INFO: attempting to log in with the new key(s), to filter out
+any that are already installed
+/usr/bin/ssh-copy-id: INFO: 1 key(s) remain to be installed -- if you are prompted
+now it is to install the new keys ①
+fred@192.168.6.66's password: ②
+Number of key(s) added: 1 ③
+Now try logging into the machine, with: "ssh 'admin@192.168.6.66'"
+and check to make sure that only the key(s) you wanted were added.
+fred@cli-debian:~$ ssh admin@192.168.6.66
+admin@srv:~$ ④
+----
+
+[none]
+* ① Utilise le fichier `id_rsa.pub` généré précédemment avec `ssh-keygen`;
+* ② Le mot de passe de connexion est demandé (pour la dernière fois !)
+* ③ La commande génère un fichier `authorized_keys` dans le répertoire `$HOME/.ssh` de l’utilisateur distant et y ajoute la clé publique;
+* ④ il est maintenant possible de se connecter sans authentification sur le serveur SSH avec la
+commande :
+
+_Pour fournir la clé publique au compte root, il faut :_
+
+* Se connecter avec le compte `root` sur le serveur distant
+* Créer un répertoire `.ssh` dans son espace personnel avec les permissions adaptées (`700`)
+* Copier le fichier `authorized_keys` de l’utilisateur standard vers le répertoire `.ssh de root` :
+
+[source,shell]
+----
+root@srv-debian:~# mkdir /root/.ssh
+root@srv-debian:~# chmod 700 /root/.ssh
+root@srv-debian:~# cp /home/admin/.ssh/authorized_keys /root/.ssh/
+----
+
+Il est alors possible de se connecter sans authentification avec le compte root sur le serveur SSH avec la commande :
+
+[source,shell]
+----
+fred@cli-debian:~$ ssh root@192.168.6.66
+----
+
+[IMPORTANT]
+====
+La procédure a été simplifiée et n’est adaptée qu’à un contexte avec un nombre limité de serveurs et de clients. Dans une infrastructure plus complexe, il faudra
+gérer un ensemble de clés et manipuler avec précaution le fichier `authorized_keys`.
+
+Pour plus de détails, consulter : https://www.ssh.com/ssh/
+====
+
+== 4.3. Gestion des connexions multiples
+
+Selon l’environnement utilisé pour administrer les serveurs GNU/Linux à distance, plusieurs outils graphiques sont disponibles pour bénéficier d’un contexte de travail plus efficace et performant.
+
+*Depuis un client Windows*
+
+[cols="~,~"]
+|===
+^.^h| Application ^.^h| Caractéristiques
+^.^a| 
+*Putty*
+
+image::tssr2023/module-09/adminDistance/03.jpg[align=center]
+| 
+Outil de base pour se connecter aux serveurs distants.
+
+Supporte les connexions SSH, Telnet, Serial. Permet la sauvegarde des paramètres et informations de connexion.
+
+Intègre la gestion des clés d’authentification (format PPK)
+
+Sous forme d’un fichier exécutable compact (moins d’1 Mo)
+
+Logiciel Open Source sous licence MIT
+
+Site web : https://www.chiark.greenend.org.uk/~sgtatham/putty
+^.^a| 
+*mRemoteNG*
+
+image::tssr2023/module-09/adminDistance/06.jpg[align=center]
+|
+Outil multi-fenêtres sous forme d’onglets et multi-protocoles.
+
+Supporte les connexions SSH, RDP, VNC, HTTP, …
+
+Permet la sauvegarde des paramètres et une gestion avancée des informations de connexion. Compatible avec les paramétrages Putty. Existe au format portable.
+
+Logiciel libre sous licence GNU GPL v2, nécessite le .NET Framework
+
+Sites web : https://mremoteng.org/ - https://mremoteng.readthedocs.io/
+^.^a| 
+*MobaXTerm*
+
+image::tssr2023/module-09/adminDistance/07.jpg[align=center]
+|
+Outil multi-fenêtres et multi-protocoles avec une interface graphique évoluée.
+
+Supporte les connexions bureau et terminal à distance (RDP, VNC, XDMCP, SSH, Telnet, FTP, …). Prend en charge les tunnels SSH. Fournit une gestion avancée des connexions et des outils complémentaires : SFTP, macros, environnement CLI de base (Cygwin), …
+
+Existe au format portable.
+
+Logiciel propriétaire, version Home gratuite limitée (12 sessions, 2 tunnels SSH)
+
+Site web : https://mobaxterm.mobatek.net/
+|===
+
+*Depuis un client GNU/Linux*
+
+Toute distribution GNU/Linux incorpore un terminal permettant de gérer plusieurs connexions SSH simultanées sous forme d’onglets. L’outil `terminator` disponible sur les dépôts de la
+plupart des distributions peut être installé pour disposer de plus de fonctionnalités :
+
+* Affichage multi-fenêtres avec découpage horizontal et/ou vertical
+* Connexion automatique au serveur distant (via le fichier de configuration)
+* Groupement de commandes sur plusieurs fenêtres
+
+NOTE: En ligne de commande il existe aussi tmux.
+
+== TP 04 - Configuration du service SSH.

@@ -23,6 +23,7 @@ comptabiliter
 computername
 cpuid
 cryptd
+Cygwin
 dapplication
 Developpement
 Dhhmm
@@ -197,6 +198,7 @@ vpclmulqdq
 webmin
 Webmin
 xdigit
+XDMCP
 xfrm
 xgetbv
 xivo
