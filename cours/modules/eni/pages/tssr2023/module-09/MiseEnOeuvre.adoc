@@ -5,4 +5,80 @@
 
 Notes -> xref:notes:eni-tssr:services-reseau-linux.adoc[Services Réseau Linux]
 
-Contenus
+== 1.1. Les besoins : de l’utilisateur au service
+
+Aujourd’hui des équipements divers et variés permettent aux utilisateurs d’accéder aux ressources de leur entreprise. Station de travail, ordinateur portable, tablette, ordiphone […] sont autant d’interfaces que l’utilisateur perçoit comme des outils de travail.
+
+Ce même utilisateur peut de plus en plus souvent accéder aux ressources de l’entreprise :
+
+* Alors qu’il est confortablement installé dans son canapé une bière à la main
+* Quand il est assis dans le train, alors qu’il se rend en clientèle
+* Depuis le réseau informatique d’un client ou partenaire
+* Depuis le réseau d’un espace de travail collaboratif
+* Dans l’entreprise, depuis son bureau
+
+image::tssr2023/module-09/MiseEnOeuvre/01.png[align=center]
+
+Derrière les périphériques d’accès, quel que soit le lieu d’où travaillent les utilisateurs, qu’ils soient raccordés directement au réseau de l’entreprise ou qu’ils transitent par le réseau public mondial Internet, ils accèdent in fine à des services.
+
+Ces services peuvent être gérés par l’équipe informatique de l’entreprise, être souscrits auprès de prestataires de solutions cloud ou accessibles publiquement. Ce sont eux sur lesquels travaillent les utilisateurs, les services sont le coeur du système d’information de l’entreprise.
+
+Ce sont ces services dont vous allez appréhender l’installation, la configuration et la gestion.
+
+== 1.2. Objet et objectifs du cours
+
+Ce cours a pour objectif d’appréhender la mise en oeuvre d’un ensemble de services sur une distribution GNU/Linux. Les services traités sont des services d’infrastructure réseau, leur mise en oeuvre sera réalisée sous Debian 10.
+
+== 1.3. Maquette / Bac à sable
+
+Les services peuvent être mis en oeuvre sur des systèmes d’exploitation de machines physiques ou virtuelles. Plusieurs services peuvent être mutualisés sur un même système. Alternativement, on peut dédier un serveur à un service.
+
+Pour les mises en oeuvre pratiques de ce cours :
+
+* Tous les serveurs utilisés sont des machines virtuelles
+* Les serveurs hébergeront plusieurs services (afin de limiter le nombre de machines virtuelles)
+
+image::tssr2023/module-09/MiseEnOeuvre/02.png[align=center]
+
+La solution de virtualisation utilisée pour l’hébergement des machines virtuelles nécessaires aux mises en oeuvre est VMware Workstation.
+
+Afin d’isoler les hôtes des différents réseaux logiques, vous utiliserez des réseaux de machines virtuelles (VMnet) distincts.
+
+== 1.4. Présentation de l’environnement de réalisation
+
+Pour les ateliers pratiques, chaque stagiaire travaillera sur sa propre infrastructure. Elle est représentée page suivante.
+
+Les serveurs et équipements réseau prenant part à l’infrastructure sont répartis sur 4 contextes réseau distincts :
+
+* Les postes de travail sont connectés au réseau LAN Clients
+* Les serveurs sont connectés au réseau dédié LAN Serveurs
+* Un inter-réseau est utilisé pour la communication entre le routeur et le pare-feu
+* Un réseau public, commun à toutes les infrastructures, permet de fournir des services génériques
+
+image::tssr2023/module-09/MiseEnOeuvre/03.png[align=center]
+
+[NOTE,caption=Info]
+====
+Dans un contexte réel, des commutateurs distincts ou VLAN distincts seraient utilisés. Pour le maquettage, nous utiliserons des réseaux de machines virtuelles (VMnet) distincts.
+====
+
+== 1.5. Conventions typographiques
+
+La syntaxe des commandes est représentée comme suit :
+
+[source,bash]
+----
+commande [options] <argument>
+----
+
+Les exemples de commande et leur résultat dans le Shell sont représentés comme suit :
+
+[source,bash]
+----
+$ commande
+résultat
+----
+
+_Les deux types de prompt_ :
+* `$` Un prompt commençant par un `$` représente un utilisateur standard
+* `#` Un prompt commençant par `#` représente le compte root (l’administrateur du système)
