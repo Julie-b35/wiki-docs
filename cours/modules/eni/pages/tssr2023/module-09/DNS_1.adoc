@@ -1,0 +1,9 @@
+= Module 05 - DNS (1ère partie)
+:navtitle: DNS (1ère partie)
+
+* Module précédent -> xref:tssr2023/module-09/adminDistance.adoc[Module 04 - Administration à distance]
+* Module suivant -> xref:tssr2023/module-09/DHCP.adoc[Module 06 - Service DHCP]
+
+Notes -> xref:notes:eni-tssr:services-reseau-linux.adoc[Services Réseau Linux]
+
+Contenus

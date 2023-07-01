@@ -1,0 +1,9 @@
+= Module 04 - Administration à distance
+:navtitle: Administration à distance
+
+* Module précédent -> xref:tssr2023/module-09/routage.adoc[Module 03 - Routage et traduction]
+* Module suivant -> xref:tssr2023/module-09/DNS_1.adoc[Module 05 - DNS (1ère partie)]
+
+Notes -> xref:notes:eni-tssr:services-reseau-linux.adoc[Services Réseau Linux]
+
+Contenus

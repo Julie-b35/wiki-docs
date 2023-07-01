@@ -1,0 +1,9 @@
+= Module 07 - DNS (2ème Partie)
+:navtitle: DNS (2ème Partie)
+
+* Module précédent -> xref:tssr2023/module-09/DHCP.adoc[Module 06 - Service DHCP]
+* Module suivant -> xref:tssr2023/module-09/Annexe.adoc[Module 08 - Annexe]
+
+Notes -> xref:notes:eni-tssr:services-reseau-linux.adoc[Services Réseau Linux]
+
+Contenus
