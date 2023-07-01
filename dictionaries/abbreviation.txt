@@ -1,5 +1,6 @@
 AGDLP
 aintenance
+altname
 anagement
 anager
 ANSSI
@@ -114,6 +115,7 @@ Netbios
 nformation
 nfrastructure
 noet
+noqueue
 nowledge
 NSSA
 NTDS
@@ -140,6 +142,7 @@ overnment
 PABX
 perating
 pérationnel
+pfifo
 POSIX
 Postifx
 pplication
@@ -149,6 +152,8 @@ privkey
 PSSI
 pxedhcp
 pxeext
+qdisc
+qlen
 RACI
 rganization
 RGPD

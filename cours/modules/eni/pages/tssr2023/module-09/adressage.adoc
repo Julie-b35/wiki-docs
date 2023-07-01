@@ -112,3 +112,134 @@ Sur un serveur ne disposant pas d’interface graphique, la configuration du ré
 # systemctl start networking
 ----
 
+== 2.3. Configurer le réseau
+
+=== 2.3.1. Configuration de l’adressage IP
+
+==== Configuration du Network-Manager
+
+Des commandes `nmcli` sont présentées ci-dessous pour la configuration via le _Network Manager_.
+
+Bien que non présentées dans ce support, des commandes `nmtui` ou le composant graphique de gestion peuvent aussi être utilisés.
+
+.Affichage de la configuration des interfaces :
+[source,bash]
+----
+$ nmcli
+ens33: connecté à Connexion filaire 1
+    "Intel 82545EM"
+    ethernet (e1000), 00:0C:29:4C:A4:AC, hw, mtu 1500
+    ip4 par défaut
+    inet4 10.14.200.34/16
+    route4 0.0.0.0/0
+    route4 10.14.0.0/16
+    inet6 fe80::cf04:9afa:a39d:a810/64
+    route6 fe80::/64
+    route6 ff00::/8
+
+lo: non-géré
+    "lo"
+    loopback (unknown), 00:00:00:00:00:00, sw, mtu 65536
+
+DNS configuration:
+    servers: 10.0.0.3 10.35.0.3
+    domains: ad.campus-eni.fr
+    interface: ens33
+----
+
+.Modification immédiate et durable de l’adresse IP :
+[source,bash]
+----
+# nmcli connection modify Wired\ connection\ 1 ipv4.addresses 192.168.66.6/24
+# nmcli connection modify Wired\ connection\ 1 ipv4.addresses 192.168.66.6/24
+ipv4.method manual
+# nmcli connection modify Wired\ connection\ 1 +ipv4.addresses 192.168.1.1/24 ①
+----
+
+① Ajoute une adresse à l’interface existante. Le signe `-` permet au contraire de supprimer l’adresse.
+
+.Modification temporaire (immédiate mais non durable) de l’adresse IP :
+[source,bash]
+----
+# nmcli device modify ens33 ipv4.addresses 192.168.200.150/24 ipv4.method manual ①
+----
+
+① La dernière partie désactive le DHCP
+
+==== Configuration avec la commande `IP`
+
+.Affichage de la configuration des interfaces : état d’activation, adressage physique et IP
+[source,bash]
+----
+# ip address
+1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
+    link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
+    inet 127.0.0.1/8 scope host lo
+        valid_lft forever preferred_lft forever
+    inet6 ::1/128 scope host
+        valid_lft forever preferred_lft forever
+2: ens33: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc pfifo_fast state UP group default qlen 1000
+    link/ether 00:0c:29:c0:5a:67 brd ff:ff:ff:ff:ff:ff
+    altname enp2s1
+    inet 10.14.200.33/16 brd 10.14.255.255 scope global dynamic ens33
+        valid_lft 171960sec preferred_lft 171960sec
+    inet6 fe80::20c:29ff:fec0:5a67/64 scope link
+        valid_lft forever preferred_lft forever
+----
+
+[source,bash]
+----
+# ip address add 10.11.12.13/24 dev ens33 ①
+# ip address del 172.16.0.1/16 dev ens37 ②
+# ip address flush ens33 ③
+----
+
+[none]
+* ① Ajout d’adresse
+* ② suppression d’une adresse
+* ③ suppression de toutes les adresses d’une interface
+
+.Activer / désactiver une interface :
+[source,bash]
+----
+# ip link set ens33 down
+# ip link set ens37 up
+----
+
+==== Configuration dans le fichier `interfaces`
+
+.Exemple 1. configuration de l’adressage de deux cartes dans le fichier de configuration des interfaces : `/etc/network/*interfaces*`
+====
+[source,bash]
+----
+# L'interface réseau de loopback => il ne faut pas la modifier
+auto lo
+iface lo inet loopback
+
+# L'interface ens33 est configurée manuellement.
+auto ens33 ①
+iface ens33 inet static
+    address 192.168.66.6 ②
+    netmask 255.255.0.0
+
+# L'interface ens37 est quant à elle configurée via DHCP.
+auto ens37
+iface ens37 inet dhcp
+----
+
+[none]
+* ① Auto permet un renouvellement automatique s’il y a un changement au redémarrage du service.
+* ② L’indentation n’est pas significative, mais aide à s’organiser.
+
+====
+
+=== 2.3.2. Configuration de la passerelle par défaut
+
+==== Configuration du Network-Manager
+
+Ajout ou modification de l’adresse de la passerelle par défaut :
+
+[source,bash]
+----
+# nmcli connection modify Wired\ connection\ 1 ipv4.gateway 192.168.66.254
+----
