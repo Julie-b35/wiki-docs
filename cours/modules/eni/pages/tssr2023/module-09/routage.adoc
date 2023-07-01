@@ -6,4 +6,185 @@
 
 Notes -> xref:notes:eni-tssr:services-reseau-linux.adoc[Services Réseau Linux]
 
-Contenus
+== 3.1. Concepts du routage
+
+Le routage est le processus permettant la communication entre des hôtes de réseaux logiques
+distincts.
+
+image::tssr2023/module-09/routage/01.png[align=center]
+
+Lorsqu’un hôte (*A*) cherche à communiquer avec un autre hôte (*C*) :
+
+* L’hôte (A), au moyen de son adresse IP d’hôte et de son masque de réseau, détermine si l’hôte distant © est sur le même réseau logique que lui.
+* Dans le cas contraire, il recherche dans sa propre table de routage si une route permet de joindre le réseau de destination ; il en extrait l’adresse de passerelle (B).
+* L’hôte (A) transmet ensuite le paquet à la passerelle (B) précédemment identifiée. 
+
+== 3.2. Les routes : point de configuration au coeur du routage
+
+Pour configurer le routage, il faut mettre en oeuvre l’ensemble des routes nécessaires à la communication entre les différents réseaux de l’entreprise et vers l’extérieur de celle-ci. Pour simplifier la gestion, les routes sont généralement configurées uniquement sur les équipements
+chargés du service de routage.
+
+Les équipements terminaux : stations de travail, serveurs sont alors configurés en client du ou des seul(s) routeur(s) de leur réseau logique d’appartenance.
+
+Il est possible de configurer les 3 étendues de routes suivantes :
+
+* *Route d’hôte* : route permettant d’atteindre un seul hôte ciblé
+* *Route de réseau* : route permettant de joindre les hôtes d’un réseau distant concerné
+* *Route par défaut* : route utilisée en l’absence de route d’hôte ou de réseau pour joindre les hôtes de tout réseau
+
+Les routes d’hôtes sont généralement peu utilisées, les routes de réseau sont configurées sur des routeurs d’entreprises. Les routes par défaut sont utilisées sur les équipements terminaux et les routeurs.
+
+== 3.3. Gestion dynamique des routes
+
+La commande ip permet de gérer dynamiquement la configuration de routes.
+
+.Principales actions prises en charge par cette commande :
+[source,shell]
+----
+$ man ip-route
+ip route
+ip route { add | del | change | append | replace } ROUTE
+----
+
+.Affichage des routes actuellement configurées sur une machine :
+[source,shell]
+----
+$ ip route
+default via 172.16.6.254 dev ens33 proto dhcp metric 100
+172.16.6.0/24 dev ens33 proto kernel scope link src 172.16.6.6 metric 100
+----
+
+.Ajout de routes d’hôte, réseau et par défaut :
+[source,shell]
+----
+# ip route add 10.11.12.3 via 172.16.6.123
+# ip route add 10.56.0.0/16 via 172.16.6.253
+# ip route add default via 172.16.6.1
+----
+
+.Modification d’une route par défaut :
+[source,shell]
+----
+# ip route change default via 10.9.0.200
+----
+
+.Suppression d’une route :
+[source,shell]
+----
+# ip route del 10.56.0.0/16
+----
+
+== 3.4. Gestion statique des routes
+
+Pour que les routes configurées dynamiquement soient conservées au redémarrage, choisir une des deux possibilités de mise en oeuvre suivantes :
+
+* Export via la commande ip route
+* Ajout des commandes de création de routes dans le fichier interfaces (ou un fichier …)
+
+== 3.5. Activation / désactivation du paramètre de routage
+
+Le noyau Linux a la capacité de router les paquets qui lui sont remis mais non destinés.
+
+.Pour afficher l’état d’activation du paramétrage noyau correspondant :
+[source,shell]
+----
+# sysctl net.ipv4.ip_forward
+net.ipv4.ip_forward = 0
+----
+
+* `0` routage inactif
+* `1` routage actif
+
+.Pour modifier *dynamiquement* l’état d’activation du routage, utiliser la commande suivante :
+[source,shell]
+----
+# sysctl net.ipv4.ip_forward=1
+net.ipv4.ip_forward = 1
+----
+
+IMPORTANT: cette modification est immédiate mais *temporaire*.
+
+Pour modifier *durablement* l’état d’activation du routage, il faut modifier le fichier de configuration `/etc/sysctl.conf` et décommenter la directive existante `net.ipv4.ip_forward=1`
+
+Pour forcer la prise en compte immédiate des modifications apportées à ce fichier :
+
+[source,shell]
+----
+# sysctl -p
+----
+
+== TP 02 - Configuration d'une infrastructure réseau routée
+
+== 3.6. Concepts de la traduction d’adresse
+
+Le *routage* permet la *communication* entre des hôtes de *différents réseaux logiques*. Cela n’est possible que si *les adresses de réseau sont présentes dans les tables de routages.* 
+
+Dans les cas contraires :
+
+* Réseau(x) privé(s) non routé(s) sur Internet
+* Réseau(x) privé(s) non connu(s) des routeurs de l’entreprise (maquette…)
+* Hôtes disposant d’adressage privé dont les services doivent être accessibles depuis le réseau Internet
+
+Le routage seul n’est pas suffisant et doit être complété par la mise en oeuvre de traduction
+d’adresse.
+
+image::tssr2023/module-09/routage/02.jpg[align=center]
+
+La traduction d’adresse (NAT), généralement associée à la traduction de ports (NAPT) peut être utile afin de :
+
+* Remplacer l’adressage source des paquets IP ⇒ *NAT de source*
+* Remplacer l’adressage de destination des paquets IP ⇒ *NAT de destination*
+
+Sous GNU/Linux, sa mise en oeuvre peut être réalisée au moyen de la commande `iptables`.
+
+== 3.7. Mise en oeuvre de la traduction d’adresse
+
+Dans le cadre des ateliers pratiques, vous mettrez en oeuvre la traduction d’adresse avec une machine virtuelle *pfSense*.
+
+=== 3.7.1. Paramètres NAT pfSense
+
+Le NAT/NAPT se configure dans le menu *Firewall / NAT*.
+
+image::tssr2023/module-09/routage/03.jpg[align=center]
+
+Plusieurs types de paramétrage sont disponibles :
+
+* *Port Forward* : redirection de port (et d’adresse), principalement destiné à la gestion des paquets entrants sur l’interface WAN mais également paramétrable pour les autres interfaces
+* *1:1* : one-to-one NAT, pour lier une adresse interne (ou un sous-réseau) spécifique à une adresse externe (ou un sous-réseau) spécifique
+* *Outbound* : traduction d’adresse sur le trafic sortant des cartes, généralement configuré sur l’interface WAN pour permettre l’accès au réseau public depuis un adressage privé
+* *NPt* : Network Prefix Translation, équivalent au 1:1 IPv4 mais destiné aux adresses IPv6, permet le mappage d’un préfixe IPv6 vers un autre
+
+Pour paramétrer le *NAT de source*, les règles à configurer sont dans la section *Outbound*
+
+Pour paramétrer le *NAT de destination*, les règles à configurer sont dans la section *Port Forward*
+
+=== 3.7.2. Configuration du NAT de source
+
+Le NAT de source – *Outbound* est préconfiguré et activé automatiquement après l’installation de pfSense :
+
+* Pour tous les réseaux privés auquel appartient le routeur/pare-feu pfSense
+* Pour tous les réseaux privés pour lesquels une route explicite est configurée
+
+Cela permet donc à tous les hôtes des réseaux privés derrière le routeur/pare-feu d’atteindre les ressources dans les réseaux publics.
+
+.Paramétrage par défaut du mode Outbound :
+image::tssr2023/module-09/routage/04.jpg[align=center]
+
+.Règles par défaut :
+image::tssr2023/module-09/routage/05.jpg[align=center]
+
+
+Le mode *automatique* (_Automatic outbound NAT rule generation_) est préconfiguré après l’installation du système pfSense. Dans ce mode, les règles ne sont pas configurables mais cela convient aux besoins de base.
+
+Pour pouvoir éditer et/ou ajouter des règles Outbound, il faut activer le mode *hybride* ou *manuel*.
+
+Il est également possible de désactiver le NAT sortant avec le mode Disable outbound NAT rule generation.
+
+IMPORTANT: La désactivation du pare-feu (option *Disable Firewall*) dans les paramètres systèmes avancés désactive toutes les règles de pare-feu AINSI QUE *toutes les règles NAT* préconfigurées.
+
+Vous trouverez des informations détaillées sur les paramétrages NAT dans la documentation
+officielle :
+
+https://docs.netgate.com/pfsense/en/latest/nat/outbound-nat.html
+
+== TP 03 - Intégration d'un routeur NAT sous Pfsense

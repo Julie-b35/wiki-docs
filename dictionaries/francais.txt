@@ -37,6 +37,7 @@ Dans
 datacenter
 ddixon
 décommenté
+décommenter
 decouverte
 déduire
 défaut
