@@ -7,6 +7,7 @@ amily
 apic
 arat
 atch
+avahi
 Beos
 bhmp
 biosdevname
@@ -98,6 +99,7 @@ makeprimary
 managesieved
 mariadb
 mcrypt
+mdns
 metacaractere
 microsof
 mklink
@@ -112,6 +114,7 @@ mroute
 mrule
 mtrr
 multihit
+myhostname
 ncpa
 neline
 netconf
@@ -122,6 +125,7 @@ nmcli
 nmtui
 nologin
 nonegotiate
+NOTFOUND
 ntable
 NUMA
 olor
@@ -148,6 +152,7 @@ rdrand
 rdseed
 rdtscp
 remmina
+resolv
 Retbleed
 retty
 Roty
