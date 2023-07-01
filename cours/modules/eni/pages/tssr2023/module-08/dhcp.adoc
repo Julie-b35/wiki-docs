@@ -24,6 +24,14 @@ image::tssr2023/module-08/dhcp/02.png[align=center]
 
 image::tssr2023/module-08/dhcp/03.png[align=center]
 
+[NOTE,caption=Source]
+====
+* link:https://www.it-connect.fr/chapitres/dhcp-mode-de-fonctionnement/[DHCP Discover -> Offer -> Request ->Ack (Acknowledgement)]
+* Rappel : link:https://www.it-connect.fr/adresse-apipa-169-154-quest-ce-que-cest/[IP APIPA (169.254.x.y)]
+* link:https://vadmintic.wordpress.com/systemes-windows/haute-disponibilite-continuite-des-services/replication-du-service-dhcp/[Service DHCP réplication]
+====
+
+
 === Le renouvellement du bail
 
 image::tssr2023/module-08/dhcp/04.png[align=center]
@@ -40,6 +48,10 @@ image::tssr2023/module-08/dhcp/05.png[align=center]
 
 image::tssr2023/module-08/dhcp/06.png[align=center]
 
+[NOTE,caption=Source]
+====
+Pensez à exclure les plage ip des ip statique
+====
 ==== Le plus ciblé : la réservation
 
 image::tssr2023/module-08/dhcp/07.png[align=center]
@@ -81,8 +93,6 @@ image::tssr2023/module-08/dhcp/13.png[align=center]
 === Pour aller plus loin
 
 image::tssr2023/module-08/dhcp/14.png[align=center]
-
-== TP 02 - Disponibilité du service DHCP
 
 == Conclusion
 
