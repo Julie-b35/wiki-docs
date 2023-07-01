@@ -82,4 +82,4 @@ résultat
 _Les deux types de prompt_ :
 
 * `$` Un prompt commençant par un `$` représente un utilisateur standard
-* `#` Un prompt commençant par `#` représente le compte root (l’administrateur du système)
+* `\#` Un prompt commençant par `#` représente le compte root (l’administrateur du système)

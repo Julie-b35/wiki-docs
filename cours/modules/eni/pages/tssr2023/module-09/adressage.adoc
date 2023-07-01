@@ -6,4 +6,23 @@
 
 Notes -> xref:notes:eni-tssr:services-reseau-linux.adoc[Services Réseau Linux]
 
-Contenus
+Afin qu’une communication puisse se faire entre deux postes, des liens physiques et logiques doivent exister.
+
+Un réseau physique est matérialisé par l’ensemble des matériels mis en oeuvre afin de permettre le transfert de trames entre différents équipements.
+
+Un réseau logique IPv4 est caractérisé par :
+
+* Une adresse de réseau ;
+* Un masque ;
+* Une adresse de diffusion.
+
+== 2.1. Elements de paramétrage
+
+=== 2.1.1. Paramétrage d’une carte réseau
+
+La configuration réseau d’un poste se traduit par la mise en oeuvre d’un ou plusieurs des points suivants :
+
+* La configuration d’une adresse IP d’hôte et du masque associé (le système en déduit les adresses de réseau et de diffusion) ;
+* La configuration d’une passerelle par défaut ;
+* La définition d’un nom d’hôte ;
+* La configuration cliente DNS.
