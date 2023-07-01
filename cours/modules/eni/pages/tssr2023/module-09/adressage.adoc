@@ -101,7 +101,7 @@ $ man ip-address
 
 === 2.2.3. Configuration durable dans le fichier interfaces
 
-[CAUTION,caption=Important]
+[WARNING,caption=Important]
 ====
 Seules les cartes réseau *non configurées via Network Manager* sont à configurer dans le fichier de configuration des interfaces présenté ci-dessous.
 ====
@@ -113,3 +113,4 @@ Sur un serveur ne disposant pas d’interface graphique, la configuration du ré
 # systemctl stop networking
 # systemctl start networking
 ----
+
