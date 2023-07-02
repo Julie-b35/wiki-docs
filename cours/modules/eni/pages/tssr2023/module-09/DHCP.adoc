@@ -6,4 +6,152 @@
 
 Notes -> xref:notes:eni-tssr:services-reseau-linux.adoc[Services Réseau Linux]
 
-Contenus
+== 6.1. Notions DHCP
+
+Le protocole DHCP (Dynamic Host Protocol Configuration) est normalisé par un ensemble de RFC. Le service DHCP implémente le protocole DHCP, il permet de fournir des informations de configuration IP aux équipements qui y font appel.
+
+L’utilisation du service DHCP permet de centraliser la gestion de la configuration de l’adressage IP des postes et autres équipements réseau.
+
+Principaux avantages liés à l’utilisation de ce service :
+
+* Optimisation de l’utilisation de plage d’adresse réseau
+* Risque d’erreur limité
+* Simplifie la gestion de l’adressage d’équipements réseau
+* Simplicité / rapidité de propagation de mise à jour de configuration réseau
+
+== 6.2. Principales requêtes DHCP
+
+.Détail des échanges du processus d’obtention d’un bail
+image::tssr2023/module-09/DHCP/01.jpg[align=center]
+
+[NOTE]
+====
+L’illustration ci-dessus correspond à la situation dans laquelle le poste client IPv6 cherche à obtenir un bail contenant une adresse IP. Sous IPv6 il est possible de ne demander que des informations de configuration complémentaires à l’adressage ; dans ce cas seul les requêtes `Information-Request` (du client au serveur) et `Reply` (du serveur au client) sont utilisées.
+====
+
+== 6.3. Choix du service DHCP
+
+Sous GNU/Linux, plusieurs services DHCP peuvent être implémentés. Parmi les différentes
+possibilités, nous retenons les services créés et soutenus par l’ISC (Internet Systems Consortium),
+gage de qualité et de respect des RFC.
+L’ISC soutient les deux implémentations suivantes :
+
+image::tssr2023/module-09/DHCP/02.jpg[align=center]
+
+Le service DHCP retenu dans le cadre de ce cours est le service `isc-dhcp-server`.
+
+== 6.4. Configuration du serveur DHCP
+
+image::tssr2023/module-09/DHCP/03.jpg[align=center]
+
+===6.4.1. Configuration globale du démon
+
+.Y configurer à minima la ou les interfaces sur lesquelles le service doit être à l’écoute.
+[source,shell]
+----
+# vi /etc/default/isc-dhcp-server
+----
+
+.Fichier : `/etc/default/isc-dhcp-server`
+[source,shell]
+----
+INTERFACESv4="ens35"
+INTERFACESv6=""
+----
+
+
+=== 6.4.2. Configuration du service
+
+[source,shell]
+----
+# vi /etc/dhcp/dhcpd.conf
+----
+
+.Fichier : `/etc/dhcp/dhcpd.conf`
+[source,shell]
+----
+option domain-name "demo.eni";
+option domain-name-servers 172.16.17.18;
+# 6H 6m 6s = 21966s
+default-lease-time 21966;
+max-lease-time 42000;
+ddns-update-style none;
+authoritative;
+log-facility local7;
+
+subnet 192.168.42.0 netmask 255.255.255.0 {
+}
+
+subnet 172.19.0.0 netmask 255.255.0.0 {
+    range 172.19.2.0 172.19.9.255;
+    option routers 172.19.1.1;
+}
+
+host wifi-hp-04 {
+    hardware ethernet 08:00:07:26:c0:a5;
+    fixed-address 172.20.0.2;
+}
+
+----
+
+.Contrôle syntaxique de la configuration du service :
+[source,shell]
+----
+root@srv-barbichette# dhcpd –t
+Internet Systems Consortium DHCP Server 4.4.1
+Config file: /etc/dhcp/dhcpd.conf
+Database file: /var/lib/dhcp/dhcpd.leases
+PID file: /var/run/dhcpd.pid
+----
+
+== 6.5. Démarrage du service : Service versus Binaire
+
+En mode de fonctionnement normal, on utilise les commandes de gestion SystemD pour gérer le service :
+
+[source,shell]
+----
+# systemctl status isc-dhcp-server
+# systemctl stop isc-dhcp-server
+# systemctl start isc-dhcp-server
+# systemctl restart isc-dhcp-server
+----
+
+A des fins de dépannage ou d’analyse, il peut être utile pour les services serveur DHCP et relais DHCP d’être appelé directement via leur fichier binaire. Cela permet notamment de spécifier des options de lancement (comme l’option de `debug` pour le service `isc-dhcp-server`).
+
+IMPORTANT: Dans ce cas, veiller au préalable à bien s’assurer que le service est en état arrêté pour _SystemD_, ou l’arrêter au besoin.
+
+[NOTE]
+====
+.Lancement du service en mode debug à l’aide du binaire :
+[source,shell]
+----
+# dhcpd –d
+----
+====
+
+== 6.6. Configuration du relais DHCP
+
+La mise en place de relais DHCP est nécessaire si les clients sont en dehors du domaine de diffusion du / des serveur(s) DHCP. Sur Debian, le paquet `isc-dhcp-relay` peut être installé pour fournir ce service.
+
+Un assistant de configuration se lance automatiquement lors de l’installation du paquet. Il permet de renseigner le fichier de configuration `/etc/default/isc-dhcp-relay` avec les paramétrages nécessaires :
+
+* La ou les adresses des serveurs DHCP ciblés par le relais
+* Le ou les cartes réseau par lesquelles transitent les requêtes DHCP
+* Les options à transmettre pour démarrage du démon
+
+.Exemple 3. configuration d’un relai :
+====
+.Fichier `/etc/default/isc-dhcp-relay`
+[source,shell]
+----
+# Defaults for isc-dhcp-relay initscript
+# What servers should the DHCP relay forward requests to?
+SERVERS="192.168.42.2"
+# On what interfaces should the DHCP relay (dhrelay) serve DHCP requests?
+INTERFACES="ens33 ens35"
+# Additional options that are passed to the DHCP relay daemon?
+OPTIONS=""
+----
+====
+
+== TP 06 - Configurer le service DHCP `isc-dhcp-server`

@@ -29,6 +29,7 @@ Cygwin
 dapplication
 Developpement
 Dhhmm
+dhrelay
 diskmgmt
 diskpart
 dnowprefetch
@@ -68,6 +69,7 @@ IBRS
 ifnames
 imapd
 imestamp
+initscript
 intf
 inum
 invpcid
