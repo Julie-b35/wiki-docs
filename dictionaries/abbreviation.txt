@@ -50,6 +50,7 @@ eprise
 equirement
 erformance
 ervice
+esnowden
 esolve
 ethernet
 Ethertype
@@ -63,6 +64,7 @@ fcoe
 fddi
 fddinet
 ffice
+fiveeye
 Fonctionnaliter
 FSMO
 glpi
@@ -215,6 +217,7 @@ utsourcing
 utsoursing
 Ventrillo
 vfat
+vimrc
 Vlans
 VLANS
 Wazo

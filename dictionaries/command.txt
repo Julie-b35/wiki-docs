@@ -33,7 +33,9 @@ dhrelay
 diskmgmt
 diskpart
 dnowprefetch
+domainname
 drwxr
+dsnutils
 emacs
 Empawindoz
 erms
@@ -62,6 +64,7 @@ HISTFILE
 HISTFILESIZE
 HISTSIZE
 HISTTIMEFORMAT
+hmac
 ibpb
 IBPB
 ibrs
@@ -133,9 +136,11 @@ nmtui
 nologin
 nonegotiate
 NOTFOUND
+nsupdate
 ntable
 NUMA
 olor
+omapi
 ospke
 PBRSB
 pcid
