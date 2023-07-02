@@ -13,6 +13,8 @@ bhmp
 biosdevname
 Bogo
 BPDU
+checkconf
+checkzone
 clflush
 clflushopt
 clwb
@@ -100,6 +102,7 @@ maddress
 makeprimary
 managesieved
 mariadb
+masuperentreprise
 mcrypt
 mdns
 metacaractere
@@ -157,6 +160,7 @@ remmina
 resolv
 Retbleed
 retty
+rndc
 Roty
 rsyslogd
 rxload
