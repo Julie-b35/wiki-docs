@@ -42,9 +42,9 @@ Le service DHCP retenu dans le cadre de ce cours est le service `isc-dhcp-server
 
 == 6.4. Configuration du serveur DHCP
 
-image::tssr2023/module-09/DHCP/03.jpg[align=center]
+image::tssr2023/module-09/DHCP/03.png[align=center]
 
-===6.4.1. Configuration globale du démon
+=== 6.4.1. Configuration globale du démon
 
 .Y configurer à minima la ou les interfaces sur lesquelles le service doit être à l’écoute.
 [source,shell]
