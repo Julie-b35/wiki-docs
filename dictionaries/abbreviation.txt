@@ -69,6 +69,7 @@ glpi
 greement
 hange
 HDLC
+hostmaster
 ibrary
 icence
 ierce
@@ -164,6 +165,7 @@ qdisc
 qlen
 RACI
 randomart
+rdsgw
 rganization
 RGPD
 ritical

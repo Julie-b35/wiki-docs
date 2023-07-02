@@ -6,4 +6,169 @@
 
 Notes -> xref:notes:eni-tssr:services-reseau-linux.adoc[Services Réseau Linux]
 
-Contenus
+== 7.1. Caractéristiques du serveur DNS faisant autorité
+
+Le serveur DNS faisant autorité :
+
+* Est source d’information pour un ou plusieurs domaines;
+* A ce titre, il est interrogé par des serveurs DNS résolveurs pour résoudre des noms de son domaine hébergé ou de domaines enfants;
+* Il peut inscrire des informations dans la zone du domaine hébergé ou ne disposer que d’une copie de la zone.
+
+image::tssr2023/module-09/DNS_2/01.jpg[align=center]
+
+=== 7.1.1. Les notions de « zone »
+
+Une *zone* rassemble un ensemble d’éléments ayant une caractéristique commune. Cette caractéristique peut être une partie du nom de domaine ou un réseau IP d’appartenance.
+
+* Une *zone directe* référence des équipements appartenant à un même nom de domaine.
+
+image::tssr2023/module-09/DNS_2/02.jpg[align=center]
+
+* Une *zone inverse* référence des équipements appartenant à un même réseau logique.
+
+image::tssr2023/module-09/DNS_2/03.jpg[align=center]
+
+=== 7.1.2. Les enregistrements
+
+Les informations ou données d’une zone sont stockées sous forme d’enregistrements.
+
+Les principaux enregistrements sont :
+
+image::tssr2023/module-09/DNS_2/04.jpg[align=center]
+
+=== 7.1.3. Serveur primaire ou secondaire
+
+Un serveur faisant autorité pour une zone peut être *source d’information et de modification* de celle-ci. Il peut dans ce cas écrire dans la zone pour y ajouter des enregistrements, en modifier ou en supprimer. Généralement un seul serveur dispose de ces privilèges sur une zone, c’est le *serveur primaire* de celle-ci. Le serveur primaire d’une zone peut aussi être appelé serveur maitre de celle-ci.
+
+Alternativement, un serveur faisant autorité pour une zone peut *ne disposer que d’une copie* de celle-ci. Il a récupéré cette zone et récupère ses mises à jour auprès d’un serveur primaire de celle-ci, il n*e peut pas y apporter de modifications*. Ce serveur est un *serveur secondaire* de la zone aussi dénommé serveur esclave de cette zone.
+
+== 7.2. Configuration d’un service DNS faisant autorité
+
+Un serveur Bind9 faisant autorité doit disposer de deux éléments : la configuration et les données. Ces éléments sont contenus dans des fichiers bien distincts.
+
+image::tssr2023/module-09/DNS_2/05.jpg[align=center]
+
+=== 7.2.1. Configuration d’un serveur primaire
+
+.Exemple 4. fichier de configuration d’une zone directe :
+====
+.Fichier `/etc/bind/named.conf.local`
+[source,shell]
+----
+zone "eni.demo" {
+    type master;
+    file "db.eni.demo"; ①
+    allow-transfer { 10.11.0.53; }; ②
+};
+
+----
+[none]
+* ① Déclaration de la zone directe principale en chargeant le fichier `db.eni.demo`
+* ② Autorisation du transfert de zone
+====
+
+.Exemple 5. fichier de configuration d’une zone inverse :
+====
+.Fichier `/etc/bind/named.conf.local`
+[source,shell]
+----
+zone "42.168.192.in-addr.arpa" {
+    type master;
+    file "db.192.168.42.inv"; ①
+};
+
+----
+① Déclaration de la zone inverse principale en chargeant le fichier `db.192.168.42.inv`
+====
+
+[IMPORTANT]
+====
+Les fichiers de configuration de zone précédemment présentés requièrent que les fichiers de zone correspondants : `db.eni.demo` et `db.192.168.42.inv` existent et qu’ils contiennent toutes les informations concernant ces zones. 
+
+Des exemples de fichiers de zone sont présentés dans le prochain chapitre.
+====
+
+=== 7.2.2. Configuration d’un serveur secondaire
+
+.Exemple 6. fichier de configuration d’un serveur secondaire d’une zone directe :
+====
+.Fichier `/etc/bind/named.conf.local`
+[source,shell]
+----
+zone "eni.demo" {
+    type slave;
+    masters { 10.5.3.10; };
+    file "db.eni.demo"; ①
+    allow-query { any; }; ②
+};
+
+----
+[none]
+* ① Déclaration de la zone directe secondaire à partir du serveur principal en chargeant le fichier db.eni.demo
+* ② Autorisation des requêtes par le client
+====
+
+== 7.3. Les fichiers de zone
+
+.Exemple 7. fichier de zone directe :
+====
+[source,shell]
+----
+; fichier de zone du domaine eni-ecole.bzh
+; point-virgule = commentaire en début / en cours de ligne
+
+$ORIGIN eni-ecole.bzh. ①
+$TTL 86400
+
+@ SOA dns1.eni-ecole.bzh. hostmaster.eni-ecole.bzh. ( ②
+                                2019100253 ; serial
+                                86400 ; refresh 1 day
+                                7200 ; retry 2 hours
+                                3600000 ; expire
+                                3600 ) ; negative TTL
+@           NS          dns1.eni-ecole.bzh.
+@           NS          dns2.eni-ecole.bzh.
+
+dns1        A           44.0.5.3 ③
+dns1        AAAA        2001:0db8::ec01:e
+dns2        AAAA        2001:0db8::ec01:e53
+www         A           44.0.0.80
+rdsgw       A           35.12.13.15
+smtp        A           44.0.0.25
+ww          CNAME       www.eni-ecole.bzh.
+wwww        CNAME       www.eni-ecole.bzh.
+@           MX          10 smtp.eni-ecole.bzh.
+@           MX          20 mx0.mail.ovh.net.
+----
+[none]
+* ① Directives de configuration s’appliquant à tous les enregistrements suivants
+* ② Enregistrements SOA et NS relatifs à la zone
+* ③ Autres enregistrements de la zone
+====
+
+.Exemple 8. fichier de zone inverse :
+====
+[source,shell]
+----
+; zone inverse pour le réseau 192.168.42.0/24
+$TTL 86400 ①
+@ SOA dns1.eni.demo. hostmaster.eni.demo. ( ②
+                                2019100253 ; serial
+                                86400 ; refresh 1 day
+                                7200 ; retry 2 hours
+                                3600000 ; expire
+                                3600 ) ; negative TTL
+@           NS          dns1.eni.demo.
+
+1           PTR         srv01.eni.demo. ③
+2           PTR         srv02.eni.demo.
+13          PTR         lucky.eni.demo.
+254         PTR         gw42.infra.eni.
+----
+[none]
+* ① Directives de configuration s’appliquant à tous les enregistrements suivants
+* ② Enregistrements SOA et NS relatifs à la zone
+* ③ Autres enregistrements de la zone
+====
+
+== TP 07 - Configurer un service DNS faisant autorité.
