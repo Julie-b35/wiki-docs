@@ -1,0 +1,2 @@
+= Service Proxy Squid
+:navtitle: Squid (Proxy)
