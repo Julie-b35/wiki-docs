@@ -1,2 +1,13 @@
 = Service Proxy Squid
 :navtitle: Squid (Proxy)
+
+== Ressources
+
+* link::http://wiki.squid-cache.org/KnowledgeBase/Debian[Documentation sur squid]
+
+== Installation
+
+[source,shell]
+----
+apt install squid
+----

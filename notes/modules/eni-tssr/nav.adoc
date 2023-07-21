@@ -1,1 +1,2 @@
 * xref:outils-collaboratifs.adoc[]
+* xref:msp2.adoc[]
