@@ -2,13 +2,17 @@
 :navtitle: MSP2 - Réseau hétérogène
 
 == Révision
-
-=== GPO
-
-.Fonctionnement
+.GPO
 ****
-Les *GPO* _(**G**roup **P**olicy **O**bject)_ ou _Objet Stratégie de groupe_ régie un ensemble de paramètres (Stratégies de Groupes) dans un contexte d'AD afin de paramétrer des ordinateurs et Utilisateur appartenant à l'AD.
+* *Fonctionnement* : 
+|===
+| les GPO régissent un ensemble de stratégies dans un contexte d'AD afin de paramétrer des Ordinateur et Utilisateur.
+
+Ces stratégie sont A
+|===
 ****
+
+
 
 .Type de stratégie
 ****
@@ -18,5 +22,7 @@ Les *GPO* _(**G**roup **P**olicy **O**bject)_ ou _Objet Stratégie de groupe_ r�
 * *La stratégie locale* utilisé dans et hors contexte de domaine, se *configure poste par poste*.
 ****
 
-2 Méthode permettent de régler ces paramètres: soit par la base de registre ou la console MMC "Gestion des stratégie de Groupe"
-
+.Application des Stratégie
+****
+Par défaut toutes les 90min à plus ou moins 30 min.... toute les 5 minutes pour les Contrôleur de domaine
+****
