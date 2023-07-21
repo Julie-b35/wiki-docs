@@ -6,7 +6,7 @@
 ****
 [cols="~,~"]
 |===
-a| * *Fonctionnement* :  | les GPO régissent un ensemble de stratégies dans un contexte d'AD afin de paramétrer des Ordinateur et Utilisateur.
+^.^a| * *Fonctionnement* :  | les GPO régissent un ensemble de stratégies dans un contexte d'AD afin de paramétrer des Ordinateur et Utilisateur.
 
 Ces stratégie sont Appliqué plus ou moins toutes les 30 à 90mins ou en manuel avec la commande `gpupdate /force`
 |===
