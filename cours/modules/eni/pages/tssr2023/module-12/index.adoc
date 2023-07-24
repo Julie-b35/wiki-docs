@@ -13,7 +13,7 @@ Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
 |===
 a|
 image::tssr2023/module-12/presentation/00.png[align=center]
-a|
+^a|
 * Définir les termes de mutualisation, consolidation et rationalisation et différencier les hyperviseurs de type1 et 2
 * Lister un ensemble de solutions de virtualisation et de services virtualisés, découverte d'Hyper-V 2019.
 * Décrire les composantes d'une infrastructure Vsphère 7.x
