@@ -11,7 +11,7 @@ Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
 
 [cols="~,~",frame=none,grid=none]
 |===
-^a|
+.^a|
 image::tssr2023/module-12/presentation/00.png[align=center]
 a|
 * Définir les termes de mutualisation, consolidation et rationalisation et différencier les hyperviseurs de type1 et 2
@@ -25,7 +25,7 @@ a|
 
 [cols="~,~",frame=none,grid=none]
 |===
-^a|
+.^a|
 image::tssr2023/module-12/presentation/01.png[align=center]
 a|
 • Le présent support de cours
