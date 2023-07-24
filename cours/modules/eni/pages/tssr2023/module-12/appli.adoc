@@ -1,0 +1,9 @@
+= Module 02 - Les applications de virtualisation d'environnements sur une poste de travail
+:navtitle: Les logiciels de Virtualisations.
+
+* Module précédent -> xref:tssr2023/module-12/presentation.adoc[Module 01 - Présentation]
+* Module suivant -> xref:tssr2023/module-12/virtu-serveur.adoc[Module 03 - La virtualisation de serveurs]
+
+Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
+
+Contenus

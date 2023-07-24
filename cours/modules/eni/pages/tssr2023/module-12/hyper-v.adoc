@@ -1,0 +1,9 @@
+= Module 04 - Découverte d'Hyper-V
+:navtitle: Hyper-V
+
+* Module précédent -> xref:tssr2023/module-12/virtu-serveur.adoc[Module 03 - La virtualisation de serveurs]
+* Module suivant -> xref:tssr2023/module-12/vsphere.adoc[Module 05 - Les composantes d'une infrastructure VSphère]
+
+Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
+
+Contenus

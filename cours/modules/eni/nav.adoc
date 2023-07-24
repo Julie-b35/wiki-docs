@@ -111,3 +111,6 @@
 **** xref:tssr2023/module-12/virtu-serveur.adoc[]
 **** xref:tssr2023/module-12/hyper-v.adoc[]
 **** xref:tssr2023/module-12/vsphere.adoc[]
+**** xref:tssr2023/module-12/gest_network.adoc[]
+**** xref:tssr2023/module-12/gest_stockage.adoc[]
+**** xref:tssr2023/module-12/gest_datacenter.adoc[]

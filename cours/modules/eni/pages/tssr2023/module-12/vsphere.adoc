@@ -1,0 +1,9 @@
+= Module 05 - Les composantes d'une infrastructure VSphère
+:navtitle: VSpère
+
+* Module précédent -> xref:tssr2023/module-12/hyper-v.adoc[Module 04 - Découverte d'Hyper-V]
+* Module suivant -> xref:tssr2023/module-12/gest_network.adoc[Module 06 - Gestion du réseau]
+
+Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
+
+Contenus

@@ -1,0 +1,9 @@
+= Module 06 - Gestion du réseau
+:navtitle: Gestion du réseau
+
+* Module précédent -> xref:tssr2023/module-12/vsphere.adoc[Module 05 - Les composantes d'une infrastructure VSphère]
+* Module suivant -> xref:tssr2023/module-12/gest_stockage.adoc[Module 07 - Gestion du stockage]
+
+Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
+
+Contenus

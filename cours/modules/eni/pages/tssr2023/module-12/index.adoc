@@ -40,3 +40,6 @@ a|
 * xref:tssr2023/module-12/virtu-serveur.adoc[Module 03 - La virtualisation de serveurs]
 * xref:tssr2023/module-12/hyper-v.adoc[Module 04 - Découverte d'Hyper-V]
 * xref:tssr2023/module-12/vsphere.adoc[Module 05 - Les composantes d'une infrastructure VSphère]
+* xref:tssr2023/module-12/gest_network.adoc[Module 06 - Gestion du réseau]
+* xref:tssr2023/module-12/gest_stockage.adoc[Module 07 - Gestion du stockage]
+* xref:tssr2023/module-12/gest_datacenter.adoc[Module 08 - Gestion du datacenter]

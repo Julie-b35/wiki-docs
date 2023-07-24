@@ -1,0 +1,8 @@
+= Module 08 - Gestion du datacenter
+:navtitle: Gestion du datacenter
+
+* Module précédent -> xref:tssr2023/module-12/gest_stockage.adoc[Module 07 - Gestion du stockage]
+
+Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
+
+Contenus
