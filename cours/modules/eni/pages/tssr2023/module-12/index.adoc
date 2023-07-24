@@ -9,6 +9,7 @@ Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
 
 == Objectifs
 
+[cols="~,~",frame=none,grid=none]
 |===
 a|
 image::tssr2023/module-12/presentation/00.png[align=center]
