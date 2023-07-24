@@ -1,0 +1,29 @@
+= Virtualisation de serveurs
+:navtitle: Virtualisation
+
+Formateur : 
+
+Mail : 
+
+Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
+
+== Objectifs
+
+* Définir les termes de mutualisation, consolidation et rationalisation et différencier les hyperviseurs de type1 et 2
+* Lister un ensemble de solutions de virtualisation et de services virtualisés, découverte d'Hyper-V 2019.
+* Décrire les composantes d'une infrastructure Vsphère 7.x
+* Configurer le réseau d'un ESXi afin de répondre à des besoins ciblés
+* Configurer le stockage local ou partagé
+
+== Votre formation - Les ressources
+• Le présent support de cours
+• Les ateliers pratiques
+• Le support de référence
+
+== Module
+
+* xref:tssr2023/module-12/presentation.adoc[Module 01 - Présentation]
+* xref:tssr2023/module-12/appli.adoc[Module 02 - Les applications de virtualisation d'environnements sur une poste de travail]
+* xref:tssr2023/module-12/virtu-serveur.adoc[Module 03 - La virtualisation de serveurs]
+* xref:tssr2023/module-12/hyper-v.adoc[Module 04 - Découverte d'Hyper-V]
+* xref:tssr2023/module-12/vsphere.adoc[Module 05 - Les composantes d'une infrastructure VSphère]

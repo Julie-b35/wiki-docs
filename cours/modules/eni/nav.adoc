@@ -104,4 +104,10 @@
 **** xref:tssr2023/module-09/DHCP.adoc[]
 **** xref:tssr2023/module-09/DNS_2.adoc[]
 **** xref:tssr2023/module-09/Annexe.adoc[]
-*** xref:tssr2023/module-11/index.adoc[]
+*** MSP : Réseau hétérogènes
+*** xref:tssr2023/module-12/index.adoc[]
+**** xref:tssr2023/module-12/presentation.adoc[]
+**** xref:tssr2023/module-12/appli.adoc[]
+**** xref:tssr2023/module-12/virtu-serveur.adoc[]
+**** xref:tssr2023/module-12/hyper-v.adoc[]
+**** xref:tssr2023/module-12/vsphere.adoc[]
