@@ -8,21 +8,36 @@
 |===
 ^.^a| * *Fonctionnement* :  | les GPO régissent un ensemble de stratégies dans un contexte d'AD afin de paramétrer des Ordinateur et Utilisateur.
 
-Ces stratégie sont Appliqué plus ou moins toutes les 30 à 90mins ou en manuel avec la commande `gpupdate /force`
+Ces stratégie sont Appliqué plus ou moins toutes les 30 à 90 mins ou en manuel avec la commande `gpupdate /force`
+
+Les GPO ce lie sur des conteneurs (OU)
+Une stratégie de groupe peut être appliqué à un site, domaine ou Unité d'organisation
 |===
 ****
 
-
-
-.Type de stratégie
+.dsique
 ****
-2 Type de stratégie existe :
+Volume simple : Un espace de stockage utilisé par un disque à a fois.
 
-* *Les stratégie de groupe* utilisé dans un contexte de domaine, s'appliquer sur *un ou des ensembles d'éléments*, en cas de conflit elle l'emporte sur la stratégie locale.
-* *La stratégie locale* utilisé dans et hors contexte de domaine, se *configure poste par poste*.
+Volume fractionné : Si un volume est à cheval sur 2 disque
+
+Volume agrégé par bandes : RAID 0
+
+Volume en miroir : RAID 1
+
+Volume agrégé par bandes avec parité RAID 5
 ****
 
-.Application des Stratégie
+.SAM
 ****
-Par défaut toutes les 90min à plus ou moins 30 min.... toute les 5 minutes pour les Contrôleur de domaine
+SAM = (Security Account Manager)
+
+thechiefofhappiness
 ****
+
+Adressage Réseau
+
+Soit un réseau en /16 (192.168.0.0)
+Je veux 32 sous réseau sois 2^5 = 32 sois 16+5 = 21
+
+2
