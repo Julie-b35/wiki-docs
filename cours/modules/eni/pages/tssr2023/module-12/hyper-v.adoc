@@ -7,3 +7,64 @@
 Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
 
 == Prérequis et installation
+
+* *Prérequis matériel*
+** Processeur 64 bits Intel VT-x ou AMD-V (attention aux réglages BIOS/UEFI)
+** CPU, RAM et espace disque adaptés
+* *Prérequis logiciel*
+** Un système Windows Serveur (W2008 et supérieur)
+** Ou un système Windows 8 Pro 64bits (+SLAT Second Level Address Translation)
+* *Installation*
+** Versions : Hyper-V v2 (W2008 R2), Hyper-V v3 (W8, W2012)
+** Pour les serveurs, rôle intégré à installer avec le gestionnaire de serveur
+** Pour le client Windows 8, fonctionnalité intégrée à activer
+
+_Lors de l'installation du rôle, 2 redémarrages sont nécessaires pour permettre le démarrage de l'hyperviseur en mode natif (type 1)_
+
+== Utilisation et mise en oeuvre
+
+* *Interaction avec le système hôte*
+** Les médias amovibles USB ne sont pas gérés avec la v2 (W2008 R2)
+** Touche de bascule : Ctrl + Alt + Gauche
+** Services d'intégration (selon la compatibilité des systèmes hôtes)
+* *Fonctionnalités*
+** Chaque VM peut être affichée dans une console séparée
+** Gestion poussée des paramètres matériels (BIOS, mémoire …)
+** Capture instantanée
+** Importation et exportation (obligatoire avec la v2 pour la copie ou le transfert)
+* *Spécificités*
+** Outil « serveur » orienté administrateur, moins convivial
+** Fichiers des VM difficilement manipulables manuellement
+** Pour faire « Ctrl + Alt + Suppr » dans la VM, taper *Ctrl + Alt + pass:[<span style="color:red;">]Finpass:[</span>]*
+
+== Paramétrage réseau
+
+image::tssr2023/module-12/hyper-v/01.png[align=center]
+
+== Console de gestion
+
+image::tssr2023/module-12/hyper-v/02.png[align=center]
+
+== Étapes de configuration
+
+image::tssr2023/module-12/hyper-v/03.png[align=center]
+
+== Console d'ordinateur virtuel
+
+image::tssr2023/module-12/hyper-v/04.png[align=center]
+
+== Exportation et importation
+
+* Des manipulations plus contraignantes (avec Hyper-V v3)
+** Pour pouvoir être dupliquée ou déplacée, une VM doit être *exportée*
+** Pour pouvoir *importer*, il faut disposer des fichiers de configuration
+** L'importation sans « Dupliquer tous les fichiers … » empêche de réimporter la même VM
+** L'option « Dupliquer tous les fichiers … » permet d'utiliser plusieurs fois la même VM exportée, *MAIS* les disques VHD sont alors copiés dans un même emplacement
+* *Exemple de procédure*
+** Exporter la VM dans un emplacement dédié
+** Copier le répertoire contenant la VM à l'emplacement voulu
+** Importer la VM sans « Dupliquer les fichiers … »
+
+IMPORTANT: Attention à bien sélectionner le dossier contenant tous les fichiers
+
+== TP 02 - Mise en place Hyper-V
