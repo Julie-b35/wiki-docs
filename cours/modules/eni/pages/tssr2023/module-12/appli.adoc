@@ -6,4 +6,49 @@
 
 Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
 
-Contenus
+== Un peut de réflexion
+
+.Virtualisation sur le poste de travail :
+****
+[cols="~,~",frame=none,grid=none]
+|===
+.^a|
+image::tssr2023/module-12/appli/01.png[align=center]
+a|
+* Avez-vous déjà mis en oeuvre ces outils ?
+* Quels problèmes avez-vous rencontrés ?
+|===
+****
+
+== Mise en oeuvre de VMware Workstation 16
+
+=== Prérequis et installation
+
+* *Prérequis matériel*
+** Processeur Intel VT-x ou AMD-V (attention aux réglages BIOS UEFI)
+** RAM et espace disque adaptés
+* *Installation*
+** Version actuelle : *VMware Workstation 17*
+** Attention, il n’y a pas de rétrocompatibilité :
+*** Une VM « ancienne version » fonctionnera avec la version la plus récente
+*** Mais une VM « nouvelle version » fonctionnera uniquement avec celle-ci
+** Utilisez les paramètres d’installation par défaut
+
+La dernière version est préférable, mais il peut y avoir des problèmes de fonctionnement suivant les systèmes hôte (ex. WS 2019 + v16)
+
+=== Outils et compostans installés
+[cols="~,~",frame=none,grid=none]
+|===
+a|
+* *La console de gestion VMware Workstation*
+** Elle affiche la liste des VM
+** Elle permet d’ajouter ou de créer des machines
+virtuelles
+** Lors de la sélection d’une VM, elle permet le démarrage ou le réglage des paramètres matériel Les applications de virtualisation d’environnements
+* *Gestion des VM*
+** Créer une nouvelle VM ou en importer une
+** Une fois la VM créée ou importée, elle s’affiche dans la liste (Library)
+** La console affichera le système virtualisé une fois la VM démarrée
+a|
+image::tssr2023/module-12/appli/02.png[align=center]
+|===
