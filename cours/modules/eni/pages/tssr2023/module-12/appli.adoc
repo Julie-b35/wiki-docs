@@ -62,4 +62,4 @@ image::tssr2023/module-12/appli/02.png[align=center]
 ** Des composants additionnels peuvent être installés pour améliorer l’interaction
 ** La fonction Shared Folder permet de mapper un dossier de l’hôte dans la VM en tant que lecteur
 réseau
-** Pour faire Ctrl + Alt + Suppr dans la VM, taper *Ctrl + Alt +* pass:[<span style="color:red;">]Inserpass:[</span>]
+** Pour faire Ctrl + Alt + Suppr dans la VM, taper *Ctrl + Alt + pass:[<span style="color:red;">]Inserpass:[</span>]*
