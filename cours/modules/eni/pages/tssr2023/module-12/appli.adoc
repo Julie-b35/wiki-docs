@@ -72,3 +72,58 @@ connexion :
 
 _Il peut être nécessaire de désactiver ces services si l'on veut utiliser ces réseaux
 avec son propre adressage dynamique._
+
+=== Étapes de création
+
+* *Mode d'installation*
+** Choisissez « *I will install … later* ».
+** Dans le cas contraire, VMware gérera l'installation à votre place avec des paramètres pas nécessairement adaptés
+* *Choix du système*
+** Définit l'architecture matérielle selon le système
+* *Nom de la VM dans l'interface et choix de l'emplacement*
+** Attention « Mes Documents » est sélectionné par défaut
+** Prévoir *1 dossier* par VM
+* *Taille du disque virtuel (et mode de stockage)* 
+** Par défaut, VMware utilise l'espace au fur et à mesure des besoins
+** Sélectionner plutôt le mode « *Store virtual disk in a single file* » pour des besoins de performance
+* *Paramétrage matériel : « Customize Hardware »*
+** Pour ajouter ou supprimer des composants
+** Pour régler le nombre de CPU et la quantité de RAM
+** Pour définir le média d'installation et le mode de connexion réseau
+
+=== Gestion de la VM - Workstation 16
+
+image::tssr2023/module-12/appli/03.png[align=center]
+
+=== Paramétrages matériels
+
+* *Après création de la VM, les paramétrages sont accessibles depuis la fonction « Virtual Machine Settings »*
+** Permet de modifier les paramètres initiaux
+** Permet l'ajout et la suppression de matériel
+** Certains composants sont paramétrables à chaud (ajout de disques, réseau …)
+* *Connexion au réseau : 4 modes disponibles*
+** *Bridged* : mode pont, équivalent à une connexion au réseau physique
+** *NAT* : utilise la configuration réseau de l'hôte pour accéder à l'Internet
+** *Host-only* : mode interne avec connexion à l'hôte, les VM ne peuvent communiquer qu'entre elles et avec l'hôte
+* *LAN segment* : permet d'utiliser des segments réseau spécifiques et indépendants, à condition de les déclarer avec le bouton LAN Segments
+
+_Chacun de ces modes est indépendant des autres. Ils agissent comme des commutateurs permettant d'isoler les VM dans des réseaux spécifiques._
+
+=== Problèmes courants
+
+* *Démarrer sur un média CD/DVD une fois le système installé*
+** S'assurer que la VM a bien « capturé » le clavier et redémarrer
+** Appuyer 1 fois sur la touche *Échap* lorsque le logo VMware s'affiche
+** Il est possible de paramétrer la séquence de démarrage dans le BIOS de la VM
+* *Fonctionnement du réseau aléatoire*
+** Le fonctionnement du réseau est un point sensible, notamment lors de paramétrages fréquents
+** *Désactivez et réactivez* les cartes réseau de votre machine physique
+* *Espace disque hôte insuffisant*
+** Vérifier l'emplacement du dossier de la VM et le déplacer si nécessaire
+** Surveiller l'espace disponible dans le volume de données
+* *Espace disque invité insuffisant*
+** Ajouter un disque depuis les paramétrages de la VM ou redimensionner (plus fastidieux)
+** Le dimensionnement initial est important !
+
+== TP 01 - Utilisation de Vmware Workstation 17.
+
