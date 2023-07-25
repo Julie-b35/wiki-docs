@@ -52,3 +52,14 @@ virtuelles
 a|
 image::tssr2023/module-12/appli/02.png[align=center]
 |===
+
+=== Interaction avec l'hôte
+
+* *Gestion du matériel*
+** Les médias amovibles de type CD/DVD, USB, disquette sont gérés
+** Par défaut, la VM « capture » le clavier et la souris
+*** Ctrl + Alt pour reprendre la main
+** Des composants additionnels peuvent être installés pour améliorer l’interaction
+** La fonction Shared Folder permet de mapper un dossier de l’hôte dans la VM en tant que lecteur
+réseau
+** Pour faire Ctrl + Alt + Suppr dans la VM, taper *Ctrl + Alt +* pass:[<span style="red">]Inserpass:[</span>]
