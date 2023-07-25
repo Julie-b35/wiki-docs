@@ -53,3 +53,8 @@ image::tssr2023/module-12/virtu-serveur/07.png[align=center]
 === La solution de gestion globale d'hyperviseurs
 
 image::tssr2023/module-12/virtu-serveur/08.png[align=center]
+
+=== Récapitulatif visuel des éléments
+
+image::tssr2023/module-12/virtu-serveur/09.png[align=center]
+
