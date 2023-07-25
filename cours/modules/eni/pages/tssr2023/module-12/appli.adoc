@@ -29,10 +29,10 @@ a|
 ** RAM et espace disque adaptés
 * *Installation*
 ** Version actuelle : *VMware Workstation 17*
-** Attention, il n’y a pas de rétrocompatibilité :
+** Attention, il n'y a pas de rétrocompatibilité :
 *** Une VM « ancienne version » fonctionnera avec la version la plus récente
 *** Mais une VM « nouvelle version » fonctionnera uniquement avec celle-ci
-** Utilisez les paramètres d’installation par défaut
+** Utilisez les paramètres d'installation par défaut
 
 La dernière version est préférable, mais il peut y avoir des problèmes de fonctionnement suivant les systèmes hôte (ex. WS 2019 + v16)
 
@@ -42,12 +42,12 @@ La dernière version est préférable, mais il peut y avoir des problèmes de fo
 a|
 * *La console de gestion VMware Workstation*
 ** Elle affiche la liste des VM
-** Elle permet d’ajouter ou de créer des machines
+** Elle permet d'ajouter ou de créer des machines
 virtuelles
-** Lors de la sélection d’une VM, elle permet le démarrage ou le réglage des paramètres matériel Les applications de virtualisation d’environnements
+** Lors de la sélection d'une VM, elle permet le démarrage ou le réglage des paramètres matériel Les applications de virtualisation d'environnements
 * *Gestion des VM*
 ** Créer une nouvelle VM ou en importer une
-** Une fois la VM créée ou importée, elle s’affiche dans la liste (Library)
+** Une fois la VM créée ou importée, elle s'affiche dans la liste (Library)
 ** La console affichera le système virtualisé une fois la VM démarrée
 a|
 image::tssr2023/module-12/appli/02.png[align=center]
@@ -58,8 +58,17 @@ image::tssr2023/module-12/appli/02.png[align=center]
 * *Gestion du matériel*
 ** Les médias amovibles de type CD/DVD, USB, disquette sont gérés
 ** Par défaut, la VM « capture » le clavier et la souris
-*** Ctrl + Alt pour reprendre la main
-** Des composants additionnels peuvent être installés pour améliorer l’interaction
-** La fonction Shared Folder permet de mapper un dossier de l’hôte dans la VM en tant que lecteur
+*** *Ctrl + Alt* pour reprendre la main
+** Des composants additionnels peuvent être installés pour améliorer l'interaction
+** La fonction *Shared Folder* permet de mapper un dossier de l'hôte dans la VM en tant que lecteur
 réseau
 ** Pour faire Ctrl + Alt + Suppr dans la VM, taper *Ctrl + Alt + pass:[<span style="color:red;">]Inserpass:[</span>]*
+* *Gestion du réseau*
+** VMware met en place des *cartes réseau virtuelles* pour permettre les différents modes de
+connexion :
+*** *VMnet1* pour le réseau *Host-only* (privé + accès à l'hôte)
+*** *VMnet8* pour le réseau *NAT* (accès à l'Internet par l'hôte)
+** Des services sont présents pour gérer l'adressage de ces réseaux : *VMware DHCP Service* pour le réseau privé et *VMware NAT Service* pour le réseau NAT
+
+_Il peut être nécessaire de désactiver ces services si l'on veut utiliser ces réseaux
+avec son propre adressage dynamique._
