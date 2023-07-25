@@ -5,4 +5,83 @@
 
 Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
 
-Contenus
+== Un peut de réflexion
+
+[cols="~,~",frame=none,grid=none]
+|===
+.^a|
+image::tssr2023/module-12/presentation/02.png[align=center]
+a|
+.La virtualisation :
+****
+* De quoi s'agit-il ?
+* Dans quel contexte l'utilise-t-on ?
+****
+|===
+
+=== Consigne de l'activité
+
+* Le domaine de la virtualisation est vaste il englobe un ensemble de solutions très diverses.
+* Faites les recherches nécessaires afin de découvrir et appréhender les solutions suivantes :
+** L'application VMware Workstation utilisée dans votre formation
+** Les outils de virtualisation de serveurs
+** Les services dans le Cloud
+* À l'issue de vos recherches, vous compléterez les tableaux de report à suivre
+** En y renseignant la description et l'utilité de l'élément
+** En ciblant le lien de celui-ci avec le domaine de la virtualisation
+** En établissant une définition de la virtualisation.
+
+NOTE: En complément (si le temps le permet) vous retracerez en 10 étapes maximum les évènements importants liés au sujet.
+
+== Caractéristique de solution
+
+image::tssr2023/module-12/presentation/03.png[align=center]
+
+== Cractéritiques communes / définition
+
+image::tssr2023/module-12/presentation/04.png[align=center]
+
+== La virtualisation en 8 dates
+
+* Années 60/70
+** IBM : Ambrions de la virtualisation en test puis production sur des Mainframes
+* Milieu des années 90
+** Les émulateurs font leur apparition en Micro informatique (ils rendent possible l'émulation des machines Atari, Amiga, Amstrad et de consoles)
+* Début des années 2000
+** VMware développa et popularisa son système propriétaire de virtualisation logicielle pour les architectures de type x86
+* 2006
+** Prise en charge matérielle par le CPU d'instructions de virtualisation
+* 2007
+** XenSource racheté par Citrix
+* 2007
+** KVM est intégré au noyau Linux
+* 2007
+** Virtual Desktop Infrastructures VMWare
+* 2009
+** Plus de serveurs virtuels que physiques KVM est intégré au noyau Linux
+
+== Utilisation
+
+* *Pour quels usages ?*
+** Les serveurs d'infrastructure locaux et distants (le Cloud …)
+** Les environnements de test et les problématiques de compatibilité
+** Les scénarios de PRA (plan de reprise d'activité)
+* *Quels avantages ?*
+** Optimisation des taux d'utilisation du matériel
+** Économies sur les coûts matériels et de gestion
+** Gestion facilitée des systèmes (granularité)
+** Économies d'énergie (green computing)
+* *Des inconvénients ?*
+** Concentration et dépendance vis-à-vis d'une solution
+** Mise en oeuvre complexe avec un investissement initial important
+** Contraintes d'administration spécifiques (déploiement, sauvegarde …)
+
+****
+* *Mutualiser* = mettre en commun un ensemble de ressources pour en partager les couts
+* *Consolider* = optimiser le taux d'utilisation du matériel (1 serveur physique est exploité environ à 10%, la consolidation amène le taux d’utilisation à 60%)
+* *Rationnaliser* = supprimer les éléments superflus et redondant
+* *Concentration* = optimiser l'utilisation de l’espace physique (salle serveur, rack, tour, lame; plus facile d’administrer des serveurs qui sont tous au même endroit physique)
+
+*Exemple* : 10 machines exploitant 10% de leur ressources matérielles ont un cout de reviens bien plus élevé que 2 machines
+chargées à 50%
+****
