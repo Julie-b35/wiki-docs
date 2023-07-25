@@ -7,17 +7,17 @@ Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
 
 == Un peut de réflexion
 
+.La virtualisation :
+****
 [cols="~,~",frame=none,grid=none]
 |===
 .^a|
 image::tssr2023/module-12/presentation/02.png[align=center]
 a|
-.La virtualisation :
-****
 * De quoi s'agit-il ?
 * Dans quel contexte l'utilise-t-on ?
-****
 |===
+****
 
 === Consigne de l'activité
 
