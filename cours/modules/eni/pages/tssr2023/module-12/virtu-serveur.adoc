@@ -6,4 +6,50 @@
 
 Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
 
-Contenus
+== Types de serveurs et concentration
+
+* Choix du type de serveur et volume occupé :
+
+image::tssr2023/module-12/virtu-serveur/01.png[align=center]
+
+== Les fournisseurs de solutions de virtualisation
+
+image::tssr2023/module-12/virtu-serveur/02.png[align=center]
+
+== Discussion
+
+.Solution et contexte
+****
+[cols="~,~",frame=none,grid=none]
+|===
+.^a|
+image::tssr2023/module-12/virtu-serveur/03.png[align=center]
+a|
+* Un ensemble de solutions sont disponibles, d'après vous
+quels sont les critères justifiant le choix d'une solution ?
+|===
+****
+
+== Les composantes d'une infrastructure de virtualisation
+
+=== La machines hôte
+
+* C'est le serveur physique qui dispose des ressources matérielles
+
+image::tssr2023/module-12/virtu-serveur/04.png[align=center]
+
+=== Au coeur de la solution : l'hyperviseur
+
+image::tssr2023/module-12/virtu-serveur/05.png[align=center]
+
+=== L'outil de gestion
+
+image::tssr2023/module-12/virtu-serveur/06.png[align=center]
+
+=== Les machines virtuelles
+
+image::tssr2023/module-12/virtu-serveur/07.png[align=center]
+
+=== La solution de gestion globale d'hyperviseurs
+
+image::tssr2023/module-12/virtu-serveur/08.png[align=center]
