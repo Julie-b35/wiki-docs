@@ -78,10 +78,75 @@ image::tssr2023/module-12/presentation/04.png[align=center]
 
 ****
 * *Mutualiser* = mettre en commun un ensemble de ressources pour en partager les couts
-* *Consolider* = optimiser le taux d'utilisation du matériel (1 serveur physique est exploité environ à 10%, la consolidation amène le taux d’utilisation à 60%)
+* *Consolider* = optimiser le taux d'utilisation du matériel (1 serveur physique est exploité environ à 10%, la consolidation amène le taux d'utilisation à 60%)
 * *Rationnaliser* = supprimer les éléments superflus et redondant
-* *Concentration* = optimiser l'utilisation de l’espace physique (salle serveur, rack, tour, lame; plus facile d’administrer des serveurs qui sont tous au même endroit physique)
+* *Concentration* = optimiser l'utilisation de l'espace physique (salle serveur, rack, tour, lame; plus facile d'administrer des serveurs qui sont tous au même endroit physique)
 
 *Exemple* : 10 machines exploitant 10% de leur ressources matérielles ont un cout de reviens bien plus élevé que 2 machines
 chargées à 50%
 ****
+
+== Les acteurs
+
+image::tssr2023/module-12/presentation/05.png[align=center]
+
+== Les secteurs de la virtualisation
+
+La virtualisation est un domaine transverse qui peut être mis en oeuvre à plusieurs
+niveaux au sein d'une infrastructure.
+* *Virtualisation d'environnements sur un poste de travail*
+* Virtualisation d'applications
+* *Virtualisation de serveurs*
+* Virtualisation de stations de travail
+* On retrouve aussi la virtualisation dans des domaines plus ciblés :
+** Le réseau
+** Le stockage
+** Les services
+
+== Les principales solutions
+
+* *Pour le poste de travail*
+** VMware Player, VMware Workstation
+** Oracle VM VirtualBox
+** Windows Virtual PC (Windows 7 Mode XP), Hyper-V Client (W8 x64 SLAT)
+** QEMU
+* *Pour les serveurs*
+** VSphère (VMware)
+** Hyper-V (Windows Serveur)
+** Xen (utilisé par Citrix avec Xenserver)
+** KVM (utilisé par Red Hat)
+
+== Les outils
+
+* *Les outils*
+** *L'hyperviseur*
+** La *console de gestion* des machines virtuelles
+** Les *consoles d'accès* à la machine virtuelle
+** Les *composants* complémentaires
+* *Principes de base*
+** Paramétrage matériel : architecture, BIOS, processeur, mémoire, disque …
+** Gestion des médias amovibles : DVD au format ISO, USB « transmis » à la VM et disquette (!) au format FLP ou IMG
+** Réseaux virtuels : interne, NAT, pont, LAN dédié
+** Format des disques : selon la solution, VHD, VMDK, VDI …
+** Fichier de configuration : selon la solution, XML, VMX, VBOX …
+
+== Les type d'hyperviseurs
+
+[cols="~,~",frame=none,grid=none]
+|===
+^.^|
+L'hyperviseur de type 1
+a|
+image::tssr2023/module-12/presentation/06.png[align=center]
+^.^|
+L'hyperviseur de type 2
+a|
+image::tssr2023/module-12/presentation/07.png[align=center]
+|===
+
+== Virtualisation et paravirtualisation
+
+* Dans un contexte de virtualisation, les machines virtuelles s'adressent au matériel présenté par l'hyperviseur. Elles n'ont pas connaissance de sa présence.
+* La *paravirtualisation* est une technique de virtualisation dans laquelle les machines virtuelles sont préparées pour faire appel directement à un hyperviseur. Les appels système sont alors redirigés et non traduits.
+
+image::tssr2023/module-12/presentation/08.png[align=center]
