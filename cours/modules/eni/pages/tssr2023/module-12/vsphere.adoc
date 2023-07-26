@@ -18,3 +18,50 @@ a|
 .^a|
 image::tssr2023/module-12/vsphere/01.png[align=center]
 |===
+
+== Composantes d'une solution VSphère
+
+image::tssr2023/module-12/vsphere/02.png[align=center]
+
+== Les principales fonctionnalités
+
+
+image::tssr2023/module-12/vsphere/03.png[align=center]
+
+
+== Un peut de réflexion
+
+.Les licences VMware:
+****
+[cols="~,~",frame=none,grid=none]
+|===
+.^a|
+image::tssr2023/module-12/vsphere/04.png[align=center]
+a|
+* Quelles sont les offres ?
+* Dans quel contexte l'utilise-t-on ?
+|===
+****
+
+== Consigne de l'activité
+
+Découverte du mode de licence VMware
+
+* En vous basant sur :
+** Le point 3 du chapitre 2 de l'ouvrage de référence
+** Les tarifs fournis par l'éditeur VMware sur son site Internet
+* Comparer les offres ESXi seules / VSphère Essentials / VSphère Essentials Plus
+* Comparer les offres VSphère Essentials Plus et VSphère Standard
+
+
+== Tableau comparatif des coûts
+
+image::tssr2023/module-12/vsphere/05.png[align=center]
+
+[NOTE,caption=source]
+====
+dd
+====
+
+image::tssr2023/module-12/vsphere/0.png[align=center]
+
