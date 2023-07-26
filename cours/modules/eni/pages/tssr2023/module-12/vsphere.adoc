@@ -57,10 +57,11 @@ Découverte du mode de licence VMware
 == Tableau comparatif des coûts
 
 image::tssr2023/module-12/vsphere/05.png[align=center]
+image::tssr2023/module-12/vsphere/06.png[align=center]
 
 [NOTE,caption=source]
 ====
-dd
+http://vpn.jlab.ovh/cours/1/eni/tssr2023/module-12/vsphere.html
 ====
 
 image::tssr2023/module-12/vsphere/0.png[align=center]
