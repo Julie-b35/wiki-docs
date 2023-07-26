@@ -8,9 +8,13 @@ Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
 
 == De VSphère 5 à VSphère 6
 
+[cols="~,~",frame=none,grid=none]
+|===
+a|
 * Disparition de l'ESX et du Service Console
 * Disparition du client Lourd vSphere Client
 * vCenter disponible sous forme d'Appliance virtuelle
 * Apparition du Web client VSphère (lié à VCenter)
-
+.^a|
 image::tssr2023/module-12/vsphere/01.png[align=center]
+|===
