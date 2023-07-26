@@ -15,3 +15,78 @@ Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
 * La mise en oeuvre de VLAN permet de définir des contextes isolés afin que seuls les éléments d'un même VLAN puissent communiquer ensemble.
 
 image::tssr2023/module-12/gest_network/01.png[align=center]
+
+=== Intérêt de mise en oeuvre
+
+* *La segmentation du réseau au moyen de VLAN permet :*
+** D'accroitre la sécurité
+** D'accroitre les performances en limitant les domaines de diffusion
+** De prioriser certains flux
+** D'optimiser l'utilisation du matériel
+* *Les limites*
+** Nécessite une prise en charge par les commutateurs
+** Nécessite une configuration
+
+=== Prise en charge 802.1Q
+
+image::tssr2023/module-12/gest_network/02.png[align=center]
+
+=== Intégration d'un identifiant de VLAN
+
+image::tssr2023/module-12/gest_network/03.png[align=center]
+
+=== Propagation des flux entre commutateurs
+
+image::tssr2023/module-12/gest_network/04.png[align=center]
+
+=== Critères de configuration sur les switchs
+
+image::tssr2023/module-12/gest_network/05.png[align=center]
+
+=== Configuration sur les équipements terminaux
+
+image::tssr2023/module-12/gest_network/06.png[align=center]
+
+== Les composantes VSphère du réseau
+
+=== Le VSphère Standard Switch - vSS
+
+image::tssr2023/module-12/gest_network/07.png[align=center]
+
+=== Le vSwitch Distribué - vDS
+
+image::tssr2023/module-12/gest_network/08.png[align=center]
+
+=== Les groupements de ports
+
+image::tssr2023/module-12/gest_network/09.png[align=center]
+
+=== Les vmNIC ou pNIC
+
+image::tssr2023/module-12/gest_network/10.png[align=center]
+
+=== Le regroupement de cartes réseau (Teaming)
+
+image::tssr2023/module-12/gest_network/11.png[align=center]
+
+=== Teaming - répartition de charge
+
+image::tssr2023/module-12/gest_network/12.png[align=center]
+
+=== Les VNIC
+
+image::tssr2023/module-12/gest_network/13.png[align=center]
+
+=== Liens entre les VMNIC et les besoins réseau
+
+image::tssr2023/module-12/gest_network/14.png[align=center]
+
+=== Illustration de raccordement réseau global
+
+image::tssr2023/module-12/gest_network/15.png[align=center]
+
+=== Les VLANS en environnement virtualisé
+
+image::tssr2023/module-12/gest_network/16.png[align=center]
+
+== TP 04 - Gestion réseau de l'esxi
