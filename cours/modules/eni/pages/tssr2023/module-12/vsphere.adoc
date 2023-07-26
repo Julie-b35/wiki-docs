@@ -64,5 +64,10 @@ image::tssr2023/module-12/vsphere/06.png[align=center]
 http://vpn.jlab.ovh/cours/1/eni/tssr2023/module-12/vsphere.html
 ====
 
-image::tssr2023/module-12/vsphere/0.png[align=center]
+== Les licences
+
+image::tssr2023/module-12/vsphere/07.png[align=center]
+
+== TP 03 - Mise en place de Vmware ESXi
+
 
