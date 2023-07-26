@@ -1,9 +1,17 @@
 = Module 06 - Gestion du réseau
-:navtitle: Gestion du réseau
+:navtitle: Gestion du réseau (VLAN)
 
 * Module précédent -> xref:tssr2023/module-12/vsphere.adoc[Module 05 - Les composantes d'une infrastructure VSphère]
 * Module suivant -> xref:tssr2023/module-12/gest_stockage.adoc[Module 07 - Gestion du stockage]
 
 Notes -> xref:notes:eni-tssr:virtualisation.adoc[Virtualisation de serveurs]
 
-Contenus
+== Les VLANS
+
+=== Définition
+
+* Un VLAN (Virtuel LAN) est un réseau logique indépendant.
+* Les commutateurs (ou switch) permettent l'interconnexion réseau d'un ensemble d'éléments. Tous les éléments raccordés à un même switch peuvent ainsi communiquer entre eux.
+* La mise en oeuvre de VLAN permet de définir des contextes isolés afin que seuls les éléments d'un même VLAN puissent communiquer ensemble.
+
+image::tssr2023/module-12/gest_network/01.png[align=center]
