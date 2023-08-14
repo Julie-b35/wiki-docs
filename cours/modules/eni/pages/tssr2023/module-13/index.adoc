@@ -1,0 +1,9 @@
+= Scripting Powershell
+
+Powershell Core est une variante de Powershell
+
+Ctrl+space : affiche la liste des commande.
+
+ Set-ExecutionPolicy -ExecutionPolicy Unrestricted  (Autorise tous les scriptes)
+
+ out-gridview

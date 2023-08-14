@@ -114,3 +114,4 @@
 **** xref:tssr2023/module-12/gest_network.adoc[]
 **** xref:tssr2023/module-12/gest_stockage.adoc[]
 **** xref:tssr2023/module-12/gest_datacenter.adoc[]
+*** xref:tssr2023/module-13/index.adoc[]
