@@ -1,6 +1,10 @@
 = Accueil
 :navtitle: Accueil
 
-Page test
+== Bienvenue
+
+Bienvenue à vous, Ce wiki héberge plusieurs type de contenus.
+
+4 grands type de contenus 
 
 Url vers xref:cours:ROOT:index.adoc[Mes Cours]
