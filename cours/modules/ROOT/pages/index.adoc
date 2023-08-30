@@ -9,7 +9,7 @@ Voici une liste de leçons que j'ai reçue ces dernier temps
 
 == Cours Cisco
 
-* xref:cisco:index.adoc[Cours Cisco : RTSSR_14F_It_Essential_V7.02]
+* xref:cisco:Formation1/index.adoc[Cours Cisco : RTSSR_14F_It_Essential_V7.02]
 
 == Cours trouvé dans la bibliothèque numérique de l'ENI
 
