@@ -3,132 +3,132 @@
 
 == Présentation du cours
 
-* Découverte du cours
-* Ressources pour les participants
+* xref:Formation1/presentation/decouverte-cours.adoc[Découverte du cours]
+* xref:Formation1/presentation/ressources-participants.adoc[Ressources pour les participants]
 
 == Chapitre 1
 
-* Lancer le chapitre 1
-* Chapitre 1 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 1
-* Examen de fin de chapitre 1
+* xref:Formation1/Chapitre-1/lancer-chapitre.adoc[Lancer le chapitre 1]
+* xref:Formation1/Chapitre-1/entrainement-termes-conceptes.adoc[Chapitre 1 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-1/questionnaire.adoc[Questionnaire sur le chapitre 1]
+* xref:Formation1/Chapitre-1/examen-fin-chapitre.adoc[Examen de fin de chapitre 1]
 
 == Chapitre 2
 
-* Lancer le chapitre 2
-* Chapitre 2 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 2
-* Examen de fin de chapitre 2
+* xref:Formation1/Chapitre-2/lancer-chapitre.adoc[Lancer le chapitre 2]
+* xref:Formation1/Chapitre-2/entrainement-termes-conceptes.adoc[Chapitre 2 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-2/questionnaire.adoc[Questionnaire sur le chapitre 2]
+* xref:Formation1/Chapitre-2/examen-fin-chapitre.adoc[Examen de fin de chapitre 2]
 
 == Chapitre 3
 
-* Lancer le chapitre 3
-* Chapitre 3 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 3
-* Examen de fin de chapitre 3
+* xref:Formation1/Chapitre-3/lancer-chapitre.adoc[Lancer le chapitre 3]
+* xref:Formation1/Chapitre-3/entrainement-termes-conceptes.adoc[Chapitre 3 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-3/questionnaire.adoc[Questionnaire sur le chapitre 3]
+* xref:Formation1/Chapitre-3/examen-fin-chapitre.adoc[Examen de fin de chapitre 3]
 
 == Chapitre 4
 
-* Lancer le chapitre 4
-* Chapitre 4 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 4
-* Examen de fin de chapitre 4
-* Exemen de contrôle de certification n°1 (chapitre 1 à 4)
+* xref:Formation1/Chapitre-4/lancer-chapitre.adoc[Lancer le chapitre 4]
+* xref:Formation1/Chapitre-4/entrainement-termes-conceptes.adoc[Chapitre 4 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-4/questionnaire.adoc[Questionnaire sur le chapitre 4]
+* xref:Formation1/Chapitre-4/examen-fin-chapitre.adoc[Examen de fin de chapitre 4]
+* xref:Formation1/Chapitre-4/examen-controle-certification.adoc[Exemen de contrôle de certification n°1 (chapitre 1 à 4)]
 
 == Chapitre 5
 
-* Lancer le chapitre 5
-* Chapitre 5 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 5
-* Examen de fin de chapitre 5
+* xref:Formation1/Chapitre-5/lancer-chapitre.adoc[Lancer le chapitre 5]
+* xref:Formation1/Chapitre-5/entrainement-termes-conceptes.adoc[Chapitre 5 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-5/questionnaire.adoc[Questionnaire sur le chapitre 5]
+* xref:Formation1/Chapitre-5/examen-fin-chapitre.adoc[Examen de fin de chapitre 5]
 
 == Chapitre 6
 
-* Lancer le chapitre 6
-* Chapitre 6 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 6
-* Examen de fin de chapitre 6
-* Exemen de contrôle de certification n°2 (chapitre 5 et 6)
+* xref:Formation1/Chapitre-6/lancer-chapitre.adoc[Lancer le chapitre 6]
+* xref:Formation1/Chapitre-6/entrainement-termes-conceptes.adoc[Chapitre 6 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-6/questionnaire.adoc[Questionnaire sur le chapitre 6]
+* xref:Formation1/Chapitre-6/examen-fin-chapitre.adoc[Examen de fin de chapitre 6]
+* xref:Formation1/Chapitre-6/examen-controle-certification.adoc[Exemen de contrôle de certification n°2 (chapitre 5 et 6)]
 
 == Chapitre 7
 
-* Lancer le chapitre 7
-* Chapitre 7 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 7
-* Examen de fin de chapitre 7
+* xref:Formation1/Chapitre-7/lancer-chapitre.adoc[Lancer le chapitre 7]
+* xref:Formation1/Chapitre-7/entrainement-termes-conceptes.adoc[Chapitre 7 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-7/questionnaire.adoc[Questionnaire sur le chapitre 7]
+* xref:Formation1/Chapitre-7/examen-fin-chapitre.adoc[Examen de fin de chapitre 7]
 
 == Chapitre 8
 
-* Lancer le chapitre 8
-* Chapitre 8 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 8
-* Examen de fin de chapitre 8
-* Exemen de contrôle de certification n°3 (chapitre 7 et 8)
+* xref:Formation1/Chapitre-8/lancer-chapitre.adoc[Lancer le chapitre 8]
+* xref:Formation1/Chapitre-8/entrainement-termes-conceptes.adoc[Chapitre 8 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-8/questionnaire.adoc[Questionnaire sur le chapitre 8]
+* xref:Formation1/Chapitre-8/examen-fin-chapitre.adoc[Examen de fin de chapitre 8]
+* xref:Formation1/Chapitre-8/examen-controle-certification.adoc[Exemen de contrôle de certification n°3 (chapitre 7 et 8)]
 
 == Chapitre 9
 
-* Lancer le chapitre 9
-* Chapitre 9 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 9
-* Examen de fin de chapitre 9
+* xref:Formation1/Chapitre-9/lancer-chapitre.adoc[Lancer le chapitre 9]
+* xref:Formation1/Chapitre-9/entrainement-termes-conceptes.adoc[Chapitre 9 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-9/questionnaire.adoc[Questionnaire sur le chapitre 9]
+* xref:Formation1/Chapitre-9/examen-fin-chapitre.adoc[Examen de fin de chapitre 9]
 
 == Évaluation synthétique (chapitre 1 à 9)
-* Examen blan final (chapitres 1 à 9)
-* Examen final (chapitre 1 à 9)
-* Évaluation des compétences (chapitre 1 à 9)
-* Examen blan de certification A+ 220-1001
+* xref:Formation1/eval-synthetique-1/examen-blan-final.adoc[Examen blan final (chapitres 1 à 9)]
+* xref:Formation1/eval-synthetique-1/examen-final.adoc[Examen final (chapitre 1 à 9)]
+* xref:Formation1/eval-synthetique-1/eval-competences.adoc[Évaluation des compétences (chapitre 1 à 9)]
+* Examen blan de certification A+ 220-1001]
 
 == Chapitre 10
 
-* Lancer le chapitre 10
-* Chapitre 10 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 10
-* Examen de fin de chapitre 10
+* xref:Formation1/Chapitre-10/lancer-chapitre.adoc[Lancer le chapitre 10]
+* xref:Formation1/Chapitre-10/entrainement-termes-conceptes.adoc[Chapitre 10 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-10/questionnaire.adoc[Questionnaire sur le chapitre 10]
+* xref:Formation1/Chapitre-10/examen-fin-chapitre.adoc[Examen de fin de chapitre 10]
 
 == Chapitre 11
 
-* Lancer le chapitre 11
-* Chapitre 11 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 11
-* Examen de fin de chapitre 11
-* Exemen de contrôle de certification n°4 (chapitre 10 et 11)
+* xref:Formation1/Chapitre-11/lancer-chapitre.adoc[Lancer le chapitre 11]
+* xref:Formation1/Chapitre-11/entrainement-termes-conceptes.adoc[Chapitre 11 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-11/questionnaire.adoc[Questionnaire sur le chapitre 11]
+* xref:Formation1/Chapitre-11/examen-fin-chapitre.adoc[Examen de fin de chapitre 11]
+* xref:Formation1/Chapitre-11/examen-controle-certification.adoc[Exemen de contrôle de certification n°4 (chapitre 10 et 11)]
 
 == Chapitre 12
 
-* Lancer le chapitre 12
-* Chapitre 12 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 12
-* Examen de fin de chapitre 12
+* xref:Formation1/Chapitre-12/lancer-chapitre.adoc[Lancer le chapitre 12]
+* xref:Formation1/Chapitre-12/entrainement-termes-conceptes.adoc[Chapitre 12 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-12/questionnaire.adoc[Questionnaire sur le chapitre 12]
+* xref:Formation1/Chapitre-12/examen-fin-chapitre.adoc[Examen de fin de chapitre 12]
 
 == NDG Linux Unhatched
 
-* NDG Linux Unhatched
+* xref:Formation1/linux-unhatched/linux-unhatched.adoc[NDG Linux Unhatched]
 
 == Chapitre 13
 
-* Lancer le chapitre 13
-* Chapitre 13 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 13
-* Examen de fin de chapitre 13
-* Exemen de contrôle de certification n°5 (chapitre 12 et 13)
+* xref:Formation1/Chapitre-13/lancer-chapitre.adoc[Lancer le chapitre 13]
+* xref:Formation1/Chapitre-13/entrainement-termes-conceptes.adoc[Chapitre 13 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-13/questionnaire.adoc[Questionnaire sur le chapitre 13]
+* xref:Formation1/Chapitre-13/examen-fin-chapitre.adoc[Examen de fin de chapitre 13]
+* xref:Formation1/Chapitre-13/examen-controle-certification.adoc[Exemen de contrôle de certification n°5 (chapitre 12 et 13)]
 
 == Chapitre 14
 
-* Lancer le chapitre 14
-* Chapitre 14 : Entraînement sur les Termes et Concepts
-* Questionnaire sur le chapitre 14
-* Examen de fin de chapitre 14
+* xref:Formation1/Chapitre-14/lancer-chapitre.adoc[Lancer le chapitre 14]
+* xref:Formation1/Chapitre-14/entrainement-termes-conceptes.adoc[Chapitre 14 : Entraînement sur les Termes et Concepts]
+* xref:Formation1/Chapitre-14/questionnaire.adoc[Questionnaire sur le chapitre 14]
+* xref:Formation1/Chapitre-14/examen-fin-chapitre.adoc[Examen de fin de chapitre 14]
 
 == Fin du cours
 
-* Commentaire sur le cours
+* xref:Formation1/Fin-Cours/commentaire_cours.adoc[Commentaire sur le cours]
 
 == Évaluation synthétique (chapitres 10 à 14)
-* Examen blan final (chapitres 10 à 14)
-* Examen final (chapitres 10 à 14)
-* Évaluation des compétences (chapitres 10 à 14)
-* Examen final de certification A+ 220-1001
+* xref:Formation1/eval-synthetique-2/examen-blan-final.adoc[Examen blan final (chapitres 10 à 14)]
+* xref:Formation1/eval-synthetique-2/examen-final.adoc[Examen final (chapitres 10 à 14)]
+* xref:Formation1/eval-synthetique-2/eval-competences.adoc[Évaluation des compétences (chapitres 10 à 14)]
+* xref:Formation1/eval-synthetique-1/examen-final-certification.adoc[Examen final de certification A+ 220-1001]
 
 == Préparer votre avenir
 
-* Des ressources professionnelles et des opportunités d'emploi
+* xref:Formation1/preparerVotreAvenir/ressource_pro.adoc[Des ressources professionnelles et des opportunités d'emploi]

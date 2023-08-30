@@ -1,6 +1,8 @@
 * Cours Cisco
 ** xref:Formation1/index.adoc[]
 *** Présentation du cours
+**** xref:Formation1/presentation/decouverte-cours.adoc[]
+**** xref:Formation1/presentation/ressources-participants.adoc[]
 *** Chapitre 1
 **** xref:Formation1/Chapitre-1/lancer-chapitre.adoc[]
 **** xref:Formation1/Chapitre-1/entrainement-termes-conceptes.adoc[]
