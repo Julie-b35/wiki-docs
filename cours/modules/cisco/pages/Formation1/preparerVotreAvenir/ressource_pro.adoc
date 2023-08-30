@@ -1,0 +1,8 @@
+= Des ressources professionnelles et des opportunités d'emploi
+
+* Point précédent -> 
+* Point suivant -> 
+
+xref:Formation1/index.adoc[Retour Récapitulatif Formation]
+
+== Contenus

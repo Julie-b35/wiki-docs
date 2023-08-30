@@ -1,0 +1,8 @@
+= Ressources pour les participants
+
+* Point précédent -> xref:Formation1/presentation/decouverte-cours.adoc[Découverte du cours]
+* Point suivant -> xref:Formation1/Chapitre-1/lancer-chapitre.adoc[Lancer le chapitre 1]
+
+xref:Formation1/index.adoc[Retour Récapitulatif Formation]
+
+== Contenus

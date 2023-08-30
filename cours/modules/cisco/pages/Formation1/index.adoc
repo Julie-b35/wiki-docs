@@ -76,7 +76,7 @@
 * xref:Formation1/eval-synthetique-1/examen-blan-final.adoc[Examen blan final (chapitres 1 à 9)]
 * xref:Formation1/eval-synthetique-1/examen-final.adoc[Examen final (chapitre 1 à 9)]
 * xref:Formation1/eval-synthetique-1/eval-competences.adoc[Évaluation des compétences (chapitre 1 à 9)]
-* Examen blan de certification A+ 220-1001]
+* xref:Formation1/eval-synthetique-1/examen-final-certification.adoc[Examen blanc de certification A+ 220-1001]
 
 == Chapitre 10
 

@@ -1,0 +1,7 @@
+= Découverte du cours
+
+* Point suivant -> xref:Formation1/presentation/ressources-participants.adoc[Ressources pour les participants]
+
+xref:Formation1/index.adoc[Retour Récapitulatif Formation]
+
+== Contenus
