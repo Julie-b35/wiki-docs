@@ -64,6 +64,7 @@ Sonde testant l'espace occupé sur le disque C: par le protocole nrpe à destina
 
 ==== CPU
 /usr/lib/centreon/plugins/centreon_linux_snmp.pl --plugin os::linux::snmp::plugin --mode cpu --hostname 172.16.1.101 --snmp-community sniper --snmp-version 2 --warning-average 70 --critical-average 85
+
 $PLUGIN_SNMP_LINUX$ --mode cpu --hostname $HOSTADDRESS$ --snmp-community $_HOSTSNMPCOMMUNITY$ --snmp-version $_HOSTSNMPVERSION$ --warning-average $_SERVICEWARNING$ --critical-average $_SERVICECRITIQUE$
 MACRO (SERVICE) WARNING : Seuil d'avertissement surcharge CPU (%)
 MACRO (SERVICE) CRITIQUE : Seuil critique surcharge CPU (%)
