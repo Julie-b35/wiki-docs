@@ -1,7 +1,7 @@
 = Questionnaire sur le chapitre 3
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-3/entrainement-termes-conceptes.adoc[Chapitre 3 : Entraînement sur les Termes et Concepts]
+* Point suivant -> xref:Formation1/Chapitre-3/examen-fin-chapitre.adoc[Examen de fin de chapitre 3]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

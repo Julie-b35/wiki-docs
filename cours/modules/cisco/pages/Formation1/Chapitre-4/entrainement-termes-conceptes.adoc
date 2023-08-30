@@ -1,7 +1,7 @@
 = Chapitre 4 : Entraînement sur les Termes et Concepts
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-4/lancer-chapitre.adoc[Lancer le chapitre 4]
+* Point suivant -> xref:Formation1/Chapitre-4/questionnaire.adoc[Questionnaire sur le chapitre 4]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

@@ -1,7 +1,7 @@
 = Examen de fin de chapitre 2
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-2/questionnaire.adoc[Questionnaire sur le chapitre 2]
+* Point suivant -> xref:Formation1/Chapitre-3/lancer-chapitre.adoc[Lancer le chapitre 3]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 
