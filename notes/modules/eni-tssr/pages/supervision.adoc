@@ -1,0 +1,97 @@
+= Métrologie  (remontée des métriques?)
+Outils SNMP
+
+- snmpwalk : récupère un ensemble de clef
+- snmpget : récupére une information avec une clef définie
+
+Exemple : 
+snmpwalk -v2c -0f -c public localhost
+snmpwall -v2c -On - public localhost
+
+Paquet linux : snmpd - snmp
+conf : /etc/snmp/snmpd.conf
+
+Un poste distant veut interroger l'agent SNMP sur l'OID 1.3.6.1.2.1.1.1.0 avec la commande : 
+snmpwalk -v2c -On -c public 127.0.0.1 1.3.6.1.2.1.1.1.0
+
+
+/usr/lib64/nagios/plugins/check_ping -H 172.16.1.101 -w 2,25% -c 4,75% -p 3
+/usr/lib64/nagios/plugins/check_ping -H 172.16.1.100 -w 2,25% -c 4,75% -p 3
+
+== charge cpu
+
+
+
+ #mémoire
+ /usr/lib/centreon/plugins/centreon_linux_snmp.pl --plugin os::linux::snmp::plugin --mode memory --hostname 172.16.1.101 --snmp-community sniper --snmp-version 2 --warning-usage 75 --critical-usage 90 
+
+
+------- SONDE -----
+/usr/lib/centreon/plugins/centreon_linux_snmp.pl --plugin os::linux::snmp::plugin --mode tcpcon --hostname 172.16.1.101 --snmp-community sniper --snmp-version 2 --service="smtp,ipv4,listen,53,,,,10,20"
+
+
+
+== Configuration Centeros
+
+
+
+=== Sondes windows
+
+==== CPU
+
+/usr/lib/nagios/plugins/check_centreon_nrpe3 -H 172.16.1.100 -c check_cpu -a "warn=load > 70%" "crit=load > 85%"
+$PATH_NRPE$ -H $HOSTADDRESS$ -c check_cpu -a "warn=load > $_SERVICEWARNING$" "crit=load > $_SERVICECRITIQUE$"
+MACRO (SERVICE) WARNING : Seuil d'avertissement surcharge CPU (%)
+MACRO (SERVICE) CRITIQUE : Seuil critique surcharge CPU (%)
+Sonde testant la surcharge d'un processeur par le protocole nrpe à destination d'un client windows (Macro : WARNING (%), CRITIQUE (%))
+
+
+==== Sonde Mémoire
+/usr/lib/nagios/plugins/check_centreon_nrpe3 -H 172.16.1.100 -c check_memory -a "warn=used > 75%" "crit=used > 90%"
+$PATH_NRPE$ -H $HOSTADDRESS$ -c check_memory -a "warn=used > $_SERVICEWARNING$" "crit=used > $_SERVICECRITIQUE$"
+MACRO (SERVICE) WARNING : Seuil d'avertissement espace occupé Mémoire (%)
+MACRO (SERVICE) CRITIQUE : Seuil critique espace occupé Mémoire (%)
+Sonde testant la mémoire occupé par le protocole nrpe à destination d'un client windows (Macro : WARNING (%), CRITIQUE (%))
+
+==== Disque C
+/usr/lib/nagios/plugins/check_centreon_nrpe3 -H 172.16.1.100 -c check_drivesize -a "drive=C" "warn=used > 70%" "crit=used > 80%"
+$PATH_NRPE$ -H $HOSTADDRESS$ -c check_drivesize -a "drive=C" "warn=used > $_SERVICEWARNING$" "crit=used > $_SERVICECRITIQUE$"
+MACRO (SERVICE) WARNING : Seuil d'avertissement espace occupé disque C (%)
+MACRO (SERVICE) CRITIQUE : Seuil critique espace occupé disque C (%)
+Sonde testant l'espace occupé sur le disque C: par le protocole nrpe à destination d'un client windows (Macro : WARNING (%), CRITIQUE (%))
+
+=== Sondes Linux
+
+==== CPU
+/usr/lib/centreon/plugins/centreon_linux_snmp.pl --plugin os::linux::snmp::plugin --mode cpu --hostname 172.16.1.101 --snmp-community sniper --snmp-version 2 --warning-average 70 --critical-average 85
+$PLUGIN_SNMP_LINUX$ --mode cpu --hostname $HOSTADDRESS$ --snmp-community $_HOSTSNMPCOMMUNITY$ --snmp-version $_HOSTSNMPVERSION$ --warning-average $_SERVICEWARNING$ --critical-average $_SERVICECRITIQUE$
+MACRO (SERVICE) WARNING : Seuil d'avertissement surcharge CPU (%)
+MACRO (SERVICE) CRITIQUE : Seuil critique surcharge CPU (%)
+Sonde testant la surcharge d'un processeur par le protocole SNMP à destination d'un client linux (Macro : WARNING (%), CRITIQUE (%))
+
+==== Sonde Mémoire
+/usr/lib/centreon/plugins/centreon_linux_snmp.pl --plugin os::linux::snmp::plugin --mode memory --hostname 172.16.1.101 --snmp-community sniper --snmp-version 2 --warning-usage 75 --critical-usage 90 
+$PLUGIN_SNMP_LINUX$ --mode memory --hostname $HOSTADDRESS$ --snmp-community $_HOSTSNMPCOMMUNITY$ --snmp-version $_HOSTSNMPVERSION$ --warning-usage $_SERVICEWARNING$ --critical-usage $_SERVICECRITIQUE$
+MACRO (SERVICE) WARNING : Seuil d'avertissement espace occupé Mémoire (%)
+MACRO (SERVICE) CRITIQUE : Seuil critique espace occupé Mémoire (%)
+Sonde testant la mémoire occupé par le protocole SNMP à destination d'un client linux (Macro : WARNING (%), CRITIQUE (%))
+
+==== Point de montage
+
+ /usr/lib/centreon/plugins/centreon_linux_snmp.pl --plugin os::linux::snmp::plugin --mode storage --hostname 172.16.1.101 --snmp-community sniper --snmp-version 2 --warning-usage 60 --critical-usage 80  --name --storage '/'
+$PLUGIN_SNMP_LINUX$ --mode storage --hostname $HOSTADDRESS$ --snmp-community $_HOSTSNMPCOMMUNITY$ --snmp-version $_HOSTSNMPVERSION$ --warning-usage $_SERVICEWARNING$ --critical-usage $_SERVICECRITIQUE$ --name --storage $_SERVICEPOINT_MONTAGE$
+ MACRO (SERVICE) WARNING : Seuil d'avertissement espace occupé par le point de montage (%)
+MACRO (SERVICE) CRITIQUE : Seuil critique espace occupé par le point de montage (%)
+MACRO (SERVICE) POINT_MONTAGE : Chemin du point de montage.
+Sonde testant l'espace occupé du point de montage par le protocole SNMP à destination d'un client linux (Macro : WARNING (%), CRITIQUE (%), POINT_MONTAGE (/))
+
+=== Check alive
+
+$USER1$/check_ping -H $HOSTADDRESS$ -w 100,50% -c 200,90% -p 1
+Vérifie si l'hôte est en vie
+/usr/lib64/nagios/plugins/check_ping -H 172.16.1.101 -w 2,25% -c 4,75% -p 3
+/usr/lib64/nagios/plugins/check_ping -H 172.16.1.100 -w 2,25% -c 4,75% -p 3
+
+/usr/lib64/nagios/plugins/check_smtp -H 172.16.1.20  -C 'HELO' -R 'HELO' -w 5 -c 10
+
+  /usr/lib64/nagios/plugins/check_dns -H dns1.sniper.lunette -q A
