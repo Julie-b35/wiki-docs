@@ -96,3 +96,39 @@ Vérifie si l'hôte est en vie
 /usr/lib64/nagios/plugins/check_smtp -H 172.16.1.20  -C 'HELO' -R 'HELO' -w 5 -c 10
 
   /usr/lib64/nagios/plugins/check_dns -H dns1.sniper.lunette -q A
+
+
+/usr/lib/centreon/plugins/centreon_linux_snmp.pl --plugin os::linux::snmp::plugin --mode storage --hostname 172.16.1.254 --snmp-community sniper --snmp-version 2 --warning-usage 60 --critical-usage 80 
+
+
+SRV-Mail : mysql (rootsan)
+julie@snip
+
+// cat <<EOF > /etc/centreon-gorgone/config.d/40-gorgoned.yaml
+cat <<EOF > /etc/centreon-gorgone/config.d/40-gorgoned.yaml
+name:  gorgoned-centreon-poller
+description: Configuration for poller centreon-poller
+gorgone:
+  gorgonecore:
+    id: 3
+    external_com_type: tcp
+    external_com_path: "*:5556"
+    authorized_clients: 
+      - key: Ng87FMPNvusabR9ZTJ_jxjZRM8trYBqYBcGiAiOHvr8
+    privkey: "/var/lib/centreon-gorgone/.keys/rsakey.priv.pem"
+    pubkey: "/var/lib/centreon-gorgone/.keys/rsakey.pub.pem"
+  modules:
+    - name: action
+      package: gorgone::modules::core::action::hooks
+      enable: true
+
+    - name: engine
+      package: gorgone::modules::centreon::engine::hooks
+      enable: true
+      command_file: "/var/lib/centreon-engine/rw/centengine.cmd"
+
+EOF
+/usr/lib/centreon/plugins//centreon_centreon_central.pl --plugin=apps::centreon::local::plugin --hostname=192.168.1.10 --mode=broker-stats \
+--broker-stats-file='/var/lib/centreon-engine/*-module-stats.json' --filter-name='' --warning-speed-events='' --critical-speed-events='' --warning-queued-events='' \
+--critical-queued-events='' --warning-unacknowledged-events='' --critical-unacknowledged-events='' --warning-status='' \
+--critical-status=%{type} eq output and %{queue_file_enabled} =~ /true | yes/i' --verbose --remote --ssh-option='-l=centreon

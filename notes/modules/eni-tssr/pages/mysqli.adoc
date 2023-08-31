@@ -1,0 +1,14 @@
+== Gestion Mysql
+
+=== Mot de passe root mysql perdu
+
+****
+systemctl stop mysql.service
+mysqld_safe --skip-grant-tables &
+UPDATE mysql.user SET password=PASSWORD('rootsan') WHERE user='root';
+UPDATE mysql.user SET authentication_string=PASSWORD('rootsan') WHERE user='root';
+FLUSH PRIVILEGES;
+exit;
+killall -9 mysqld_safe
+killall  mysqld
+****
