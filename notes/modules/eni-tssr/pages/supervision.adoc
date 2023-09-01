@@ -95,14 +95,27 @@ Vérifie si l'hôte est en vie
 
 /usr/lib64/nagios/plugins/check_smtp -H 172.16.1.20  -C 'HELO' -R 'HELO' -w 5 -c 10
 
-  /usr/lib64/nagios/plugins/check_dns -H dns1.sniper.lunette -q A
 
+=== Check Dns reccord A
 
-/usr/lib/centreon/plugins/centreon_linux_snmp.pl --plugin os::linux::snmp::plugin --mode storage --hostname 172.16.1.254 --snmp-community sniper --snmp-version 2 --warning-usage 60 --critical-usage 80 
+/usr/lib64/nagios/plugins/check_dns -H dns1. -q A
+$USER1$/check_dns  -H $_SERVICEFQDN$ -q 'A' -a $_SERVICEIP$
 
+=== Check Dns reccord CNAME
+/usr/lib64/nagios/plugins/check_dns -H dns1.sniper.lunette -q A
 
+=== Cehck WEB
+/usr/lib64/nagios/plugins/check_http -H $_SERVICEFQDN_SITE$ -w $_SERVICEWARNING$ -c $_SERVICECRITIC$
+/usr/lib64/nagios/plugins/check_http www.pcp.fr -w 5 -c 10
+=== check smb
+
+$USER1$/check_disk_smb -H $HOSTNAME$ -s $_SERVICESHARE$ -a $HOSTADDRESS$
+
+$tssr014F@Eni1234!
 SRV-Mail : mysql (rootsan)
 julie@snip
+
+Centreon-Poller : centreon-engine (MDP : $Centre0n!)
 
 // cat <<EOF > /etc/centreon-gorgone/config.d/40-gorgoned.yaml
 cat <<EOF > /etc/centreon-gorgone/config.d/40-gorgoned.yaml
@@ -128,7 +141,9 @@ gorgone:
       command_file: "/var/lib/centreon-engine/rw/centengine.cmd"
 
 EOF
-/usr/lib/centreon/plugins//centreon_centreon_central.pl --plugin=apps::centreon::local::plugin --hostname=192.168.1.10 --mode=broker-stats \
---broker-stats-file='/var/lib/centreon-engine/*-module-stats.json' --filter-name='' --warning-speed-events='' --critical-speed-events='' --warning-queued-events='' \
---critical-queued-events='' --warning-unacknowledged-events='' --critical-unacknowledged-events='' --warning-status='' \
---critical-status=%{type} eq output and %{queue_file_enabled} =~ /true | yes/i' --verbose --remote --ssh-option='-l=centreon
+
+Mot de passe centreon
+
+mysql -u centreon -p
+connect centreon;
+update contact_password SET password=$2y$10$ubq1hJ9z3YPXBhejjae.Ie9u3AcMrwFNImPhOnnkLmEoNtwRGwNrC WHERE id='1';
