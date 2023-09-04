@@ -52,7 +52,7 @@
 **** xref:Formation1/Chapitre-9/questionnaire.adoc[]
 **** xref:Formation1/Chapitre-9/examen-fin-chapitre.adoc[]
 *** Évaluation synthétique (chapitre 1 à 9)
-**** xref:Formation1/eval-synthetique-1/examen-blan-final.adoc[]
+**** xref:Formation1/eval-synthetique-1/examen-blanc-final.adoc[]
 **** xref:Formation1/eval-synthetique-1/examen-final.adoc[]
 **** xref:Formation1/eval-synthetique-1/eval-competences.adoc[]
 **** xref:Formation1/eval-synthetique-1/examen-final-certification.adoc[]
@@ -88,7 +88,7 @@
 *** Fin du cours
 **** xref:Formation1/Fin-Cours/commentaire_cours.adoc[]
 *** Évaluation synthétique (chapitres 10 à 14)
-**** xref:Formation1/eval-synthetique-2/examen-blan-final.adoc[]
+**** xref:Formation1/eval-synthetique-2/examen-blanc-final.adoc[]
 **** xref:Formation1/eval-synthetique-2/examen-final.adoc[]
 **** xref:Formation1/eval-synthetique-2/eval-competences.adoc[]
 **** xref:Formation1/eval-synthetique-2/examen-final-certification.adoc[]
