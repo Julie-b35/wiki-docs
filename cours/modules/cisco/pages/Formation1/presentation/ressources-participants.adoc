@@ -5,11 +5,15 @@
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 
-pass:[<div style="color: blue">]
-Utilisez ces ressources pour *faire avancer* votre carrière :
+
+
+++++
+<div style="color: blue">
+Utilisez ces ressources pour <b>faire avancer</b> votre carrière :
 
 * Talent Bridge pour trouver le travail de vos rêves
 * Les réseaux sociaux pour entrer en contact avec des homologues et profiter de leur expérience
 * Le simulateur de réseau Packet Tracer 
 * Bons de réduction Cisco sur les examens de certification
-pass:[</div>]
+[</div>]
+++++
