@@ -16,9 +16,14 @@ pass:[<span style="color: blue">]Utilisez ces ressources pour *faire avancer* vo
 
 == Packet Tracer
 
+Vous pouvez accéder au cours sur smartphone, tablette, ordinateur portable ou ordinateur de bureau. Cependant, les exercices Packet
+
+Tracer, tout comme un certain nombre d'autres activités, les questionnaires et les examens, s'affichent mieux sur PC.
+
 [cols="~,~"]
 |===
-a| | 
+a| https://www.netacad.com/portal//resources/packet-tracer[Ressource Packet tracer] | 	Packet Tracer simule le fonctionnement interne d'un réseau. Téléchargez et installez la dernière version de Packet Tracer.
+a| https://www.netacad.com/courses/packet-tracer[Cours d'introduction à Packet Tracer]| Si vous ne connaissez pas Packet Tracer, suivez ce rapide cours en ligne. Il est gratuit !
 |===
 
 == Participer aux communautés
