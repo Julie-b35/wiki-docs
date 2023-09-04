@@ -1,7 +1,7 @@
 = Chapitre 7 : Entraînement sur les Termes et Concepts
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-7/lancer-chapitre.adoc[Lancer le chapitre 7]
+* Point suivant -> xref:Formation1/Chapitre-7/questionnaire.adoc[Questionnaire sur le chapitre 7]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 
