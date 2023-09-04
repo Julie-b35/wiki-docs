@@ -25,7 +25,10 @@ a| |
 
 [cols="~,~"]
 |===
-a| image::https://lms.netacad.com/pluginfile.php/132748015/mod_page/content/10/facebook.jpg[http://www.facebook.com/cisconetworkingacademy] | 	Interagir avec d'autres étudiants Networking Academy du monde entier. 
+a| 
+.cisconetworkingacademy
+[#img-cisconetworkingacademy,link=http://www.facebook.com/cisconetworkingacademy]
+image::https://lms.netacad.com/pluginfile.php/132748015/mod_page/content/10/facebook.jpg[cisconetworkingacademy,48,48] | 	Interagir avec d'autres étudiants Networking Academy du monde entier. 
 a|  | 	Entrez en contact avec des pairs.
 |===
 
