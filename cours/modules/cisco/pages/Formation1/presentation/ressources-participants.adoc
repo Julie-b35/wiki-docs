@@ -13,3 +13,41 @@ pass:[<span style="color: blue">]Utilisez ces ressources pour *faire avancer* vo
 * pass:[<span style="color: blue">]Les réseaux sociaux pour entrer en contact avec des homologues et profiter de leur expériencepass:[</span>]
 * pass:[<span style="color: blue">]Le simulateur de réseau Packet Tracer pass:[</span>]
 * pass:[<span style="color: blue">]Bons de réduction Cisco sur les examens de certificationpass:[</span>]
+
+== Packet Tracer
+
+[cols="~,~"]
+|===
+a| | 
+|===
+
+== Participer aux communautés
+
+[cols="~,~"]
+|===
+a| image::https://lms.netacad.com/pluginfile.php/132748015/mod_page/content/10/facebook.jpg[http://www.facebook.com/cisconetworkingacademy] | 	Interagir avec d'autres étudiants Networking Academy du monde entier. 
+a|  | 	Entrez en contact avec des pairs.
+|===
+
+== Navigation dans le cours
+
+[cols="~,~"]
+|===
+a| https://static-course-assets.s3.amazonaws.com/help/help2/index.html[Tutoriel de navigation] | Découvrez comment naviguer dans ce cours.
+|===
+
+== Trouvez un emploi!
+
+[cols="~,~"]
+|===
+a| https://www.netacad.com/careers/career-advice[Conseils professionnels] | 	Accédez à des ressources professionnelles spécialement conçues pour aider les étudiants NetAcad à trouver un emploi dans le secteur.
+a| https://www.netacad.com/portal//careers/talent-bridge-program[Talent bridge] | Inscrivez-vous dès maintenant sur Talent Bridge. Trouvez des offres d'emploi exceptionnelles avec Cisco et les partenaires Cisco.
+a| http://bit.ly/nacourses2vd[Certufucations et bons de réduction] | 	Réalisez des économies grâce à des bons de réduction pour les examens de certification Cisco !
+|===
+
+== Plus de cours
+
+[cols="~,~"]
+|===
+a| https://www.netacad.com/careers/career-advice[Catalogue des cours] | Choisissez un cours, mettez vos connaissances en pratique et devenez un professionnel de l'IT.
+|===
