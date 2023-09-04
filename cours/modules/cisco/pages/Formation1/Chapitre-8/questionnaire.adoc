@@ -1,7 +1,7 @@
 = Questionnaire sur le chapitre 8
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-8/entrainement-termes-conceptes.adoc[Chapitre 8 : Entraînement sur les Termes et Concepts]
+* Point suivant -> xref:Formation1/Chapitre-8/examen-fin-chapitre.adoc[Examen de fin de chapitre 8]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

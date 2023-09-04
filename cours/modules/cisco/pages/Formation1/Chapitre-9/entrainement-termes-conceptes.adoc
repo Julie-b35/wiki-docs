@@ -1,7 +1,7 @@
 = Chapitre 9 : Entraînement sur les Termes et Concepts
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-9/lancer-chapitre.adoc[Lancer le chapitre 9]
+* Point suivant -> xref:Formation1/Chapitre-9/questionnaire.adoc[Questionnaire sur le chapitre 9]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

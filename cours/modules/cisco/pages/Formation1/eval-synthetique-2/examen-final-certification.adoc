@@ -1,7 +1,7 @@
 = Examen blanc de certification A+ 220-1001
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/eval-synthetique-2/eval-competences.adoc[Évaluation des compétences (chapitres 10 à 14)]
+* Point suivant -> xref:Formation1/preparerVotreAvenir/ressource_pro.adoc[Des ressources professionnelles et des opportunités d'emploi]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

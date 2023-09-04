@@ -1,7 +1,7 @@
 = Lancer le chapitre 9
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-8/examen-controle-certification.adoc[Exemen de contrôle de certification n°3 (chapitre 7 et 8)]
+* Point suivant -> xref:Formation1/Chapitre-9/entrainement-termes-conceptes.adoc[Chapitre 9 : Entraînement sur les Termes et Concepts]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

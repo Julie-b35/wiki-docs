@@ -1,7 +1,6 @@
 = Des ressources professionnelles et des opportunités d'emploi
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/eval-synthetique-1/examen-final-certification.adoc[Examen final de certification A+ 220-1001]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

@@ -1,7 +1,7 @@
 = Évaluation des compétences (chapitre 1 à 9)
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/eval-synthetique-1/examen-final.adoc[Examen final (chapitre 1 à 9)]
+* Point suivant -> xref:Formation1/eval-synthetique-1/examen-final-certification.adoc[Examen blanc de certification A+ 220-1001]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

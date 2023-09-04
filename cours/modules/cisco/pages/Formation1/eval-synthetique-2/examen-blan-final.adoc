@@ -1,8 +1,0 @@
-= Examen blan final (chapitres 10 à 14)
-
-* Point précédent -> 
-* Point suivant -> 
-
-xref:Formation1/index.adoc[Retour Récapitulatif Formation]
-
-== Contenus

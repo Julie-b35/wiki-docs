@@ -1,0 +1,8 @@
+= Examen blanc final (chapitres 1 à 9)
+
+* Point précédent -> xref:Formation1/Chapitre-9/examen-fin-chapitre.adoc[Examen de fin de chapitre 9]
+* Point suivant -> xref:Formation1/eval-synthetique-1/examen-final.adoc[Examen final (chapitre 1 à 9)]
+
+xref:Formation1/index.adoc[Retour Récapitulatif Formation]
+
+== Contenus

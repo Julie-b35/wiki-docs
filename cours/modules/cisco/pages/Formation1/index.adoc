@@ -73,7 +73,7 @@
 * xref:Formation1/Chapitre-9/examen-fin-chapitre.adoc[Examen de fin de chapitre 9]
 
 == Évaluation synthétique (chapitre 1 à 9)
-* xref:Formation1/eval-synthetique-1/examen-blan-final.adoc[Examen blan final (chapitres 1 à 9)]
+* xref:Formation1/eval-synthetique-1/examen-blanc-final.adoc[Examen blanc final (chapitres 1 à 9)]
 * xref:Formation1/eval-synthetique-1/examen-final.adoc[Examen final (chapitre 1 à 9)]
 * xref:Formation1/eval-synthetique-1/eval-competences.adoc[Évaluation des compétences (chapitre 1 à 9)]
 * xref:Formation1/eval-synthetique-1/examen-final-certification.adoc[Examen blanc de certification A+ 220-1001]
@@ -124,7 +124,7 @@
 * xref:Formation1/Fin-Cours/commentaire_cours.adoc[Commentaire sur le cours]
 
 == Évaluation synthétique (chapitres 10 à 14)
-* xref:Formation1/eval-synthetique-2/examen-blan-final.adoc[Examen blan final (chapitres 10 à 14)]
+* xref:Formation1/eval-synthetique-2/examen-blanc-final.adoc[Examen blanc final (chapitres 10 à 14)]
 * xref:Formation1/eval-synthetique-2/examen-final.adoc[Examen final (chapitres 10 à 14)]
 * xref:Formation1/eval-synthetique-2/eval-competences.adoc[Évaluation des compétences (chapitres 10 à 14)]
 * xref:Formation1/eval-synthetique-1/examen-final-certification.adoc[Examen final de certification A+ 220-1001]

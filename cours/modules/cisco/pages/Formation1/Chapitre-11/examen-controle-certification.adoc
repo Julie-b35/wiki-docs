@@ -1,7 +1,7 @@
 = Exemen de contrôle de certification n°4 (chapitre 10 et 11)
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-11/examen-fin-chapitre.adoc[Examen de fin de chapitre 11]
+* Point suivant -> xref:Formation1/Chapitre-12/lancer-chapitre.adoc[Lancer le chapitre 12]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

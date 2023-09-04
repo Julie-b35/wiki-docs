@@ -1,7 +1,7 @@
 = Chapitre 13 : Entraînement sur les Termes et Concepts
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-13/lancer-chapitre.adoc[Lancer le chapitre 13]
+* Point suivant -> xref:Formation1/Chapitre-13/questionnaire.adoc[Questionnaire sur le chapitre 13]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

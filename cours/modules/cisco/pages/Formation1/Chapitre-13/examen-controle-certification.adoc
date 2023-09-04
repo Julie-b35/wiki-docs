@@ -1,7 +1,7 @@
 = Exemen de contrôle de certification n°5 (chapitre 12 et 13)
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-13/examen-fin-chapitre.adoc[Examen de fin de chapitre 13]
+* Point suivant -> xref:Formation1/Chapitre-14/lancer-chapitre.adoc[Lancer le chapitre 14]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

@@ -1,7 +1,7 @@
 = Examen final (chapitres 10 à 14)
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/eval-synthetique-1/examen-blanc-final.adoc[Examen blanc final (chapitres 1 à 9)]
+* Point suivant -> xref:Formation1/eval-synthetique-1/eval-competences.adoc[Évaluation des compétences (chapitre 1 à 9)]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

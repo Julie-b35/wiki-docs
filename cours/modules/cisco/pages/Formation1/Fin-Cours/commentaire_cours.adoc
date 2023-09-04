@@ -1,7 +1,7 @@
 = Commentaire sur le cours
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-14/examen-fin-chapitre.adoc[Examen de fin de chapitre 14]
+* Point suivant -> xref:Formation1/eval-synthetique-2/examen-blanc-final.adoc[Examen blanc final (chapitres 10 à 14)]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

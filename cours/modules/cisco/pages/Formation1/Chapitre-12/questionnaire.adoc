@@ -1,7 +1,7 @@
 = Questionnaire sur le chapitre 12
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-12/entrainement-termes-conceptes.adoc[Chapitre 12 : Entraînement sur les Termes et Concepts]
+* Point suivant -> xref:Formation1/Chapitre-12/examen-fin-chapitre.adoc[Examen de fin de chapitre 12]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

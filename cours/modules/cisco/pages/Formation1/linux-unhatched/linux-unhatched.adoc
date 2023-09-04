@@ -1,7 +1,7 @@
 = NDG Linux Unhatched
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-12/examen-fin-chapitre.adoc[Examen de fin de chapitre 12]
+* Point suivant -> xref:Formation1/Chapitre-13/lancer-chapitre.adoc[Lancer le chapitre 13]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

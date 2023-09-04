@@ -1,7 +1,7 @@
 = Examen de fin de chapitre 12
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/Chapitre-12/questionnaire.adoc[Questionnaire sur le chapitre 12]
+* Point suivant -> xref:Formation1/linux-unhatched/linux-unhatched.adoc[NDG Linux Unhatched]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 

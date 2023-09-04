@@ -1,7 +1,7 @@
 = Lancer le chapitre 13
 
-* Point précédent -> 
-* Point suivant -> 
+* Point précédent -> xref:Formation1/linux-unhatched/linux-unhatched.adoc[NDG Linux Unhatched]
+* Point suivant -> xref:Formation1/Chapitre-13/entrainement-termes-conceptes.adoc[Chapitre 13 : Entraînement sur les Termes et Concepts]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 
