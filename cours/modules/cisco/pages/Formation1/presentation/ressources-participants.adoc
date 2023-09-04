@@ -7,13 +7,9 @@ xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 
 
 
-++++
-<div style="color: blue">
-Utilisez ces ressources pour <b>faire avancer</b> votre carrière :
+pass:[<span style="color: blue">]Utilisez ces ressources pour *faire avancer* votre carrière :pass:[</span>]
 
-* Talent Bridge pour trouver le travail de vos rêves
-* Les réseaux sociaux pour entrer en contact avec des homologues et profiter de leur expérience
-* Le simulateur de réseau Packet Tracer 
-* Bons de réduction Cisco sur les examens de certification
-[</div>]
-++++
+* pass:[<span style="color: blue">]Talent Bridge pour trouver le travail de vos rêvespass:[</span>]
+* pass:[<span style="color: blue">]Les réseaux sociaux pour entrer en contact avec des homologues et profiter de leur expériencepass:[</span>]
+* pass:[<span style="color: blue">]Le simulateur de réseau Packet Tracer pass:[</span>]
+* pass:[<span style="color: blue">]Bons de réduction Cisco sur les examens de certificationpass:[</span>]
