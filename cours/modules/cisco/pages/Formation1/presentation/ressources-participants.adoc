@@ -26,8 +26,11 @@ a| |
 [cols="~,~"]
 |===
 a| 
-image::https://lms.netacad.com/pluginfile.php/132748015/mod_page/content/10/facebook.jpg[cisconetworkingacademy,48,48,link=link=http://www.facebook.com/cisconetworkingacademy] | 	Interagir avec d'autres étudiants Networking Academy du monde entier. 
-a|  | 	Entrez en contact avec des pairs.
+image::https://lms.netacad.com/pluginfile.php/132748015/mod_page/content/10/facebook.jpg[cisconetworkingacademy,48,48,link=link=http://www.facebook.com/cisconetworkingacademy] 
+| 	Interagir avec d'autres étudiants Networking Academy du monde entier. 
+a| 
+image::https://lms.netacad.com/pluginfile.php/132748015/mod_page/content/10/LinkedIn.jpg[48,48,link=https://www.linkedin.com/school/cisco-networking-academy1/]
+ | 	Entrez en contact avec des pairs.
 |===
 
 == Navigation dans le cours
