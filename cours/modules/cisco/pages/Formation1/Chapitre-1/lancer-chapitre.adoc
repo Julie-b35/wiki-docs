@@ -1,8 +1,21 @@
-= Lancer le chapitre 1
+= Chapitre 1
 
 * Point précédent -> xref:Formation1/presentation/ressources-participants.adoc[Ressources pour les participants]
 * Point suivant -> xref:Formation1/Chapitre-1/entrainement-termes-conceptes.adoc[Chapitre 1 : Entraînement sur les Termes et Concepts]
 
 xref:Formation1/index.adoc[Retour Récapitulatif Formation]
 
-== Contenus
+== Présentation de  l'ordinateur personnel
+
+=== Introduction
+
+==== Bienvenue
+
+Les personnes se préparent à travailler dans les domaines de la technologie de l'information en obtenant des certifications, en recherchant des formations formelles et en effectuant des stages. Dans ce chapitre, vous allez découvrir tous les composants qui composent un PC en commençant par le boîtier qui abrite les composants internes. Les ordinateurs, les composants de l'ordinateur et les périphériques présentent tous des dangers susceptibles d'entraîner des blessures graves. Ce chapitre commence donc par aborder les consignes de sécurité que vous devez suivre pour éviter les incendies électriques, les blessures et autres dangers lorsque vous manipulez les composants internes d'un ordinateur. Vous recevrez également des informations sur les décharges électrostatiques (ESD) et analyserez la façon dont elles peuvent endommager l'équipement si celui-ci n'est pas correctement déchargé.
+
+Ce chapitre vous présente tous les composants à l'intérieur du boîtier d'un ordinateur, en commençant par la carte mère. Vous découvrirez les composants internes connectés à la carte mère, notamment le module d'alimentation, le processeur, la mémoire RAM, les cartes d'extension et les lecteurs de stockage. Vous apprendrez par ailleurs à identifier les connecteurs, les ports et les câbles permettant de raccorder physiquement les périphériques à la carte mère.
+
+Il est non seulement important de se familiariser avec les composants de l'ordinateur, mais aussi de développer des compétences pratiques. Dans ce chapitre, vous apprendrez à démonter un ordinateur afin de connaître tous les composants et la manière dont ils sont connectés.
+
+=== Ordinateurs personnels
+
