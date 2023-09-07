@@ -1,4 +1,0 @@
-= Installation de PhpMyAdmin
-:navtitle: Install PhpMyAdmin
-
-Contenus
