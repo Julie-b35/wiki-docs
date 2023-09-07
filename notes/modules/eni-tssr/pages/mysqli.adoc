@@ -12,8 +12,8 @@ mysqld_safe --skip-grant-tables &
 
 [source,sql]
 ----
-UPDATE mysql.user SET password=PASSWORD('rootsan') WHERE user='root';
-UPDATE mysql.user SET authentication_string=PASSWORD('rootsan') WHERE user='root';
+UPDATE mysql.user SET password=PASSWORD('mot_de_passe') WHERE user='root';
+UPDATE mysql.user SET authentication_string=PASSWORD('mot_de_passe') WHERE user='root';
 FLUSH PRIVILEGES;
 exit;
 ----
