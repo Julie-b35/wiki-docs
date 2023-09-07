@@ -8,8 +8,6 @@
 ** xref:Serveurs/deploiement.adoc[]
 ** xref:Serveurs/GPO.adoc[]
 ** xref:Serveurs/Procédure installation sur Debian 10.adoc[]
-** xref:Serveurs/ServeurMail_GLPI.adoc[]
-** xref:Serveurs/SL-PXE.adoc[]
 ** xref:Serveurs/SRV-DC.adoc[]
 ** xref:Serveurs/SW-2022-DC.adoc[]
 * Service_GLPI

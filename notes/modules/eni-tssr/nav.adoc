@@ -1,2 +1,6 @@
-* xref:outils-collaboratifs.adoc[]
 * xref:msp2.adoc[]
+* xref:glpi.adoc[]
+* xref:mysqli.adoc[]
+* xref:network-phone-ip.adoc[]
+* xref:supervision.adoc[]
+* xref:wds.adoc[]
