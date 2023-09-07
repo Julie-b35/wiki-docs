@@ -1,3 +1,7 @@
+= GLPI (Gestionnaire d'incident)
+
+
+== Ordre pour implmenter des SLA
 1 . Gabarit ticket : http://glpi9.olympus.gr/front/tickettemplate.php
 2. Catégorie ITIL : http://glpi9.olympus.gr/front/itilcategory.php
 3. Liason catégorie au gabarit : 
@@ -7,12 +11,12 @@
 7. Règle métier.
 
 
---------------   Mysql --------------
+== Requete SQL
+
+[source,sql]
+----
 SELECT * from glpi_calendars;
 SHOW COLUMNS FROM glpi_calendars;
  SELECT name,completename from glpi_itilcategories WHeRE completename<>name;
 SELECT c.name AS nom, l.name AS lieu FROM `glpi_computers` AS c JOIN `glpi_locations` AS l ON c.locations_id = l.id;
-
-
-1. Data injection -> Modèle 
-2. 
+----
