@@ -1,1 +1,11 @@
 ﻿= Notes sur wds
+
+https://www.ntweekly.com/2017/08/14/how-to-configure-wds-2016-client-naming-policy/
+https://learn.microsoft.com/fr-fr/mem/configmgr/mdt/
+
+Supprime les device approuvé.
+WDSUTIL /delete-AutoAddDevices /devicetype:ApprovedDevices
+
+
+== MDT
+

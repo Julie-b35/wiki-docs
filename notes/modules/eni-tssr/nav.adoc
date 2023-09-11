@@ -4,3 +4,4 @@
 * xref:network-phone-ip.adoc[]
 * xref:supervision.adoc[]
 * xref:wds.adoc[]
+* xref:cloud.adoc[]
