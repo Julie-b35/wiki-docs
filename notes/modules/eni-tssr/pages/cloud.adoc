@@ -1,1 +1,41 @@
-﻿
+﻿= Cloud et Microsoft 365
+
+== Qu'est ce que le cloud.
+
+Ce nes pas un cloud, c'est juste l'ordinateur de quelqu'un
+
+* Un service cloud est un service à la demande.
+* Le cloud est un service mesurable.
+* Mutualisation des ressources
+* Élasticité des ressources (Allouer dynamiquement des ressource)
+
+=== Service Cloud
+* SaaS : Utilisateur finaux
+* PaaS : Développeur
+* IaaS : Exploitant informatique
+
+=== Mode d'hébergement
+
+* cloud public
+* Cloud privé
+* Cloud hybride (cloud privé + public)
+
+== IaaS (Infrastructure As A Service)
+
+* Couches technique prises en charge par le fournisseur cloud
+
+(OS, Serveur,Stockage) ->  Fournit des instances d'OS et l'infrastructure sous-jacente.
+(Application, Contexte d'éxécution, Middleware) -> Les middlewares et applications sont à la charge du client
+
+Exemple de cas d'usage
+* Fourniture de VM temporaires
+* Augmentattion du stockage d'une VM
+
+==
+
+ROI = Retour sur Investissement (4 ans)
+
+
+== Office 365
+
+=== Credential
