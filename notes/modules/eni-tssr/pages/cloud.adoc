@@ -39,3 +39,13 @@ ROI = Retour sur Investissement (4 ans)
 == Office 365
 
 === Credential
+
+ID = admin@WWLx100068.onmicrosoft.com
+MDP = 7n~^02LbH(%xMj8V
+
+rtssr014f-6.lab-eni.fr
+
+admin@rtssr014f-6.lab-eni.fr
+sacha@rtssr014f-6.lab-eni.fr ($R00tsan!)
+
+Install-Module MSOnline
