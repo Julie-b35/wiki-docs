@@ -49,3 +49,11 @@ admin@rtssr014f-6.lab-eni.fr
 sacha@rtssr014f-6.lab-eni.fr ($R00tsan!)
 
 Install-Module MSOnline
+
+=== Renomer un controleur de domaine
+
+netdom computername WIN-FMNM4E6BMD8.cheouam6.local /add:SRV-DC01.cheouam6.local
+netdom computername WIN-FMNM4E6BMD8.cheouam6.local /makeprimary:SRV-DC01.cheouam6.local
+
+netdom computername SRV-DC01.cheouam6.local /enumerate
+netdom computername SRV-DC01.cheouam6.local /remove:WIN-FMNM4E6BMD8.cheouam6.local
