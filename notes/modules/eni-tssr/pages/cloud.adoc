@@ -20,6 +20,17 @@ Ce nes pas un cloud, c'est juste l'ordinateur de quelqu'un
 * Cloud privé
 * Cloud hybride (cloud privé + public)
 
+* MSA (Soumission) -> SMTP [2525 (Banni)], [587 (TLS)], [465 (SSL)]
+* MTA  (Transport) -> SMTP 25 / 
+* MUA - MDA : 
+* MUA/MSA -> Outlook
+* MSA
+
+POP3 110/995(TLS/SSL)
+IMAPV4 : 143 / 993(TLS/SSL)
+[Microsoft] MAPI 443 (HTTPS)
+[Microsoft] ActiveSync : (HTTPS)
+
 == IaaS (Infrastructure As A Service)
 
 * Couches technique prises en charge par le fournisseur cloud
