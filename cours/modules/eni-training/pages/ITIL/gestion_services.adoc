@@ -3,3 +3,29 @@
 
 == Objectifs
 
+* Définir un service
+* Connaitre les acteur d'un service
+* Défini un processus
+* Connaitre les fonctions
+* Appréhender la notion de rôle
+
+=== Présentation d'ITIL
+
+* ITIL v3 propose une évolution de la gestion de projet vers la gestion de service qui est plus orientée client
+
+
+.Un Projet
+****
+* C'est la capacité à implémenter de nouvelle fonctionnalités par rapport à:
+** De nouveaux besoins
+** Une nouvelle législation
+** Une avancée technologique
+****
+
+.Un service
+****
+* C'est la capacité à produire le service demandé en respectant trois critères importants:
+** Aligner les services informatiques sur les besoins des clients.
+** Améliorer la qualité des services informatiques
+** Maîtriser les coûts de fourniture
+****
