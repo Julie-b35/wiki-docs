@@ -1,0 +1,2 @@
+﻿= Module 02 - Les publications centrales - Stratégie et conception des services
+:navtitle: Les publications centrales - Stratégie et conception des services
