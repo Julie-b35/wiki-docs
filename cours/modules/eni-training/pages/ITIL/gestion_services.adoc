@@ -1,6 +1,13 @@
 ﻿= Module 01 - La Gestion des services
 :navtitle: La Gestion des services
 
+== Vocabulaire
+
+* DSI = Directeur des systèmes d'information
+* SI = Systèmes d'information
+* IT Service Provider = Fournisseur de services informatiques
+* Contrat SLA = Contrat Service-level agreement
+
 == Objectifs
 
 * Définir un service
@@ -9,7 +16,7 @@
 * Connaitre les fonctions
 * Appréhender la notion de rôle
 
-=== Présentation d'ITIL
+== Présentation d'ITIL
 
 * ITIL v3 propose une évolution de la gestion de projet vers la gestion de service qui est plus orientée client
 
@@ -20,12 +27,115 @@
 ** De nouveaux besoins
 ** Une nouvelle législation
 ** Une avancée technologique
+
+[NOTE]
+====
+Une projet aura toujours : 
+* Une date de début
+* Une date de fin
+* Et des jalons à respecter
+
+*Jalon : https://www.manager-go.com/gestion-de-projet/glossaire/jalon
+====
 ****
 
 .Un service
 ****
 * C'est la capacité à produire le service demandé en respectant trois critères importants:
-** Aligner les services informatiques sur les besoins des clients.
+** Aligner les services informatiques sur les besoins des clients. 
+*** Prendre en comptes ce que veuxlent les clients
 ** Améliorer la qualité des services informatiques
-** Maîtriser les coûts de fourniture
+*** Au niveau d'itil on essaie d'avoir un regard critique et d'évaluer toujours la fourniture des services par rapport à ce que demandes les clients.
+** Maîtriser les coûts de fourniture 
+*** CAD : à tout moment un service peut évoluer pour couté moins chère au niveau de la DSI et au niveau du client.
 ****
+
+== Définition
+
+Un *service* est l'ensemble des moyens mis en oeuvre pour apporter à un client *de la valeur* sans qu'il en support ni les coût ni les risques
+
+[NOTE]
+====
+Le client quand il achète un service, il sait combien sa va lui couté, il sait les risques qu'il va prendre.
+
+Les risques vont être évalués, étudié, et ont saura comment faire pour éviter que le client perdes des informations.
+====
+
+Un *service* est une application installée sur une infrastructure avec :
+
+* Une docuemntation associé (important)
+* Une formation adpaté
+* Un support mis en place
+* De l'assistance aux utilisateurs
+[NOTE]
+====
+Au niveau des 5 ouvrage que l'ont vois niveau ITIL
+Il y aura toujours la création de la documentation pour savoir : comment on doit faire, comment ont doit procéder.
+
+Le support doit être formés, être au courant des nouveauté, mais aussi le support et l'information vont concerné les autre utilisateurs de l'entreprise ceux auquel le support interviens.
+====
+
+Un *service* est l'engagement sur le résultat : 
+
+* Face au client
+* Face au risque
+* En assumant les risque
+
+IMPORTANT: Un service fournis toujours de la valeur
+
+== Les 2 conditions requises pour créer de la valeur
+
+=== *Utilité* (dimension de la prestation)
+
+* La raison d'être d'un service
+** Amélioration des performances
+** Dépassement des contraintes
+** Ou les deux
+
+=== *Garantie* (utilisabilité)
+
+* La garantie est l'assurance, pour le client, que le services va remplir les exigences de niveau de qualité contractualisé (condition, résultats, lieu, délais et moment)
+* C'est le niveau d'usage dont le client et ses utilisateurs ont besoin
+* Elle doit respecter :
+** Les heures d'ouverture
+** La disponibilité
+** La performance
+** La continuté de service
+** La sécurité
+
+image::itil/creationDeValeur.png[]
+
+*L'utilité du service* doit améliorer les performance ou supprimer des contraintes, le service va donc être considéré comme *Utile*.
+*Et* pour qu'il soit *utilisable* il faut que :
+
+* La capacité sois suffisante,
+* La disponibilité suffisante
+* Continuité suffisante
+* Sécurité/garantie suffisante
+
+Ont va retrouver donc au niveau de la garantier avec la sécurité un service utilisable, et les deux combiné va *crée de la valeur au client.*
+
+== Les 5 acteur de services
+
+=== *Le fournisseur* de services informatiques (IT Service Provider)
+
+Entité responsable de la mise à disposition des services informatique
+
+==== Type I : Fournisseur interne
+
+Par exemple, l'organisation marketin d'une entreprise décide de mettre en place chez elle une équipe informatique chargée de gérer l'informatique qu'elle utilise.
+
+==== Type II : Fournisseur de services partagés
+
+C'est le cas d'une direction informatique ayant pour clients les différentes organisation de l'entreprise (y compris elle-même).
+
+==== Type III : Fournisseur externe
+
+Ce type de fournisseur propose ses services à toutes les entreprises intéressées.
+
+=== Le client
+
+Personne ou organisation bénéficiaire finale d'un service, comptable des résultats
+
+* Il est le donneur d'ordre
+* Il est autorisé à sirgner un contrat (SLA)
