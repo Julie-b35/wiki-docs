@@ -1,0 +1,5 @@
+﻿= Mise en plage GLPI
+:navtitle: GLPI
+
+Mise en place de GLPI afin de gérer les incidents et demande pendant le stage à la maison de quartie la touche
+

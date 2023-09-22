@@ -7,6 +7,7 @@
 * SI = Systèmes d'information
 * IT Service Provider = Fournisseur de services informatiques
 * Contrat SLA = Contrat Service-level agreement
+* OLA =  Operationnal Level Agreement
 
 == Objectifs
 
@@ -31,6 +32,7 @@
 [NOTE]
 ====
 Une projet aura toujours : 
+
 * Une date de début
 * Une date de fin
 * Et des jalons à respecter
@@ -67,6 +69,7 @@ Un *service* est une application installée sur une infrastructure avec :
 * Une formation adpaté
 * Un support mis en place
 * De l'assistance aux utilisateurs
+
 [NOTE]
 ====
 Au niveau des 5 ouvrage que l'ont vois niveau ITIL
@@ -115,7 +118,7 @@ image::itil/creationDeValeur.png[]
 
 Ont va retrouver donc au niveau de la garantier avec la sécurité un service utilisable, et les deux combiné va *crée de la valeur au client.*
 
-== Les 5 acteur de services
+== Les 5 acteurs de services
 
 === *Le fournisseur* de services informatiques (IT Service Provider)
 
@@ -138,4 +141,62 @@ Ce type de fournisseur propose ses services à toutes les entreprises intéress�
 Personne ou organisation bénéficiaire finale d'un service, comptable des résultats
 
 * Il est le donneur d'ordre
-* Il est autorisé à sirgner un contrat (SLA)
+* Il est autorisé à sirgner un contrat (SLA) pourtant sur la fourniture de service informatique
+* Il va exprimer les besoins métier
+** Négocier le service
+** Valider la solution
+** Payer la solution et le service
+* Il est le représentant des utilisateurs
+* Il a une relation particulière avec la DSI
+
+=== L'utilisateur (collaborateur du client)
+
+Personne qui utilise un système informatique
+
+* Elle utilise les services informatiques au quotidien pour son activité professionnelle
+* Ile remonte ses exigences auprès du client
+* Il ne paye pas l'utilisation d'un service
+* Il contacte la DSI par l'intermédiaire du centre de services (helpdesk)
+
+=== Propriétaire de service (Service Owner - marketing)
+
+Entité responsable qui effectue le suivi du service informatique
+
+* Il est responsable de la définition du service et de sa mise en oeuvre
+* Il participe aux propositions d'amélioration du service
+* Il est responsable de la bonne mise en oeuvre des améliorations validées
+* Il représente le services auprès des clients
+* Il participe à la négociation des SLA (Service Level Agreement) et des OLA (Operationnal Level Agreement)
+* Il est un des destinataires pour les incidents majeurs lors des escalades
+* Il est responsable de la vie du service (évolution et fin du service, création de tableaux de bord)
+* Il s'assure que le service atteinge les objectifs
+
+=== Le gestionnaire de service
+
+Personne responsable de la mise en place de la démarche ITIL au sein de l'entreprise et de la vie du service
+
+* Il possède une position hiérarchique élevée pour être légitime
+* Il coordonne les activités des propriétaires de processus et des propriétaire de services
+* Il travaille en collaboration avec le gestionnaire de l'amélioration continue des services
+
+[NOTE]
+====
+Les 5 acteurs de services sont donc, le fournisseur, le client, l'utilisateur, le propriétaire de service, le gestionnaire de service
+====
+
+== Les 2 dispositions spécialisées au coeur d'ITIL
+
+* La gestion du service intègre : 
+** La planification
+** La mise en oeuvre
+** L'optimisation de la fourniture des services
+** Le support des services
+* Pour cela, il y a 2 dispositions spécialisées:
+** Des fonctions
+** Des processus
+
+== La notion de processus
+
+*Un processus* est une suite d'activités structurées et logiques poursuivant un objectif défini
+
+Il possède plusieurs caractéristiques:

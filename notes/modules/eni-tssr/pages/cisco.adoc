@@ -1,0 +1,6 @@
+﻿
+Composant controlant les communication et interraction entre processeur et composant CM (chipset)
+
+Notrthbridge : Ram,AGP ou PCI express, processeur, slot carte graphique
+
+Te
