@@ -11,3 +11,24 @@ Le proxy sera cloisonné dans un container.
 === Configuration du fichier 'Dockerfile'
 
 Création d'un dossier "proxy" afin d'y mettre en place un fichier de configuration et d'y déployer une image nginx qui fera office de reverse-proxy
+
+.création dossier contenant le projet reverse_proxy (nginx)
+[source,shell]
+----
+mkdir ~/reverse_proxy && cd ~/reverse_proxy
+vim ~/reverse_proxy/Dockerfile
+----
+
+.fichier "DockerFile"
+[source,yaml]
+====
+FROM nginx
+
+COPY ./default.conf /etc/nginx/conf.d/default.conf
+
+COPY ./backend-not-found.html /var/www/html/backend-not-found.html
+
+COPY ./includes/ /etc/nginx/includes/
+
+COPY ./ssl/ /etc/ssl/certs/nginx/
+====
