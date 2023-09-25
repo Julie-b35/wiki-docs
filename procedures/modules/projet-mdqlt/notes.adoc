@@ -1,0 +1,2 @@
+﻿Mise en place d'un ticket pendant le stage (GLPI sera hébergé sur mon serveur personnel) afin d'assister professionnel comme bénéficiaire de l'association.
+

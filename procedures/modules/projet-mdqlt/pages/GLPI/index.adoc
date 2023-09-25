@@ -1,5 +1,5 @@
 ﻿= Mise en plage GLPI
 :navtitle: GLPI
 
-Mise en place de GLPI afin de gérer les incidents et demande pendant le stage à la maison de quartie la touche
+Mise en place de GLPI afin de gérer les incidents et demande pendant le stage à la maison de quartier la touche, cependant hébergent plusieurs site web, je me vois contraint de mettre en place un link::http://vpn.jlab.ovh/procedures/1/projet-jlab/VPS/VPS-Wiki/reverse-proxy.html[reverse proxy]
 
