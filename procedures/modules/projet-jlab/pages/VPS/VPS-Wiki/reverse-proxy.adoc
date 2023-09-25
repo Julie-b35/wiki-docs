@@ -1,10 +1,13 @@
 ﻿= Mise en place d'un reverse proxy
 
-L'objectif de ce proxy est d'intercepter le trafic sur le port 80, puis de les rediriger vers le bon port du service concernée en fonction de la requete HTTP.
+L'objectif de ce proxy est d'intercepter le trafic sur le port 80, puis de les rediriger vers le bon port du service concernée en fonction de la requête HTTP, j'utiliserai pour cela nginx..
 
 == Gestion Docker
 
-Le proxy sera cloisoné dans un container.
+Le proxy sera cloisonné dans un container.
 
 == Procédure
 
+=== Configuration du fichier 'Dockerfile'
+
+Création d'un dossier "proxy" afin d'y mettre en place un fichier de configuration et d'y déployer une image nginx qui fera office de reverse-proxy

@@ -1,0 +1,5 @@
+﻿Cousin Philipe, Dépannage Iphone chez Free, impossible d'émettre d'appel, malgré la détection du réseau, de plus il n'y a pas internet.
+Procédure : Vérification des réglage (Donnée cellulaire, Voix et Donnée, Sélection du réseau, appli autorisé à utilisé les données cellulaire) -> rien à signaler.
+ - Incident Voix résolue en redémarrant l'iphone, néanmoins, internet est toujours out.
+ - Test d'un déploiement de mise à jour depuis un PC (Itunes) -> La capacité de l'iphone s'avère limite.
+ - Procédure de nettoyage d'application mais insuffisant. J'ai conseillé la personne de faire l'acquisition d'un disque dur externe afin d'y déposer ces fichier. -> dans le but de vider son disque et déployer la mise à jour et espéré résoudre le problème d'internet.
