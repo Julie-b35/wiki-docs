@@ -32,3 +32,28 @@ COPY ./includes/ /etc/nginx/includes/
 
 COPY ./ssl/ /etc/ssl/certs/nginx/
 ----
+
+Le fichier 'Dockerfile' copie à partir de l'image 'nginx', de plus il copie des fichiers local ayant comme destination le container 'reverse_proxy'
+
+
+=== Création du fichier 'backend-not-found.html'
+
+Création d'un fichier html renvoyant une erreur si aucun service web n'a été trouvé.
+
+[source,html]
+----
+<html>
+    <head>
+        <title>Reverse Proxy: Not Found!</title>
+    </head>
+    <body>
+        <h2>Reverse Proxy: Not Found!</h2>
+    </body>
+</html>
+----
+
+[NOTE]
+====
+Suivi tuto:
+https://phoenixnap.com/kb/docker-nginx-reverse-proxy[Nginx reverse proxy sur docker]
+====
