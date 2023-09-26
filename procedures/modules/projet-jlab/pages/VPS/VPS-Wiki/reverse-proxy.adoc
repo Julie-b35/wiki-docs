@@ -8,6 +8,21 @@ Le proxy sera cloisonné dans un container.
 
 == Procédure
 
+=== Emplacement
+
+La configuration du proxy ce trouve dans '*/srv/Web/reverse_proxy*'
+
+Fait partie du projet github : https://github.com/docker-jb35/reverse_proxy
+
+==== Process Clonage :
+
+[source,shell]
+----
+#pensez à ajouter le clef ssh
+mkdir /srv/web && cd /srv/web
+git clone git@github.com:docker-jb35/reverse_proxy.git
+----
+
 === Configuration du fichier 'Dockerfile'
 
 Création d'un dossier "reverse_proxy" afin d'y mettre en place un fichier de configuration et d'y déployer une image nginx qui fera office de reverse-proxy
@@ -15,8 +30,8 @@ Création d'un dossier "reverse_proxy" afin d'y mettre en place un fichier de co
 .création dossier contenant le projet reverse_proxy (nginx)
 [source,shell]
 ----
-mkdir ~/reverse_proxy && cd ~/reverse_proxy
-vim ~/reverse_proxy/Dockerfile
+cd /srv/web/reverse_proxy
+vim /srv/web/reverse_proxy/Dockerfile
 ----
 
 .fichier "DockerFile"
