@@ -1,1 +1,21 @@
-﻿
+﻿= Docker
+
+== présentation
+
+Docker est un *programme qui permet d’empaqueter une application et ses dépendances dans un conteneur isolé*. Ce conteneur peut être exécuté sur n’importe quel serveur, ce qui facilite le déploiement et la portabilité de l’application1. Docker offre aussi des outils pour simplifier la conception, l’envoi, et le contrôle des versions des images de conteneurs2. Docker utilise la technologie des conteneurs Linux, mais avec un système init simplifié.
+
+== Commandes
+
+.Liste les containers
+[source,shell]
+----
+#-a permet de liste tous les container même ceux pas lancer.
+docker container ls -a
+----
+
+.Supprime les containers inactif
+[source,shell]
+----
+docker container prune
+----
+
