@@ -1,2 +1,4 @@
-﻿Mise en place d'un ticket pendant le stage (GLPI sera hébergé sur mon serveur personnel) afin d'assister professionnel comme bénéficiaire de l'association. L'association n'ayant pas de besoin ressenti, cela sera pour un usage pro-personnel.
+﻿Mise en place du proxy (nginx) avec docker, migration du wiki qui était sur mon VPS (vpn)
+
+Mise en place d'un ticket pendant le stage (GLPI sera hébergé sur mon serveur personnel) afin d'assister professionnel comme bénéficiaire de l'association. L'association n'ayant pas de besoin ressenti, cela sera pour un usage pro-personnel.
 
