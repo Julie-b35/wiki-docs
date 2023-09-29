@@ -8,13 +8,13 @@ Le proxy sera cloisonné dans un container, tous comme les services web qui sont
 
 == Procédure
 
-La configuration du proxy ce trouve dans '*/srv/Web/reverse_proxy*'
+La configuration du proxy ce trouve dans '*/srv/web/reverse_proxy*'
 
 * Clonage du proxy depuis github
+* Création d'un fichier 'docker-compose.yml'
 * Configuration du fichier 'Dockerfile'
 * Création d'un fichier 'backend-not-found.html'
 * Configuration du fichier 'default.conf'
-* Création d'un fichier 'docker-compose.yml'
 * 
 
 Fait partie du projet github : https://github.com/docker-jb35/reverse_proxy
@@ -45,6 +45,12 @@ docker compose up (-d)
 docker compose down
 # Affiche les logs du services.
 docker compose logs
+
+#Lance un nouveau conteneur et execute la commande en passant par le scripte spécifié avec le mot clef : ENTRYPOINT
+docker compose run 
+
+#Executer une commande dans le même contexte du container lancé avec la commande 'docker compose up (-d)'
+docker compose exec
 ----
 
 .fichier docker-compose.yml
@@ -74,45 +80,34 @@ networks:
 
 ==== Configuration du fichier 'Dockerfile'
 
-L'image par défaut de nginx ne contient qu'un site par défaut, et il faut modifier son comportement, d'où l'intérêt du fichier de configuration 'Dockerfile' celui-ci va lancer différentes instructions pendant l'appel 'docker compose build'.
+L'image par défaut de nginx ne contient qu'un site par défaut, et il faut modifier son comportement, d'où l'intérêt du fichier de configuration 'Dockerfile' celui-ci va lancer différentes instructions pendant l'appel 'docker compose build' qui généra une image.
 
-
-.création dossier contenant le projet reverse_proxy (nginx)
-[source,shell]
-----
-cd /srv/web/reverse_proxy
-vim /srv/web/reverse_proxy/Dockerfile
-----
 
 .fichier "DockerFile"
 [source,yaml]
 ----
+# Récupère l'image nginx sur https://hub.docker.com/_/nginx
 FROM nginx
 
+# Copies le différents fichier de configuration nécessaire au bon fonctionnement de nginx
 COPY ./default.conf /etc/nginx/conf.d/default.conf
-
 COPY ./backend-not-found.html /var/www/html/backend-not-found.html
-
 COPY ./includes/ /etc/nginx/includes/
-
 COPY ./scriptes/entrypoint.sh /entrypoint.sh
 COPY ./scriptes/let-encrypt.sh /let-encrypt.sh
 
-
+# Création d'une variable d'environnement pour signaler à dpkg qu'il n'y a pas d’interaction
 ENV DEBIAN_FRONTEND=noninteractive
-
 RUN \
     chmod +x /entrypoint.sh && \
     chmod +x /let-encrypt.sh && \
     apt update -y && apt-get install certbot python3-certbot-nginx -y 
 
-
+# Point d'accès des commande lancée avec (run et exec)
 ENTRYPOINT [ "/entrypoint.sh" ]
 
 CMD [ "nginx", "-g", "daemon off;"  ]
 ----
-
-Le fichier 'Dockerfile' copie à partir de l'image 'nginx', de plus il copie des fichiers local ayant comme destination le container 'reverse_proxy'
 
 
 === Création du fichier 'backend-not-found.html'
