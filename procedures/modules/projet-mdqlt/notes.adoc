@@ -1,4 +1,13 @@
-﻿Mise en place du proxy (nginx) avec docker, migration du wiki qui était sur mon VPS (vpn)
+﻿25/09/2023
+Projet : Mise en place d'un ticket pendant le stage (GLPI sera hébergé sur mon serveur personnel) afin d'assister professionnel comme bénéficiaire de l'association. L'association n'ayant pas de besoin ressenti, cela sera pour un usage pro-personnel.
+Objectif : Finaliser ma recherche sur la mise en place d'un proxy sécurisé (ssl) avec lets'encrypte sur mon VPS: 
+Observation : J'ai refais quelque recherche sur docker, j'ai mis en place ma procédure sur mon wiki, je suis également intervenu auprès d'un bénéficiaire pour dépannée un iphone.
 
-Mise en place d'un ticket pendant le stage (GLPI sera hébergé sur mon serveur personnel) afin d'assister professionnel comme bénéficiaire de l'association. L'association n'ayant pas de besoin ressenti, cela sera pour un usage pro-personnel.
+26/09/2023 : 
+Objectif : Poursuivre la configuration du projet "reverse_proxy" cependant quelque surprise ce sont fait sentir avec lets'encrypt et docker (non-interactif). Je me suis aidé d'un github : https://github.com/nginx-le/nginx-le.
+Observation : Beaucoup de recherche pour fonctionner le proxy nginx avec lets'encrypt et docker, l'après midi à été dédié à l'assistance de personne en difficulté numérique.
 
+
+27/09/2023
+Objectif: Poursuite des test pour intégrer lets'encrypt à ce stade je me suis fait éjecter, cependant nginx à l'air fonctionnel poursuite de l'installation de GLPI
+Observation : J'ai poursuivis mes recherche et modifié la configuration du tuto : https://phoenixnap.com/kb/docker-nginx-reverse-proxy[]. La matinée à été dédié au bénéficiaire de l'espace numérique. 

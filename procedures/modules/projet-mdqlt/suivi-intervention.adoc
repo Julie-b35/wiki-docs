@@ -13,3 +13,7 @@ Constatation : Un autre compte à été mis en place au lieu de son compte princ
 L'application gmail trop vieux, selon moi, le portable est beaucoup trop vieux (8ans) pour supporter les mises à jour des application récentes.
 J'ai tenté de mettre à jour le portable cependant la mémoire est juste (8Go) pour palier à cette problématique j'ai désactiver et désinstaller les mises à jour d'application inutilisées.
 La meilleur des solution serais de remplacer le portable mais dans l'immédiat ignorer l'avertissement, (l'envoie et la réception fonctionne.)
+
+27/09/2023
+Conseil sur l'utilisation de gmail
+Problèmatique : j'ai réussi à supprimer le contact à partire d'autres contacts, il est bien supprimé, mais apparais toujours dans la liste de gmail.

@@ -45,7 +45,21 @@ COPY ./backend-not-found.html /var/www/html/backend-not-found.html
 
 COPY ./includes/ /etc/nginx/includes/
 
-COPY ./ssl/ /etc/ssl/certs/nginx/
+COPY ./scriptes/entrypoint.sh /entrypoint.sh
+COPY ./scriptes/let-encrypt.sh /let-encrypt.sh
+
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN \
+    chmod +x /entrypoint.sh && \
+    chmod +x /let-encrypt.sh && \
+    apt update -y && apt-get install certbot python3-certbot-nginx -y 
+
+
+ENTRYPOINT [ "/entrypoint.sh" ]
+
+CMD [ "nginx", "-g", "daemon off;"  ]
 ----
 
 Le fichier 'Dockerfile' copie à partir de l'image 'nginx', de plus il copie des fichiers local ayant comme destination le container 'reverse_proxy'
@@ -73,15 +87,23 @@ Créer le fichier *default.conf* dans le dossier *reverse_proxy*
 
 [source,conf]
 ----
-# Service Web wiki
+# Service Web Wiki.
+ log_format upstream_time '$remote_addr - $remote_user [$time_local] '
+                             '"$request" $status $body_bytes_sent '
+                             '"$http_referer" "$http_user_agent"'
+                             'rt=$request_time uct="$upstream_connect_time" uht="$upstream_header_time" urt="$upstream_response_time"';
+
 server {
     listen 80;
-    listen 443 ssl http2;
+    listen 443 ssl;
+    http2 on;
     server_name wiki.jlab.ovh;
 
     # Path for SSL config/key/certificate
-    ssl_certificate /etc/ssl/certs/nginx/example1.crt;
-    ssl_certificate_key /etc/ssl/certs/nginx/example1.key;
+
+    ssl_certificate         SSL_CERT_1;
+    ssl_certificate_key     SSL_KEY_1;
+    
     include /etc/nginx/includes/ssl.conf;
 
     location / {
@@ -89,19 +111,22 @@ server {
         proxy_pass http://wiki.jlab.ovh;
     }
 
-    access_log off;
-    error_log /var/log/nginx/error.log error;
+    access_log /var/log/nginx/access.log upstream_time;
+    error_log /var/log/nginx/error.log warn;
 }
 
 # Service Web GLPI
 server {
     listen 80;
-    #listen 443 ssl http2;
+    listen 443 ssl;
+    http2 on;
+
     server_name glpi.jlab.ovh;
 
     # Path for SSL config/key/certificate
-    ssl_certificate /etc/ssl/certs/nginx/example2.crt;
-    ssl_certificate_key /etc/ssl/certs/nginx/example2.key;
+    ssl_certificate         SSL_CERT_2;
+    ssl_certificate_key     SSL_KEY_2;
+    
     include /etc/nginx/includes/ssl.conf;
 
     location / {
@@ -109,8 +134,8 @@ server {
         proxy_pass http://glpi.jlab.ovh;
     }
 
-    access_log off;
-    error_log /var/log/nginx/error.log error;
+    access_log /var/log/nginx/access.log upstream_time;
+    error_log /var/log/nginx/error.log warn;
 }
 
 # Default
@@ -130,9 +155,8 @@ server {
         return 404;
     }
 
-    access_log off;
-    log_not_found off;
-    error_log /var/log/nginx/error.log error;
+    access_log /var/log/nginx/access.log upstream_time;
+    error_log /var/log/nginx/error.log warn;
 }
 ----
 
@@ -147,20 +171,21 @@ services:
   proxy:
     build: ./
     networks:
-     - glpi
      - wiki
+     - glpi
     ports:
      - 80:80
      - 443:443
-
+    volumes:
+     - ./var/ssl:/etc/ssl/certs/nginx/
+     - ./var/le:/etc/letsencrypt/
 networks:
-  glpi:
-    external: true
-    name: glpi_web
   wiki:
     external: true
-    name: wiki_web
-
+    name: wiki-antora_service_web
+  glpi:
+    external: true
+    name: glpi_glpi
 ----
 
 [NOTE]
