@@ -1,12 +1,19 @@
 ﻿= Mise en place d'un reverse proxy
 
-L'objectif de ce proxy est d'intercepter le trafic sur le port 80, puis de les rediriger vers le bon port du service concernée en fonction de la requête HTTP, j'utiliserai pour cela nginx..
+L'objectif de ce proxy est d'intercepter le trafic entrant des ports 80/443, puis de les rediriger vers un des conteneurs (docker) proposant le bon service concernée. j'utiliserai pour cela nginx qui analysera la reqête HTTP en fonction du FQDN proposé
 
 == Gestion Docker
 
-Le proxy sera cloisonné dans un container.
+Le proxy sera cloisonné dans un container, tous commes les services web qui sont chacun isolés dans leu conteneur respectif.
 
 == Procédure
+
+* Clonage du proxy
+* Configuration du fichier 'Dockerfile'
+* Création d'un fichier 'backend-not-found.html'
+* Configuration du fichier 'default.conf'
+* Création d'un fichier 'docker-compose.yml'
+* 
 
 === Emplacement
 
@@ -23,9 +30,24 @@ mkdir /srv/web && cd /srv/web
 git clone git@github.com:docker-jb35/reverse_proxy.git
 ----
 
-=== Configuration du fichier 'Dockerfile'
 
-Création d'un dossier "reverse_proxy" afin d'y mettre en place un fichier de configuration et d'y déployer une image nginx qui fera office de reverse-proxy
+=== Configuration de la partie Docker
+
+=== Configuration du fichier 'docker-compose.yml'
+
+Ce fichier va permettre d'automatiser l’exécution de docker grâce à ses 3 commandes.
+
+[source,shell]
+----
+docker composer build
+docker compose up (-d)
+docker compose down
+----
+
+==== Configuration du fichier 'Dockerfile'
+
+L'image par défaut de nginx ne contient qu'un site par défaut, et il faut modifier son comportement, d'où l'intérêt du fichier de configuration 'Dockerfile' celui-ci va lancer différentes instructions pendant l'appel 'docker compose build'.
+
 
 .création dossier contenant le projet reverse_proxy (nginx)
 [source,shell]
@@ -187,6 +209,8 @@ networks:
     external: true
     name: glpi_glpi
 ----
+
+=== Configuration de nginx
 
 [NOTE]
 ====
