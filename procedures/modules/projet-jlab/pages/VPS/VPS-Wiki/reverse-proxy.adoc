@@ -10,10 +10,14 @@ Le proxy sera cloisonné dans un container, tous comme les services web qui sont
 
 La configuration du proxy ce trouve dans '*/srv/web/reverse_proxy*'
 
-* Clonage du proxy depuis github
-* Création d'un fichier 'docker-compose.yml'
-* Configuration du fichier 'Dockerfile'
-* Création d'un fichier 'backend-not-found.html'
+* Procédure de clonage
+* Configuration de la partie Docker
+** Configuration du fichier 'docker-compose.yml'
+*** fichier *docker-compose.yml*
+** Configuration du fichier 'Dockerfile'
+*** fichier *Dockerfile*
+* Configuration de nginx
+** Création d'un fichier 'backend-not-found.html'
 * Configuration du fichier 'default.conf'
 * 
 
@@ -98,6 +102,8 @@ COPY ./scriptes/let-encrypt.sh /let-encrypt.sh
 
 # Création d'une variable d'environnement pour signaler à dpkg qu'il n'y a pas d’interaction
 ENV DEBIAN_FRONTEND=noninteractive
+
+#Mofifie les autorisation d’exécution des 2 scriptes ci-dessous, mais à jour "l'image"
 RUN \
     chmod +x /entrypoint.sh && \
     chmod +x /let-encrypt.sh && \
@@ -106,14 +112,17 @@ RUN \
 # Point d'accès des commande lancée avec (run et exec)
 ENTRYPOINT [ "/entrypoint.sh" ]
 
+# Argument par défaut lancée au scripte plus haut
 CMD [ "nginx", "-g", "daemon off;"  ]
 ----
 
+=== Configuration de nginx
 
-=== Création du fichier 'backend-not-found.html'
+==== Création du fichier 'backend-not-found.html'
 
 Création d'un fichier html renvoyant une erreur si aucun service web n'a été trouvé.
 
+.fichier *backend-not-found.html*
 [source,html]
 ----
 <html>
@@ -126,10 +135,7 @@ Création d'un fichier html renvoyant une erreur si aucun service web n'a été 
 </html>
 ----
 
-=== Création du fichier de configuration ngxinx "default.conf"
-
-Créer le fichier *default.conf* dans le dossier *reverse_proxy*
-
+.fichier *default.conf*
 [source,conf]
 ----
 # Service Web Wiki.
