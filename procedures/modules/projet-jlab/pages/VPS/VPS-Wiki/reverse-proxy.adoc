@@ -4,9 +4,11 @@ L'objectif de ce proxy est d'intercepter le trafic entrant des ports 80/443, pui
 
 == Gestion Docker
 
-Le proxy sera cloisonné dans un container, tous commes les services web qui sont chacun isolés dans leu conteneur respectif.
+Le proxy sera cloisonné dans un container, tous comme les services web qui sont chacun isolés dans leu conteneur respectif.
 
 == Procédure
+
+La configuration du proxy ce trouve dans '*/srv/Web/reverse_proxy*'
 
 * Clonage du proxy depuis github
 * Configuration du fichier 'Dockerfile'
@@ -15,13 +17,9 @@ Le proxy sera cloisonné dans un container, tous commes les services web qui son
 * Création d'un fichier 'docker-compose.yml'
 * 
 
-=== Emplacement
-
-La configuration du proxy ce trouve dans '*/srv/Web/reverse_proxy*'
-
 Fait partie du projet github : https://github.com/docker-jb35/reverse_proxy
 
-==== Process Clonage :
+=== Procédure de clonage :
 
 [source,shell]
 ----
@@ -33,15 +31,45 @@ git clone git@github.com:docker-jb35/reverse_proxy.git
 
 === Configuration de la partie Docker
 
-=== Configuration du fichier 'docker-compose.yml'
+==== Configuration du fichier 'docker-compose.yml'
 
-Ce fichier va permettre d'automatiser l’exécution de docker grâce à ses 3 commandes.
+Ce fichier va permettre d'automatiser docker et de lancer le proxy grâce à ses 3 commandes.
 
 [source,shell]
 ----
+#Construction de l'image
 docker composer build
+#Génération du container (-d) permet de lancer en arrière-plan.
 docker compose up (-d)
+#Arrête du service et destruction du container
 docker compose down
+# Affiche les logs du services.
+docker compose logs
+----
+
+.fichier docker-compose.yml
+[source,yaml]
+----
+version: '2'
+services:
+  proxy:
+    build: ./
+    networks:
+     - wiki
+     - glpi
+    ports:
+     - 80:80
+     - 443:443
+    volumes:
+     - ./var/ssl:/etc/ssl/certs/nginx/
+     - ./var/le:/etc/letsencrypt/
+networks:
+  wiki:
+    external: true
+    name: wiki-antora_service_web
+  glpi:
+    external: true
+    name: glpi_glpi
 ----
 
 ==== Configuration du fichier 'Dockerfile'
@@ -186,29 +214,7 @@ server {
 
 Créer le fichier *docker-compose.yml* dans le dossier *reverse_proxy*
 
-[source,yaml]
-----
-version: '2'
-services:
-  proxy:
-    build: ./
-    networks:
-     - wiki
-     - glpi
-    ports:
-     - 80:80
-     - 443:443
-    volumes:
-     - ./var/ssl:/etc/ssl/certs/nginx/
-     - ./var/le:/etc/letsencrypt/
-networks:
-  wiki:
-    external: true
-    name: wiki-antora_service_web
-  glpi:
-    external: true
-    name: glpi_glpi
-----
+
 
 === Configuration de nginx
 
