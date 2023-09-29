@@ -8,7 +8,7 @@ Le proxy sera cloisonné dans un container, tous commes les services web qui son
 
 == Procédure
 
-* Clonage du proxy
+* Clonage du proxy depuis github
 * Configuration du fichier 'Dockerfile'
 * Création d'un fichier 'backend-not-found.html'
 * Configuration du fichier 'default.conf'
