@@ -10,16 +10,23 @@ Le proxy sera cloisonné dans un container, tous comme les services web qui sont
 
 La configuration du proxy ce trouve dans '*/srv/web/reverse_proxy*'
 
-* Procédure de clonage
-* Configuration de la partie Docker
-** Configuration du fichier 'docker-compose.yml'
+* *Procédure de clonage*
+* *Configuration de la partie Docker*
+** Configuration du fichier '*docker-compose.yml*'
 *** fichier *docker-compose.yml*
-** Configuration du fichier 'Dockerfile'
+** Configuration du fichier '*Dockerfile*'
+** Scriptes *scriptes/entrypoint.sh* et *scriptes/letsencrypt.sh*
 *** fichier *Dockerfile*
-* Configuration de nginx
-** Création d'un fichier 'backend-not-found.html'
-* Configuration du fichier 'default.conf'
-* 
+* *Configuration de nginx*
+** Création d'un fichier '*backend-not-found.html*'
+** Configuration du fichier '*default.conf*'
+
+
+
+
+** Configuration des fichiers *includes/ssl.conf* et *includes/proxy.conf*
+
+
 
 Fait partie du projet github : https://github.com/docker-jb35/reverse_proxy
 
@@ -211,13 +218,6 @@ server {
 }
 ----
 
-=== Mise en place du fichier 'docker-compose.yml'
-
-Créer le fichier *docker-compose.yml* dans le dossier *reverse_proxy*
-
-
-
-=== Configuration de nginx
 
 [NOTE]
 ====
