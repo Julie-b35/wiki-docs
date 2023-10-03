@@ -161,7 +161,7 @@ rm $TARBALL
 
 Accéder à l'adresse que vous avez configurer (https://glpi.jlab.ovh) la page sera automatiquement redirigé vers https://glpi.jlab.ovh/install/install.php
 
-image::projet-jlab/GLPI/page_install/01.png[01.png]
+image::GLPI/page_install/01.png[01.png]
 
---> Cliquer sur OK.
+-> Cliquer sur OK.
 
