@@ -4,7 +4,7 @@ Cette procédure concerne la mise en place de ce présent wiki.
 
 == Objectifs
 
-* Configuration Docker ()
+* Configuration Docker 
 * Configuration Antora (Générateur de site)
 * Configuration Web (Apache)
 * Scriptes Shell
@@ -124,4 +124,68 @@ Voici le fichier https://github.com/docker-jb35/wiki-antora/blob/main/conf/httpd
 < 
 ---
 > ErrorDocument 404 /404.html
+----
+
+== Lancement des services
+
+[source,shell]
+----
+docker compose up (-d)
+----
+
+== Les scriptes shell
+
+.scripte 'bin/clean'
+
+[source,shell]
+----
+#!/usr/bin/bash
+
+
+erreur()
+{
+    echo $1
+    exit $2
+}
+
+[ $(id -u) -ne 0 ] && erreur "Ce script doit être lancé en root" 1
+
+cd /home/julie/wiki
+docker compose stop web
+rm -rvf ./public
+./bin/runAntora
+docker compose start web
+----
+
+Supprime entièrement le site web
+
+.scripte 'bin/gencrontab'
+
+[source,shell]
+----
+#!/usr/bin/bash
+
+erreur()
+{
+    echo $1
+    exit $2
+}
+
+[ $(id -u) -ne 0 ] && erreur "Ce script doit être lancé en root" 1
+
+#contab min-heure-jour-mois-idSemaine
+echo "0 4 * * * root /home/julie/wiki/bin/clean" > /etc/cron.d/clean-wiki 
+systemctl restart cron.service
+----
+
+Génère une tache lancé tous les jours à 4h00
+
+.scripte 'bin/gencrontab'
+
+[source,shell]
+----
+#!/usr/bin/bash
+
+cd /srv/web/wiki-antora
+docker compose exec antora antora --log-level=all antora-playbook.yml*
 ----
