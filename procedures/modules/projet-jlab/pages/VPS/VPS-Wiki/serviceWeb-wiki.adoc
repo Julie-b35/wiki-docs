@@ -112,3 +112,16 @@ ui:
 
 *./conf* Dossier contenant la configuration du service web entre autre le fichier *httpd.conf*
 
+Voici le fichier https://github.com/docker-jb35/wiki-antora/blob/main/conf/httpd.conf[httpd.conf] juste quelque modification
+
+[source,diff]
+----
+279c279
+<     Options Indexes FollowSymLinks
+---
+>     Options FollowSymLinks
+478c478
+< 
+---
+> ErrorDocument 404 /404.html
+----
