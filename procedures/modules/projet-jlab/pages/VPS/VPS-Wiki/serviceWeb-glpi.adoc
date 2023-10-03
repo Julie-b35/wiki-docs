@@ -168,3 +168,12 @@ image::GLPI/page_install/01.png[01.png]
 image::GLPI/page_install/02.png[02.png]
 
 -> Puis sur continuer
+
+image::GLPI/page_install/03.png[03.png]
+
+-> , Installer
+
+image::GLPI/page_install/04.png[04.png]
+image::GLPI/page_install/05.png[05.png]
+
+-> , continuer
