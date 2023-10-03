@@ -1,6 +1,7 @@
 * xref:index.adoc[]
 * VPS
 ** VPS Wiki
+*** xref:VPS/VPS-Wiki/IPV6.adoc[]
 *** xref:VPS/VPS-Wiki/reverse-proxy.adoc[]
 *** xref:VPS/VPS-Wiki/serviceWeb-wiki.adoc[]
 * Services

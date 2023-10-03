@@ -1,0 +1,44 @@
+﻿= Configuration de l'IPv6 sur le vps
+:navtitle: IPv6
+
+Configuration IPv6 de l'un de mes VPS chez OVH.
+
+.fichier configuration '/etc/netplan/50-cloud-init.yaml'
+[source,yaml]
+----
+# This file is generated from information provided by the datasource.  Changes
+# to it will not persist across an instance reboot.  To disable cloud-init's
+# network configuration capabilities, write a file
+# /etc/cloud/cloud.cfg.d/99-disable-network-config.cfg with the following:
+# network: {config: disabled}
+network:
+    version: 2
+    ethernets:
+        ens3:
+            dhcp4: true
+            match:
+                macaddress: fa:16:3e:a4:f3:60
+            mtu: 1500
+            set-name: ens3
+            addresses:
+              - 2001:41d0:305:2100::4e97/128
+            routes:
+              - to: ::/0
+                via: 2001:41d0:305:2100::1
+              - to: 2001:41d0:305:2100::1
+                scope: link
+----
+
+Contrôle du fichier de configuration
+
+[source,shell]
+----
+sudo netplan try
+----
+
+Application des paramètres
+
+[source,shell]
+----
+sudo netplan apply
+----
