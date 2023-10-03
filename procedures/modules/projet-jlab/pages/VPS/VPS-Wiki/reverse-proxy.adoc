@@ -43,7 +43,7 @@ git clone git@github.com:docker-jb35/reverse_proxy.git
 
 ==== Configuration du fichier 'docker-compose.yml'
 
-Ce fichier va permettre d'automatiser docker et de lancer le proxy grâce à ses 3 commandes.
+Ce fichier va permettre d'automatiser docker et de lancer le proxy grâce à ses 3 commandes :
 
 [source,shell]
 ----
