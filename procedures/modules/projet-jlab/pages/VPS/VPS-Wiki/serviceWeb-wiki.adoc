@@ -1,1 +1,114 @@
-﻿
+﻿= Mise en place du wiki
+
+Cette procédure concerne la mise en place de ce présent wiki.
+
+== Objectifs
+
+* Configuration Docker ()
+* Configuration Antora (Générateur de site)
+* Configuration Web (Apache)
+* Scriptes Shell
+
+== Configuration Docker
+
+Pour mon wiki j'utilise deux container, l'un pour générer un site web statique depuis des sources écris en asciidoc (antora), l'autre "apache" serveur Web qui diffuse le contenus générer à travers le port 80, le trafic sera repris par le reverse proxy.
+
+=== Récupération du projet
+
+Les sources du projet ce trouve à cette adresse : https://github.com/docker-jb35/wiki-antora
+
+[source,shell]
+----
+#pensez à ajouter le clef ssh
+cd /srv/web
+git clone git@github.com:docker-jb35/wiki-antora.git
+----
+
+Un dossier nommé *wiki-antora* à été crée.
+
+.fichier 'docker-compose.yml'
+[source,yml]
+----
+version: "3.9"
+services:
+  web:
+    image: "httpd"
+    volumes:
+      - ./conf:/usr/local/apache2/conf
+      - ./public:/usr/local/apache2/htdocs
+  antora:
+    image: "antora/antora:latest"
+    command: tail -f /dev/null
+    environment:
+      IS_TTY: false
+    volumes:
+      - .:/antora
+----
+
+==== Explication : 
+
+Lancement de deux service (web, et antora).
+
+* Pour le service web deux volumes sont montés *./conf* afin de configurer Apache, et *./public* qui contiens le site généré.
+* Pour le service Antora le dossier courant sera entièrement visible depuis ce container.
+* La commande *tail -f /dev/null* à pour but d'empêcher la fermeture de container celui-ci ne lançant pas un service démon.
+
+
+== Configuration Antora
+
+Afin d'utiliser au mieux antora il est nécessaire de le configurer. Plus d'information sur sa configuration : https://docs.couchbase.com/home/contribute/playbook.html[Exemple de configuration].
+
+.fichier 'antora-playbook.yml'
+[source,yml]
+----
+site:
+  title: Laboratoire de Julie
+  url: https://wiki.jlab.ovh
+  start_page: wiki::index.adoc
+content:
+  sources:
+  - url: https://github.com/Julie-b35/wiki-docs.git
+    branches: HEAD
+    edit_url: false
+    start_paths: 
+    - wiki
+    - cours
+    - notes
+    - procedures
+#Contenus démo
+  #- url: https://gitlab.com/antora/demo/demo-component-b.git
+  #  branches: [main, v2.0, v1.0]
+  #  start_path: docs
+  #- url: https://gitlab.com/antora/demo/demo-component-a.git
+  #  branches: HEAD
+  #  edit_url: false
+runtime:
+  fetch: true
+  cache_dir: ./.cache/antora
+  log:
+    level: all
+    format: pretty
+    destination:
+      file: ./logs/antora.log
+      append: true
+output:
+ #On retrouver ici le dossier qui est partagé avec le service web, il contient le site généré en question.
+  dir: ./public
+asciidoc:
+  attributes:
+    experimental: ''
+    idprefix: ''
+    idseparator: '-'
+    page-pagination: ''
+ui:
+  bundle:
+    # Template du générateur
+    url: https://gitlab.com/antora/antora-ui-default/-/jobs/artifacts/HEAD/raw/build/ui-bundle.zip?job=bundle-stable
+    snapshot: true
+----
+
+
+== Configuration Web
+
+*./conf* Dossier contenant la configuration du service web entre autre le fichier *httpd.conf*
+
