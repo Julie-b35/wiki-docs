@@ -165,3 +165,6 @@ image::GLPI/page_install/01.png[01.png]
 
 -> Cliquer sur OK.
 
+image::GLPI/page_install/02.png[02.png]
+
+-> Puis sur continuer
