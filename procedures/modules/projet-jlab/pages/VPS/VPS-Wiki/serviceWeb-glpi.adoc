@@ -1,2 +1,167 @@
 ﻿= Mise en service GLPI
 :nvatitle: GLPI
+
+Cette procédure concerne la mise en place de GLPI (Gestionnaire de parc informatique).
+
+== Objectifs
+
+* Configuration Docker 
+* Mise en place Base de donnée (mariadb)
+* Personnalisation image nginx
+* Installation GLPI
+
+
+== Configuration Docker
+
+Pour glpi, j'utilise deux conteneurs, l'un pour la base de donnée, l'autre pour le site web de glpi.
+
+=== Récupération du projet
+
+Les sources du projet ce trouve à cette adresse : https://github.com/docker-jb35/glpi
+
+[source,shell]
+----
+#pensez à ajouter le clef ssh
+cd /srv/web
+git clone git@github.com:docker-jb35/glpi.git
+----
+
+Un dossier nommé *glpi* à été crée.
+
+.fichier 'docker-compose.yml'
+[source,yml]
+----
+version: '2'
+ 
+services:
+  #Conteneur Maria DB
+  mariadb:
+   image: mariadb
+   restart: always
+   command: --transaction-isolation=READ-COMMITTED --binlog-format=ROW
+   volumes:
+    - ./db:/var/lib/mysql
+   environment:
+    - MYSQL_ROOT_PASSWORD=********
+    - MYSQL_PASSWORD=glpi
+    - MYSQL_DATABASE=glpi
+    - MYSQL_USER=glpi
+   networks:
+    glpi:
+      ipv4_address: 192.168.4.2
+
+  glpi:
+    build: ./
+    restart: always
+    links:
+     - mariadb
+    volumes:
+     - ./glpi:/var/www/html
+    networks:
+     glpi:
+       ipv4_address: 192.168.4.1
+
+networks:
+  glpi:
+    driver: bridge
+    ipam:
+      config:
+        - subnet: 192.168.4.0/24
+          gateway: 192.168.4.254
+----
+
+== Personnalisation image nginx
+
+.fichier 'Dockerfile'
+----
+FROM debian:12
+
+COPY ./scriptes/entrypoint.sh /opt/scriptes/entrypoint.sh
+
+ENV DEBIAN_FRONTEND=noninteractive
+
+RUN apt update -y && apt upgrade -y && apt install -y apache2 php php-xml php-mysql php-curl php-gd php-intl  php-ldap php-bz2 php-zip php-mbstring
+
+RUN chmod +x /opt/scriptes/entrypoint.sh && /opt/scriptes/entrypoint.sh
+
+COPY ./config/000-default.conf /etc/apache2/sites-available/000-default.conf
+
+ENTRYPOINT [ "/opt/scriptes/entrypoint.sh" ]
+
+CMD ["start"]
+----
+
+.scripte './scriptes/entrypoint.sh'
+[source,shell]
+----
+#!/bin/sh
+
+echo "Passage dans le scripte Entrypoint.sh"
+
+if [ "$1" = "start" ]; then
+    echo "Démarrage des services."
+
+    #mise à jour du système
+    apt update -y && apt upgrade -y
+
+    chown -R www-data:www-data /var/www/html
+    
+    a2enmod rewrite 
+
+    sed -i "s|session.cookie_httponly =|session.cookie_httponly = on|g" etc/php/8.2/apache2/php.ini 2>/dev/null
+
+    apachectl -D FOREGROUND
+fi
+
+exec "$@"
+----
+
+.site par défaut (000-default.conf)
+[source,conf]
+----
+<VirtualHost *:80>
+
+    DocumentRoot /var/www/html/public
+
+    # If you want to place GLPI in a subfolder of your site (e.g. your virtual host is serving multiple applications),
+    # you can use an Alias directive. If you do this, the DocumentRoot directive MUST NOT target the GLPI directory itself.
+    # Alias "/glpi" "/var/www/html/public"
+
+    <Directory /var/www/html/public>
+        Require all granted
+
+        RewriteEngine On
+
+        # Redirect all requests to GLPI router, unless file exists.
+        RewriteCond %{REQUEST_FILENAME} !-f
+        RewriteRule ^(.*)$ index.php [QSA,L]
+    </Directory>
+</VirtualHost>
+----
+
+== Installation GLPI
+
+Scripte automatisant l'installation de GLPI
+
+[source,shell]
+----
+#!/bin/sh
+
+TARBALL=glpi-10.0.10.tgz
+wget https://github.com/glpi-project/glpi/releases/download/10.0.10/$TARBALL
+
+tar -xzvf $TARBALL
+
+chown 33:33 glpi/
+rm $TARBALL
+----
+
+
+== Configuration de GLPI
+
+Accéder à l'adresse que vous avez configurer (https://glpi.jlab.ovh) la page sera automatiquement redirigé vers https://glpi.jlab.ovh/install/install.php
+
+image::projet-jlab/GLPI/page_install/01.png[01.png]
+
+--> Cliquer sur OK.
+
