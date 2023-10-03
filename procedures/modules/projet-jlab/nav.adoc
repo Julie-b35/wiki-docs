@@ -4,6 +4,7 @@
 *** xref:VPS/VPS-Wiki/IPV6.adoc[]
 *** xref:VPS/VPS-Wiki/reverse-proxy.adoc[]
 *** xref:VPS/VPS-Wiki/serviceWeb-wiki.adoc[]
+*** xref:VPS/VPS-Wiki/serviceWeb-glpi.adoc[]
 * Services
 ** xref:Services/ipxe.adoc[]
 ** xref:Services/squid.adoc[]
