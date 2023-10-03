@@ -183,3 +183,9 @@ image::GLPI/page_install/06.png[06.png]
 -> , remplir les 3 champs, puis  cliquer sur continuer
 
 image::GLPI/page_install/07.png[07.png]
+
+-> au choix "décocher" statistiques d'usage, continuer
+
+image::GLPI/page_install/08.png[08.png]
+
+-> si ce n'est pas fait sélectionner la base de données 'GLPI', et cliquer sur continuer
