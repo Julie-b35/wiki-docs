@@ -177,3 +177,9 @@ image::GLPI/page_install/04.png[04.png]
 image::GLPI/page_install/05.png[05.png]
 
 -> , continuer
+
+image::GLPI/page_install/06.png[06.png]
+
+-> , remplir les 3 champs, puis  cliquer sur continuer
+
+image::GLPI/page_install/07.png[07.png]
