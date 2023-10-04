@@ -10,7 +10,7 @@ Le proxy sera cloisonné dans un container, tous comme les services web qui sont
 
 La configuration du proxy ce trouve dans '*/srv/web/reverse_proxy*'
 
-* *Procédure de clonage*
+* *Clonage du projet depuis Github*
 * *Configuration de la partie Docker*
 ** Configuration du fichier '*docker-compose.yml*'
 *** fichier *docker-compose.yml*
@@ -29,7 +29,7 @@ La configuration du proxy ce trouve dans '*/srv/web/reverse_proxy*'
 
 Fait partie du projet github : https://github.com/docker-jb35/reverse_proxy
 
-=== Procédure de clonage :
+=== Clonage du projet depuis Github :
 
 [source,shell]
 ----
@@ -47,19 +47,19 @@ Ce fichier va permettre d'automatiser docker et de lancer le proxy grâce à ses
 
 [source,shell]
 ----
-#Construction de l'image
+# Construction de l'image
 docker composer build
-#Génération du container (-d) permet de lancer en arrière-plan.
+# Génération du container (-d) permet de lancer en arrière-plan.
 docker compose up (-d)
-#Arrête du service et destruction du container
+# Arrête du service et destruction du container
 docker compose down
 # Affiche les logs du services.
 docker compose logs
 
-#Lance un nouveau conteneur et execute la commande en passant par le scripte spécifié avec le mot clef : ENTRYPOINT
+# Lance un nouveau conteneur et execute la commande en passant par le scripte spécifié avec le mot clef : ENTRYPOINT
 docker compose run 
 
-#Executer une commande dans le même contexte du container lancé avec la commande 'docker compose up (-d)'
+# Executer une commande dans le même contexte du container lancé avec la commande 'docker compose up (-d)'
 docker compose exec
 ----
 
@@ -77,8 +77,8 @@ services:
      - 80:80
      - 443:443
     volumes:
-     - ./var/ssl:/etc/ssl/certs/nginx/
-     - ./var/le:/etc/letsencrypt/
+     - ./etc/ssl:/etc/ssl/certs/nginx/
+     - ./etc/le:/etc/letsencrypt/
 networks:
   wiki:
     external: true
@@ -130,39 +130,8 @@ Mise en place dde 2 scripte en test afin de mettre en place lestsencrypt.
 
 Le fichier *scriptes/entrypoint.sh* est appelée depuis les commandes '*docker compose up*', '*docker compose run*' et '*docker compose exec*'
 
-.fichier 'scriptes/entrypoint.sh'
-[source,shell]
-----
-#!/bin/sh
+include::1@procedures:projet-jlab:entrypoint
 
-#setup ssl keys, export to pass them to le.sh
-echo "ssl_key_wiki=${SSL_KEY_1:=wiki.key}, ssl_cert=${SSL_CERT_1:=wiki.crt}, ssl_chain_cert=${SSL_CHAIN_CERT_1:=wiki.chain}"
-echo "ssl_key_glpi=${SSL_KEY_2:=glpi.key}, ssl_cert=${SSL_CERT_2:=glpi.crt}, ssl_chain_cert=${SSL_CHAIN_CERT_2:=glpi.chain}"
-export LE_SSL_KEY_1=/etc/ssl/certs/nginx/${SSL_KEY_1}
-export LE_SSL_KEY_2=/etc/ssl/certs/nginx/${SSL_KEY_2}
-export LE_SSL_CERT_1=/etc/ssl/certs/nginx/${SSL_CERT_1}
-export LE_SSL_CERT_2=/etc/ssl/certs/nginx/${SSL_CERT_2}
-export LE_SSL_CHAIN_CERT_1=/etc/ssl/certs/nginx/${SSL_CHAIN_CERT_1}
-export LE_SSL_CHAIN_CERT_2=/etc/ssl/certs/nginx/${SSL_CHAIN_CERT_2}
-
-sed -i "s|SSL_KEY_1|${LE_SSL_KEY_1}|g"  /etc/nginx/conf.d/default.conf 2>/dev/null
-sed -i "s|SSL_CERT_1|${LE_SSL_CERT_1}|g"  /etc/nginx/conf.d/default.conf 2>/dev/null
-sed -i "s|SSL_CHAIN_CERT_1|${LE_SSL_CHAIN_CERT_1}|g"  /etc/nginx/conf.d/default.conf 2>/dev/null
-
-sed -i "s|SSL_KEY_2|${LE_SSL_KEY_2}|g"  /etc/nginx/conf.d/default.conf 2>/dev/null
-sed -i "s|SSL_CERT_2|${LE_SSL_CERT_2}|g"  /etc/nginx/conf.d/default.conf 2>/dev/null
-sed -i "s|SSL_CHAIN_CERT_2|${LE_SSL_CHAIN_CERT_2}|g"  /etc/nginx/conf.d/default.conf 2>/dev/null
-
-
-if [ "$1" = "nginx" ]; then
-    /docker-entrypoint.sh nginx
-
-    /let-encrypt.sh wiki.jlab.ovh $LE_SSL_KEY_1 $LE_SSL_CERT_1
-    /let-encrypt.sh glpi.jlab.ovh $LE_SSL_KEY_2 $LE_SSL_CERT_2
-    nginx -s stop
-fi
-exec "$@"
-----
 
 Le scripte 'let-encrypt.sh' est appelé pour généré des certificat ssl
 
