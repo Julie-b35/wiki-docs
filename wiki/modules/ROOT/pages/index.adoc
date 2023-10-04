@@ -17,4 +17,4 @@ Url vers xref:procedures:ROOT:index.adoc[Mes procédures]
 
 == Stage
 
-Actuellement, je suis en stage à la xref:05-Stages/presentation.adoc[maison de quartier La Touche]
+Actuellement, je suis en stage à la xref:05-Stages:presentation.adoc[maison de quartier La Touche]
