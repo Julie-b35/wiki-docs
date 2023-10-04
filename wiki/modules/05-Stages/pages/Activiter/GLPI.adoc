@@ -8,7 +8,7 @@ GLPI est installé sur mon VPS hébergé par OVH. Le service web (*nginx*) hébe
 
 Voici une liste de procédure réaliser pour des fins de rappel.
 
-* xref:procedures:projet-jlab:VPS/IPV6.adoc[Mise en place de l'ipv6]
-* xref:procedures:projet-jlab:VPS/reverse-proxy.adoc[Installation d'un reverse Proxy]
-* xref:procedures:projet-jlab:VPS/serviceWeb-wiki.adoc[Aménagement d'un wiki]
-* xref:procedures:projet-jlab:VPS/serviceWeb-glpi.adoc[Mise en oeuvre de GLPI]
+* xref:procedures:projet-jlab:VPS/VPS-Wiki/IPV6.adoc[Mise en place de l'ipv6]
+* xref:procedures:projet-jlab:VPS/VPS-Wiki/reverse-proxy.adoc[Installation d'un reverse Proxy]
+* xref:procedures:projet-jlab:VPS/VPS-Wiki/serviceWeb-wiki.adoc[Aménagement d'un wiki]
+* xref:procedures:projet-jlab:VPS/VPS-Wiki/serviceWeb-glpi.adoc[Mise en oeuvre de GLPI]
