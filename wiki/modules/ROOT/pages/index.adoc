@@ -8,3 +8,9 @@ Bienvenue à vous, Ce wiki héberge plusieurs type de contenus.
 4 grands type de contenus 
 
 Url vers xref:cours:ROOT:index.adoc[Mes Cours]
+
+== Procédures
+
+Mémo sur mes différentes procédures très utiles pour retrouvé mes infos.
+
+Url vers xref:procedures:ROOT:index.adoc[Mes procédures]
