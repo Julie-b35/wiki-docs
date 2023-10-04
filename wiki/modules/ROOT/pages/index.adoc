@@ -17,4 +17,4 @@ Url vers xref:procedures:ROOT:index.adoc[Mes procédures]
 
 == Stage
 
-Actuellement, je suis en stage à la xref:05-Stages:presentation.adoc[maison de quartier La Touche]
+Actuellement, je suis en stage à la xref:05-Stages:presentation.adoc[maison de quartier La Touche], j'y effectue la maintenance de leur parc informatique pour cela j'utilise xref:05-Stages:Activiter/GLPI.adoc[GLPI] pour voir au mieux leur parc (en commençant de 0)

@@ -1,1 +1,14 @@
 ﻿= Gestion Parc Informatique
+
+Afin d'avoir un meilleur recul et de mieux gérer l'infrastructure de la maison de quartier j'utilise GLPI, j'en ferais également une démo auprès de pierro.
+
+GLPI est installé sur mon VPS hébergé par OVH. Le service web (*nginx*) hébergeant GLPI est cloisonnée avec *docker* pour des raisons de sécurité, la base de données (*mariadb*) utilisé par *GLPI* est elle-même aussi cloisonné.
+
+== Procédure
+
+Voici une liste de procédure réaliser pour des fins de rappel.
+
+* xref:procedures:projet-jlab:VPS/IPV6.adoc[Mise en place de l'ipv6]
+* xref:procedures:projet-jlab:VPS/reverse-proxy.adoc[Installation d'un reverse Proxy]
+* xref:procedures:projet-jlab:VPS/serviceWeb-wiki.adoc[Aménagement d'un wiki]
+* xref:procedures:projet-jlab:VPS/serviceWeb-glpi.adoc[Mise en oeuvre de GLPI]
