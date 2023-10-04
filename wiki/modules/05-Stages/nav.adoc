@@ -2,4 +2,4 @@
 ** Maison de quartier La touche
 *** Présentation
 *** Activité
-**** GLPI
+**** xref:Activiter/GLPI.adoc
