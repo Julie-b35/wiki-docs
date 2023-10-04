@@ -130,8 +130,11 @@ Mise en place dde 2 scripte en test afin de mettre en place lestsencrypt.
 
 Le fichier *scriptes/entrypoint.sh* est appelée depuis les commandes '*docker compose up*', '*docker compose run*' et '*docker compose exec*'
 
-include::1@procedures:projet-jlab:example$entrypoint.sh[]
-
+.fichier 'scriptes/entrypoint.sh'
+[,shell]
+----
+include::example$entrypoint.sh[]
+----
 
 Le scripte 'let-encrypt.sh' est appelé pour généré des certificat ssl
 
