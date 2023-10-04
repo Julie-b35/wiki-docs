@@ -1,5 +1,5 @@
 ﻿* Stages
 ** Maison de quartier La touche
-*** Présentation
+*** xref:presentation.adoc[]
 *** Activité
-**** xref:Activiter/GLPI.adoc
+**** xref:Activiter/GLPI.adoc[]

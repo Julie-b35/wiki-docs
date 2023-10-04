@@ -15,3 +15,6 @@ Mémo sur mes différentes procédures très utiles pour retrouvé mes infos.
 
 Url vers xref:procedures:ROOT:index.adoc[Mes procédures]
 
+== Stage
+
+Actuellement, je suis en stage à la xref:05-Stages/presentation.adoc[maison de quartier La Touche]
