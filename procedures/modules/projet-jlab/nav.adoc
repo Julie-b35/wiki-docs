@@ -8,6 +8,11 @@
 * Services
 ** xref:Services/ipxe.adoc[]
 ** xref:Services/squid.adoc[]
+** GLPI
+*** xref:Services/Glpi/Install-GLPI.adoc[]
+*** Administration
+**** Utilisateur
+***** xref:Services/Glpi/Administration/Utilisateurs/CreerUtilisateur.adoc[]
 * Serveurs
 ** xref:Serveurs/ServeurMail_GLPI.adoc[]
 ** xref:Serveurs/SL-PXE.adoc[]
@@ -16,10 +21,6 @@
 ** xref:Serveurs/Procédure installation sur Debian 10.adoc[]
 ** xref:Serveurs/SRV-DC.adoc[]
 ** xref:Serveurs/SW-2022-DC.adoc[]
-* Service_GLPI
-** xref:Service_GLPI/index.adoc[]
-** xref:Service_GLPI/Install-GLPI.adoc[]
-** xref:Service_GLPI/mariadb.adoc[]
 * xref:install-Postifx.adoc[]
 * xref:server-ssh-windows.adoc[]
 

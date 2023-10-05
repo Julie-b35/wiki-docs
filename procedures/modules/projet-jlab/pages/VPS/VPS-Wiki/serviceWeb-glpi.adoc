@@ -287,8 +287,5 @@ drwxr-xr-x  2 www-data www-data  4096 2023-09-25 10:01 version
 
 A présent, j'ajoute l'utilisateur "admin-local" ayant le status Super-Administrateur
 
+Cliquez xref:Services/Glpi/Administration/Utilisateurs/CreerUtilisateur.adoc[ici] pour ajouter un utilisateur/administrateur.
 
-image::GLPI/page_install/14.png[14.png]
-image::GLPI/page_install/15.png[15.png]
-image::GLPI/page_install/16.png[16.png]
-image::GLPI/page_install/17.png[17.png]

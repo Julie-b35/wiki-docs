@@ -1,4 +1,0 @@
-= Création Service GLPI
-:navtitle: Service GLPI
-
-Contenus
