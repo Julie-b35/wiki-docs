@@ -1,2 +1,9 @@
 ﻿= Crée un utilisateur sur GLPI
 :navtitle: Ajouter Utilisateur
+
+Voici une procédure pour ajouter un utilisateur depuis l'interface GLPI
+
+image::GLPI/add_new_users/01.png[01.png]
+image::GLPI/add_new_users/02.png[02.png]
+image::GLPI/add_new_users/03.png[03.png]
+image::GLPI/add_new_users/04.png[04.png]
