@@ -289,3 +289,5 @@ A présent, j'ajoute l'utilisateur "admin-local" ayant le status Super-Administr
 
 Cliquez xref:Services/Glpi/Administration/Utilisateurs/CreerUtilisateur.adoc[ici] pour ajouter un utilisateur/administrateur.
 
+image::GLPI/page_install/14.png[14.png]
+
