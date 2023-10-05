@@ -23,10 +23,10 @@ Les sources du projet ce trouve à cette adresse : https://github.com/docker-jb3
 ----
 #pensez à ajouter le clef ssh
 cd /srv/web
-git clone git@github.com:docker-jb35/glpi.git
+git clone git@github.com:docker-jb35/glpi.git glpi.domaine.tld
 ----
 
-Un dossier nommé *glpi* à été crée.
+Un dossier nommé *glpi.domaine.tld* à été crée.
 
 .fichier 'docker-compose.yml'
 [source,yml]
@@ -206,3 +206,79 @@ image::GLPI/page_install/11.png[11.png]
 image::GLPI/page_install/12.png[12.png]
 
 -> et pour finir sur 'Utiliser GLPI'
+
+== Nettoyage  de la configuration
+
+image::GLPI/page_install/13.png[13.png]
+
+Comme stipulé sur l'interface d'administrateur de GLPI indiqué en Orange... Il faut sécurisé d'avantage GLPI. Entre autre supprimer/renommer le dossier d'installation, personnellement je créer un utilisateur 'admin-local' avec les plein pouvoir et supprimer tous les autres comptes.
+
+
+Pour commencer supprimer ou renommer le dossier "install" présent dans le répertoire *./glpi.domaine.tld/glpi/*
+
+Voici un exemple de mon cas : 
+
+[,shell]
+----
+# Quelle est le répertoire actuel où je suis
+pwd
+/srv/web/glpi.jlab.ovh
+# Affiche une liste détaillées du répertoire actuel avec les éléments cachés y compris.
+ls -la
+total 40
+drwxr-xr-x  7 root     root     4096 2023-10-04 14:56 .
+drwxr-xr-x  5 root     root     4096 2023-10-04 15:14 ..
+drwxr-xr-x  8 root     root     4096 2023-10-03 14:45 .git
+-rw-r--r--  1 root     root       11 2023-10-02 14:20 .gitignore
+-rw-r--r--  1 root     root      470 2023-10-02 14:13 Dockerfile
+drwxr-xr-x  2 root     root     4096 2023-10-02 14:13 config
+drwxr-xr-x  6 lxd      docker   4096 2023-10-03 16:54 db
+-rw-r--r--  1 root     root      704 2023-10-03 14:57 docker-compose.yml
+drwxr-xr-x 24 www-data www-data 4096 2023-09-25 10:03 glpi
+drwxr-xr-x  2 root     root     4096 2023-10-03 15:17 scriptes
+
+# Affiche une liste détaillées du répertoire ./glpi avec les éléments cachés y compris.
+ls -la ./glpi/
+total 352
+drwxr-xr-x 24 www-data www-data  4096 2023-09-25 10:03 .
+drwxr-xr-x  7 root     root      4096 2023-10-04 14:56 ..
+-rw-r--r--  1 www-data www-data  1063 2023-09-25 10:01 .htaccess
+-rw-r--r--  1 www-data www-data 43303 2023-09-25 10:01 CHANGELOG.md
+-rw-r--r--  1 www-data www-data  2060 2023-09-25 10:01 CONTRIBUTING.md
+-rw-r--r--  1 www-data www-data   682 2023-09-25 10:01 INSTALL.md
+-rw-r--r--  1 www-data www-data 35148 2023-09-25 10:01 LICENSE
+-rw-r--r--  1 www-data www-data  6209 2023-09-25 10:01 README.md
+-rw-r--r--  1 www-data www-data  1040 2023-09-25 10:01 SECURITY.md
+-rw-r--r--  1 www-data www-data   481 2023-09-25 10:01 SUPPORT.md
+drwxr-xr-x  2 www-data www-data  4096 2023-09-25 10:01 ajax
+-rw-r--r--  1 www-data www-data 61850 2023-09-25 10:01 apirest.md
+-rw-r--r--  1 www-data www-data  1594 2023-09-25 10:01 apirest.php
+-rw-r--r--  1 www-data www-data  1561 2023-09-25 10:01 apixmlrpc.php
+drwxr-xr-x  2 www-data www-data  4096 2023-09-25 10:01 bin
+-rw-r--r--  1 www-data www-data  1460 2023-09-25 10:01 caldav.php
+drwxr-xr-x  2 www-data www-data  4096 2023-10-03 15:26 config
+drwxr-xr-x  7 www-data www-data  4096 2023-09-25 10:01 css
+drwxr-xr-x  2 www-data www-data  4096 2023-09-25 10:03 css_compiled
+drwxr-xr-x 16 www-data www-data  4096 2023-10-03 15:25 files
+drwxr-xr-x  4 www-data www-data 32768 2023-09-25 10:01 front
+drwxr-xr-x  2 www-data www-data  4096 2023-09-25 10:01 inc
+-rw-r--r--  1 www-data www-data  6368 2023-09-25 10:01 index.php
+# C'est ce dossier qui est à supprimer ou à renommer.
+drwxr-xr-x  4 www-data www-data  4096 2023-09-25 10:01 install
+drwxr-xr-x  5 www-data www-data  4096 2023-09-25 10:01 js
+drwxr-xr-x  4 www-data www-data  4096 2023-09-25 10:01 lib
+drwxr-xr-x  2 www-data www-data  4096 2023-09-25 10:03 locales
+drwxr-xr-x  2 www-data www-data  4096 2023-10-03 15:25 marketplace
+drwxr-xr-x 10 www-data www-data  4096 2023-09-25 10:01 pics
+drwxr-xr-x  2 www-data www-data  4096 2023-09-25 10:03 plugins
+drwxr-xr-x  3 www-data www-data  4096 2023-09-25 10:01 public
+drwxr-xr-x  3 www-data www-data  4096 2023-09-25 10:01 resources
+drwxr-xr-x  2 www-data www-data  4096 2023-09-25 10:01 sound
+drwxr-xr-x 25 www-data www-data 32768 2023-09-25 10:01 src
+-rw-r--r--  1 www-data www-data  2476 2023-09-25 10:01 status.php
+drwxr-xr-x  8 www-data www-data  4096 2023-09-25 10:01 templates
+drwxr-xr-x 38 www-data www-data  4096 2023-09-25 10:03 vendor
+drwxr-xr-x  2 www-data www-data  4096 2023-09-25 10:01 version
+# Suppression du dossier install
+ sudo rm -rf glpi/install
+----

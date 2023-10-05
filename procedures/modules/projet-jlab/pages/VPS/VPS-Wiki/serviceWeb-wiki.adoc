@@ -21,10 +21,10 @@ Les sources du projet ce trouve à cette adresse : https://github.com/docker-jb3
 ----
 #pensez à ajouter le clef ssh
 cd /srv/web
-git clone git@github.com:docker-jb35/wiki-antora.git
+git clone git@github.com:docker-jb35/wiki-antora.git wiki.domaine.tld
 ----
 
-Un dossier nommé *wiki-antora* à été crée.
+Un dossier nommé *wiki.domaine.tld* à été crée.
 
 .fichier 'docker-compose.yml'
 [source,yml]

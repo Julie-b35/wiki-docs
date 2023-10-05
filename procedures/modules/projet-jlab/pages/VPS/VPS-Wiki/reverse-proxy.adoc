@@ -82,10 +82,10 @@ services:
 networks:
   wiki:
     external: true
-    name: wiki-antora_service_web
+    name: wikijlabovh_service_web
   glpi:
     external: true
-    name: glpi_glpi
+    name: glpijlabovh_glpi
 ----
 
 ==== Configuration du fichier 'Dockerfile'
