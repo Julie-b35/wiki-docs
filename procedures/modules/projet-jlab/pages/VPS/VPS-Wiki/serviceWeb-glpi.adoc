@@ -220,9 +220,10 @@ Voici un exemple de mon cas :
 
 [,shell]
 ----
-# Quelle est le répertoire actuel où je suis
+# Le répertoire actuel où je suis
 pwd
 /srv/web/glpi.jlab.ovh
+
 # Affiche une liste détaillées du répertoire actuel avec les éléments cachés y compris.
 ls -la
 total 40
@@ -279,6 +280,15 @@ drwxr-xr-x 25 www-data www-data 32768 2023-09-25 10:01 src
 drwxr-xr-x  8 www-data www-data  4096 2023-09-25 10:01 templates
 drwxr-xr-x 38 www-data www-data  4096 2023-09-25 10:03 vendor
 drwxr-xr-x  2 www-data www-data  4096 2023-09-25 10:01 version
+
 # Suppression du dossier install
  sudo rm -rf glpi/install
 ----
+
+A présent, j'ajoute l'utilisateur "admin-local" ayant le status Super-Administrateur
+
+
+image::GLPI/page_install/14.png[14.png]
+image::GLPI/page_install/15.png[15.png]
+image::GLPI/page_install/16.png[16.png]
+image::GLPI/page_install/17.png[17.png]
