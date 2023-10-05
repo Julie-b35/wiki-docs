@@ -3,7 +3,24 @@
 
 Voici une procédure pour ajouter un utilisateur depuis l'interface GLPI
 
+NOTE: Rendez-vous sur l'interface Web : *https://glpi.domaine.tld*
+
+-> Dans un 1er temp, cliquer sur *Administration*
+
 image::GLPI/add_new_users/01.png[01.png]
+
+-> Puis sur *Utilisateurs*
+
 image::GLPI/add_new_users/02.png[02.png]
+
+-> et enfin sur *ajouter*
+
 image::GLPI/add_new_users/03.png[03.png]
+
+-> Remplir les différents champs.
+
 image::GLPI/add_new_users/04.png[04.png]
+
+* Identifiant, Nom de famille, Prénom, Mot de passe, Confirmation Mot de passe.
+* Choix du fuseau horaire
+* Important l'habilitation: Récursif, Entité et Profil
