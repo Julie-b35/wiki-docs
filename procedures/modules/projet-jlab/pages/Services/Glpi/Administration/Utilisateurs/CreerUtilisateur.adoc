@@ -27,4 +27,5 @@ image::GLPI/add_new_users/04.png[04.png]
 * Important l'habilitation: Récursif, Entité et Profil
 
 -> enfin cliquer sur *ajouter*.
+
 image::GLPI/add_new_users/05.png[05.png]
