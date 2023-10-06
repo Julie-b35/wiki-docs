@@ -7,19 +7,19 @@ NOTE: Rendez-vous sur l'interface Web : *https://glpi.domaine.tld*
 
 -> Dans un 1er temp, cliquer sur *Administration*
 
-image::GLPI/add_new_users/01.png[01.png]
+image::GLPI/add_new_users/01.png[xref=1@procedures:projet-jlab:image$GLPI/add_new_users/01.png,window=_blank]
 
 -> Puis sur *Utilisateurs*
 
-image::GLPI/add_new_users/02.png[02.png]
+image::GLPI/add_new_users/02.png[xref=1@procedures:projet-jlab:image$GLPI/add_new_users/02.png,window=_blank]
 
 -> et enfin sur *ajouter*
 
-image::GLPI/add_new_users/03.png[03.png]
+image::GLPI/add_new_users/03.png[xref=1@procedures:projet-jlab:image$GLPI/add_new_users/03.png,window=_blank]
 
 -> Remplir les différents champs.
 
-image::GLPI/add_new_users/04.png[04.png]
+image::GLPI/add_new_users/04.png[xref=1@procedures:projet-jlab:image$GLPI/add_new_users/04.png,window=_blank]
 
 * Identifiant, Nom de famille, Prénom, Mot de passe, Confirmation Mot de passe.
 * Choix du fuseau horaire, Actif, Courriels
