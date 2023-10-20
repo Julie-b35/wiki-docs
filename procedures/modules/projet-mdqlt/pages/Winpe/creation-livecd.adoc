@@ -1,0 +1,6 @@
+﻿= Création livecd winpe personnalisé
+
+Pré-requis: Un PC technicien ou bien une vm dédié à cette tache.
+
+Télécharger les kit ADK
+Télécharger et installer https://learn.microsoft.com/fr-fr/windows-hardware/get-started/adk-install#other-adk-downloads[les outils de déploiement du kit d'évaluation et de déploiement windows (ADK)]

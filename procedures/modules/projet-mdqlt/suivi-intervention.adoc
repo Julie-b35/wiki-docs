@@ -17,3 +17,13 @@ La meilleur des solution serais de remplacer le portable mais dans l'immédiat i
 27/09/2023
 Conseil sur l'utilisation de gmail
 Problèmatique : j'ai réussi à supprimer le contact à partire d'autres contacts, il est bien supprimé, mais apparais toujours dans la liste de gmail.
+
+06/10/2023
+- Tries dans les câbles
+- Création câble droit Ethernet sur la norme
+
+10/10/2023
+
+Création scripte pour nathalise (Montage partage automatiquement)
+J'ai crée une nouvelle session
+

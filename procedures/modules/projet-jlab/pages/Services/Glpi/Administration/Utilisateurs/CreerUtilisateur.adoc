@@ -3,7 +3,7 @@
 
 Voici une procédure pour ajouter un utilisateur depuis l'interface GLPI
 
-NOTE: Rendez-vous sur l'interface Web : *https://glpi.domaine.tld*
+NOTE: Rendez-vous sur l'interface Web : *https://glpi.domaine.tld* dans mon cas c'est *https://glpi.jlab.ovh*
 
 -> Dans un 1er temp, cliquer sur *Administration*
 
