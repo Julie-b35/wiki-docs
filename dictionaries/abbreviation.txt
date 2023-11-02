@@ -115,6 +115,7 @@ mpact
 mplementation
 MPLS
 mprovement
+MQLT
 mtftp
 multiboot
 nalysis
@@ -158,6 +159,7 @@ POSIX
 Postifx
 pplication
 pplicative
+Preinstallation
 Privilegier
 privkey
 PSSI

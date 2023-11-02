@@ -4,3 +4,95 @@ Pré-requis: Un PC technicien ou bien une vm dédié à cette tache.
 
 Télécharger les kit ADK
 Télécharger et installer https://learn.microsoft.com/fr-fr/windows-hardware/get-started/adk-install#other-adk-downloads[les outils de déploiement du kit d'évaluation et de déploiement windows (ADK)]
+
+== Création des donnée de travail
+
+* Lancer l'application : *'Environnement de déploiement et d'outils de création d'images'*
+* Executer la commande : *'copype amd64 F:\WinPE_amd64'*
+* ce déplacer dans le dossier : *cd "..\Windows Preinstallation Environment\amd64"*
+
+== Personnalisation
+
+* Mettre le clavier en français : *'Dism /Image:"F:\WinPE_amd64\mount" /Set-InputLocale:040C:0000040C'*
+* Changer la langue par défaut : *'Dism /Set-AllIntl:fr-FR /Image:"F:\WinPE_amd64\mount"'*
+* Vérifier les paquets installé : *'Dism /Get-Packages /Image:"F:\WinPE_amd64\mount"'*
+* Création de l'image : *'MakeWinPeMedia /ISO F:\WinPE_amd64 F:\WinPE_amd64\WinPE_amd64.iso'*
+Dism /Unmount-image /MountDir:<target_mount_directory> {/Commit | /Discard}
+Dism /Image:"F:\WinPE_amd64\mount" /Set-InputLocale:040c:0000040c
+MakeWinPeMedia /ISO F:\WinPE_amd64 F:\WinPE_amd64\WinPE_amd64.iso
+wpeutil setkeyboardlayout 040C:0000040C
+
+
+.montage de l'image
+[source,cmd]
+----
+Dism /Mount-Image /ImageFile:"F:\WinPE_amd64\media\sources\boot.wim" /index:1 /MountDir:"F:\WinPE_amd64\mount"
+----
+
+.changement de la langue
+[source,cmd]
+----
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\fr-fr\lp.cab"
+Dism /Image:"F:\WinPE_amd64\mount" /Set-InputLocale:040C:0000040C
+Dism /Set-AllIntl:fr-FR /Image:"F:\WinPE_amd64\mount"
+----
+.Mise en place des paquets pré-requis pour powershell
+[source,cmd]
+----
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\WinPE-WMI.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\en-us\WinPE-WMI_en-us.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\fr-fr\WinPE-WMI_fr-fr.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\WinPE-NetFX.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\en-us\WinPE-NetFX_en-us.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\fr-fr\WinPE-NetFX_fr-fr.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\WinPE-Scripting.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\en-us\WinPE-Scripting_en-us.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\fr-fr\WinPE-Scripting_fr-fr.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\WinPE-PowerShell.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\en-us\WinPE-PowerShell_en-us.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\fr-fr\WinPE-PowerShell_fr-fr.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\WinPE-StorageWMI.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\en-us\WinPE-StorageWMI_en-us.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\fr-fr\WinPE-StorageWMI_fr-fr.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\WinPE-DismCmdlets.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\en-us\WinPE-DismCmdlets_en-us.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\fr-fr\WinPE-DismCmdlets_fr-fr.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\WinPE-HTA.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\fr-fr\WinPE-HTA_fr-fr.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\en-us\WinPE-HTA_en-us.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\WinPE-EnhancedStorage.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\fr-fr\WinPE-EnhancedStorage_fr-fr.cab"
+Dism /Add-Package /Image:"F:\WinPE_amd64\mount" /PackagePath:"WinPE_OCs\en-us\WinPE-EnhancedStorage_en-us.cab"
+----
+
+.Vérification des paquets installé
+[source,cmd]
+----
+Dism /Get-Packages /Image:"F:\WinPE_amd64\mount"
+----
+
+== lancement automatique du scripte d'installation
+Modifier le fichier : *"F:\WinPE_amd64\mount\Windows\System32\startnet.cmd"*
+[source,cmd]
+----
+wpeinit
+Powershell -ExecutionPolicy ByPass -File "%SYSTEMROOT%\MQLT\Gestion_PC\Scriptes\autoload.ps1"
+----
+
+== Démonter l'image et crée l'iso
+
+.Démontage de l'image
+[source,cmd]
+----
+Dism /unmount-Image /MountDir:"F:\WinPE_amd64\Mount" /commit
+----
+
+.Création de l'iso
+[source,cmd]
+----
+MakeWinPeMedia /ISO F:\WinPE_amd64 F:\WinPE_amd64\WinPE_amd64.iso
+----
+
+
+Dism /Mount-Image /ImageFile:"F:\Setup\install.wim" /index:1 /MountDir:"F:\Setup\mount"
+Dism /unmount-Image /MountDir:"F:\Setup\mount" /discard

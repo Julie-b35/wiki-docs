@@ -4,7 +4,9 @@ Afin d'avoir un meilleur recul et de mieux gérer l'infrastructure de la maison 
 
 GLPI est installé sur mon VPS hébergé par OVH. Le service web (*nginx*) hébergeant GLPI est cloisonnée avec *docker* pour des raisons de sécurité, la base de données (*mariadb*) utilisé par *GLPI* est elle-même aussi cloisonné.
 
-== Procédure
+Au 02/11/2023, Le service GLPI sera mis en place sur un serveur local de la maison de quartier
+
+== Procédure sur le VPS
 
 Voici une liste de procédure réaliser pour des fins de rappel.
 
@@ -12,3 +14,7 @@ Voici une liste de procédure réaliser pour des fins de rappel.
 * xref:procedures:projet-jlab:VPS/VPS-Wiki/reverse-proxy.adoc[Installation d'un reverse Proxy]
 * xref:procedures:projet-jlab:VPS/VPS-Wiki/serviceWeb-wiki.adoc[Aménagement d'un wiki]
 * xref:procedures:projet-jlab:VPS/VPS-Wiki/serviceWeb-glpi.adoc[Mise en oeuvre de GLPI]
+
+== Procédure sur le serveur local
+
+* xref:procedures:projet-mdqlt:srv-local/docker.adoc[Mise en place de docker]

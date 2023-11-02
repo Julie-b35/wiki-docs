@@ -1,3 +1,4 @@
 ﻿* Projet Maison de quartier La Touche
 ** xref:GLPI/index.adoc[]
 ** xref:Winpe/creation-livecd.adoc[]
+** xref:srv-local/docker.adoc[]

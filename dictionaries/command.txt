@@ -7,6 +7,7 @@ amily
 apic
 arat
 atch
+autoload
 avahi
 Beos
 bhmp
@@ -23,6 +24,7 @@ cntrl
 coderay
 comptabiliter
 computername
+copype
 cpuid
 cryptd
 Cygwin
@@ -32,6 +34,7 @@ Dhhmm
 dhrelay
 diskmgmt
 diskpart
+Dism
 dnowprefetch
 domainname
 drwxr
@@ -183,12 +186,14 @@ SRVFIC
 ssbd
 sshs
 ssse
+startnet
 stibp
 swapgs
 swapoff
 swapon
 switchport
 syscall
+SYSTEMROOT
 tatistics
 traceroute
 tuntap
@@ -208,6 +213,8 @@ vmail
 vpclmulqdq
 webmin
 Webmin
+winpe
+wpeinit
 xdigit
 XDMCP
 xfrm
