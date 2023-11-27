@@ -13,16 +13,6 @@ Télécharger et installer https://learn.microsoft.com/fr-fr/windows-hardware/ge
 
 == Personnalisation
 
-* Mettre le clavier en français : *'Dism /Image:"F:\WinPE_amd64\mount" /Set-InputLocale:040C:0000040C'*
-* Changer la langue par défaut : *'Dism /Set-AllIntl:fr-FR /Image:"F:\WinPE_amd64\mount"'*
-* Vérifier les paquets installé : *'Dism /Get-Packages /Image:"F:\WinPE_amd64\mount"'*
-* Création de l'image : *'MakeWinPeMedia /ISO F:\WinPE_amd64 F:\WinPE_amd64\WinPE_amd64.iso'*
-Dism /Unmount-image /MountDir:<target_mount_directory> {/Commit | /Discard}
-Dism /Image:"F:\WinPE_amd64\mount" /Set-InputLocale:040c:0000040c
-MakeWinPeMedia /ISO F:\WinPE_amd64 F:\WinPE_amd64\WinPE_amd64.iso
-wpeutil setkeyboardlayout 040C:0000040C
-
-
 .montage de l'image
 [source,cmd]
 ----

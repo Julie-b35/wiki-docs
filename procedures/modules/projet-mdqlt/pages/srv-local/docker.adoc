@@ -1,5 +1,36 @@
 ﻿= Installation de docker
 
-== Introduction
+== Pré-requis
 
-L
+Mise en place d'ubuntu sur le serveur.
+
+== Préparation
+
+Mise en place de la liste des source.
+[source, shell]
+----
+# Ajouter la clef GPG officiel de docker
+apt-get update
+apt-get install ca-certificates curl gnupg
+install -m 0755 -d /etc/apt/keyrings
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | gpg --dearmor -o /etc/apt/keyrings/docker.gpg
+chmod a+r /etc/apt/keyrings/docker.gpg
+
+# Add the repository to Apt sources:
+# Ajouter le dépot officiel de docker
+echo \
+  "deb [arch="$(dpkg --print-architecture)" signed-by=/etc/apt/keyrings/docker.gpg] https://download.docker.com/linux/ubuntu \
+  "$(. /etc/os-release && echo "$VERSION_CODENAME")" stable" | \
+   tee /etc/apt/sources.list.d/docker.list > /dev/null
+ apt-get update
+----
+
+== Installation
+
+Installation de le dernière version de docker
+
+[source,shell]
+----
+sudo apt-get install docker-ce docker-ce-cli containerd.io docker-buildx-plugin docker-compose-plugin
+----
+
